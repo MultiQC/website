@@ -1,0 +1,3 @@
+	Unassigned_Duplicate	Unassigned_MappingQuality	Unassigned_Nonjunction	Unassigned_FragementLength	Unassigned_Chimera	Unassigned_Ambiguity	Assigned	Unassigned_MultiMapping	Unassigned_Secondary	Unassigned_NoFeatures	Unassigned_Unmapped	Total
+ERR458837_1_val	0.0	0.0	0.0	0.0	0.0	850427.0	19061178.0	1626700.0	0.0	8677068.0	0.0	30215373.0
+SRR1026912_blood_RNA-Seq_1_val	0.0	0.0	0.0	0.0	0.0	719327.0	16793807.0	1141989.0	0.0	23412952.0	0.0	42068075.0

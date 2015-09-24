@@ -1,0 +1,11 @@
+	featureCounts_percent	featureCounts	tophat_aligned	bp_trimmed	percent_duplicates	percent_gc	sequence_length	total_sequences_m
+ERR458837_1				5.1%	61.7%	44%	100	32.8
+ERR458837_1_val	63.1%	19.1	90.0%					
+ERR458837_1_val_1					60.5%	44%	95	32.2
+ERR458837_2				7.6%	45.5%	43%	100	32.8
+ERR458837_2_val_2					45.4%	42%	94	32.2
+SRR1026912_blood_RNA-Seq_1				3.6%	55.7%	45%	101	46.9
+SRR1026912_blood_RNA-Seq_1_val	39.9%	16.8	83.6%					
+SRR1026912_blood_RNA-Seq_1_val_1					54.8%	45%	97	46.2
+SRR1026912_blood_RNA-Seq_2				6.5%	52.6%	43%	101	46.9
+SRR1026912_blood_RNA-Seq_2_val_2					51.6%	43%	95	46.2
