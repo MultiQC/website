@@ -1723,6 +1723,18 @@
 
 		}
 
+	.mqc_docs h1 {
+		font-size: 3em;
+		line-height: 1.5em;
+	}
+
+	.mqc_docs h2 {	
+		border-left: 3px solid #ccc;
+		background-color: #ededed;
+		margin-left: -15px;
+		padding-left: 15px;
+	}
+
 	h2 {
 		font-size: 1.75em;
 		line-height: 1.5em;
@@ -1762,6 +1774,27 @@
 			font-size: 1em;
 		}
 
+	}
+
+	.mqc_docs #header nav {
+		text-align: center;
+	}
+	.mqc_docs #header nav ul {
+		list-style-type: none;
+		margin:0;
+	}
+	.mqc_docs #header nav ul li {
+		display: inline-block;
+	}
+	.mqc_docs #header nav ul li a {
+		text-decoration: none;
+		padding: 0 10px 5px;
+		border: none;
+		color: #d0e4f8;
+		display:block;
+	}
+	.mqc_docs #header nav ul li a:hover{
+		color: #ffffff;
 	}
 
 	sub {
@@ -2931,11 +2964,14 @@
 	}
 
 /* Wrapper */
-
+	
 	.wrapper {
 		padding: 4.5em 0 2.5em 0 ;
 		background-color: #ffffff;
 		border-bottom: solid 2px #eeeeee;
+	}
+	.mqc_docs .wrapper {
+		padding-top: 2em;
 	}
 
 		.wrapper > .inner {
