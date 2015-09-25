@@ -1,4 +1,4 @@
-# <img src="images/MultiQC_logo.png" width="300" title="MultiQC">
+# <img src="public_html/images/MultiQC_logo.png" width="300" title="MultiQC">
 
 **MultiQC is a tool to aggregate bioinformatics results across many
 samples into a single report.**
