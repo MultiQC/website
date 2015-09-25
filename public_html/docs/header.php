@@ -26,7 +26,7 @@
 			<nav id="nav" role="navigation">
 				<ul>
 					<?php foreach ($page['nav'] as $url => $name){
-						echo '<li><a href="/docs/'.$page['version'].'/'.$url.'/">'.$name.'</a></li>'."\n";
+						echo '<li><a href="/docs/'.$page['version'].'/'.$url.'">'.$name.'</a></li>'."\n";
 					} ?>
 					<li><a href="https://github.com/ewels/MultiQC/releases/">Download</a></li>
 				</ul>
@@ -38,3 +38,6 @@
 
 <main class="wrapper">
 	<section class="inner <?php if(isset($page['layout']) && $page['layout'] == 'toc'){ echo 'mainpage-toc'; } ?>">
+		<?php if($docs_version !== $newest_version){ 
+			echo '<p style="background-color: #f4ced2; margin-left:-15px; padding: 5px 5px 5px 20px; border-left: 4px solid #c7a7a9;">View the docs for the latest version of MultiQC here: <u><a href="/docs/'.$newest_version.'">v'.$newest_version.' docs</a></u>.</p>';
+		} ?>

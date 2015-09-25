@@ -34,7 +34,7 @@
 			<?php
 			foreach (glob("../../multiqc/*") as $file) {
 				$v = basename($file);
-				echo '<li><a href="'.$v.'/README">Version '.$v.'</a></li>';
+				echo '<li><a href="'.$v.'/README.md">Version '.$v.'</a></li>';
 			}
 			?>
 		</ul>

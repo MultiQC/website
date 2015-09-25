@@ -9,13 +9,12 @@ $docs_version = isset($parts[1]) ? $parts[1] : false;
 if(isset($parts[2])){
   $name = $parts[2];
 } else {
-  $name = 'index';
+  $name = 'README.md';
 }
-$name = trim($name, '.md');
 $dots = str_repeat('../', count(explode('/', $_SERVER['REQUEST_URI']))-2);
 
 // Get the source file
-$source = "../../multiqc/$docs_version/docs/$name.md";
+$source = "../../multiqc/$docs_version/docs/$name";
 if(!file_exists($source)){
   $source = "404.md";
   if(!file_exists("../../multiqc/$docs_version/")){
@@ -23,13 +22,20 @@ if(!file_exists($source)){
   }
 }
 
+$newest_version = $docs_version;
+if($docs_version !== '??'){
+  foreach (glob("../../multiqc/*") as $file) {
+    $v = basename($file);
+    if($v > $docs_version){ $newest_version = $v; }
+  }
+}
+
 // Set up some basic config
 $docs_pages = [];
 foreach (glob("../../multiqc/$docs_version/docs/*.md") as $file) {
-  $pname = substr(basename($file), 0, -3);
+  $pname = basename($file);
   $nname = $pname;
-  if($pname == 'README'){ continue; }
-  if($pname == 'index'){ $nname = 'Home'; }
+  if($pname == 'README.md'){ $nname = 'Home'; }
   else {$pc = file_get_contents($file);
     if(preg_match('/title: (.*)/', $pc, $matches)){
       $nname = $matches[1];
