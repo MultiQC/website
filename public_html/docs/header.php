@@ -20,7 +20,7 @@
 	<!-- Header -->
 	<header id="header" style="height: 350px; min-height: 350px; padding-bottom:0;">
 		<div class="content">
-			<h1><img src="<?php echo $dots; ?>images/MultiQC_logo_inverted.png" title="MultiQC" style="max-width:100%;"></h1>
+			<h1><a href="/"><img src="<?php echo $dots; ?>images/MultiQC_logo_inverted.png" title="MultiQC" style="max-width:100%;"></a></h1>
 			<p>MultiQC v<?php echo $page['version']; ?> Documentation</p>
 			
 			<?php if(count($page['nav']) > 0){ ?>
