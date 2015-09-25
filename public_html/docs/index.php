@@ -29,12 +29,12 @@
 <main class="wrapper">
 	<section class="inner">
 		<h1>Welcome to the MultiQC Docs</h1>
-		<p>You can find the documentation for all versions of MultiQC here <em>(you probably want the <a href="#">latest</a>)</em>.</p>
+		<p>You can find the documentation for all versions of MultiQC here:</p>
 		<ul>
 			<?php
-			foreach (glob("../../multiqc/*") as $file) {
-				$v = basename($file);
-				echo '<li><a href="'.$v.'/README.md">Version '.$v.'</a></li>';
+			foreach (glob("../../multiqc/*/README.md") as $file) {
+				$v = basename(dirname($file));
+				echo '<li><a href="'.$v.'/README.md">MultiQC v'.$v.'</a></li>';
 			}
 			?>
 		</ul>
