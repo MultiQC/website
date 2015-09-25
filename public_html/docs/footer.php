@@ -14,6 +14,7 @@
 
 	<!-- Scripts -->
 	<script src="<?php echo $dots; ?>assets/js/jquery.min.js"></script>
-
+	<script src="<?php echo $dots; ?>assets/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
