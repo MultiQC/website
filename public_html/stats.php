@@ -52,7 +52,7 @@ $series_json = json_encode($series);
 	<body id="top">
 
 		<!-- Header -->
-		<header id="header">
+		<header id="header" class="short">
 			<div class="content">
 				<h1><img src="images/MultiQC_logo_inverted.png" title="MultiQC" style="max-width:100%;"></h1>
 				<p>PyPI Download Statistics</p>

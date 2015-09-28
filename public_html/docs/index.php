@@ -18,7 +18,7 @@
 <body id="top" class="mqc_docs">
 
 	<!-- Header -->
-	<header id="header" style="height: 350px; min-height: 350px; padding-bottom:0;">
+	<header id="header" class="short">
 		<div class="content">
 			<h1><img src="../images/MultiQC_logo_inverted.png" title="MultiQC" style="max-width:100%;"></h1>
 			<p>MultiQC Documentation</p>

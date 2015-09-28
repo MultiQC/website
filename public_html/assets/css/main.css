@@ -1776,6 +1776,11 @@
 
 	}
 
+	#header.short {
+		 height: 350px;
+		 min-height: 350px;
+		 padding-bottom:0;
+	}
 	.mqc_docs #header nav {
 		text-align: center;
 	}
