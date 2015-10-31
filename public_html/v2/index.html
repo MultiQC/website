@@ -72,16 +72,20 @@
           </div>
           <div class="col-md-4">
             <a class="btn btn-block btn-lg btn-primary" href="../docs">
-              <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-book fa-lg"></i>
               Documentation
             </a>
-            <a class="btn btn-block btn-lg btn-primary" href="https://pypi.python.org/pypi/multiqc">
-              <i class="icon-python fa-lg" aria-hidden="true"></i> 
+            <a class="btn btn-block btn-lg btn-primary" href="https://pypi.python.org/pypi/multiqc" target="_blank">
+              <i class="icon-python fa-lg"></i> 
               View on PyPI
             </a>
             <a class="btn btn-block btn-lg btn-primary" href="https://www.github.com/ewels/MultiQC" target="_blank">
-              <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-github fa-lg"></i>
               View on GitHub
+            </a>
+            <a class="visible-xs visible-sm btn btn-block btn-lg btn-primary" href="../examples/rna-seq/multiqc_report.html">
+              <i class="glyphicon glyphicon-search"></i>
+              Example Report
             </a>
             <div class="panel panel-primary">
               <div class="panel-heading">
@@ -93,7 +97,7 @@ multiqc .              <span class="comment"># Run</span></code></pre></div>
             </div>
           </div>
         </div>
-        <div id="iframe_browser">
+        <div id="iframe_browser" class="hidden-xs hidden-sm">
           <div id="iframe_browser_header">
             <div id="iframe_browser_buttons"><span></span><span></span><span></span></div>
             <p>MultiQC Example Report</p>
@@ -112,6 +116,7 @@ multiqc .              <span class="comment"># Run</span></code></pre></div>
           <div class="col-md-8">
             <h3>Visualise statistics from your pipeline</h3>
 				    <p>MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.</p>
+            <a class="btn btn-lg btn-default">View Example Report</a>
           </div>
           <div class="col-md-4 text-center">
             <img class="img-circle img-thumbnail" src="images/general_stats.png" alt="General Statistics" />
@@ -124,6 +129,20 @@ multiqc .              <span class="comment"># Run</span></code></pre></div>
           <div class="col-md-8">
             <h3>Plot all of your samples together</h3>
 				    <p>Visualizing your samples together allows detailed comparison, not possible by scanning one report after another.</p>
+            <div class="btn-group">
+              <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Example Reports <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Analysis Types</li>
+                <li><a href="#">Whole Genome</a></li>
+                <li><a href="#">RNA-Seq</a></li>
+                <li><a href="#">Bisulfite</a></li>
+                <li class="dropdown-header">Report Variants</li>
+                <li><a href="#">Many Samples</a></li>
+                <li><a href="#">Directory Names</a></li>
+              </ul>
+            </div>
           </div>
           <div class="col-md-4 text-center">
             <img class="img-circle img-thumbnail" src="images/overlay_plot.png" alt="FastQC GC Overlay Plot" />
@@ -136,6 +155,7 @@ multiqc .              <span class="comment"># Run</span></code></pre></div>
           <div class="col-md-8">
             <h3>Extensible and documented</h3>
 				    <p>Want to use this with your favourite tool? MultiQC is structured to allow easy extension and customisation, with a submodule framework and simple templating. Everything should be well documented, so that the project can grow for the community.</p>
+            <a class="btn btn-default btn-lg" href="../docs">Read the docs</a>
           </div>
           <div class="col-md-4 text-center">
             <img class="img-circle img-thumbnail" src="images/documentation.png" alt="MultiQC Documentation" />
@@ -144,25 +164,25 @@ multiqc .              <span class="comment"># Run</span></code></pre></div>
       </section>
       
       <section>
-				<ul class="icons labeled">
-					<li><span class="fa fa-terminal"></span>Simple installation</li>
-					<li><span class="fa fa-search"></span>Search any directory</li>
-					<li><span class="fa fa-bar-chart"></span>View report in a web browser</li>
-					<li><span class="fa fa-share-alt"></span>Zip file for easy sharing</li>
-					<li><span class="fa fa-code"></span>Extensible &amp; well documented</li>
+				<ul class="feature-icons">
+					<li><span class="fa fa-lg fa-terminal"></span>Simple installation</li>
+					<li><span class="fa fa-lg fa-search"></span>Search any directory</li>
+					<li><span class="fa fa-lg fa-bar-chart"></span>View report in a web browser</li>
+					<li><span class="fa fa-lg fa-share-alt"></span>Zip file for easy sharing</li>
+					<li><span class="fa fa-lg fa-code"></span>Extensible &amp; well documented</li>
 				</ul>
       </section>
 
 
-    	<section class="text-center">
+    	<section class="focus-section">
   			<h2>Install from <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a></h2>
   			<p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line.<br>
           See the <a href="../docs">installation instructions</a> for more help.</p>
   			<p>Mac OS X users can also download the <a href="https://github.com/ewels/MultiQC/releases">graphical tool</a>.</p>
         <p>
           <a href="../docs" class="btn btn-default btn-lg"><i class="fa fa-book fa-lg"></i> Documentation</a>
-    			<a href="https://github.com/ewels/MultiQC/" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
-    			<a href="https://pypi.python.org/pypi/multiqc" class="btn btn-default btn-lg"><i class="icon-python fa-lg"></i> View on PyPI</a>
+    			<a target="_blank" href="https://github.com/ewels/MultiQC/" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+    			<a target="_blank" href="https://pypi.python.org/pypi/multiqc" class="btn btn-default btn-lg"><i class="icon-python fa-lg"></i> View on PyPI</a>
         </p>
     	</section>
           
@@ -170,8 +190,8 @@ multiqc .              <span class="comment"># Run</span></code></pre></div>
     
     <footer id="footer">
       <div class="container">
-        <a target="_blank" href="http://www.scilifelab.se" class="pull-right">
-          <img src="images/SLL_logo_blue_white.png" style="height:40px;">
+        <a target="_blank" href="http://www.scilifelab.se" class="pull-right scilife-footer">
+          <img src="images/SLL_logo_blue_white.png">
         </a>
         <p>Created by Phil Ewels:
           <a target="_blank" href="https://github.com/ewels"><i class="fa fa-github"></i> ewels</a> |

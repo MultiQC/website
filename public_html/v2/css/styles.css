@@ -9,32 +9,43 @@ body {
 .navbar {
   margin-bottom: 0;
 }
-.navbar .dropdown-menu {
+.dropdown-menu {
   padding-top:0;
 }
-.navbar .dropdown-header {
+.dropdown-header {
   background-color: #ededed;
   border-top: 1px solid #e5e5e5;
   margin-top: 5px;
 }
 footer {
   background: #333333 url('../images/congruent_outline.png');
-  color: #aaa;
   border-top: 1px solid #ccc;
   padding: 30px 0 20px;
 }
 footer a {
+  margin: 0 10px;  
+}
+footer, footer a, footer a:hover {
   color: #aaa;
-  margin: 0 10px;
+}
+.scilife-footer {
+  margin-top: -6px;
+}
+.scilife-footer img {
+  height: 40px;
 }
 
 
 /* 
       HEADER
                 */
+@media (min-width: 992px) {
+  .jumbotron {
+      margin-bottom: 500px;
+  }
+}
 .jumbotron {
   background: #333333 url('../images/congruent_outline.png');
-  margin-bottom: 500px;
   box-shadow: 0 0 20px #999;
 }
 .jumbotron .lead {
@@ -117,7 +128,7 @@ code .comment {
                 */
 
 #homepage-content {
-  padding: 20px 0;
+  padding: 20px 0 0;
   margin-bottom: 30px;
   background-color: #FFF;
   border: 1px solid #ccc;
@@ -129,19 +140,64 @@ code .comment {
   font-size: 28px;
   color: #888;
   font-weight: 200;
+  padding: 0 20px;
   margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .content-lead {
+    font-size: 21px;
+  }
 }
 
 section {
-  padding: 30px 20px 0;
+  padding: 20px 20px 0;
   margin-bottom: 20px;
   border-top: 1px solid #dedede;
 }
 
 section h3 {
-  margin: 50px 0 20px;
+  margin: 40px 0 20px 20px;
 }
 section p {
   font-size: 18px;
 }
+section p, section .btn, section .btn-group {
+  margin-left: 20px;
+}
+
+.feature-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+}
+.feature-icons li {
+  display: inline-block;
+  color: #999999;
+  margin: 20px;
+}
+.feature-icons li .fa {
+  color: #e0e0e0;
+  margin: 0 15px;
+}
+
+.focus-section {
+  background-color: #DDE6ED;
+  box-shadow: inset 0 0 12px #ccc;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 40px 20px 30px;
+}
+.focus-section h2 {
+  margin: 0 0 20px;
+}
+.focus-section p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+
+
+
 
