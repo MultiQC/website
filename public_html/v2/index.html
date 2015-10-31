@@ -13,6 +13,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/font-mfizz.css">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -41,11 +43,13 @@
             <li class="active"><a href="../navbar/">Home</a></li>
             <li><a href="./">Docs</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li class="dropdown-header">Analysis Types</li>
                 <li><a href="#">Whole Genome</a></li>
                 <li><a href="#">RNA-Seq</a></li>
-                <li><a href="#">Bisulfite/a></li>
+                <li><a href="#">Bisulfite</a></li>
+                <li class="dropdown-header">Report Variants</li>
                 <li><a href="#">Many Samples</a></li>
                 <li><a href="#">Directory Names</a></li>
               </ul>
@@ -59,17 +63,104 @@
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1><img src="img/MultiQC_logo_inverted.png" title="MultiQC" style="max-width:100%;"></h1>
-        <p>Aggregate results from bioinformatics analyses across many samples into a single report</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+        <div class="row">
+          <div class="col-md-8">
+            <h1><img src="images/MultiQC_logo_inverted.png" title="MultiQC" style="max-width:100%;"></h1>
+            <p class="lead">Aggregate results from bioinformatics analyses across many samples into a single report</p>
+            <p>MultiQC searches a given directory for analysis logs and compiles a HTML report.
+              It's a general use tool, perfect for summarising the output from numerous bioinformatics tools.</p>
+          </div>
+          <div class="col-md-4">
+            <a class="btn btn-block btn-lg btn-primary" href="../docs">
+              <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+              Documentation
+            </a>
+            <a class="btn btn-block btn-lg btn-primary" href="https://pypi.python.org/pypi/multiqc">
+              <i class="icon-python fa-lg" aria-hidden="true"></i> 
+              View on PyPI
+            </a>
+            <a class="btn btn-block btn-lg btn-primary" href="https://www.github.com/ewels/MultiQC" target="_blank">
+              <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+              View on GitHub
+            </a>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <i class="fa fa-terminal"></i>
+                Quick Install
+              </div>
+              <div class="panel-body"><pre><code>pip install multiqc    <span class="comment"># Install</span>
+multiqc .              <span class="comment"># Run</span></code></pre></div>
+            </div>
+          </div>
+        </div>
+        <div id="iframe_browser">
+          <div id="iframe_browser_header">
+            <div id="iframe_browser_buttons"><span></span><span></span><span></span></div>
+            <p>MultiQC Example Report</p>
+          </div>
+          <iframe src="../examples/rna-seq/multiqc_report.html"></iframe>
+        </div>
       </div>
     </div>
       
-    <div class="container">
-      <h1>Hello World</h1>
+    <div class="container content">
+      <p class="content-lead">Ever spent ages collecting reports and wading through log file output?<br>
+          Here's the answer to your frustrations...</p>
+
+			<section>
+        <img class="img-circle img-thumbnail pull-right" src="images/general_stats.png" alt="General Statistics" />
+				<h3>Visualise statistics from your pipeline</h3>
+				<p>MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.</p>
+        <div class="clearfix"></div>
+      </section>
+        
+			<section>
+        <img class="img-circle img-thumbnail pull-right" src="images/overlay_plot.png" alt="FastQC GC Overlay Plot" />
+				<h3>Plot all of your samples together</h3>
+				<p>Visualizing your samples together allows detailed comparison, not possible by scanning one report after another.</p>
+        <div class="clearfix"></div>
+      </section>
+
+			<section>
+        <img class="img-circle img-thumbnail pull-right" src="images/documentation.png" alt="MultiQC Documentation" />
+				<h3>Extensible and documented</h3>
+				<p>Want to use this with your favourite tool? MultiQC is structured to allow easy extension and customisation, with a submodule framework and simple templating. Everything should be well documented, so that the project can grow for the community.</p>
+        <div class="clearfix"></div>
+      </section>
+      
+      <section>
+				<ul class="icons labeled">
+					<li><span class="fa fa-terminal"></span>Simple installation</li>
+					<li><span class="fa fa-search"></span>Search any directory</li>
+					<li><span class="fa fa-bar-chart"></span>View report in a web browser</li>
+					<li><span class="fa fa-share-alt"></span>Zip file for easy sharing</li>
+					<li><span class="fa fa-code"></span>Extensible &amp; well documented</li>
+				</ul>
+      </section>
+
+
+    	<section>
+  			<h3>Install from <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a></h3>
+  			<p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line</p>
+  			<p>Mac OS X users can also download the <a href="https://github.com/ewels/MultiQC/releases">graphical tool</a>.<p>
+    		<ul class="actions">
+    			<li><a href="https://github.com/ewels/MultiQC/releases" class="btn btn-default fa fa-download">Download</a></li>
+    			<li><a href="https://github.com/ewels/MultiQC/" class="btn btn-default fa fa-github">View on GitHub</a></li>
+    			<li><a href="https://pypi.python.org/pypi/multiqc" class="btn btn-default fa fa-code">View on PyPI</a></li>
+    		</ul>
+    	</section>
+          
     </div> <!-- /container -->
+    
+    <footer id="footer">
+      <div class="container">
+        <p class="copyright">Created by Phil Ewels:
+          <a href="https://github.com/ewels"><i class="fa fa-github"></i> ewels</a> |
+          <a href="https://twitter.com/tallphil"><i class="fa fa-twitter"></i> tallphil</a> |
+          <a href="https://se.linkedin.com/in/philewels"><i class="fa fa-linkedin"></i> LinkedIn</a>
+        </p>
+      </div>
+    </footer>
 
 
     <!-- Placed at the end of the document so the pages load faster -->

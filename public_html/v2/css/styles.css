@@ -1,8 +1,121 @@
 
-.jumbotron {
-  background: #00294d url('../img/congruent_outline.png');
-}
+/* 
+      GENERAL
+                */
 
 .navbar {
   margin-bottom: 0;
+}
+.navbar .dropdown-menu {
+  padding-top:0;
+}
+.navbar .dropdown-header {
+  background-color: #ededed;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 5px;
+}
+footer {
+  background-color: #ededed;
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+}
+
+
+/* 
+      HEADER
+                */
+.jumbotron {
+  background: #333333 url('../images/congruent_outline.png');
+  margin-bottom: 500px;
+  box-shadow: 0 0 20px #999;
+}
+.jumbotron .lead {
+  font-size: 24px;
+  color: #ddd;
+}
+.jumbotron p {
+  font-size: 18px;
+  color: #aaa;
+}
+.jumbotron .btn {
+  margin: 15px 0;
+}
+.jumbotron i.fa {
+  margin-right: 10px;
+}
+.jumbotron .panel-heading {
+  text-align: center;
+  font-size: 18px;
+}
+.jumbotron .panel-body {
+  padding:0;
+  background-color: #333;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.jumbotron pre {
+  background-color:transparent;
+  color: #ccc;
+  padding: 7px 10px;
+  font-size: 14px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+code .comment {
+  color: #999;
+}
+#iframe_browser {
+  width: 100%;
+  height: 600px;
+  margin: 30px 0 -500px;
+  background: #ddd;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-bottom: 2px solid #ccc;
+  box-shadow: 2px 3px 4px rgba(51,51,51, 0.2);
+}
+#iframe_browser_header {
+  height: 30px;
+  padding: 7px 5px;
+}
+#iframe_browser_header span {
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    float: left;
+    margin: 2px 0 0 4px;
+}
+#iframe_browser_header span:first-of-type { background-color: #FCAEAE; }
+#iframe_browser_header span:nth-of-type(2){ background-color: #E8E346; }
+#iframe_browser_header span:last-of-type{ background-color: #7EE872; }
+#iframe_browser_header p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666;
+  margin-left: 60px;
+}
+#iframe_browser iframe {
+  width: 100%;
+  height: 567px;
+  border: none;
+}
+
+
+/* 
+      CONTENT
+                */
+
+.content-lead {
+  text-align: center;
+  font-size: 28px;
+  color: #999;
+}
+
+section {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-top: 1px solid #dedede;
 }
