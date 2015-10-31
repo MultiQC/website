@@ -31,6 +31,7 @@
 		<h1>Welcome to the MultiQC Docs</h1>
 		<p>You can find the documentation for all versions of MultiQC here:</p>
 		<ul>
+			<li><a href="https://github.com/ewels/MultiQC/tree/master/docs">Development Version</a></li>
 			<?php
 			foreach (glob("../../multiqc/*/README.md") as $file) {
 				$v = basename(dirname($file));
