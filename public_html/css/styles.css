@@ -83,12 +83,12 @@ footer, footer a, footer a:hover {
   font-size: 24px;
   color: #ddd;
 }
-.header h1 object {
+.header object {
 	filter: url(#drop-shadow);
 	-webkit-filter: drop-shadow(0 1px 2px #222);
 	filter: drop-shadow(0 1px 2px #222);
 }
-.header h1 object, .header h1 img {
+.header object, .header h1 img {
   height: 130px;
   max-width: 100%;
 }
@@ -269,5 +269,27 @@ section p, section .btn, section .btn-group {
   background-color: #ededed;
   padding: 10px;
 }
-
+#mqc_docs .content_block {
+  padding-right: 220px;
+}
+#toc {
+  position: fixed;
+  right: 5px;
+  top: 100px;
+  width: 250px;
+  background-color: #fff;
+}
+#toc ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#toc ul ul { display: none; }
+#toc ul li {
+  padding: 0;
+}
+#toc ul li a {
+  display: inline-block;
+  padding: 8px 10px;
+}
 

@@ -65,11 +65,9 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <h1>
-              <object type="image/svg+xml" title="MultiQC" data="../images/Docs.svg">
-                <img src="../images/Docs.png" title="MultiQC">
-              </object>
-            </h1>
+            <object type="image/svg+xml" title="MultiQC" data="../images/Docs.svg">
+              <img src="../images/Docs.png" title="MultiQC">
+            </object>
           </div>
           <div class="col-sm-6" style="margin-top:40px;">
             <p class="lead">Welcome to the MultiQC docs.</p>
@@ -82,6 +80,8 @@
     </div>
       
     <div class="container">
+      
+      <div id="toc"></div>
       
       <?php      
       // Markdown parsing libraries
