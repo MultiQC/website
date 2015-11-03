@@ -1,8 +1,0 @@
-# Route all requests through index.php
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule ^site.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ site.php [NC,L,QSA]
-</IfModule>
