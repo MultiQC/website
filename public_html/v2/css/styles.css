@@ -54,7 +54,11 @@ footer, footer a, footer a:hover {
                 */
 .navbar {
   background: transparent;
-  border: none;
+}
+@media (min-width: 992px) {
+  .navbar {
+    border: none;
+  }
 }
 .navbar .navbar-nav > li > a {
   padding: 8px 15px;
@@ -64,14 +68,16 @@ footer, footer a, footer a:hover {
 .navbar .navbar-nav > li.active > a {
   background-color: rgba(0,0,0, 0.3);
 }
-@media (min-width: 992px) {
-  .header {
-      margin-bottom: 550px;
-  }
-}
 .header {
   background: #333333 url('../images/congruent_outline.png');
   box-shadow: 0 0 20px #999;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+  #mqc_homepage .header {
+      margin-bottom: 550px;
+  }
 }
 .header .lead {
   font-size: 24px;
@@ -83,7 +89,7 @@ footer, footer a, footer a:hover {
 	filter: drop-shadow(0 1px 2px #222);
 }
 .header h1 object, .header h1 img {
-  width: 489px;
+  height: 130px;
   max-width: 100%;
 }
 .header p {
@@ -184,8 +190,8 @@ code .comment {
   body {
     background-color: #ededed;
   }
-  #homepage-content {
-    padding: 20px 0 0;
+  #content {
+    padding: 20px;
     margin-bottom: 30px;
     background-color: #FFF;
     border: 1px solid #ccc;
@@ -198,7 +204,6 @@ code .comment {
   font-size: 28px;
   color: #888;
   font-weight: 200;
-  padding: 0 20px;
   margin-bottom: 20px;
 }
 @media (max-width: 992px) {
@@ -208,7 +213,7 @@ code .comment {
 }
 
 section {
-  padding: 20px 20px 0;
+  padding: 20px 0;
   margin-bottom: 20px;
   border-top: 1px solid #dedede;
 }
