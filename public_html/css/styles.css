@@ -190,7 +190,7 @@ code .comment {
   body {
     background-color: #ededed;
   }
-  #content {
+  .content_block {
     padding: 20px;
     margin-bottom: 30px;
     background-color: #FFF;
@@ -256,6 +256,18 @@ section p, section .btn, section .btn-group {
 .focus-section p {
   margin-bottom: 20px;
   line-height: 1.8;
+}
+
+
+/*
+    DOCS
+            */
+
+#mqc_docs .content_block h1 {
+  font-size: 46px;
+  border-left: 2px solid #333;
+  background-color: #ededed;
+  padding: 10px;
 }
 
 

@@ -15,7 +15,8 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../fonts/font-mfizz.css">
-    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/code_highlighting/github.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -62,38 +63,56 @@
         </div>
       </nav>
       <div class="container">
-        <h1>
-          <object type="image/svg+xml" title="MultiQC" data="../images/Docs.svg">
-            <img src="../images/Docs.png" title="MultiQC">
-          </object>
-        </h1>
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>
+              <object type="image/svg+xml" title="MultiQC" data="../images/Docs.svg">
+                <img src="../images/Docs.png" title="MultiQC">
+              </object>
+            </h1>
+          </div>
+          <div class="col-sm-6" style="margin-top:40px;">
+            <p class="lead">Welcome to the MultiQC docs.</p>
+            <p>These docs are bundled with the MultiQC download for your convenience,
+               so you can also read in your installation or on <a href="https://github.com/ewels/MultiQC/tree/master/docs">Github</a>.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
       
-    <div class="container"><div id="content">
+    <div class="container">
       
-      <p class="content-lead">Welcome to the MultiQC docs.</p>
-      <p class="lead text-center">These docs are bundled with the MultiQC download for your convenience, <br>
-         meaning that you can also read them on <a href="https://github.com/ewels/MultiQC/tree/master/docs">Github</a>.
-      </p>
-      
-      <?php
-      error_reporting(E_ALL); //testing
-      
+      <?php      
       // Markdown parsing libraries
       require_once('parsedown/Parsedown.php');
       require_once('parsedown-extra/ParsedownExtra.php');
       
+      // Get the docs markdown sources in order
+      $md = file_get_contents('../../multiqc/docs/README.md');
+      $pages = [];
+      // (parse YAML manually as not a core PHP package.. sigh.)
+      $md_parts = explode('---', $md, 3);
+      if(count($md_parts) == 3){
+        preg_match_all('/- .+\.md/', $md_parts[1], $matches);
+        foreach($matches[0] as $m){
+          $m = trim(str_replace('-', '', $m));
+          $pages[] = '../../multiqc/docs/'.trim($m);
+        }
+      }
+      if(count($pages) == 0){ $pages = glob("../../multiqc/docs/*.md"); }
+      
       // Loop over the markdown files
-      foreach (glob("../../multiqc/docs/*.md") as $fn) {
+      foreach ($pages as $fn) {
+        if(basename($fn) == 'README.md'){ continue; }
         $md = file_get_contents($fn);
         $pd = new ParsedownExtra();
-        echo '<section>' . $pd->text($md) . '</section>';
+        echo '<div class="content_block" id="'.substr(basename($fn), 0, -3).'">' . $pd->text($md) . '</div>';
       }
       
       ?>
       
-    </div></div> <!-- /content /container -->
+    </div> <!-- /container -->
     
     <footer id="footer">
       <div class="container">
@@ -113,5 +132,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../js/docs.js"></script>
   </body>
 </html>
