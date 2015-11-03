@@ -77,9 +77,21 @@
          meaning that you can also read them on <a href="https://github.com/ewels/MultiQC/tree/master/docs">Github</a>.
       </p>
       
-			<section>
-				<h1>Installaiton</h1>
-      </section>
+      <?php
+      error_reporting(E_ALL); //testing
+      
+      // Markdown parsing libraries
+      require_once('parsedown/Parsedown.php');
+      require_once('parsedown-extra/ParsedownExtra.php');
+      
+      // Loop over the markdown files
+      foreach (glob("../../multiqc/docs/*.md") as $fn) {
+        $md = file_get_contents($fn);
+        $pd = new ParsedownExtra();
+        echo '<section>' . $pd->text($md) . '</section>';
+      }
+      
+      ?>
       
     </div></div> <!-- /content /container -->
     

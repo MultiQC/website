@@ -1,6 +1,3 @@
-[submodule "multiqc/0.2"]
-	path = multiqc/0.2
-	url = https://github.com/ewels/MultiQC.git
 [submodule "public_html/docs/parsedown"]
 	path = public_html/docs/parsedown
 	url = https://github.com/erusev/parsedown.git
