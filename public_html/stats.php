@@ -1,4 +1,38 @@
-<!DOCTYPE html>
+<?php
+// Plot PyPI Downloads
+
+// Connect to the database
+$dbconfig = parse_ini_file("../db_config.ini");
+$db = new mysqli('localhost', $dbconfig['user'], $dbconfig['password'], $dbconfig['db']);
+if($db->connect_errno > 0){ die('Unable to connect to database [' . $db->connect_error . ']'); }
+
+// Get the download stats
+$dl_stats;
+$versions;
+$sql = "SELECT `time`, `version`, `downloads` FROM `pypi_downloads` ORDER BY `time` DESC, `version` DESC";
+if(!$result = $db->query($sql)){ die('There was an error running the query [' . $db->error . ']'); }
+while($r = $result->fetch_assoc()){
+    $t = $r['time'];
+    $v = $r['version'];
+    $dl_stats[$t][$v] = $r['downloads'];
+    $versions[$v] = true;
+}
+
+// Create the JSON strings needed by HighCharts
+$categories = array_keys($dl_stats);
+$series = [];
+foreach(array_keys($versions) as $v){
+    $data = [];
+    foreach($categories as $t){
+        $t_dl = isset($dl_stats[$t][$v]) ? intval($dl_stats[$t][$v]) : NULL;
+        // Javascript uses milliseconds, so multiply timestamp by 1000
+		array_push($data, array(strtotime($t)*1000, $t_dl));
+    }
+    array_push($series, array('name' => $v, 'data' => $data));
+}
+$series_json = json_encode($series);
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -66,52 +100,28 @@
         <div class="row">
           <div class="col-sm-6">
             <h1>
-              <object type="image/svg+xml" title="MultiQC" data="../images/Docs.svg">
-                <img src="../images/Docs.png" title="MultiQC">
-              </object>
+              <object type="image/svg+xml" title="MultiQC" data="images/MultiQC_logo.svg">
+						    <img src="images/MultiQC_logo.png">
+					    </object>
             </h1>
           </div>
           <div class="col-sm-6" style="margin-top:40px;">
-            <p class="lead">Welcome to the MultiQC docs.</p>
-            <p>These docs are bundled with the MultiQC download for your convenience,
-               so you can also read in your installation or on <a href="https://github.com/ewels/MultiQC/tree/master/docs">Github</a>.
-            </p>
+            <p class="lead">PyPI Download Statistics</p>
           </div>
         </div>
       </div>
     </div>
-      
-    <div class="container">
-      
-      <?php      
-      // Markdown parsing libraries
-      require_once('parsedown/Parsedown.php');
-      require_once('parsedown-extra/ParsedownExtra.php');
-      
-      // Get the docs markdown sources in order
-      $md = file_get_contents('../../multiqc/docs/README.md');
-      $pages = [];
-      // (parse YAML manually as not a core PHP package.. sigh.)
-      $md_parts = explode('---', $md, 3);
-      if(count($md_parts) == 3){
-        preg_match_all('/- .+\.md/', $md_parts[1], $matches);
-        foreach($matches[0] as $m){
-          $m = trim(str_replace('-', '', $m));
-          $pages[] = '../../multiqc/docs/'.trim($m);
-        }
-      }
-      if(count($pages) == 0){ $pages = glob("../../multiqc/docs/*.md"); }
-      
-      // Loop over the markdown files
-      foreach ($pages as $fn) {
-        if(basename($fn) == 'README.md'){ continue; }
-        $md = file_get_contents($fn);
-        $pd = new ParsedownExtra();
-        echo '<div class="content_block" id="'.substr(basename($fn), 0, -3).'">' . $pd->text($md) . '</div>';
-      }
-      
-      ?>
-      
+			
+		<!-- Four -->
+		<section id="plots" class="wrapper style2 special">
+			<header class="major">
+				<h2>Stats from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a></h2>
+				<p>Download counts collected daily from the PyPI JSON stats API.</p>
+			</header>
+			<div id="multiqc_pypi_downloads_plot"></div>
+		</section>
+
+
     </div> <!-- /container -->
     
     <footer id="footer">
@@ -128,25 +138,68 @@
       </div>
     </footer>
 
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript">
+	$(function () {
+	    $('#multiqc_pypi_downloads_plot').highcharts({
+	        chart: {
+	            type: 'area'
+	        },
+	        title: {
+	            text: 'MultiQC Downloads over time'
+	        },
+	        subtitle: {
+	            text: 'https://pypi.python.org/pypi/multiqc'
+	        },
+	        xAxis: {
+				type: 'datetime',
+				dateTimeLabelFormats: {
+					millisecond: '%e %b %Y, %H:%M',
+					second: '%e %b %Y, %H:%M',
+					minute: '%e %b %Y, %H:%M',
+					hour: '%e %b %Y, %H:%M',
+					day: '%e %b %Y',
+					week: '%e %b %Y',
+					month: '%b \'%y',
+					year: '%Y'
+	            }
+	        },
+	        yAxis: {
+				min: 0,
+	            title: {
+	                text: 'Downloads'
+	            },
+	        },
+	        tooltip: {
+	            shared: true
+	        },
+	        plotOptions: {
+	            area: {
+	                stacking: 'normal',
+	                lineColor: '#666666',
+	                lineWidth: 1,
+	                marker: {
+	                    lineWidth: 1,
+	                    lineColor: '#666666'
+	                }
+	            }
+	        },
+	        series: <?php echo $series_json; ?>
+	    });
+	});
+	</script>
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/docs.js"></script>
-  
-  <!-- Google Analytics -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68098153-1', 'auto');
+  ga('send', 'pageview');
 
-    ga('create', 'UA-68098153-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-  
-  </body>
+</script>
+	</body>
 </html>
