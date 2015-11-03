@@ -4,3 +4,6 @@
 [submodule "public_html/docs/parsedown-extra"]
 	path = public_html/docs/parsedown-extra
 	url = https://github.com/erusev/parsedown-extra.git
+[submodule "multiqc"]
+	path = multiqc
+	url = https://github.com/ewels/MultiQC.git
