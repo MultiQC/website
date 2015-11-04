@@ -78,7 +78,7 @@ $series_json = json_encode($series);
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="../">Home</a></li>
-              <li class="active"><a href="#">Docs</a></li>
+              <li><a href="#">Docs</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -112,14 +112,11 @@ $series_json = json_encode($series);
       </div>
     </div>
 			
-		<!-- Four -->
-		<section id="plots" class="wrapper style2 special">
-			<header class="major">
-				<h2>Stats from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a></h2>
-				<p>Download counts collected daily from the PyPI JSON stats API.</p>
-			</header>
+    <div class="container"><div class="content_block">
+			<h2>Stats from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a></h2>
+			<p>Download counts collected daily from the PyPI JSON stats API.</p>
 			<div id="multiqc_pypi_downloads_plot"></div>
-		</section>
+    </div></div>
 
 
     </div> <!-- /container -->
