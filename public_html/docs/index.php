@@ -50,7 +50,7 @@
                 <ul class="dropdown-menu">
                   <li class="dropdown-header">Analysis Types</li>
                   <li><a href="#">Whole Genome</a></li>
-                  <li><a href="#">RNA-Seq</a></li>
+                  <li><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
                   <li><a href="#">Bisulfite</a></li>
                   <li class="dropdown-header">Report Variants</li>
                   <li><a href="#">Many Samples</a></li>
@@ -81,7 +81,7 @@
       
     <div class="container docs-container">
       
-      <!-- <div id="toc"></div> -->
+      <div id="toc"></div>
       
       <?php      
       // Markdown parsing libraries
@@ -130,7 +130,7 @@
 
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>

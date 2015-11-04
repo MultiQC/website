@@ -266,30 +266,34 @@ section p, section .btn, section .btn-group {
 #mqc_docs {
   background-color: #FFF;
 }
-#mqc_docs .content_block h1 {
+.docs-container {
+  text-align: justify;
+}
+.docs_block {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 3px dashed #ccc;
+}
+.docs-container h1 {
   font-size: 46px;
   border-left: 2px solid #333;
   background-color: #ededed;
   padding: 10px;
 }
-#mqc_docs .docs_block {
-  overflow: auto;
-  text-align: justify;
-}
-#mqc_docs .docs_block img {
+.docs-container img {
   max-width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 @media (min-width: 992px) {
-  #mqc_docs .docs_block {
+  .docs-container {
     padding-right: 220px;
   }
   #toc {
     position: fixed;
     right: 5px;
-    top: 100px;
+    top: 290px;
     width: 250px;
   }
 }

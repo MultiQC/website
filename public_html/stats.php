@@ -77,14 +77,14 @@ $series_json = json_encode($series);
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../">Home</a></li>
-              <li><a href="#">Docs</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="docs/">Docs</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class="dropdown-header">Analysis Types</li>
                   <li><a href="#">Whole Genome</a></li>
-                  <li><a href="#">RNA-Seq</a></li>
+                  <li><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
                   <li><a href="#">Bisulfite</a></li>
                   <li class="dropdown-header">Report Variants</li>
                   <li><a href="#">Many Samples</a></li>
@@ -136,7 +136,7 @@ $series_json = json_encode($series);
     </footer>
 
 	<!-- Scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="//code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript">
 	$(function () {

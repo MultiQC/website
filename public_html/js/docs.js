@@ -69,7 +69,18 @@
 $(document).ready(function() {
 	// Table of contents
   $('#toc').toc();
-  // $('.toc ul ul li').hide();
+  
+  // Stop toc from scrolling over the header
+  $(window).scroll(function(){
+    var wTop = $(window).scrollTop();
+    var hHeight = $('.header').height();
+    var tocTop = hHeight - wTop + 80;
+    if(tocTop > 50){
+      $('#toc').css({'position':'fixed', 'top': tocTop});
+    } else {
+      $('#toc').css({'position':'fixed', 'top': '50px'});
+    }
+  });
   
   // $('body').scrollspy({
   //     target: '#toc',
