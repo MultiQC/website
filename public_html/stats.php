@@ -2,7 +2,7 @@
 // Plot PyPI Downloads
 
 // Connect to the database
-$dbconfig = parse_ini_file("../db_config.ini");
+$dbconfig = parse_ini_file("../config.ini");
 $db = new mysqli('localhost', $dbconfig['user'], $dbconfig['password'], $dbconfig['db']);
 if($db->connect_errno > 0){ die('Unable to connect to database [' . $db->connect_error . ']'); }
 
