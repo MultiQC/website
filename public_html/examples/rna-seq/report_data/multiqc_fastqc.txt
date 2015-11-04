@@ -1,7 +1,0 @@
-	sequence_length	percent_duplicates	total_sequences_m	percent_gc
-SRR1067503_1	35	12.9%	30.5	44%
-SRR1067505_1	35	7.8%	18.0	47%
-SRR1067510_1	35	11.4%	34.3	40%
-SRR1067514_1	35	6.6%	33.6	44%
-SRR1067519_1	35	5.8%	24.6	42%
-SRR1067522_1	36	13.3%	35.7	40%

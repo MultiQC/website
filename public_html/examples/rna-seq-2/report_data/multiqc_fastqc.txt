@@ -1,9 +1,0 @@
-	sequence_length	percent_duplicates	total_sequences_m	percent_gc
-ERR458837_1	100	61.7%	32.8	44%
-ERR458837_1_val_1	95	60.5%	32.2	44%
-ERR458837_2	100	45.5%	32.8	43%
-ERR458837_2_val_2	94	45.4%	32.2	42%
-SRR1026912_blood_RNA-Seq_1	101	55.7%	46.9	45%
-SRR1026912_blood_RNA-Seq_1_val_1	97	54.8%	46.2	45%
-SRR1026912_blood_RNA-Seq_2	101	52.6%	46.9	43%
-SRR1026912_blood_RNA-Seq_2_val_2	95	51.6%	46.2	43%

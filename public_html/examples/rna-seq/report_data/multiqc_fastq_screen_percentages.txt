@@ -1,7 +1,0 @@
-	Human	Mouse	Ecoli	PhiX	No hits
-SRR1067503_1_screen.txt	82.74	2.74	0.2	0.0	16.91
-SRR1067505_1_screen.txt	88.24	7.12	0.01	0.0	7.17
-SRR1067510_1_screen.txt	80.84	3.58	0.0	0.0	18.53
-SRR1067514_1_screen.txt	79.63	15.04	0.01	0.0	7.56
-SRR1067519_1_screen.txt	91.52	3.3	0.0	0.01	7.06
-SRR1067522_1_screen.txt	83.68	8.66	0.0	0.0	10.25
