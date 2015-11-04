@@ -16,8 +16,9 @@ body {
   border-top: 1px solid #e5e5e5;
   margin-top: 5px;
 }
-code {
-  white-space: nowrap;
+pre {
+  overflow: auto;
+  background-color: #f8f8f8;
 }
 footer {
   background: #333333 url('../images/congruent_outline.png');
@@ -262,22 +263,35 @@ section p, section .btn, section .btn-group {
 /*
     DOCS
             */
-
+#mqc_docs {
+  background-color: #FFF;
+}
 #mqc_docs .content_block h1 {
   font-size: 46px;
   border-left: 2px solid #333;
   background-color: #ededed;
   padding: 10px;
 }
-#mqc_docs .content_block {
-  padding-right: 220px;
+#mqc_docs .docs_block {
+  overflow: auto;
+  text-align: justify;
 }
-#toc {
-  position: fixed;
-  right: 5px;
-  top: 100px;
-  width: 250px;
-  background-color: #fff;
+#mqc_docs .docs_block img {
+  max-width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+@media (min-width: 992px) {
+  #mqc_docs .docs_block {
+    padding-right: 220px;
+  }
+  #toc {
+    position: fixed;
+    right: 5px;
+    top: 100px;
+    width: 250px;
+  }
 }
 #toc ul {
   list-style-type: none;

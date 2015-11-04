@@ -79,9 +79,9 @@
       </div>
     </div>
       
-    <div class="container">
+    <div class="container docs-container">
       
-      <div id="toc"></div>
+      <!-- <div id="toc"></div> -->
       
       <?php      
       // Markdown parsing libraries
@@ -107,7 +107,7 @@
         if(basename($fn) == 'README.md'){ continue; }
         $md = file_get_contents($fn);
         $pd = new ParsedownExtra();
-        echo '<div class="content_block" id="'.substr(basename($fn), 0, -3).'">' . $pd->text($md) . '</div>';
+        echo '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
       }
       
       ?>
