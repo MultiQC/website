@@ -1,5 +1,4 @@
 <?php
-file_put_contents('post.txt', "got something" . mktime()."\n", FILE_APPEND);
 if ( $_POST['payload'] ) {
   
   // Get the hook secret
