@@ -65,8 +65,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <object type="image/svg+xml" title="MultiQC" data="../images/Docs.svg">
-              <img src="../images/Docs.png" title="MultiQC">
+            <object type="image/svg+xml" title="MultiQC" data="../images/Docs_logo.svg">
+              <img src="../images/Docs_logo.png" title="MultiQC">
             </object>
           </div>
           <div class="col-sm-6" style="margin-top:40px;">
