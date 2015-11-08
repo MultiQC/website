@@ -13,6 +13,7 @@ if ( $_POST['payload'] ) {
   
   // Pull the new version of the repo
   shell_exec("cd /home/multiqc/multiqc && /usr/local/cpanel/3rdparty/bin/git pull");
+  shell_exec("php /home/multiqc/scrape_pypi_downloads.php > /dev/null");
   die("done " . mktime());
 }
 ?>

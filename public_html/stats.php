@@ -142,7 +142,8 @@ $series_json = json_encode($series);
 	$(function () {
 	    $('#multiqc_pypi_downloads_plot').highcharts({
 	        chart: {
-	            type: 'area'
+	            type: 'area',
+              zoomType: 'x'
 	        },
 	        title: {
 	            text: 'MultiQC Downloads over time'
