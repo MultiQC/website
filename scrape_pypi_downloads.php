@@ -10,7 +10,7 @@ $json = file_get_contents('https://pypi.python.org/pypi/multiqc/0.1/json');
 $data = json_decode($json);
 
 // Connect to the database
-$dbconfig = parse_ini_file("db_config.ini");
+$dbconfig = parse_ini_file("config.ini");
 $db = new mysqli('localhost', $dbconfig['user'], $dbconfig['password'], $dbconfig['db']);
 if($db->connect_errno > 0){ die('Unable to connect to database [' . $db->connect_error . ']'); }
 
