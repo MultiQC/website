@@ -1,0 +1,7 @@
+Sample	Human_counts	Human_percentage	Mouse_counts	Mouse_percentage	Ecoli_counts	Ecoli_percentage	PhiX_counts	PhiX_percentage	No hits_counts	No hits_percentage
+SRR1067503_1_screen.txt	2314	2.32	1815	1.82	0	0.0	0	0.0	0	0
+SRR1067505_1_screen.txt	1512	1.52	1254	1.26	0	0.0	0	0.0	0	0
+SRR1067510_1_screen.txt	2781	2.78	2368	2.37	0	0.0	0	0.0	0	0
+SRR1067514_1_screen.txt	1455	1.46	1193	1.19	0	0.0	0	0.0	0	0
+SRR1067519_1_screen.txt	1459	1.46	1100	1.1	0	0.0	0	0.0	0	0
+SRR1067522_1_screen.txt	2340	2.34	1890	1.89	0	0.0	0	0.0	0	0
