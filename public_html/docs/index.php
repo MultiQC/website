@@ -50,8 +50,8 @@
                 <ul class="dropdown-menu">
                   <li class="dropdown-header">Analysis Types</li>
                   <li><a href="#">Whole Genome</a></li>
-                  <li><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
-                  <li><a href="#">Bisulfite</a></li>
+                  <li><a href="../examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
+                  <li><a href="../examples/bs-seq/multiqc_report.html">Bisulfite</a></li>
                   <li class="dropdown-header">Report Variants</li>
                   <li><a href="#">Many Samples</a></li>
                   <li><a href="#">Directory Names</a></li>
