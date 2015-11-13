@@ -1746,6 +1746,7 @@ function plot_stacked_bar_graph(target, ds){
   if (config['yDecimals'] === undefined){ config['yDecimals'] = true; }
   if(config['click_func'] === undefined){ config['click_func'] = function(){}; }
   else { if(config['cursor'] === undefined){ config['cursor'] = 'pointer'; } }
+  if (config['tt_percentages'] === undefined){ config['tt_percentages'] = true; }
   
   // Make a clone of the data, so that we can mess with it,
   // while keeping the original data in tact
@@ -1841,6 +1842,9 @@ function plot_stacked_bar_graph(target, ds){
       },
       max: config['ymax'],
       min: config['ymin'],
+      labels: {
+        format: config['ylab_format']
+      },
       allowDecimals: config['yDecimals'],
       reversedStacks: false
     },
@@ -1867,10 +1871,15 @@ function plot_stacked_bar_graph(target, ds){
     },
     tooltip: {
       formatter: function () {
-        var s = '<table><tr><th colspan="3" style="font-weight:bold; text-decoration:underline;">' + this.x + '</th></tr>';
+        var colspan = config['tt_percentages'] ? 3 : 2;
+        var pc_col = config['tt_percentages'] ? '<td style="text-align:right; border-bottom:1px solid #dedede;">(' + this.percentage.toFixed(1) + '%)</td>' : '';
+        var s = '<table><tr><th colspan="'+colspan+'" style="font-weight:bold; text-decoration:underline;">' + this.x + '</th></tr>';
         $.each(this.points.reverse(), function () {
           yval = this.y.toFixed(0)
-          s += '<tr><td style="font-weight:bold; color:'+this.series.color+'; padding-right: 15px; border-bottom:1px solid #dedede;">' + this.series.name + ':</td><td style="text-align:right; border-bottom:1px solid #dedede;">' + numberWithCommas(yval) + '</td><td style="text-align:right; border-bottom:1px solid #dedede;">(' + this.percentage.toFixed(1) + '%)</td></tr>';
+          s += '<tr> \
+            <td style="font-weight:bold; color:'+this.series.color+'; padding-right: 15px; border-bottom:1px solid #dedede;">' + this.series.name + ':</td>\
+            <td style="text-align:right; border-bottom:1px solid #dedede;">' + numberWithCommas(yval) + '</td>\
+            '+pc_col+'</tr>';
         });
         s += '</table>';
         return s;
@@ -2930,7 +2939,7 @@ function findPos(obj) {
   </div>
   <a href="#top" class="mqc-toplink hidden-xs" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
-<script type="text/javascript">var report_id = 'mqc_report_k5aj0p9lvx3hd8us1omc'; </script>
+<script type="text/javascript">var report_id = 'mqc_report_y0sh5plz9uvm8kdgf36t'; </script>
 
 
 <div class="mainpage">
@@ -2947,7 +2956,7 @@ function findPos(obj) {
 <p class="lead">A modular tool to aggregate results from bioinformatics
     analyses across many samples into a single report.</p>
 
-<p>Report generated on 2015-11-12, 16:11 based on data in
+<p>Report generated on 2015-11-13, 16:11 based on data in
     <code id="mqc_analysis_path">/Users/philewels/Desktop/MultiQC_testing/star/data</code></p>
 
 <div class="alert alert-info alert-dismissible hidden-print mqc-into-tour-alert">
@@ -3243,8 +3252,8 @@ function findPos(obj) {
   <h2 id="fastq_screen">FastQ Screen</h2>
   <p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/" target="_blank">FastQ Screen</a> allows you to screen a library of sequences in FastQ format against a set of sequence databases so you can see if the composition of the library matches with what you expect.</p><div id="fq_screen_plot" class="hc-plot"></div> 
         <script type="text/javascript"> 
-            fq_screen_data = [{"color": "#7f0000", "data": [2.32, 1.82, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067503_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [1.52, 1.26, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067505_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [2.78, 2.37, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067510_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [1.46, 1.19, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067514_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [1.46, 1.1, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067519_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [2.34, 1.89, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067522_1_screen.txt"}, {"color": "#ff0000", "data": [0.27, 0.77, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067503_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [1.0, 1.26, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067505_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.16, 0.57, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067510_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.79, 1.05, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067514_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.42, 0.78, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067519_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.25, 0.71, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067522_1_screen.txt"}, {"color": "#00007f", "data": [28.94, 0.07, 0.01, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067503_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [15.0, 0.85, 0.01, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067505_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [41.49, 0.33, 0.0, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067510_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [14.99, 2.24, 0.01, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067514_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [19.44, 0.42, 0.0, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067519_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [32.02, 2.79, 0.0, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067522_1_screen.txt"}, {"color": "#0000ff", "data": [51.21, 0.08, 0.19, 0.0, 16910.0], "name": "One Hit, One Library", "stack": "SRR1067503_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [70.72, 3.75, 0.0, 0.0, 7170.0], "name": "One Hit, One Library", "stack": "SRR1067505_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [36.41, 0.31, 0.0, 0.0, 18530.000000000004], "name": "One Hit, One Library", "stack": "SRR1067510_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [62.39, 10.56, 0.0, 0.0, 7560.0], "name": "One Hit, One Library", "stack": "SRR1067514_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [70.2, 1.0, 0.0, 0.01, 7060.0], "name": "One Hit, One Library", "stack": "SRR1067519_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [49.07, 3.27, 0.0, 0.0, 10250.0], "name": "One Hit, One Library", "stack": "SRR1067522_1_screen.txt"}];
-            fq_screen_categories = ["Human", "Mouse", "Ecoli", "PhiX", "No hits"];
+            fq_screen_data = [{"color": "#7f0000", "data": [2.32, 1.82, 0.09, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067503_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [1.52, 1.26, 0.27, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067505_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [2.78, 2.37, 0.05, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067510_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [1.46, 1.19, 0.11, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067514_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [1.46, 1.1, 0.05, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067519_1_screen.txt"}, {"color": "#7f0000", "linkedTo": ":previous", "data": [2.34, 1.89, 0.08, 0.0, 0.0, 0], "name": "Multiple Hits, Multiple Libraries", "stack": "SRR1067522_1_screen.txt"}, {"color": "#ff0000", "data": [0.27, 0.77, 0.0, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067503_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [1.0, 1.26, 0.01, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067505_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.16, 0.57, 0.0, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067510_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.79, 1.05, 0.01, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067514_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.42, 0.78, 0.01, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067519_1_screen.txt"}, {"color": "#ff0000", "linkedTo": ":previous", "data": [0.25, 0.71, 0.01, 0.0, 0.0, 0], "name": "One Hit, Multiple Libraries", "stack": "SRR1067522_1_screen.txt"}, {"color": "#00007f", "data": [28.94, 0.07, 0.0, 0.01, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067503_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [15.0, 0.85, 0.0, 0.01, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067505_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [41.49, 0.33, 0.0, 0.0, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067510_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [14.99, 2.24, 0.0, 0.01, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067514_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [19.44, 0.42, 0.0, 0.0, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067519_1_screen.txt"}, {"color": "#00007f", "linkedTo": ":previous", "data": [32.02, 2.79, 0.0, 0.0, 0.0, 0], "name": "Multiple Hits, One Library", "stack": "SRR1067522_1_screen.txt"}, {"color": "#0000ff", "data": [51.21, 0.08, 0.0, 0.19, 0.0, 16.91], "name": "One Hit, One Library", "stack": "SRR1067503_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [70.72, 3.75, 0.0, 0.0, 0.0, 7.17], "name": "One Hit, One Library", "stack": "SRR1067505_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [36.41, 0.31, 0.0, 0.0, 0.0, 18.53], "name": "One Hit, One Library", "stack": "SRR1067510_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [62.39, 10.56, 0.0, 0.0, 0.0, 7.56], "name": "One Hit, One Library", "stack": "SRR1067514_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [70.2, 1.0, 0.0, 0.0, 0.01, 7.06], "name": "One Hit, One Library", "stack": "SRR1067519_1_screen.txt"}, {"color": "#0000ff", "linkedTo": ":previous", "data": [49.07, 3.27, 0.0, 0.0, 0.0, 10.25], "name": "One Hit, One Library", "stack": "SRR1067522_1_screen.txt"}];
+            fq_screen_categories = ["Human", "Mouse", "S.cerevisiae", "Ecoli", "PhiX", "No hits"];
             $(function () { 
                 $("#fq_screen_plot").highcharts({ 
                     chart: { type: "column", backgroundColor: null }, 
