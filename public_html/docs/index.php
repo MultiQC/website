@@ -79,10 +79,7 @@
       </div>
     </div>
       
-    <div class="container docs-container">
-      
-      <div id="toc"></div>
-      
+    <div class="container docs-container">      
       <?php      
       // Markdown parsing libraries
       require_once('parsedown/Parsedown.php');
@@ -91,25 +88,43 @@
       // Get the docs markdown sources in order
       $md = file_get_contents('../../multiqc/docs/README.md');
       $pages = [];
+      $section = 'MultiQC Docs';
       // (parse YAML manually as not a core PHP package.. sigh.)
       $md_parts = explode('---', $md, 3);
       if(count($md_parts) == 3){
-        preg_match_all('/- .+\.md/', $md_parts[1], $matches);
-        foreach($matches[0] as $m){
+        $yls = explode(PHP_EOL, $md_parts[1]);
+        foreach($yls as $yl){
           $m = trim(str_replace('-', '', $m));
-          $pages[] = '../../multiqc/docs/'.trim($m);
+          if(substr($yl, 0, 2) == ' -'){
+            $section = $m;
+          } else if(substr($yl, 0, 4) == '   -'){
+            $pages[$section] = '../../multiqc/docs/'.trim($m);
+          }
         }
       }
-      if(count($pages) == 0){ $pages = glob("../../multiqc/docs/*.md"); }
+      if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
       
       // Loop over the markdown files
-      foreach ($pages as $fn) {
-        if(basename($fn) == 'README.md'){ continue; }
-        $md = file_get_contents($fn);
-        $pd = new ParsedownExtra();
-        echo '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
+      $toc = '<div id="toc"><ul>';
+      $content = '';
+      foreach ($pages as $section) {
+        $sid = strtolower(str_replace(' ', '_', $section));
+        $toc .= '<li><a href="'.$sid.'">'.$section.'</a>';
+        $content .= '<div class="docs_section" id="'.$sid.'">'.$section.'</div>';
+        foreach ($pages[$section] as $fn){
+          if(basename($fn) == 'README.md'){ continue; }
+          $md = file_get_contents($fn);
+          $pd = new ParsedownExtra();
+          $toc .= '<li><a href="'.basename($fn).'">'.$section.'</a></li>';
+          $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
+        }
+        $toc .= '</li>';
+        $content .= '</div>';
       }
+      $toc .= '</ul></div>';
       
+      echo $toc;
+      echo $body;
       ?>
       
     </div> <!-- /container -->
