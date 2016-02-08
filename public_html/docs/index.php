@@ -25,7 +25,7 @@
     <![endif]-->
   </head>
 
-  <body id="mqc_docs">
+  <body id="mqc_docs" data-spy="scroll" data-target="#toc">
 
     <div class="header">
       
@@ -94,37 +94,39 @@
       if(count($md_parts) == 3){
         $yls = explode(PHP_EOL, $md_parts[1]);
         foreach($yls as $yl){
-          $m = trim(str_replace('-', '', $m));
-          if(substr($yl, 0, 2) == ' -'){
+          $m = trim(str_replace('-', '', $yl));
+          if(substr($yl, 0, 1) == '-'){
             $section = $m;
-          } else if(substr($yl, 0, 4) == '   -'){
-            $pages[$section] = '../../multiqc/docs/'.trim($m);
+            $pages[$m] = [];
+          } else if(substr($yl, 0, 2) == '  '){
+            $pgp = explode(': ',$m);
+            $pages[$section][$pgp[0]] = '../../multiqc/docs/'.trim($pgp[1]);
           }
         }
       }
       if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
       
       // Loop over the markdown files
-      $toc = '<div id="toc"><ul>';
+      $toc = '<div id="toc"><ul class="nav nav-pills nav-stacked">';
       $content = '';
-      foreach ($pages as $section) {
+      foreach (array_keys($pages) as $section) {
         $sid = strtolower(str_replace(' ', '_', $section));
-        $toc .= '<li><a href="'.$sid.'">'.$section.'</a>';
-        $content .= '<div class="docs_section" id="'.$sid.'">'.$section.'</div>';
-        foreach ($pages[$section] as $fn){
+        $toc .= '<li><a href="#'.$sid.'">'.$section.'</a><ul class="nav nav-pills nav-stacked">';
+        $content .= '<div class="docs_section" id="'.$sid.'"><h1 class="section-header">'.$section.'</h1>';
+        foreach ($pages[$section] as $name => $fn){
           if(basename($fn) == 'README.md'){ continue; }
           $md = file_get_contents($fn);
           $pd = new ParsedownExtra();
-          $toc .= '<li><a href="'.basename($fn).'">'.$section.'</a></li>';
+          $toc .= '<li><a href="#'.basename($fn).'">- '.$name.'</a></li>';
           $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
         }
-        $toc .= '</li>';
+        $toc .= '</ul></li>';
         $content .= '</div>';
       }
       $toc .= '</ul></div>';
       
       echo $toc;
-      echo $body;
+      echo $content;
       ?>
       
     </div> <!-- /container -->
