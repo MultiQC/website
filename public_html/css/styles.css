@@ -49,6 +49,13 @@ footer, footer a, footer a:hover {
   height: 40px;
 }
 
+.language-yaml {
+  color: #d14;
+}
+.hljs-attr, .hljs-bullet {
+  color: #333;
+}
+
 
 /* 
       HEADER
