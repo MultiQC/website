@@ -1,4 +1,49 @@
-<!DOCTYPE html>
+<?php      
+// Markdown parsing libraries
+require_once('parsedown/Parsedown.php');
+require_once('parsedown-extra/ParsedownExtra.php');
+
+// Get the docs markdown sources in order
+$md = file_get_contents('../../multiqc/docs/README.md');
+$pages = [];
+$section = 'MultiQC Docs';
+// (parse YAML manually as not a core PHP package.. sigh.)
+$md_parts = explode('---', $md, 3);
+if(count($md_parts) == 3){
+  $yls = explode(PHP_EOL, $md_parts[1]);
+  foreach($yls as $yl){
+    $m = trim(str_replace('-', '', $yl));
+    if(substr($yl, 0, 1) == '-'){
+      $section = $m;
+      $pages[$m] = [];
+    } else if(substr($yl, 0, 2) == '  '){
+      $pgp = explode(': ',$m);
+      $pages[$section][$pgp[0]] = '../../multiqc/docs/'.trim($pgp[1]);
+    }
+  }
+}
+if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
+
+// Loop over the markdown files
+$toc = '<ul class="nav nav-pills nav-stacked">';
+$content = '';
+foreach (array_keys($pages) as $section) {
+  $sid = strtolower(str_replace(' ', '_', $section));
+  $toc .= '<li><a href="#'.$sid.'">'.$section.'</a><ul class="nav nav-pills nav-stacked">';
+  $content .= '<div class="docs_section" id="'.$sid.'"><h1 class="section-header">'.$section.'</h1>';
+  foreach ($pages[$section] as $name => $fn){
+    if(basename($fn) == 'README.md'){ continue; }
+    $md = file_get_contents($fn);
+    $pd = new ParsedownExtra();
+    $toc .= '<li><a href="#'.basename($fn).'">'.$name.'</a></li>';
+    $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
+  }
+  $toc .= '</ul></li>';
+  $content .= '</div>';
+}
+$toc .= '</ul>';
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -79,56 +124,17 @@
       </div>
     </div>
       
-    <div class="container docs-container">      
-      <?php      
-      // Markdown parsing libraries
-      require_once('parsedown/Parsedown.php');
-      require_once('parsedown-extra/ParsedownExtra.php');
-      
-      // Get the docs markdown sources in order
-      $md = file_get_contents('../../multiqc/docs/README.md');
-      $pages = [];
-      $section = 'MultiQC Docs';
-      // (parse YAML manually as not a core PHP package.. sigh.)
-      $md_parts = explode('---', $md, 3);
-      if(count($md_parts) == 3){
-        $yls = explode(PHP_EOL, $md_parts[1]);
-        foreach($yls as $yl){
-          $m = trim(str_replace('-', '', $yl));
-          if(substr($yl, 0, 1) == '-'){
-            $section = $m;
-            $pages[$m] = [];
-          } else if(substr($yl, 0, 2) == '  '){
-            $pgp = explode(': ',$m);
-            $pages[$section][$pgp[0]] = '../../multiqc/docs/'.trim($pgp[1]);
-          }
-        }
-      }
-      if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
-      
-      // Loop over the markdown files
-      $toc = '<div id="toc"><ul class="nav nav-pills nav-stacked">';
-      $content = '';
-      foreach (array_keys($pages) as $section) {
-        $sid = strtolower(str_replace(' ', '_', $section));
-        $toc .= '<li><a href="#'.$sid.'">'.$section.'</a><ul class="nav nav-pills nav-stacked">';
-        $content .= '<div class="docs_section" id="'.$sid.'"><h1 class="section-header">'.$section.'</h1>';
-        foreach ($pages[$section] as $name => $fn){
-          if(basename($fn) == 'README.md'){ continue; }
-          $md = file_get_contents($fn);
-          $pd = new ParsedownExtra();
-          $toc .= '<li><a href="#'.basename($fn).'">- '.$name.'</a></li>';
-          $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
-        }
-        $toc .= '</ul></li>';
-        $content .= '</div>';
-      }
-      $toc .= '</ul></div>';
-      
-      echo $toc;
-      echo $content;
-      ?>
-      
+    <div class="container docs-container">
+      <div class="row">
+        <div class="col-sm-3 col-sm-push-9">
+          <div id="toc" data-spy="affix" data-offset-top="274">
+            <?php echo $toc; ?>
+          </div>
+        </div>
+        <div class="col-sm-9 col-sm-pull-3">
+          <?php echo $content; ?>
+        </div>
+      </div>
     </div> <!-- /container -->
     
     <footer id="footer">

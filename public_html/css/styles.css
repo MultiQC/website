@@ -286,54 +286,22 @@ section p, section .btn, section .btn-group {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-@media (min-width: 992px) {
-  .docs-container {
-    padding-right: 220px;
-  }
-  #toc.affix-top {
+
+.affix {
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  .affix {
     position: static;
-    right: 5px;
-  	margin-top:80px;
-  	width:230px;
   }
-  
-  #toc.affix {
-    position: fixed;
-    right: 5px;
-    top:80px;
-    width:230px;
-  }
-  /*#toc {
-    position: fixed;
-    right: 5px;
-    top: 290px;
-    width: 230px;
-  }*/
 }
-/*#toc ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-#toc ul ul {
-  margin-left: 10px;
-}
-#toc ul li {
-  padding: 0;
-  margin-bottom: 10px;
-}
-#toc ul li li {
-  margin-bottom: 0;
-}
-#toc ul li a {
-  display: inline-block;
-  padding: 4px 10px;
-}*/
 
 /* hide sidebar sub menus by default */
 #toc .nav .nav {
-	/*display: none;*/
   font-size:12px;
+  margin-left: 10px;
+  display: none;
 }
 
 /* show sub menu when parent is active */
