@@ -25,12 +25,12 @@ if(count($md_parts) == 3){
 if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
 
 // Loop over the markdown files
-$toc = '<ul class="nav nav-pills nav-stacked">';
+$toc = '<ul class="nav nav-stacked">';
 $content = '';
 foreach (array_keys($pages) as $section) {
-  $sid = strtolower(str_replace(' ', '_', $section));
-  $toc .= '<li><a href="#'.$sid.'">'.$section.'</a><ul class="nav nav-pills nav-stacked">';
-  $content .= '<div class="docs_section" id="'.$sid.'"><h1 class="section-header">'.$section.'</h1>';
+  $sid = strtolower(str_replace(' ', '-', $section));
+  $toc .= '<li><a href="#'.$sid.'">'.$section.'</a><ul class="nav nav-stacked">';
+  $content .= '<div class="docs_section"><h1 class="section-header" id="'.$sid.'"><a href="#'.$sid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$section.'</h1>';
   foreach ($pages[$section] as $name => $fn){
     if(basename($fn) == 'README.md'){ continue; }
     $md = file_get_contents($fn);
@@ -42,6 +42,15 @@ foreach (array_keys($pages) as $section) {
   $content .= '</div>';
 }
 $toc .= '</ul>';
+
+// Add ID attributes to headers
+$content = preg_replace_callback(
+  '~<h([123])>([^<]*)</h([123])>~Ui',
+  function ($matches) {
+    $hid = strtolower( preg_replace('/[^\w-]/', '', str_replace(' ', '-', $matches[2])));
+    return '<h'.$matches[1].' id="'.$hid.'"><a href="#'.$hid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$matches[2].'</h'.$matches[3].'>';
+  },
+  $content);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -70,7 +79,7 @@ $toc .= '</ul>';
     <![endif]-->
   </head>
 
-  <body id="mqc_docs" data-spy="scroll" data-target="#toc">
+  <body id="mqc_docs" data-spy="scroll" data-target="#toc" data-offset="100">
 
     <div class="header">
       
@@ -126,8 +135,8 @@ $toc .= '</ul>';
       
     <div class="container docs-container">
       <div class="row">
-        <div class="col-sm-3 col-sm-push-9">
-          <div id="toc" data-spy="affix" data-offset-top="274">
+        <div class="col-sm-3 col-sm-push-9" id="toc_column">
+          <div id="toc" data-spy="affix" data-offset-top="254">
             <?php echo $toc; ?>
           </div>
         </div>
