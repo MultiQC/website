@@ -326,30 +326,44 @@ h1.section-header .header-link { margin-top: 23px; }
 .affix {
   top: 20px;
 }
-
-#toc .nav li.active > a {
-  border-left: 3px solid #337ab7;
-  background-color: #eee;
-}
-
 @media (max-width: 768px) {
   .affix {
     position: static;
   }
 }
-
-/* hide sidebar sub menus by default */
+#toc .nav li a {
+  font-weight: bold;
+}
+#toc .nav .nav li a {
+  font-weight: normal;
+}
 #toc .nav .nav {
-  font-size:12px;
   margin-left: 10px;
-  display: none;
+    display: none;
+}
+#toc .nav .nav .nav {
+  font-size:12px;
+  margin-left: 20px;
+}
+#toc .nav .nav .nav .nav {
+  margin-left: 10px;
+}
+#toc .nav .nav .nav li a {
+  padding: 5px 7px;
 }
 
-/* show sub menu when parent is active */
-#toc .nav>.active>ul {
+#toc .nav > .active > ul {
 	display: block;
 }
-.active {
-  color: red;
+#toc .nav .nav li.active > a {
+  border-left: 3px solid #337ab7;
+}
+#toc .nav .nav .nav li.active > a {
+  border-left: 1px solid #337ab7;
+  background-color: #eee;
+}
+#toc .nav .nav .nav .nav li.active > a {
+  border-left: 1px solid #337ab7;
+  background-color: transparent;
 }
 

@@ -24,33 +24,71 @@ if(count($md_parts) == 3){
 }
 if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
 
-// Loop over the markdown files
-$toc = '<ul class="nav nav-stacked">';
+// Loop over the markdown files and build the HTML content
 $content = '';
 foreach (array_keys($pages) as $section) {
   $sid = strtolower(str_replace(' ', '-', $section));
-  $toc .= '<li><a href="#'.$sid.'">'.$section.'</a><ul class="nav nav-stacked">';
-  $content .= '<div class="docs_section"><h1 class="section-header" id="'.$sid.'"><a href="#'.$sid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$section.'</h1>';
+  $content .= '<div class="docs_section">'."\n".'<h1 class="section-header" id="'.$sid.'"><a href="#'.$sid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$section."</h1>\n";
   foreach ($pages[$section] as $name => $fn){
     if(basename($fn) == 'README.md'){ continue; }
     $md = file_get_contents($fn);
     $pd = new ParsedownExtra();
-    $toc .= '<li><a href="#'.basename($fn).'">'.$name.'</a></li>';
     $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
   }
-  $toc .= '</ul></li>';
   $content .= '</div>';
 }
-$toc .= '</ul>';
 
 // Add ID attributes to headers
+$hids = Array();
 $content = preg_replace_callback(
-  '~<h([123])>([^<]*)</h([123])>~Ui',
+  '~<h([123])>([^<]*)</h([123])>~Ui', // Ungreedy by default, case insensitive
   function ($matches) {
-    $hid = strtolower( preg_replace('/[^\w-]/', '', str_replace(' ', '-', $matches[2])));
+    global $hids;
+    $id_match = strtolower( preg_replace('/[^\w-]/', '', str_replace(' ', '-', $matches[2])));
+    $id_match = str_replace('---', '-', $id_match);
+    $hid = $id_match;
+    $i = 1;
+    while(in_array($hid, $hids)){
+      $hid = $id_match.'-'.$i;
+      $i += 1;
+    }
+    $hids[] = $hid;
     return '<h'.$matches[1].' id="'.$hid.'"><a href="#'.$hid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$matches[2].'</h'.$matches[3].'>';
   },
   $content);
+
+// Build the ToC
+$toc = '';
+$curr_level = 0;
+$id_regex = "~<h([123])([^>]*)id\s*=\s*['\"]([^'\"]*)['\"][^>]*>(.*)</h[123]>~Ui";
+preg_match_all($id_regex, $content, $matches, PREG_SET_ORDER);
+if($matches){
+  foreach($matches as $match){
+    $level = $match[1];
+    $class = $match[2];
+    if(!strpos($class, 'section-header')){
+      $level += 1;
+    }
+    $id = $match[3];
+    $name = str_replace('&nbsp;','', htmlentities(strip_tags($match[4]) ));
+    if($level > $curr_level){
+      $toc .= "\n".'<ul class="nav nav-stacked">'."\n";
+    } else if($level == $curr_level) {
+      $toc .= "</li>\n";
+    } else {
+      while($level < $curr_level){
+        $toc .= "</li>\n</ul>\n</li>\n";
+        $curr_level -= 1;
+      }
+    }
+    $curr_level = $level;
+    $toc .= '<li><a href="#'.$id.'">'.$name.'</a>';
+  }
+}
+while($curr_level > 0){
+  $toc .= '</li></ul>';
+  $curr_level -= 1;
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
