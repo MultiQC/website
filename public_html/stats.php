@@ -26,7 +26,7 @@ foreach(array_keys($versions) as $v){
     foreach($categories as $t){
         $t_dl = isset($dl_stats[$t][$v]) ? intval($dl_stats[$t][$v]) : NULL;
         // Javascript uses milliseconds, so multiply timestamp by 1000
-		array_push($data, array(strtotime($t)*1000, $t_dl));
+		    array_push($data, array(strtotime($t)*1000, $t_dl));
     }
     array_push($series, array('name' => $v, 'data' => $data));
 }
@@ -140,19 +140,19 @@ $series_json = json_encode($series);
 	<script src="//code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript">
 	$(function () {
-	    $('#multiqc_pypi_downloads_plot').highcharts({
-	        chart: {
-	            type: 'area',
-              zoomType: 'x'
-	        },
-	        title: {
-	            text: 'MultiQC Downloads over time'
-	        },
-	        subtitle: {
-	            text: 'https://pypi.python.org/pypi/multiqc'
-	        },
-	        xAxis: {
-				type: 'datetime',
+	  $('#multiqc_pypi_downloads_plot').highcharts({
+	    chart: {
+	      type: 'area',
+        zoomType: 'x'
+	    },
+	    title: {
+	      text: 'MultiQC Downloads over time'
+	    },
+	    subtitle: {
+	      text: 'https://pypi.python.org/pypi/multiqc'
+	    },
+	    xAxis: {
+			  type: 'datetime',
 				dateTimeLabelFormats: {
 					millisecond: '%e %b %Y, %H:%M',
 					second: '%e %b %Y, %H:%M',
@@ -162,32 +162,32 @@ $series_json = json_encode($series);
 					week: '%e %b %Y',
 					month: '%b \'%y',
 					year: '%Y'
-	            }
-	        },
-	        yAxis: {
-				min: 0,
-	            title: {
-	                text: 'Downloads'
-	            },
-	        },
-	        tooltip: {
-	            shared: true
-	        },
-	        plotOptions: {
-	            area: {
-	                stacking: 'normal',
-	                lineColor: '#666666',
-	                lineWidth: 1,
-	                marker: {
-	                    lineWidth: 1,
-	                    lineColor: '#666666'
-	                }
-	            }
-	        },
-	        series: <?php echo $series_json; ?>
-	    });
+	      }
+	    },
+	    yAxis: {
+        min: 0,
+	      title: {
+	        text: 'Downloads'
+	      },
+	    },
+	    tooltip: {
+	      shared: true
+	    },
+	    plotOptions: {
+	      area: {
+	        stacking: 'normal',
+	        lineColor: '#666666',
+	        lineWidth: 1,
+	        marker: {
+	          lineWidth: 1,
+	          lineColor: '#666666'
+	        }
+	      }
+	    },
+	    series: <?php echo $series_json; ?>
+	  });
 	});
-	</script>
+</script>
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

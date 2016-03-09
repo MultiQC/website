@@ -13,6 +13,9 @@ if ( $_POST['payload'] ) {
   
   // Pull the new version of the repo
   shell_exec("cd /home/multiqc/multiqc && /usr/local/cpanel/3rdparty/bin/git pull");
+  // Get the latest version number and write to a file
+  shell_exec("cd /home/multiqc/multiqc && /usr/local/cpanel/3rdparty/bin/git describe --tags --abbrev=0 > /home/multiqc/version.txt");
+  // Scrape the latest PyPI download stats
   shell_exec("php /home/multiqc/scrape_pypi_downloads.php > /dev/null");
   die("done " . mktime());
 }
