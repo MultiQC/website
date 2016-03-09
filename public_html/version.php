@@ -11,8 +11,9 @@ print($version);
 
 // Log version of tool that's asking
 if(isset($_GET['v'])){
-    $dev = substr($_GET['v'], -3) == 'dev' ? 'dev' : '';
-    $remote_version = preg_replace('/[^\d\.]/', '', $_GET['v']).$dev;
+    $remote_version = str_replace('.dev0', 'dev', $_GET['v']);
+    $dev = substr($remote_version, -3) == 'dev' ? 'dev' : '';
+    $remote_version = preg_replace('/[^\d\.]/', '', $remote_version).$dev;
     if($remote_version !== ''){
         
         // Connect to the database
