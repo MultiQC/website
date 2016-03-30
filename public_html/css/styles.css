@@ -8,6 +8,14 @@ body {
 .navbar {
   margin-bottom: 0;
 }
+.navbar p.navbar-text {
+  font-size: 12px;
+  margin-top: 21px;
+}
+.navbar p.navbar-text a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
 .dropdown-menu {
   padding-top:0;
 }
