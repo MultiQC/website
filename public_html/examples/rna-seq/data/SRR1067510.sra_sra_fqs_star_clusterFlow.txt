@@ -1,0 +1,387 @@
+
+--------------------------------------------------------------------------------
+Module:			cf_download
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_download_393
+Previous Job ID:	null
+Parameters:		dl_fn = SRR1067510.sra, url = ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR106/SRR1067510/SRR1067510.sra
+Date & Time:		23:01, 22-08-2015
+--------------------------------------------------------------------------------
+
+
+---------------------
+Downloading SRR1067510.sra from ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR106/SRR1067510/SRR1067510.sra
+Started at 23:01, Saturday - 22/08/2015
+
+###CFCMD wget -nv --tries=10 --output-document=SRR1067510.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR106/SRR1067510/SRR1067510.sra
+
+2015-08-22 23:04:21 URL: ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR106/SRR1067510/SRR1067510.sra [847565992] -> "SRR1067510.sra" [1]
+###CF Download worked - took 3 minutes, 9 seconds
+
+Download module finished at 23:04 22-08-2015
+---------------------
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			sra_fqdump
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_sra_fqdump_578
+Previous Job ID:	cf_sra_fqs_star_1440276586_download
+Date & Time:		23:13, 22-08-2015
+--------------------------------------------------------------------------------
+
+---------- FastQ Dump version information ----------
+
+fastq-dump : 2.3.5
+
+
+------- End of FastQ Dump version information ------
+
+###CFCMD fastq-dump --split-files ./SRR1067510.sra
+
+Read 34497539 spots for ./SRR1067510.sra
+Written 34497539 spots for ./SRR1067510.sra
+
+###CF FastQ Dump successfully exited on attempt 1, took 4 minutes, 29 seconds
+gzipping dumped fastq file SRR1067510_1.fastq..
+
+SRA dump file SRR1067510_2.fastq not found.. (Probably single end?)
+
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			fastqc
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_fastqc_978
+Previous Job ID:	cf_sra_fqs_star_1440276586_sra_fqdump_578
+Date & Time:		23:25, 22-08-2015
+--------------------------------------------------------------------------------
+
+---------- FastQC version information ----------
+FastQC v0.11.2
+
+------- End of FastQC version information ------
+
+###CFCMD fastqc -q  SRR1067510_1.fastq.gz
+
+###CF FastQC successfully ran, took 2 minutes, 30 seconds
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			fastq_screen
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_fastq_screen_226
+Previous Job ID:	cf_sra_fqs_star_1440276586_sra_fqdump_578
+Parameters:		fastq_screen_config = /home/phil/demo_star/fastq_screen.conf
+Date & Time:		23:25, 22-08-2015
+--------------------------------------------------------------------------------
+
+---------- FastQ Screen version information ----------
+fastq_screen v0.5.1
+
+------- End of FastQ Screen version information ------
+
+###CFCMD fastq_screen --conf /home/phil/demo_star/fastq_screen.conf --subset 100000  --quiet --aligner bowtie2 SRR1067510_1.fastq.gz
+
+Skipping DATABASE 'Human' since no bowtie index was found at '/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex/genome'
+Skipping DATABASE 'Mouse' since no bowtie index was found at '/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BowtieIndex/genome'
+Skipping DATABASE 'S.cerevisiae' since no bowtie index was found at '/sw/data/uppnex/igenomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/BowtieIndex/genome'
+Skipping DATABASE 'Ecoli' since no bowtie index was found at '/sw/data/uppnex/igenomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/BowtieIndex/genome'
+Skipping DATABASE 'PhiX' since no bowtie index was found at '/sw/data/uppnex/igenomes/PhiX/Illumina/RTA/Sequence/BowtieIndex/genome'
+###CF Fastq Screen (SE mode) successfully ran, took 3 minutes, 25 seconds
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			trim_galore
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_trim_galore_280
+Previous Job ID:	cf_sra_fqs_star_1440276586_sra_fqdump_578
+Parameters:		force_trim = 
+Date & Time:		23:26, 22-08-2015
+--------------------------------------------------------------------------------
+
+---------- Cutadapt version information ----------
+1.8
+
+------- End of Cutadapt version information ------
+---------- Trim Galore! version information ----------
+
+                          Quality-/Adapter-/RRBS-Trimming
+                               (powered by Cutadapt)
+                                  version 0.4.0
+
+                             Last update: 06 05 2015
+
+
+------- End of Trim Galore! version information ------
+
+###CFCMD trim_galore --gzip --phred33      --fastqc_args "-q" SRR1067510_1.fastq.gz
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.8
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> SRR1067510_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	4	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	ATGGAATTCTCG	1000000	0.00
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+Using Nextera adapter for trimming (count: 4). Second best hit was smallRNA (count: 0)
+
+Writing report to 'SRR1067510_1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: SRR1067510_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.0
+Cutadapt version: 1.8
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '-q'
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR1067510_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file SRR1067510_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.8 with Python 2.7.6
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA SRR1067510_1.fastq.gz
+Trimming 1 adapter(s) with at most 10.0% errors in single-end mode ...
+Finished in 627.20 s (18 us/read; 3.30 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              34,497,539
+Reads with adapters:                 9,924,562 (28.8%)
+Reads written (passing filters):    34,497,539 (100.0%)
+
+Total basepairs processed: 1,241,911,404 bp
+Quality-trimmed:              11,470,177 bp (0.9%)
+Total written (filtered):  1,216,579,239 bp (98.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 9924562 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 22.3%
+  C: 26.3%
+  G: 16.8%
+  T: 34.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	7202302	8624384.8	0	7202302
+2	1944102	2156096.2	0	1944102
+3	558790	539024.0	0	558790
+4	151314	134756.0	0	151314
+5	33169	33689.0	0	33169
+6	19453	8422.3	0	19453
+7	4613	2105.6	0	4613
+8	2281	526.4	0	2281
+9	1567	131.6	0	283 1284
+10	1466	32.9	1	45 1421
+11	558	8.2	1	9 549
+12	213	2.1	1	0 213
+13	148	2.1	1	0 148
+14	181	2.1	1	2 179
+15	222	2.1	1	3 219
+16	184	2.1	1	1 183
+17	201	2.1	1	4 197
+18	166	2.1	1	1 165
+19	175	2.1	1	1 174
+20	181	2.1	1	1 180
+21	207	2.1	1	4 203
+22	186	2.1	1	7 179
+23	199	2.1	1	1 198
+24	212	2.1	1	2 210
+25	188	2.1	1	1 187
+26	178	2.1	1	4 174
+27	168	2.1	1	3 165
+28	163	2.1	1	2 161
+29	206	2.1	1	6 200
+30	182	2.1	1	3 179
+31	204	2.1	1	3 201
+32	173	2.1	1	2 171
+33	155	2.1	1	1 154
+34	157	2.1	1	1 156
+35	192	2.1	1	10 182
+36	506	2.1	1	319 187
+
+
+RUN STATISTICS FOR INPUT FILE: SRR1067510_1.fastq.gz
+=============================================
+34497539 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	216951 (0.6%)
+
+
+  >>> Now running FastQC on the data <<<
+
+###CF Trim galore (SE mode) successfully exited, took 15 minutes, 21 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			star
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_star_557
+Previous Job ID:	cf_sra_fqs_star_1440276586_trim_galore_280
+Date & Time:		23:42, 22-08-2015
+--------------------------------------------------------------------------------
+
+
+Aligning against /proj/b2013064/nobackup/phil/bismark_references/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/
+
+---------- STAR version information ----------
+STAR_2.4.1c
+
+------- End of STAR version information ------
+
+###CFCMD STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /proj/b2013064/nobackup/phil/bismark_references/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR1067510_1_trimmed.fq.gz --outFileNamePrefix SRR1067510_1_trimmed --outStd SAM | samtools view -bS - > SRR1067510_1_trimmed_star_aligned.bam
+
+[samopen] SAM header is present: 25 sequences.
+###CF STAR (SE mode) successfully exited, took 30 minutes, 2 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			featureCounts
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_featureCounts_055
+Previous Job ID:	cf_sra_fqs_star_1440276586_star_557
+Date & Time:		00:18, 23-08-2015
+--------------------------------------------------------------------------------
+
+
+Using GTF file /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+
+---------- featureCounts version information ----------
+
+featureCounts v1.4.5
+
+Warning: something's wrong at /pica/h1/phil/cf/modules/featureCounts.cfmod.pl line 68.
+
+------- End of featureCounts version information ------
+
+###CFCMD featureCounts -T 1   -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR1067510_1_trimmed_star_aligned.bam_counts.txt SRR1067510_1_trimmed_star_aligned.bam
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.4.5
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                           S SRR1067510_1_trimmed_star_aligned.bam          ||
+||                                                                            ||
+||             Output file : SRR1067510_1_trimmed_star_aligned.bam_counts ... ||
+||             Annotations : /sw/data/uppnex/igenomes/Homo_sapiens/Ensemb ... ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : no                                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRC ... ||
+||    Features : 1306656                                                      ||
+||    Meta-features : 63677                                                   ||
+||    Chromosomes : 265                                                       ||
+||                                                                            ||
+|| Process BAM file SRR1067510_1_trimmed_star_aligned.bam...                  ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 60031196                                                  ||
+||    Successfully assigned reads : 645133 (1.1%)                             ||
+||    Running time : 2.41 minutes                                             ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+###CF featureCounts successfully exited, took 2 minutes, 51 seconds
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			samtools_sort_index
+Run File:		SRR1067510.sra_sra_fqs_star.run
+Job ID:			cf_sra_fqs_star_1440276586_samtools_sort_index_297
+Previous Job ID:	cf_sra_fqs_star_1440276586_star_557
+Date & Time:		00:18, 23-08-2015
+--------------------------------------------------------------------------------
+
+
+
+Samtools memory per thread: 4G. Cores: 2
+
+
+---------- Samtools version information ----------
+
+Program: samtools (Tools for alignments in the SAM format)
+Version: 0.1.19-44428cd
+
+------- End of Samtools version information ------
+
+SRR1067510_1_trimmed_star_aligned.bam looks like a bam file
+Attempting to index input file in case it's already sorted..
+Samtools index didn't work, file not sorted. Going on to sorting step...
+
+###CFCMD samtools sort -m 4G  SRR1067510_1_trimmed_star_aligned.bam SRR1067510_1_trimmed_star_aligned_srtd
+
+[bam_sort_core] merging from 3 files...
+###CF samtools sort successfully exited, took 11 minutes, 37 seconds..
+
+###CFCMD samtools index SRR1067510_1_trimmed_star_aligned_srtd.bam
+
+###CF samtools index successfully exited, took 34 seconds.
+
+
+
+================================================================================
+
+
+
+
+
+###CF Run finished at 00:38 23-08-2015
+

@@ -1,0 +1,56 @@
+[2016-03-30 17:47:17,142] multiqc                                            [INFO   ]  This is MultiQC v0.5
+[2016-03-30 17:47:17,142] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/.miniconda/envs/work/bin/multiqc -f data/
+[2016-03-30 17:47:17,142] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq
+[2016-03-30 17:47:17,143] multiqc                                            [DEBUG  ]  Template    : default
+[2016-03-30 17:47:17,143] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/Work/MultiQC/multiqc_config.yaml
+[2016-03-30 17:47:17,144] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['.gz', '.fastq', '.fq', '.bam', '.sam', '.sra', '_tophat', '_star_aligned', '_fastqc', '.hicup', '.counts', '_counts', '.txt', '_trimmed', '_val_1', '_val_2']
+[2016-03-30 17:47:17,144] multiqc                                            [DEBUG  ]  No MultiQC user config found: /Users/philewels/.multiqc_config.yaml
+[2016-03-30 17:47:17,144] multiqc                                            [DEBUG  ]  Config error: [Errno 2] No such file or directory: '/Users/philewels/.multiqc_config.yaml'
+[2016-03-30 17:47:17,288] multiqc                                            [DEBUG  ]  Running in --force mode, will overwrite any existing reports.
+[2016-03-30 17:47:17,288] multiqc                                            [INFO   ]  Searching 'data/'
+[2016-03-30 17:47:17,289] multiqc                                            [DEBUG  ]  Analysing modules: snpeff, qualimap, featureCounts, methylQA, picard, preseq, samblaster, samtools, bismark, hicup, star, tophat, bowtie2, bowtie1, cutadapt, skewer, fastq_screen, fastqc
+[2016-03-30 17:47:17,289] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2
+[2016-03-30 17:47:17,294] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
+[2016-03-30 17:47:17,309] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('data/',)
+[2016-03-30 17:47:17,317] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,330] multiqc.modules.featureCounts.feature_counts       [INFO   ]  Found 6 reports
+[2016-03-30 17:47:17,343] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,438] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,451] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('data/',)
+[2016-03-30 17:47:17,463] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('data/',)
+[2016-03-30 17:47:17,476] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,489] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,496] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('data/',)
+[2016-03-30 17:47:17,509] multiqc.modules.star.star                          [INFO   ]  Found 6 reports
+[2016-03-30 17:47:17,516] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,532] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,548] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-03-30 17:47:17,564] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067503_1
+[2016-03-30 17:47:17,573] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067505_1
+[2016-03-30 17:47:17,582] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067510_1
+[2016-03-30 17:47:17,593] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067514_1
+[2016-03-30 17:47:17,604] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067519_1
+[2016-03-30 17:47:17,613] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067522_1
+[2016-03-30 17:47:17,615] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 6 reports
+[2016-03-30 17:47:17,633] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('data/',)
+[2016-03-30 17:47:17,645] multiqc.modules.fastq_screen.fastq_screen          [INFO   ]  Found 6 reports
+[2016-03-30 17:47:17,756] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067503_1
+[2016-03-30 17:47:17,943] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067505_1
+[2016-03-30 17:47:18,130] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067510_1
+[2016-03-30 17:47:18,305] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067514_1
+[2016-03-30 17:47:18,526] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067519_1
+[2016-03-30 17:47:18,708] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR1067522_1
+[2016-03-30 17:47:18,792] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports
+[2016-03-30 17:47:18,831] multiqc                                            [INFO   ]  No NGI project IDs found.
+[2016-03-30 17:47:18,833] multiqc                                            [WARNING]  Deleting    : multiqc_report.html   (-f was specified)
+[2016-03-30 17:47:18,834] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2016-03-30 17:47:18,834] multiqc                                            [WARNING]  Deleting    : multiqc_data   (-f was specified)
+[2016-03-30 17:47:18,837] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2016-03-30 17:47:18,838] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_cutadapt.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:18,838] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_fastq_screen.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:18,839] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:18,839] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_featureCounts.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:18,840] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:18,840] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_sources.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:18,840] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpG68XQ2/multiqc_data/multiqc_star.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2016-03-30 17:47:19,031] multiqc                                            [INFO   ]  MultiQC complete

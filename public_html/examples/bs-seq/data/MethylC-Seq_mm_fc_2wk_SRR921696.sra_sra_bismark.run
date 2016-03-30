@@ -1,0 +1,70 @@
+/*
+Cluster Flow Run File
+Pipeline: sra_bismark
+Created at 15:36, 09-11-2015
+*/
+
+@split_files	2
+@total_cores	16
+@total_mem	128G
+@email	phil.ewels@scilifelab.se
+@notification	suspend
+@notification	abort
+@notification	complete
+@genome	GRCm38
+@reference	fasta	/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/WholeGenomeFasta
+@reference	bismark	/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex
+@reference	bwa	/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BWAIndex/genome.fa
+@reference	bed12	/proj/b2013064/nobackup/phil/bismark_references/Mus_musculus/Ensembl/GRCm38/Annotation/Genes/genes.bed12
+@reference	gtf	/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Annotation/Genes/genes.gtf
+@reference	bowtie	/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BowtieIndex/genome
+@reference	bowtie2	/sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/Bowtie2Index/genome
+/*
+-----------------------
+SRA to Bismark Pipeline
+-----------------------
+This pipeline takes SRA files as input, dumps them to FastQ files,
+runs FastQC, Trim Galore, then processed with Bismark (alignment,
+deduplication, methyaltion extractor then tidying up and report
+generation). It requires a genome index with a corresponding genome
+folder and bismark converted genome.
+*/
+
+@require_reference bismark
+
+#sra_fqdump
+	#fastqc
+	#trim_galore
+		#bismark_align
+			#bismark_deduplicate
+				#bismark_methXtract
+					#bismark_report
+						>bismark_summary_report
+
+
+start_000	MethylC-Seq_mm_fc_2wk_SRR921696.sra
+start_000	MethylC-Seq_mm_fc_4wk_SRR921697.sra
+cf_sra_bismark_1447079770_download	MethylC-Seq_mm_fc_2wk_SRR921696.sra
+cf_sra_bismark_1447079770_download	MethylC-Seq_mm_fc_4wk_SRR921697.sra
+cf_sra_bismark_1447079770_sra_fqdump_720	MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz
+cf_sra_bismark_1447079770_sra_fqdump_720	MethylC-Seq_mm_fc_4wk_SRR921697_1.fastq.gz
+cf_sra_bismark_1447079770_fastqc_550	MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz
+cf_sra_bismark_1447079770_fastqc_550	MethylC-Seq_mm_fc_4wk_SRR921697_1.fastq.gz
+cf_sra_bismark_1447079770_trim_galore_914	MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz
+cf_sra_bismark_1447079770_trim_galore_914	MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz
+cf_sra_bismark_1447079770_bismark_align_395	MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.bam
+cf_sra_bismark_1447079770_bismark_align_395	MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.bam
+cf_sra_bismark_1447079770_bismark_deduplicate_009	MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+cf_sra_bismark_1447079770_bismark_deduplicate_009	MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHG_OB_MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHG_OT_MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHH_OB_MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHH_OT_MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CpG_OB_MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHG_OB_MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHG_OT_MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHH_OB_MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CHH_OT_MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CpG_OB_MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+cf_sra_bismark_1447079770_bismark_methXtract_800	CpG_OT_MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz

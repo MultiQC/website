@@ -1,0 +1,4257 @@
+
+--------------------------------------------------------------------------------
+Module:			cf_download
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_download_625
+Previous Job ID:	null
+Parameters:		dl_fn = MethylC-Seq_mm_fc_1wk_SRR921770.sra, url = ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921770/SRR921770.sra
+Date & Time:		21:32, 09-11-2015
+--------------------------------------------------------------------------------
+
+
+---------------------
+Downloading MethylC-Seq_mm_fc_1wk_SRR921770.sra from ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921770/SRR921770.sra
+Started at 21:32, Monday - 09/11/2015
+
+###CFCMD wget -nv --tries=10 --output-document=MethylC-Seq_mm_fc_1wk_SRR921770.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921770/SRR921770.sra
+
+2015-11-09 21:41:53 URL: ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921770/SRR921770.sra [7186321793] -> "MethylC-Seq_mm_fc_1wk_SRR921770.sra" [1]
+###CF Download worked - took 9 minutes, 12 seconds
+
+Download module finished at 21:41 09-11-2015
+---------------------
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			cf_download
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_download_467
+Previous Job ID:	null
+Parameters:		dl_fn = MethylC-Seq_mm_fc_2wk_SRR921773.sra, url = ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921773/SRR921773.sra
+Date & Time:		21:45, 09-11-2015
+--------------------------------------------------------------------------------
+
+
+---------------------
+Downloading MethylC-Seq_mm_fc_2wk_SRR921773.sra from ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921773/SRR921773.sra
+Started at 21:45, Monday - 09/11/2015
+
+###CFCMD wget -nv --tries=10 --output-document=MethylC-Seq_mm_fc_2wk_SRR921773.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921773/SRR921773.sra
+
+2015-11-09 22:02:12 URL: ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR921/SRR921773/SRR921773.sra [10136322186] -> "MethylC-Seq_mm_fc_2wk_SRR921773.sra" [1]
+###CF Download worked - took 16 minutes, 53 seconds
+
+Download module finished at 22:02 09-11-2015
+---------------------
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			sra_fqdump
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_sra_fqdump_589
+Previous Job ID:	cf_sra_bismark_1447079770_download
+Date & Time:		22:05, 09-11-2015
+--------------------------------------------------------------------------------
+
+---------- FastQ Dump version information ----------
+
+fastq-dump : 2.3.5
+
+
+------- End of FastQ Dump version information ------
+
+###CFCMD fastq-dump --split-files ./MethylC-Seq_mm_fc_1wk_SRR921770.sra
+
+Read 100000000 spots for ./MethylC-Seq_mm_fc_1wk_SRR921770.sra
+Written 100000000 spots for ./MethylC-Seq_mm_fc_1wk_SRR921770.sra
+
+###CF FastQ Dump successfully exited on attempt 1, took 11 minutes, 7 seconds
+gzipping dumped fastq file MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq..
+
+SRA dump file MethylC-Seq_mm_fc_1wk_SRR921770_2.fastq not found.. (Probably single end?)
+
+
+###CFCMD fastq-dump --split-files ./MethylC-Seq_mm_fc_2wk_SRR921773.sra
+
+Read 142023805 spots for ./MethylC-Seq_mm_fc_2wk_SRR921773.sra
+Written 142023805 spots for ./MethylC-Seq_mm_fc_2wk_SRR921773.sra
+
+###CF FastQ Dump successfully exited on attempt 1, took 15 minutes, 8 seconds
+gzipping dumped fastq file MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq..
+
+SRA dump file MethylC-Seq_mm_fc_2wk_SRR921773_2.fastq not found.. (Probably single end?)
+
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			fastqc
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_fastqc_864
+Previous Job ID:	cf_sra_bismark_1447079770_sra_fqdump_589
+Date & Time:		00:42, 10-11-2015
+--------------------------------------------------------------------------------
+
+---------- FastQC version information ----------
+FastQC v0.11.2
+
+------- End of FastQC version information ------
+
+###CFCMD fastqc -q  MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz
+
+###CF FastQC successfully ran, took 18 minutes, 41 seconds
+
+###CFCMD fastqc -q  MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz
+
+###CF FastQC successfully ran, took 25 minutes, 12 seconds
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			trim_galore
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_trim_galore_693
+Previous Job ID:	cf_sra_bismark_1447079770_sra_fqdump_589
+Date & Time:		00:42, 10-11-2015
+--------------------------------------------------------------------------------
+
+---------- Cutadapt version information ----------
+1.8
+
+------- End of Cutadapt version information ------
+---------- Trim Galore! version information ----------
+
+                          Quality-/Adapter-/RRBS-Trimming
+                               (powered by Cutadapt)
+                                  version 0.4.0
+
+                             Last update: 06 05 2015
+
+
+------- End of Trim Galore! version information ------
+
+###CFCMD trim_galore --gzip --phred33      --fastqc_args "-q" MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.8
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	12816	AGATCGGAAGAGC	1000000	1.28
+smallRNA	0	ATGGAATTCTCG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 12816). Second best hit was smallRNA (count: 0)
+
+Writing report to 'MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.0
+Cutadapt version: 1.8
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '-q'
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+This is cutadapt 1.8 with Python 2.7.6
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz
+Trimming 1 adapter(s) with at most 10.0% errors in single-end mode ...
+Finished in 2140.93 s (21 us/read; 2.80 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             100,000,000
+Reads with adapters:                39,570,784 (39.6%)
+Reads written (passing filters):   100,000,000 (100.0%)
+
+Total basepairs processed: 10,000,000,000 bp
+Quality-trimmed:             184,018,857 bp (1.8%)
+Total written (filtered):  9,722,468,609 bp (97.2%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 39570784 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 35.2%
+  C: 0.2%
+  G: 17.2%
+  T: 47.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	26243976	25000000.0	0	26243976
+2	7192840	6250000.0	0	7192840
+3	2548949	1562500.0	0	2548949
+4	1039293	390625.0	0	1039293
+5	194084	97656.2	0	194084
+6	188168	24414.1	0	188168
+7	153134	6103.5	0	153134
+8	158929	1525.9	0	158929
+9	152749	381.5	0	150473 2276
+10	132740	95.4	1	127062 5678
+11	124483	23.8	1	120233 4250
+12	119112	6.0	1	116030 3082
+13	99300	1.5	1	96039 3261
+14	97784	1.5	1	94543 3241
+15	89067	1.5	1	86075 2992
+16	83601	1.5	1	80798 2803
+17	80980	1.5	1	78148 2832
+18	70219	1.5	1	67823 2396
+19	65001	1.5	1	62767 2234
+20	60085	1.5	1	57929 2156
+21	59822	1.5	1	57687 2135
+22	53610	1.5	1	51765 1845
+23	51071	1.5	1	49261 1810
+24	42118	1.5	1	40562 1556
+25	40843	1.5	1	39436 1407
+26	37764	1.5	1	36400 1364
+27	36210	1.5	1	34911 1299
+28	33007	1.5	1	31837 1170
+29	29809	1.5	1	28704 1105
+30	27186	1.5	1	26203 983
+31	24208	1.5	1	23341 867
+32	23072	1.5	1	22147 925
+33	19800	1.5	1	19000 800
+34	19625	1.5	1	18869 756
+35	16954	1.5	1	16266 688
+36	15687	1.5	1	15081 606
+37	15127	1.5	1	14533 594
+38	13995	1.5	1	13411 584
+39	11771	1.5	1	11301 470
+40	10324	1.5	1	9937 387
+41	9187	1.5	1	8807 380
+42	8912	1.5	1	8571 341
+43	7900	1.5	1	7537 363
+44	7364	1.5	1	7063 301
+45	6935	1.5	1	6601 334
+46	6040	1.5	1	5782 258
+47	5459	1.5	1	5181 278
+48	4794	1.5	1	4557 237
+49	4695	1.5	1	4469 226
+50	3964	1.5	1	3753 211
+51	3553	1.5	1	3380 173
+52	3242	1.5	1	3073 169
+53	2721	1.5	1	2572 149
+54	2308	1.5	1	2181 127
+55	1989	1.5	1	1864 125
+56	1873	1.5	1	1767 106
+57	1798	1.5	1	1712 86
+58	1470	1.5	1	1369 101
+59	1573	1.5	1	1473 100
+60	1172	1.5	1	1098 74
+61	903	1.5	1	848 55
+62	948	1.5	1	833 115
+63	1077	1.5	1	955 122
+64	728	1.5	1	678 50
+65	589	1.5	1	521 68
+66	416	1.5	1	357 59
+67	468	1.5	1	322 146
+68	564	1.5	1	363 201
+69	700	1.5	1	395 305
+70	441	1.5	1	341 100
+71	121	1.5	1	88 33
+72	58	1.5	1	37 21
+73	20	1.5	1	7 13
+74	11	1.5	1	5 6
+75	12	1.5	1	2 10
+76	9	1.5	1	0 9
+77	15	1.5	1	2 13
+78	11	1.5	1	1 10
+79	10	1.5	1	0 10
+80	10	1.5	1	0 10
+81	7	1.5	1	0 7
+82	10	1.5	1	0 10
+83	10	1.5	1	1 9
+84	8	1.5	1	0 8
+85	5	1.5	1	0 5
+86	7	1.5	1	0 7
+87	10	1.5	1	1 9
+88	13	1.5	1	0 13
+89	10	1.5	1	0 10
+90	14	1.5	1	1 13
+91	5	1.5	1	0 5
+92	9	1.5	1	0 9
+93	9	1.5	1	0 9
+94	9	1.5	1	1 8
+95	15	1.5	1	0 15
+96	13	1.5	1	0 13
+97	16	1.5	1	1 15
+98	22	1.5	1	0 22
+99	16	1.5	1	0 16
+100	19	1.5	1	0 19
+
+
+RUN STATISTICS FOR INPUT FILE: MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz
+=============================================
+100000000 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	55556 (0.1%)
+
+
+  >>> Now running FastQC on the data <<<
+
+###CF Trim galore (SE mode) successfully exited, took 1 hours, 8 minutes, 28 seconds..
+
+###CFCMD trim_galore --gzip --phred33      --fastqc_args "-q" MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.8
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	35346	AGATCGGAAGAGC	1000000	3.53
+smallRNA	0	ATGGAATTCTCG	1000000	0.00
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 35346). Second best hit was smallRNA (count: 0)
+
+Writing report to 'MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.4.0
+Cutadapt version: 1.8
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '-q'
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+110000000 sequences processed
+120000000 sequences processed
+130000000 sequences processed
+140000000 sequences processed
+This is cutadapt 1.8 with Python 2.7.6
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz
+Trimming 1 adapter(s) with at most 10.0% errors in single-end mode ...
+Finished in 3278.35 s (23 us/read; 2.60 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             142,023,805
+Reads with adapters:                38,946,659 (27.4%)
+Reads written (passing filters):   142,023,805 (100.0%)
+
+Total basepairs processed: 14,344,404,305 bp
+Quality-trimmed:           3,253,437,153 bp (22.7%)
+Total written (filtered):  10,955,724,667 bp (76.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 38946659 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 42.6%
+  C: 0.4%
+  G: 17.2%
+  T: 39.7%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	22252347	35505951.2	0	22252347
+2	6966784	8876487.8	0	6966784
+3	1692276	2219122.0	0	1692276
+4	1328948	554780.5	0	1328948
+5	355608	138695.1	0	355608
+6	610196	34673.8	0	610196
+7	355230	8668.4	0	355230
+8	555496	2167.1	0	555496
+9	1068160	541.8	0	1064982 3178
+10	508175	135.4	1	492451 15724
+11	175860	33.9	1	169300 6560
+12	332485	8.5	1	325098 7387
+13	182188	2.1	1	177418 4770
+14	316424	2.1	1	308187 8237
+15	285133	2.1	1	278697 6436
+16	196461	2.1	1	191118 5343
+17	194638	2.1	1	189604 5034
+18	93972	2.1	1	90791 3181
+19	198093	2.1	1	192570 5523
+20	130816	2.1	1	126643 4173
+21	136090	2.1	1	131915 4175
+22	205853	2.1	1	201367 4486
+23	112336	2.1	1	109433 2903
+24	120007	2.1	1	117486 2521
+25	11894	2.1	1	11381 513
+26	47623	2.1	1	45488 2135
+27	283506	2.1	1	277827 5679
+28	11136	2.1	1	10495 641
+29	53024	2.1	1	51803 1221
+30	8646	2.1	1	8402 244
+31	1425	2.1	1	1324 101
+32	8746	2.1	1	8335 411
+33	40285	2.1	1	39446 839
+34	4497	2.1	1	4343 154
+35	4455	2.1	1	4313 142
+36	4006	2.1	1	3868 138
+37	6061	2.1	1	5855 206
+38	10387	2.1	1	10120 267
+39	14116	2.1	1	13760 356
+40	17145	2.1	1	16713 432
+41	16680	2.1	1	16255 425
+42	13898	2.1	1	13560 338
+43	8449	2.1	1	8256 193
+44	4240	2.1	1	4132 108
+45	1549	2.1	1	1504 45
+46	393	2.1	1	377 16
+47	139	2.1	1	116 23
+48	54	2.1	1	33 21
+49	40	2.1	1	22 18
+50	32	2.1	1	12 20
+51	28	2.1	1	12 16
+52	28	2.1	1	7 21
+53	19	2.1	1	10 9
+54	24	2.1	1	7 17
+55	18	2.1	1	6 12
+56	22	2.1	1	3 19
+57	19	2.1	1	6 13
+58	13	2.1	1	3 10
+59	26	2.1	1	8 18
+60	27	2.1	1	6 21
+61	14	2.1	1	1 13
+62	11	2.1	1	1 10
+63	17	2.1	1	1 16
+64	25	2.1	1	4 21
+65	9	2.1	1	2 7
+66	15	2.1	1	3 12
+67	14	2.1	1	0 14
+68	19	2.1	1	1 18
+69	9	2.1	1	0 9
+70	14	2.1	1	0 14
+71	15	2.1	1	1 14
+72	12	2.1	1	0 12
+73	15	2.1	1	0 15
+74	13	2.1	1	0 13
+75	11	2.1	1	0 11
+76	6	2.1	1	0 6
+77	9	2.1	1	0 9
+78	5	2.1	1	0 5
+79	13	2.1	1	0 13
+80	13	2.1	1	0 13
+81	12	2.1	1	0 12
+82	6	2.1	1	0 6
+83	6	2.1	1	0 6
+84	9	2.1	1	0 9
+85	7	2.1	1	0 7
+86	9	2.1	1	0 9
+87	11	2.1	1	0 11
+88	8	2.1	1	0 8
+89	6	2.1	1	0 6
+90	12	2.1	1	0 12
+91	11	2.1	1	1 10
+92	10	2.1	1	0 10
+93	12	2.1	1	0 12
+94	11	2.1	1	0 11
+95	11	2.1	1	0 11
+96	6	2.1	1	0 6
+97	7	2.1	1	0 7
+98	5	2.1	1	0 5
+99	5	2.1	1	0 5
+100	7	2.1	1	0 7
+101	3	2.1	1	0 3
+
+
+RUN STATISTICS FOR INPUT FILE: MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz
+=============================================
+142023805 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	13897926 (9.8%)
+
+
+  >>> Now running FastQC on the data <<<
+
+###CF Trim galore (SE mode) successfully exited, took 1 hours, 17 minutes, 22 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			bismark_align
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_bismark_align_255
+Previous Job ID:	cf_sra_bismark_1447079770_trim_galore_693
+Date & Time:		03:07, 10-11-2015
+--------------------------------------------------------------------------------
+
+
+###CF Starting filesize 8G: MethylC-Seq_mm_fc_1wk_SRR921770.sra
+
+###CF Starting filesize 11G: MethylC-Seq_mm_fc_2wk_SRR921773.sra
+
+Aligning against /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex
+
+---------- Bismark version information ----------
+
+
+          Bismark - Bisulfite Mapper and Methylation Caller.
+
+                       Bismark Version: v0.14.4
+        Copyright 2010-15 Felix Krueger, Babraham Bioinformatics
+              www.bioinformatics.babraham.ac.uk/projects/
+
+
+
+------- End of Bismark version information ------
+Allocated 4 cores and 64G memory.
+Multi-threading alignment with --multicore 3
+First file has reads >= 75bp long. Using bowtie 2 for aligning with bismark.
+
+###CFCMD bismark --multicore 3 --bam --bowtie2   --phred33-quals /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz
+
+Path to Bowtie 2 specified as: bowtie2
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools'
+Reference genome folder provided is /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/	(absolute path is '/pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/)'
+FastQ format assumed (by default)
+
+Files to be analysed:
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz
+
+Library is assumed to be strand-specific (directional), alignments to strands complementary to the original top or bottom strands will be ignored (i.e. not performed!)
+Running Bismark Parallel version. Number of parallel instances to be spawned: 3
+
+
+Single-end alignments will be performed
+=======================================
+
+
+Single-end alignments will be performed
+=======================================
+
+
+Single-end alignments will be performed
+=======================================
+
+Finished subdividing MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz for PID: 0 and offset 1
+
+Using the subset file >MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1< as new in-file (instead of >MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz<)
+Input file is in FastQ format
+Writing a C -> T converted version of the input file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1 to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_C_to_T.fastq
+Finished subdividing MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz for PID: 43873 and offset 3
+
+Using the subset file >MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3< as new in-file (instead of >MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz<)
+Input file is in FastQ format
+Writing a C -> T converted version of the input file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3 to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_C_to_T.fastq
+Finished subdividing MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz for PID: 0 and offset 2
+
+Using the subset file >MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2< as new in-file (instead of >MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz<)
+Input file is in FastQ format
+Writing a C -> T converted version of the input file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2 to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_C_to_T.fastq
+
+Created C -> T converted version of the FastQ file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1 (33314815 sequences in total)
+
+Input file is MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_C_to_T.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/ with the specified options: -q --phred33 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for CTreadCTgenome (reading in sequences from MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/CT_conversion/BS_CT
+
+
+Created C -> T converted version of the FastQ file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3 (33314814 sequences in total)
+
+Input file is MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_C_to_T.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/ with the specified options: -q --phred33 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for CTreadCTgenome (reading in sequences from MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/CT_conversion/BS_CT
+
+
+Created C -> T converted version of the FastQ file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2 (33314815 sequences in total)
+
+Input file is MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_C_to_T.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/ with the specified options: -q --phred33 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for CTreadCTgenome (reading in sequences from MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	MethylC-Seq_mm_fc_1wk_SRR921770.3_HAL:1194:C0R1JACXX:6:1101:1177:2118_length=100	0	11_CT_converted	74221823	1	92M	*	0	0	GAATATTGTGTGGGTTAATTTTTATATGAGGAATTGGTAAGAATTTATAGTAGTTTTGATATTGAGTAATAATGTTATGGGTTTTTTTTTTT	CCCFFFFFHHFHHJEHIIJJIJJJJIEGIIJGJEGJIBGGGGIIIJIJJJGGIFHIIIIJIJJIGIDGGFHHHHHADFFFDBBBDDDDDDDD	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:92	YT:Z:UU
+Now starting the Bowtie 2 aligner for CTreadGAgenome (reading in sequences from MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	MethylC-Seq_mm_fc_1wk_SRR921770.1_HAL:1194:C0R1JACXX:6:1101:1225:2094_length=100	4	*	0	0	*	*	0	0	NTGGTGTTGTTTATATAGGTTTAGGNGAGGTGTGGTTTTTATTTGGGTTGGGTATGTATGGGGTATGTTTATTATTTTTTTTTTTTGTTTTTTATTT	#4=DBDDFHHHHHJIJJJJFHIIJJ#2<EGGI?@)8BG(?/9C))='.;/8'5)77..7.;B19'55-;>(5@(55@C5;@D05&0&+9CC8<(:@C	YT:Z:UU
+Now starting the Bowtie 2 aligner for CTreadGAgenome (reading in sequences from MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	MethylC-Seq_mm_fc_1wk_SRR921770.2_HAL:1194:C0R1JACXX:6:1101:1249:2117_length=100	0	14_CT_converted	119118940	42	99M	*	0	0	TAGGTTTAGATTTGGGAGATTTAATATTTTTTTTTGATTTTTTTGGGTATTAGGTATATATGTGGTGAATAGGTATATATGTAGATAAAATATTTATAT	@@@7=BDAFFAHHIBF<C<?C<FHEG@9?FHIDGI@-@GHIIIF/9>;AECC@C5@CACCE<;>C35>@CDCC(>(:>CD(+>>CDDCCC:>>CCCDDA	AS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:99	YT:Z:UU
+Now starting the Bowtie 2 aligner for CTreadGAgenome (reading in sequences from MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	MethylC-Seq_mm_fc_1wk_SRR921770.2_HAL:1194:C0R1JACXX:6:1101:1249:2117_length=100	4	*	0	0	*	*	0	0	TAGGTTTAGATTTGGGAGATTTAATATTTTTTTTTGATTTTTTTGGGTATTAGGTATATATGTGGTGAATAGGTATATATGTAGATAAAATATTTATAT	@@@7=BDAFFAHHIBF<C<?C<FHEG@9?FHIDGI@-@GHIIIF/9>;AECC@C5@CACCE<;>C35>@CDCC(>(:>CD(+>>CDDCCC:>>CCCDDA	YT:Z:UU
+
+>>> Writing bisulfite mapping results to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2.bam <<<
+
+Found first alignment:	MethylC-Seq_mm_fc_1wk_SRR921770.3_HAL:1194:C0R1JACXX:6:1101:1177:2118_length=100	16	X_GA_converted	145935193	1	92M	*	0	0	AAAAAAAAAAACCCATAACATTATTACTCAATATCAAAACTACTATAAATTCTTACCAATTCCTCATATAAAAATTAACCCACACAATATTC	DDDDDDDDBBBDFFFDAHHHHHFGGDIGIJJIJIIIIHFIGGJJJIJIIIGGGGBIJGEJGJIIGEIJJJJIJJIIHEJHHFHHFFFFFCCC	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:92	YT:Z:UU
+
+>>> Writing bisulfite mapping results to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2.bam <<<
+
+Found first alignment:	MethylC-Seq_mm_fc_1wk_SRR921770.1_HAL:1194:C0R1JACXX:6:1101:1225:2094_length=100	4	*	0	0	*	*	0	0	NTGGTGTTGTTTATATAGGTTTAGGNGAGGTGTGGTTTTTATTTGGGTTGGGTATGTATGGGGTATGTTTATTATTTTTTTTTTTTGTTTTTTATTT	#4=DBDDFHHHHHJIJJJJFHIIJJ#2<EGGI?@)8BG(?/9C))='.;/8'5)77..7.;B19'55-;>(5@(55@C5;@D05&0&+9CC8<(:@C	YT:Z:UU
+
+>>> Writing bisulfite mapping results to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2.bam <<<
+
+Current working directory is: /gulo/glob/phil/demo_data/BSSeq/Lister_2013
+
+Now reading in and storing sequence information of the genome specified in: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/
+
+Current working directory is: /gulo/glob/phil/demo_data/BSSeq/Lister_2013
+
+Now reading in and storing sequence information of the genome specified in: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/
+
+Current working directory is: /gulo/glob/phil/demo_data/BSSeq/Lister_2013
+
+Now reading in and storing sequence information of the genome specified in: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/
+
+chr 10 (130694993 bp)
+chr 10 (130694993 bp)
+chr 10 (130694993 bp)
+chr 11 (122082543 bp)
+chr 11 (122082543 bp)
+chr 11 (122082543 bp)
+chr 12 (120129022 bp)
+chr 12 (120129022 bp)
+chr 12 (120129022 bp)
+chr 13 (120421639 bp)
+chr 13 (120421639 bp)
+chr 13 (120421639 bp)
+chr 14 (124902244 bp)
+chr 14 (124902244 bp)
+chr 14 (124902244 bp)
+chr 15 (104043685 bp)
+chr 15 (104043685 bp)
+chr 15 (104043685 bp)
+chr 16 (98207768 bp)
+chr 16 (98207768 bp)
+chr 16 (98207768 bp)
+chr 17 (94987271 bp)
+chr 17 (94987271 bp)
+chr 17 (94987271 bp)
+chr 18 (90702639 bp)
+chr 18 (90702639 bp)
+chr 18 (90702639 bp)
+chr 19 (61431566 bp)
+chr 19 (61431566 bp)
+chr 19 (61431566 bp)
+chr 1 (195471971 bp)
+chr 1 (195471971 bp)
+chr 1 (195471971 bp)
+chr 2 (182113224 bp)
+chr 2 (182113224 bp)
+chr 2 (182113224 bp)
+chr 3 (160039680 bp)
+chr 3 (160039680 bp)
+chr 3 (160039680 bp)
+chr 4 (156508116 bp)
+chr 4 (156508116 bp)
+chr 4 (156508116 bp)
+chr 5 (151834684 bp)
+chr 5 (151834684 bp)
+chr 5 (151834684 bp)
+chr 6 (149736546 bp)
+chr 6 (149736546 bp)
+chr 6 (149736546 bp)
+chr 7 (145441459 bp)
+chr 7 (145441459 bp)
+chr 7 (145441459 bp)
+chr 8 (129401213 bp)
+chr 8 (129401213 bp)
+chr 8 (129401213 bp)
+chr 9 (124595110 bp)
+chr 9 (124595110 bp)
+chr 9 (124595110 bp)
+chr MT (16299 bp)
+chr MT (16299 bp)
+chr MT (16299 bp)
+chr X (171031299 bp)
+chr X (171031299 bp)
+chr X (171031299 bp)
+chr Y (91744698 bp)
+chr Y (91744698 bp)
+chr Y (91744698 bp)
+
+
+
+
+Reading in the sequence file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2
+
+Reading in the sequence file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1
+
+Reading in the sequence file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.5066_HAL:1194:C0R1JACXX:6:1101:6340:2435_length=100	MT	16201
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 2000000 sequences so far
+Processed 2000000 sequences so far
+Processed 2000000 sequences so far
+Processed 3000000 sequences so far
+Processed 3000000 sequences so far
+Processed 3000000 sequences so far
+Processed 4000000 sequences so far
+Processed 4000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.12039208_HAL:1194:C0R1JACXX:6:1106:12597:23992_length=100	MT	1
+Processed 4000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.12894143_HAL:1194:C0R1JACXX:6:1106:1837:59167_length=100	MT	16201
+Processed 5000000 sequences so far
+Processed 5000000 sequences so far
+Processed 5000000 sequences so far
+Processed 6000000 sequences so far
+Processed 6000000 sequences so far
+Processed 6000000 sequences so far
+Processed 7000000 sequences so far
+Processed 7000000 sequences so far
+Processed 7000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.22354315_HAL:1194:C0R1JACXX:6:1110:18005:43224_length=100	MT	1
+Processed 8000000 sequences so far
+Processed 8000000 sequences so far
+Processed 8000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.25745516_HAL:1194:C0R1JACXX:6:1111:18491:76591_length=100	MT	16201
+Processed 9000000 sequences so far
+Processed 9000000 sequences so far
+Processed 9000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.27058661_HAL:1194:C0R1JACXX:6:1112:19556:28459_length=100	MT	16201
+Processed 10000000 sequences so far
+Processed 10000000 sequences so far
+Processed 10000000 sequences so far
+Processed 11000000 sequences so far
+Processed 11000000 sequences so far
+Processed 11000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.35533434_HAL:1194:C0R1JACXX:6:1115:15336:77873_length=100	MT	16200
+Processed 12000000 sequences so far
+Processed 12000000 sequences so far
+Processed 12000000 sequences so far
+Processed 13000000 sequences so far
+Processed 13000000 sequences so far
+Processed 13000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.40356545_HAL:1194:C0R1JACXX:6:1201:18556:85979_length=100	MT	1
+Processed 14000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.41925249_HAL:1194:C0R1JACXX:6:1202:1574:53825_length=100	MT	1
+Processed 14000000 sequences so far
+Processed 14000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.42177003_HAL:1194:C0R1JACXX:6:1202:15923:64331_length=100	MT	1
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.44451185_HAL:1194:C0R1JACXX:6:1203:13206:61274_length=100	MT	1
+Processed 15000000 sequences so far
+Processed 15000000 sequences so far
+Processed 15000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.45651174_HAL:1194:C0R1JACXX:6:1204:2613:12829_length=100	MT	1
+Processed 16000000 sequences so far
+Processed 16000000 sequences so far
+Processed 16000000 sequences so far
+Processed 17000000 sequences so far
+Processed 17000000 sequences so far
+Processed 17000000 sequences so far
+Processed 18000000 sequences so far
+Processed 18000000 sequences so far
+Processed 18000000 sequences so far
+Processed 19000000 sequences so far
+Processed 19000000 sequences so far
+Processed 19000000 sequences so far
+Processed 20000000 sequences so far
+Processed 20000000 sequences so far
+Processed 20000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.62080492_HAL:1194:C0R1JACXX:6:1210:13717:82520_length=100	MT	16201
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.62330441_HAL:1194:C0R1JACXX:6:1210:7941:92291_length=100	MT	1
+Processed 21000000 sequences so far
+Processed 21000000 sequences so far
+Processed 21000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.63976758_HAL:1194:C0R1JACXX:6:1211:15337:56972_length=100	MT	16201
+Processed 22000000 sequences so far
+Processed 22000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.65805920_HAL:1194:C0R1JACXX:6:1212:20861:28026_length=100	MT	1
+Processed 22000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.66820008_HAL:1194:C0R1JACXX:6:1212:14668:66860_length=100	MT	1
+Processed 23000000 sequences so far
+Processed 23000000 sequences so far
+Processed 23000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.70845714_HAL:1194:C0R1JACXX:6:1214:4153:23774_length=100	MT	1
+Processed 24000000 sequences so far
+Processed 24000000 sequences so far
+Processed 24000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.73643955_HAL:1194:C0R1JACXX:6:1215:9393:39130_length=100	MT	16201
+Processed 25000000 sequences so far
+Processed 25000000 sequences so far
+Processed 25000000 sequences so far
+Processed 26000000 sequences so far
+Processed 26000000 sequences so far
+Processed 26000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.78516002_HAL:1194:C0R1JACXX:6:1301:16826:34474_length=100	MT	16200
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.79781846_HAL:1194:C0R1JACXX:6:1301:15250:88613_length=100	MT	16201
+Processed 27000000 sequences so far
+Processed 27000000 sequences so far
+Processed 27000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.82355849_HAL:1194:C0R1JACXX:6:1302:14812:98674_length=100	MT	1
+Processed 28000000 sequences so far
+Processed 28000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.84153952_HAL:1194:C0R1JACXX:6:1303:11008:75081_length=100	MT	16201
+Processed 28000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.86389250_HAL:1194:C0R1JACXX:6:1304:8441:69041_length=100	MT	16201
+Processed 29000000 sequences so far
+Processed 29000000 sequences so far
+Processed 29000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.87918670_HAL:1194:C0R1JACXX:6:1305:5452:33175_length=100	MT	1
+Processed 30000000 sequences so far
+Processed 30000000 sequences so far
+Processed 30000000 sequences so far
+Processed 31000000 sequences so far
+Processed 31000000 sequences so far
+Processed 31000000 sequences so far
+Processed 32000000 sequences so far
+Processed 32000000 sequences so far
+Processed 32000000 sequences so far
+Processed 33000000 sequences so far
+Processed 33000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_1wk_SRR921770.99931813_HAL:1194:C0R1JACXX:6:1310:4698:17868_length=100	MT	16200
+Processed 33000000 sequences so far
+33314814 reads; of these:
+  33314814 (100.00%) were unpaired; of these:
+    14850566 (44.58%) aligned 0 times
+    13879059 (41.66%) aligned exactly 1 time
+    4585189 (13.76%) aligned >1 times
+55.42% overall alignment rate
+33314814 reads; of these:
+  33314814 (100.00%) were unpaired; of these:
+    14909483 (44.75%) aligned 0 times
+    13868505 (41.63%) aligned exactly 1 time
+    4536826 (13.62%) aligned >1 times
+55.25% overall alignment rate
+Processed 33314814 sequences in total
+
+
+Successfully deleted the temporary file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_C_to_T.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	33314814
+Number of alignments with a unique best hit from the different alignments:	28627766
+Mapping efficiency:	85.9%
+
+Sequences with no alignments under any condition:	1059219
+Sequences did not map uniquely:	3627829
+Sequences which were discarded because genomic sequence could not be extracted:	7
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	14353671	((converted) top strand)
+CT/GA:	14274088	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	534866830
+
+Total methylated C's in CpG context:	16067280
+Total methylated C's in CHG context:	623711
+Total methylated C's in CHH context:	2201012
+Total methylated C's in Unknown context:	1
+
+Total unmethylated C's in CpG context:	4767206
+Total unmethylated C's in CHG context:	113147861
+Total unmethylated C's in CHH context:	398059760
+Total unmethylated C's in Unknown context:	27
+
+C methylated in CpG context:	77.1%
+C methylated in CHG context:	0.5%
+C methylated in CHH context:	0.5%
+C methylated in Unknown context (CN or CHN):	3.6%
+
+
+Now waiting for all child processes to complete
+33314815 reads; of these:
+  33314815 (100.00%) were unpaired; of these:
+    14849515 (44.57%) aligned 0 times
+    13876776 (41.65%) aligned exactly 1 time
+    4588524 (13.77%) aligned >1 times
+55.43% overall alignment rate
+33314815 reads; of these:
+  33314815 (100.00%) were unpaired; of these:
+    14910005 (44.75%) aligned 0 times
+    13865522 (41.62%) aligned exactly 1 time
+    4539288 (13.63%) aligned >1 times
+55.25% overall alignment rate
+Processed 33314815 sequences in total
+
+
+Successfully deleted the temporary file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_C_to_T.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	33314815
+Number of alignments with a unique best hit from the different alignments:	28625312
+Mapping efficiency:	85.9%
+
+Sequences with no alignments under any condition:	1060830
+Sequences did not map uniquely:	3628673
+Sequences which were discarded because genomic sequence could not be extracted:	9
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	14353093	((converted) top strand)
+CT/GA:	14272210	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	534861078
+
+Total methylated C's in CpG context:	16068498
+Total methylated C's in CHG context:	625214
+Total methylated C's in CHH context:	2199609
+Total methylated C's in Unknown context:	0
+
+Total unmethylated C's in CpG context:	4763398
+Total unmethylated C's in CHG context:	113158565
+Total unmethylated C's in CHH context:	398045794
+Total unmethylated C's in Unknown context:	23
+
+C methylated in CpG context:	77.1%
+C methylated in CHG context:	0.5%
+C methylated in CHH context:	0.5%
+C methylated in Unknown context (CN or CHN):	0.0%
+
+
+33314815 reads; of these:
+  33314815 (100.00%) were unpaired; of these:
+    14847697 (44.57%) aligned 0 times
+    13878741 (41.66%) aligned exactly 1 time
+    4588377 (13.77%) aligned >1 times
+55.43% overall alignment rate
+33314815 reads; of these:
+  33314815 (100.00%) were unpaired; of these:
+    14910405 (44.76%) aligned 0 times
+    13864352 (41.62%) aligned exactly 1 time
+    4540058 (13.63%) aligned >1 times
+55.24% overall alignment rate
+Processed 33314815 sequences in total
+
+
+Successfully deleted the temporary file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_C_to_T.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	33314815
+Number of alignments with a unique best hit from the different alignments:	28627250
+Mapping efficiency:	85.9%
+
+Sequences with no alignments under any condition:	1059310
+Sequences did not map uniquely:	3628255
+Sequences which were discarded because genomic sequence could not be extracted:	10
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	14354291	((converted) top strand)
+CT/GA:	14272949	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	534820079
+
+Total methylated C's in CpG context:	16068254
+Total methylated C's in CHG context:	624054
+Total methylated C's in CHH context:	2201663
+Total methylated C's in Unknown context:	0
+
+Total unmethylated C's in CpG context:	4768079
+Total unmethylated C's in CHG context:	113135527
+Total unmethylated C's in CHH context:	398022502
+Total unmethylated C's in Unknown context:	26
+
+C methylated in CpG context:	77.1%
+C methylated in CHG context:	0.5%
+C methylated in CHH context:	0.6%
+C methylated in Unknown context (CN or CHN):	0.0%
+
+
+
+
+Right, cleaning up now...
+
+Deleting temporary sequence files...
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1	MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2	MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3	
+
+Now merging BAM files MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2.bam MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2.bam MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2.bam into >>> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.bam <<<
+Merging from file >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2.bam <<
+Merging from file >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2.bam <<
+Merging from file >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2.bam <<
+
+Deleting temporary BAM files...
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2.bam	MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2.bam	MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2.bam	
+
+Writing report to MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt
+Now merging temporary reports MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.txt MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.txt MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.txt into >>> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <<<
+Merging from file >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.txt <<
+Merging from file >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.txt <<
+Merging from file >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.txt <<
+
+Printing a final merged alignment report for all individual sub-reports
+
+Final Alignment report
+======================
+Sequences analysed in total:	99944444
+Number of alignments with a unique best hit from the different alignments:	85880328
+Mapping efficiency:	85.9%
+
+Sequences with no alignments under any condition:	3179359
+Sequences did not map uniquely:	10884757
+Sequences which were discarded because genomic sequence could not be extracted:	26
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	43061055	((converted) top strand)
+CT/GA:	42819247	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	1604547987
+
+Total methylated C's in CpG context:	48204032
+Total methylated C's in CHG context:	1872979
+Total methylated C's in CHH context:	6602284
+Total methylated C's in Unknown context:	1
+
+Total unmethylated C's in CpG context:	14298683
+Total unmethylated C's in CHG context:	339441953
+Total unmethylated C's in CHH context:	1194128056
+Total unmethylated C's in Unknown context:	76
+
+C methylated in CpG context:	77.1%
+C methylated in CHG context:	0.5%
+C methylated in CHH context:	0.5%
+C methylated in Unknown context (CN or CHN):	1.3%
+
+
+Deleting temporary report files...
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.txt	MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.txt	MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.txt	
+
+
+====================
+Bismark run complete
+====================
+
+
+###CF Bismark (SE mode) successfully exited, took 7 hours, 31 minutes, 33 seconds..
+
+###CFCMD bismark --multicore 3 --bam --bowtie2   --phred33-quals /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz
+
+Path to Bowtie 2 specified as: bowtie2
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools'
+Reference genome folder provided is /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/	(absolute path is '/pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/)'
+FastQ format assumed (by default)
+
+Files to be analysed:
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz
+
+Library is assumed to be strand-specific (directional), alignments to strands complementary to the original top or bottom strands will be ignored (i.e. not performed!)
+Running Bismark Parallel version. Number of parallel instances to be spawned: 3
+
+
+Single-end alignments will be performed
+=======================================
+
+
+Single-end alignments will be performed
+=======================================
+
+
+Single-end alignments will be performed
+=======================================
+
+Finished subdividing MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz for PID: 8993 and offset 3
+
+Using the subset file >MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3< as new in-file (instead of >MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz<)
+Input file is in FastQ format
+Finished subdividing MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz for PID: 0 and offset 2
+
+Using the subset file >MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2< as new in-file (instead of >MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz<)
+Input file is in FastQ format
+Finished subdividing MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz for PID: 0 and offset 1
+
+Using the subset file >MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1< as new in-file (instead of >MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz<)
+Input file is in FastQ format
+Writing a C -> T converted version of the input file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3 to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_C_to_T.fastq
+Writing a C -> T converted version of the input file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2 to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_C_to_T.fastq
+Writing a C -> T converted version of the input file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1 to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_C_to_T.fastq
+
+Created C -> T converted version of the FastQ file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2 (42708626 sequences in total)
+
+Input file is MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_C_to_T.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/ with the specified options: -q --phred33 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for CTreadCTgenome (reading in sequences from MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	MethylC-Seq_mm_fc_2wk_SRR921773.8_LAMARCK:3101:81RTWABXX:3:1101:1466:2208_length=101	0	2_CT_converted	74600827	1	24M	*	0	0	ATATGGTTTAGTGAGTAAAGGTGT	???DDDDDDDDADE@AEB>FB3AE	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:24	YT:Z:UU
+Now starting the Bowtie 2 aligner for CTreadGAgenome (reading in sequences from MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	MethylC-Seq_mm_fc_2wk_SRR921773.8_LAMARCK:3101:81RTWABXX:3:1101:1466:2208_length=101	16	6_GA_converted	34961947	1	24M	*	0	0	ACACCTTTACTCACTAAACCATAT	EA3BF>BEA@EDADDDDDDDD???	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:24	YT:Z:UU
+
+>>> Writing bisulfite mapping results to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2.bam <<<
+
+Current working directory is: /gulo/glob/phil/demo_data/BSSeq/Lister_2013
+
+Now reading in and storing sequence information of the genome specified in: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/
+
+chr 10 (130694993 bp)
+chr 11 (122082543 bp)
+chr 12 (120129022 bp)
+chr 13 (120421639 bp)
+chr 14 (124902244 bp)
+chr 15 (104043685 bp)
+chr 16 (98207768 bp)
+chr 17 (94987271 bp)
+chr 18 (90702639 bp)
+chr 19 (61431566 bp)
+chr 1 (195471971 bp)
+chr 2 (182113224 bp)
+chr 3 (160039680 bp)
+chr 4 (156508116 bp)
+chr 5 (151834684 bp)
+chr 6 (149736546 bp)
+chr 7 (145441459 bp)
+chr 8 (129401213 bp)
+chr 9 (124595110 bp)
+chr MT (16299 bp)
+chr X (171031299 bp)
+chr Y (91744698 bp)
+
+
+Reading in the sequence file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2
+Processed 1000000 sequences so far
+Processed 2000000 sequences so far
+Processed 3000000 sequences so far
+
+Created C -> T converted version of the FastQ file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3 (42708626 sequences in total)
+
+Input file is MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_C_to_T.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/ with the specified options: -q --phred33 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for CTreadCTgenome (reading in sequences from MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/CT_conversion/BS_CT
+
+
+Created C -> T converted version of the FastQ file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1 (42708627 sequences in total)
+
+Input file is MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_C_to_T.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/ with the specified options: -q --phred33 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for CTreadCTgenome (reading in sequences from MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	MethylC-Seq_mm_fc_2wk_SRR921773.9_LAMARCK:3101:81RTWABXX:3:1101:1277:2223_length=101	0	15_CT_converted	31968809	1	28M	*	0	0	AGAGAGAGAGAGATATATATATATATAT	???DD>DDDDDDD9EEE,:,,3A<@+<A	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:28	YT:Z:UU
+Now starting the Bowtie 2 aligner for CTreadGAgenome (reading in sequences from MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/GA_conversion/BS_GA
+
+Processed 4000000 sequences so far
+Found first alignment:	MethylC-Seq_mm_fc_2wk_SRR921773.3_LAMARCK:3101:81RTWABXX:3:1101:1188:2206_length=101	0	14_CT_converted	19417559	42	23M	*	0	0	AAATTGAAAAAGTTGGAAAATTT	@@@DFDDEH?B1<CGBHFICFH@	AS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:23	YT:Z:UU
+Now starting the Bowtie 2 aligner for CTreadGAgenome (reading in sequences from MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_C_to_T.fastq with options -q --phred33 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	MethylC-Seq_mm_fc_2wk_SRR921773.9_LAMARCK:3101:81RTWABXX:3:1101:1277:2223_length=101	16	3_GA_converted	17100872	1	28M	*	0	0	ATATATATATATATATCTCTCTCTCTCT	A<+@<A3,,:,EEE9DDDDDDD>DD???	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:28	YT:Z:UU
+
+>>> Writing bisulfite mapping results to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2.bam <<<
+
+Current working directory is: /gulo/glob/phil/demo_data/BSSeq/Lister_2013
+
+Now reading in and storing sequence information of the genome specified in: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/
+
+Found first alignment:	MethylC-Seq_mm_fc_2wk_SRR921773.3_LAMARCK:3101:81RTWABXX:3:1101:1188:2206_length=101	16	9_GA_converted	3000314	1	23M	*	0	0	AAATTTTCCAACTTTTTCAATTT	@HFCIFHBGC<1B?HEDDFD@@@	AS:i:0	XS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:23	YT:Z:UU
+
+>>> Writing bisulfite mapping results to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2.bam <<<
+
+Current working directory is: /gulo/glob/phil/demo_data/BSSeq/Lister_2013
+
+Now reading in and storing sequence information of the genome specified in: /pica/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex/
+
+chr 10 (130694993 bp)
+chr 10 (130694993 bp)
+chr 11 (122082543 bp)
+chr 11 (122082543 bp)
+chr 12 (120129022 bp)
+chr 12 (120129022 bp)
+chr 13 (120421639 bp)
+chr 13 (120421639 bp)
+chr 14 (124902244 bp)
+chr 14 (124902244 bp)
+chr 15 (104043685 bp)
+chr 15 (104043685 bp)
+chr 16 (98207768 bp)
+chr 16 (98207768 bp)
+chr 17 (94987271 bp)
+chr 17 (94987271 bp)
+chr 18 (90702639 bp)
+chr 19 (61431566 bp)
+chr 18 (90702639 bp)
+chr 19 (61431566 bp)
+chr 1 (195471971 bp)
+chr 1 (195471971 bp)
+chr 2 (182113224 bp)
+chr 2 (182113224 bp)
+chr 3 (160039680 bp)
+chr 3 (160039680 bp)
+chr 4 (156508116 bp)
+chr 4 (156508116 bp)
+chr 5 (151834684 bp)
+chr 5 (151834684 bp)
+chr 6 (149736546 bp)
+chr 6 (149736546 bp)
+chr 7 (145441459 bp)
+chr 7 (145441459 bp)
+chr 8 (129401213 bp)
+chr 8 (129401213 bp)
+chr 9 (124595110 bp)
+chr MT (16299 bp)
+chr 9 (124595110 bp)
+chr MT (16299 bp)
+chr X (171031299 bp)
+chr X (171031299 bp)
+chr Y (91744698 bp)
+
+
+Reading in the sequence file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3
+chr Y (91744698 bp)
+
+
+Reading in the sequence file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1
+Processed 5000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 6000000 sequences so far
+Processed 2000000 sequences so far
+Processed 7000000 sequences so far
+Processed 2000000 sequences so far
+Processed 3000000 sequences so far
+Processed 8000000 sequences so far
+Processed 3000000 sequences so far
+Processed 9000000 sequences so far
+Processed 4000000 sequences so far
+Processed 4000000 sequences so far
+Processed 10000000 sequences so far
+Processed 5000000 sequences so far
+Processed 5000000 sequences so far
+Processed 11000000 sequences so far
+Processed 12000000 sequences so far
+Processed 6000000 sequences so far
+Processed 6000000 sequences so far
+Processed 13000000 sequences so far
+Processed 7000000 sequences so far
+Processed 7000000 sequences so far
+Processed 14000000 sequences so far
+Processed 8000000 sequences so far
+Processed 8000000 sequences so far
+Processed 15000000 sequences so far
+Processed 9000000 sequences so far
+Processed 9000000 sequences so far
+Processed 16000000 sequences so far
+Processed 10000000 sequences so far
+Processed 10000000 sequences so far
+Processed 17000000 sequences so far
+Processed 11000000 sequences so far
+Processed 11000000 sequences so far
+Processed 18000000 sequences so far
+Processed 12000000 sequences so far
+Processed 12000000 sequences so far
+Processed 19000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_2wk_SRR921773.42691732_LAMARCK:3101:81RTWABXX:3:1202:16523:161306_length=101	MT	2
+Processed 13000000 sequences so far
+Processed 13000000 sequences so far
+Processed 20000000 sequences so far
+Processed 21000000 sequences so far
+Processed 14000000 sequences so far
+Processed 14000000 sequences so far
+Processed 22000000 sequences so far
+Processed 15000000 sequences so far
+Processed 15000000 sequences so far
+Processed 23000000 sequences so far
+Processed 16000000 sequences so far
+Processed 16000000 sequences so far
+Processed 24000000 sequences so far
+Processed 17000000 sequences so far
+Processed 17000000 sequences so far
+Processed 25000000 sequences so far
+Processed 18000000 sequences so far
+Processed 18000000 sequences so far
+Processed 26000000 sequences so far
+Processed 19000000 sequences so far
+Processed 19000000 sequences so far
+Processed 27000000 sequences so far
+Processed 20000000 sequences so far
+Processed 20000000 sequences so far
+Processed 28000000 sequences so far
+Processed 21000000 sequences so far
+Processed 21000000 sequences so far
+Processed 22000000 sequences so far
+Processed 29000000 sequences so far
+Processed 22000000 sequences so far
+Processed 30000000 sequences so far
+Processed 23000000 sequences so far
+Processed 23000000 sequences so far
+Processed 31000000 sequences so far
+Processed 24000000 sequences so far
+Processed 24000000 sequences so far
+Processed 32000000 sequences so far
+Processed 25000000 sequences so far
+Processed 25000000 sequences so far
+Processed 33000000 sequences so far
+Processed 26000000 sequences so far
+Processed 26000000 sequences so far
+Processed 34000000 sequences so far
+Processed 27000000 sequences so far
+Processed 27000000 sequences so far
+Processed 35000000 sequences so far
+Processed 28000000 sequences so far
+Processed 28000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_2wk_SRR921773.94795174_LAMARCK:3101:81RTWABXX:3:2106:11848:118330_length=101	MT	1
+Processed 36000000 sequences so far
+Processed 29000000 sequences so far
+Processed 29000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_2wk_SRR921773.121211477_LAMARCK:3101:81RTWABXX:3:2204:11652:126707_length=101	MT	1
+Processed 37000000 sequences so far
+Processed 30000000 sequences so far
+Processed 30000000 sequences so far
+Processed 38000000 sequences so far
+Chromosomal sequence could not be extracted for	MethylC-Seq_mm_fc_2wk_SRR921773.102634912_LAMARCK:3101:81RTWABXX:3:2108:3858:33833_length=101	MT	2
+Processed 31000000 sequences so far
+Processed 31000000 sequences so far
+Processed 32000000 sequences so far
+Processed 32000000 sequences so far
+Processed 39000000 sequences so far
+Processed 33000000 sequences so far
+Processed 33000000 sequences so far
+Processed 40000000 sequences so far
+Processed 34000000 sequences so far
+Processed 41000000 sequences so far
+Processed 34000000 sequences so far
+Processed 42000000 sequences so far
+Processed 35000000 sequences so far
+Processed 35000000 sequences so far
+42708626 reads; of these:
+  42708626 (100.00%) were unpaired; of these:
+    19726132 (46.19%) aligned 0 times
+    15820111 (37.04%) aligned exactly 1 time
+    7162383 (16.77%) aligned >1 times
+53.81% overall alignment rate
+42708626 reads; of these:
+  42708626 (100.00%) were unpaired; of these:
+    19418613 (45.47%) aligned 0 times
+    15894049 (37.22%) aligned exactly 1 time
+    7395964 (17.32%) aligned >1 times
+54.53% overall alignment rate
+Processed 42708626 sequences in total
+
+
+Successfully deleted the temporary file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_C_to_T.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	42708626
+Number of alignments with a unique best hit from the different alignments:	32585759
+Mapping efficiency:	76.3%
+
+Sequences with no alignments under any condition:	3852278
+Sequences did not map uniquely:	6270589
+Sequences which were discarded because genomic sequence could not be extracted:	1
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	16473513	((converted) top strand)
+CT/GA:	16112245	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	519058435
+
+Total methylated C's in CpG context:	21616786
+Total methylated C's in CHG context:	1247228
+Total methylated C's in CHH context:	4067939
+Total methylated C's in Unknown context:	2
+
+Total unmethylated C's in CpG context:	6688687
+Total unmethylated C's in CHG context:	131623948
+Total unmethylated C's in CHH context:	353813847
+Total unmethylated C's in Unknown context:	79
+
+C methylated in CpG context:	76.4%
+C methylated in CHG context:	0.9%
+C methylated in CHH context:	1.1%
+C methylated in Unknown context (CN or CHN):	2.5%
+
+
+Processed 36000000 sequences so far
+Processed 36000000 sequences so far
+Processed 37000000 sequences so far
+Processed 37000000 sequences so far
+Processed 38000000 sequences so far
+Processed 38000000 sequences so far
+Processed 39000000 sequences so far
+Processed 39000000 sequences so far
+Processed 40000000 sequences so far
+Processed 40000000 sequences so far
+Processed 41000000 sequences so far
+Processed 41000000 sequences so far
+Processed 42000000 sequences so far
+Processed 42000000 sequences so far
+42708627 reads; of these:
+  42708627 (100.00%) were unpaired; of these:
+    19417294 (45.46%) aligned 0 times
+    15887097 (37.20%) aligned exactly 1 time
+    7404236 (17.34%) aligned >1 times
+54.54% overall alignment rate
+42708627 reads; of these:
+  42708627 (100.00%) were unpaired; of these:
+    19720511 (46.17%) aligned 0 times
+    15817235 (37.04%) aligned exactly 1 time
+    7170881 (16.79%) aligned >1 times
+53.83% overall alignment rate
+Processed 42708627 sequences in total
+
+
+Successfully deleted the temporary file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_C_to_T.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	42708627
+Number of alignments with a unique best hit from the different alignments:	32576218
+Mapping efficiency:	76.3%
+
+Sequences with no alignments under any condition:	3854514
+Sequences did not map uniquely:	6277895
+Sequences which were discarded because genomic sequence could not be extracted:	2
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	16467271	((converted) top strand)
+CT/GA:	16108945	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	518863757
+
+Total methylated C's in CpG context:	21617012
+Total methylated C's in CHG context:	1249693
+Total methylated C's in CHH context:	4067497
+Total methylated C's in Unknown context:	2
+
+Total unmethylated C's in CpG context:	6691128
+Total unmethylated C's in CHG context:	131578984
+Total unmethylated C's in CHH context:	353659443
+Total unmethylated C's in Unknown context:	91
+
+C methylated in CpG context:	76.4%
+C methylated in CHG context:	0.9%
+C methylated in CHH context:	1.1%
+C methylated in Unknown context (CN or CHN):	2.2%
+
+
+42708626 reads; of these:
+  42708626 (100.00%) were unpaired; of these:
+    19411966 (45.45%) aligned 0 times
+    15896545 (37.22%) aligned exactly 1 time
+    7400115 (17.33%) aligned >1 times
+54.55% overall alignment rate
+42708626 reads; of these:
+  42708626 (100.00%) were unpaired; of these:
+    19724544 (46.18%) aligned 0 times
+    15816595 (37.03%) aligned exactly 1 time
+    7167487 (16.78%) aligned >1 times
+53.82% overall alignment rate
+Processed 42708626 sequences in total
+
+
+Successfully deleted the temporary file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_C_to_T.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	42708626
+Number of alignments with a unique best hit from the different alignments:	32583875
+Mapping efficiency:	76.3%
+
+Sequences with no alignments under any condition:	3850905
+Sequences did not map uniquely:	6273846
+Sequences which were discarded because genomic sequence could not be extracted:	1
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	16474696	((converted) top strand)
+CT/GA:	16109178	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	518965170
+
+Total methylated C's in CpG context:	21622407
+Total methylated C's in CHG context:	1249493
+Total methylated C's in CHH context:	4064788
+Total methylated C's in Unknown context:	1
+
+Total unmethylated C's in CpG context:	6694794
+Total unmethylated C's in CHG context:	131614298
+Total unmethylated C's in CHH context:	353719390
+Total unmethylated C's in Unknown context:	106
+
+C methylated in CpG context:	76.4%
+C methylated in CHG context:	0.9%
+C methylated in CHH context:	1.1%
+C methylated in Unknown context (CN or CHN):	0.9%
+
+
+Now waiting for all child processes to complete
+
+
+Right, cleaning up now...
+
+Deleting temporary sequence files...
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1	MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2	MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3	
+
+Now merging BAM files MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2.bam MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2.bam MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2.bam into >>> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.bam <<<
+Merging from file >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2.bam <<
+Merging from file >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2.bam <<
+Merging from file >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2.bam <<
+
+Deleting temporary BAM files...
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2.bam	MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2.bam	MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2.bam	
+
+Writing report to MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt
+Now merging temporary reports MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.txt MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.txt MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.txt into >>> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <<<
+Merging from file >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.txt <<
+Merging from file >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.txt <<
+Merging from file >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.txt <<
+
+Printing a final merged alignment report for all individual sub-reports
+
+Final Alignment report
+======================
+Sequences analysed in total:	128125879
+Number of alignments with a unique best hit from the different alignments:	97745852
+Mapping efficiency:	76.3%
+
+Sequences with no alignments under any condition:	11557697
+Sequences did not map uniquely:	18822330
+Sequences which were discarded because genomic sequence could not be extracted:	4
+
+Number of sequences with unique best (first) alignment came from the bowtie output:
+CT/CT:	49415480	((converted) top strand)
+CT/GA:	48330368	((converted) bottom strand)
+GA/CT:	0	(complementary to (converted) top strand)
+GA/GA:	0	(complementary to (converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	1556887362
+
+Total methylated C's in CpG context:	64856205
+Total methylated C's in CHG context:	3746414
+Total methylated C's in CHH context:	12200224
+Total methylated C's in Unknown context:	5
+
+Total unmethylated C's in CpG context:	20074609
+Total unmethylated C's in CHG context:	394817230
+Total unmethylated C's in CHH context:	1061192680
+Total unmethylated C's in Unknown context:	276
+
+C methylated in CpG context:	76.4%
+C methylated in CHG context:	0.9%
+C methylated in CHH context:	1.1%
+C methylated in Unknown context (CN or CHN):	1.8%
+
+
+Deleting temporary report files...
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.txt	MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.txt	MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.txt	
+
+
+====================
+Bismark run complete
+====================
+
+
+###CF Bismark (SE mode) successfully exited, took 6 hours, 53 minutes, 47 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			bismark_deduplicate
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_bismark_deduplicate_286
+Previous Job ID:	cf_sra_bismark_1447079770_bismark_align_255
+Date & Time:		17:50, 10-11-2015
+--------------------------------------------------------------------------------
+
+---------- deduplicate_bismark version information ----------
+
+                           Bismark Deduplication Module
+
+                          Deduplicator Version: v0.14.5
+              Copyright 2010-15 Felix Krueger, Babraham Bioinformatics
+                www.bioinformatics.babraham.ac.uk/projects/bismark/
+
+
+
+------- End of deduplicate_bismark version information ------
+
+###CFCMD deduplicate_bismark -s --bam MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.bam
+
+Processing single-end Bismark output file(s) (SAM format):
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.bam
+
+
+If there are several alignments to a single position in the genome the first alignment will be chosen. Since the input files are not in any way sorted this is a near-enough random selection of reads.
+
+
+Total number of alignments analysed in MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.bam:	85880302
+Total number duplicated alignments removed:	2498381 (2.91%)
+Duplicated alignments were found at:	1279231 different position(s)
+
+Total count of deduplicated leftover sequences: 83381921 (97.09% of total)
+
+skipping header line:	@HD	VN:1.0	SO:unsorted
+skipping header line:	@SQ	SN:10	LN:130694993
+skipping header line:	@SQ	SN:11	LN:122082543
+skipping header line:	@SQ	SN:12	LN:120129022
+skipping header line:	@SQ	SN:13	LN:120421639
+skipping header line:	@SQ	SN:14	LN:124902244
+skipping header line:	@SQ	SN:15	LN:104043685
+skipping header line:	@SQ	SN:16	LN:98207768
+skipping header line:	@SQ	SN:17	LN:94987271
+skipping header line:	@SQ	SN:18	LN:90702639
+skipping header line:	@SQ	SN:19	LN:61431566
+skipping header line:	@SQ	SN:1	LN:195471971
+skipping header line:	@SQ	SN:2	LN:182113224
+skipping header line:	@SQ	SN:3	LN:160039680
+skipping header line:	@SQ	SN:4	LN:156508116
+skipping header line:	@SQ	SN:5	LN:151834684
+skipping header line:	@SQ	SN:6	LN:149736546
+skipping header line:	@SQ	SN:7	LN:145441459
+skipping header line:	@SQ	SN:8	LN:129401213
+skipping header line:	@SQ	SN:9	LN:124595110
+skipping header line:	@SQ	SN:MT	LN:16299
+skipping header line:	@SQ	SN:X	LN:171031299
+skipping header line:	@SQ	SN:Y	LN:91744698
+skipping header line:	@PG	ID:Bismark	VN:v0.14.4	CL:"bismark --multicore 3 --bam --bowtie2 --phred33-quals /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz"
+###CF Bismark deduplication (SE mode) successfully exited, took 48 minutes, 1 seconds..
+
+###CFCMD deduplicate_bismark -s --bam MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.bam
+
+Processing single-end Bismark output file(s) (SAM format):
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.bam
+
+
+If there are several alignments to a single position in the genome the first alignment will be chosen. Since the input files are not in any way sorted this is a near-enough random selection of reads.
+
+
+Total number of alignments analysed in MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.bam:	97745848
+Total number duplicated alignments removed:	6179436 (6.32%)
+Duplicated alignments were found at:	2369116 different position(s)
+
+Total count of deduplicated leftover sequences: 91566412 (93.68% of total)
+
+skipping header line:	@HD	VN:1.0	SO:unsorted
+skipping header line:	@SQ	SN:10	LN:130694993
+skipping header line:	@SQ	SN:11	LN:122082543
+skipping header line:	@SQ	SN:12	LN:120129022
+skipping header line:	@SQ	SN:13	LN:120421639
+skipping header line:	@SQ	SN:14	LN:124902244
+skipping header line:	@SQ	SN:15	LN:104043685
+skipping header line:	@SQ	SN:16	LN:98207768
+skipping header line:	@SQ	SN:17	LN:94987271
+skipping header line:	@SQ	SN:18	LN:90702639
+skipping header line:	@SQ	SN:19	LN:61431566
+skipping header line:	@SQ	SN:1	LN:195471971
+skipping header line:	@SQ	SN:2	LN:182113224
+skipping header line:	@SQ	SN:3	LN:160039680
+skipping header line:	@SQ	SN:4	LN:156508116
+skipping header line:	@SQ	SN:5	LN:151834684
+skipping header line:	@SQ	SN:6	LN:149736546
+skipping header line:	@SQ	SN:7	LN:145441459
+skipping header line:	@SQ	SN:8	LN:129401213
+skipping header line:	@SQ	SN:9	LN:124595110
+skipping header line:	@SQ	SN:MT	LN:16299
+skipping header line:	@SQ	SN:X	LN:171031299
+skipping header line:	@SQ	SN:Y	LN:91744698
+skipping header line:	@PG	ID:Bismark	VN:v0.14.4	CL:"bismark --multicore 3 --bam --bowtie2 --phred33-quals /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz"
+###CF Bismark deduplication (SE mode) successfully exited, took 42 minutes, 40 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			bismark_methXtract
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_bismark_methXtract_636
+Previous Job ID:	cf_sra_bismark_1447079770_bismark_deduplicate_286
+Date & Time:		19:40, 10-11-2015
+--------------------------------------------------------------------------------
+
+---------- bismark_methylation_extractor version information ----------
+
+
+                           Bismark Methylation Extractor
+
+                         Bismark Extractor Version: v0.14.4
+              Copyright 2010-15 Felix Krueger, Babraham Bioinformatics
+                www.bioinformatics.babraham.ac.uk/projects/bismark/
+
+
+
+------- End of bismark_methylation_extractor version information ------
+
+###CFCMD bismark_methylation_extractor --multi 4 --bedGraph --counts --buffer_size 6G --gzip -s --report MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+
+ *** Bismark methylation extractor version v0.14.4 ***
+
+Summarising Bismark methylation extractor parameters:
+===============================================================
+Bismark single-end SAM format specified (default)
+Number of cores to be used: 4
+Output will be written to the current directory ('/gulo/glob/phil/demo_data/BSSeq/Lister_2013')
+
+
+Summarising bedGraph parameters:
+===============================================================
+Generating additional output in bedGraph and coverage format
+bedGraph format:	<Chromosome> <Start Position> <End Position> <Methylation Percentage>
+coverage format:	<Chromosome> <Start Position> <End Position> <Methylation Percentage> <count methylated> <count non-methylated>
+
+Using a cutoff of 1 read(s) to report cytosine positions
+Reporting and sorting cytosine methylation information in CpG context only (default)
+The bedGraph UNIX sort command will use the following memory setting:	'6G'. Temporary directory used for sorting is the output directory
+
+Writing result file containing methylation information for C in CpG context from the original top strand to CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CpG context from the complementary to original top strand to CpG_CTOT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CpG context from the complementary to original bottom strand to CpG_CTOB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CpG context from the original bottom strand to CpG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Writing result file containing methylation information for C in CHG context from the original top strand to CHG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHG context from the complementary to original top strand to CHG_CTOT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHG context from the complementary to original bottom strand to CHG_CTOB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHG context from the original bottom strand to CHG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Writing result file containing methylation information for C in CHH context from the original top strand to CHH_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHH context from the complementary to original top strand to CHH_CTOT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHH context from the complementary to original bottom strand to CHH_CTOB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHH context from the original bottom strand to CHH_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+skipping SAM header line:	@HD	VN:1.0	SO:unsorted
+skipping SAM header line:	@SQ	SN:10	LN:130694993
+skipping SAM header line:	@SQ	SN:11	LN:122082543
+skipping SAM header line:	@SQ	SN:12	LN:120129022
+skipping SAM header line:	@SQ	SN:13	LN:120421639
+skipping SAM header line:	@SQ	SN:14	LN:124902244
+skipping SAM header line:	@SQ	SN:15	LN:104043685
+skipping SAM header line:	@SQ	SN:16	LN:98207768
+skipping SAM header line:	@SQ	SN:17	LN:94987271
+skipping SAM header line:	@SQ	SN:18	LN:90702639
+skipping SAM header line:	@SQ	SN:19	LN:61431566
+skipping SAM header line:	@SQ	SN:1	LN:195471971
+skipping SAM header line:	@SQ	SN:2	LN:182113224
+skipping SAM header line:	@SQ	SN:3	LN:160039680
+skipping SAM header line:	@SQ	SN:4	LN:156508116
+skipping SAM header line:	@SQ	SN:5	LN:151834684
+skipping SAM header line:	@SQ	SN:6	LN:149736546
+skipping SAM header line:	@SQ	SN:7	LN:145441459
+skipping SAM header line:	@SQ	SN:8	LN:129401213
+skipping SAM header line:	@SQ	SN:9	LN:124595110
+skipping SAM header line:	@SQ	SN:MT	LN:16299
+skipping SAM header line:	@SQ	SN:X	LN:171031299
+skipping SAM header line:	@SQ	SN:Y	LN:91744698
+skipping SAM header line:	@PG	ID:Bismark	VN:v0.14.4	CL:"bismark --multicore 3 --bam --bowtie2 --phred33-quals /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz"
+Processed lines: 500000
+Processed lines: 500000
+Processed lines: 500000
+Processed lines: 500000
+Processed lines: 1000000
+Processed lines: 1000000
+Processed lines: 1000000
+Processed lines: 1000000
+Processed lines: 1500000
+Processed lines: 1500000
+Processed lines: 1500000
+Processed lines: 1500000
+Processed lines: 2000000
+Processed lines: 2000000
+Processed lines: 2000000
+Processed lines: 2000000
+Processed lines: 2500000
+Processed lines: 2500000
+Processed lines: 2500000
+Processed lines: 2500000
+Processed lines: 3000000
+Processed lines: 3000000
+Processed lines: 3000000
+Processed lines: 3000000
+Processed lines: 3500000
+Processed lines: 3500000
+Processed lines: 3500000
+Processed lines: 3500000
+Processed lines: 4000000
+Processed lines: 4000000
+Processed lines: 4000000
+Processed lines: 4000000
+Processed lines: 4500000
+Processed lines: 4500000
+Processed lines: 4500000
+Processed lines: 4500000
+Processed lines: 5000000
+Processed lines: 5000000
+Processed lines: 5000000
+Processed lines: 5000000
+Processed lines: 5500000
+Processed lines: 5500000
+Processed lines: 5500000
+Processed lines: 5500000
+Processed lines: 6000000
+Processed lines: 6000000
+Processed lines: 6000000
+Processed lines: 6000000
+Processed lines: 6500000
+Processed lines: 6500000
+Processed lines: 6500000
+Processed lines: 6500000
+Processed lines: 7000000
+Processed lines: 7000000
+Processed lines: 7000000
+Processed lines: 7000000
+Processed lines: 7500000
+Processed lines: 7500000
+Processed lines: 7500000
+Processed lines: 7500000
+Processed lines: 8000000
+Processed lines: 8000000
+Processed lines: 8000000
+Processed lines: 8000000
+Processed lines: 8500000
+Processed lines: 8500000
+Processed lines: 8500000
+Processed lines: 8500000
+Processed lines: 9000000
+Processed lines: 9000000
+Processed lines: 9000000
+Processed lines: 9000000
+Processed lines: 9500000
+Processed lines: 9500000
+Processed lines: 9500000
+Processed lines: 9500000
+Processed lines: 10000000
+Processed lines: 10000000
+Processed lines: 10000000
+Processed lines: 10500000
+Processed lines: 10000000
+Processed lines: 10500000
+Processed lines: 11000000
+Processed lines: 11000000
+Processed lines: 10500000
+Processed lines: 10500000
+Processed lines: 11500000
+Processed lines: 11500000
+Processed lines: 11000000
+Processed lines: 11000000
+Processed lines: 12000000
+Processed lines: 12000000
+Processed lines: 11500000
+Processed lines: 11500000
+Processed lines: 12500000
+Processed lines: 12000000
+Processed lines: 12500000
+Processed lines: 12000000
+Processed lines: 13000000
+Processed lines: 13000000
+Processed lines: 12500000
+Processed lines: 12500000
+Processed lines: 13500000
+Processed lines: 13000000
+Processed lines: 13500000
+Processed lines: 13000000
+Processed lines: 14000000
+Processed lines: 13500000
+Processed lines: 13500000
+Processed lines: 14000000
+Processed lines: 14500000
+Processed lines: 14000000
+Processed lines: 14000000
+Processed lines: 14500000
+Processed lines: 15000000
+Processed lines: 14500000
+Processed lines: 14500000
+Processed lines: 15000000
+Processed lines: 15000000
+Processed lines: 15500000
+Processed lines: 15000000
+Processed lines: 15500000
+Processed lines: 15500000
+Processed lines: 15500000
+Processed lines: 16000000
+Processed lines: 16000000
+Processed lines: 16000000
+Processed lines: 16000000
+Processed lines: 16500000
+Processed lines: 16500000
+Processed lines: 16500000
+Processed lines: 16500000
+Processed lines: 17000000
+Processed lines: 17000000
+Processed lines: 17000000
+Processed lines: 17000000
+Processed lines: 17500000
+Processed lines: 17500000
+Processed lines: 17500000
+Processed lines: 17500000
+Processed lines: 18000000
+Processed lines: 18000000
+Processed lines: 18000000
+Processed lines: 18000000
+Processed lines: 18500000
+Processed lines: 18500000
+Processed lines: 18500000
+Processed lines: 18500000
+Processed lines: 19000000
+Processed lines: 19000000
+Processed lines: 19000000
+Processed lines: 19000000
+Processed lines: 19500000
+Processed lines: 19500000
+Processed lines: 19500000
+Processed lines: 19500000
+Processed lines: 20000000
+Processed lines: 20000000
+Processed lines: 20000000
+Processed lines: 20000000
+Processed lines: 20500000
+Processed lines: 20500000
+Processed lines: 20500000
+Processed lines: 20500000
+Processed lines: 21000000
+Processed lines: 21000000
+Processed lines: 21000000
+Processed lines: 21000000
+Processed lines: 21500000
+Processed lines: 21500000
+Processed lines: 21500000
+Processed lines: 21500000
+Processed lines: 22000000
+Processed lines: 22000000
+Processed lines: 22000000
+Processed lines: 22000000
+Processed lines: 22500000
+Processed lines: 22500000
+Processed lines: 22500000
+Processed lines: 22500000
+Processed lines: 23000000
+Processed lines: 23000000
+Processed lines: 23000000
+Processed lines: 23000000
+Processed lines: 23500000
+Processed lines: 23500000
+Processed lines: 23500000
+Processed lines: 23500000
+Processed lines: 24000000
+Processed lines: 24500000
+Processed lines: 24000000
+Processed lines: 24000000
+Processed lines: 24000000
+Processed lines: 25000000
+Processed lines: 24500000
+Processed lines: 24500000
+Processed lines: 24500000
+Processed lines: 25500000
+Processed lines: 25000000
+Processed lines: 25000000
+Processed lines: 25000000
+Processed lines: 26000000
+Processed lines: 25500000
+Processed lines: 25500000
+Processed lines: 25500000
+Processed lines: 26000000
+Processed lines: 26500000
+Processed lines: 26000000
+Processed lines: 26000000
+Processed lines: 26500000
+Processed lines: 26500000
+Processed lines: 27000000
+Processed lines: 26500000
+Processed lines: 27000000
+Processed lines: 27000000
+Processed lines: 27500000
+Processed lines: 27000000
+Processed lines: 27500000
+Processed lines: 28000000
+Processed lines: 27500000
+Processed lines: 27500000
+Processed lines: 28000000
+Processed lines: 28500000
+Processed lines: 28000000
+Processed lines: 28000000
+Processed lines: 28500000
+Processed lines: 28500000
+Processed lines: 29000000
+Processed lines: 28500000
+Processed lines: 29000000
+Processed lines: 29500000
+Processed lines: 29000000
+Processed lines: 29000000
+Processed lines: 29500000
+Processed lines: 30000000
+Processed lines: 29500000
+Processed lines: 29500000
+Processed lines: 30000000
+Processed lines: 30500000
+Processed lines: 30000000
+Processed lines: 30000000
+Processed lines: 30500000
+Processed lines: 31000000
+Processed lines: 30500000
+Processed lines: 30500000
+Processed lines: 31000000
+Processed lines: 31500000
+Processed lines: 31000000
+Processed lines: 31000000
+Processed lines: 31500000
+Processed lines: 31500000
+Processed lines: 31500000
+Processed lines: 32000000
+Processed lines: 32000000
+Processed lines: 32000000
+Processed lines: 32500000
+Processed lines: 32000000
+Processed lines: 32500000
+Processed lines: 32500000
+Processed lines: 32500000
+Processed lines: 33000000
+Processed lines: 33000000
+Processed lines: 33000000
+Processed lines: 33000000
+Processed lines: 33500000
+Processed lines: 33500000
+Processed lines: 33500000
+Processed lines: 33500000
+Processed lines: 34000000
+Processed lines: 34000000
+Processed lines: 34000000
+Processed lines: 34000000
+Processed lines: 34500000
+Processed lines: 34500000
+Processed lines: 34500000
+Processed lines: 34500000
+Processed lines: 35000000
+Processed lines: 35000000
+Processed lines: 35000000
+Processed lines: 35000000
+Processed lines: 35500000
+Processed lines: 35500000
+Processed lines: 35500000
+Processed lines: 36000000
+Processed lines: 36000000
+Processed lines: 35500000
+Processed lines: 36000000
+Processed lines: 36500000
+Processed lines: 36000000
+Processed lines: 36500000
+Processed lines: 36500000
+Processed lines: 37000000
+Processed lines: 36500000
+Processed lines: 37000000
+Processed lines: 37000000
+Processed lines: 37500000
+Processed lines: 37000000
+Processed lines: 37500000
+Processed lines: 37500000
+Processed lines: 38000000
+Processed lines: 37500000
+Processed lines: 38000000
+Processed lines: 38000000
+Processed lines: 38500000
+Processed lines: 38000000
+Processed lines: 38500000
+Processed lines: 38500000
+Processed lines: 39000000
+Processed lines: 38500000
+Processed lines: 39000000
+Processed lines: 39000000
+Processed lines: 39500000
+Processed lines: 39000000
+Processed lines: 39500000
+Processed lines: 40000000
+Processed lines: 39500000
+Processed lines: 39500000
+Processed lines: 40000000
+Processed lines: 40000000
+Processed lines: 40500000
+Processed lines: 40000000
+Processed lines: 40500000
+Processed lines: 41000000
+Processed lines: 40500000
+Processed lines: 40500000
+Processed lines: 41000000
+Processed lines: 41500000
+Processed lines: 41000000
+Processed lines: 41000000
+Processed lines: 41500000
+Processed lines: 42000000
+Processed lines: 41500000
+Processed lines: 41500000
+Processed lines: 42000000
+Processed lines: 42500000
+Processed lines: 42000000
+Processed lines: 42000000
+Processed lines: 42500000
+Processed lines: 43000000
+Processed lines: 42500000
+Processed lines: 42500000
+Processed lines: 43500000
+Processed lines: 43000000
+Processed lines: 43000000
+Processed lines: 43000000
+Processed lines: 44000000
+Processed lines: 43500000
+Processed lines: 43500000
+Processed lines: 44500000
+Processed lines: 43500000
+Processed lines: 44000000
+Processed lines: 44000000
+Processed lines: 45000000
+Processed lines: 44000000
+Processed lines: 44500000
+Processed lines: 44500000
+Processed lines: 45500000
+Processed lines: 44500000
+Processed lines: 45000000
+Processed lines: 45000000
+Processed lines: 46000000
+Processed lines: 45500000
+Processed lines: 45500000
+Processed lines: 45000000
+Processed lines: 46000000
+Processed lines: 46500000
+Processed lines: 45500000
+Processed lines: 46000000
+Processed lines: 46500000
+Processed lines: 47000000
+Processed lines: 46500000
+Processed lines: 46000000
+Processed lines: 47000000
+Processed lines: 46500000
+Processed lines: 47500000
+Processed lines: 47000000
+Processed lines: 47500000
+Processed lines: 48000000
+Processed lines: 47000000
+Processed lines: 47500000
+Processed lines: 48000000
+Processed lines: 48500000
+Processed lines: 48000000
+Processed lines: 47500000
+Processed lines: 48500000
+Processed lines: 48000000
+Processed lines: 49000000
+Processed lines: 48500000
+Processed lines: 49000000
+Processed lines: 48500000
+Processed lines: 49500000
+Processed lines: 49000000
+Processed lines: 49500000
+Processed lines: 49000000
+Processed lines: 50000000
+Processed lines: 49500000
+Processed lines: 50000000
+Processed lines: 49500000
+Processed lines: 50500000
+Processed lines: 50000000
+Processed lines: 50500000
+Processed lines: 51000000
+Processed lines: 50000000
+Processed lines: 50500000
+Processed lines: 51000000
+Processed lines: 50500000
+Processed lines: 51000000
+Processed lines: 51500000
+Processed lines: 51500000
+Processed lines: 51000000
+Processed lines: 51500000
+Processed lines: 52000000
+Processed lines: 52000000
+Processed lines: 51500000
+Processed lines: 52000000
+Processed lines: 52500000
+Processed lines: 52500000
+Processed lines: 52000000
+Processed lines: 52500000
+Processed lines: 53000000
+Processed lines: 53000000
+Processed lines: 52500000
+Processed lines: 53000000
+Processed lines: 53500000
+Processed lines: 53500000
+Processed lines: 53000000
+Processed lines: 53500000
+Processed lines: 54000000
+Processed lines: 53500000
+Processed lines: 54000000
+Processed lines: 54000000
+Processed lines: 54500000
+Processed lines: 54000000
+Processed lines: 54500000
+Processed lines: 54500000
+Processed lines: 55000000
+Processed lines: 54500000
+Processed lines: 55000000
+Processed lines: 55000000
+Processed lines: 55500000
+Processed lines: 55000000
+Processed lines: 55500000
+Processed lines: 55500000
+Processed lines: 56000000
+Processed lines: 55500000
+Processed lines: 56000000
+Processed lines: 56000000
+Processed lines: 56500000
+Processed lines: 56000000
+Processed lines: 56500000
+Processed lines: 56500000
+Processed lines: 57000000
+Processed lines: 56500000
+Processed lines: 57000000
+Processed lines: 57000000
+Processed lines: 57500000
+Processed lines: 57000000
+Processed lines: 57500000
+Processed lines: 57500000
+Processed lines: 58000000
+Processed lines: 57500000
+Processed lines: 58000000
+Processed lines: 58500000
+Processed lines: 58000000
+Processed lines: 58000000
+Processed lines: 58500000
+Processed lines: 59000000
+Processed lines: 58500000
+Processed lines: 58500000
+Processed lines: 59000000
+Processed lines: 59500000
+Processed lines: 59000000
+Processed lines: 59000000
+Processed lines: 59500000
+Processed lines: 59500000
+Processed lines: 60000000
+Processed lines: 59500000
+Processed lines: 60000000
+Processed lines: 60000000
+Processed lines: 60500000
+Processed lines: 60000000
+Processed lines: 60500000
+Processed lines: 61000000
+Processed lines: 60500000
+Processed lines: 60500000
+Processed lines: 61000000
+Processed lines: 61500000
+Processed lines: 61000000
+Processed lines: 61000000
+Processed lines: 61500000
+Processed lines: 62000000
+Processed lines: 61500000
+Processed lines: 61500000
+Processed lines: 62000000
+Processed lines: 62000000
+Processed lines: 62000000
+Processed lines: 62500000
+Processed lines: 62500000
+Processed lines: 62500000
+Processed lines: 62500000
+Processed lines: 63000000
+Processed lines: 63000000
+Processed lines: 63000000
+Processed lines: 63000000
+Processed lines: 63500000
+Processed lines: 63500000
+Processed lines: 63500000
+Processed lines: 63500000
+Processed lines: 64000000
+Processed lines: 64000000
+Processed lines: 64000000
+Processed lines: 64000000
+Processed lines: 64500000
+Processed lines: 64500000
+Processed lines: 64500000
+Processed lines: 64500000
+Processed lines: 65000000
+Processed lines: 65000000
+Processed lines: 65000000
+Processed lines: 65000000
+Processed lines: 65500000
+Processed lines: 65500000
+Processed lines: 65500000
+Processed lines: 65500000
+Processed lines: 66000000
+Processed lines: 66000000
+Processed lines: 66000000
+Processed lines: 66500000
+Processed lines: 66500000
+Processed lines: 66000000
+Processed lines: 66500000
+Processed lines: 67000000
+Processed lines: 67000000
+Processed lines: 66500000
+Processed lines: 67000000
+Processed lines: 67500000
+Processed lines: 67500000
+Processed lines: 67000000
+Processed lines: 67500000
+Processed lines: 68000000
+Processed lines: 68000000
+Processed lines: 67500000
+Processed lines: 68000000
+Processed lines: 68500000
+Processed lines: 68500000
+Processed lines: 68000000
+Processed lines: 68500000
+Processed lines: 69000000
+Processed lines: 69000000
+Processed lines: 68500000
+Processed lines: 69000000
+Processed lines: 69500000
+Processed lines: 69000000
+Processed lines: 69500000
+Processed lines: 69500000
+Processed lines: 69500000
+Processed lines: 70000000
+Processed lines: 70000000
+Processed lines: 70000000
+Processed lines: 70000000
+Processed lines: 70500000
+Processed lines: 70500000
+Processed lines: 70500000
+Processed lines: 70500000
+Processed lines: 71000000
+Processed lines: 71000000
+Processed lines: 71000000
+Processed lines: 71000000
+Processed lines: 71500000
+Processed lines: 71500000
+Processed lines: 71500000
+Processed lines: 71500000
+Processed lines: 72000000
+Processed lines: 72000000
+Processed lines: 72000000
+Processed lines: 72500000
+Processed lines: 72000000
+Processed lines: 72500000
+Processed lines: 72500000
+Processed lines: 73000000
+Processed lines: 73000000
+Processed lines: 72500000
+Processed lines: 73000000
+Processed lines: 73500000
+Processed lines: 73500000
+Processed lines: 73000000
+Processed lines: 73500000
+Processed lines: 74000000
+Processed lines: 74000000
+Processed lines: 74000000
+Processed lines: 73500000
+Processed lines: 74500000
+Processed lines: 74500000
+Processed lines: 74000000
+Processed lines: 74500000
+Processed lines: 75000000
+Processed lines: 75000000
+Processed lines: 74500000
+Processed lines: 75000000
+Processed lines: 75500000
+Processed lines: 75500000
+Processed lines: 75000000
+Processed lines: 75500000
+Processed lines: 76000000
+Processed lines: 75500000
+Processed lines: 76000000
+Processed lines: 76000000
+Processed lines: 76500000
+Processed lines: 76000000
+Processed lines: 76500000
+Processed lines: 76500000
+Processed lines: 77000000
+Processed lines: 77000000
+Processed lines: 76500000
+Processed lines: 77000000
+Processed lines: 77500000
+Processed lines: 77500000
+Processed lines: 77000000
+Processed lines: 77500000
+Processed lines: 78000000
+Processed lines: 78000000
+Processed lines: 77500000
+Processed lines: 78000000
+Processed lines: 78500000
+Processed lines: 78500000
+Processed lines: 78000000
+Processed lines: 78500000
+Processed lines: 79000000
+Processed lines: 79000000
+Processed lines: 78500000
+Processed lines: 79000000
+Processed lines: 79500000
+Processed lines: 79500000
+Processed lines: 79000000
+Processed lines: 79500000
+Processed lines: 80000000
+Processed lines: 80000000
+Processed lines: 79500000
+Processed lines: 80000000
+Processed lines: 80500000
+Processed lines: 80500000
+Processed lines: 80000000
+Processed lines: 81000000
+Processed lines: 80500000
+Processed lines: 81000000
+Processed lines: 81500000
+Processed lines: 81000000
+Processed lines: 80500000
+Processed lines: 81500000
+Processed lines: 82000000
+Processed lines: 81000000
+Processed lines: 82000000
+Processed lines: 81500000
+Processed lines: 81500000
+Processed lines: 82500000
+Processed lines: 82500000
+Processed lines: 82000000
+Processed lines: 82000000
+Processed lines: 83000000
+Processed lines: 82500000
+Processed lines: 83000000
+Finished processing child process. Exiting..
+Finished processing child process. Exiting..
+Processed lines: 82500000
+Processed lines: 83000000
+Processed lines: 83000000
+Now waiting for all child processes to complete
+Finished processing child process. Exiting..
+
+Merging individual splitting reports into overall report: 'MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt'
+Merging from these individual files:
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.1
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.2
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.3
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.4
+
+
+Processed 83381921 lines in total
+Total number of methylation call strings processed: 83381921
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	1562840273
+
+Total methylated C's in CpG context:	44827612
+Total methylated C's in CHG context:	1812592
+Total methylated C's in CHH context:	6320794
+
+Total C to T conversions in CpG context:	13404041
+Total C to T conversions in CHG context:	331308033
+Total C to T conversions in CHH context:	1165167201
+
+C methylated in CpG context:	77.0%
+C methylated in CHG context:	0.5%
+C methylated in CHH context:	0.5%
+
+
+
+Merging individual M-bias reports into overall M-bias statistics from these 4 individual files:
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.1.mbias
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.2.mbias
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.3.mbias
+MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.4.mbias
+
+Determining maximum read length for M-Bias plot
+Maximum read length of Read 1: 100
+
+Determining maximum read length for M-Bias plot
+Maximum read length of Read 1: 100
+
+Deleting unused files ...
+
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CpG_CTOT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CpG_CTOB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CpG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHG_CTOT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHG_CTOB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHH_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHH_CTOT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHH_CTOB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHH_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+
+
+
+Summary of parameters for bismark2bedGraph conversion:
+======================================================
+bedGraph output:		MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bedGraph.gz
+output directory:		><
+remove whitespaces:		no
+CX context:			no (CpG context only, default)
+No-header selected:		no
+Sorting method:			Unix sort-based (smaller memory footprint, but slower)
+Sort buffer size:		6G
+Coverage threshold:		1
+=============================================================================
+Methylation information will now be written into a bedGraph and coverage file
+=============================================================================
+
+Using the following files as Input:
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz	CpG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Writing bedGraph to file: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bedGraph.gz
+Also writing out a coverage file including counts methylated and unmethylated residues to file: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bismark.cov.gz
+
+Now writing methylation information for file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz to individual files for each chromosome
+Finished writing out individual chromosome files for CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Now writing methylation information for file CpG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz to individual files for each chromosome
+Finished writing out individual chromosome files for CpG_OB_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Collecting temporary chromosome file information...
+processing the following input file(s):
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr2.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr9.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr4.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr13.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr6.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr10.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr15.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr3.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr7.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr16.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr19.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrX.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr1.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr17.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr5.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr12.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr8.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr11.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr14.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr18.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrMT.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrY.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr2.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr2.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr9.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr9.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr4.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr4.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr13.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr13.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr6.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr6.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr10.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr10.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr15.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr15.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr3.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr3.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr7.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr7.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr16.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr16.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr19.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr19.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrX.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrX.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr1.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr1.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr17.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr17.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr5.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr5.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr12.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr12.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr8.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr8.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr11.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr11.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr14.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr14.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr18.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr18.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrMT.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrMT.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrY.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrY.methXtractor.temp
+
+Finished BedGraph conversion ...
+
+
+###CF Bismark methylation extractor (SE mode) successfully exited, took 2 hours, 37 minutes, 30 seconds..
+
+###CFCMD bismark_methylation_extractor --multi 4 --bedGraph --counts --buffer_size 6G --gzip -s --report MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+
+ *** Bismark methylation extractor version v0.14.4 ***
+
+Summarising Bismark methylation extractor parameters:
+===============================================================
+Bismark single-end SAM format specified (default)
+Number of cores to be used: 4
+Output will be written to the current directory ('/gulo/glob/phil/demo_data/BSSeq/Lister_2013')
+
+
+Summarising bedGraph parameters:
+===============================================================
+Generating additional output in bedGraph and coverage format
+bedGraph format:	<Chromosome> <Start Position> <End Position> <Methylation Percentage>
+coverage format:	<Chromosome> <Start Position> <End Position> <Methylation Percentage> <count methylated> <count non-methylated>
+
+Using a cutoff of 1 read(s) to report cytosine positions
+Reporting and sorting cytosine methylation information in CpG context only (default)
+The bedGraph UNIX sort command will use the following memory setting:	'6G'. Temporary directory used for sorting is the output directory
+
+Writing result file containing methylation information for C in CpG context from the original top strand to CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CpG context from the complementary to original top strand to CpG_CTOT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CpG context from the complementary to original bottom strand to CpG_CTOB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CpG context from the original bottom strand to CpG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Writing result file containing methylation information for C in CHG context from the original top strand to CHG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHG context from the complementary to original top strand to CHG_CTOT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHG context from the complementary to original bottom strand to CHG_CTOB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHG context from the original bottom strand to CHG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Writing result file containing methylation information for C in CHH context from the original top strand to CHH_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHH context from the complementary to original top strand to CHH_CTOT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHH context from the complementary to original bottom strand to CHH_CTOB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Writing result file containing methylation information for C in CHH context from the original bottom strand to CHH_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+Now reading in Bismark result file MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam
+
+skipping SAM header line:	@HD	VN:1.0	SO:unsorted
+skipping SAM header line:	@SQ	SN:10	LN:130694993
+skipping SAM header line:	@SQ	SN:11	LN:122082543
+skipping SAM header line:	@SQ	SN:12	LN:120129022
+skipping SAM header line:	@SQ	SN:13	LN:120421639
+skipping SAM header line:	@SQ	SN:14	LN:124902244
+skipping SAM header line:	@SQ	SN:15	LN:104043685
+skipping SAM header line:	@SQ	SN:16	LN:98207768
+skipping SAM header line:	@SQ	SN:17	LN:94987271
+skipping SAM header line:	@SQ	SN:18	LN:90702639
+skipping SAM header line:	@SQ	SN:19	LN:61431566
+skipping SAM header line:	@SQ	SN:1	LN:195471971
+skipping SAM header line:	@SQ	SN:2	LN:182113224
+skipping SAM header line:	@SQ	SN:3	LN:160039680
+skipping SAM header line:	@SQ	SN:4	LN:156508116
+skipping SAM header line:	@SQ	SN:5	LN:151834684
+skipping SAM header line:	@SQ	SN:6	LN:149736546
+skipping SAM header line:	@SQ	SN:7	LN:145441459
+skipping SAM header line:	@SQ	SN:8	LN:129401213
+skipping SAM header line:	@SQ	SN:9	LN:124595110
+skipping SAM header line:	@SQ	SN:MT	LN:16299
+skipping SAM header line:	@SQ	SN:X	LN:171031299
+skipping SAM header line:	@SQ	SN:Y	LN:91744698
+skipping SAM header line:	@PG	ID:Bismark	VN:v0.14.4	CL:"bismark --multicore 3 --bam --bowtie2 --phred33-quals /sw/data/uppnex/igenomes/Mus_musculus/Ensembl/GRCm38/Sequence/BismarkIndex MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz"
+Processed lines: 500000
+Processed lines: 500000
+Processed lines: 500000
+Processed lines: 500000
+Processed lines: 1000000
+Processed lines: 1000000
+Processed lines: 1000000
+Processed lines: 1000000
+Processed lines: 1500000
+Processed lines: 1500000
+Processed lines: 1500000
+Processed lines: 2000000
+Processed lines: 1500000
+Processed lines: 2000000
+Processed lines: 2000000
+Processed lines: 2500000
+Processed lines: 2000000
+Processed lines: 2500000
+Processed lines: 3000000
+Processed lines: 2500000
+Processed lines: 2500000
+Processed lines: 3000000
+Processed lines: 3000000
+Processed lines: 3500000
+Processed lines: 3000000
+Processed lines: 3500000
+Processed lines: 4000000
+Processed lines: 3500000
+Processed lines: 3500000
+Processed lines: 4000000
+Processed lines: 4500000
+Processed lines: 4000000
+Processed lines: 4000000
+Processed lines: 4500000
+Processed lines: 5000000
+Processed lines: 4500000
+Processed lines: 4500000
+Processed lines: 5000000
+Processed lines: 5000000
+Processed lines: 5500000
+Processed lines: 5000000
+Processed lines: 5500000
+Processed lines: 5500000
+Processed lines: 6000000
+Processed lines: 5500000
+Processed lines: 6000000
+Processed lines: 6500000
+Processed lines: 6000000
+Processed lines: 6000000
+Processed lines: 6500000
+Processed lines: 6500000
+Processed lines: 7000000
+Processed lines: 6500000
+Processed lines: 7000000
+Processed lines: 7000000
+Processed lines: 7500000
+Processed lines: 7000000
+Processed lines: 7500000
+Processed lines: 7500000
+Processed lines: 8000000
+Processed lines: 7500000
+Processed lines: 8000000
+Processed lines: 8000000
+Processed lines: 8500000
+Processed lines: 8000000
+Processed lines: 8500000
+Processed lines: 8500000
+Processed lines: 9000000
+Processed lines: 8500000
+Processed lines: 9000000
+Processed lines: 9000000
+Processed lines: 9500000
+Processed lines: 9000000
+Processed lines: 9500000
+Processed lines: 9500000
+Processed lines: 10000000
+Processed lines: 9500000
+Processed lines: 10000000
+Processed lines: 10000000
+Processed lines: 10500000
+Processed lines: 10000000
+Processed lines: 10500000
+Processed lines: 10500000
+Processed lines: 11000000
+Processed lines: 10500000
+Processed lines: 11000000
+Processed lines: 11000000
+Processed lines: 11500000
+Processed lines: 11000000
+Processed lines: 11500000
+Processed lines: 11500000
+Processed lines: 11500000
+Processed lines: 12000000
+Processed lines: 12000000
+Processed lines: 12000000
+Processed lines: 12000000
+Processed lines: 12500000
+Processed lines: 12500000
+Processed lines: 12500000
+Processed lines: 12500000
+Processed lines: 13000000
+Processed lines: 13000000
+Processed lines: 13000000
+Processed lines: 13000000
+Processed lines: 13500000
+Processed lines: 13500000
+Processed lines: 13500000
+Processed lines: 13500000
+Processed lines: 14000000
+Processed lines: 14000000
+Processed lines: 14000000
+Processed lines: 14000000
+Processed lines: 14500000
+Processed lines: 14500000
+Processed lines: 14500000
+Processed lines: 14500000
+Processed lines: 15000000
+Processed lines: 15000000
+Processed lines: 15000000
+Processed lines: 15500000
+Processed lines: 15000000
+Processed lines: 15500000
+Processed lines: 15500000
+Processed lines: 16000000
+Processed lines: 16000000
+Processed lines: 15500000
+Processed lines: 16000000
+Processed lines: 16500000
+Processed lines: 16500000
+Processed lines: 16000000
+Processed lines: 16500000
+Processed lines: 17000000
+Processed lines: 17000000
+Processed lines: 16500000
+Processed lines: 17000000
+Processed lines: 17500000
+Processed lines: 17500000
+Processed lines: 17000000
+Processed lines: 17500000
+Processed lines: 18000000
+Processed lines: 18000000
+Processed lines: 17500000
+Processed lines: 18000000
+Processed lines: 18500000
+Processed lines: 18500000
+Processed lines: 18500000
+Processed lines: 18000000
+Processed lines: 19000000
+Processed lines: 19000000
+Processed lines: 18500000
+Processed lines: 19000000
+Processed lines: 19500000
+Processed lines: 19500000
+Processed lines: 19000000
+Processed lines: 19500000
+Processed lines: 20000000
+Processed lines: 20000000
+Processed lines: 19500000
+Processed lines: 20000000
+Processed lines: 20500000
+Processed lines: 20500000
+Processed lines: 20000000
+Processed lines: 20500000
+Processed lines: 21000000
+Processed lines: 20500000
+Processed lines: 21000000
+Processed lines: 21000000
+Processed lines: 21500000
+Processed lines: 21000000
+Processed lines: 21500000
+Processed lines: 21500000
+Processed lines: 22000000
+Processed lines: 22000000
+Processed lines: 22000000
+Processed lines: 21500000
+Processed lines: 22500000
+Processed lines: 22500000
+Processed lines: 22500000
+Processed lines: 22000000
+Processed lines: 23000000
+Processed lines: 23000000
+Processed lines: 23000000
+Processed lines: 22500000
+Processed lines: 23500000
+Processed lines: 23500000
+Processed lines: 23500000
+Processed lines: 23000000
+Processed lines: 24000000
+Processed lines: 24000000
+Processed lines: 23500000
+Processed lines: 24000000
+Processed lines: 24500000
+Processed lines: 24500000
+Processed lines: 24000000
+Processed lines: 24500000
+Processed lines: 25000000
+Processed lines: 25000000
+Processed lines: 24500000
+Processed lines: 25000000
+Processed lines: 25500000
+Processed lines: 25500000
+Processed lines: 25000000
+Processed lines: 25500000
+Processed lines: 26000000
+Processed lines: 26000000
+Processed lines: 25500000
+Processed lines: 26000000
+Processed lines: 26500000
+Processed lines: 26500000
+Processed lines: 26000000
+Processed lines: 26500000
+Processed lines: 27000000
+Processed lines: 27000000
+Processed lines: 27000000
+Processed lines: 26500000
+Processed lines: 27500000
+Processed lines: 27500000
+Processed lines: 27500000
+Processed lines: 27000000
+Processed lines: 28000000
+Processed lines: 28000000
+Processed lines: 28000000
+Processed lines: 27500000
+Processed lines: 28500000
+Processed lines: 28500000
+Processed lines: 28500000
+Processed lines: 29000000
+Processed lines: 28000000
+Processed lines: 29000000
+Processed lines: 29000000
+Processed lines: 29500000
+Processed lines: 28500000
+Processed lines: 29500000
+Processed lines: 29500000
+Processed lines: 29000000
+Processed lines: 30000000
+Processed lines: 30000000
+Processed lines: 30000000
+Processed lines: 29500000
+Processed lines: 30500000
+Processed lines: 30500000
+Processed lines: 30500000
+Processed lines: 30000000
+Processed lines: 31000000
+Processed lines: 31000000
+Processed lines: 31000000
+Processed lines: 30500000
+Processed lines: 31500000
+Processed lines: 31500000
+Processed lines: 31500000
+Processed lines: 31000000
+Processed lines: 32000000
+Processed lines: 32000000
+Processed lines: 31500000
+Processed lines: 32500000
+Processed lines: 32000000
+Processed lines: 32500000
+Processed lines: 33000000
+Processed lines: 32500000
+Processed lines: 32000000
+Processed lines: 33000000
+Processed lines: 33500000
+Processed lines: 33000000
+Processed lines: 32500000
+Processed lines: 33500000
+Processed lines: 34000000
+Processed lines: 33500000
+Processed lines: 33000000
+Processed lines: 34000000
+Processed lines: 34500000
+Processed lines: 34000000
+Processed lines: 33500000
+Processed lines: 34500000
+Processed lines: 35000000
+Processed lines: 34500000
+Processed lines: 34000000
+Processed lines: 35000000
+Processed lines: 35500000
+Processed lines: 35000000
+Processed lines: 34500000
+Processed lines: 35500000
+Processed lines: 36000000
+Processed lines: 35500000
+Processed lines: 36000000
+Processed lines: 35000000
+Processed lines: 36500000
+Processed lines: 36000000
+Processed lines: 36500000
+Processed lines: 35500000
+Processed lines: 37000000
+Processed lines: 36500000
+Processed lines: 37000000
+Processed lines: 36000000
+Processed lines: 37500000
+Processed lines: 37000000
+Processed lines: 37500000
+Processed lines: 36500000
+Processed lines: 38000000
+Processed lines: 37500000
+Processed lines: 38000000
+Processed lines: 37000000
+Processed lines: 38500000
+Processed lines: 38000000
+Processed lines: 38500000
+Processed lines: 37500000
+Processed lines: 39000000
+Processed lines: 38500000
+Processed lines: 39000000
+Processed lines: 38000000
+Processed lines: 39500000
+Processed lines: 39000000
+Processed lines: 39500000
+Processed lines: 38500000
+Processed lines: 39500000
+Processed lines: 40000000
+Processed lines: 40000000
+Processed lines: 39000000
+Processed lines: 40000000
+Processed lines: 40500000
+Processed lines: 40500000
+Processed lines: 39500000
+Processed lines: 41000000
+Processed lines: 40500000
+Processed lines: 41000000
+Processed lines: 41500000
+Processed lines: 40000000
+Processed lines: 41000000
+Processed lines: 41500000
+Processed lines: 42000000
+Processed lines: 40500000
+Processed lines: 41500000
+Processed lines: 42000000
+Processed lines: 42500000
+Processed lines: 41000000
+Processed lines: 42000000
+Processed lines: 42500000
+Processed lines: 43000000
+Processed lines: 42500000
+Processed lines: 41500000
+Processed lines: 43000000
+Processed lines: 43500000
+Processed lines: 43000000
+Processed lines: 42000000
+Processed lines: 43500000
+Processed lines: 44000000
+Processed lines: 42500000
+Processed lines: 43500000
+Processed lines: 44000000
+Processed lines: 44500000
+Processed lines: 44000000
+Processed lines: 43000000
+Processed lines: 44500000
+Processed lines: 45000000
+Processed lines: 44500000
+Processed lines: 43500000
+Processed lines: 45000000
+Processed lines: 45500000
+Processed lines: 45000000
+Processed lines: 44000000
+Processed lines: 45500000
+Processed lines: 46000000
+Processed lines: 45500000
+Processed lines: 44500000
+Processed lines: 46000000
+Processed lines: 46500000
+Processed lines: 46000000
+Processed lines: 45000000
+Processed lines: 46500000
+Processed lines: 47000000
+Processed lines: 46500000
+Processed lines: 47000000
+Processed lines: 47500000
+Processed lines: 45500000
+Processed lines: 47000000
+Processed lines: 46000000
+Processed lines: 47500000
+Processed lines: 48000000
+Processed lines: 47500000
+Processed lines: 46500000
+Processed lines: 48000000
+Processed lines: 48500000
+Processed lines: 48000000
+Processed lines: 48500000
+Processed lines: 47000000
+Processed lines: 49000000
+Processed lines: 48500000
+Processed lines: 49000000
+Processed lines: 47500000
+Processed lines: 49500000
+Processed lines: 49000000
+Processed lines: 49500000
+Processed lines: 48000000
+Processed lines: 50000000
+Processed lines: 49500000
+Processed lines: 50000000
+Processed lines: 50500000
+Processed lines: 48500000
+Processed lines: 50000000
+Processed lines: 50500000
+Processed lines: 51000000
+Processed lines: 49000000
+Processed lines: 50500000
+Processed lines: 51000000
+Processed lines: 51500000
+Processed lines: 49500000
+Processed lines: 51000000
+Processed lines: 52000000
+Processed lines: 51500000
+Processed lines: 50000000
+Processed lines: 51500000
+Processed lines: 52500000
+Processed lines: 52000000
+Processed lines: 50500000
+Processed lines: 52000000
+Processed lines: 52500000
+Processed lines: 53000000
+Processed lines: 51000000
+Processed lines: 52500000
+Processed lines: 53000000
+Processed lines: 53500000
+Processed lines: 51500000
+Processed lines: 53000000
+Processed lines: 53500000
+Processed lines: 54000000
+Processed lines: 52000000
+Processed lines: 53500000
+Processed lines: 54000000
+Processed lines: 54500000
+Processed lines: 52500000
+Processed lines: 54000000
+Processed lines: 54500000
+Processed lines: 55000000
+Processed lines: 53000000
+Processed lines: 54500000
+Processed lines: 55000000
+Processed lines: 55500000
+Processed lines: 53500000
+Processed lines: 55000000
+Processed lines: 55500000
+Processed lines: 56000000
+Processed lines: 54000000
+Processed lines: 55500000
+Processed lines: 56000000
+Processed lines: 56500000
+Processed lines: 54500000
+Processed lines: 56000000
+Processed lines: 56500000
+Processed lines: 57000000
+Processed lines: 55000000
+Processed lines: 56500000
+Processed lines: 57000000
+Processed lines: 57500000
+Processed lines: 55500000
+Processed lines: 57000000
+Processed lines: 57500000
+Processed lines: 58000000
+Processed lines: 56000000
+Processed lines: 57500000
+Processed lines: 58000000
+Processed lines: 58500000
+Processed lines: 56500000
+Processed lines: 58000000
+Processed lines: 58500000
+Processed lines: 59000000
+Processed lines: 57000000
+Processed lines: 58500000
+Processed lines: 59500000
+Processed lines: 59000000
+Processed lines: 57500000
+Processed lines: 59000000
+Processed lines: 60000000
+Processed lines: 59500000
+Processed lines: 58000000
+Processed lines: 59500000
+Processed lines: 60500000
+Processed lines: 60000000
+Processed lines: 58500000
+Processed lines: 60000000
+Processed lines: 60500000
+Processed lines: 61000000
+Processed lines: 59000000
+Processed lines: 60500000
+Processed lines: 61500000
+Processed lines: 61000000
+Processed lines: 59500000
+Processed lines: 61000000
+Processed lines: 61500000
+Processed lines: 62000000
+Processed lines: 60000000
+Processed lines: 61500000
+Processed lines: 62000000
+Processed lines: 62500000
+Processed lines: 60500000
+Processed lines: 62000000
+Processed lines: 62500000
+Processed lines: 63000000
+Processed lines: 61000000
+Processed lines: 62500000
+Processed lines: 63000000
+Processed lines: 63500000
+Processed lines: 61500000
+Processed lines: 63000000
+Processed lines: 63500000
+Processed lines: 64000000
+Processed lines: 62000000
+Processed lines: 63500000
+Processed lines: 64000000
+Processed lines: 64500000
+Processed lines: 64000000
+Processed lines: 62500000
+Processed lines: 64500000
+Processed lines: 65000000
+Processed lines: 64500000
+Processed lines: 63000000
+Processed lines: 65000000
+Processed lines: 65500000
+Processed lines: 65000000
+Processed lines: 63500000
+Processed lines: 65500000
+Processed lines: 66000000
+Processed lines: 65500000
+Processed lines: 64000000
+Processed lines: 66000000
+Processed lines: 66500000
+Processed lines: 66000000
+Processed lines: 64500000
+Processed lines: 66500000
+Processed lines: 67000000
+Processed lines: 66500000
+Processed lines: 65000000
+Processed lines: 67000000
+Processed lines: 67500000
+Processed lines: 67000000
+Processed lines: 67500000
+Processed lines: 65500000
+Processed lines: 68000000
+Processed lines: 67500000
+Processed lines: 68000000
+Processed lines: 66000000
+Processed lines: 68500000
+Processed lines: 68000000
+Processed lines: 68500000
+Processed lines: 66500000
+Processed lines: 69000000
+Processed lines: 69000000
+Processed lines: 68500000
+Processed lines: 67000000
+Processed lines: 69500000
+Processed lines: 69000000
+Processed lines: 69500000
+Processed lines: 67500000
+Processed lines: 70000000
+Processed lines: 69500000
+Processed lines: 70000000
+Processed lines: 68000000
+Processed lines: 70500000
+Processed lines: 70000000
+Processed lines: 70500000
+Processed lines: 68500000
+Processed lines: 71000000
+Processed lines: 70500000
+Processed lines: 71000000
+Processed lines: 69000000
+Processed lines: 71500000
+Processed lines: 71000000
+Processed lines: 71500000
+Processed lines: 69500000
+Processed lines: 72000000
+Processed lines: 71500000
+Processed lines: 72000000
+Processed lines: 70000000
+Processed lines: 72500000
+Processed lines: 72500000
+Processed lines: 72000000
+Processed lines: 70500000
+Processed lines: 73000000
+Processed lines: 72500000
+Processed lines: 73000000
+Processed lines: 71000000
+Processed lines: 73500000
+Processed lines: 73000000
+Processed lines: 73500000
+Processed lines: 71500000
+Processed lines: 73500000
+Processed lines: 74000000
+Processed lines: 74000000
+Processed lines: 72000000
+Processed lines: 74500000
+Processed lines: 74500000
+Processed lines: 74000000
+Processed lines: 72500000
+Processed lines: 75000000
+Processed lines: 75000000
+Processed lines: 74500000
+Processed lines: 73000000
+Processed lines: 75500000
+Processed lines: 75500000
+Processed lines: 75000000
+Processed lines: 73500000
+Processed lines: 76000000
+Processed lines: 76000000
+Processed lines: 75500000
+Processed lines: 74000000
+Processed lines: 76500000
+Processed lines: 76500000
+Processed lines: 76000000
+Processed lines: 74500000
+Processed lines: 77000000
+Processed lines: 77000000
+Processed lines: 76500000
+Processed lines: 75000000
+Processed lines: 77500000
+Processed lines: 77500000
+Processed lines: 77000000
+Processed lines: 75500000
+Processed lines: 78000000
+Processed lines: 78000000
+Processed lines: 77500000
+Processed lines: 76000000
+Processed lines: 78500000
+Processed lines: 78500000
+Processed lines: 78000000
+Processed lines: 76500000
+Processed lines: 79000000
+Processed lines: 79000000
+Processed lines: 77000000
+Processed lines: 78500000
+Processed lines: 79500000
+Processed lines: 79500000
+Processed lines: 77500000
+Processed lines: 79000000
+Processed lines: 80000000
+Processed lines: 80000000
+Processed lines: 78000000
+Processed lines: 79500000
+Processed lines: 80500000
+Processed lines: 80500000
+Processed lines: 78500000
+Processed lines: 80000000
+Processed lines: 81000000
+Processed lines: 81000000
+Processed lines: 79000000
+Processed lines: 80500000
+Processed lines: 81500000
+Processed lines: 81500000
+Processed lines: 79500000
+Processed lines: 81000000
+Processed lines: 82000000
+Processed lines: 82000000
+Processed lines: 80000000
+Processed lines: 81500000
+Processed lines: 82500000
+Processed lines: 82500000
+Processed lines: 80500000
+Processed lines: 82000000
+Processed lines: 83000000
+Processed lines: 83000000
+Processed lines: 81000000
+Processed lines: 83500000
+Processed lines: 82500000
+Processed lines: 83500000
+Processed lines: 81500000
+Processed lines: 84000000
+Processed lines: 83000000
+Processed lines: 84000000
+Processed lines: 82000000
+Processed lines: 84500000
+Processed lines: 83500000
+Processed lines: 84500000
+Processed lines: 82500000
+Processed lines: 85000000
+Processed lines: 84000000
+Processed lines: 85000000
+Processed lines: 83000000
+Processed lines: 85500000
+Processed lines: 84500000
+Processed lines: 85500000
+Processed lines: 83500000
+Processed lines: 86000000
+Processed lines: 85000000
+Processed lines: 86000000
+Processed lines: 84000000
+Processed lines: 85500000
+Processed lines: 86500000
+Processed lines: 86500000
+Processed lines: 84500000
+Processed lines: 86000000
+Processed lines: 87000000
+Processed lines: 87000000
+Processed lines: 85000000
+Processed lines: 86500000
+Processed lines: 87500000
+Processed lines: 87500000
+Processed lines: 85500000
+Processed lines: 87000000
+Processed lines: 88000000
+Processed lines: 88000000
+Processed lines: 86000000
+Processed lines: 87500000
+Processed lines: 88500000
+Processed lines: 88500000
+Processed lines: 86500000
+Processed lines: 88000000
+Processed lines: 89000000
+Processed lines: 89000000
+Processed lines: 88500000
+Processed lines: 87000000
+Processed lines: 89500000
+Processed lines: 89500000
+Processed lines: 89000000
+Processed lines: 87500000
+Processed lines: 90000000
+Processed lines: 90000000
+Processed lines: 89500000
+Processed lines: 88000000
+Processed lines: 90500000
+Processed lines: 90500000
+Processed lines: 90000000
+Processed lines: 88500000
+Processed lines: 91000000
+Processed lines: 91000000
+Processed lines: 89000000
+Processed lines: 90500000
+Processed lines: 91500000
+Processed lines: 91500000
+Finished processing child process. Exiting..
+Finished processing child process. Exiting..
+Processed lines: 89500000
+Processed lines: 91000000
+Processed lines: 90000000
+Processed lines: 91500000
+Finished processing child process. Exiting..
+Processed lines: 90500000
+Processed lines: 91000000
+Processed lines: 91500000
+Now waiting for all child processes to complete
+
+Merging individual splitting reports into overall report: 'MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt'
+Merging from these individual files:
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.1
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.2
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.3
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.4
+
+
+Processed 91566412 lines in total
+Total number of methylation call strings processed: 91566412
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	1472451692
+
+Total methylated C's in CpG context:	55160868
+Total methylated C's in CHG context:	3583627
+Total methylated C's in CHH context:	11458218
+
+Total C to T conversions in CpG context:	17617658
+Total C to T conversions in CHG context:	375850399
+Total C to T conversions in CHH context:	1008780922
+
+C methylated in CpG context:	75.8%
+C methylated in CHG context:	0.9%
+C methylated in CHH context:	1.1%
+
+
+
+Merging individual M-bias reports into overall M-bias statistics from these 4 individual files:
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.1.mbias
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.2.mbias
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.3.mbias
+MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt.4.mbias
+
+Determining maximum read length for M-Bias plot
+Maximum read length of Read 1: 101
+
+Determining maximum read length for M-Bias plot
+Maximum read length of Read 1: 101
+
+Deleting unused files ...
+
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CpG_CTOT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CpG_CTOB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CpG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHG_CTOT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHG_CTOB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHH_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+CHH_CTOT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHH_CTOB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz was empty ->	deleted
+CHH_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz contains data ->	kept
+
+
+
+Summary of parameters for bismark2bedGraph conversion:
+======================================================
+bedGraph output:		MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bedGraph.gz
+output directory:		><
+remove whitespaces:		no
+CX context:			no (CpG context only, default)
+No-header selected:		no
+Sorting method:			Unix sort-based (smaller memory footprint, but slower)
+Sort buffer size:		6G
+Coverage threshold:		1
+=============================================================================
+Methylation information will now be written into a bedGraph and coverage file
+=============================================================================
+
+Using the following files as Input:
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz	CpG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Writing bedGraph to file: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bedGraph.gz
+Also writing out a coverage file including counts methylated and unmethylated residues to file: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bismark.cov.gz
+
+Now writing methylation information for file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz to individual files for each chromosome
+Finished writing out individual chromosome files for CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+Now writing methylation information for file CpG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz to individual files for each chromosome
+Finished writing out individual chromosome files for CpG_OB_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz
+
+Collecting temporary chromosome file information...
+processing the following input file(s):
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr5.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr12.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr8.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr1.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr2.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrX.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr9.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr13.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr17.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr14.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr18.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr4.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr7.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr11.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr3.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr15.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrY.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr6.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr10.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr16.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr19.methXtractor.temp
+CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrMT.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr5.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr5.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr12.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr12.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr8.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr8.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr1.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr1.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr2.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr2.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrX.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrX.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr9.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr9.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr13.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr13.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr17.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr17.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr14.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr14.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr18.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr18.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr4.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr4.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr7.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr7.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr11.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr11.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr3.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr3.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr15.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr15.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrY.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrY.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr6.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr6.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr10.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr10.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr16.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr16.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr19.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chr19.methXtractor.temp
+
+Sorting input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrMT.methXtractor.temp by positions (using -S of 6G)
+Successfully deleted the temporary input file CpG_OT_MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.txt.gz.chrMT.methXtractor.temp
+
+Finished BedGraph conversion ...
+
+
+###CF Bismark methylation extractor (SE mode) successfully exited, took 2 hours, 46 minutes, 24 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			bismark_report
+Run File:		MethylC-Seq_mm_fc_1wk_SRR921770.sra_sra_bismark.run
+Job ID:			cf_sra_bismark_1447079770_bismark_report_037
+Previous Job ID:	cf_sra_bismark_1447079770_bismark_methXtract_636
+Date & Time:		01:08, 11-11-2015
+--------------------------------------------------------------------------------
+
+---------- bismark2report version information ----------
+
+
+                              Bismark HTML Report Module
+
+                         bismark2report version: v0.14.3
+                            Copyright 2010-15 Felix Krueger
+                               Babraham Bioinformatics
+                www.bioinformatics.babraham.ac.uk/projects/bismark/
+
+
+
+------- End of bismark2report version information ------
+Found 24 alignment reports in current directory. Now trying to figure out whether there are corresponding optional reports
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_10wk_SRR921784_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_10wk_SRR921785_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_10wk_SRR921786_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_10wk_SRR921787_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_22mo_SRR921797_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+No M-bias report file specified, skipping this step
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_22mo_SRR921798_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Am I missing something? Try using --verbose to get a clue...
+
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_22mo_SRR921799_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_22mo_SRR921800_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+No M-bias report file specified, skipping this step
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Am I missing something? Try using --verbose to get a clue...
+
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_4wk_SRR921697_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_4wk_SRR921698_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_4wk_SRR921699_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_4wk_SRR921700_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_4wk_SRR921700_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_4wk_SRR921700_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+No splitting report file specified, skipping this step
+No M-bias report file specified, skipping this step
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_4wk_SRR921700_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_4wk_SRR921700_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+Using the following M-bias report:		> MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt <
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Complete
+
+Processing M-bias report MethylC-Seq_mm_fc_6wk_SRR921778_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt ...
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+Using the following splitting report:		> MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt <
+No M-bias report file specified, skipping this step
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Complete
+
+Processing splitting report MethylC-Seq_mm_fc_6wk_SRR921779_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt ...
+Am I missing something? Try using --verbose to get a clue...
+
+Complete
+
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_6wk_SRR921780_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_6wk_SRR921780_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+Using the following deduplication report:	> MethylC-Seq_mm_fc_6wk_SRR921780_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt <
+No splitting report file specified, skipping this step
+No M-bias report file specified, skipping this step
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_6wk_SRR921780_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+Processing deduplication report MethylC-Seq_mm_fc_6wk_SRR921780_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt ...
+Something went wrong... Use --verbose to get a clue...
+
+Writing Bismark HTML report to >> MethylC-Seq_mm_fc_6wk_SRR921781_1_trimmed.fq.gz_bismark_bt2_SE_report.html <<
+
+==============================================================================================================
+Using the following alignment report:		> MethylC-Seq_mm_fc_6wk_SRR921781_1_trimmed.fq.gz_bismark_bt2_SE_report.txt <
+No deduplication report file specified, skipping this step
+No splitting report file specified, skipping this step
+No M-bias report file specified, skipping this step
+==============================================================================================================
+
+
+Processing alignment report MethylC-Seq_mm_fc_6wk_SRR921781_1_trimmed.fq.gz_bismark_bt2_SE_report.txt ...
+Complete
+
+###CF Bismark report successfully created
+
+
+
+================================================================================
+
+
+
+
+
+###CF Run finished at 01:17 11-11-2015
+

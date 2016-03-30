@@ -1,0 +1,31 @@
+Module	Section	Sample Name	Source
+Cutadapt	all_sections	SRR1067522_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067522_1.fastq.gz_trimming_report.txt
+Cutadapt	all_sections	SRR1067505_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067505_1.fastq.gz_trimming_report.txt
+Cutadapt	all_sections	SRR1067514_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067514_1.fastq.gz_trimming_report.txt
+Cutadapt	all_sections	SRR1067503_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067503_1.fastq.gz_trimming_report.txt
+Cutadapt	all_sections	SRR1067519_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067519_1.fastq.gz_trimming_report.txt
+Cutadapt	all_sections	SRR1067510_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067510_1.fastq.gz_trimming_report.txt
+FastQC	all_sections	SRR1067522_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067522_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR1067505_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067505_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR1067514_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067514_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR1067503_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067503_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR1067519_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067519_1_trimmed_fastqc.zip
+FastQC	all_sections	SRR1067510_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067510_1_trimmed_fastqc.zip
+featureCounts	all_sections	SRR1067522_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067522_1_trimmed_star_aligned.bam_counts.txt.summary
+featureCounts	all_sections	SRR1067505_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067505_1_trimmed_star_aligned.bam_counts.txt.summary
+featureCounts	all_sections	SRR1067514_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067514_1_trimmed_star_aligned.bam_counts.txt.summary
+featureCounts	all_sections	SRR1067503_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067503_1_trimmed_star_aligned.bam_counts.txt.summary
+featureCounts	all_sections	SRR1067519_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067519_1_trimmed_star_aligned.bam_counts.txt.summary
+featureCounts	all_sections	SRR1067510_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067510_1_trimmed_star_aligned.bam_counts.txt.summary
+STAR	all_sections	SRR1067522_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067522_1_trimmedLog.final.out
+STAR	all_sections	SRR1067505_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067505_1_trimmedLog.final.out
+STAR	all_sections	SRR1067514_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067514_1_trimmedLog.final.out
+STAR	all_sections	SRR1067503_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067503_1_trimmedLog.final.out
+STAR	all_sections	SRR1067519_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067519_1_trimmedLog.final.out
+STAR	all_sections	SRR1067510_1	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067510_1_trimmedLog.final.out
+FastQ Screen	all_sections	SRR1067522_1_screen	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067522_1_screen.txt
+FastQ Screen	all_sections	SRR1067510_1_screen	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067510_1_screen.txt
+FastQ Screen	all_sections	SRR1067519_1_screen	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067519_1_screen.txt
+FastQ Screen	all_sections	SRR1067503_1_screen	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067503_1_screen.txt
+FastQ Screen	all_sections	SRR1067505_1_screen	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067505_1_screen.txt
+FastQ Screen	all_sections	SRR1067514_1_screen	/Users/philewels/Work/MultiQC_website/public_html/examples/rna-seq/data/SRR1067514_1_screen.txt
