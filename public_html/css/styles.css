@@ -345,6 +345,20 @@ section p, section .btn, section .btn-group {
   margin-bottom: 20px;
   line-height: 1.8;
 }
+.tool-list {
+  display:inline-block;
+  height: 250px;
+  width: 250px;
+  overflow:hidden;
+}
+.tool-list ul {
+  margin: 60px 0 0;
+}
+.tool-list ul li {
+  margin: 2px 0;
+  color: #999;
+  text-shadow: 0 0 2px #ddd;
+}
 
 
 /*
