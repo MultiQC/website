@@ -4,25 +4,14 @@ require_once('parsedown/Parsedown.php');
 require_once('parsedown-extra/ParsedownExtra.php');
 
 // Get the docs markdown sources in order
+require_once("../../Spyc.php");
 $md = file_get_contents('../../multiqc/docs/README.md');
 $pages = [];
-$section = 'MultiQC Docs';
-// (parse YAML manually as not a core PHP package.. sigh.)
 $md_parts = explode('---', $md, 3);
 if(count($md_parts) == 3){
-  $yls = explode(PHP_EOL, $md_parts[1]);
-  foreach($yls as $yl){
-    $m = trim(str_replace('-', '', $yl));
-    if(substr($yl, 0, 1) == '-'){
-      $section = $m;
-      $pages[$m] = [];
-    } else if(substr($yl, 0, 2) == '  '){
-      $pgp = explode(': ',$m);
-      $pages[$section][$pgp[0]] = '../../multiqc/docs/'.trim($pgp[1]);
-    }
-  }
+  $pages = spyc_load($md_parts[1]);
 }
-if(count($pages) == 0){ $pages[$section] = glob("../../multiqc/docs/*.md"); }
+if(count($pages) == 0){ die("Error - couldn't find documentation source."); }
 
 // Loop over the markdown files and build the HTML content
 $content = '';
@@ -31,7 +20,7 @@ foreach (array_keys($pages) as $section) {
   $content .= '<div class="docs_section">'."\n".'<h1 class="section-header" id="'.$sid.'"><a href="#'.$sid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$section."</h1>\n";
   foreach ($pages[$section] as $name => $fn){
     if(basename($fn) == 'README.md'){ continue; }
-    $md = file_get_contents($fn);
+    $md = file_get_contents('../../multiqc/docs/'.trim($fn));
     $pd = new ParsedownExtra();
     $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
   }
