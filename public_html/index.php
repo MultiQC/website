@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+<?php 
+
+// Parse the list of modules from the docs folder
+require_once("../Spyc.php");
+$md = file_get_contents('../multiqc/docs/README.md');
+$md_parts = explode('---', $md, 3);
+$modules = [];
+if(count($md_parts) == 3){
+  $pages = spyc_load($md_parts[1]);
+  if(isset($pages['MultiQC Modules'])){
+    foreach($pages['MultiQC Modules'] as $sect_name => $sect){
+      foreach($sect as $fn){
+        $mod_md = file_get_contents('../multiqc/docs/'.trim($fn));
+        $mod_md_parts = explode('---', $mod_md, 3);
+        if(count($mod_md_parts) == 3){
+          $yaml = spyc_load($mod_md_parts[1]);
+          $yaml['docs_url'] = 'docs/#'.strtolower(str_replace(' ', '-', $yaml['Name']));
+          $yaml['section'] = $sect_name;
+          $modules[] = $yaml;
+        }
+      }
+    }
+  }
+}
+
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -87,6 +113,9 @@
             <a class="btn btn-block btn-lg btn-primary" href="docs">
               <i class="fa fa-book fa-lg"></i> Documentation
             </a>
+            <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#mqc-supported-tools-modal">
+              <i class="fa fa-bar-chart"></i> <?php echo count($modules); ?> supported tools
+            </button>
             <a class="visible-xs visible-sm btn btn-block btn-lg btn-primary" href="examples/rna-seq/multiqc_report.html">
               <i class="glyphicon glyphicon-search"></i> Example Report
             </a>
@@ -177,30 +206,17 @@ multiqc .</code></pre>
             <h3>Supports your favourite tools</h3>
 				    <p>MultiQC comes supports many common bioinformatics tools out of the box. If you're missing something,
               just create an issue on GitHub to request it - if you have an example log file it's usually pretty fast.</p>
-            <a class="btn btn-default btn-lg" href="https://github.com/ewels/MultiQC/issues/new">Request a new module</a>
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#mqc-supported-tools-modal">
+              View available Modules
+            </button>
           </div>
           <div class="col-md-4 text-center">
             <div class="img-circle img-thumbnail">
               <div class="tool-list">
                 <ul class="list-inline">
-                  <li>Bismark</li>
-                  <li>Bowtie 1</li>
-                  <li>Bowtie 2</li>
-                  <li>Cutadapt</li>
-                  <li>FastQ Screen</li>
-                  <li>FastQC</li>
-                  <li>FeatureCounts</li>
-                  <li>HiCUP</li>
-                  <li>MethylQC</li>
-                  <li>Picard</li>
-                  <li>Preseq</li>
-                  <li>Qualimap</li>
-                  <li>Samblaster</li>
-                  <li>Samtools</li>
-                  <li>Skewer</li>
-                  <li>SnpEff</li>
-                  <li>STAR</li>
-                  <li>Tophat</li>
+                  <?php foreach($modules as $mod){
+                    echo '<li>'.$mod['Name'].'</li>';
+                  } ?>
                 </ul>
               </div>
             </div>
@@ -262,6 +278,43 @@ multiqc .</code></pre>
         </a>
       </div>
     </footer>
+    
+    <!-- Supported tools modal -->
+    <div class="modal fade" id="mqc-supported-tools-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">MultiQC: Supported Tools</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-info">
+              MultiQC currently supports <?php echo count($modules); ?> bioinformatics tools, listed below.
+              If you would like another to be added, please open an
+              <a href="https://github.com/ewels/MultiQC/issues">issue</a>.
+            </div>
+            <ul class="list-inline mod-list-list">
+              <li class="mod-list pre-alignment">Pre-alignment tools</li>
+              <li class="mod-list aligners">Alignment tools</li>
+              <li class="mod-list post-alignment">Post-alignment tools</li>
+            </ul>
+            <p class="text-muted"><em><span class="fa fa-book"></span> Click the tool name to go to the MultiQC docs for that tool.</em></p>
+            <table class="table table-condensed">
+              <tr>
+                <th>Tool Name</th>
+                <th>Description</th>
+              </tr>
+              <?php foreach($modules as $mod){
+                echo '<tr><td class="mod-list '.strtolower($mod['section']).'"><a href="'.$mod['docs_url'].'">'.$mod['Name'].'</a></td><td><small>'.$mod['Description'].'</small></td></tr>';
+              } ?>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- Placed at the end of the document so the pages load faster -->

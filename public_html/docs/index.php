@@ -18,11 +18,31 @@ $content = '';
 foreach (array_keys($pages) as $section) {
   $sid = strtolower(str_replace(' ', '-', $section));
   $content .= '<div class="docs_section">'."\n".'<h1 class="section-header" id="'.$sid.'"><a href="#'.$sid.'" class="header-link"><span class="glyphicon glyphicon-link"></span></a>'.$section."</h1>\n";
-  foreach ($pages[$section] as $name => $fn){
-    if(basename($fn) == 'README.md'){ continue; }
-    $md = file_get_contents('../../multiqc/docs/'.trim($fn));
-    $pd = new ParsedownExtra();
-    $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
+  // Module documentation
+  if($section == 'MultiQC Modules'){
+    foreach ($pages[$section] as $subsect_name => $subsection){
+      $content .= '<div class="docs_block modules_block" id="'.strtolower(str_replace(' ', '-', $subsect_name)).'-section"><h1>'.$subsect_name.'</h1>';
+      foreach ($subsection as $name => $fn){
+        $md = file_get_contents('../../multiqc/docs/'.trim($fn));
+        $md_parts = explode('---', $md, 3);
+        $mod_yaml = spyc_load($md_parts[1]);
+        $content .= '<h2>'.$mod_yaml['Name'].'</h2>';
+        $content .= '<p class="mod_ext_link"><a href="'.$mod_yaml['URL'].'" target="_blank">'.$mod_yaml['URL'].'</a></p>';
+        $markdown = $md_parts[2];
+        $pd = new ParsedownExtra();
+        $content .= $pd->text($markdown);
+      }
+      $content .= '</div>';
+    }
+  }
+  // Core documentation
+  else {
+    foreach ($pages[$section] as $name => $fn){
+      if(basename($fn) == 'README.md'){ continue; }
+      $md = file_get_contents('../../multiqc/docs/'.trim($fn));
+      $pd = new ParsedownExtra();
+      $content .= '<div class="docs_block" id="'.basename($fn).'">' . $pd->text($md) . '</div>';
+    }
   }
   $content .= '</div>';
 }
@@ -165,6 +185,7 @@ while($curr_level > 0){
         <div class="col-sm-3 col-sm-push-9" id="toc_column">
           <div id="toc" data-spy="affix" data-offset-top="254">
             <?php echo $toc; ?>
+            <p class="backtotop"><a href="#">Back to top</a></p>
           </div>
         </div>
         <div class="col-sm-9 col-sm-pull-3">

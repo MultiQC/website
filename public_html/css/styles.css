@@ -98,6 +98,7 @@ footer, footer a, footer a:hover {
 .header .lead {
   font-size: 24px;
   color: #ddd;
+  margin-top:20px;
 }
 .header object {
 	filter: url(#drop-shadow);
@@ -360,6 +361,14 @@ section p, section .btn, section .btn-group {
   text-shadow: 0 0 2px #ddd;
 }
 
+.mod-list-list li {
+  padding: 3px 10px;
+  margin-right: 20px;
+}
+.mod-list.post-alignment { border-left: 5px solid #a6cee3; }
+.mod-list.aligners { border-left: 5px solid #1f78b4; }
+.mod-list.pre-alignment { border-left: 5px solid #b2df8a; }
+
 
 /*
     DOCS
@@ -414,6 +423,20 @@ h3:hover .header-link, h3:active .header-link, h3:focus .header-link {
 h1 .header-link { margin-top: 12px; }
 h1.section-header .header-link { margin-top: 23px; }
 
+.modules_block h2 {
+  background-color: #ededed;
+  padding: 8px 12px;
+  margin-bottom: 0;
+}
+.mod_ext_link a {
+  display: block;
+  border-left: 5px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 5px 10px;
+  color: #999;
+}
+
 #toc {
   margin-top:10px;
 }
@@ -459,5 +482,16 @@ h1.section-header .header-link { margin-top: 23px; }
 #toc .nav .nav .nav .nav li.active > a {
   border-left: 1px solid #337ab7;
   background-color: transparent;
+}
+.backtotop a {
+  font-size: 0.8em;
+  padding: 5px 7px;
+  margin: 5px 8px;
+  display: block;
+  color: #999;
+  text-decoration:none;
+}
+.backtotop a:hover, .backtotop a:focus {
+  background-color: #eee;
 }
 
