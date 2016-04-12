@@ -290,15 +290,14 @@ multiqc .</code></pre>
           <div class="modal-body">
             <div class="alert alert-info">
               MultiQC currently supports <?php echo count($modules); ?> bioinformatics tools, listed below.
-              If you would like another to be added, please open an
-              <a href="https://github.com/ewels/MultiQC/issues">issue</a>.
+              If you would like another to be added, please <a href="https://github.com/ewels/MultiQC/issues" class="alert-link">open an issue</a>.
             </div>
             <ul class="list-inline mod-list-list">
               <li class="mod-list pre-alignment">Pre-alignment tools</li>
               <li class="mod-list aligners">Alignment tools</li>
               <li class="mod-list post-alignment">Post-alignment tools</li>
             </ul>
-            <p class="text-muted"><em><span class="fa fa-book"></span> Click the tool name to go to the MultiQC docs for that tool.</em></p>
+            <p class="text-muted"><em><span class="fa fa-book"></span> &nbsp;Click the tool name to go to the MultiQC documentation for that tool.</em></p>
             <table class="table table-condensed">
               <tr>
                 <th>Tool Name</th>
