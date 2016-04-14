@@ -100,16 +100,32 @@ if(count($md_parts) == 3){
             <p class="lead">Aggregate results from bioinformatics analyses across many samples into a single report</p>
             <p>MultiQC searches a given directory for analysis logs and compiles a HTML report.
               It's a general use tool, perfect for summarising the output from numerous bioinformatics tools.</p>
+            
+            <div class="row videos-row">
+              <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9 homepage-header-video">
+                  <iframe id="multiqc-introduction" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                  <iframe id="multiqc-installation" style="display: none;" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <ul class="homepage-video-chooser">
+                  <li><a href="#multiqc-introduction" class="active">Introduction to MultiQC <em>(1:19)</em></a></li>
+                  <li><a href="#multiqc-installation">Installing MultiQC <em>(1:19)</em></a></li>
+                  <li><a href="#multiqc-installation">Using MultiQC <em>(1:19)</em></a></li>
+                  <li><a href="#multiqc-installation">MultiQC Reports <em>(1:19)</em></a></li>
+                </ul>
+              </div>
+            </div>
+            
           </div>
           <div class="col-md-4" id="header-buttons">
-            <div class="btn-group btn-group-justified btn-group-lg" role="group">
-              <a class="btn btn-primary" href="https://pypi.python.org/pypi/multiqc">
-                <i class="icon-python fa-lg"></i>  PyPI
-              </a>
-              <a class="btn btn-primary" href="https://www.github.com/ewels/MultiQC">
-                <i class="fa fa-github fa-lg"></i> GitHub
-              </a>
-            </div>
+            <a class="btn btn-block btn-lg btn-primary" href="https://www.github.com/ewels/MultiQC">
+              <i class="fa fa-github fa-lg"></i> GitHub
+            </a>
+            <a class="btn btn-block btn-lg btn-primary" href="https://pypi.python.org/pypi/multiqc">
+              <i class="icon-python fa-lg"></i>  Python Package Index
+            </a>
             <a class="btn btn-block btn-lg btn-primary" href="docs">
               <i class="fa fa-book fa-lg"></i> Documentation
             </a>
@@ -139,25 +155,7 @@ multiqc .</code></pre>
               </div>
             </div>
             <p class="sub-panel">Need a little more help? <a href="docs">See the full installation instructions</a>.</small></p>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-6">
-            <div class="embed-responsive embed-responsive-16by9 homepage-header-video">
-              <iframe id="multiqc-introduction" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-              <iframe id="multiqc-installation" style="display: none;" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <ul class="homepage-video-chooser">
-              <li><a href="#multiqc-introduction" class="active">Introduction to MultiQC <em>(1:19)</em> <small>A short into to what MultiQC is and why I created it.</small></a></li>
-              <li><a href="#multiqc-installation">Installing MultiQC <em>(1:19)</em> <small>How to get MultiQC up and running on your system.</small></a></li>
-              <li><a href="#multiqc-installation">Using MultiQC <em>(1:19)</em> <small>An overview of running MultiQC on the command line.</small></a></li>
-              <li><a href="#multiqc-installation">MultiQC Reports <em>(1:19)</em> <small>Exploring the features of MultiQC reports.</small></a></li>
-              <li><a href="#multiqc-installation">Extending MultiQC: Modules <em>(1:19)</em> <small>How to support a new tool within MultiQC.</small></a></li>
-              <li><a href="#multiqc-installation">Extending MultiQC: Plugins <em>(1:19)</em> <small>Using MultiQC to do new and exciting things!</small></a></li>
-            </ul>
+            
           </div>
         </div>
         

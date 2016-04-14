@@ -182,13 +182,13 @@ code .comment {
   border-bottom: 1px solid #666;
 }
 
+.videos-row {
+  margin-top: 30px;
+}
 .homepage-video-chooser, .homepage-video-chooser li {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-.homepage-video-chooser {
-  margin-top: 50px;
 }
 .homepage-video-chooser a {
   display: block;
@@ -224,10 +224,6 @@ code .comment {
 }
 .homepage-video-chooser li a:hover:before {
   border-right-color: #555;
-}
-.homepage-video-chooser a small {
-  margin-left: 15px;
-  color: #999;
 }
 
 
