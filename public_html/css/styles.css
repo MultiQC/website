@@ -90,11 +90,6 @@ footer, footer a, footer a:hover {
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
-@media (min-width: 992px) {
-  #mqc_homepage .header {
-      margin-bottom: 570px;
-  }
-}
 .header .lead {
   font-size: 24px;
   color: #ddd;
@@ -186,10 +181,60 @@ code .comment {
   text-decoration: none;
   border-bottom: 1px solid #666;
 }
+
+.homepage-video-chooser, .homepage-video-chooser li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.homepage-video-chooser {
+  margin-top: 50px;
+}
+.homepage-video-chooser a {
+  display: block;
+  padding: 10px 15px;
+  margin: 0 0 0 21px;
+  border-bottom: 1px solid #292929;
+  background-color: #444;
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  height: 42px;
+  box-shadow: 2px 3px 4px rgba(51,51,51, 0.2);
+  -webkit-transition: background 0.1s;
+  transition: background 0.1s;
+}
+.homepage-video-chooser li:first-child a {
+  border-top: 1px solid #292929;
+}
+.homepage-video-chooser a:hover, .homepage-video-chooser a:active, .homepage-video-chooser a:focus {
+  background-color: #555;
+}
+.homepage-video-chooser li a.active:before {
+  content: "";
+  display: block;
+  border: 21px solid transparent;
+  border-right-color: #444;
+  position: absolute;
+  left: -42px;
+  top: 50%;
+  margin-top: -21px;
+  -webkit-transition: border 0.1s;
+  transition: border 0.1s;
+}
+.homepage-video-chooser li a:hover:before {
+  border-right-color: #555;
+}
+.homepage-video-chooser a small {
+  margin-left: 15px;
+  color: #999;
+}
+
+
 #iframe_browser {
   width: 100%;
   height: 630px;
-  margin: 30px 0 -500px;
+  margin-bottom: 30px;
   background: #ddd;
   border: 1px solid #ccc;
   border-radius: 5px;

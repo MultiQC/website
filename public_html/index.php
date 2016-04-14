@@ -141,22 +141,48 @@ multiqc .</code></pre>
             <p class="sub-panel">Need a little more help? <a href="docs">See the full installation instructions</a>.</small></p>
           </div>
         </div>
-        <div id="iframe_browser" class="hidden-xs hidden-sm">
-          <div id="iframe_browser_header">
-            <div id="iframe_browser_buttons"><span></span><span></span><span></span></div>
-            <span id="iframe_browser_title">MultiQC Example Reports</span>
-            <ul id="iframe_browser_tabs">
-              <li><a href="examples/hi-c/multiqc_report.html">Hi-C</a></li>
-              <li><a href="examples/bs-seq/multiqc_report.html">Bisulfite Seq</a></li>
-              <li><a href="examples/wgs/multiqc_report.html">Whole-Genome Seq</a></li>
-              <li class="active"><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="embed-responsive embed-responsive-16by9 homepage-header-video">
+              <iframe id="multiqc-introduction" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+              <iframe id="multiqc-installation" style="display: none;" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="homepage-video-chooser">
+              <li><a href="#multiqc-introduction" class="active">Introduction to MultiQC <em>(1:19)</em> <small>A short into to what MultiQC is and why I created it.</small></a></li>
+              <li><a href="#multiqc-installation">Installing MultiQC <em>(1:19)</em> <small>How to get MultiQC up and running on your system.</small></a></li>
+              <li><a href="#multiqc-installation">Using MultiQC <em>(1:19)</em> <small>An overview of running MultiQC on the command line.</small></a></li>
+              <li><a href="#multiqc-installation">MultiQC Reports <em>(1:19)</em> <small>Exploring the features of MultiQC reports.</small></a></li>
+              <li><a href="#multiqc-installation">Extending MultiQC: Modules <em>(1:19)</em> <small>How to support a new tool within MultiQC.</small></a></li>
+              <li><a href="#multiqc-installation">Extending MultiQC: Plugins <em>(1:19)</em> <small>Using MultiQC to do new and exciting things!</small></a></li>
             </ul>
           </div>
-          <iframe src="examples/rna-seq/multiqc_report.html"></iframe>
         </div>
-      </div>
+        
+      </div> <!-- end of header -->
     </div>
+    
+    <!-- Demo Reports -->
+    <div class="container">
       
+      <div id="iframe_browser" class="hidden-xs hidden-sm">
+        <div id="iframe_browser_header">
+          <div id="iframe_browser_buttons"><span></span><span></span><span></span></div>
+          <span id="iframe_browser_title">MultiQC Example Reports</span>
+          <ul id="iframe_browser_tabs">
+            <li><a href="examples/hi-c/multiqc_report.html">Hi-C</a></li>
+            <li><a href="examples/bs-seq/multiqc_report.html">Bisulfite Seq</a></li>
+            <li><a href="examples/wgs/multiqc_report.html">Whole-Genome Seq</a></li>
+            <li class="active"><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
+          </ul>
+        </div>
+        <iframe src="examples/rna-seq/multiqc_report.html"></iframe>
+      </div>
+      
+    </div>
+    
     <div class="container"><div class="content_block">
       <p class="content-lead">Ever spent ages collecting reports and wading through log file output?<br>
           Here's the answer to your frustrations...</p>

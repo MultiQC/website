@@ -14,8 +14,6 @@ $(function () {
   // iFrame demo window buttons
   $('#iframe_browser_buttons span:first-of-type, #iframe_browser_buttons span:nth-of-type(2)').click(function(e){
     $('#iframe_browser').slideUp();
-    $('#mqc_homepage .header').animate({'margin-bottom': 30})
-    $('#mqc_homepage').removeClass('hasDemoiFrame');
   });
   $('#iframe_browser_buttons span:last-of-type').click(function(e){
     window.location = $('#iframe_browser iframe').attr('src');
