@@ -103,17 +103,16 @@ if(count($md_parts) == 3){
             
             <div class="row videos-row">
               <div class="col-md-6">
-                <div class="embed-responsive embed-responsive-16by9 homepage-header-video">
-                  <iframe id="multiqc-introduction" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-                  <iframe id="multiqc-installation" style="display: none;" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                <div class="embed-responsive embed-responsive-16by9 homepage-header-video hidden-xs hidden-sm">
+                  <iframe id="multiqc-video" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="col-md-6">
-                <ul class="homepage-video-chooser">
-                  <li><a href="#multiqc-introduction" class="active">Introduction to MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="#multiqc-installation">Installing MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="#multiqc-installation">Using MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="#multiqc-installation">MultiQC Reports <em>(1:19)</em></a></li>
+                <ul class="list-switch left video-chooser">
+                  <li><a href="https://youtu.be/BbScv9TcaMg" data-src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" class="active"><span class="hidden-lg hidden-md label label-default">Video</span> Introduction to MultiQC <em>(1:19)</em></a></li>
+                  <li><a href="https://youtu.be/IvUU8joBb1Q" data-src="https://www.youtube.com/embed/IvUU8joBb1Q?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(1:19)</em></a></li>
+                  <li><a href="https://youtu.be/VMSucLLmPwU" data-src="https://www.youtube.com/embed/VMSucLLmPwU?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC <em>(1:19)</em></a></li>
+                  <li><a href="https://youtu.be/tU1b1H2EWU4" data-src="https://www.youtube.com/embed/tU1b1H2EWU4?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> MultiQC Reports <em>(1:19)</em></a></li>
                 </ul>
               </div>
             </div>
@@ -163,7 +162,77 @@ multiqc .</code></pre>
     </div>
     
     <!-- Demo Reports -->
-    <div class="container">
+    <div class="container hidden-xs hidden-sm">
+      
+      <h2>Example Reports</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="list-switch right demo-chooser">
+            <li><a href="examples/rna-seq/multiqc_report.html" data-target="#demo-rna-description"  class="active">RNA-Seq</a></li>
+            <li><a href="examples/wgs/multiqc_report.html" data-target="#demo-wgs-description" >Whole-Genome Sequencing</a></li>
+            <li><a href="examples/bs-seq/multiqc_report.html" data-target="#demo-bsseq-description" >Methylation (Bisfulite)</a></li>
+            <li><a href="examples/hi-c/multiqc_report.html" data-target="#demo-hic-description" >Genome Structure (Hi-C)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-8 demo-descriptions">
+          <div id="demo-rna-description">
+            <p>This report was generated using logs from an analysis accidentally run on ChIP-Seq data from
+              the <em>BI Human Reference Epigenome Mapping Project: ChIP-Seq in human subject</em> dataset
+               (<a href="http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP001534" target="_blank">SRP001534</a>).</p>
+            <p>Initial QC was done using FastQC, followed by trimming with TrimGalore! (a wrapper around cutadapt).
+            Reads were aligned using STAR and overlaps counted with featureCounts.
+            <!-- The RSeQC package was used to check various quality control aspects of the data. -->
+          </p>
+            <div class="btn-group pull-right" role="group">
+              <a href="examples/rna-seq/multiqc_report.zip" class="btn btn-default">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span> Download report
+              </a>
+              <a href="examples/rna-seq/data.zip" class="btn btn-default">
+                <span class="fa fa-files-o" aria-hidden="true"></span> Download logs
+              </a>
+            </div>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
+          </div>
+          <div id="demo-wgs-description" style="display: none;">
+            <p>This demo report is being worked on and will be added soon.</p>
+            <div class="btn-group pull-right" role="group">
+              <a href="#" class="btn btn-default" disabled>
+                Coming soon..
+              </a>
+            </div>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
+          </div>
+          <div id="demo-bsseq-description" style="display: none;">
+            <p>The example methylation report is based on analysis of data from the GEO NCBI project
+            <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47966" target="_blank">GSE47966</a>,
+            from the 2013 Lister <em>et. al.</em> paper <em>Global epigenomic reconfiguration during mammalian brain development</em>.</p>
+            <p>Raw data was run through <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a>
+            and trimmed using <a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" target="_blank">Trim Galore!</a>
+            (a wrapper around <a href="https://github.com/marcelm/cutadapt" target="_blank">Cutadapt</a>). Reads were
+            aligned, deduplicated and cytosine methylation statuses called using
+            <a href="http://www.bioinformatics.babraham.ac.uk/projects/bismark/" target="_blank">Bismark</a>.</p>
+          </p>
+            <div class="btn-group pull-right" role="group">
+              <a href="examples/bs-seq/multiqc_report.zip" class="btn btn-default">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span> Download report
+              </a>
+              <a href="examples/bs-seq/data.zip" class="btn btn-default">
+                <span class="fa fa-files-o" aria-hidden="true"></span> Download logs
+              </a>
+            </div>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
+          </div>
+          <div id="demo-hic-description" style="display: none;">
+            <p>This demo report is being worked on and will be added soon.</p>
+            <div class="btn-group pull-right" role="group">
+              <a href="#" class="btn btn-default" disabled>
+                Coming soon..
+              </a>
+            </div>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
+          </div>
+        </div>
+      </div>
       
       <div id="iframe_browser" class="hidden-xs hidden-sm">
         <div id="iframe_browser_header">
