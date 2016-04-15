@@ -185,52 +185,75 @@ code .comment {
 .videos-row {
   margin-top: 30px;
 }
-.homepage-video-chooser, .homepage-video-chooser li {
+.homepage-header-video {
+  margin-bottom: 8px;
+}
+.list-switch, .list-switch li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.homepage-video-chooser a {
+.list-switch a {
   display: block;
   padding: 10px 15px;
-  margin: 0 0 0 21px;
+  margin: 0;
   border-bottom: 1px solid #292929;
   background-color: #444;
   color: #ccc;
   text-decoration: none;
   position: relative;
   height: 42px;
-  box-shadow: 2px 3px 4px rgba(51,51,51, 0.2);
+  box-shadow: 2px 3px 4px rgba(51,51,51, 0.4);
   -webkit-transition: background 0.1s;
   transition: background 0.1s;
 }
-.homepage-video-chooser li:first-child a {
+.list-switch a .label {
+  margin-right: 10px;
+}
+.list-switch li:first-child a {
   border-top: 1px solid #292929;
 }
-.homepage-video-chooser a:hover, .homepage-video-chooser a:active, .homepage-video-chooser a:focus {
+.list-switch a:hover, .list-switch a:active, .list-switch a:focus {
   background-color: #555;
 }
-.homepage-video-chooser li a.active:before {
-  content: "";
-  display: block;
-  border: 21px solid transparent;
-  border-right-color: #444;
-  position: absolute;
-  left: -42px;
-  top: 50%;
-  margin-top: -21px;
-  -webkit-transition: border 0.1s;
-  transition: border 0.1s;
-}
-.homepage-video-chooser li a:hover:before {
-  border-right-color: #555;
+@media (min-width: 992px) {
+  .list-switch.left a {
+    margin-left: 21px;
+  }
+  .list-switch.right a {
+    margin-right: 21px;
+  }
+  .list-switch a.active:before {
+    content: "";
+    display: block;
+    border: 21px solid transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+    -webkit-transition: border 0.1s;
+    transition: border 0.1s;
+  }
+  .list-switch.left a.active:before {
+    border-right-color: #444;
+    left: -42px;
+  }
+  .list-switch.right a.active:before {
+    border-left-color: #444;
+    right: -42px;
+  }
+  .list-switch.left a:hover:before, .list-switch.left a:active:before, .list-switch.left a:focus:before {
+    border-right-color: #555;
+  }
+  .list-switch.right a:hover:before, .list-switch.right a:active:before, .list-switch.right a:focus:before {
+    border-left-color: #555;
+  }
 }
 
 
 #iframe_browser {
   width: 100%;
   height: 630px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   background: #ddd;
   border: 1px solid #ccc;
   border-radius: 5px;
