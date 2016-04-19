@@ -42,10 +42,10 @@ $series_json = json_encode($series);
     <title>Documentation: MultiQC</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.ico">
-    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64x64.ico">
-    <link rel="icon" type="image/png" sizes="128x128" href="images/favicon-128x128.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.ico">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
