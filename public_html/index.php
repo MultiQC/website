@@ -253,7 +253,7 @@ multiqc .</code></pre>
             <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
           </div>
           <div id="demo-hic-description" style="display: none;">
-            <p>This Hi-C MultiQC report was generated using Hi-C data from Louise Harewood at
+            <p>This Hi-C MultiQC report was generated using Hi-C data from <a href="mailto:louise.harewood@cruk.cam.ac.uk">Louise Harewood</a> at
               <a href="http://www.cambridgecancer.org.uk/" target="_blank">CRUK Cambridge Institute</a>.
               Reads were run through <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a>
               and then processed using <a href="http://www.bioinformatics.babraham.ac.uk/projects/hicup/" target="_blank">HiCUP</a> (Hi-C User Pipeline).</p>
