@@ -1,0 +1,204 @@
+discarding /home/funk_002/anaconda/envs/NGI/bin from PATH
+prepending /home/funk_002/anaconda/envs/NGI/bin to PATH
+Load desired version of bowtie or bowtie2.
+
+Activating Modules:
+  1) FastQC/0.11.2  2) bowtie2/2.2.6  3) fastq_screen/0.5.1
+
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Started analysis of P4107_1001_S1_L002_R1_001.fastq.gz
+Started analysis of P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 5% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 5% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 10% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 10% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 15% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 15% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 20% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 20% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 25% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 25% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 30% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 30% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 35% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 35% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 40% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 40% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 45% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 45% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 50% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 50% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 55% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 55% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 60% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 60% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 65% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 65% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 70% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 70% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 75% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 75% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 80% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 80% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 85% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 85% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 90% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 90% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Approx 95% complete for P4107_1001_S1_L002_R1_001.fastq.gz
+Approx 95% complete for P4107_1001_S1_L002_R2_001.fastq.gz
+Load desired version of bowtie or bowtie2.
+Load desired version of bowtie or bowtie2.
+Load desired version of bowtie or bowtie2.
+Load desired version of bowtie or bowtie2.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_CTYPE = "UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Using fastq_screen v0.5.1
+Attention: option --paired removed in fastq_sreen v0.5.0, processing data in single-end mode
+Option --subset set to 200000 reads
+Reading configuration from '/proj/a2014205/ngi_resources/fastq_screen.nestor.conf'
+Skipping DATABASE 'Arabidopsis' since no bowtie index was found at '/sw/data/uppnex/reference/biodata/genomes/Athaliana/araTha_tair9/bowtie2/Arabidopsis_thaliana.TAIR9.dna.toplevel'
+Skipping DATABASE 'Celegans' since no bowtie index was found at '/sw/data/uppnex/reference/biodata/genomes/Celegans/WS210/bowtie2/Caenorhabditis_elegans.WS210.60.dna.toplevel'
+Skipping DATABASE 'Rnorvegicus' since no bowtie index was found at '/sw/data/uppnex/reference/biodata/genomes/Rnorvegicus/rn5/bowtie2/rn5'
+Skipping DATABASE 'Scerevisiae' since no bowtie index was found at '/sw/data/uppnex/reference/biodata/genomes/Scerevisiae/sacCer2/bowtie2/sacCer2'
+Adding database Cfamiliaris
+Adding database Dmelanogaster
+Adding database Human
+Adding database Mouse
+Adding database PhiX
+Adding database Xtropicalis
+Processing /proj/a2014205/nobackup/NGI/analysis_ready/DATA/P4107/P4107_1001/A/160217_ST-E00201_0063_AHJHNYCCXX/P4107_1001_S1_L002_R2_001.fastq.gz
+Counting sequences in /proj/a2014205/nobackup/NGI/analysis_ready/DATA/P4107/P4107_1001/A/160217_ST-E00201_0063_AHJHNYCCXX/P4107_1001_S1_L002_R2_001.fastq.gz
+Making reduced seq file with ratio 1918:1
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt against Cfamiliaris
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Bowtie/Bowtie2 warning: Could not locate a Bowtie index corresponding to basename "/sw/data/uppnex/reference/biodata/genomes/Cfamiliaris/canFam3/bowtie2/canFam3"
+Bowtie/Bowtie2 warning: Error: Encountered internal Bowtie 2 exception (#1)
+Bowtie/Bowtie2 warning: Command: /sw/apps/bioinfo/bowtie2/2.2.6/nestor/bin/bowtie2-align-s --wrapper basic-0 -k 2 --very-fast-local --no-hd -p 1 -x /sw/data/uppnex/reference/biodata/genomes/Cfamiliaris/canFam3/bowtie2/canFam3 --passthrough -U /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt 
+Bowtie/Bowtie2 warning: (ERR): bowtie2-align exited with value 1
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt against Dmelanogaster
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt against Human
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt against Mouse
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt against PhiX
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001.fastq.gz_temp_subset.txt against Xtropicalis
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Processing /proj/a2014205/nobackup/NGI/analysis_ready/DATA/P4107/P4107_1001/A/160217_ST-E00201_0063_AHJHNYCCXX/P4107_1001_S1_L002_R1_001.fastq.gz
+Counting sequences in /proj/a2014205/nobackup/NGI/analysis_ready/DATA/P4107/P4107_1001/A/160217_ST-E00201_0063_AHJHNYCCXX/P4107_1001_S1_L002_R1_001.fastq.gz
+Making reduced seq file with ratio 1918:1
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt against Cfamiliaris
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Bowtie/Bowtie2 warning: Could not locate a Bowtie index corresponding to basename "/sw/data/uppnex/reference/biodata/genomes/Cfamiliaris/canFam3/bowtie2/canFam3"
+Bowtie/Bowtie2 warning: Error: Encountered internal Bowtie 2 exception (#1)
+Bowtie/Bowtie2 warning: Command: /sw/apps/bioinfo/bowtie2/2.2.6/nestor/bin/bowtie2-align-s --wrapper basic-0 -k 2 --very-fast-local --no-hd -p 1 -x /sw/data/uppnex/reference/biodata/genomes/Cfamiliaris/canFam3/bowtie2/canFam3 --passthrough -U /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt 
+Bowtie/Bowtie2 warning: (ERR): bowtie2-align exited with value 1
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt against Dmelanogaster
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt against Human
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt against Mouse
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt against PhiX
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Searching /proj/a2014205/nobackup/NGI/analysis_ready/ANALYSIS/P4107/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001.fastq.gz_temp_subset.txt against Xtropicalis
+Bowtie/Bowtie2 warning: perl: warning: Setting locale failed.
+Bowtie/Bowtie2 warning: perl: warning: Please check that your locale settings:
+Bowtie/Bowtie2 warning: 	LANGUAGE = (unset),
+Bowtie/Bowtie2 warning: 	LC_ALL = (unset),
+Bowtie/Bowtie2 warning: 	LC_CTYPE = "UTF-8",
+Bowtie/Bowtie2 warning: 	LANG = "en_US.UTF-8"
+Bowtie/Bowtie2 warning:     are supported and installed on your system.
+Bowtie/Bowtie2 warning: perl: warning: Falling back to the standard locale ("C").
+Processing complete

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns="setup.xml.molmed">
+    <metadata>
+        <name>P4107</name>
+        <sequencingcenter>NGI-S</sequencingcenter>
+        <platform>Illumina</platform>
+        <uppmaxprojectid>a2014205</uppmaxprojectid>
+        <uppmaxqos>seqver</uppmaxqos>
+        <reference>/proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta</reference>
+    </metadata>
+    <inputs>
+        <sample>
+            <samplename>P4107_1006</samplename>
+            <library>
+                <libraryname>A</libraryname>
+                <platformunit>
+                    <unitinfo>AHJHNYCCXX.P4107_1006.7</unitinfo>
+                    <fastqfile>
+                        <path>/scratch/108820/DATA/P4107/P4107_1006/A/160217_ST-E00201_0063_AHJHNYCCXX/P4107_1006_S6_L007_R1_001.fastq.gz</path>
+                    </fastqfile>
+                    <fastqfile>
+                        <path>/scratch/108820/DATA/P4107/P4107_1006/A/160217_ST-E00201_0063_AHJHNYCCXX/P4107_1006_S6_L007_R2_001.fastq.gz</path>
+                    </fastqfile>
+                </platformunit>
+            </library>
+        </sample>
+    </inputs>
+</project>

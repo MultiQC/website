@@ -1,0 +1,10 @@
+#Fastq_screen version: 0.5.1	#Reads in subset: 200000
+Library	#Reads_processed	#Unmapped	%Unmapped	#One_hit_one_library	%One_hit_one_library	#Multiple_hits_one_library	%Multiple_hits_one_library	#One_hit_multiple_libraries	%One_hit_multiple_libraries	Multiple_hits_multiple_libraries	%Multiple_hits_multiple_libraries
+Cfamiliaris	199987	199987	100.00	0	0.00	0	0.00	0	0.00	0	0.00
+Dmelanogaster	199987	193369	96.69	1	0.00	2	0.00	3013	1.51	3602	1.80
+Human	199987	4719	2.36	116190	58.10	50594	25.30	2199	1.10	26285	13.14
+Mouse	199987	180180	90.10	20	0.01	7	0.00	6404	3.20	13376	6.69
+PhiX	199987	199986	100.00	1	0.00	0	0.00	0	0.00	0	0.00
+Xtropicalis	199987	181498	90.76	9	0.00	0	0.00	5074	2.54	13406	6.70
+
+%Hit_no_libraries: 2.34

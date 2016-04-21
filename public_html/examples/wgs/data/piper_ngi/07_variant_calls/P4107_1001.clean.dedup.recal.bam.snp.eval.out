@@ -1,0 +1,58 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/GenomeAnalysisTK.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/Queue.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  09:22:48,581 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  09:22:48,582 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.3-0-geee94ec, Compiled 2015/12/17 12:33:03 
+INFO  09:22:48,583 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  09:22:48,583 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  09:22:48,587 HelpFormatter - Program Args: -T VariantEval -R /proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta -o /scratch/108823/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.snp.eval -eval /scratch/108823/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.recalibrated.snp.vcf.gz -eval /scratch/108823/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.raw.snp.vcf.gz -comp:hapmap /proj/a2014205/piper_references/gatk_bundle/2.8/b37/hapmap_3.3.b37.vcf -D /proj/a2014205/piper_references/gatk_bundle/2.8/b37/dbsnp_138.b37.vcf 
+INFO  09:22:48,590 HelpFormatter - Executing as funk_002@n31.uppmax.uu.se on Linux 2.6.32-573.18.1.el6.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_25-b15. 
+INFO  09:22:48,590 HelpFormatter - Date/Time: 2016/02/24 09:22:48 
+INFO  09:22:48,590 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  09:22:48,590 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  09:22:48,744 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  09:22:48,820 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  09:22:49,460 IndexDictionaryUtils - Track eval doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  09:22:49,460 IndexDictionaryUtils - Track eval2 doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  09:22:49,542 GenomeAnalysisEngine - Preparing for traversal 
+INFO  09:22:49,557 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  09:22:49,557 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  09:22:49,558 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  09:22:49,559 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  09:22:49,577 VariantEval - Creating 12 combinatorial stratification states 
+INFO  09:23:19,562 ProgressMeter -      1:84267845   1968490.0    30.0 s      15.0 s        2.7%    18.4 m      17.9 m 
+INFO  09:23:49,564 ProgressMeter -     1:200285437   4077162.0    60.0 s      14.0 s        6.5%    15.5 m      14.5 m 
+INFO  09:24:19,565 ProgressMeter -      2:39178713   6249176.0    90.0 s      14.0 s        9.3%    16.1 m      14.6 m 
+INFO  09:24:49,566 ProgressMeter -     2:134924134   8405959.0   120.0 s      14.0 s       12.4%    16.1 m      14.1 m 
+INFO  09:25:19,567 ProgressMeter -     2:232453439   1.05768E7     2.5 m      14.0 s       15.5%    16.1 m      13.6 m 
+INFO  09:25:49,568 ProgressMeter -      3:76261772   1.2744537E7     3.0 m      14.0 s       18.3%    16.4 m      13.4 m 
+INFO  09:26:19,569 ProgressMeter -     3:173990461   1.4892736E7     3.5 m      14.0 s       21.5%    16.3 m      12.8 m 
+INFO  09:26:49,570 ProgressMeter -      4:62151124   1.7049004E7     4.0 m      14.0 s       24.3%    16.5 m      12.5 m 
+INFO  09:27:19,572 ProgressMeter -     4:156766088   1.9167375E7     4.5 m      14.0 s       27.3%    16.5 m      12.0 m 
+INFO  09:27:49,573 ProgressMeter -      5:51884945   2.1272392E7     5.0 m      14.0 s       30.1%    16.6 m      11.6 m 
+INFO  09:28:19,574 ProgressMeter -     5:149910603   2.3451918E7     5.5 m      14.0 s       33.3%    16.5 m      11.0 m 
+INFO  09:28:49,575 ProgressMeter -      6:51027193   2.5584815E7     6.0 m      14.0 s       35.9%    16.7 m      10.7 m 
+INFO  09:29:19,576 ProgressMeter -     6:146557906   2.7698877E7     6.5 m      14.0 s       39.0%    16.7 m      10.2 m 
+INFO  09:29:49,577 ProgressMeter -      7:57696261   2.9821469E7     7.0 m      14.0 s       41.6%    16.8 m       9.8 m 
+INFO  09:30:19,579 ProgressMeter -     7:153406951   3.198413E7     7.5 m      14.0 s       44.7%    16.8 m       9.3 m 
+INFO  09:30:49,580 ProgressMeter -      8:77247433   3.414608E7     8.0 m      14.0 s       47.4%    16.9 m       8.9 m 
+INFO  09:31:19,581 ProgressMeter -      9:19318315   3.6303573E7     8.5 m      14.0 s       50.2%    16.9 m       8.4 m 
+INFO  09:31:49,582 ProgressMeter -     9:134287857   3.8409298E7     9.0 m      14.0 s       54.0%    16.7 m       7.7 m 
+INFO  09:32:19,583 ProgressMeter -     10:80568385   4.052361E7     9.5 m      14.0 s       56.8%    16.7 m       7.2 m 
+INFO  09:32:49,584 ProgressMeter -     11:32565172   4.2651561E7    10.0 m      14.0 s       59.6%    16.8 m       6.8 m 
+INFO  09:33:19,585 ProgressMeter -    11:123737554   4.4791726E7    10.5 m      14.0 s       62.5%    16.8 m       6.3 m 
+INFO  09:33:49,586 ProgressMeter -     12:79864495   4.6939455E7    11.0 m      14.0 s       65.5%    16.8 m       5.8 m 
+INFO  09:34:19,588 ProgressMeter -     13:55535617   4.9116611E7    11.5 m      14.0 s       69.0%    16.7 m       5.2 m 
+INFO  09:34:49,589 ProgressMeter -     14:48236891   5.1232917E7    12.0 m      14.0 s       72.5%    16.6 m       4.6 m 
+INFO  09:35:19,590 ProgressMeter -     15:51807844   5.3367431E7    12.5 m      14.0 s       76.1%    16.4 m       3.9 m 
+INFO  09:35:49,591 ProgressMeter -     16:33946594   5.5505083E7    13.0 m      14.0 s       78.8%    16.5 m       3.5 m 
+INFO  09:36:19,592 ProgressMeter -     17:38318075   5.7682511E7    13.5 m      14.0 s       81.8%    16.5 m       3.0 m 
+INFO  09:36:49,593 ProgressMeter -     18:49094935   5.983114E7    14.0 m      14.0 s       84.8%    16.5 m       2.5 m 
+INFO  09:37:19,594 ProgressMeter -     19:54623386   6.1994365E7    14.5 m      14.0 s       87.5%    16.6 m       2.1 m 
+INFO  09:37:49,596 ProgressMeter -     21:26678517   6.4101814E7    15.0 m      14.0 s       90.5%    16.6 m      94.0 s 
+INFO  09:38:19,597 ProgressMeter -      X:45806595   6.6342113E7    15.5 m      14.0 s       94.4%    16.4 m      55.0 s 
+INFO  09:38:47,174 VariantEval - Finalizing variant report 
+INFO  09:38:47,456 ProgressMeter -            done   6.8380628E7    16.0 m      14.0 s      100.0%    16.0 m       0.0 s 
+INFO  09:38:47,456 ProgressMeter - Total runtime 957.90 secs, 15.96 min, 0.27 hours 
+INFO  09:38:49,506 GATKRunReport - Uploaded run statistics report to AWS S3 

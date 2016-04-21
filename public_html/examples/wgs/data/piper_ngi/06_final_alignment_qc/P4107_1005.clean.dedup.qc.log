@@ -1,0 +1,167 @@
+Java memory size is set to 112G
+Launching application...
+
+QualiMap v.2.0
+Built on 2014-08-28 17:03
+
+Selected tool: bamqc
+Available memory (Mb): 32
+Max memory (Mb): 106897
+Starting bam qc....
+Loading sam header...
+Loading locator...
+Loading reference...
+Number of windows: 400, effective number of windows: 483
+Chunk of reads size: 1000
+Number of threads: 16
+WARNING: read alignment start is greater than end: 249894903 > 249894902
+WARNING: read alignment start is greater than end: 249894923 > 249894922
+WARNING: read alignment start is greater than end: 249894930 > 249894929
+WARNING: read alignment start is greater than end: 249894930 > 249894929
+WARNING: read alignment start is greater than end: 249894946 > 249894945
+WARNING: read alignment start is greater than end: 249895095 > 249895094
+WARNING: read alignment start is greater than end: 249895112 > 249895111
+WARNING: read alignment start is greater than end: 249895113 > 249895112
+WARNING: read alignment start is greater than end: 249895113 > 249895112
+WARNING: read alignment start is greater than end: 249895114 > 249895113
+WARNING: read alignment start is greater than end: 249895118 > 249895117
+WARNING: read alignment start is greater than end: 249895121 > 249895120
+WARNING: read alignment start is greater than end: 249895121 > 249895120
+WARNING: read alignment start is greater than end: 249895121 > 249895120
+WARNING: read alignment start is greater than end: 252454097 > 252454096
+WARNING: read alignment start is greater than end: 252454099 > 252454098
+WARNING: read alignment start is greater than end: 252454248 > 252454247
+Processed 50 out of 483 windows...
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662144 > 491662143
+WARNING: read alignment start is greater than end: 491662182 > 491662181
+Processed 100 out of 483 windows...
+WARNING: read alignment start is greater than end: 869130186 > 869130185
+WARNING: read alignment start is greater than end: 887940708 > 887940707
+WARNING: read alignment start is greater than end: 887940738 > 887940737
+WARNING: read alignment start is greater than end: 1017456338 > 1017456337
+Processed 150 out of 483 windows...
+WARNING: read alignment start is greater than end: 1222567760 > 1222567759
+WARNING: read alignment start is greater than end: 1222567760 > 1222567759
+WARNING: read alignment start is greater than end: 1222567760 > 1222567759
+WARNING: read alignment start is greater than end: 1222567790 > 1222567789
+WARNING: read alignment start is greater than end: 1222567790 > 1222567789
+WARNING: read alignment start is greater than end: 1222567790 > 1222567789
+WARNING: read alignment start is greater than end: 1222567791 > 1222567790
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567819 > 1222567818
+WARNING: read alignment start is greater than end: 1222567824 > 1222567823
+WARNING: read alignment start is greater than end: 1222567824 > 1222567823
+WARNING: read alignment start is greater than end: 1231031478 > 1231031477
+WARNING: read alignment start is greater than end: 1231031481 > 1231031480
+WARNING: read alignment start is greater than end: 1233301114 > 1233301113
+WARNING: read alignment start is greater than end: 1390920075 > 1390920074
+WARNING: read alignment start is greater than end: 1390920293 > 1390920292
+WARNING: read alignment start is greater than end: 1390920365 > 1390920364
+WARNING: read alignment start is greater than end: 1391286963 > 1391286962
+WARNING: read alignment start is greater than end: 1391286972 > 1391286971
+WARNING: read alignment start is greater than end: 1398316157 > 1398316156
+Processed 200 out of 483 windows...
+WARNING: read alignment start is greater than end: 1523814533 > 1523814532
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1562063600 > 1562063599
+WARNING: read alignment start is greater than end: 1680942356 > 1680942355
+WARNING: read alignment start is greater than end: 1680942483 > 1680942482
+WARNING: read alignment start is greater than end: 1782410618 > 1782410617
+WARNING: read alignment start is greater than end: 1812914482 > 1812914481
+WARNING: read alignment start is greater than end: 1812914518 > 1812914517
+WARNING: read alignment start is greater than end: 1812914540 > 1812914539
+Processed 250 out of 483 windows...
+WARNING: read alignment start is greater than end: 1884969399 > 1884969398
+WARNING: read alignment start is greater than end: 1935717008 > 1935717007
+WARNING: read alignment start is greater than end: 1935717008 > 1935717007
+WARNING: read alignment start is greater than end: 2066464868 > 2066464867
+WARNING: read alignment start is greater than end: 2066464868 > 2066464867
+WARNING: read alignment start is greater than end: 2066464869 > 2066464868
+WARNING: read alignment start is greater than end: 2083081246 > 2083081245
+WARNING: read alignment start is greater than end: 2189983347 > 2189983346
+WARNING: read alignment start is greater than end: 2189983393 > 2189983392
+WARNING: read alignment start is greater than end: 2189983393 > 2189983392
+Processed 300 out of 483 windows...
+WARNING: read alignment start is greater than end: 2306048907 > 2306048906
+WARNING: read alignment start is greater than end: 2409011357 > 2409011356
+WARNING: read alignment start is greater than end: 2499001557 > 2499001556
+WARNING: read alignment start is greater than end: 2499001584 > 2499001583
+WARNING: read alignment start is greater than end: 2499001597 > 2499001596
+WARNING: read alignment start is greater than end: 2502794959 > 2502794958
+WARNING: read alignment start is greater than end: 2502794973 > 2502794972
+WARNING: read alignment start is greater than end: 2578252057 > 2578252056
+Processed 350 out of 483 windows...
+WARNING: read alignment start is greater than end: 2656124484 > 2656124483
+WARNING: read alignment start is greater than end: 2657644698 > 2657644697
+WARNING: read alignment start is greater than end: 2714057545 > 2714057544
+WARNING: read alignment start is greater than end: 2762941094 > 2762941093
+WARNING: read alignment start is greater than end: 2776590461 > 2776590460
+WARNING: read alignment start is greater than end: 2780191202 > 2780191201
+WARNING: read alignment start is greater than end: 2780191233 > 2780191232
+WARNING: read alignment start is greater than end: 2780191243 > 2780191242
+WARNING: read alignment start is greater than end: 2828518118 > 2828518117
+WARNING: read alignment start is greater than end: 2828518174 > 2828518173
+WARNING: read alignment start is greater than end: 2828518176 > 2828518175
+Processed 400 out of 483 windows...
+Processed 450 out of 483 windows...
+Total processed windows:483
+Number of reads: 974955793
+Number of valid reads: 955921317
+Number of duplicated reads: 232479311
+Number of correct strand reads:0
+
+Inside of regions...
+Num mapped reads: 955921317
+Num mapped first of pair: 478075695
+Num mapped second of pair: 477845622
+Num singletons: 1297478
+Time taken to analyze reads: 5623
+Computing descriptors...
+numberOfMappedBases: 141381675087
+referenceSize: 3101804739
+numberOfSequencedBases: 141297632099
+numberOfAs: 41766247932
+Computing per chromosome statistics...
+Computing histograms...
+Overall analysis time: 6071
+end of bam qc
+Computing report...
+Html report created successfully
+
+Finished
