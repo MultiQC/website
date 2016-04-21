@@ -1,0 +1,3 @@
+sending incremental file list
+Started command rsync --exclude=*rsync.out --exclude=*rsync.err --perms --verbose --copy-links --recursive --files-from=/apus/v1/a2014205/nobackup/NGI/analysis_ready/DELIVERY/P4107/P4107_1001.lst --chmod=ug+rwX,o-rwx /apus/v1/a2014205/nobackup/NGI/analysis_ready/DELIVERY/P4107 /proj/bils2016002/INBOX/P4107 on 2016-03-08 14:44:37.824927
+===========

@@ -1,0 +1,126 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/GenomeAnalysisTK.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/Queue.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  01:19:45,612 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  01:19:45,614 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.3-0-geee94ec, Compiled 2016/02/26 09:40:23 
+INFO  01:19:45,614 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  01:19:45,614 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  01:19:45,618 HelpFormatter - Program Args: -T RealignerTargetCreator -I /scratch/109642/ANALYSIS/P4107/piper_ngi/04_merged_aligments/P4107_1003.bam -R /proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta -nt 16 -o /scratch/109642/ANALYSIS/P4107/piper_ngi/05_processed_alignments/P4107_1003.intervals -known /proj/a2014205/piper_references/gatk_bundle/2.8/b37/dbsnp_138.b37.vcf -known /proj/a2014205/piper_references/gatk_bundle/2.8/b37/Mills_and_1000G_gold_standard.indels.b37.vcf -known /proj/a2014205/piper_references/gatk_bundle/2.8/b37/1000G_phase1.indels.b37.vcf -mismatch 0.0 
+INFO  01:19:45,655 HelpFormatter - Executing as funk_002@n24.uppmax.uu.se on Linux 2.6.32-573.18.1.el6.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_25-b15. 
+INFO  01:19:45,655 HelpFormatter - Date/Time: 2016/02/27 01:19:45 
+INFO  01:19:45,655 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  01:19:45,655 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  01:19:54,328 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  01:19:54,460 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  01:19:54,468 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:54,484 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  01:19:55,001 MicroScheduler - Running the GATK in parallel mode with 16 total threads, 1 CPU thread(s) for each of 16 data thread(s), of 16 processors available on this machine 
+INFO  01:19:55,107 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  01:19:55,544 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  01:19:55,546 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  01:19:55,546 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  01:19:55,546 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  01:19:55,557 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,562 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  01:19:55,563 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,569 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  01:19:55,569 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,573 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,574 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,578 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,578 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,583 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,583 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,587 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,587 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,591 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,592 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,596 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,597 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,601 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,601 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,605 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,605 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,609 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,609 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,614 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,614 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,618 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,618 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,622 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:19:55,623 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  01:19:55,626 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  01:20:26,077 ProgressMeter -      1:30560661   3.0507008E7    30.0 s       1.0 s        1.0%    50.7 m      50.2 m 
+INFO  01:20:56,078 ProgressMeter -      1:78480261   7.8266368E7    60.0 s       0.0 s        2.5%    39.5 m      38.5 m 
+INFO  01:21:26,090 ProgressMeter -     1:147866001   1.26599168E8    90.0 s       0.0 s        4.8%    31.5 m      30.0 m 
+INFO  01:21:56,091 ProgressMeter -     1:188567657   1.88317696E8   120.0 s       0.0 s        6.1%    32.9 m      30.9 m 
+INFO  01:22:26,100 ProgressMeter -     1:236519425   2.36273664E8     2.5 m       0.0 s        7.6%    32.8 m      30.3 m 
+INFO  01:22:56,101 ProgressMeter -      2:35652685   2.84689213E8     3.0 m       0.0 s        9.2%    32.7 m      29.7 m 
+INFO  01:23:36,102 ProgressMeter -     2:102271229   3.51273789E8     3.7 m       0.0 s       11.3%    32.4 m      28.7 m 
+INFO  01:24:16,103 ProgressMeter -     2:166576229   4.15712061E8     4.3 m       0.0 s       13.4%    32.3 m      28.0 m 
+INFO  01:24:46,103 ProgressMeter -     2:214548581   4.63618877E8     4.8 m       0.0 s       15.0%    32.3 m      27.5 m 
+INFO  01:25:16,104 ProgressMeter -      3:19251701   5.11455434E8     5.3 m       0.0 s       16.5%    32.3 m      27.0 m 
+INFO  01:25:46,105 ProgressMeter -      3:66932041   5.59132874E8     5.8 m       0.0 s       18.0%    32.3 m      26.5 m 
+INFO  01:26:16,106 ProgressMeter -     3:116834305   6.09038538E8     6.3 m       0.0 s       19.6%    32.2 m      25.9 m 
+INFO  01:26:56,107 ProgressMeter -     3:180702637   6.7290337E8     7.0 m       0.0 s       21.7%    32.3 m      25.3 m 
+INFO  01:27:36,108 ProgressMeter -      4:47186021   7.37445352E8     7.7 m       0.0 s       23.8%    32.2 m      24.6 m 
+INFO  01:28:06,109 ProgressMeter -      4:94814509   7.85040872E8     8.2 m       0.0 s       25.3%    32.3 m      24.1 m 
+INFO  01:28:36,109 ProgressMeter -     4:143164393   8.3340644E8     8.7 m       0.0 s       26.9%    32.2 m      23.6 m 
+INFO  01:29:06,110 ProgressMeter -     4:190677093   8.8092004E8     9.2 m       0.0 s       28.4%    32.3 m      23.1 m 
+INFO  01:29:36,111 ProgressMeter -      5:50250329   9.28681548E8     9.7 m       0.0 s       30.0%    32.2 m      22.5 m 
+INFO  01:30:06,112 ProgressMeter -      5:98402405   9.79783244E8    10.2 m       0.0 s       31.6%    32.2 m      22.0 m 
+INFO  01:30:46,113 ProgressMeter -     5:162136865   1.043517004E9    10.8 m       0.0 s       33.7%    32.2 m      21.4 m 
+INFO  01:31:26,114 ProgressMeter -      6:45187173   1.107483272E9    11.5 m       0.0 s       35.7%    32.2 m      20.7 m 
+INFO  01:31:56,115 ProgressMeter -      6:94326289   1.156618888E9    12.0 m       0.0 s       37.3%    32.2 m      20.2 m 
+INFO  01:32:26,115 ProgressMeter -     6:142164269   1.204476552E9    12.5 m       0.0 s       38.8%    32.2 m      19.7 m 
+INFO  01:32:56,116 ProgressMeter -      7:19088661   1.252498627E9    13.0 m       0.0 s       40.4%    32.2 m      19.2 m 
+INFO  01:33:26,135 ProgressMeter -      7:68846669   1.302256835E9    13.5 m       0.0 s       42.0%    32.1 m      18.6 m 
+INFO  01:33:56,173 ProgressMeter -     7:117261489   1.350671555E9    14.0 m       0.0 s       43.6%    32.1 m      18.1 m 
+INFO  01:34:26,173 ProgressMeter -       8:5966077   1.39861201E9    14.5 m       0.0 s       45.1%    32.2 m      17.7 m 
+INFO  01:34:56,174 ProgressMeter -      8:56427497   1.448976426E9    15.0 m       0.0 s       46.7%    32.1 m      17.1 m 
+INFO  01:35:26,175 ProgressMeter -     8:100581377   1.49314769E9    15.5 m       0.0 s       48.1%    32.2 m      16.7 m 
+INFO  01:36:06,176 ProgressMeter -      9:17874945   1.55680528E9    16.2 m       0.0 s       50.2%    32.2 m      16.0 m 
+INFO  01:36:46,177 ProgressMeter -     9:101662721   1.623357088E9    16.8 m       0.0 s       52.9%    31.8 m      15.0 m 
+INFO  01:37:16,177 ProgressMeter -      10:3784905   1.683912087E9    17.3 m       0.0 s       54.3%    31.9 m      14.6 m 
+INFO  01:37:46,178 ProgressMeter -     10:52480553   1.732605335E9    17.8 m       0.0 s       55.9%    31.9 m      14.1 m 
+INFO  01:38:16,179 ProgressMeter -     10:97419365   1.777546647E9    18.3 m       0.0 s       57.3%    32.0 m      13.7 m 
+INFO  01:38:46,180 ProgressMeter -      11:9503221   1.82516485E9    18.8 m       0.0 s       58.8%    32.0 m      13.2 m 
+INFO  01:39:16,181 ProgressMeter -     11:59753549   1.872367154E9    19.3 m       0.0 s       60.5%    32.0 m      12.6 m 
+INFO  01:39:56,182 ProgressMeter -    11:122669009   1.938329138E9    20.0 m       0.0 s       62.5%    32.0 m      12.0 m 
+INFO  01:40:36,183 ProgressMeter -     12:52757581   2.00344151E9    20.7 m       0.0 s       64.6%    32.0 m      11.3 m 
+INFO  01:41:16,184 ProgressMeter -    12:115819397   2.066487142E9    21.3 m       0.0 s       66.6%    32.0 m      10.7 m 
+INFO  01:41:46,185 ProgressMeter -     13:46384605   2.111898205E9    21.8 m       0.0 s       68.7%    31.8 m       9.9 m 
+INFO  01:42:16,185 ProgressMeter -     13:88441333   2.172961373E9    22.3 m       0.0 s       70.1%    31.9 m       9.5 m 
+INFO  01:42:46,186 ProgressMeter -     14:38387813   2.219089075E9    22.8 m       0.0 s       72.2%    31.6 m       8.8 m 
+INFO  01:43:18,504 ProgressMeter -     14:78382857   2.278071475E9    23.4 m       0.0 s       73.5%    31.8 m       8.4 m 
+INFO  01:43:48,505 ProgressMeter -     15:37193481   2.324259543E9    23.9 m       0.0 s       75.6%    31.6 m       7.7 m 
+INFO  01:44:18,505 ProgressMeter -     15:78435109   2.385470167E9    24.4 m       0.0 s       76.9%    31.7 m       7.3 m 
+INFO  01:44:48,506 ProgressMeter -     16:24396777   2.433999895E9    24.9 m       0.0 s       78.5%    31.7 m       6.8 m 
+INFO  01:45:18,507 ProgressMeter -     16:78872493   2.488673303E9    25.4 m       0.0 s       80.2%    31.6 m       6.2 m 
+INFO  01:45:48,508 ProgressMeter -     17:36014833   2.535938136E9    25.9 m       0.0 s       81.8%    31.6 m       5.8 m 
+INFO  01:46:18,509 ProgressMeter -      18:2048401   2.583218466E9    26.4 m       0.0 s       83.3%    31.7 m       5.3 m 
+INFO  01:46:58,510 ProgressMeter -     18:67371609   2.648492322E9    27.0 m       0.0 s       85.4%    31.7 m       4.6 m 
+INFO  01:47:38,511 ProgressMeter -     19:54493785   2.713691746E9    27.7 m       0.0 s       87.5%    31.7 m       4.0 m 
+INFO  01:48:08,511 ProgressMeter -     20:45128637   2.763449081E9    28.2 m       0.0 s       89.1%    31.6 m       3.4 m 
+INFO  01:48:38,526 ProgressMeter -     21:36850417   2.818200681E9    28.7 m       0.0 s       90.9%    31.6 m       2.9 m 
+INFO  01:49:08,527 ProgressMeter -     22:48152493   2.877864912E9    29.2 m       0.0 s       92.8%    31.5 m       2.3 m 
+INFO  01:49:48,528 ProgressMeter -      X:66341217   2.944078918E9    29.9 m       0.0 s       95.0%    31.4 m      93.0 s 
+INFO  01:50:18,529 ProgressMeter -     X:116327401   2.997113926E9    30.4 m       0.0 s       96.6%    31.4 m      63.0 s 
+INFO  01:50:48,529 ProgressMeter -      Y:16384201   3.04983703E9    30.9 m       0.0 s       98.4%    31.4 m      29.0 s 
+INFO  01:51:18,530 ProgressMeter - GL000192.1:547473   3.071805635E9    31.4 m       0.0 s      100.0%    31.4 m       0.0 s 
+INFO  01:51:48,531 ProgressMeter - GL000192.1:547473   3.071805635E9    31.9 m       0.0 s      100.0%    31.9 m       0.0 s 
+INFO  01:52:11,875 ProgressMeter -            done   3.101804739E9    32.3 m       0.0 s      100.0%    32.3 m       0.0 s 
+INFO  01:52:11,875 ProgressMeter - Total runtime 1936.33 secs, 32.27 min, 0.54 hours 
+INFO  01:52:11,875 MicroScheduler - 44824334 reads were filtered out during the traversal out of approximately 856185301 total reads (5.24%) 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 6801983 reads (0.79% of total) failing BadMateFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 37430195 reads (4.37% of total) failing MappingQualityZeroFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 592156 reads (0.07% of total) failing NotPrimaryAlignmentFilter 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing Platform454Filter 
+INFO  01:52:11,876 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+INFO  01:52:15,761 GATKRunReport - Uploaded run statistics report to AWS S3 

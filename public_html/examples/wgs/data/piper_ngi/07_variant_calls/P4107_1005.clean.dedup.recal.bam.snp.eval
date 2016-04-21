@@ -1,0 +1,357 @@
+#:GATKReport.v1.1:8
+#:GATKTable:11:12:%s:%s:%s:%s:%s:%d:%d:%d:%.2f:%d:%.2f:;
+#:GATKTable:CompOverlap:The overlap between eval and comp sites
+CompOverlap  CompRod  EvalRod  JexlExpression  Novelty  nEvalVariants  novelSites  nVariantsAtComp  compRate  nConcordant  concordantRate
+CompOverlap  dbsnp    eval2    none            all            4067912      194545          3873367     95.22      3869163           99.89
+CompOverlap  dbsnp    eval2    none            known          3873367           0          3873367    100.00      3869163           99.89
+CompOverlap  dbsnp    eval2    none            novel           194545      194545                0      0.00            0            0.00
+CompOverlap  dbsnp    eval     none            all            3459835       43173          3416662     98.75      3415470           99.97
+CompOverlap  dbsnp    eval     none            known          3416662           0          3416662    100.00      3415470           99.97
+CompOverlap  dbsnp    eval     none            novel            43173       43173                0      0.00            0            0.00
+CompOverlap  hapmap   eval2    none            all            4067912     2472738          1595174     39.21      1578544           98.96
+CompOverlap  hapmap   eval2    none            known          3873367     2279664          1593703     41.15      1577239           98.97
+CompOverlap  hapmap   eval2    none            novel           194545      193074             1471      0.76         1305           88.72
+CompOverlap  hapmap   eval     none            all            3459835     1874662          1585173     45.82      1570848           99.10
+CompOverlap  hapmap   eval     none            known          3416662     1832866          1583796     46.36      1569608           99.10
+CompOverlap  hapmap   eval     none            novel            43173       41796             1377      3.19         1240           90.05
+
+#:GATKTable:30:12:%s:%s:%s:%s:%s:%d:%d:%d:%d:%.8f:%.8f:%d:%d:%d:%d:%d:%d:%d:%d:%d:%d:%d:%d:%d:%.2e:%.2f:%.2f:%.2e:%.2f:%.2f:;
+#:GATKTable:CountVariants:Counts different classes of variants in the sample
+CountVariants  CompRod  EvalRod  JexlExpression  Novelty  nProcessedLoci  nCalledLoci  nRefLoci  nVariantLoci  variantRate  variantRatePerBp  nSNPs    nMNPs  nInsertions  nDeletions  nComplex  nSymbolic  nMixed  nNoCalls  nHets    nHomRef  nHomVar  nSingletons  nHomDerived  heterozygosity  heterozygosityPerBp  hetHomRatio  indelRate  indelRatePerBp  insertionDeletionRatio
+CountVariants  dbsnp    eval2    none            all          3101804739      4067912         0       4067912   0.00131147      762.00000000  4067912      0            0           0         0          0       0         0  2559989        0  1507923      2559989            0        8.25e-04              1211.00         1.70   0.00e+00            0.00                    0.00
+CountVariants  dbsnp    eval2    none            known        3101804739      3873367         0       3873367   0.00124875      800.00000000  3873367      0            0           0         0          0       0         0  2380579        0  1492788      2380579            0        7.67e-04              1302.00         1.59   0.00e+00            0.00                    0.00
+CountVariants  dbsnp    eval2    none            novel        3101804739       194545         0        194545   0.00006272    15943.00000000   194545      0            0           0         0          0       0         0   179410        0    15135       179410            0        5.78e-05             17288.00        11.85   0.00e+00            0.00                    0.00
+CountVariants  dbsnp    eval     none            all          3101804739      3459835         0       3459835   0.00111543      896.00000000  3459835      0            0           0         0          0       0         0  2035312        0  1424523      2035312            0        6.56e-04              1523.00         1.43   0.00e+00            0.00                    0.00
+CountVariants  dbsnp    eval     none            known        3101804739      3416662         0       3416662   0.00110151      907.00000000  3416662      0            0           0         0          0       0         0  1998408        0  1418254      1998408            0        6.44e-04              1552.00         1.41   0.00e+00            0.00                    0.00
+CountVariants  dbsnp    eval     none            novel        3101804739        43173         0         43173   0.00001392    71845.00000000    43173      0            0           0         0          0       0         0    36904        0     6269        36904            0        1.19e-05             84050.00         5.89   0.00e+00            0.00                    0.00
+CountVariants  hapmap   eval2    none            all          3101804739      4067912         0       4067912   0.00131147      762.00000000  4067912      0            0           0         0          0       0         0  2559989        0  1507923      2559989            0        8.25e-04              1211.00         1.70   0.00e+00            0.00                    0.00
+CountVariants  hapmap   eval2    none            known        3101804739      3873367         0       3873367   0.00124875      800.00000000  3873367      0            0           0         0          0       0         0  2380579        0  1492788      2380579            0        7.67e-04              1302.00         1.59   0.00e+00            0.00                    0.00
+CountVariants  hapmap   eval2    none            novel        3101804739       194545         0        194545   0.00006272    15943.00000000   194545      0            0           0         0          0       0         0   179410        0    15135       179410            0        5.78e-05             17288.00        11.85   0.00e+00            0.00                    0.00
+CountVariants  hapmap   eval     none            all          3101804739      3459835         0       3459835   0.00111543      896.00000000  3459835      0            0           0         0          0       0         0  2035312        0  1424523      2035312            0        6.56e-04              1523.00         1.43   0.00e+00            0.00                    0.00
+CountVariants  hapmap   eval     none            known        3101804739      3416662         0       3416662   0.00110151      907.00000000  3416662      0            0           0         0          0       0         0  1998408        0  1418254      1998408            0        6.44e-04              1552.00         1.41   0.00e+00            0.00                    0.00
+CountVariants  hapmap   eval     none            novel        3101804739        43173         0         43173   0.00001392    71845.00000000    43173      0            0           0         0          0       0         0    36904        0     6269        36904            0        1.19e-05             84050.00         5.89   0.00e+00            0.00                    0.00
+
+#:GATKTable:7:240:%s:%s:%s:%s:%s:%d:%.2f:;
+#:GATKTable:IndelLengthHistogram:Indel length histogram
+IndelLengthHistogram  CompRod  EvalRod  JexlExpression  Novelty  Length  Freq
+IndelLengthHistogram  dbsnp    eval2    none            all         -10  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -9  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -8  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -7  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -6  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -5  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -4  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -3  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -2  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          -1  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           1  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           2  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           3  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           4  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           5  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           6  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           7  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           8  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all           9  0.00
+IndelLengthHistogram  dbsnp    eval2    none            all          10  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known       -10  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -9  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -8  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -7  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -6  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -5  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -4  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -3  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -2  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        -1  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         1  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         2  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         3  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         4  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         5  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         6  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         7  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         8  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known         9  0.00
+IndelLengthHistogram  dbsnp    eval2    none            known        10  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel       -10  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -9  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -8  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -7  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -6  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -5  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -4  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -3  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -2  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        -1  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         1  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         2  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         3  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         4  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         5  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         6  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         7  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         8  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel         9  0.00
+IndelLengthHistogram  dbsnp    eval2    none            novel        10  0.00
+IndelLengthHistogram  dbsnp    eval     none            all         -10  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -9  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -8  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -7  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -6  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -5  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -4  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -3  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -2  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          -1  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           1  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           2  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           3  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           4  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           5  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           6  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           7  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           8  0.00
+IndelLengthHistogram  dbsnp    eval     none            all           9  0.00
+IndelLengthHistogram  dbsnp    eval     none            all          10  0.00
+IndelLengthHistogram  dbsnp    eval     none            known       -10  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -9  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -8  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -7  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -6  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -5  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -4  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -3  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -2  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        -1  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         1  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         2  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         3  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         4  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         5  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         6  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         7  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         8  0.00
+IndelLengthHistogram  dbsnp    eval     none            known         9  0.00
+IndelLengthHistogram  dbsnp    eval     none            known        10  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel       -10  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -9  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -8  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -7  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -6  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -5  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -4  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -3  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -2  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        -1  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         1  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         2  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         3  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         4  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         5  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         6  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         7  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         8  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel         9  0.00
+IndelLengthHistogram  dbsnp    eval     none            novel        10  0.00
+IndelLengthHistogram  hapmap   eval2    none            all         -10  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -9  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -8  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -7  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -6  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -5  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -4  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -3  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -2  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          -1  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           1  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           2  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           3  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           4  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           5  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           6  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           7  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           8  0.00
+IndelLengthHistogram  hapmap   eval2    none            all           9  0.00
+IndelLengthHistogram  hapmap   eval2    none            all          10  0.00
+IndelLengthHistogram  hapmap   eval2    none            known       -10  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -9  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -8  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -7  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -6  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -5  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -4  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -3  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -2  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        -1  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         1  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         2  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         3  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         4  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         5  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         6  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         7  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         8  0.00
+IndelLengthHistogram  hapmap   eval2    none            known         9  0.00
+IndelLengthHistogram  hapmap   eval2    none            known        10  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel       -10  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -9  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -8  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -7  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -6  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -5  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -4  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -3  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -2  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        -1  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         1  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         2  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         3  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         4  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         5  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         6  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         7  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         8  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel         9  0.00
+IndelLengthHistogram  hapmap   eval2    none            novel        10  0.00
+IndelLengthHistogram  hapmap   eval     none            all         -10  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -9  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -8  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -7  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -6  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -5  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -4  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -3  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -2  0.00
+IndelLengthHistogram  hapmap   eval     none            all          -1  0.00
+IndelLengthHistogram  hapmap   eval     none            all           1  0.00
+IndelLengthHistogram  hapmap   eval     none            all           2  0.00
+IndelLengthHistogram  hapmap   eval     none            all           3  0.00
+IndelLengthHistogram  hapmap   eval     none            all           4  0.00
+IndelLengthHistogram  hapmap   eval     none            all           5  0.00
+IndelLengthHistogram  hapmap   eval     none            all           6  0.00
+IndelLengthHistogram  hapmap   eval     none            all           7  0.00
+IndelLengthHistogram  hapmap   eval     none            all           8  0.00
+IndelLengthHistogram  hapmap   eval     none            all           9  0.00
+IndelLengthHistogram  hapmap   eval     none            all          10  0.00
+IndelLengthHistogram  hapmap   eval     none            known       -10  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -9  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -8  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -7  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -6  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -5  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -4  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -3  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -2  0.00
+IndelLengthHistogram  hapmap   eval     none            known        -1  0.00
+IndelLengthHistogram  hapmap   eval     none            known         1  0.00
+IndelLengthHistogram  hapmap   eval     none            known         2  0.00
+IndelLengthHistogram  hapmap   eval     none            known         3  0.00
+IndelLengthHistogram  hapmap   eval     none            known         4  0.00
+IndelLengthHistogram  hapmap   eval     none            known         5  0.00
+IndelLengthHistogram  hapmap   eval     none            known         6  0.00
+IndelLengthHistogram  hapmap   eval     none            known         7  0.00
+IndelLengthHistogram  hapmap   eval     none            known         8  0.00
+IndelLengthHistogram  hapmap   eval     none            known         9  0.00
+IndelLengthHistogram  hapmap   eval     none            known        10  0.00
+IndelLengthHistogram  hapmap   eval     none            novel       -10  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -9  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -8  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -7  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -6  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -5  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -4  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -3  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -2  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        -1  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         1  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         2  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         3  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         4  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         5  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         6  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         7  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         8  0.00
+IndelLengthHistogram  hapmap   eval     none            novel         9  0.00
+IndelLengthHistogram  hapmap   eval     none            novel        10  0.00
+
+#:GATKTable:30:12:%s:%s:%s:%s:%s:%d:%d:%d:%d:%d:%s:%s:%s:%s:%s:%d:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:;
+#:GATKTable:IndelSummary:Evaluation summary for indels
+IndelSummary  CompRod  EvalRod  JexlExpression  Novelty  n_SNPs   n_singleton_SNPs  n_indels  n_singleton_indels  n_indels_matching_gold_standard  gold_standard_matching_rate  n_multiallelic_indel_sites  percent_of_sites_with_more_than_2_alleles  SNP_to_indel_ratio  SNP_to_indel_ratio_for_singletons  n_novel_indels  indel_novelty_rate  n_insertions  n_deletions  insertion_to_deletion_ratio  n_large_deletions  n_large_insertions  insertion_to_deletion_ratio_for_large_indels  n_coding_indels_frameshifting  n_coding_indels_in_frame  frameshift_rate_for_coding_indels  SNP_het_to_hom_ratio  indel_het_to_hom_ratio  ratio_of_1_and_2_to_3_bp_insertions  ratio_of_1_and_2_to_3_bp_deletions
+IndelSummary  dbsnp    eval2    none            all      4069620           2559989         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.70                      NA                                   NA                                  NA
+IndelSummary  dbsnp    eval2    none            known    3874944           2380579         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.59                      NA                                   NA                                  NA
+IndelSummary  dbsnp    eval2    none            novel     194676            179410         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                 11.85                      NA                                   NA                                  NA
+IndelSummary  dbsnp    eval     none            all      3461004           2035312         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.43                      NA                                   NA                                  NA
+IndelSummary  dbsnp    eval     none            known    3417812           1998408         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.41                      NA                                   NA                                  NA
+IndelSummary  dbsnp    eval     none            novel      43192             36904         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  5.89                      NA                                   NA                                  NA
+IndelSummary  hapmap   eval2    none            all      4069620           2559989         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.70                      NA                                   NA                                  NA
+IndelSummary  hapmap   eval2    none            known    3874944           2380579         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.59                      NA                                   NA                                  NA
+IndelSummary  hapmap   eval2    none            novel     194676            179410         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                 11.85                      NA                                   NA                                  NA
+IndelSummary  hapmap   eval     none            all      3461004           2035312         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.43                      NA                                   NA                                  NA
+IndelSummary  hapmap   eval     none            known    3417812           1998408         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  1.41                      NA                                   NA                                  NA
+IndelSummary  hapmap   eval     none            novel      43192             36904         0                   0                                0                           NA                           0                                         NA                  NA                                 NA               0                  NA             0            0                           NA                  0                   0                                            NA                              0                         0                                 NA                  5.89                      NA                                   NA                                  NA
+
+#:GATKTable:20:12:%s:%s:%s:%s:%s:%d:%d:%d:%.5f:%.3f:%d:%d:%.5f:%.3f:%d:%d:%.2f:%d:%d:%s:;
+#:GATKTable:MultiallelicSummary:Evaluation summary for multi-allelic variants
+MultiallelicSummary  CompRod  EvalRod  JexlExpression  Novelty  nProcessedLoci  nSNPs    nMultiSNPs  processedMultiSnpRatio  variantMultiSnpRatio  nIndels  nMultiIndels  processedMultiIndelRatio  variantMultiIndelRatio  nTi   nTv   TiTvRatio  knownSNPsPartial  knownSNPsComplete  SNPNoveltyRate
+MultiallelicSummary  dbsnp    eval2    none            all          3101804739  4067912        1708                 0.00000                 0.000        0             0                   0.00000                     NaN  1154  2262       0.51               327               1250            7.67
+MultiallelicSummary  dbsnp    eval2    none            known        3101804739  3873367        1577                 0.00000                 0.000        0             0                   0.00000                     NaN  1070  2084       0.51               327               1250            0.00
+MultiallelicSummary  dbsnp    eval2    none            novel        3101804739   194545         131                 0.00000                 0.001        0             0                   0.00000                     NaN    84   178       0.47                 0                  0          100.00
+MultiallelicSummary  dbsnp    eval     none            all          3101804739  3459835        1169                 0.00000                 0.000        0             0                   0.00000                     NaN   802  1536       0.52               162                988            1.63
+MultiallelicSummary  dbsnp    eval     none            known        3101804739  3416662        1150                 0.00000                 0.000        0             0                   0.00000                     NaN   788  1512       0.52               162                988            0.00
+MultiallelicSummary  dbsnp    eval     none            novel        3101804739    43173          19                 0.00000                 0.000        0             0                   0.00000                     NaN    14    24       0.58                 0                  0          100.00
+MultiallelicSummary  hapmap   eval2    none            all          3101804739  4067912        1708                 0.00000                 0.000        0             0                   0.00000                     NaN  1154  2262       0.51               164                  1           90.34
+MultiallelicSummary  hapmap   eval2    none            known        3101804739  3873367        1577                 0.00000                 0.000        0             0                   0.00000                     NaN  1070  2084       0.51               162                  1           89.66
+MultiallelicSummary  hapmap   eval2    none            novel        3101804739   194545         131                 0.00000                 0.001        0             0                   0.00000                     NaN    84   178       0.47                 2                  0           98.47
+MultiallelicSummary  hapmap   eval     none            all          3101804739  3459835        1169                 0.00000                 0.000        0             0                   0.00000                     NaN   802  1536       0.52               162                  1           86.06
+MultiallelicSummary  hapmap   eval     none            known        3101804739  3416662        1150                 0.00000                 0.000        0             0                   0.00000                     NaN   788  1512       0.52               161                  1           85.91
+MultiallelicSummary  hapmap   eval     none            novel        3101804739    43173          19                 0.00000                 0.000        0             0                   0.00000                     NaN    14    24       0.58                 1                  0           94.74
+
+#:GATKTable:14:12:%s:%s:%s:%s:%s:%d:%d:%.2f:%d:%d:%.2f:%d:%d:%.2f:;
+#:GATKTable:TiTvVariantEvaluator:Ti/Tv Variant Evaluator
+TiTvVariantEvaluator  CompRod  EvalRod  JexlExpression  Novelty  nTi      nTv      tiTvRatio  nTiInComp  nTvInComp  TiTvRatioStandard  nTiDerived  nTvDerived  tiTvDerivedRatio
+TiTvVariantEvaluator  dbsnp    eval2    none            all      2704310  1361894       1.99   35490197   17736892               2.00           0           0              0.00
+TiTvVariantEvaluator  dbsnp    eval2    none            known    2591169  1280621       2.02    2574676    1260989               2.04           0           0              0.00
+TiTvVariantEvaluator  dbsnp    eval2    none            novel     113141    81273       1.39   32915521   16475903               2.00           0           0              0.00
+TiTvVariantEvaluator  dbsnp    eval     none            all      2329151  1129515       2.06   35490197   17736892               2.00           0           0              0.00
+TiTvVariantEvaluator  dbsnp    eval     none            known    2303535  1111977       2.07    2290604    1097472               2.09           0           0              0.00
+TiTvVariantEvaluator  dbsnp    eval     none            novel      25616    17538       1.46   33199593   16639420               2.00           0           0              0.00
+TiTvVariantEvaluator  hapmap   eval2    none            all      2704310  1361894       1.99    2472520    1145061               2.16           0           0              0.00
+TiTvVariantEvaluator  hapmap   eval2    none            known    2591169  1280621       2.02    1074885     502507               2.14           0           0              0.00
+TiTvVariantEvaluator  hapmap   eval2    none            novel     113141    81273       1.39    1397635     642554               2.18           0           0              0.00
+TiTvVariantEvaluator  hapmap   eval     none            all      2329151  1129515       2.06    2472520    1145061               2.16           0           0              0.00
+TiTvVariantEvaluator  hapmap   eval     none            known    2303535  1111977       2.07    1069729     500005               2.14           0           0              0.00
+TiTvVariantEvaluator  hapmap   eval     none            novel      25616    17538       1.46    1402791     645056               2.17           0           0              0.00
+
+#:GATKTable:24:12:%s:%s:%s:%s:%s:%d:%d:%d:%d:%d:%.2f:%.2f:%.2f:%.2f:%d:%d:%d:%d:%d:%d:%d:%d:%d:%d:;
+#:GATKTable:ValidationReport:Assess site accuracy and sensitivity of callset against follow-up validation assay
+ValidationReport  CompRod  EvalRod  JexlExpression  Novelty  nComp     TP       FP     FN        TN      sensitivity  specificity  PPV     FDR   CompMonoEvalNoCall  CompMonoEvalFiltered  CompMonoEvalMono  CompMonoEvalPoly  CompPolyEvalNoCall  CompPolyEvalFiltered  CompPolyEvalMono  CompPolyEvalPoly  CompFiltered  nDifferentAlleleSites
+ValidationReport  dbsnp    eval2    none            all      61045452  3873367      0  57172085       0         6.35       100.00  100.00  0.00                   0                     0                 0                 0            57172085                     0                 0           3873367             0                      0
+ValidationReport  dbsnp    eval2    none            known     3925204  3873367      0     51837       0        98.68       100.00  100.00  0.00                   0                     0                 0                 0               51837                     0                 0           3873367             0                      0
+ValidationReport  dbsnp    eval2    none            novel    57120248        0      0  57120248       0         0.00       100.00     NaN   NaN                   0                     0                 0                 0            57120248                     0                 0                 0             0                      0
+ValidationReport  dbsnp    eval     none            all      61045453  3416662      0  57628791       0         5.60       100.00  100.00  0.00                   0                     0                 0                 0            57628791                     0                 0           3416662             0                      0
+ValidationReport  dbsnp    eval     none            known     3459961  3416662      0     43299       0        98.75       100.00  100.00  0.00                   0                     0                 0                 0               43299                     0                 0           3416662             0                      0
+ValidationReport  dbsnp    eval     none            novel    57585492        0      0  57585492       0         0.00       100.00     NaN   NaN                   0                     0                 0                 0            57585492                     0                 0                 0             0                      0
+ValidationReport  hapmap   eval2    none            all       4165754  1579994  15180   2047929  522651        43.55        97.18   99.05  0.95              522651                     0                 0             15180             2047929                     0                 0           1579994             0                      0
+ValidationReport  hapmap   eval2    none            known     1593704  1578601  15102         1       0       100.00         0.00   99.05  0.95                   0                     0                 0             15102                   1                     0                 0           1578601             0                      0
+ValidationReport  hapmap   eval2    none            novel     2572050     1393     78   2047928  522651         0.07        99.99   94.70  5.30              522651                     0                 0                78             2047928                     0                 0              1393             0                      0
+ValidationReport  hapmap   eval     none            all       4165754  1572110  13063   2055813  524768        43.33        97.57   99.18  0.82              524768                     0                 0             13063             2055813                     0                 0           1572110             0                      0
+ValidationReport  hapmap   eval     none            known     1583796  1570784  13012         0       0       100.00         0.00   99.18  0.82                   0                     0                 0             13012                   0                     0                 0           1570784             0                      0
+ValidationReport  hapmap   eval     none            novel     2581958     1326     51   2055813  524768         0.06        99.99   96.30  3.70              524768                     0                 0                51             2055813                     0                 0              1326             0                      0
+
+#:GATKTable:20:12:%s:%s:%s:%s:%s:%d:%d:%d:%.2f:%s:%d:%.2f:%.1f:%d:%s:%d:%.1f:%d:%s:%d:;
+#:GATKTable:VariantSummary:1000 Genomes Phase I summary of variants table
+VariantSummary  CompRod  EvalRod  JexlExpression  Novelty  nSamples  nProcessedLoci  nSNPs    TiTvRatio  SNPNoveltyRate  nSNPsPerSample  TiTvRatioPerSample  SNPDPPerSample  nIndels  IndelNoveltyRate  nIndelsPerSample  IndelDPPerSample  nSVs  SVNoveltyRate  nSVsPerSample
+VariantSummary  dbsnp    eval2    none            all             1      3101804739  4067912       1.99            4.78         4067912                1.99       4067911.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  dbsnp    eval2    none            known           1      3101804739  3873367       2.02            0.00         3873367                2.02       3873367.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  dbsnp    eval2    none            novel           1      3101804739   194545       1.39          100.00          194545                1.39        194544.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  dbsnp    eval     none            all             1      3101804739  3459835       2.06            1.25         3459835                2.06       3459835.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  dbsnp    eval     none            known           1      3101804739  3416662       2.07            0.00         3416662                2.07       3416662.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  dbsnp    eval     none            novel           1      3101804739    43173       1.46          100.00           43173                1.46         43173.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  hapmap   eval2    none            all             1      3101804739  4067912       1.99           60.79         4067912                1.99       4067911.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  hapmap   eval2    none            known           1      3101804739  3873367       2.02           58.85         3873367                2.02       3873367.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  hapmap   eval2    none            novel           1      3101804739   194545       1.39           99.24          194545                1.39        194544.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  hapmap   eval     none            all             1      3101804739  3459835       2.06           54.18         3459835                2.06       3459835.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  hapmap   eval     none            known           1      3101804739  3416662       2.07           53.64         3416662                2.07       3416662.0        0                NA                 0               0.0     0             NA              0
+VariantSummary  hapmap   eval     none            novel           1      3101804739    43173       1.46           96.81           43173                1.46         43173.0        0                NA                 0               0.0     0             NA              0
+

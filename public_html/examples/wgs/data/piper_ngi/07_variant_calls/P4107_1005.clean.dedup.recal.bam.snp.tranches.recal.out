@@ -1,0 +1,256 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/GenomeAnalysisTK.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/Queue.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  15:05:14,297 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  15:05:14,299 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.3-0-geee94ec, Compiled 2015/12/17 12:33:03 
+INFO  15:05:14,299 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  15:05:14,299 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  15:05:14,304 HelpFormatter - Program Args: -T VariantRecalibrator -R /proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta -nt 16 -mode SNP -input /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.raw.snp.vcf.gz -resource:known=false,training=true,truth=true,prior=15.0 /proj/a2014205/piper_references/gatk_bundle/2.8/b37/hapmap_3.3.b37.vcf -resource:known=false,training=true,truth=true,prior=12.0 /proj/a2014205/piper_references/gatk_bundle/2.8/b37/1000G_omni2.5.b37.vcf -resource:known=false,training=true,truth=false,prior=10.0 /proj/a2014205/piper_references/gatk_bundle/2.8/b37/1000G_phase1.snps.high_confidence.b37.vcf -resource:known=true,training=false,truth=false,prior=2.0 /proj/a2014205/piper_references/gatk_bundle/2.8/b37/dbsnp_138.b37.vcf -recalFile /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.tranches.recal -tranchesFile /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.tranches -an QD -an MQ -an MQRankSum -an ReadPosRankSum -an FS -an SOR -an DP -tranche 100.0 -tranche 99.9 -tranche 99.0 -tranche 90.0 -rscriptFile /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.vqsr.r -allPoly 
+INFO  15:05:14,309 HelpFormatter - Executing as funk_002@n19.uppmax.uu.se on Linux 2.6.32-573.18.1.el6.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_25-b15. 
+INFO  15:05:14,309 HelpFormatter - Date/Time: 2016/02/24 15:05:14 
+INFO  15:05:14,310 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  15:05:14,310 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  15:05:14,571 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  15:05:14,667 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  15:05:15,749 IndexDictionaryUtils - Track input doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  15:05:15,765 MicroScheduler - Running the GATK in parallel mode with 16 total threads, 1 CPU thread(s) for each of 16 data thread(s), of 16 processors available on this machine 
+INFO  15:05:15,831 GenomeAnalysisEngine - Preparing for traversal 
+INFO  15:05:15,846 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  15:05:15,847 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  15:05:15,848 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  15:05:15,848 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  15:05:15,883 TrainingSet - Found resource track: 	Known = false 	Training = true 	Truth = true 	Prior = Q15.0 
+INFO  15:05:15,883 TrainingSet - Found resource2 track: 	Known = false 	Training = true 	Truth = true 	Prior = Q12.0 
+INFO  15:05:15,883 TrainingSet - Found resource3 track: 	Known = false 	Training = true 	Truth = false 	Prior = Q10.0 
+INFO  15:05:15,884 TrainingSet - Found resource4 track: 	Known = true 	Training = false 	Truth = false 	Prior = Q2.0 
+INFO  15:05:48,184 ProgressMeter -      1:88304797   1807987.0    32.0 s      17.0 s        2.8%    18.7 m      18.2 m 
+INFO  15:06:18,187 ProgressMeter -      5:51236870   2.1204134E7    62.0 s       2.0 s       30.1%     3.4 m       2.4 m 
+INFO  15:06:48,188 ProgressMeter -     10:29177529   3.9248622E7    92.0 s       2.0 s       55.1%     2.8 m      74.0 s 
+INFO  15:07:18,189 ProgressMeter -     18:50137249   5.9811551E7     2.0 m       2.0 s       84.8%     2.4 m      21.0 s 
+INFO  15:07:30,284 VariantDataManager - QD: 	 mean = 20.28	 standard deviation = 9.55 
+INFO  15:07:30,702 VariantDataManager - MQ: 	 mean = 59.92	 standard deviation = 0.93 
+INFO  15:07:31,122 VariantDataManager - MQRankSum: 	 mean = -0.03	 standard deviation = 0.93 
+INFO  15:07:31,653 VariantDataManager - ReadPosRankSum: 	 mean = 0.31	 standard deviation = 0.95 
+INFO  15:07:32,184 VariantDataManager - FS: 	 mean = 1.91	 standard deviation = 3.37 
+INFO  15:07:32,601 VariantDataManager - SOR: 	 mean = 0.95	 standard deviation = 0.45 
+INFO  15:07:33,020 VariantDataManager - DP: 	 mean = 34.90	 standard deviation = 7.56 
+INFO  15:07:35,475 VariantDataManager - Annotations are now ordered by their information content: [MQ, DP, QD, MQRankSum, FS, ReadPosRankSum, SOR] 
+INFO  15:07:35,659 VariantDataManager - Training with 3137657 variants after standard deviation thresholding. 
+WARN  15:07:35,660 VariantDataManager - WARNING: Very large training set detected. Downsampling to 2500000 training variants. 
+INFO  15:07:35,808 GaussianMixtureModel - Initializing model with 100 k-means iterations... 
+INFO  15:07:48,190 ProgressMeter - GL000192.1:545485   6.8399107E7     2.5 m       2.0 s      100.0%     2.5 m       0.0 s 
+INFO  15:08:18,191 ProgressMeter - GL000192.1:545485   6.8399107E7     3.0 m       2.0 s      100.0%     3.0 m       0.0 s 
+INFO  15:08:48,192 ProgressMeter - GL000192.1:545485   6.8399107E7     3.5 m       3.0 s      100.0%     3.5 m       0.0 s 
+INFO  15:09:18,193 ProgressMeter - GL000192.1:545485   6.8399107E7     4.0 m       3.0 s      100.0%     4.0 m       0.0 s 
+INFO  15:09:48,194 ProgressMeter - GL000192.1:545485   6.8399107E7     4.5 m       3.0 s      100.0%     4.5 m       0.0 s 
+INFO  15:10:18,195 ProgressMeter - GL000192.1:545485   6.8399107E7     5.0 m       4.0 s      100.0%     5.0 m       0.0 s 
+INFO  15:10:48,574 ProgressMeter - GL000192.1:545485   6.8399107E7     5.5 m       4.0 s      100.0%     5.5 m       0.0 s 
+INFO  15:11:18,575 ProgressMeter - GL000192.1:545485   6.8399107E7     6.0 m       5.0 s      100.0%     6.0 m       0.0 s 
+INFO  15:11:48,576 ProgressMeter - GL000192.1:545485   6.8399107E7     6.5 m       5.0 s      100.0%     6.5 m       0.0 s 
+INFO  15:12:18,577 ProgressMeter - GL000192.1:545485   6.8399107E7     7.0 m       6.0 s      100.0%     7.0 m       0.0 s 
+INFO  15:12:48,578 ProgressMeter - GL000192.1:545485   6.8399107E7     7.5 m       6.0 s      100.0%     7.5 m       0.0 s 
+INFO  15:12:53,131 VariantRecalibratorEngine - Finished iteration 0. 
+INFO  15:13:28,579 ProgressMeter - GL000192.1:545485   6.8399107E7     8.2 m       7.0 s      100.0%     8.2 m       0.0 s 
+INFO  15:13:58,580 ProgressMeter - GL000192.1:545485   6.8399107E7     8.7 m       7.0 s      100.0%     8.7 m       0.0 s 
+INFO  15:14:28,581 ProgressMeter - GL000192.1:545485   6.8399107E7     9.2 m       8.0 s      100.0%     9.2 m       0.0 s 
+INFO  15:14:58,582 ProgressMeter - GL000192.1:545485   6.8399107E7     9.7 m       8.0 s      100.0%     9.7 m       0.0 s 
+INFO  15:15:03,383 VariantRecalibratorEngine - Finished iteration 5. 	Current change in mixture coefficients = 1.98951 
+INFO  15:15:28,583 ProgressMeter - GL000192.1:545485   6.8399107E7    10.2 m       8.0 s      100.0%    10.2 m       0.0 s 
+INFO  15:15:58,584 ProgressMeter - GL000192.1:545485   6.8399107E7    10.7 m       9.0 s      100.0%    10.7 m       0.0 s 
+INFO  15:16:28,586 ProgressMeter - GL000192.1:545485   6.8399107E7    11.2 m       9.0 s      100.0%    11.2 m       0.0 s 
+INFO  15:16:58,587 ProgressMeter - GL000192.1:545485   6.8399107E7    11.7 m      10.0 s      100.0%    11.7 m       0.0 s 
+INFO  15:17:14,454 VariantRecalibratorEngine - Finished iteration 10. 	Current change in mixture coefficients = 0.10187 
+INFO  15:17:28,588 ProgressMeter - GL000192.1:545485   6.8399107E7    12.2 m      10.0 s      100.0%    12.2 m       0.0 s 
+INFO  15:17:58,589 ProgressMeter - GL000192.1:545485   6.8399107E7    12.7 m      11.0 s      100.0%    12.7 m       0.0 s 
+INFO  15:18:28,591 ProgressMeter - GL000192.1:545485   6.8399107E7    13.2 m      11.0 s      100.0%    13.2 m       0.0 s 
+INFO  15:18:58,593 ProgressMeter - GL000192.1:545485   6.8399107E7    13.7 m      12.0 s      100.0%    13.7 m       0.0 s 
+INFO  15:19:25,204 VariantRecalibratorEngine - Finished iteration 15. 	Current change in mixture coefficients = 0.01840 
+INFO  15:19:28,595 ProgressMeter - GL000192.1:545485   6.8399107E7    14.2 m      12.0 s      100.0%    14.2 m       0.0 s 
+INFO  15:19:58,596 ProgressMeter - GL000192.1:545485   6.8399107E7    14.7 m      12.0 s      100.0%    14.7 m       0.0 s 
+INFO  15:20:28,598 ProgressMeter - GL000192.1:545485   6.8399107E7    15.2 m      13.0 s      100.0%    15.2 m       0.0 s 
+INFO  15:20:58,600 ProgressMeter - GL000192.1:545485   6.8399107E7    15.7 m      13.0 s      100.0%    15.7 m       0.0 s 
+INFO  15:21:28,601 ProgressMeter - GL000192.1:545485   6.8399107E7    16.2 m      14.0 s      100.0%    16.2 m       0.0 s 
+INFO  15:21:34,667 VariantRecalibratorEngine - Finished iteration 20. 	Current change in mixture coefficients = 0.02016 
+INFO  15:21:58,603 ProgressMeter - GL000192.1:545485   6.8399107E7    16.7 m      14.0 s      100.0%    16.7 m       0.0 s 
+INFO  15:22:28,605 ProgressMeter - GL000192.1:545485   6.8399107E7    17.2 m      15.0 s      100.0%    17.2 m       0.0 s 
+INFO  15:22:58,607 ProgressMeter - GL000192.1:545485   6.8399107E7    17.7 m      15.0 s      100.0%    17.7 m       0.0 s 
+INFO  15:23:28,608 ProgressMeter - GL000192.1:545485   6.8399107E7    18.2 m      15.0 s      100.0%    18.2 m       0.0 s 
+INFO  15:23:46,768 VariantRecalibratorEngine - Finished iteration 25. 	Current change in mixture coefficients = 0.01942 
+INFO  15:23:58,610 ProgressMeter - GL000192.1:545485   6.8399107E7    18.7 m      16.0 s      100.0%    18.7 m       0.0 s 
+INFO  15:24:28,612 ProgressMeter - GL000192.1:545485   6.8399107E7    19.2 m      16.0 s      100.0%    19.2 m       0.0 s 
+INFO  15:24:58,613 ProgressMeter - GL000192.1:545485   6.8399107E7    19.7 m      17.0 s      100.0%    19.7 m       0.0 s 
+INFO  15:25:28,615 ProgressMeter - GL000192.1:545485   6.8399107E7    20.2 m      17.0 s      100.0%    20.2 m       0.0 s 
+INFO  15:25:58,617 ProgressMeter - GL000192.1:545485   6.8399107E7    20.7 m      18.0 s      100.0%    20.7 m       0.0 s 
+INFO  15:25:58,665 VariantRecalibratorEngine - Finished iteration 30. 	Current change in mixture coefficients = 0.01731 
+INFO  15:26:28,618 ProgressMeter - GL000192.1:545485   6.8399107E7    21.2 m      18.0 s      100.0%    21.2 m       0.0 s 
+INFO  15:26:58,620 ProgressMeter - GL000192.1:545485   6.8399107E7    21.7 m      19.0 s      100.0%    21.7 m       0.0 s 
+INFO  15:27:28,622 ProgressMeter - GL000192.1:545485   6.8399107E7    22.2 m      19.0 s      100.0%    22.2 m       0.0 s 
+INFO  15:27:58,624 ProgressMeter - GL000192.1:545485   6.8399107E7    22.7 m      19.0 s      100.0%    22.7 m       0.0 s 
+INFO  15:28:10,633 VariantRecalibratorEngine - Finished iteration 35. 	Current change in mixture coefficients = 0.01312 
+INFO  15:28:28,625 ProgressMeter - GL000192.1:545485   6.8399107E7    23.2 m      20.0 s      100.0%    23.2 m       0.0 s 
+INFO  15:28:58,627 ProgressMeter - GL000192.1:545485   6.8399107E7    23.7 m      20.0 s      100.0%    23.7 m       0.0 s 
+INFO  15:29:28,629 ProgressMeter - GL000192.1:545485   6.8399107E7    24.2 m      21.0 s      100.0%    24.2 m       0.0 s 
+INFO  15:29:58,630 ProgressMeter - GL000192.1:545485   6.8399107E7    24.7 m      21.0 s      100.0%    24.7 m       0.0 s 
+INFO  15:30:22,331 VariantRecalibratorEngine - Finished iteration 40. 	Current change in mixture coefficients = 0.00831 
+INFO  15:30:28,632 ProgressMeter - GL000192.1:545485   6.8399107E7    25.2 m      22.0 s      100.0%    25.2 m       0.0 s 
+INFO  15:30:58,634 ProgressMeter - GL000192.1:545485   6.8399107E7    25.7 m      22.0 s      100.0%    25.7 m       0.0 s 
+INFO  15:31:28,635 ProgressMeter - GL000192.1:545485   6.8399107E7    26.2 m      22.0 s      100.0%    26.2 m       0.0 s 
+INFO  15:31:58,637 ProgressMeter - GL000192.1:545485   6.8399107E7    26.7 m      23.0 s      100.0%    26.7 m       0.0 s 
+INFO  15:32:28,639 ProgressMeter - GL000192.1:545485   6.8399107E7    27.2 m      23.0 s      100.0%    27.2 m       0.0 s 
+INFO  15:32:34,391 VariantRecalibratorEngine - Finished iteration 45. 	Current change in mixture coefficients = 0.00450 
+INFO  15:32:58,641 ProgressMeter - GL000192.1:545485   6.8399107E7    27.7 m      24.0 s      100.0%    27.7 m       0.0 s 
+INFO  15:33:28,642 ProgressMeter - GL000192.1:545485   6.8399107E7    28.2 m      24.0 s      100.0%    28.2 m       0.0 s 
+INFO  15:33:58,644 ProgressMeter - GL000192.1:545485   6.8399107E7    28.7 m      25.0 s      100.0%    28.7 m       0.0 s 
+INFO  15:34:28,646 ProgressMeter - GL000192.1:545485   6.8399107E7    29.2 m      25.0 s      100.0%    29.2 m       0.0 s 
+INFO  15:34:46,561 VariantRecalibratorEngine - Finished iteration 50. 	Current change in mixture coefficients = 0.00284 
+INFO  15:34:58,648 ProgressMeter - GL000192.1:545485   6.8399107E7    29.7 m      26.0 s      100.0%    29.7 m       0.0 s 
+INFO  15:35:28,649 ProgressMeter - GL000192.1:545485   6.8399107E7    30.2 m      26.0 s      100.0%    30.2 m       0.0 s 
+INFO  15:35:58,651 ProgressMeter - GL000192.1:545485   6.8399107E7    30.7 m      26.0 s      100.0%    30.7 m       0.0 s 
+INFO  15:36:28,653 ProgressMeter - GL000192.1:545485   6.8399107E7    31.2 m      27.0 s      100.0%    31.2 m       0.0 s 
+INFO  15:36:58,301 VariantRecalibratorEngine - Finished iteration 55. 	Current change in mixture coefficients = 0.00232 
+INFO  15:36:58,654 ProgressMeter - GL000192.1:545485   6.8399107E7    31.7 m      27.0 s      100.0%    31.7 m       0.0 s 
+INFO  15:37:28,656 ProgressMeter - GL000192.1:545485   6.8399107E7    32.2 m      28.0 s      100.0%    32.2 m       0.0 s 
+INFO  15:37:58,658 ProgressMeter - GL000192.1:545485   6.8399107E7    32.7 m      28.0 s      100.0%    32.7 m       0.0 s 
+INFO  15:38:28,660 ProgressMeter - GL000192.1:545485   6.8399107E7    33.2 m      29.0 s      100.0%    33.2 m       0.0 s 
+INFO  15:38:58,661 ProgressMeter - GL000192.1:545485   6.8399107E7    33.7 m      29.0 s      100.0%    33.7 m       0.0 s 
+INFO  15:39:08,809 VariantRecalibratorEngine - Finished iteration 60. 	Current change in mixture coefficients = 0.00230 
+INFO  15:39:28,663 ProgressMeter - GL000192.1:545485   6.8399107E7    34.2 m      30.0 s      100.0%    34.2 m       0.0 s 
+INFO  15:39:58,665 ProgressMeter - GL000192.1:545485   6.8399107E7    34.7 m      30.0 s      100.0%    34.7 m       0.0 s 
+INFO  15:40:28,666 ProgressMeter - GL000192.1:545485   6.8399107E7    35.2 m      30.0 s      100.0%    35.2 m       0.0 s 
+INFO  15:40:58,668 ProgressMeter - GL000192.1:545485   6.8399107E7    35.7 m      31.0 s      100.0%    35.7 m       0.0 s 
+INFO  15:41:20,712 VariantRecalibratorEngine - Finished iteration 65. 	Current change in mixture coefficients = 0.00268 
+INFO  15:41:28,670 ProgressMeter - GL000192.1:545485   6.8399107E7    36.2 m      31.0 s      100.0%    36.2 m       0.0 s 
+INFO  15:41:58,672 ProgressMeter - GL000192.1:545485   6.8399107E7    36.7 m      32.0 s      100.0%    36.7 m       0.0 s 
+INFO  15:42:28,673 ProgressMeter - GL000192.1:545485   6.8399107E7    37.2 m      32.0 s      100.0%    37.2 m       0.0 s 
+INFO  15:42:58,675 ProgressMeter - GL000192.1:545485   6.8399107E7    37.7 m      33.0 s      100.0%    37.7 m       0.0 s 
+INFO  15:43:28,677 ProgressMeter - GL000192.1:545485   6.8399107E7    38.2 m      33.0 s      100.0%    38.2 m       0.0 s 
+INFO  15:43:30,239 VariantRecalibratorEngine - Finished iteration 70. 	Current change in mixture coefficients = 0.00367 
+INFO  15:43:58,678 ProgressMeter - GL000192.1:545485   6.8399107E7    38.7 m      33.0 s      100.0%    38.7 m       0.0 s 
+INFO  15:44:28,680 ProgressMeter - GL000192.1:545485   6.8399107E7    39.2 m      34.0 s      100.0%    39.2 m       0.0 s 
+INFO  15:44:58,682 ProgressMeter - GL000192.1:545485   6.8399107E7    39.7 m      34.0 s      100.0%    39.7 m       0.0 s 
+INFO  15:45:28,684 ProgressMeter - GL000192.1:545485   6.8399107E7    40.2 m      35.0 s      100.0%    40.2 m       0.0 s 
+INFO  15:45:41,587 VariantRecalibratorEngine - Finished iteration 75. 	Current change in mixture coefficients = 0.00605 
+INFO  15:45:58,685 ProgressMeter - GL000192.1:545485   6.8399107E7    40.7 m      35.0 s      100.0%    40.7 m       0.0 s 
+INFO  15:46:28,687 ProgressMeter - GL000192.1:545485   6.8399107E7    41.2 m      36.0 s      100.0%    41.2 m       0.0 s 
+INFO  15:46:58,689 ProgressMeter - GL000192.1:545485   6.8399107E7    41.7 m      36.0 s      100.0%    41.7 m       0.0 s 
+INFO  15:47:28,691 ProgressMeter - GL000192.1:545485   6.8399107E7    42.2 m      37.0 s      100.0%    42.2 m       0.0 s 
+INFO  15:47:53,077 VariantRecalibratorEngine - Finished iteration 80. 	Current change in mixture coefficients = 0.01078 
+INFO  15:47:58,692 ProgressMeter - GL000192.1:545485   6.8399107E7    42.7 m      37.0 s      100.0%    42.7 m       0.0 s 
+INFO  15:48:28,694 ProgressMeter - GL000192.1:545485   6.8399107E7    43.2 m      37.0 s      100.0%    43.2 m       0.0 s 
+INFO  15:48:58,696 ProgressMeter - GL000192.1:545485   6.8399107E7    43.7 m      38.0 s      100.0%    43.7 m       0.0 s 
+INFO  15:49:28,697 ProgressMeter - GL000192.1:545485   6.8399107E7    44.2 m      38.0 s      100.0%    44.2 m       0.0 s 
+INFO  15:49:58,699 ProgressMeter - GL000192.1:545485   6.8399107E7    44.7 m      39.0 s      100.0%    44.7 m       0.0 s 
+INFO  15:50:03,777 VariantRecalibratorEngine - Finished iteration 85. 	Current change in mixture coefficients = 0.00844 
+INFO  15:50:28,701 ProgressMeter - GL000192.1:545485   6.8399107E7    45.2 m      39.0 s      100.0%    45.2 m       0.0 s 
+INFO  15:50:58,703 ProgressMeter - GL000192.1:545485   6.8399107E7    45.7 m      40.0 s      100.0%    45.7 m       0.0 s 
+INFO  15:51:28,704 ProgressMeter - GL000192.1:545485   6.8399107E7    46.2 m      40.0 s      100.0%    46.2 m       0.0 s 
+INFO  15:51:58,706 ProgressMeter - GL000192.1:545485   6.8399107E7    46.7 m      40.0 s      100.0%    46.7 m       0.0 s 
+INFO  15:52:15,342 VariantRecalibratorEngine - Finished iteration 90. 	Current change in mixture coefficients = 0.00239 
+INFO  15:52:28,708 ProgressMeter - GL000192.1:545485   6.8399107E7    47.2 m      41.0 s      100.0%    47.2 m       0.0 s 
+INFO  15:52:41,261 VariantRecalibratorEngine - Convergence after 91 iterations! 
+INFO  15:52:58,709 ProgressMeter - GL000192.1:545485   6.8399107E7    47.7 m      41.0 s      100.0%    47.7 m       0.0 s 
+INFO  15:52:59,809 VariantRecalibratorEngine - Evaluating full set of 4067912 variants... 
+INFO  15:53:28,711 ProgressMeter - GL000192.1:545485   6.8399107E7    48.2 m      42.0 s      100.0%    48.2 m       0.0 s 
+INFO  15:53:58,713 ProgressMeter - GL000192.1:545485   6.8399107E7    48.7 m      42.0 s      100.0%    48.7 m       0.0 s 
+INFO  15:54:28,715 ProgressMeter - GL000192.1:545485   6.8399107E7    49.2 m      43.0 s      100.0%    49.2 m       0.0 s 
+INFO  15:54:58,716 ProgressMeter - GL000192.1:545485   6.8399107E7    49.7 m      43.0 s      100.0%    49.7 m       0.0 s 
+INFO  15:55:28,718 ProgressMeter - GL000192.1:545485   6.8399107E7    50.2 m      44.0 s      100.0%    50.2 m       0.0 s 
+INFO  15:55:46,259 VariantDataManager - Training with worst 302731 scoring variants --> variants with LOD <= -5.0000. 
+INFO  15:55:46,259 GaussianMixtureModel - Initializing model with 100 k-means iterations... 
+INFO  15:55:58,720 ProgressMeter - GL000192.1:545485   6.8399107E7    50.7 m      44.0 s      100.0%    50.7 m       0.0 s 
+INFO  15:55:59,394 VariantRecalibratorEngine - Finished iteration 0. 
+INFO  15:56:02,776 VariantRecalibratorEngine - Finished iteration 5. 	Current change in mixture coefficients = 0.04133 
+INFO  15:56:06,151 VariantRecalibratorEngine - Finished iteration 10. 	Current change in mixture coefficients = 0.00070 
+INFO  15:56:06,151 VariantRecalibratorEngine - Convergence after 10 iterations! 
+INFO  15:56:06,698 VariantRecalibratorEngine - Evaluating full set of 4067912 variants... 
+INFO  15:56:28,721 ProgressMeter - GL000192.1:545485   6.8399107E7    51.2 m      44.0 s      100.0%    51.2 m       0.0 s 
+INFO  15:56:58,722 ProgressMeter - GL000192.1:545485   6.8399107E7    51.7 m      45.0 s      100.0%    51.7 m       0.0 s 
+INFO  15:57:28,724 ProgressMeter - GL000192.1:545485   6.8399107E7    52.2 m      45.0 s      100.0%    52.2 m       0.0 s 
+INFO  15:57:53,237 TrancheManager - Finding 4 tranches for 4067912 variants 
+INFO  15:57:56,015 TrancheManager -   Tranche threshold 100.00 => selection metric threshold 0.000 
+INFO  15:57:56,490 TrancheManager -   Found tranche for 100.000: 0.000 threshold starting with variant 0; running score is 0.000  
+INFO  15:57:56,490 TrancheManager -   Tranche is Tranche ts=100.00 minVQSLod=-38125.8843 known=(3873381 @ 2.0234) novel=(194531 @ 1.3922) truthSites(1755779 accessible, 1755779 called), name=anonymous] 
+INFO  15:57:56,490 TrancheManager -   Tranche threshold 99.90 => selection metric threshold 0.001 
+INFO  15:57:56,978 TrancheManager -   Found tranche for 99.900: 0.001 threshold starting with variant 217953; running score is 0.001  
+INFO  15:57:56,978 TrancheManager -   Tranche is Tranche ts=99.90 minVQSLod=-5.2119 known=(3722404 @ 2.0452) novel=(127555 @ 1.4113) truthSites(1755779 accessible, 1754023 called), name=anonymous] 
+INFO  15:57:56,978 TrancheManager -   Tranche threshold 99.00 => selection metric threshold 0.010 
+INFO  15:57:57,424 TrancheManager -   Found tranche for 99.000: 0.010 threshold starting with variant 664907; running score is 0.010  
+INFO  15:57:57,425 TrancheManager -   Tranche is Tranche ts=99.00 minVQSLod=1.0101 known=(3361440 @ 2.0709) novel=(41565 @ 1.4528) truthSites(1755779 accessible, 1738221 called), name=anonymous] 
+INFO  15:57:57,425 TrancheManager -   Tranche threshold 90.00 => selection metric threshold 0.100 
+INFO  15:57:57,869 TrancheManager -   Found tranche for 90.000: 0.100 threshold starting with variant 1478462; running score is 0.100  
+INFO  15:57:57,869 TrancheManager -   Tranche is Tranche ts=90.00 minVQSLod=16.2102 known=(2583873 @ 2.1165) novel=(5577 @ 1.7192) truthSites(1755779 accessible, 1580201 called), name=anonymous] 
+INFO  15:57:57,871 VariantRecalibrator - Writing out recalibration table... 
+INFO  15:57:58,725 ProgressMeter - GL000192.1:545485   6.8399107E7    52.7 m      46.0 s      100.0%    52.7 m       0.0 s 
+INFO  15:58:27,349 VariantRecalibrator - Writing out visualization Rscript file... 
+INFO  15:58:27,583 VariantRecalibrator - Building MQ x DP plot... 
+INFO  15:58:27,588 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:28,287 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:28,690 VariantRecalibrator - Building MQ x QD plot... 
+INFO  15:58:28,691 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:28,726 ProgressMeter - GL000192.1:545485   6.8399107E7    53.2 m      46.0 s      100.0%    53.2 m       0.0 s 
+INFO  15:58:29,391 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:29,752 VariantRecalibrator - Building MQ x MQRankSum plot... 
+INFO  15:58:29,753 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:30,441 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:30,791 VariantRecalibrator - Building MQ x FS plot... 
+INFO  15:58:30,791 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:31,482 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:31,840 VariantRecalibrator - Building MQ x ReadPosRankSum plot... 
+INFO  15:58:31,841 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:32,540 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:32,895 VariantRecalibrator - Building MQ x SOR plot... 
+INFO  15:58:32,896 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:33,593 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:33,948 VariantRecalibrator - Building DP x QD plot... 
+INFO  15:58:33,949 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:34,652 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:35,007 VariantRecalibrator - Building DP x MQRankSum plot... 
+INFO  15:58:35,008 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:35,699 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:36,049 VariantRecalibrator - Building DP x FS plot... 
+INFO  15:58:36,049 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:36,745 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:37,102 VariantRecalibrator - Building DP x ReadPosRankSum plot... 
+INFO  15:58:37,103 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:37,805 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:38,162 VariantRecalibrator - Building DP x SOR plot... 
+INFO  15:58:38,163 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:38,870 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:39,224 VariantRecalibrator - Building QD x MQRankSum plot... 
+INFO  15:58:39,225 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:39,917 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:40,286 VariantRecalibrator - Building QD x FS plot... 
+INFO  15:58:40,287 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:40,984 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:41,342 VariantRecalibrator - Building QD x ReadPosRankSum plot... 
+INFO  15:58:41,343 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:42,045 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:42,401 VariantRecalibrator - Building QD x SOR plot... 
+INFO  15:58:42,402 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:43,106 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:43,461 VariantRecalibrator - Building MQRankSum x FS plot... 
+INFO  15:58:43,461 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:44,146 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:44,499 VariantRecalibrator - Building MQRankSum x ReadPosRankSum plot... 
+INFO  15:58:44,500 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:45,190 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:45,540 VariantRecalibrator - Building MQRankSum x SOR plot... 
+INFO  15:58:45,541 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:46,233 VariantRecalibratorEngine - Evaluating full set of 3660 variants... 
+INFO  15:58:46,582 VariantRecalibrator - Building FS x ReadPosRankSum plot... 
+INFO  15:58:46,583 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:47,280 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:47,638 VariantRecalibrator - Building FS x SOR plot... 
+INFO  15:58:47,639 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:48,331 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:48,688 VariantRecalibrator - Building ReadPosRankSum x SOR plot... 
+INFO  15:58:48,689 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:49,391 VariantRecalibratorEngine - Evaluating full set of 3721 variants... 
+INFO  15:58:49,747 VariantRecalibrator - Executing: Rscript /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.vqsr.r 
+WARN  15:58:52,775 RScriptExecutor - RScript exited with 1. Run with -l DEBUG for more info. 
+INFO  15:58:52,805 VariantRecalibrator - Executing: Rscript (resource)org/broadinstitute/gatk/tools/walkers/variantrecalibration/plot_Tranches.R /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.tranches 2.15 
+INFO  15:58:58,727 ProgressMeter - GL000192.1:545485   6.8399107E7    53.7 m      47.0 s      100.0%    53.7 m       0.0 s 
+INFO  15:59:12,396 ProgressMeter -            done   6.8408272E7    53.9 m      47.0 s      100.0%    53.9 m       0.0 s 
+INFO  15:59:12,397 ProgressMeter - Total runtime 3236.55 secs, 53.94 min, 0.90 hours 
+INFO  15:59:20,390 GATKRunReport - Uploaded run statistics report to AWS S3 

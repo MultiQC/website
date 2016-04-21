@@ -1,0 +1,50 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/GenomeAnalysisTK.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/Queue.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  18:11:42,384 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  18:11:42,386 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.3-0-geee94ec, Compiled 2015/12/17 12:33:03 
+INFO  18:11:42,386 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  18:11:42,386 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  18:11:42,391 HelpFormatter - Program Args: -T VariantEval -R /proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta -o /scratch/108820/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.indel.eval -eval /scratch/108820/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.recalibrated.indel.vcf.gz -eval /scratch/108820/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.raw.indel.vcf.gz -comp:hapmap /proj/a2014205/piper_references/gatk_bundle/2.8/b37/hapmap_3.3.b37.vcf -D /proj/a2014205/piper_references/gatk_bundle/2.8/b37/dbsnp_138.b37.vcf -noEV 
+INFO  18:11:42,397 HelpFormatter - Executing as funk_002@n29.uppmax.uu.se on Linux 2.6.32-573.18.1.el6.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_25-b15. 
+INFO  18:11:42,397 HelpFormatter - Date/Time: 2016/02/24 18:11:42 
+INFO  18:11:42,398 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  18:11:42,398 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  18:11:42,516 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  18:11:42,594 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  18:11:43,158 IndexDictionaryUtils - Track eval doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  18:11:43,158 IndexDictionaryUtils - Track eval2 doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  18:11:43,242 GenomeAnalysisEngine - Preparing for traversal 
+INFO  18:11:43,257 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  18:11:43,257 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  18:11:43,258 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  18:11:43,258 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  18:11:43,276 VariantEval - Creating 12 combinatorial stratification states 
+INFO  18:12:13,262 ProgressMeter -     1:116677462   2688143.0    30.0 s      11.0 s        3.8%    13.3 m      12.8 m 
+INFO  18:12:43,263 ProgressMeter -      2:15394427   5700164.0    60.0 s      10.0 s        8.5%    11.7 m      10.7 m 
+INFO  18:13:13,265 ProgressMeter -     2:146409457   8715207.0    90.0 s      10.0 s       12.8%    11.8 m      10.3 m 
+INFO  18:13:43,266 ProgressMeter -      3:29352193   1.1686011E7   120.0 s      10.0 s       16.8%    11.9 m       9.9 m 
+INFO  18:14:13,267 ProgressMeter -     3:160287085   1.4664423E7     2.5 m      10.0 s       21.0%    11.9 m       9.4 m 
+INFO  18:14:43,268 ProgressMeter -      4:84438469   1.7654595E7     3.0 m      10.0 s       25.0%    12.0 m       9.0 m 
+INFO  18:15:13,269 ProgressMeter -      5:18430314   2.0641286E7     3.5 m      10.0 s       29.0%    12.1 m       8.6 m 
+INFO  18:15:43,270 ProgressMeter -     5:151523049   2.3612391E7     4.0 m      10.0 s       33.3%    12.0 m       8.0 m 
+INFO  18:16:13,271 ProgressMeter -      6:90638348   2.6574699E7     4.5 m      10.0 s       37.2%    12.1 m       7.6 m 
+INFO  18:16:43,272 ProgressMeter -      7:40287849   2.9555159E7     5.0 m      10.0 s       41.1%    12.2 m       7.2 m 
+INFO  18:17:13,273 ProgressMeter -       8:5310427   3.2559603E7     5.5 m      10.0 s       45.1%    12.2 m       6.7 m 
+INFO  18:17:43,274 ProgressMeter -     8:132768080   3.5538458E7     6.0 m      10.0 s       49.2%    12.2 m       6.2 m 
+INFO  18:18:13,275 ProgressMeter -     9:132078657   3.8537426E7     6.5 m      10.0 s       53.9%    12.1 m       5.6 m 
+INFO  18:18:43,276 ProgressMeter -    10:115153702   4.1517871E7     7.0 m      10.0 s       57.9%    12.1 m       5.1 m 
+INFO  18:19:13,277 ProgressMeter -    11:101970359   4.4486736E7     7.5 m      10.0 s       61.8%    12.1 m       4.6 m 
+INFO  18:19:43,278 ProgressMeter -     12:93958652   4.7464969E7     8.0 m      10.0 s       65.9%    12.1 m       4.1 m 
+INFO  18:20:13,280 ProgressMeter -    13:102935774   5.0438346E7     8.5 m      10.0 s       70.5%    12.1 m       3.6 m 
+INFO  18:20:43,281 ProgressMeter -     15:43175796   5.3444649E7     9.0 m      10.0 s       75.8%    11.9 m       2.9 m 
+INFO  18:21:13,282 ProgressMeter -     16:72089286   5.6453873E7     9.5 m      10.0 s       80.0%    11.9 m       2.4 m 
+INFO  18:21:43,283 ProgressMeter -     18:20542084   5.9468169E7    10.0 m      10.0 s       83.9%    11.9 m     115.0 s 
+INFO  18:22:13,284 ProgressMeter -       20:827296   6.246389E7    10.5 m      10.0 s       87.7%    12.0 m      88.0 s 
+INFO  18:22:43,285 ProgressMeter -     22:34044421   6.5465713E7    11.0 m      10.0 s       92.3%    11.9 m      54.0 s 
+INFO  18:23:13,286 ProgressMeter -      Y:13650384   6.8553426E7    11.5 m      10.0 s       98.3%    11.7 m      11.0 s 
+INFO  18:23:14,410 VariantEval - Finalizing variant report 
+INFO  18:23:14,426 ProgressMeter -            done   6.8679013E7    11.5 m      10.0 s      100.0%    11.5 m       0.0 s 
+INFO  18:23:14,426 ProgressMeter - Total runtime 691.17 secs, 11.52 min, 0.19 hours 
+INFO  18:23:17,466 GATKRunReport - Uploaded run statistics report to AWS S3 

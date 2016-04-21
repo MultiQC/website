@@ -1,0 +1,4 @@
+rsync: mkdir "/proj/bils2016002/INBOX/P4107" failed: No such file or directory (2)
+rsync error: error in file IO (code 11) at main.c(576) [receiver=3.0.6]
+rsync: connection unexpectedly closed (9 bytes received so far) [sender]
+rsync error: error in rsync protocol data stream (code 12) at io.c(600) [sender=3.0.6]

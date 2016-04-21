@@ -1,0 +1,11 @@
+sending incremental file list
+created directory /proj/a2010002/INBOX/P4107
+DELIVERY.README.txt
+P4107_1006.md5
+00-Reports/
+00-Reports/P4107_1006.clean.dedup.recal.bam.recalibrated.indel.annotated.vcf.gz.snpEff.summary.csv
+00-Reports/P4107_1006.clean.dedup.recal.bam.recalibrated.indel.annotated.vcf.gz.snpEff.summary.genes.txt
+00-Reports/P4107_1006.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+00-Reports/P4107_1006.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.genes.txt
+Started command rsync --exclude=*rsync.out --exclude=*rsync.err --perms --verbose --copy-links --recursive --files-from=/apus/v1/a2014205/nobackup/NGI/analysis_ready/DELIVERY/P4107/P4107_1006.lst --chmod=ug+rwX,o-rwx /apus/v1/a2014205/nobackup/NGI/analysis_ready/DELIVERY/P4107 /proj/a2010002/INBOX/P4107 on 2016-03-07 13:51:22.235645
+===========

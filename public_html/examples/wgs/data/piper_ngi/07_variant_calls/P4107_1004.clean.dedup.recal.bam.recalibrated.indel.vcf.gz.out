@@ -1,0 +1,26 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/GenomeAnalysisTK.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/Queue.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  13:00:38,346 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  13:00:38,348 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.3-0-geee94ec, Compiled 2015/12/17 12:33:03 
+INFO  13:00:38,348 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  13:00:38,349 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  13:00:38,353 HelpFormatter - Program Args: -T ApplyRecalibration -R /proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta -input /scratch/108816/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.raw.indel.vcf.gz -recalFile /scratch/108816/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.indel.tranches.recal -tranchesFile /scratch/108816/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.indel.tranches -o /scratch/108816/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.recalibrated.indel.vcf.gz -mode INDEL 
+INFO  13:00:38,356 HelpFormatter - Executing as funk_002@n21.uppmax.uu.se on Linux 2.6.32-573.18.1.el6.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_25-b15. 
+INFO  13:00:38,356 HelpFormatter - Date/Time: 2016/02/24 13:00:38 
+INFO  13:00:38,356 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  13:00:38,356 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  13:00:38,464 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  13:00:38,543 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  13:00:38,791 IndexDictionaryUtils - Track input doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  13:00:38,851 GenomeAnalysisEngine - Preparing for traversal 
+INFO  13:00:38,874 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  13:00:38,874 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  13:00:38,874 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  13:00:38,876 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  13:00:38,901 ApplyRecalibration - Keeping all variants with VQSLOD >= 0.0 
+INFO  13:01:08,880 ProgressMeter -     10:51783778   1633831.0    30.0 s      18.0 s       55.8%    53.0 s      23.0 s 
+INFO  13:01:29,397 ProgressMeter -            done   2855224.0    50.0 s      17.0 s      100.0%    50.0 s       0.0 s 
+INFO  13:01:29,398 ProgressMeter - Total runtime 50.52 secs, 0.84 min, 0.01 hours 
+INFO  13:01:30,602 GATKRunReport - Uploaded run statistics report to AWS S3 

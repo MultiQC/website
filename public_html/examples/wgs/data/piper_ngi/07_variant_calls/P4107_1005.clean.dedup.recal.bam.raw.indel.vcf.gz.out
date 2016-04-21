@@ -1,0 +1,27 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/GenomeAnalysisTK.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/apus/v1/a2014205/software/piper_bin/Piper/Piper-v1.3.0/lib/Queue.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+INFO  16:26:49,747 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  16:26:49,749 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.3-0-geee94ec, Compiled 2015/12/17 12:33:03 
+INFO  16:26:49,749 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  16:26:49,749 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  16:26:49,754 HelpFormatter - Program Args: -T SelectVariants -R /proj/a2014205/piper_references/gatk_bundle/2.8/b37/human_g1k_v37.fasta -V /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.raw.vcf.gz -o /scratch/108818/ANALYSIS/P4107/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.raw.indel.vcf.gz -selectType INDEL 
+INFO  16:26:49,757 HelpFormatter - Executing as funk_002@n19.uppmax.uu.se on Linux 2.6.32-573.18.1.el6.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_25-b15. 
+INFO  16:26:49,757 HelpFormatter - Date/Time: 2016/02/24 16:26:49 
+INFO  16:26:49,757 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  16:26:49,757 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  16:26:49,875 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:26:49,955 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  16:26:50,152 IndexDictionaryUtils - Track variant doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  16:26:50,210 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:26:50,226 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:26:50,226 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:26:50,226 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:26:50,227 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:27:20,230 ProgressMeter -      6:22142907   2464508.0    30.0 s      12.0 s       35.0%    85.0 s      55.0 s 
+INFO  16:27:50,231 ProgressMeter -     14:48205618   5185345.0    60.0 s      11.0 s       72.5%    82.0 s      22.0 s 
+INFO  16:28:09,661 SelectVariants - 4991805 records processed. 
+INFO  16:28:10,089 ProgressMeter -            done   6956163.0    79.0 s      11.0 s      100.0%    79.0 s       0.0 s 
+INFO  16:28:10,089 ProgressMeter - Total runtime 79.86 secs, 1.33 min, 0.02 hours 
+INFO  16:28:11,772 GATKRunReport - Uploaded run statistics report to AWS S3 

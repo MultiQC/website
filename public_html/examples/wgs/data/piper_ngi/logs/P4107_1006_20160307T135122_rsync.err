@@ -1,0 +1,1 @@
+rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at rsync.c(546) [sender=3.0.6]

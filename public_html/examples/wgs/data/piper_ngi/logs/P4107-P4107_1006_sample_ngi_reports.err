@@ -1,0 +1,22 @@
+2016-03-07 15:02:01,032 - NGI Reports - INFO - Report type: ign_sample_report
+/home/vezzi/miniconda2/lib/python2.7/site-packages/matplotlib-1.5.1-py2.7-linux-x86_64.egg/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn('Matplotlib is building the font cache using fc-list. This may take a moment.')
+2016-03-07 15:02:06,832 - NGI Reports - INFO - Found 6 Piper setup XML files..
+Traceback (most recent call last):
+  File "/home/vezzi/miniconda2/bin/ngi_reports", line 6, in <module>
+    exec(compile(open(__file__).read(), __file__, 'exec'))
+  File "/apus/h1/vezzi/software/ngi_reports/scripts/ngi_reports", line 185, in <module>
+    make_reports(**kwargs)
+  File "/apus/h1/vezzi/software/ngi_reports/scripts/ngi_reports", line 41, in make_reports
+    report = report_mod.Report(config, LOG, working_dir, **kwargs)
+  File "/apus/h1/vezzi/software/ngi_reports/ngi_reports/stockholm/ign_sample_report.py", line 19, in __init__
+    super(Report, self).__init__(config, LOG, working_dir, **kwargs)
+  File "/apus/h1/vezzi/software/ngi_reports/ngi_reports/common/ign_sample_report.py", line 59, in __init__
+    self.parse_qualimap()
+  File "/apus/h1/vezzi/software/ngi_reports/ngi_reports/common/ign_sample_report.py", line 92, in parse_qualimap
+    qualimap_data_dir = self._tool_output_path('qualimap', {'sample_id': sample_id})
+  File "/apus/h1/vezzi/software/ngi_reports/ngi_reports/common/ign_sample_report.py", line 65, in _tool_output_path
+    path_pattern = self.config.get('paths', path_key)
+  File "/home/vezzi/miniconda2/lib/python2.7/ConfigParser.py", line 607, in get
+    raise NoSectionError(section)
+ConfigParser.NoSectionError: No section: 'paths'
