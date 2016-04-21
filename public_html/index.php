@@ -230,7 +230,7 @@ multiqc .</code></pre>
             </div>
             <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
               Note that the example report has some user-specific config settings, seen in the 
-              <code><a href="examples/wgs/multiqc_config.yaml">multiqc_config.yaml</a></code> file.</p>
+              <code><a href="examples/wgs/multiqc_config.yaml" target="_blank">multiqc_config.yaml</a></code> file.</p>
           </div>
           <div id="demo-bsseq-description" style="display: none;">
             <p>The example methylation report is based on analysis of data from the GEO NCBI project
@@ -253,13 +253,21 @@ multiqc .</code></pre>
             <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
           </div>
           <div id="demo-hic-description" style="display: none;">
-            <p>This demo report is being worked on and will be added soon.</p>
+            <p>This Hi-C MultiQC report was generated using Hi-C data from Louise Harewood at
+              <a href="http://www.cambridgecancer.org.uk/" target="_blank">CRUK Cambridge Institute</a>.
+              Reads were run through <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a>
+              and then processed using <a href="http://www.bioinformatics.babraham.ac.uk/projects/hicup/" target="_blank">HiCUP</a> (Hi-C User Pipeline).</p>
             <div class="btn-group pull-right" role="group">
-              <a href="#" class="btn btn-default" disabled>
-                Coming soon..
+              <a href="examples/hi-c/multiqc_report.zip" class="btn btn-default">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span> Download report
+              </a>
+              <a href="examples/hi-c/data.zip" class="btn btn-default">
+                <span class="fa fa-files-o" aria-hidden="true"></span> Download logs
               </a>
             </div>
-            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
+              Note that the example report has some user-specific config settings, seen in the 
+              <code><a href="examples/hi-c/multiqc_config.yaml" target="_blank">multiqc_config.yaml</a></code> file.</p>
           </div>
         </div>
       </div>
