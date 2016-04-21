@@ -89,12 +89,10 @@ if(count($md_parts) == 3){
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class="dropdown-header">Analysis Types</li>
-                  <li><a href="#">Whole Genome</a></li>
                   <li><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
+                  <li><a href="examples/wgs/multiqc_report.html">Whole Genome</a></li>
                   <li><a href="examples/bs-seq/multiqc_report.html">Bisulfite</a></li>
-                  <li class="dropdown-header">Report Variants</li>
-                  <li><a href="#">Many Samples</a></li>
-                  <li><a href="#">Directory Names</a></li>
+                  <li><a href="examples/hi-c/multiqc_report.html">Hi-C</a></li>
                 </ul>
               </li>
               <li><a href="https://www.github.com/ewels/MultiQC">GitHub</a></li>
