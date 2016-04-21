@@ -193,9 +193,13 @@ multiqc .</code></pre>
             <p>This report was generated using logs from an analysis accidentally run on ChIP-Seq data from
               the <em>BI Human Reference Epigenome Mapping Project: ChIP-Seq in human subject</em> dataset
                (<a href="http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP001534" target="_blank">SRP001534</a>).</p>
-            <p>Initial QC was done using FastQC, followed by trimming with TrimGalore! (a wrapper around cutadapt).
-            Reads were aligned using STAR and overlaps counted with featureCounts.
-            <!-- The RSeQC package was used to check various quality control aspects of the data. -->
+            <p>Initial QC was done using <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a>,
+              followed by trimming with <a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" target="_blank">TrimGalore!</a>
+              (a wrapper around <a href="https://github.com/marcelm/cutadapt" target="_blank">cutadapt</a>).
+            Reads were aligned using <a href="https://github.com/alexdobin/STAR" target="_blank">STAR</a> and overlaps
+            counted with <a href="http://bioinf.wehi.edu.au/featureCounts/" target="_blank">featureCounts</a>.
+            <!-- The <a href="http://rseqc.sourceforge.net/" target="_blank">RSeQC</a> package was used to check
+            various quality control aspects of the data. -->
           </p>
             <div class="btn-group pull-right" role="group">
               <a href="examples/rna-seq/multiqc_report.zip" class="btn btn-default">
@@ -208,13 +212,25 @@ multiqc .</code></pre>
             <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
           </div>
           <div id="demo-wgs-description" style="display: none;">
-            <p>This demo report is being worked on and will be added soon.</p>
+            <p>The data from this report comes from an analysis of HapMap trio samples, run by the
+            <a href="https://www.scilifelab.se/platforms/ngi/" target="_blank">National Genomics Infrastructre</a>
+            (NGI) at SciLifeLab, Sweden. Initial quality control was done using <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a>
+            and <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/" target="_blank">FastQ Screen</a>.
+            Reads were processed with <a href="https://www.broadinstitute.org/gatk/" taret="_blank">GATK</a> and the aligned reads analysed using 
+            <a href="http://broadinstitute.github.io/picard/" target="_blank">Picard</a>. Downstream QC was done using
+            <a href="http://qualimap.bioinfo.cipf.es/" target="_blank">Qualimap BamQC</a> and
+            <a href="http://snpeff.sourceforge.net/" target="_blank">SnpEff</a>.</p>
             <div class="btn-group pull-right" role="group">
-              <a href="#" class="btn btn-default" disabled>
-                Coming soon..
+              <a href="examples/wgs/multiqc_report.zip" class="btn btn-default">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span> Download report
+              </a>
+              <a href="examples/wgs/data.zip" class="btn btn-default">
+                <span class="fa fa-files-o" aria-hidden="true"></span> Download logs
               </a>
             </div>
-            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.</p>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
+              Note that the example report has some user-specific config settings, seen in the 
+              <code><a href="examples/wgs/multiqc_config.yaml">multiqc_config.yaml</a></code> file.</p>
           </div>
           <div id="demo-bsseq-description" style="display: none;">
             <p>The example methylation report is based on analysis of data from the GEO NCBI project
