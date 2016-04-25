@@ -122,9 +122,9 @@ if(count($md_parts) == 3){
               <div class="col-md-6">
                 <ul class="list-switch left video-chooser">
                   <li><a href="https://youtu.be/BbScv9TcaMg" data-src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" class="active"><span class="hidden-lg hidden-md label label-default">Video</span> Introduction to MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="https://youtu.be/IvUU8joBb1Q" data-src="https://www.youtube.com/embed/IvUU8joBb1Q?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="https://youtu.be/VMSucLLmPwU" data-src="https://www.youtube.com/embed/VMSucLLmPwU?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="https://youtu.be/tU1b1H2EWU4" data-src="https://www.youtube.com/embed/tU1b1H2EWU4?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> MultiQC Reports <em>(1:19)</em></a></li>
+                  <li><a href="https://youtu.be/IvUU8joBb1Q" data-src="https://www.youtube.com/embed/Gg5neIPuiVo?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(4:33)</em></a></li>
+                  <li><a href="https://youtu.be/VMSucLLmPwU" data-src="https://www.youtube.com/embed/cktKbESOOno?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Running MultiQC <em>(5:21)</em></a></li>
+                  <li><a href="https://youtu.be/tU1b1H2EWU4" data-src="https://www.youtube.com/embed/qPbIlO_KWN0?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC Reports <em>(6:06)</em></a></li>
                 </ul>
               </div>
             </div>
@@ -314,12 +314,10 @@ multiqc .</code></pre>
               </button>
               <ul class="dropdown-menu">
                 <li class="dropdown-header">Analysis Types</li>
-                <li><a href="#">Whole Genome</a></li>
                 <li><a href="examples/rna-seq/multiqc_report.html">RNA-Seq</a></li>
+                <li><a href="examples/wgs/multiqc_report.html">Whole Genome</a></li>
                 <li><a href="examples/bs-seq/multiqc_report.html">Bisulfite</a></li>
-                <li class="dropdown-header">Report Variants</li>
-                <li><a href="#">Many Samples</a></li>
-                <li><a href="#">Directory Names</a></li>
+                <li><a href="examples/hi-c/multiqc_report.html">Hi-C</a></li>
               </ul>
             </div>
           </div>
