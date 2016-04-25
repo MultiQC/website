@@ -122,9 +122,9 @@ if(count($md_parts) == 3){
               <div class="col-md-6">
                 <ul class="list-switch left video-chooser">
                   <li><a href="https://youtu.be/BbScv9TcaMg" data-src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" class="active"><span class="hidden-lg hidden-md label label-default">Video</span> Introduction to MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="https://youtu.be/IvUU8joBb1Q" data-src="https://www.youtube.com/embed/Gg5neIPuiVo?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(4:33)</em></a></li>
-                  <li><a href="https://youtu.be/VMSucLLmPwU" data-src="https://www.youtube.com/embed/cktKbESOOno?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Running MultiQC <em>(5:21)</em></a></li>
-                  <li><a href="https://youtu.be/tU1b1H2EWU4" data-src="https://www.youtube.com/embed/qPbIlO_KWN0?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC Reports <em>(6:06)</em></a></li>
+                  <li><a href="https://youtu.be/Gg5neIPuiVo" data-src="https://www.youtube.com/embed/Gg5neIPuiVo?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(4:33)</em></a></li>
+                  <li><a href="https://youtu.be/cktKbESOOno" data-src="https://www.youtube.com/embed/cktKbESOOno?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Running MultiQC <em>(5:21)</em></a></li>
+                  <li><a href="https://youtu.be/qPbIlO_KWN0" data-src="https://www.youtube.com/embed/qPbIlO_KWN0?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC Reports <em>(6:06)</em></a></li>
                 </ul>
               </div>
             </div>
