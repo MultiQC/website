@@ -1,0 +1,60 @@
+/*
+Cluster Flow Run File
+Pipeline: sra_star
+Created at 17:31, 02-05-2016
+*/
+
+@split_files	1
+@total_cores	16
+@total_mem	128G
+@email	phil.ewels@scilifelab.se
+@notification	suspend
+@notification	abort
+@notification	complete
+@genome	GRCh37
+@reference	star	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/
+@reference	fasta	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta
+@reference	bismark	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/BismarkIndex
+@reference	bwa	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex/genome.fa
+@reference	bed12	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.bed
+@reference	gtf	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+@reference	bowtie	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex/genome
+@reference	bowtie2	/sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome
+/*
+------------------------
+SRA to STAR Pipeline
+------------------------
+This pipeline takes SRA files as input, converts to FastQ, runs FastQC, Trim Galore,
+then aligns with STAR. The module requires a genome reference with a
+corresponding STAR index base in the configuration. It then runs featureCounts
+to count overlaps with genes. Finally it sorts and indexes the BAM file and runs
+preseq to calculate complexity. Preseq plotting requires the ngi_visualizations
+package. To install, run:
+pip install git+https://github.com/NationalGenomicsInfrastructure/ngi_visualizations.git
+*/
+
+
+@require_reference star
+
+#sra_fqdump
+	#fastqc
+	#trim_galore
+		#star
+			#featureCounts
+			#samtools_sort_index
+				#preseq_calc
+					#preseq_plot
+						>preseq_plot
+
+
+start_000	SRR3192400.sra
+cf_sra_star_1462203013_download	SRR3192400.sra
+cf_sra_star_1462203013_sra_fqdump_322	SRR3192400_1.fastq.gz
+cf_sra_star_1462203013_sra_fqdump_322	SRR3192400_2.fastq.gz
+cf_sra_star_1462203013_fastqc_368	SRR3192400_1.fastq.gz
+cf_sra_star_1462203013_fastqc_368	SRR3192400_2.fastq.gz
+cf_sra_star_1462203013_trim_galore_143	SRR3192400_1_val_1.fq.gz
+cf_sra_star_1462203013_trim_galore_143	SRR3192400_2_val_2.fq.gz
+cf_sra_star_1462203013_star_955	SRR3192400_1_star_aligned.bam
+cf_sra_star_1462203013_featureCounts_754	SRR3192400_1_star_aligned.bam_counts.txt
+cf_sra_star_1462203013_samtools_sort_index_373	SRR3192400_1_star_aligned_srtd.bam

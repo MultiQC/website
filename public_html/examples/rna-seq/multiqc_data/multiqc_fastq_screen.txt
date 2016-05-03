@@ -1,7 +1,0 @@
-Sample	Human counts	Human percentage	Mouse counts	Mouse percentage	S.cerevisiae counts	S.cerevisiae percentage	Ecoli counts	Ecoli percentage	PhiX counts	PhiX percentage	No hits counts	No hits percentage
-SRR1067503_1_screen	82678	82.74	2734	2.74	102	0.09	207	0.2	0	0.0	16.91	16.91
-SRR1067505_1_screen	88048	88.24	7090	7.12	280	0.28	7	0.01	0	0.0	7.17	7.17
-SRR1067510_1_screen	80826	80.84	3573	3.58	54	0.05	2	0.0	0	0.0	18.53	18.53
-SRR1067514_1_screen	79583	79.63	15040	15.04	117	0.12	5	0.01	0	0.0	7.56	7.56
-SRR1067519_1_screen	91452	91.52	3288	3.3	59	0.06	1	0.0	12	0.01	7.06	7.06
-SRR1067522_1_screen	83592	83.68	8650	8.66	86	0.09	1	0.0	0	0.0	10.25	10.25

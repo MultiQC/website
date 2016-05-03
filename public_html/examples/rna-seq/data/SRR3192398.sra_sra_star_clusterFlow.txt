@@ -1,0 +1,728 @@
+
+--------------------------------------------------------------------------------
+Module:			cf_download
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_download_735
+Previous Job ID:	null
+Parameters:		dl_fn = SRR3192398.sra, url = ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192398/SRR3192398.sra
+Date & Time:		22:15, 02-05-2016
+--------------------------------------------------------------------------------
+
+
+---------------------
+Downloading SRR3192398.sra from ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192398/SRR3192398.sra
+Started at 22:15, Monday - 02/05/2016
+
+###CFCMD wget -nv --tries=10 --output-document=SRR3192398.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192398/SRR3192398.sra
+
+2016-05-02 22:28:45 URL: ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192398/SRR3192398.sra [8414169328] -> "SRR3192398.sra" [1]
+###CF Download worked - took 13 minutes, 7 seconds
+
+Download module finished at 22:28 02-05-2016
+---------------------
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			sra_fqdump
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_sra_fqdump_798
+Previous Job ID:	cf_sra_star_1462203013_download
+Date & Time:		22:55, 02-05-2016
+--------------------------------------------------------------------------------
+
+---------- FastQ Dump version information ----------
+
+fastq-dump : 2.5.7
+
+
+------- End of FastQ Dump version information ------
+
+###CFCMD fastq-dump --split-files ./SRR3192398.sra
+
+Read 68765938 spots for ./SRR3192398.sra
+Written 68765938 spots for ./SRR3192398.sra
+
+###CF FastQ Dump successfully exited on attempt 1, took 11 minutes, 2 seconds
+gzipping dumped fastq file SRR3192398_1.fastq..
+gzipping dumped fastq file SRR3192398_2.fastq..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			fastqc
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_fastqc_984
+Previous Job ID:	cf_sra_star_1462203013_sra_fqdump_798
+Date & Time:		00:39, 03-05-2016
+--------------------------------------------------------------------------------
+
+---------- FastQC version information ----------
+FastQC v0.11.2
+
+------- End of FastQC version information ------
+
+###CFCMD fastqc -q  SRR3192398_1.fastq.gz
+
+###CF FastQC successfully ran, took 9 minutes, 36 seconds
+
+###CFCMD fastqc -q  SRR3192398_2.fastq.gz
+
+###CF FastQC successfully ran, took 9 minutes, 13 seconds
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			trim_galore
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_trim_galore_845
+Previous Job ID:	cf_sra_star_1462203013_sra_fqdump_798
+Date & Time:		00:53, 03-05-2016
+--------------------------------------------------------------------------------
+
+---------- Cutadapt version information ----------
+1.9.1
+
+------- End of Cutadapt version information ------
+---------- Trim Galore! version information ----------
+
+                          Quality-/Adapter-/RRBS-Trimming
+                               (powered by Cutadapt)
+                                  version 0.4.1
+
+                             Last update: 20 07 2015
+
+
+------- End of Trim Galore! version information ------
+
+###CFCMD trim_galore --paired --gzip --phred33       --fastqc SRR3192398_1.fastq.gz SRR3192398_2.fastq.gz
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.9.1
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> SRR3192398_1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	12237	AGATCGGAAGAGC	1000000	1.22
+smallRNA	12	TGGAATTCTCGG	1000000	0.00
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+Using Illumina adapter for trimming (count: 12237). Second best hit was smallRNA (count: 12)
+
+Writing report to 'SRR3192398_1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: SRR3192398_1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.1
+Cutadapt version: 1.9.1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR3192398_1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file SRR3192398_1.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+This is cutadapt 1.9.1 with Python 2.7.6
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC SRR3192398_1.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 1558.02 s (23 us/read; 2.65 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              68,765,938
+Reads with adapters:                24,776,219 (36.0%)
+Reads written (passing filters):    68,765,938 (100.0%)
+
+Total basepairs processed: 6,876,593,800 bp
+Quality-trimmed:             278,227,662 bp (4.0%)
+Total written (filtered):  6,538,840,170 bp (95.1%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 24776219 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 28.4%
+  C: 34.1%
+  G: 18.8%
+  T: 18.7%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	16021271	17191484.5	0	16021271
+2	4699932	4297871.1	0	4699932
+3	1508602	1074467.8	0	1508602
+4	453513	268616.9	0	453513
+5	273388	67154.2	0	273388
+6	191192	16788.6	0	191192
+7	169275	4197.1	0	169275
+8	150430	1049.3	0	150430
+9	139426	262.3	0	137722 1704
+10	122228	65.6	1	119552 2676
+11	112758	16.4	1	110925 1833
+12	110789	4.1	1	109262 1527
+13	102395	1.0	1	100897 1498
+14	84764	1.0	1	83584 1180
+15	80197	1.0	1	78962 1235
+16	75853	1.0	1	74641 1212
+17	56820	1.0	1	55824 996
+18	43570	1.0	1	42851 719
+19	33410	1.0	1	32909 501
+20	27061	1.0	1	26606 455
+21	23822	1.0	1	23424 398
+22	25845	1.0	1	25377 468
+23	27296	1.0	1	26836 460
+24	24317	1.0	1	23890 427
+25	19752	1.0	1	19462 290
+26	18553	1.0	1	18238 315
+27	17968	1.0	1	17560 408
+28	20792	1.0	1	20388 404
+29	14527	1.0	1	14226 301
+30	11801	1.0	1	11520 281
+31	9414	1.0	1	9202 212
+32	8692	1.0	1	8464 228
+33	7743	1.0	1	7554 189
+34	15277	1.0	1	14882 395
+35	7217	1.0	1	7004 213
+36	6097	1.0	1	5907 190
+37	5269	1.0	1	5096 173
+38	6084	1.0	1	5893 191
+39	5045	1.0	1	4859 186
+40	4900	1.0	1	4728 172
+41	4024	1.0	1	3890 134
+42	2218	1.0	1	2143 75
+43	1554	1.0	1	1508 46
+44	1651	1.0	1	1585 66
+45	1544	1.0	1	1478 66
+46	1849	1.0	1	1747 102
+47	1504	1.0	1	1438 66
+48	1213	1.0	1	1140 73
+49	1085	1.0	1	1030 55
+50	721	1.0	1	664 57
+51	628	1.0	1	569 59
+52	557	1.0	1	466 91
+53	452	1.0	1	404 48
+54	351	1.0	1	298 53
+55	244	1.0	1	195 49
+56	269	1.0	1	208 61
+57	249	1.0	1	181 68
+58	342	1.0	1	235 107
+59	374	1.0	1	285 89
+60	271	1.0	1	156 115
+61	279	1.0	1	166 113
+62	431	1.0	1	134 297
+63	709	1.0	1	259 450
+64	542	1.0	1	331 211
+65	397	1.0	1	165 232
+66	556	1.0	1	179 377
+67	1036	1.0	1	264 772
+68	1885	1.0	1	462 1423
+69	4722	1.0	1	684 4038
+70	2904	1.0	1	1397 1507
+71	1746	1.0	1	613 1133
+72	1062	1.0	1	489 573
+73	324	1.0	1	239 85
+74	159	1.0	1	124 35
+75	60	1.0	1	32 28
+76	18	1.0	1	7 11
+77	22	1.0	1	5 17
+78	43	1.0	1	5 38
+79	37	1.0	1	1 36
+80	29	1.0	1	5 24
+81	38	1.0	1	1 37
+82	32	1.0	1	0 32
+83	43	1.0	1	2 41
+84	33	1.0	1	3 30
+85	35	1.0	1	4 31
+86	33	1.0	1	0 33
+87	31	1.0	1	2 29
+88	34	1.0	1	7 27
+89	33	1.0	1	2 31
+90	32	1.0	1	3 29
+91	43	1.0	1	5 38
+92	28	1.0	1	4 24
+93	29	1.0	1	3 26
+94	29	1.0	1	3 26
+95	54	1.0	1	14 40
+96	32	1.0	1	7 25
+97	38	1.0	1	5 33
+98	25	1.0	1	2 23
+99	33	1.0	1	3 30
+100	218	1.0	1	1 217
+
+
+RUN STATISTICS FOR INPUT FILE: SRR3192398_1.fastq.gz
+=============================================
+68765938 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to 'SRR3192398_2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: SRR3192398_2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.4.1
+Cutadapt version: 1.9.1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to SRR3192398_2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file SRR3192398_2.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+This is cutadapt 1.9.1 with Python 2.7.6
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC SRR3192398_2.fastq.gz
+Trimming 1 adapter with at most 10.0% errors in single-end mode ...
+Finished in 1552.56 s (23 us/read; 2.66 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              68,765,938
+Reads with adapters:                25,752,326 (37.4%)
+Reads written (passing filters):    68,765,938 (100.0%)
+
+Total basepairs processed: 6,876,593,800 bp
+Quality-trimmed:             282,522,512 bp (4.1%)
+Total written (filtered):  6,533,246,681 bp (95.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 25752326 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 32.5%
+  C: 29.4%
+  G: 21.1%
+  T: 16.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	16564140	17191484.5	0	16564140
+2	4962759	4297871.1	0	4962759
+3	1622779	1074467.8	0	1622779
+4	502960	268616.9	0	502960
+5	261263	67154.2	0	261263
+6	189650	16788.6	0	189650
+7	172380	4197.1	0	172380
+8	151946	1049.3	0	151946
+9	143312	262.3	0	141928 1384
+10	126353	65.6	1	121951 4402
+11	116318	16.4	1	112914 3404
+12	115082	4.1	1	111975 3107
+13	107501	1.0	1	104629 2872
+14	92108	1.0	1	89429 2679
+15	76639	1.0	1	74504 2135
+16	75434	1.0	1	73259 2175
+17	58571	1.0	1	56829 1742
+18	38866	1.0	1	37651 1215
+19	34770	1.0	1	33709 1061
+20	25685	1.0	1	24865 820
+21	22593	1.0	1	21898 695
+22	24593	1.0	1	23818 775
+23	28123	1.0	1	27213 910
+24	28200	1.0	1	27282 918
+25	19612	1.0	1	18980 632
+26	18924	1.0	1	18057 867
+27	18378	1.0	1	17789 589
+28	22029	1.0	1	21304 725
+29	14864	1.0	1	14337 527
+30	17938	1.0	1	17378 560
+31	6556	1.0	1	6309 247
+32	7698	1.0	1	7439 259
+33	6090	1.0	1	5885 205
+34	12855	1.0	1	12460 395
+35	6528	1.0	1	6305 223
+36	5619	1.0	1	5401 218
+37	5002	1.0	1	4788 214
+38	5565	1.0	1	5376 189
+39	4812	1.0	1	4645 167
+40	4447	1.0	1	4257 190
+41	3554	1.0	1	3361 193
+42	3080	1.0	1	2940 140
+43	1823	1.0	1	1719 104
+44	2075	1.0	1	1945 130
+45	2015	1.0	1	1909 106
+46	1509	1.0	1	1413 96
+47	1508	1.0	1	1398 110
+48	1165	1.0	1	1081 84
+49	1033	1.0	1	958 75
+50	854	1.0	1	772 82
+51	801	1.0	1	721 80
+52	382	1.0	1	305 77
+53	340	1.0	1	273 67
+54	380	1.0	1	310 70
+55	329	1.0	1	286 43
+56	301	1.0	1	250 51
+57	302	1.0	1	255 47
+58	392	1.0	1	306 86
+59	355	1.0	1	317 38
+60	332	1.0	1	253 79
+61	288	1.0	1	226 62
+62	455	1.0	1	337 118
+63	1175	1.0	1	917 258
+64	1889	1.0	1	1380 509
+65	3415	1.0	1	2455 960
+66	1487	1.0	1	1133 354
+67	213	1.0	1	159 54
+68	112	1.0	1	45 67
+69	70	1.0	1	15 55
+70	57	1.0	1	8 49
+71	54	1.0	1	5 49
+72	36	1.0	1	2 34
+73	45	1.0	1	2 43
+74	56	1.0	1	5 51
+75	46	1.0	1	3 43
+76	58	1.0	1	3 55
+77	40	1.0	1	3 37
+78	69	1.0	1	6 63
+79	48	1.0	1	9 39
+80	52	1.0	1	6 46
+81	50	1.0	1	7 43
+82	96	1.0	1	7 89
+83	70	1.0	1	10 60
+84	57	1.0	1	9 48
+85	70	1.0	1	7 63
+86	54	1.0	1	11 43
+87	36	1.0	1	8 28
+88	52	1.0	1	14 38
+89	42	1.0	1	10 32
+90	42	1.0	1	5 37
+91	76	1.0	1	11 65
+92	54	1.0	1	6 48
+93	62	1.0	1	4 58
+94	33	1.0	1	3 30
+95	78	1.0	1	7 71
+96	41	1.0	1	2 39
+97	112	1.0	1	9 103
+98	49	1.0	1	3 46
+99	44	1.0	1	3 41
+100	71	1.0	1	3 68
+
+
+RUN STATISTICS FOR INPUT FILE: SRR3192398_2.fastq.gz
+=============================================
+68765938 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR3192398_1_trimmed.fq.gz and SRR3192398_2_trimmed.fq.gz
+file_1: SRR3192398_1_trimmed.fq.gz, file_2: SRR3192398_2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SRR3192398_1_trimmed.fq.gz and SRR3192398_2_trimmed.fq.gz <<<<<
+Writing validated paired-end read 1 reads to SRR3192398_1_val_1.fq.gz
+Writing validated paired-end read 2 reads to SRR3192398_2_val_2.fq.gz
+
+Total number of sequences analysed: 68765938
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 2200242 (3.20%)
+
+
+  >>> Now running FastQC on the validated data SRR3192398_1_val_1.fq.gz<<<
+
+Started analysis of SRR3192398_1_val_1.fq.gz
+Approx 5% complete for SRR3192398_1_val_1.fq.gz
+Approx 10% complete for SRR3192398_1_val_1.fq.gz
+Approx 15% complete for SRR3192398_1_val_1.fq.gz
+Approx 20% complete for SRR3192398_1_val_1.fq.gz
+Approx 25% complete for SRR3192398_1_val_1.fq.gz
+Approx 30% complete for SRR3192398_1_val_1.fq.gz
+Approx 35% complete for SRR3192398_1_val_1.fq.gz
+Approx 40% complete for SRR3192398_1_val_1.fq.gz
+Approx 45% complete for SRR3192398_1_val_1.fq.gz
+Approx 50% complete for SRR3192398_1_val_1.fq.gz
+Approx 55% complete for SRR3192398_1_val_1.fq.gz
+Approx 60% complete for SRR3192398_1_val_1.fq.gz
+Approx 65% complete for SRR3192398_1_val_1.fq.gz
+Approx 70% complete for SRR3192398_1_val_1.fq.gz
+Approx 75% complete for SRR3192398_1_val_1.fq.gz
+Approx 80% complete for SRR3192398_1_val_1.fq.gz
+Approx 85% complete for SRR3192398_1_val_1.fq.gz
+Approx 90% complete for SRR3192398_1_val_1.fq.gz
+Approx 95% complete for SRR3192398_1_val_1.fq.gz
+Analysis complete for SRR3192398_1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data SRR3192398_2_val_2.fq.gz<<<
+
+Started analysis of SRR3192398_2_val_2.fq.gz
+Approx 5% complete for SRR3192398_2_val_2.fq.gz
+Approx 10% complete for SRR3192398_2_val_2.fq.gz
+Approx 15% complete for SRR3192398_2_val_2.fq.gz
+Approx 20% complete for SRR3192398_2_val_2.fq.gz
+Approx 25% complete for SRR3192398_2_val_2.fq.gz
+Approx 30% complete for SRR3192398_2_val_2.fq.gz
+Approx 35% complete for SRR3192398_2_val_2.fq.gz
+Approx 40% complete for SRR3192398_2_val_2.fq.gz
+Approx 45% complete for SRR3192398_2_val_2.fq.gz
+Approx 50% complete for SRR3192398_2_val_2.fq.gz
+Approx 55% complete for SRR3192398_2_val_2.fq.gz
+Approx 60% complete for SRR3192398_2_val_2.fq.gz
+Approx 65% complete for SRR3192398_2_val_2.fq.gz
+Approx 70% complete for SRR3192398_2_val_2.fq.gz
+Approx 75% complete for SRR3192398_2_val_2.fq.gz
+Approx 80% complete for SRR3192398_2_val_2.fq.gz
+Approx 85% complete for SRR3192398_2_val_2.fq.gz
+Approx 90% complete for SRR3192398_2_val_2.fq.gz
+Approx 95% complete for SRR3192398_2_val_2.fq.gz
+Analysis complete for SRR3192398_2_val_2.fq.gz
+Deleting both intermediate output files SRR3192398_1_trimmed.fq.gz and SRR3192398_2_trimmed.fq.gz
+
+====================================================================================================
+
+###CF Trim galore (PE mode) successfully exited, took 2 hours, 21 minutes, 1 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			star
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_star_931
+Previous Job ID:	cf_sra_star_1462203013_trim_galore_845
+Date & Time:		03:15, 03-05-2016
+--------------------------------------------------------------------------------
+
+
+Aligning against /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/
+
+---------- STAR version information ----------
+STAR_2.5.1b
+
+------- End of STAR version information ------
+
+###CFCMD STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192398_1_val_1.fq.gz SRR3192398_2_val_2.fq.gz --outFileNamePrefix SRR3192398_1 --outStd SAM | samtools view -bS - > SRR3192398_1_star_aligned.bam
+
+[samopen] SAM header is present: 25 sequences.
+###CF STAR (PE mode) successfully exited, took 47 minutes, 25 seconds..
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			featureCounts
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_featureCounts_699
+Previous Job ID:	cf_sra_star_1462203013_star_931
+Date & Time:		04:05, 03-05-2016
+--------------------------------------------------------------------------------
+
+
+Using GTF file /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf
+
+---------- featureCounts version information ----------
+
+featureCounts v1.5.0
+
+Warning: something's wrong at /pica/h1/phil/cf/modules/featureCounts.cfmod.pl line 69.
+
+------- End of featureCounts version information ------
+
+###CFCMD featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192398_1_star_aligned.bam_counts.txt SRR3192398_1_star_aligned.bam
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.0
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                           P SRR3192398_1_star_aligned.bam                  ||
+||                                                                            ||
+||             Output file : SRR3192398_1_star_aligned.bam_counts.txt         ||
+||             Annotations : /sw/data/uppnex/igenomes/Homo_sapiens/Ensemb ... ||
+||                                                                            ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : yes                                              ||
+||         Strand specific : no                                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||       Read orientations : fr                                               ||
+||                                                                            ||
+||          Chimeric reads : counted                                          ||
+||        Both ends mapped : not required                                     ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRC ... ||
+||    Features : 1306656                                                      ||
+||    Meta-features : 63677                                                   ||
+||    Chromosomes/contigs : 265                                               ||
+||                                                                            ||
+|| Process BAM file SRR3192398_1_star_aligned.bam...                          ||
+||    Paired-end reads are included.                                          ||
+||    Assign fragments (read pairs) to features...                            ||
+||    Total fragments : 71771197                                              ||
+||    Successfully assigned fragments : 36507149 (50.9%)                      ||
+||    Running time : 6.37 minutes                                             ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+###CF featureCounts successfully exited, took 6 minutes, 36 seconds
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			samtools_sort_index
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_samtools_sort_index_339
+Previous Job ID:	cf_sra_star_1462203013_star_931
+Date & Time:		04:05, 03-05-2016
+--------------------------------------------------------------------------------
+
+
+
+Samtools memory per thread: 4G. Cores: 2
+
+
+---------- Samtools version information ----------
+
+Program: samtools (Tools for alignments in the SAM format)
+Version: 0.1.19-44428cd
+
+------- End of Samtools version information ------
+
+SRR3192398_1_star_aligned.bam looks like a bam file
+Attempting to index input file in case it's already sorted..
+Samtools index didn't work, file not sorted. Going on to sorting step...
+
+###CFCMD samtools sort -m 4G  SRR3192398_1_star_aligned.bam SRR3192398_1_star_aligned_srtd
+
+[bam_sort_core] merging from 11 files...
+###CF samtools sort successfully exited, took 53 minutes, 45 seconds..
+
+###CFCMD samtools index SRR3192398_1_star_aligned_srtd.bam
+
+###CF samtools index successfully exited, took 2 minutes, 21 seconds.
+
+
+
+
+--------------------------------------------------------------------------------
+Module:			preseq_calc
+Run File:		SRR3192398.sra_sra_star.run
+Job ID:			cf_sra_star_1462203013_preseq_calc_415
+Previous Job ID:	cf_sra_star_1462203013_samtools_sort_index_339
+Date & Time:		05:04, 03-05-2016
+--------------------------------------------------------------------------------
+
+---------- Preseq version information ----------
+
+Program: preseq (applications for analyzing library complexity)
+Version: 0.1.0
+
+
+------- End of Preseq version information ------
+
+###CFCMD preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192398_1_star_aligned_srtd.bam -o SRR3192398_1_star_aligned_srtd.bam.preseq
+
+PAIRED_END_BAM_INPUT
+prev = 	1	28605	28673	SRR3192398.43913246	0	+
+curr = 	1	12478	12576	SRR3192398.60241451	0	+
+Increase seg_len if in paired end mode
+ERROR:	reads unsorted in SRR3192398_1_star_aligned_srtd.bam
+
+###CF Error! Preseq (PE mode) exited in an error state for input file 'SRR3192398_1_star_aligned_srtd.bam': 256 
+
+
+
+
+
+###CF Error! No file names found from job cf_sra_star_1462203013_preseq_calc_415. Exiting...
+
+
+Traceback (most recent call last):
+  File "/pica/h1/phil/cf/modules/preseq_plot.cfmod.py", line 107, in <module>
+    cf = Helpers.module_start(requirements, __doc__)
+  File "/pica/h1/phil/cf/modules/CF/Helpers.py", line 177, in module_start
+    raise TypeError
+TypeError
+
+
+
+--------------------------------------------------------------------------------
+Unrecognised output: (indicated with "-> <-")
+--------------------------------------------------------------------------------
+-> slurmstepd: Exceeded step memory limit at some point. <-
+-> slurmstepd: Exceeded step memory limit at some point. <-
+-> slurmstepd: Exceeded step memory limit at some point. <-
+-> slurmstepd: Exceeded step memory limit at some point. <-
+-> slurmstepd: Exceeded step memory limit at some point. <-
+-> slurmstepd: Exceeded job memory limit at some point. <-
+-> slurmstepd: Exceeded step memory limit at some point. <-
+-> slurmstepd: Warning: CPU load on host m88 is 51.01 <-
+-> slurmstepd: Warning: CPU load on host m88 is 51.35 <-
+-> slurmstepd: Exceeded step memory limit at some point. <-
+
+================================================================================
+
+
+
+
+
+###CF Run finished at 05:14 03-05-2016
+
+###CF Error: ngi_visualizations Python Package not installed.
+
+Traceback (most recent call last):
+  File "/pica/h1/phil/cf/modules/preseq_plot.cfmod.py", line 108, in <module>
+    make_preseq_plots(cf)
+  File "/pica/h1/phil/cf/modules/preseq_plot.cfmod.py", line 76, in make_preseq_plots
+    raise ImportError(e)
+ImportError: No module named pandas
+
+###CF Pipeline sra_star finished at 07:20 03-05-2016
+
+Sending HTML e-mail with sendmail..
+Sent a pipeline e-mail notification to phil.ewels@scilifelab.se

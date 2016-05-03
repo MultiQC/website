@@ -1,0 +1,257 @@
+Cluster Flow
+============
+Run Complete
+
+
+The pipeline sra_star has completed **with errors**.
+
+Started: 17:30 02-05-2016
+Finished: 07:20 03-05-2016
+Duration: 13 hours, 50 minutes, 15 seconds
+Working Directory: /pica/v12/b2013064_nobackup/private/phil/demo_RNAseq/
+
+
+
+
+=================================
+== CF Status Messages ==
+=================================
+
+==============================
+- Output file SRR3192396.sra_sra_star_clusterFlow.txt
+==============================
+Download worked - took 14 minutes, 27 seconds
+ - FastQ Dump successfully exited on attempt 1, took 20 minutes, 6 seconds
+ - FastQC successfully ran, took 15 minutes, 47 seconds
+ - FastQC successfully ran, took 15 minutes, 4 seconds
+ - Trim galore (PE mode) successfully exited, took 3 hours, 19 minutes, 41 seconds..
+ - STAR (PE mode) successfully exited, took 1 hours, 29 minutes, 33 seconds..
+ - featureCounts successfully exited, took 10 minutes, 41 seconds
+ - samtools sort successfully exited, took 1 hours, 12 minutes, 47 seconds..
+ - samtools index successfully exited, took 3 minutes, 45 seconds.
+ - Error! Preseq (PE mode) exited in an error state for input file 'SRR3192396_1_star_aligned_srtd.bam': 256 
+ - Error! No file names found from job cf_sra_star_1462203013_preseq_calc_401. Exiting...
+ - Run finished at 07:15 03-05-2016
+==============================
+- Output file SRR3192397.sra_sra_star_clusterFlow.txt
+==============================
+Download worked - took 12 minutes, 14 seconds
+ - FastQ Dump successfully exited on attempt 1, took 15 minutes, 39 seconds
+ - FastQC successfully ran, took 12 minutes, 52 seconds
+ - FastQC successfully ran, took 13 minutes, 29 seconds
+ - Trim galore (PE mode) successfully exited, took 3 hours, 7 minutes, 30 seconds..
+ - STAR (PE mode) successfully exited, took 1 hours, 9 minutes, 31 seconds..
+ - featureCounts successfully exited, took 9 minutes, 27 seconds
+ - samtools sort successfully exited, took 1 hours, 4 minutes, 34 seconds..
+ - samtools index successfully exited, took 3 minutes, 5 seconds.
+ - Error! Preseq (PE mode) exited in an error state for input file 'SRR3192397_1_star_aligned_srtd.bam': 256 
+ - Error! No file names found from job cf_sra_star_1462203013_preseq_calc_688. Exiting...
+ - Run finished at 04:22 03-05-2016
+==============================
+- Output file SRR3192398.sra_sra_star_clusterFlow.txt
+==============================
+Download worked - took 13 minutes, 7 seconds
+ - FastQ Dump successfully exited on attempt 1, took 11 minutes, 2 seconds
+ - FastQC successfully ran, took 9 minutes, 36 seconds
+ - FastQC successfully ran, took 9 minutes, 13 seconds
+ - Trim galore (PE mode) successfully exited, took 2 hours, 21 minutes, 1 seconds..
+ - STAR (PE mode) successfully exited, took 47 minutes, 25 seconds..
+ - featureCounts successfully exited, took 6 minutes, 36 seconds
+ - samtools sort successfully exited, took 53 minutes, 45 seconds..
+ - samtools index successfully exited, took 2 minutes, 21 seconds.
+ - Error! Preseq (PE mode) exited in an error state for input file 'SRR3192398_1_star_aligned_srtd.bam': 256 
+ - Error! No file names found from job cf_sra_star_1462203013_preseq_calc_415. Exiting...
+ - Run finished at 05:14 03-05-2016
+ - Error: ngi_visualizations Python Package not installed.
+ - Pipeline sra_star finished at 07:20 03-05-2016
+==============================
+- Output file SRR3192399.sra_sra_star_clusterFlow.txt
+==============================
+Download worked - took 9 minutes, 25 seconds
+ - FastQ Dump successfully exited on attempt 1, took 12 minutes, 25 seconds
+ - FastQC successfully ran, took 9 minutes, 56 seconds
+ - FastQC successfully ran, took 9 minutes, 56 seconds
+ - Trim galore (PE mode) successfully exited, took 2 hours, 33 minutes, 17 seconds..
+ - STAR (PE mode) successfully exited, took 53 minutes, 35 seconds..
+ - featureCounts successfully exited, took 8 minutes, 7 seconds
+ - samtools sort successfully exited, took 55 minutes, 41 seconds..
+ - samtools index successfully exited, took 3 minutes, 46 seconds.
+ - Error! Preseq (PE mode) exited in an error state for input file 'SRR3192399_1_star_aligned_srtd.bam': 256 
+ - Error! No file names found from job cf_sra_star_1462203013_preseq_calc_566. Exiting...
+ - Run finished at 05:12 03-05-2016
+==============================
+- Output file SRR3192400.sra_sra_star_clusterFlow.txt
+==============================
+Download worked - took 14 minutes, 55 seconds
+ - FastQ Dump successfully exited on attempt 1, took 15 minutes, 48 seconds
+ - FastQC successfully ran, took 12 minutes, 34 seconds
+ - FastQC successfully ran, took 12 minutes, 50 seconds
+ - Trim galore (PE mode) successfully exited, took 3 hours, 8 minutes, 18 seconds..
+ - STAR (PE mode) successfully exited, took 1 hours, 9 minutes, 46 seconds..
+ - featureCounts successfully exited, took 9 minutes, 3 seconds
+ - samtools sort successfully exited, took 56 minutes, 9 seconds..
+ - samtools index successfully exited, took 2 minutes, 53 seconds.
+ - Error! Preseq (PE mode) exited in an error state for input file 'SRR3192400_1_star_aligned_srtd.bam': 256 
+ - Error! No file names found from job cf_sra_star_1462203013_preseq_calc_153. Exiting...
+ - Run finished at 05:32 03-05-2016
+==============================
+- Output file SRR3192401.sra_sra_star_clusterFlow.txt
+==============================
+Download worked - took 27 minutes, 22 seconds
+ - FastQ Dump successfully exited on attempt 1, took 15 minutes, 17 seconds
+ - FastQC successfully ran, took 12 minutes, 49 seconds
+ - FastQC successfully ran, took 13 minutes, 5 seconds
+ - Trim galore (PE mode) successfully exited, took 3 hours, 15 minutes, 21 seconds..
+ - STAR (PE mode) successfully exited, took 1 hours, 16 minutes, 39 seconds..
+ - featureCounts successfully exited, took 9 minutes, 38 seconds
+ - samtools sort successfully exited, took 1 hours, 1 minutes, 12 seconds..
+ - samtools index successfully exited, took 2 minutes, 55 seconds.
+ - Error! Preseq (PE mode) exited in an error state for input file 'SRR3192401_1_star_aligned_srtd.bam': 256 
+ - Error! No file names found from job cf_sra_star_1462203013_preseq_calc_876. Exiting...
+ - Run finished at 05:35 03-05-2016
+
+
+
+
+
+==================
+== Commands Run ==
+==================
+
+==============================
+- Output file SRR3192396.sra_sra_star_clusterFlow.txt
+==============================
+wget -nv --tries=10 --output-document=SRR3192396.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192396/SRR3192396.sra
+
+fastq-dump --split-files ./SRR3192396.sra
+
+fastqc -q  SRR3192396_1.fastq.gz
+
+fastqc -q  SRR3192396_2.fastq.gz
+
+trim_galore --paired --gzip --phred33       --fastqc SRR3192396_1.fastq.gz SRR3192396_2.fastq.gz
+
+STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192396_1_val_1.fq.gz SRR3192396_2_val_2.fq.gz --outFileNamePrefix SRR3192396_1 --outStd SAM | samtools view -bS - > SRR3192396_1_star_aligned.bam
+
+featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192396_1_star_aligned.bam_counts.txt SRR3192396_1_star_aligned.bam
+
+samtools sort -m 4G  SRR3192396_1_star_aligned.bam SRR3192396_1_star_aligned_srtd
+
+samtools index SRR3192396_1_star_aligned_srtd.bam
+
+preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192396_1_star_aligned_srtd.bam -o SRR3192396_1_star_aligned_srtd.bam.preseq
+==============================
+- Output file SRR3192397.sra_sra_star_clusterFlow.txt
+==============================
+wget -nv --tries=10 --output-document=SRR3192397.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192397/SRR3192397.sra
+
+fastq-dump --split-files ./SRR3192397.sra
+
+fastqc -q  SRR3192397_1.fastq.gz
+
+fastqc -q  SRR3192397_2.fastq.gz
+
+trim_galore --paired --gzip --phred33       --fastqc SRR3192397_1.fastq.gz SRR3192397_2.fastq.gz
+
+STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192397_1_val_1.fq.gz SRR3192397_2_val_2.fq.gz --outFileNamePrefix SRR3192397_1 --outStd SAM | samtools view -bS - > SRR3192397_1_star_aligned.bam
+
+featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192397_1_star_aligned.bam_counts.txt SRR3192397_1_star_aligned.bam
+
+samtools sort -m 4G  SRR3192397_1_star_aligned.bam SRR3192397_1_star_aligned_srtd
+
+samtools index SRR3192397_1_star_aligned_srtd.bam
+
+preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192397_1_star_aligned_srtd.bam -o SRR3192397_1_star_aligned_srtd.bam.preseq
+==============================
+- Output file SRR3192398.sra_sra_star_clusterFlow.txt
+==============================
+wget -nv --tries=10 --output-document=SRR3192398.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192398/SRR3192398.sra
+
+fastq-dump --split-files ./SRR3192398.sra
+
+fastqc -q  SRR3192398_1.fastq.gz
+
+fastqc -q  SRR3192398_2.fastq.gz
+
+trim_galore --paired --gzip --phred33       --fastqc SRR3192398_1.fastq.gz SRR3192398_2.fastq.gz
+
+STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192398_1_val_1.fq.gz SRR3192398_2_val_2.fq.gz --outFileNamePrefix SRR3192398_1 --outStd SAM | samtools view -bS - > SRR3192398_1_star_aligned.bam
+
+featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192398_1_star_aligned.bam_counts.txt SRR3192398_1_star_aligned.bam
+
+samtools sort -m 4G  SRR3192398_1_star_aligned.bam SRR3192398_1_star_aligned_srtd
+
+samtools index SRR3192398_1_star_aligned_srtd.bam
+
+preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192398_1_star_aligned_srtd.bam -o SRR3192398_1_star_aligned_srtd.bam.preseq
+==============================
+- Output file SRR3192399.sra_sra_star_clusterFlow.txt
+==============================
+wget -nv --tries=10 --output-document=SRR3192399.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192399/SRR3192399.sra
+
+fastq-dump --split-files ./SRR3192399.sra
+
+fastqc -q  SRR3192399_1.fastq.gz
+
+fastqc -q  SRR3192399_2.fastq.gz
+
+trim_galore --paired --gzip --phred33       --fastqc SRR3192399_1.fastq.gz SRR3192399_2.fastq.gz
+
+STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192399_1_val_1.fq.gz SRR3192399_2_val_2.fq.gz --outFileNamePrefix SRR3192399_1 --outStd SAM | samtools view -bS - > SRR3192399_1_star_aligned.bam
+
+featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192399_1_star_aligned.bam_counts.txt SRR3192399_1_star_aligned.bam
+
+samtools sort -m 4G  SRR3192399_1_star_aligned.bam SRR3192399_1_star_aligned_srtd
+
+samtools index SRR3192399_1_star_aligned_srtd.bam
+
+preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192399_1_star_aligned_srtd.bam -o SRR3192399_1_star_aligned_srtd.bam.preseq
+==============================
+- Output file SRR3192400.sra_sra_star_clusterFlow.txt
+==============================
+wget -nv --tries=10 --output-document=SRR3192400.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192400/SRR3192400.sra
+
+fastq-dump --split-files ./SRR3192400.sra
+
+fastqc -q  SRR3192400_1.fastq.gz
+
+fastqc -q  SRR3192400_2.fastq.gz
+
+trim_galore --paired --gzip --phred33       --fastqc SRR3192400_1.fastq.gz SRR3192400_2.fastq.gz
+
+STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192400_1_val_1.fq.gz SRR3192400_2_val_2.fq.gz --outFileNamePrefix SRR3192400_1 --outStd SAM | samtools view -bS - > SRR3192400_1_star_aligned.bam
+
+featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192400_1_star_aligned.bam_counts.txt SRR3192400_1_star_aligned.bam
+
+samtools sort -m 4G  SRR3192400_1_star_aligned.bam SRR3192400_1_star_aligned_srtd
+
+samtools index SRR3192400_1_star_aligned_srtd.bam
+
+preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192400_1_star_aligned_srtd.bam -o SRR3192400_1_star_aligned_srtd.bam.preseq
+==============================
+- Output file SRR3192401.sra_sra_star_clusterFlow.txt
+==============================
+wget -nv --tries=10 --output-document=SRR3192401.sra ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192401/SRR3192401.sra
+
+fastq-dump --split-files ./SRR3192401.sra
+
+fastqc -q  SRR3192401_1.fastq.gz
+
+fastqc -q  SRR3192401_2.fastq.gz
+
+trim_galore --paired --gzip --phred33       --fastqc SRR3192401_1.fastq.gz SRR3192401_2.fastq.gz
+
+STAR --runThreadN 4 --outQSconversionAdd 0 --outSAMattributes Standard --genomeLoad NoSharedMemory  --readFilesCommand zcat --genomeDir /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Sequence/STARIndex/ --readFilesIn SRR3192401_1_val_1.fq.gz SRR3192401_2_val_2.fq.gz --outFileNamePrefix SRR3192401_1 --outStd SAM | samtools view -bS - > SRR3192401_1_star_aligned.bam
+
+featureCounts -T 1 -p  -t exon -g gene_id -a /sw/data/uppnex/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf -o SRR3192401_1_star_aligned.bam_counts.txt SRR3192401_1_star_aligned.bam
+
+samtools sort -m 4G  SRR3192401_1_star_aligned.bam SRR3192401_1_star_aligned_srtd
+
+samtools index SRR3192401_1_star_aligned_srtd.bam
+
+preseq lc_extrap -e 1000000000 -v -Q -B -P -l 999999999999 SRR3192401_1_star_aligned_srtd.bam -o SRR3192401_1_star_aligned_srtd.bam.preseq
+
+
+--
+Generated by Cluster Flow 0.4 devel
+Documentation: http://clusterflow.io

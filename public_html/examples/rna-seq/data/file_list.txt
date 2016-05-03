@@ -1,0 +1,7 @@
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192398/SRR3192398.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192399/SRR3192399.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192400/SRR3192400.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192401/SRR3192401.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192396/SRR3192396.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR319/SRR3192397/SRR3192397.sra
+
