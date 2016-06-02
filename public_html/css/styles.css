@@ -433,6 +433,47 @@ section p, section .btn, section .btn-group {
 .mod-list.aligners { border-left: 5px solid #1f78b4; }
 .mod-list.pre-alignment { border-left: 5px solid #b2df8a; }
 
+#testimonials-carousel {
+  margin: 20px;
+}
+#testimonials-carousel .carousel-indicators {
+  bottom: 0;
+}
+#testimonials-carousel .carousel-indicators li {
+  border-color: #333333;
+}
+#testimonials-carousel .carousel-indicators .active {
+  background-color: #333333;
+}
+#testimonials-carousel .item { 
+  height: 220px;
+}
+#testimonials-carousel .item blockquote {
+  width: 500px;
+  margin: auto;
+}
+#testimonials-carousel .item iframe,
+#testimonials-carousel .item twitterwidget {
+  margin: auto;
+}
+
+#testimonials-carousel .carousel-control.left {
+  background-image: -webkit-linear-gradient(left,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
+  background-image: -o-linear-gradient(left,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
+  background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,.0001)));
+  background-image: linear-gradient(to right,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#testimonials-carousel .carousel-control.right {
+  background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
+  background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
+  background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.2)));
+  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 
 /*
     DOCS
