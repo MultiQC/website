@@ -410,6 +410,10 @@ multiqc .</code></pre>
         </div>
         <!-- Twitter async script -->
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+        <h3>Live discussion about MultiQC on <a href="https://gitter.im/ewels/MultiQC/">Gitter.im</a></h3>
+        <iframe src="https://gitter.im/ewels/MultiQC/~embed" style="border:none; width: 100%; height: 300px;"></iframe>
+        
       </section>
       
       <section>

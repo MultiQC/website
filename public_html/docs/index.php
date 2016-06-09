@@ -199,6 +199,7 @@ while($curr_level > 0){
         <div class="col-sm-3 col-sm-push-9" id="toc_column">
           <div id="toc" data-spy="affix" data-offset-top="254">
             <?php echo $toc; ?>
+            <p class="backtotop"><a href="http://gitter.im/ewels/MultiQC">Discuss on Gitter</a></p>
             <p class="backtotop"><a href="#">Back to top</a></p>
           </div>
         </div>
