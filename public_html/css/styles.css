@@ -1,5 +1,4 @@
-
-/* 
+/*
       GENERAL
                 */
 body {
@@ -38,7 +37,7 @@ footer p {
   clear:left;
 }
 footer a {
-  margin: 0 10px;  
+  margin: 0 10px;
 }
 footer, footer a, footer a:hover {
   color: #aaa;
@@ -65,7 +64,7 @@ footer, footer a, footer a:hover {
 }
 
 
-/* 
+/*
       HEADER
                 */
 .navbar {
@@ -335,7 +334,7 @@ code .comment {
 }
 
 
-/* 
+/*
       CONTENT
                 */
 
@@ -445,7 +444,7 @@ section p, section .btn, section .btn-group {
 #testimonials-carousel .carousel-indicators .active {
   background-color: #333333;
 }
-#testimonials-carousel .item { 
+#testimonials-carousel .item {
   height: 220px;
 }
 #testimonials-carousel .item blockquote {
@@ -474,6 +473,10 @@ section p, section .btn, section .btn-group {
   border-bottom-right-radius: 5px;
 }
 
+
+.gitter-chat-embed {
+  top: 80px;
+}
 
 /*
     DOCS

@@ -148,6 +148,12 @@ if(count($md_parts) == 3){
             <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#mqc-supported-tools-modal">
               <i class="fa fa-bar-chart"></i> <?php echo count($modules); ?> supported tools
             </button>
+            <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#mqc-publication-modal">
+              <i class="fa fa-file-text"></i>  Publication / Citation
+            </button>
+            <button type="button" class="btn btn-block btn-lg btn-primary" id="gitter_btn">
+              <img height="18" src="images/gitter.svg"> Get help on Gitter
+            </button>
             <a class="visible-xs visible-sm btn btn-block btn-lg btn-primary" href="examples/rna-seq/multiqc_report.html">
               <i class="glyphicon glyphicon-search"></i> Example Report
             </a>
@@ -232,7 +238,7 @@ multiqc .</code></pre>
               </a>
             </div>
             <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
-              Note that the example report has some user-specific config settings, seen in the 
+              Note that the example report has some user-specific config settings, seen in the
               <code><a href="examples/wgs/multiqc_config.yaml" target="_blank">multiqc_config.yaml</a></code> file.</p>
           </div>
           <div id="demo-bsseq-description" style="display: none;">
@@ -269,7 +275,7 @@ multiqc .</code></pre>
               </a>
             </div>
             <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
-              Note that the example report has some user-specific config settings, seen in the 
+              Note that the example report has some user-specific config settings, seen in the
               <code><a href="examples/hi-c/multiqc_config.yaml" target="_blank">multiqc_config.yaml</a></code> file.</p>
           </div>
         </div>
@@ -380,12 +386,17 @@ multiqc .</code></pre>
             <li data-target="#testimonials-carousel" data-slide-to="1"></li>
             <li data-target="#testimonials-carousel" data-slide-to="2"></li>
             <li data-target="#testimonials-carousel" data-slide-to="3"></li>
+            <li data-target="#testimonials-carousel" data-slide-to="4"></li>
+            <li data-target="#testimonials-carousel" data-slide-to="5"></li>
           </ol>
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Amazingly, <a href="https://t.co/QTDfCMVG3B">https://t.co/QTDfCMVG3B</a> just works. Ran `multiqc .` in a dir with bunch of STAR, featurecounts, fastqc results. Worked 1st time.</p>&mdash; Stephen Turner (@genetics_blog) <a href="https://twitter.com/genetics_blog/status/737727882722717696">May 31, 2016</a></blockquote>
+            </div>
+            <div class="item">
+              <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> after using for 1 month, already uncovered discrepancy across samples on a project</p>&mdash; Mike Love (@mikelove) <a href="https://twitter.com/mikelove/status/743778234316296194">17 June 2016</a></blockquote>
             </div>
             <div class="item">
               <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">MultiQC == Awesome tool! Wish all bioinfo software were as documented, modular and useful as this! <a href="https://t.co/OiDAzlNqxS">https://t.co/OiDAzlNqxS</a></p>&mdash; André Rendeiro (@afrendeiro) <a href="https://twitter.com/afrendeiro/status/703325541877882880">February 26, 2016</a></blockquote>
@@ -395,6 +406,12 @@ multiqc .</code></pre>
             </div>
             <div class="item">
               <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Can recommend MultiQC: creates pretty report of -all- output from FastQC,Bowtie,Samtools,etc <a href="https://t.co/cxbV6Nxmq8">https://t.co/cxbV6Nxmq8</a> <a href="https://t.co/4Ha4aupoki">pic.twitter.com/4Ha4aupoki</a></p>&mdash; Elin Videvall (@ElinVidevall) <a href="https://twitter.com/ElinVidevall/status/717753544783360000">April 6, 2016</a></blockquote>
+            </div>
+            <div class="item">
+              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en-gb"><p lang="en" dir="ltr">MultiQC is now published! Awesome tool by <a href="https://twitter.com/tallphil">@tallphil</a> to summarize quality of many samples. <a href="https://t.co/M7uLzHQC7E">https://t.co/M7uLzHQC7E</a> <a href="https://t.co/EiVmjI988K">pic.twitter.com/EiVmjI988K</a></p>&mdash; Elin Videvall (@ElinVidevall) <a href="https://twitter.com/ElinVidevall/status/743782280548716544">17 June 2016</a></blockquote>
+            </div>
+            <div class="item">
+              <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/ElinVidevall">@ElinVidevall</a> <a href="https://twitter.com/BioMickWatson">@BioMickWatson</a> <a href="https://twitter.com/tallphil">@tallphil</a> this is a fantastic tool I use frequently for single cell QC. Glad to see it published.</p>&mdash; Sowmya Iyer (@becauseBiology) <a href="https://twitter.com/becauseBiology/status/743783436234686464">17 June 2016</a></blockquote>
             </div>
           </div>
 
@@ -411,8 +428,8 @@ multiqc .</code></pre>
         <!-- Twitter async script -->
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         
-        <h3>Live discussion about MultiQC on <a href="https://gitter.im/ewels/MultiQC/">Gitter.im</a></h3>
-        <iframe src="https://gitter.im/ewels/MultiQC/~embed" style="border:none; width: 100%; height: 300px;"></iframe>
+        <!-- <h3>Live discussion about MultiQC on <a href="https://gitter.im/ewels/MultiQC/">Gitter.im</a></h3>
+        <iframe src="https://gitter.im/ewels/MultiQC/~embed" style="border:none; width: 100%; height: 300px;"></iframe> -->
         
       </section>
       
@@ -491,12 +508,73 @@ multiqc .</code></pre>
         </div>
       </div>
     </div>
+    
+    <!-- Publication / Citation modal -->
+    <div class="modal fade" id="mqc-publication-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title">MultiQC: Publication Details</h3>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-info">
+              Please consider citing MultiQC if you use it in your analysis.
+            </div>
+            <h4>Citation</h4>
+            <blockquote>
+              <em>MultiQC: Summarize analysis results for multiple tools and samples in a single report</em><br>
+              Philip Ewels, M&aring;ns Magnusson, Sverker Lundin and Max K&auml;ller<br>
+              Bioinformatics 2016;<br>
+              doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" target="_blank">10.1093/bioinformatics/btw354</a>
+            </blockquote>
+            <h4>Abstract</h4>
+            <div class="well">
+              <p><strong>Motivation:</strong> Fast and accurate quality control is essential for studies involving
+                next-generation sequencing data.  Whilst numerous tools exist to quantify QC metrics, there is no
+                common approach to flexibly integrate these across tools and large sample sets. Assessing analysis
+                results across an entire project can be time consuming and error prone; batch effects and outlier
+                samples can easily be missed in the early stages of analysis.</p>
+              <p><strong>Results:</strong> We present MultiQC, a tool to create a single report visualising output
+                from multiple tools across many samples, enabling global trends and biases to be quickly identified.
+                MultiQC can plot data from many common bioinformatics tools and is built to allow easy extension
+                and customization.</p>
+              <p><strong>Availability:</strong> MultiQC is available with an GNU GPLv3 license on GitHub, the Python
+                Package Index and Bioconda. Documentation and example reports available at
+                <a href="http://multiqc.info">http://multiqc.info</a></p>
+            </div>
+            <p>This is an Open Access article distributed under the terms of the
+              <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License</a>,
+              which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original
+              work is properly cited.</p>
+            <div class="text-center">
+              <div data-badge-popover="right" data-badge-type="medium-donut" data-doi="10.1093/bioinformatics/btw354" class="altmetric-embed"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/homepage.js"></script>
+    
+    <!-- Altmetric -->
+    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+    
+    <!-- Gitter -->
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'ewels/MultiQC',
+        activationElement: '#gitter_btn',
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     
     <!-- Google Analytics -->
     <script>
