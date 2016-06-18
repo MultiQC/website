@@ -523,9 +523,9 @@ multiqc .</code></pre>
             </div>
             <h4>Citation</h4>
             <blockquote>
-              <em>MultiQC: Summarize analysis results for multiple tools and samples in a single report</em><br>
-              Philip Ewels, M&aring;ns Magnusson, Sverker Lundin and Max K&auml;ller<br>
-              Bioinformatics 2016;<br>
+              <strong>MultiQC: Summarize analysis results for multiple tools and samples in a single report</strong><br>
+              <em>Philip Ewels, M&aring;ns Magnusson, Sverker Lundin and Max K&auml;ller</em><br>
+              Bioinformatics (2016<br>
               doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" target="_blank">10.1093/bioinformatics/btw354</a><br>
               PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/27312411" target="_blank">27312411</a>
             </blockquote>
@@ -548,12 +548,13 @@ multiqc .</code></pre>
               <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License</a>,
               which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original
               work is properly cited.</p>
-            <div class="text-center">
-              <div data-badge-popover="right" data-badge-type="medium-donut" data-doi="10.1093/bioinformatics/btw354" class="altmetric-embed"></div>
+            <div style="width: 300px; margin: 20px auto 0;">
+              <div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1093/bioinformatics/btw354" class="altmetric-embed"></div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" class="btn btn-primary">Go to publication</a>
           </div>
         </div>
       </div>
