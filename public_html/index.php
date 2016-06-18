@@ -388,6 +388,7 @@ multiqc .</code></pre>
             <li data-target="#testimonials-carousel" data-slide-to="3"></li>
             <li data-target="#testimonials-carousel" data-slide-to="4"></li>
             <li data-target="#testimonials-carousel" data-slide-to="5"></li>
+            <li data-target="#testimonials-carousel" data-slide-to="6"></li>
           </ol>
 
           <!-- Wrapper for slides -->
@@ -525,7 +526,7 @@ multiqc .</code></pre>
             <blockquote>
               <strong>MultiQC: Summarize analysis results for multiple tools and samples in a single report</strong><br>
               <em>Philip Ewels, M&aring;ns Magnusson, Sverker Lundin and Max K&auml;ller</em><br>
-              Bioinformatics (2016<br>
+              Bioinformatics (2016)<br>
               doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" target="_blank">10.1093/bioinformatics/btw354</a><br>
               PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/27312411" target="_blank">27312411</a>
             </blockquote>
