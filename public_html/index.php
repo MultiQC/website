@@ -526,7 +526,8 @@ multiqc .</code></pre>
               <em>MultiQC: Summarize analysis results for multiple tools and samples in a single report</em><br>
               Philip Ewels, M&aring;ns Magnusson, Sverker Lundin and Max K&auml;ller<br>
               Bioinformatics 2016;<br>
-              doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" target="_blank">10.1093/bioinformatics/btw354</a>
+              doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" target="_blank">10.1093/bioinformatics/btw354</a><br>
+              PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/27312411" target="_blank">27312411</a>
             </blockquote>
             <h4>Abstract</h4>
             <div class="well">
