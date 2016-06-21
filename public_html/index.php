@@ -389,6 +389,7 @@ multiqc .</code></pre>
             <li data-target="#testimonials-carousel" data-slide-to="4"></li>
             <li data-target="#testimonials-carousel" data-slide-to="5"></li>
             <li data-target="#testimonials-carousel" data-slide-to="6"></li>
+            <li data-target="#testimonials-carousel" data-slide-to="7"></li>
           </ol>
 
           <!-- Wrapper for slides -->
@@ -401,6 +402,9 @@ multiqc .</code></pre>
             </div>
             <div class="item">
               <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">MultiQC == Awesome tool! Wish all bioinfo software were as documented, modular and useful as this! <a href="https://t.co/OiDAzlNqxS">https://t.co/OiDAzlNqxS</a></p>&mdash; André Rendeiro (@afrendeiro) <a href="https://twitter.com/afrendeiro/status/703325541877882880">February 26, 2016</a></blockquote>
+            </div>
+            <div class="item">
+              <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> this such a great difference to the visualization of fastqc reports individually! :)</p>&mdash; Olalla Lorenzo (@o_olalla) <a href="https://twitter.com/o_olalla/status/745212157529296896">June 21, 2016</a></blockquote>
             </div>
             <div class="item">
               <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Really impressed by this MultiQC tool - Create automatic bioinfo reports: Usage: <a href="https://t.co/EDUmwoxyn1">https://t.co/EDUmwoxyn1</a> Reports: <a href="https://t.co/PsrSUH5Egi">https://t.co/PsrSUH5Egi</a></p>&mdash; Eric Normandeau (@eric_normandeau) <a href="https://twitter.com/eric_normandeau/status/735487628024393728">May 25, 2016</a></blockquote>
@@ -465,7 +469,7 @@ multiqc .</code></pre>
         <p>Created by Phil Ewels:
           <a target="_blank" href="https://github.com/ewels"><i class="fa fa-github"></i> ewels</a> |
           <a target="_blank" href="https://twitter.com/tallphil"><i class="fa fa-twitter"></i> tallphil</a> |
-          <a target="_blank" href="https://se.linkedin.com/in/philewels">LinkedIn</a> | 
+          <a target="_blank" href="https://se.linkedin.com/in/philewels">LinkedIn</a> |
           <a target="_blank" href="https://www.researchgate.net/profile/Philip_Ewels">ResearchGate</a>
         </p>
         <a target="_blank" href="http://www.scilifelab.se" class="scilife-footer">
