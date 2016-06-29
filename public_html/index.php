@@ -390,6 +390,7 @@ multiqc .</code></pre>
             <li data-target="#testimonials-carousel" data-slide-to="5"></li>
             <li data-target="#testimonials-carousel" data-slide-to="6"></li>
             <li data-target="#testimonials-carousel" data-slide-to="7"></li>
+            <li data-target="#testimonials-carousel" data-slide-to="8"></li>
           </ol>
 
           <!-- Wrapper for slides -->
@@ -402,6 +403,9 @@ multiqc .</code></pre>
             </div>
             <div class="item">
               <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">MultiQC == Awesome tool! Wish all bioinfo software were as documented, modular and useful as this! <a href="https://t.co/OiDAzlNqxS">https://t.co/OiDAzlNqxS</a></p>&mdash; André Rendeiro (@afrendeiro) <a href="https://twitter.com/afrendeiro/status/703325541877882880">February 26, 2016</a></blockquote>
+            </div>
+            <div class="item">
+              <div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="98cc7d46-80e2-428e-a1c4-0b105008ddb4" data-embed-created="2016-06-29T08:50:44.691Z"><a href="https://www.reddit.com/r/bioinformatics/comments/4q8534/multiqc_now_published_tool_for_summarising/d4rjcgh">Comment</a> from discussion <a href="https://www.reddit.com/r/bioinformatics/comments/4q8534/multiqc_now_published_tool_for_summarising/">MultiQC now published! Tool for summarising &amp; visualising bioinfo results.</a>.</div>
             </div>
             <div class="item">
               <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> this such a great difference to the visualization of fastqc reports individually! :)</p>&mdash; Olalla Lorenzo (@o_olalla) <a href="https://twitter.com/o_olalla/status/745212157529296896">June 21, 2016</a></blockquote>
@@ -430,8 +434,9 @@ multiqc .</code></pre>
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <!-- Twitter async script -->
+        <!-- Twitter & Reddit async scripts -->
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async src="https://www.redditstatic.com/comment-embed.js"></script>
         
         <!-- <h3>Live discussion about MultiQC on <a href="https://gitter.im/ewels/MultiQC/">Gitter.im</a></h3>
         <iframe src="https://gitter.im/ewels/MultiQC/~embed" style="border:none; width: 100%; height: 300px;"></iframe> -->
