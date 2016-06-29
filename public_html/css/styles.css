@@ -453,7 +453,7 @@ section p, section .btn, section .btn-group {
 }
 #testimonials-carousel .item iframe,
 #testimonials-carousel .item twitterwidget {
-  margin: auto;
+  margin: auto !important;
 }
 
 #testimonials-carousel .carousel-control.left {
