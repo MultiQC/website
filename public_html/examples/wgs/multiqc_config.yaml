@@ -7,3 +7,7 @@ extra_fn_clean_exts:
     - _S5
     - _S6
     - .AHJHNYCCXX
+
+table_columns_visible:
+    FastQC:
+        percent_duplicates: False

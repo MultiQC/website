@@ -1,407 +1,96 @@
-[2016-04-29 12:55:59,433] multiqc                                            [INFO   ]  This is MultiQC v0.6
-[2016-04-29 12:55:59,433] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/.miniconda/envs/work/bin/multiqc -f data/
-[2016-04-29 12:55:59,433] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/Work/MultiQC_website/public_html/examples/wgs
-[2016-04-29 12:55:59,433] multiqc                                            [DEBUG  ]  Template    : default
-[2016-04-29 12:55:59,433] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/Work/MultiQC/multiqc_config.yaml
-[2016-04-29 12:55:59,701] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/.multiqc_config.yaml
-[2016-04-29 12:55:59,702] multiqc                                            [DEBUG  ]  New config 'disable_ngi': True
-[2016-04-29 12:55:59,702] multiqc                                            [DEBUG  ]  Added to filename clean extensions. Now looking for: ['_trimmed', '.gz', '.fastq', '.fq', '.bam', '.sam', '.sra', '_tophat', '_star_aligned', '_fastqc', '.hicup', '.counts', '_counts', '.txt']
-[2016-04-29 12:55:59,770] multiqc                                            [DEBUG  ]  Loading config settings from: multiqc_config.yaml
-[2016-04-29 12:55:59,770] multiqc                                            [DEBUG  ]  Added to filename clean extensions. Now looking for: ['.clean', '_S1', '_S2', '_S3', '_S4', '_S5', '_S6', '.AHJHNYCCXX', '_trimmed', '.gz', '.fastq', '.fq', '.bam', '.sam', '.sra', '_tophat', '_star_aligned', '_fastqc', '.hicup', '.counts', '_counts', '.txt']
-[2016-04-29 12:56:00,073] multiqc                                            [DEBUG  ]  Running in --force mode, will overwrite any existing reports.
-[2016-04-29 12:56:00,073] multiqc                                            [INFO   ]  Searching 'data/'
-[2016-04-29 12:56:00,073] multiqc                                            [DEBUG  ]  Analysing modules: snpeff, qualimap, featureCounts, methylQA, rseqc, picard, preseq, samblaster, samtools, bamtools, bismark, hicup, salmon, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc
-[2016-04-29 12:56:00,074] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH
-[2016-04-29 12:56:00,212] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,213] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,214] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,214] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,221] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,222] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,235] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,236] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,237] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,237] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,248] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,249] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,250] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,250] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,250] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,250] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,250] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,259] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,260] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,261] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,269] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,270] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,271] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,271] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,271] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,282] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,283] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,307] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,308] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,309] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,309] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,309] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,322] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,323] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,335] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,335] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,335] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,335] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,336] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,337] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,338] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,408] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,408] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,408] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,408] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,408] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,408] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,409] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,410] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,410] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,410] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,411] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,412] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,412] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,412] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,438] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,438] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,438] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,438] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,439] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,439] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,439] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,439] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,439] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,440] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,440] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,440] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,440] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,440] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,442] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,442] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,443] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,444] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,444] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,444] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,451] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,452] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,452] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,452] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,452] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,452] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,452] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,453] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,453] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,453] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,453] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,453] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,454] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,454] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,454] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,455] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,456] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,456] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,456] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,462] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,462] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,462] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,462] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,463] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,464] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,464] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,464] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,474] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,474] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,474] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,475] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,476] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,476] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,476] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,492] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,492] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,492] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,492] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,492] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,492] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,493] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,493] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,493] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,493] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,493] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,494] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,494] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,494] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,495] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,496] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,496] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,496] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,496] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,496] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,534] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/gif': ajax-loader.gif
-[2016-04-29 12:56:00,534] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgfooter.png
-[2016-04-29 12:56:00,534] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': bgtop.png
-[2016-04-29 12:56:00,534] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-bright.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment-close.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': comment.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down-pressed.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': down.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': file.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': minus.png
-[2016-04-29 12:56:00,535] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': plus.png
-[2016-04-29 12:56:00,536] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': qualimap_logo_small.png
-[2016-04-29 12:56:00,536] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up-pressed.png
-[2016-04-29 12:56:00,536] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': up.png
-[2016-04-29 12:56:00,539] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_0to50_histogram.png
-[2016-04-29 12:56:00,539] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_across_reference.png
-[2016-04-29 12:56:00,539] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_histogram.png
-[2016-04-29 12:56:00,539] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_coverage_quotes.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_gc_content_per_window.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_homopolymer_indels.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_across_reference.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_insert_size_histogram.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_across_reference.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_mapping_quality_histogram.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_clipping_profile.png
-[2016-04-29 12:56:00,540] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_reads_content_per_read_position.png
-[2016-04-29 12:56:00,541] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': genome_uniq_read_starts_histogram.png
-[2016-04-29 12:56:00,617] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1001_S1_L002_R1_001_screen.png
-[2016-04-29 12:56:00,617] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1001_S1_L002_R2_001_screen.png
-[2016-04-29 12:56:00,618] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1002_S2_L003_R1_001_screen.png
-[2016-04-29 12:56:00,618] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1002_S2_L003_R2_001_screen.png
-[2016-04-29 12:56:00,618] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1003_S3_L004_R1_001_screen.png
-[2016-04-29 12:56:00,618] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1003_S3_L004_R2_001_screen.png
-[2016-04-29 12:56:00,621] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1004_S4_L005_R1_001_screen.png
-[2016-04-29 12:56:00,621] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1004_S4_L005_R2_001_screen.png
-[2016-04-29 12:56:00,622] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1005_S5_L006_R1_001_screen.png
-[2016-04-29 12:56:00,622] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1005_S5_L006_R2_001_screen.png
-[2016-04-29 12:56:00,622] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1006_S6_L007_R1_001_screen.png
-[2016-04-29 12:56:00,622] multiqc                                            [DEBUG  ]  Ignoring file as has filetype 'image/png': P4107_1006_S6_L007_R2_001_screen.png
-[2016-04-29 12:56:00,739] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
-[2016-04-29 12:56:00,797] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
-[2016-04-29 12:56:00,840] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
-[2016-04-29 12:56:00,878] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
-[2016-04-29 12:56:00,919] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
-[2016-04-29 12:56:00,963] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
-[2016-04-29 12:56:00,968] multiqc.modules.snpeff.snpeff                      [INFO   ]  Found 6 reports
-[2016-04-29 12:56:01,765] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
-[2016-04-29 12:56:01,891] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
-[2016-04-29 12:56:01,997] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
-[2016-04-29 12:56:02,128] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
-[2016-04-29 12:56:02,271] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
-[2016-04-29 12:56:02,385] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
-[2016-04-29 12:56:02,631] multiqc.modules.qualimap.qualimap                  [INFO   ]  Found 6 reports
-[2016-04-29 12:56:03,542] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:03,628] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:09,009] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:15,921] multiqc.modules.picard.picard                      [INFO   ]  Found 6 dupMetrics reports
-[2016-04-29 12:56:17,349] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('data/',)
-[2016-04-29 12:56:18,767] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('data/',)
-[2016-04-29 12:56:20,245] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:21,803] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:21,987] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:22,076] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('data/',)
-[2016-04-29 12:56:22,219] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('data/',)
-[2016-04-29 12:56:22,272] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:22,326] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:23,727] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:25,315] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:27,260] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2016-04-29 12:56:28,903] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('data/',)
-[2016-04-29 12:56:30,320] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('data/',)
-[2016-04-29 12:56:30,377] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
-[2016-04-29 12:56:30,377] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
-[2016-04-29 12:56:30,378] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
-[2016-04-29 12:56:30,379] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
-[2016-04-29 12:56:30,380] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
-[2016-04-29 12:56:30,380] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
-[2016-04-29 12:56:30,381] multiqc.modules.fastq_screen.fastq_screen          [INFO   ]  Found 6 reports
-[2016-04-29 12:56:30,530] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
-[2016-04-29 12:56:30,669] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
-[2016-04-29 12:56:30,809] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
-[2016-04-29 12:56:30,951] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
-[2016-04-29 12:56:31,100] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
-[2016-04-29 12:56:31,238] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
-[2016-04-29 12:56:31,298] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports
-[2016-04-29 12:56:31,309] multiqc                                            [WARNING]  Deleting    : multiqc_report.html   (-f was specified)
-[2016-04-29 12:56:31,330] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2016-04-29 12:56:31,330] multiqc                                            [WARNING]  Deleting    : multiqc_data   (-f was specified)
-[2016-04-29 12:56:31,364] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2016-04-29 12:56:31,364] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH/multiqc_data/multiqc_fastq_screen.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/wgs/multiqc_data'
-[2016-04-29 12:56:31,364] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/wgs/multiqc_data'
-[2016-04-29 12:56:31,365] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/wgs/multiqc_data'
-[2016-04-29 12:56:31,365] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH/multiqc_data/multiqc_picard_dups.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/wgs/multiqc_data'
-[2016-04-29 12:56:31,365] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH/multiqc_data/multiqc_snpeff.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/wgs/multiqc_data'
-[2016-04-29 12:56:31,365] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpoMizYH/multiqc_data/multiqc_sources.txt' to '/Users/philewels/Work/MultiQC_website/public_html/examples/wgs/multiqc_data'
-[2016-04-29 12:56:31,779] multiqc                                            [INFO   ]  MultiQC complete
+[2016-07-04 18:46:38,167] multiqc                                            [INFO   ]  This is MultiQC v0.7
+[2016-07-04 18:46:38,168] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/.miniconda/envs/work/bin/multiqc data/
+[2016-07-04 18:46:38,168] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs
+[2016-07-04 18:46:38,168] multiqc                                            [DEBUG  ]  Template    : default
+[2016-07-04 18:46:38,169] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/GitHub/MultiQC/multiqc_config.yaml
+[2016-07-04 18:46:38,170] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/.multiqc_config.yaml
+[2016-07-04 18:46:38,170] multiqc                                            [DEBUG  ]  New config 'disable_ngi': True
+[2016-07-04 18:46:38,170] multiqc                                            [DEBUG  ]  Added to filename clean extensions. Now looking for: ['_trimmed', '_val_1', '_val_2', '.clean', '_S1', '_S2', '_S3', '_S4', '_S5', '_S6', '.AHJHNYCCXX', '_trimmed', '_val_1', '_val_2', '.gz', '.fastq', '.fq', '.bam', '.sam', '.sra', '_tophat', 'Log.final.out', '_star_aligned', '_fastqc', '.hicup', '.counts', '_counts', '.txt', 'Aligned']
+[2016-07-04 18:46:38,173] multiqc                                            [DEBUG  ]  Loading config settings from: multiqc_config.yaml
+[2016-07-04 18:46:38,174] multiqc                                            [DEBUG  ]  Added to filename clean extensions. Now looking for: ['.clean', '_S1', '_S2', '_S3', '_S4', '_S5', '_S6', '.AHJHNYCCXX', '_trimmed', '_val_1', '_val_2', '.clean', '_S1', '_S2', '_S3', '_S4', '_S5', '_S6', '.AHJHNYCCXX', '_trimmed', '_val_1', '_val_2', '.gz', '.fastq', '.fq', '.bam', '.sam', '.sra', '_tophat', 'Log.final.out', '_star_aligned', '_fastqc', '.hicup', '.counts', '_counts', '.txt', 'Aligned']
+[2016-07-04 18:46:38,174] multiqc                                            [DEBUG  ]  New config 'table_columns_visible': {'FastQC': {'percent_duplicates': False}}
+[2016-07-04 18:46:38,174] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2016-07-04 18:46:38,174] multiqc                                            [INFO   ]  Searching 'data/'
+[2016-07-04 18:46:38,174] multiqc                                            [DEBUG  ]  Analysing modules: ngi_rnaseq, snpeff, qualimap, featureCounts, methylQA, rseqc, picard, preseq, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc
+[2016-07-04 18:46:38,175] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9
+[2016-07-04 18:46:38,400] multiqc.modules.ngi_rnaseq                         [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:46:40,599] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
+[2016-07-04 18:46:40,680] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
+[2016-07-04 18:46:40,767] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
+[2016-07-04 18:46:40,849] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
+[2016-07-04 18:46:40,928] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
+[2016-07-04 18:46:41,013] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
+[2016-07-04 18:46:41,214] multiqc.modules.snpeff.snpeff                      [INFO   ]  Found 6 reports
+[2016-07-04 18:46:41,306] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: P4107_1001
+[2016-07-04 18:46:41,313] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: P4107_1002
+[2016-07-04 18:46:41,317] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: P4107_1003
+[2016-07-04 18:46:41,324] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: P4107_1004
+[2016-07-04 18:46:41,330] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: P4107_1005
+[2016-07-04 18:46:41,335] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome results sample name found! Overwriting: P4107_1006
+[2016-07-04 18:46:43,173] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: P4107_1001
+[2016-07-04 18:46:43,403] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: P4107_1002
+[2016-07-04 18:46:43,609] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: P4107_1003
+[2016-07-04 18:46:43,885] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: P4107_1004
+[2016-07-04 18:46:44,116] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: P4107_1005
+[2016-07-04 18:46:44,376] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate coverage histogram sample name found! Overwriting: P4107_1006
+[2016-07-04 18:46:44,439] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: P4107_1001
+[2016-07-04 18:46:44,446] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: P4107_1002
+[2016-07-04 18:46:44,453] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: P4107_1003
+[2016-07-04 18:46:44,462] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: P4107_1004
+[2016-07-04 18:46:44,469] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: P4107_1005
+[2016-07-04 18:46:44,476] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate insert size histogram sample name found! Overwriting: P4107_1006
+[2016-07-04 18:46:44,517] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome fraction coverage sample name found! Overwriting: P4107_1001
+[2016-07-04 18:46:44,521] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome fraction coverage sample name found! Overwriting: P4107_1002
+[2016-07-04 18:46:44,526] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome fraction coverage sample name found! Overwriting: P4107_1003
+[2016-07-04 18:46:44,530] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome fraction coverage sample name found! Overwriting: P4107_1004
+[2016-07-04 18:46:44,538] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome fraction coverage sample name found! Overwriting: P4107_1005
+[2016-07-04 18:46:44,544] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate genome fraction coverage sample name found! Overwriting: P4107_1006
+[2016-07-04 18:46:44,583] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: P4107_1001
+[2016-07-04 18:46:44,588] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: P4107_1002
+[2016-07-04 18:46:44,596] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: P4107_1003
+[2016-07-04 18:46:44,602] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: P4107_1004
+[2016-07-04 18:46:44,610] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: P4107_1005
+[2016-07-04 18:46:44,615] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Duplicate Mapped Reads GC content distribution sample name found! Overwriting: P4107_1006
+[2016-07-04 18:46:45,620] multiqc.modules.qualimap.qualimap                  [INFO   ]  Found 6 BamQC reports
+[2016-07-04 18:46:45,820] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:46:45,885] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:46:52,281] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:46:54,197] multiqc.modules.picard.picard                      [INFO   ]  Found 6 MarkDuplicates reports
+[2016-07-04 18:47:03,844] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('data/',)
+[2016-07-04 18:47:05,523] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('data/',)
+[2016-07-04 18:47:07,260] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:08,881] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:09,114] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:09,177] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('data/',)
+[2016-07-04 18:47:09,288] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('data/',)
+[2016-07-04 18:47:11,081] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:11,151] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:11,206] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:13,396] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:16,122] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:18,895] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2016-07-04 18:47:20,909] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('data/',)
+[2016-07-04 18:47:22,803] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('data/',)
+[2016-07-04 18:47:22,876] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
+[2016-07-04 18:47:22,877] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
+[2016-07-04 18:47:22,879] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
+[2016-07-04 18:47:22,880] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
+[2016-07-04 18:47:22,881] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
+[2016-07-04 18:47:22,882] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
+[2016-07-04 18:47:22,883] multiqc.modules.fastq_screen.fastq_screen          [INFO   ]  Found 6 reports
+[2016-07-04 18:47:23,119] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1001
+[2016-07-04 18:47:23,303] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1002
+[2016-07-04 18:47:23,499] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1003
+[2016-07-04 18:47:23,700] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1004
+[2016-07-04 18:47:23,904] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1005
+[2016-07-04 18:47:24,180] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: P4107_1006
+[2016-07-04 18:47:24,275] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports
+[2016-07-04 18:47:25,331] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2016-07-04 18:47:25,332] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2016-07-04 18:47:25,332] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9/multiqc_data/multiqc_fastq_screen.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/multiqc_data'
+[2016-07-04 18:47:25,333] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/multiqc_data'
+[2016-07-04 18:47:25,333] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/multiqc_data'
+[2016-07-04 18:47:25,333] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9/multiqc_data/multiqc_picard_dups.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/multiqc_data'
+[2016-07-04 18:47:25,334] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9/multiqc_data/multiqc_snpeff.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/multiqc_data'
+[2016-07-04 18:47:25,334] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmp99QzF9/multiqc_data/multiqc_sources.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/multiqc_data'
+[2016-07-04 18:47:25,626] multiqc                                            [INFO   ]  MultiQC complete

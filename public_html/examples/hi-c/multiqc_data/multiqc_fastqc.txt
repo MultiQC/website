@@ -1,14 +1,14 @@
-Sample	avg_sequence_length	percent_dedup	percent_duplicates	seq_len_read_count	seq_len_bp	sequence_length	total_sequences	percent_gc
-Sample-1.A002	125.0	91.765171849	8.234828151	28754600.0	3594325000.0	125.0	28754600.0	38.0
-Sample-1.A005	125.0	91.0745926154	8.92540738462	26780491.0	3347561375.0	125.0	26780491.0	38.0
-Sample-1.A006	125.0	89.4986077439	10.5013922561	34760244.0	4345030500.0	125.0	34760244.0	38.0
-Sample-1.A007	125.0	94.2719464623	5.7280535377	31000250.0	3875031250.0	125.0	31000250.0	39.0
-Sample-1.A012	125.0	90.3510751258	9.64892487421	35472550.0	4434068750.0	125.0	35472550.0	39.0
-Sample-1.A019	125.0	91.4374281011	8.5625718989	28583413.0	3572926625.0	125.0	28583413.0	38.0
-Sample-2.A002	125.0	81.3059343649	18.6940656351	47111116.0	5888889500.0	125.0	47111116.0	39.0
-Sample-2.A005	125.0	80.2535873932	19.7464126068	47405891.0	5925736375.0	125.0	47405891.0	38.0
-Sample-2.A006	125.0	78.2623653989	21.7376346011	52316898.0	6539612250.0	125.0	52316898.0	39.0
-Sample-2.A012	125.0	85.5182684422	14.4817315578	43542862.0	5442857750.0	125.0	43542862.0	39.0
-Sample-2.A019	125.0	78.617086855	21.382913145	44617077.0	5577134625.0	125.0	44617077.0	38.0
-Sample-3.A006	125.0	33.1074084599	66.8925915401	70954559.0	8869319875.0	125.0	70954559.0	40.0
-Sample-3.A012	125.0	20.6902583145	79.3097416855	88983957.0	11122994625.0	125.0	88983957.0	40.0
+Sample	adapter_content	Sequences flagged as poor quality	sequence_duplication_levels	avg_sequence_length	Encoding	kmer_content	per_base_sequence_quality	sequence_length_distribution	Sequence length	File type	basic_statistics	per_sequence_gc_content	Total Sequences	per_base_n_content	per_base_sequence_content	overrepresented_sequences	%GC	total_deduplicated_percentage	Filename	per_tile_sequence_quality	per_sequence_quality_scores
+Sample-1.A002	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	28754600.0	pass	fail	pass	38.0	91.765171849	Sample-1.A002.C8DRAANXX.s_2.r_2.fq	pass	pass
+Sample-1.A005	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	26780491.0	pass	warn	warn	38.0	91.0745926154	Sample-1.A005.C8DRAANXX.s_2.r_2.fq	pass	pass
+Sample-1.A006	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	34760244.0	pass	fail	pass	38.0	89.4986077439	Sample-1.A006.C8DRAANXX.s_2.r_2.fq	pass	pass
+Sample-1.A007	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	31000250.0	pass	warn	pass	39.0	94.2719464623	Sample-1.A007.C8DRAANXX.s_2.r_2.fq	pass	pass
+Sample-1.A012	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	35472550.0	pass	warn	pass	39.0	90.3510751258	Sample-1.A012.C8DRAANXX.s_2.r_2.fq	pass	pass
+Sample-1.A019	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	28583413.0	pass	warn	pass	38.0	91.4374281011	Sample-1.A019.C8DRAANXX.s_2.r_2.fq	pass	pass
+Sample-2.A002	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	47111116.0	pass	fail	warn	39.0	81.3059343649	Sample-2.A002.C8LFMANXX.s_3.r_2.fq.gz	pass	pass
+Sample-2.A005	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	47405891.0	pass	fail	warn	38.0	80.2535873932	Sample-2.A005.C8LFMANXX.s_3.r_2.fq.gz	pass	pass
+Sample-2.A006	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	52316898.0	pass	fail	fail	39.0	78.2623653989	Sample-2.A006.C8LFMANXX.s_3.r_2.fq.gz	pass	pass
+Sample-2.A012	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	43542862.0	pass	fail	warn	39.0	85.5182684422	Sample-2.A012.C8LFMANXX.s_3.r_2.fq.gz	pass	pass
+Sample-2.A019	pass	0.0	pass	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	44617077.0	pass	fail	warn	38.0	78.617086855	Sample-2.A019.C8LFMANXX.s_3.r_2.fq.gz	pass	pass
+Sample-3.A006	pass	0.0	fail	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	70954559.0	pass	fail	fail	40.0	33.1074084599	Sample-3.A006.C8H0KANXX.s_2.r_2.fq	warn	pass
+Sample-3.A012	pass	0.0	fail	125.0	Sanger / Illumina 1.9	fail	pass	pass	125.0	Conventional base calls	pass	pass	88983957.0	pass	fail	fail	40.0	20.6902583145	Sample-3.A012.C8H0KANXX.s_2.r_2.fq	warn	pass
