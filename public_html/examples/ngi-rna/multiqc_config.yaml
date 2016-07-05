@@ -1,0 +1,5 @@
+template: 'ngi'
+
+extra_fn_clean_exts:
+    - '_1.'
+    - '_2.'
