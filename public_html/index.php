@@ -98,6 +98,8 @@ if(count($md_parts) == 3){
                   <li><a href="examples/wgs/multiqc_report.html">Whole Genome</a></li>
                   <li><a href="examples/bs-seq/multiqc_report.html">Bisulfite</a></li>
                   <li><a href="examples/hi-c/multiqc_report.html">Hi-C</a></li>
+                  <li class="dropdown-header">MultiQC Customisation</li>
+                  <li><a href="examples/ngi-rna/Test_NGI_Project_multiqc_report.html">MultiQC_NGI Plugin</a></li>
                 </ul>
               </li>
               <li><a href="https://www.github.com/ewels/MultiQC">GitHub</a></li>
@@ -195,6 +197,7 @@ multiqc .</code></pre>
             <li><a href="examples/wgs/multiqc_report.html" data-target="#demo-wgs-description" >Whole-Genome Sequencing</a></li>
             <li><a href="examples/bs-seq/multiqc_report.html" data-target="#demo-bsseq-description" >Methylation (Bisfulite)</a></li>
             <li><a href="examples/hi-c/multiqc_report.html" data-target="#demo-hic-description" >Genome Structure (Hi-C)</a></li>
+            <li><a href="examples/ngi-rna/Test_NGI_Project_multiqc_report.html" data-target="#demo-ngi-rna-description" >Customised with MultiQC_NGI Plugin</a></li>
           </ul>
         </div>
         <div class="col-md-8 demo-descriptions">
@@ -278,6 +281,29 @@ multiqc .</code></pre>
               Note that the example report has some user-specific config settings, seen in the
               <code><a href="examples/hi-c/multiqc_config.yaml" target="_blank">multiqc_config.yaml</a></code> file.</p>
           </div>
+          <div id="demo-ngi-rna-description" style="display: none;">
+            <p>This MultiQC report was generated in combination with the <a href="https://github.com/ewels/MultiQC_NGI" target="_blank">MultiQC_NGI</a>
+              plugin. This plugin adds a few new functionalities to MultiQC which are specific to the
+              <a href="https://www.scilifelab.se/platforms/ngi/" target="_blank">SciLifeLab National Genomics Infrastruture</a>.
+              A new report template (<code>ngi</code>) styles reports with our logo. A new module (<code>NGI-RNAseq</code>) adds
+              sample similarity plots generated from custom code in our <a href="https://github.com/SciLifeLab/NGI-RNAseq" target="_blank">RNA pipeline</a>.
+              It also loads intersting data fields from our LIMS (eg. RIN score) and puts these into the report.
+              Finally, it saves the parsed biofinformatics summary results back in the LIMS for multi-project meta analyses.</p>
+            <div class="btn-group pull-right" role="group">
+              <a href="examples/ngi-rna/multiqc_report.zip" class="btn btn-default">
+                <span class="fa fa-file-text-o" aria-hidden="true"></span> Download report
+              </a>
+              <a href="examples/ngi-rna/data.zip" class="btn btn-default">
+                <span class="fa fa-files-o" aria-hidden="true"></span> Download logs
+              </a>
+            </div>
+            <p>You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
+              The <a href="https://github.com/ewels/MultiQC_NGI" target="_blank">MultiQC_NGI</a> package must be installed.
+              Note that the example report has some user-specific config settings, seen in the
+              <code><a href="examples/ngi-rna/multiqc_config.yaml" target="_blank">multiqc_config.yaml</a></code> file.
+              It can also be run with the <code>--test-db</code> parameter, using the
+              <a href="examples/ngi-rna/ngi_db_data.json">example data provided</a>.</p>
+          </div>
         </div>
       </div>
       
@@ -286,6 +312,7 @@ multiqc .</code></pre>
           <div id="iframe_browser_buttons"><span></span><span></span><span></span></div>
           <span id="iframe_browser_title">MultiQC Example Reports</span>
           <ul id="iframe_browser_tabs">
+            <li><a href="examples/ngi-rna/Test_NGI_Project_multiqc_report.html">MultiQC_NGI</a></li>
             <li><a href="examples/hi-c/multiqc_report.html">Hi-C</a></li>
             <li><a href="examples/bs-seq/multiqc_report.html">Bisulfite Seq</a></li>
             <li><a href="examples/wgs/multiqc_report.html">Whole-Genome Seq</a></li>
