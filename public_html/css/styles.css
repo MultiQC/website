@@ -545,6 +545,13 @@ h1.section-header .header-link { margin-top: 23px; }
   color: #999;
 }
 
+#mqc_docs blockquote {
+  font-size: 1em;
+  font-style: italic;
+  border-left: 4px solid #ced8de;
+  background-color: #e6e9e9;
+}
+
 #toc {
   margin-top:10px;
 }
