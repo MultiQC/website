@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MultiQC</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../fonts/font-mfizz.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  
+<div class="container">
+  <h1><img src="images/sbw_logo_small.png" title="Swedish Bioinformatics Workshop 2016"> &nbsp; MultiQC Workshop</h1>
+  
+  <p class="lead">Welcome to the SBW 2016 MultiQC Workshop!</p>
+  <p>See if you can work through the examples below - there's no rush, just do as many as you can in the available time.</p>
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">1. Install MultiQC</h3>
+      <p class="card-text">The first task is to get up and running with MultiQC. There are a few ways to do this:</p>
+      <ul>
+        <li>If you want to use MultiQC on <a href="http://www.uppmax.uu.se/" target="_blank">UPPMAX</a>
+          <ul>
+            <li>MultiQC is already installed as an environment module:
+              <code>module load bioinfo-tools</code>
+              <code>module load MultiQC</code>
+            </li>
+          </ul>
+        </li>
+        
+        <li>Install yourself from the <a href="https://pypi.python.org/pypi/multiqc" target="_blank">Python Package Index</a>:
+          <ul><li><code>pip install multiqc</code></li></ul>
+        </li>
+        
+        <li>If you have conda installed, from <a href="http://bioconda.github.io/recipes/multiqc/README.html" target="_blank">Bioconda</a>:
+          <ul><li><code>conda install -c bioconda multiqc</code></li></ul>
+        </li>
+      </ul>
+      <p class="card-text">Having difficulties? Take a look at the <a href="http://multiqc.info/docs/#installing-multiqc">MultiQC documentation</a> for more detailed instructions.</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">2. Check that MultiQC is installed properly</h3>
+      <p class="card-text">You can test MultiQC is working properly by printing the version:
+      <code>multiqc --version</code> or help text: <code>multiqc -h</code></p>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">3. Try on a basic dataset</h3>
+      <p class="card-text">Ok, you're ready to run this for real. Grab an
+        <a href="http://multiqc.info/examples/rna-seq/data.zip">example dataset</a>,
+        unzip it and try running MultiQC.
+      </p>
+      <p class="card-text"><a class="btn btn-secondary" data-toggle="collapse" href="#basic_dataset_help">Get some help</a></p>
+      <div class="collapse" id="basic_dataset_help">
+        <pre class="card card-block card-inverse">
+wget http://multiqc.info/examples/rna-seq/data.zip
+unzip data.zip
+cd data
+multiqc .</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">Running with loads of samples</h3>
+      <p class="card-text">MultiQC can handle really huge numbers of samples. This is great if you're
+        working with single-cell data, or other large datasets.
+        The <a href="http://imlspenticton.uzh.ch:3838/conquer/" target="_blank">conquer</a> single-cell
+        datasets all come with MultiQC reports. Try running MultiQC on the logs from their largest dataset, GSE57872
+        (<a href="http://www.ncbi.nlm.nih.gov/pubmed/24925914" target="_blank">Patel <em>et. al.</em></a>) with
+        864 cells. <a href="single_cell/GSE57872.tar.gz">Download the logs files here</a>.
+      </p>
+    </div>
+  </div>
+  
+  
+  
+  <footer class="row">
+    <div class="col-sm-6">
+      <p>Phil Ewels: <a href="mailto:phil.ewels@scilifelab.se">phil.ewels@scilifelab.se</a></p>
+    </div>
+    <div class="col-sm-6 text-right">
+      <a href="https://ngisweden.scilifelab.se/" target="_blank"><img src="images/NGI-final_darkbg.png" title="National Genomics Infrastructure"></a>
+      <a href="https://www.scilifelab.se/platforms/ngi/" target="_blank"><img src="images/SLL_logo_white_green.png" title="Science for Life Laboratory" class="sll-logo"></a>
+    </div>
+  </footer>
+  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
+</body>
+</html>
