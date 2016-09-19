@@ -406,61 +406,57 @@ multiqc .</code></pre>
       
       <section>
         <h3>Nice things that people have said about MultiQC</h3>
-        <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="1"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="2"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="3"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="4"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="5"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="6"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="7"></li>
-            <li data-target="#testimonials-carousel" data-slide-to="8"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Amazingly, <a href="https://t.co/QTDfCMVG3B">https://t.co/QTDfCMVG3B</a> just works. Ran `multiqc .` in a dir with bunch of STAR, featurecounts, fastqc results. Worked 1st time.</p>&mdash; Stephen Turner (@genetics_blog) <a href="https://twitter.com/genetics_blog/status/737727882722717696">May 31, 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> after using for 1 month, already uncovered discrepancy across samples on a project</p>&mdash; Mike Love (@mikelove) <a href="https://twitter.com/mikelove/status/743778234316296194">17 June 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">MultiQC == Awesome tool! Wish all bioinfo software were as documented, modular and useful as this! <a href="https://t.co/OiDAzlNqxS">https://t.co/OiDAzlNqxS</a></p>&mdash; André Rendeiro (@afrendeiro) <a href="https://twitter.com/afrendeiro/status/703325541877882880">February 26, 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="98cc7d46-80e2-428e-a1c4-0b105008ddb4" data-embed-created="2016-06-29T08:50:44.691Z"><a href="https://www.reddit.com/r/bioinformatics/comments/4q8534/multiqc_now_published_tool_for_summarising/d4rjcgh">Comment</a> from discussion <a href="https://www.reddit.com/r/bioinformatics/comments/4q8534/multiqc_now_published_tool_for_summarising/">MultiQC now published! Tool for summarising &amp; visualising bioinfo results.</a>.</div>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> this such a great difference to the visualization of fastqc reports individually! :)</p>&mdash; Olalla Lorenzo (@o_olalla) <a href="https://twitter.com/o_olalla/status/745212157529296896">June 21, 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Really impressed by this MultiQC tool - Create automatic bioinfo reports: Usage: <a href="https://t.co/EDUmwoxyn1">https://t.co/EDUmwoxyn1</a> Reports: <a href="https://t.co/PsrSUH5Egi">https://t.co/PsrSUH5Egi</a></p>&mdash; Eric Normandeau (@eric_normandeau) <a href="https://twitter.com/eric_normandeau/status/735487628024393728">May 25, 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Can recommend MultiQC: creates pretty report of -all- output from FastQC,Bowtie,Samtools,etc <a href="https://t.co/cxbV6Nxmq8">https://t.co/cxbV6Nxmq8</a> <a href="https://t.co/4Ha4aupoki">pic.twitter.com/4Ha4aupoki</a></p>&mdash; Elin Videvall (@ElinVidevall) <a href="https://twitter.com/ElinVidevall/status/717753544783360000">April 6, 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en-gb"><p lang="en" dir="ltr">MultiQC is now published! Awesome tool by <a href="https://twitter.com/tallphil">@tallphil</a> to summarize quality of many samples. <a href="https://t.co/M7uLzHQC7E">https://t.co/M7uLzHQC7E</a> <a href="https://t.co/EiVmjI988K">pic.twitter.com/EiVmjI988K</a></p>&mdash; Elin Videvall (@ElinVidevall) <a href="https://twitter.com/ElinVidevall/status/743782280548716544">17 June 2016</a></blockquote>
-            </div>
-            <div class="item">
-              <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/ElinVidevall">@ElinVidevall</a> <a href="https://twitter.com/BioMickWatson">@BioMickWatson</a> <a href="https://twitter.com/tallphil">@tallphil</a> this is a fantastic tool I use frequently for single cell QC. Glad to see it published.</p>&mdash; Sowmya Iyer (@becauseBiology) <a href="https://twitter.com/becauseBiology/status/743783436234686464">17 June 2016</a></blockquote>
-            </div>
+        
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Amazingly, <a href="https://t.co/QTDfCMVG3B">https://t.co/QTDfCMVG3B</a> just works. Ran `multiqc .` in a dir with bunch of STAR, featurecounts, fastqc results. Worked 1st time.</p>&mdash; Stephen Turner (@genetics_blog) <a href="https://twitter.com/genetics_blog/status/737727882722717696">May 31, 2016</a></blockquote>
           </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#testimonials-carousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#testimonials-carousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> after using for 1 month, already uncovered discrepancy across samples on a project</p>&mdash; Mike Love (@mikelove) <a href="https://twitter.com/mikelove/status/743778234316296194">17 June 2016</a></blockquote>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">MultiQC == Awesome tool! Wish all bioinfo software were as documented, modular and useful as this! <a href="https://t.co/OiDAzlNqxS">https://t.co/OiDAzlNqxS</a></p>&mdash; André Rendeiro (@afrendeiro) <a href="https://twitter.com/afrendeiro/status/703325541877882880">February 26, 2016</a></blockquote>
+          </div>
+          <div class="col-sm-6">
+            <div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="false" data-embed-live="false" data-embed-uuid="98cc7d46-80e2-428e-a1c4-0b105008ddb4" data-embed-created="2016-06-29T08:50:44.691Z"><a href="https://www.reddit.com/r/bioinformatics/comments/4q8534/multiqc_now_published_tool_for_summarising/d4rjcgh">Comment</a> from discussion <a href="https://www.reddit.com/r/bioinformatics/comments/4q8534/multiqc_now_published_tool_for_summarising/">MultiQC now published! Tool for summarising &amp; visualising bioinfo results.</a>.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> this such a great difference to the visualization of fastqc reports individually! :)</p>&mdash; Olalla Lorenzo (@o_olalla) <a href="https://twitter.com/o_olalla/status/745212157529296896">June 21, 2016</a></blockquote>
+          </div>
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Really impressed by this MultiQC tool - Create automatic bioinfo reports: Usage: <a href="https://t.co/EDUmwoxyn1">https://t.co/EDUmwoxyn1</a> Reports: <a href="https://t.co/PsrSUH5Egi">https://t.co/PsrSUH5Egi</a></p>&mdash; Eric Normandeau (@eric_normandeau) <a href="https://twitter.com/eric_normandeau/status/735487628024393728">May 25, 2016</a></blockquote>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Can recommend MultiQC: creates pretty report of -all- output from FastQC,Bowtie,Samtools,etc <a href="https://t.co/cxbV6Nxmq8">https://t.co/cxbV6Nxmq8</a> <a href="https://t.co/4Ha4aupoki">pic.twitter.com/4Ha4aupoki</a></p>&mdash; Elin Videvall (@ElinVidevall) <a href="https://twitter.com/ElinVidevall/status/717753544783360000">April 6, 2016</a></blockquote>
+          </div>
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/tallphil">@tallphil</a> MultiQC just blew my mind. Great stuff.</p>&mdash; Stephen Newhouse (@s_j_newhouse) <a href="https://twitter.com/s_j_newhouse/status/755136807986204677">July 18, 2016</a></blockquote>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/ElinVidevall">@ElinVidevall</a> <a href="https://twitter.com/BioMickWatson">@BioMickWatson</a> <a href="https://twitter.com/tallphil">@tallphil</a> this is a fantastic tool I use frequently for single cell QC. Glad to see it published.</p>&mdash; Sowmya Iyer (@becauseBiology) <a href="https://twitter.com/becauseBiology/status/743783436234686464">17 June 2016</a></blockquote>
+          </div>
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Current favourite tool - MultiQC - <a href="https://t.co/VsAAS128GJ">https://t.co/VsAAS128GJ</a> - piece of cake to use, essential for large projects, thanks very much <a href="https://twitter.com/tallphil">@tallphil</a></p>&mdash; Lavinia Gordon (@MrsLaviniaG) <a href="https://twitter.com/MrsLaviniaG/status/749099391042981888">2 July 2016</a></blockquote>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">I&#39;m continuously impressed by how slick multiqc from <a href="https://twitter.com/tallphil">@tallphil</a> is. It makes my life so much easier.</p>&mdash; Devon Ryan (@dpryan79) <a href="https://twitter.com/dpryan79/status/770579813455257600">30 August 2016</a></blockquote>
+          </div>
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Fantastic tool! Combine 100s of FastQC files and alignment scores into a single report within minutes... <a href="https://t.co/2q0aXkwEl3">https://t.co/2q0aXkwEl3</a></p>&mdash; Jana Sperschneider (@JSperschneider) <a href="https://twitter.com/JSperschneider/status/773337624555565056">September 7, 2016</a></blockquote>
+          </div>
+        </div>
+        <a href="https://twitter.com/search?f=tweets&vertical=default&q=MultiQC" target="_blank" class="btn btn-default">See more on twitter.com &rarr;</a>
+        
         <!-- Twitter & Reddit async scripts -->
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script async src="https://www.redditstatic.com/comment-embed.js"></script>

@@ -379,6 +379,9 @@ section p {
 section p, section .btn, section .btn-group {
   margin-left: 20px;
 }
+section .row {
+  margin: 0 5px;
+}
 
 .feature-icons {
   list-style-type: none;
@@ -432,47 +435,28 @@ section p, section .btn, section .btn-group {
 .mod-list.aligners { border-left: 5px solid #1f78b4; }
 .mod-list.pre-alignment { border-left: 5px solid #b2df8a; }
 
-#testimonials-carousel {
-  margin: 20px;
+blockquote.twitter-tweet, .reddit-embed {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 0;
+  padding: 16px;
+  max-width: 468px;
+  min-height: 200px;
 }
-#testimonials-carousel .carousel-indicators {
-  bottom: 0;
+ 
+blockquote.twitter-tweet p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
 }
-#testimonials-carousel .carousel-indicators li {
-  border-color: #333333;
-}
-#testimonials-carousel .carousel-indicators .active {
-  background-color: #333333;
-}
-#testimonials-carousel .item {
-  height: 220px;
-}
-#testimonials-carousel .item blockquote {
-  width: 500px;
-  margin: auto;
-}
-#testimonials-carousel .item iframe,
-#testimonials-carousel .item twitterwidget {
-  margin: auto !important;
-}
-
-#testimonials-carousel .carousel-control.left {
-  background-image: -webkit-linear-gradient(left,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
-  background-image: -o-linear-gradient(left,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
-  background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.2)),to(rgba(0,0,0,.0001)));
-  background-image: linear-gradient(to right,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-#testimonials-carousel .carousel-control.right {
-  background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
-  background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
-  background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.2)));
-  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
 
 .gitter-chat-embed {
   top: 80px;
