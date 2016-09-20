@@ -3,16 +3,27 @@
 body {
     font-family: 'Open Sans', Helvetica, sans-serif;
     background-color: #414241;
-    color: rgba(255,255,255,.65)
+    color: rgba(255,255,255,.65);
+    padding: 30px 0;
 }
 
+header { text-align: center; }
+header img { max-height: 100px; max-width: 80%; }
+header a { margin-right: 30px; }
 h1 {
     border-bottom: 1px solid #f76d1d;
-    font-weight: 300;
     font-size: 48px;
     color: #FFFFFF;
-    margin: 30px 0;
+    margin: 30px 0 15px;
     padding-bottom: 10px;
+}
+h1 small {
+    color: #999;
+    font-weight: 300;
+    font-size: 0.5em;
+}
+hr {
+    border-top: 1px solid #f76d1d;
 }
 
 .card-inverse {
@@ -21,6 +32,9 @@ h1 {
 }
 .card-inverse .card-inverse {
     background-color: #222;
+}
+.card-inverse .card-inverse .text-muted {
+    color: #666 !important;
 }
 
 a {
@@ -33,29 +47,45 @@ a:hover, a:focus, a:active {
 code {
     background-color: #222;
     color: rgba(255,255,255,.75);
-    margin: 0 10px 0 5px;
+    white-space: nowrap;
 }
 pre {
     background-color: #222;
     color: rgba(255,255,255,.75);
+    overflow: auto;
 }
 
 ul li ul {
     margin-bottom: 15px;
 }
 
+.btn-sbw {
+    color: #d67a3d;
+    background-color: transparent;
+    border-color: #d67a3d;
+}
+.btn-sbw:active, .btn-sbw:focus {
+    color: #f76d1d;
+    border-color: #f76d1d;
+}
+.btn-sbw:hover {
+    color: #333;
+    background-color: #f76d1d;
+    border-color: #f76d1d;
+}
+
 footer {
-    margin: 30px 0;
+    margin: 30px 0 0;
     border-top: 1px solid #f76d1d;
     color: #ccc;
     font-weight: 300;
 }
 footer p {
-    margin: 30px 0;
+    margin: 30px 0 0;
 }
 footer a {
     color: #ccc;
 }
 footer .sll-logo {
-    margin:20px 0 0 20px;
+    margin: 20px 0 0 20px;
 }
