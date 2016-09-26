@@ -7,6 +7,14 @@ Cutadapt	all_sections	MethylC-Seq_mm_fc_2wk_SRR921695_1	/Users/philewels/GitHub/
 Cutadapt	all_sections	MethylC-Seq_mm_fc_2wk_SRR921773_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt
 Cutadapt	all_sections	MethylC-Seq_mm_fc_2wk_SRR921696_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt
 Cutadapt	all_sections	MethylC-Seq_mm_fc_1wk_SRR921770_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt
+FastQC	all_sections	MethylC-Seq_mm_fc_1wk_SRR921769_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_1wk_SRR921767_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_2wk_SRR921694_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_1wk_SRR921768_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_2wk_SRR921695_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_2wk_SRR921773_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_2wk_SRR921696_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.zip
+FastQC	all_sections	MethylC-Seq_mm_fc_1wk_SRR921770_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.zip
 Bismark	m_bias	MethylC-Seq_mm_fc_1wk_SRR921769_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt
 Bismark	m_bias	MethylC-Seq_mm_fc_1wk_SRR921767_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt
 Bismark	m_bias	MethylC-Seq_mm_fc_2wk_SRR921694_1	/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt

@@ -47,3 +47,9 @@ FastQ Screen	all_sections	P4107_1006	/Users/philewels/GitHub/MultiQC_website/pub
 FastQ Screen	all_sections	P4107_1001	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R2_001_screen.txt
 FastQ Screen	all_sections	P4107_1002	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1002/fastq_screen/P4107_1002_S2_L003_R2_001_screen.txt
 FastQ Screen	all_sections	P4107_1003	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1003/fastq_screen/P4107_1003_S3_L004_R2_001_screen.txt
+FastQC	all_sections	P4107_1004	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1004/fastqc/P4107_1004_S4_L005_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1005	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1005/fastqc/P4107_1005_S5_L006_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1006	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1006/fastqc/P4107_1006_S6_L007_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1001	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1001/fastqc/P4107_1001_S1_L002_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1002	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1002/fastqc/P4107_1002_S2_L003_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1003	/Users/philewels/GitHub/MultiQC_website/public_html/examples/wgs/data/qc_ngi/P4107_1003/fastqc/P4107_1003_S3_L004_R2_001_fastqc.zip
