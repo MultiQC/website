@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MultiQC - SBW Workshop</title>
+  <meta name="description" content="">
+  <meta name="author" content="Phil Ewels">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  
+<div class="container">
+  <header>
+    <a href="http://sbw2016.se/" target="_blank"><img src="../images/sbw_logo_small.png" title="Swedish Bioinformatics Workshop 2016"></a>
+    <a href="http://sbw2016.se/" target="_blank"><img src="../../images/MultiQC_logo.png" title="MultiQC"></a>
+  </header>
+  <h1 class="display-4">
+    MultiQC Workshop
+    <small>Phil Ewels, 21<sup>st</sup> October 2016</small>
+  </h1>
+  
+  <h2>Excercises <span class="tag tag-default">Part Two</span></h2>
+  
+  <p>Remember that you can find more information about MultiQC on the
+    <a href="http://multiqc.info" target="_blank">MultiQC website</a>
+    (especially the <a href="http://multiqc.info/docs/" target="_blank">documentation</a>) and the
+    <a href="https://github.com/ewels/MultiQC" target="_blank">GitHub repository</a>.</p>
+  <hr>
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">1. Create a MultiQC configuration file.</h3>
+      <p>Parsed data files are saved as tab-delimited files by default. If you prefer, you can write the output as
+        JSON or YAML using the <code>-k</code>&nbsp;/&nbsp;<code>--data-format</code>
+        command line flag. It's annoying to have to use this every time though, so try changing the default using
+        a config file.</p>
+      <p>You can customise how MultiQC works with a YAML config file. You can create these in your home directory
+        (<code>~/.multiqc_config.yaml</code>) or in the current working directory (<code>./multiqc_config.yaml</code>). Pretty much
+        <a href="https://github.com/ewels/MultiQC/blob/master/multiqc/utils/config_defaults.yaml" target="_blank">every MultiQC default</a>
+        can be changed using this.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_config_file">Example commands</a></p>
+      <div class="collapse" id="multiqc_config_file">
+        <p>Create a file in your home directory called <code>.multiqc_config.yaml</code> <em>(note the leading <code>.</code>)</em>
+          and use your favourite text editor to add the following YAML:</p>
+        <pre class="card card-block card-inverse"><span class="text-success">data_format:</span> <span class="text-info">'yaml'</span></pre>
+        
+        <p>Alternatively, do all of that with the following command:</p>
+        <pre class="card card-block card-inverse">echo "data_format: 'yaml'" > ~/.multiqc_config.yaml</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">2. Custom search patterns</h3>
+      <p><a href="../data/star_renamed.tar.gz">These STAR logs</a> were generated with different filename suffixes.
+      As such, if you run MultiQC on the extracted files, it won't find any samples.</p>
+      <p>See if you can override the default MultiQC search pattern for STAR so that it finds the log files.</p>
+      <p>If you want to do this on a one-off basis, just put this into a file
+        called <code>multiqc_config.yaml</code> in the working directory.</p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_search_patterns">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#module-search-patterns" target="_blank">Documentation</a>
+      </p>
+      <div class="collapse" id="multiqc_search_patterns">
+        <pre class="card card-block card-inverse">
+wget http://multiqc.info/SBW/data/star_renamed.tar.gz
+tar xzf star_renamed.tar.gz
+cd STAR_renamed
+multiqc . <span class="text-muted m-l-1"># Should say that "No analysis results found."</span>
+<span class="text-muted"># ...edit your MultiQC config file</span>
+multiqc . <span class="text-muted m-l-1"># Should now find 8 STAR reports!</span></pre>
+        <p>Add the following to your MultiQC config file:</p>
+        <pre class="card card-block card-inverse"><span class="text-success">sp:
+    star:
+        fn: </span> <span class="text-info">"*_star.log"</span>
+</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">3. Cleaning Sample Names</h3>
+      <p>If you looked at the report generated in the previous step, you may have noticed that the samples
+      have really long names (eg. <code>SRR3192396_1.mapped_sort.DupRemoved.subsampled_validated_star</code>).</p>
+      <p>See if you can get MultiQC to automatically remove this long suffix to give easier sample names.</p>
+      <p>Try experimenting with <code>type: 'replace'</code>, <code>type: 'regex'</code> and <code>extra_fn_clean_trim</code>
+      to see how they all behave.</p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_sample_name_cleaning">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#sample-name-cleaning" target="_blank">Documentation</a>
+      </p>
+      <div class="collapse" id="multiqc_sample_name_cleaning">
+        <p>Add the following to your MultiQC config file:</p>
+        <pre class="card card-block card-inverse"><span class="text-success">extra_fn_clean_exts:</span>
+  <span class="text-info">- .mapped</span>
+</pre>
+        <p>Other possible solutions:</p>
+        <pre class="card card-block card-inverse"><span class="text-success">extra_fn_clean_exts:</span>
+  <span class="text-success">- type:</span> <span class="text-info">'replace'
+    <span class="text-success">pattern:</span> <span class="text-info">.mapped</span> <span class="text-muted m-l-1"># Will only remove the string '.mapped' instead of truncating</span>
+  <span class="text-success">- type:</span> <span class="text-info">'regex'
+    <span class="text-success">pattern:</span> <span class="text-info">'\.mapped_.*_star$'</span>
+<span class="text-success">extra_fn_clean_trim:</span>
+  <span class="text-info">- _star</span> <span class="text-muted m-l-1"># Will only remove _star if it's at the end of the string</span>
+</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">4. Overwritten samples</h3>
+      <p><a href="../data/qualimap_dupnames.tar.gz">These log files</a> are named in such a way that the default sample name cleaning
+      gives false duplicate names. See if you can diagnose and fix this problem.</p>
+      <p>For a long-term solution, try changing the default sample name cleaning parameters.</p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_duplicate_names">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#clashing-sample-names" target="_blank">Documentation</a>
+      </p>
+      <div class="collapse" id="multiqc_duplicate_names">
+        <pre class="card card-block card-inverse">
+wget http://multiqc.info/SBW/data/qualimap_dupnames.tar.gz
+tar xzf qualimap_dupnames.tar.gz
+cd qualimap_dupnames
+multiqc . <span class="text-muted m-l-1"># Will only find 2 Qualimap BamQC reports instead of 4</span>
+multiqc -f -v . <span class="text-muted m-l-1"># Shows verbose log, including "Duplicate sample name" debug messages</span>
+multiqc -f --fullnames . <span class="text-muted m-l-1"># Doesn't clean names, now finds all 4 samples!</span></pre>
+
+        <p>Note that the general stats table is not as pretty now, as MultiQC isn't doing <em>any</em> sample name cleaning.</p>
+        <p>A better long-term solution is to overwrite the
+        <a href="https://github.com/ewels/MultiQC/blob/master/multiqc/utils/config_defaults.yaml#L66" target="_blank">default sample name cleaning parameters</a>:</p>
+        <pre class="card card-block card-inverse">
+<span class="text-muted"># Copy all of the defaults and comment / delete the ones you don't want</span>
+<span class="text-success">fn_clean_exts:</span>
+  <span class="text-info">- '.gz'
+  - '.fastq'
+  - '.fq'
+  - '.bam'
+  - '.sam'
+  - '.sra'
+  - '.vcf'
+  - '.dat'
+  - '_tophat'
+  - '.log'
+  - '.stderr'
+  - '.out'
+  - 'Log.final'
+  - '.flagstat'
+  - '_star_aligned'
+  - '_fastqc'
+  - '.hicup'
+  - '.counts'
+  - '_counts'
+  - '.txt'
+  - '.aligned'
+  - 'Aligned'
+  <span class="text-muted"># - '.merge'
+  # - '.deduplicated'
+  # - '.dedup'
+  # - '.clean'</span><span class="text-info">
+  - '.sorted'
+  - '.report'
+  - '| stdin'</span>
+</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">5. Header Information</h3>
+      <p>Great! These reports are working well, but wouldn't it be cool if you could add a little extra
+      meta-information about the project?</p>
+      <p>Try giving the previous report a title and subtitle, along with a box with the following
+        sequencing information:</p>
+      <dl class="row">
+        <dt class="col-sm-3 text-xs-right">Contact E-mail:</dt>
+        <dd class="col-sm-9">phil.ewels@scilifelab.se</dd>
+        <dt class="col-sm-3 text-xs-right">Application Type:</dt>
+        <dd class="col-sm-9">Whole Genome Resequencing</dd>
+        <dt class="col-sm-3 text-xs-right">Sequencing Platform:</dt>
+        <dd class="col-sm-9">HiSeq 2500 High Output V4</dd>
+        <dt class="col-sm-3 text-xs-right">Sequencing Setup:</dt>
+        <dd class="col-sm-9">2x125</dd>
+      </dl>
+      <p>Make sure NOT to add this to <em>all</em> reports.</p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_header_info">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#customising-reports" target="_blank">Documentation</a>
+      </p>
+      <div class="collapse" id="multiqc_header_info">
+        <p>Save the below as a file called <code>multiqc_config.yaml</code> in the working directory.</p>
+        <pre class="card card-block card-inverse"><span class="text-success">title:</span> <span class="text-info">"Example Project Name"</span>
+<span class="text-success">subtitle:</span> <span class="text-info">"This project was created to demonstrate how MultiQC works."</span>
+<span class="text-success">intro:</span> <span class="text-info">"You can find out more about MultiQC at &lt;a href="http://multiqc.info"&gt;multiqc.info&lt;/a&gt;"</span>
+<span class="text-success">custom_message:</span> <span class="text-info">"Remember - MultiQC is awesome!"</span>
+<span class="text-success">report_header_info:
+<span class="text-success">  - Contact E-mail:</span> <span class="text-info">'phil.ewels@scilifelab.se'</span>
+<span class="text-success">  - Application Type:</span> <span class="text-info">'Whole Genome Resequencing'</span>
+<span class="text-success">  - Sequencing Platform:</span> <span class="text-info">'HiSeq 2500 High Output V4'</span>
+<span class="text-success">  - Sequencing Setup:</span> <span class="text-info">'2x125'</span>
+</pre>
+        <p>If you prefer, you can call this file whatever you like and tell MultiQC to load it with the <code>-c</code>
+          command line parameter.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">6. Customing Reports</h3>
+      <p>Super cool! What about adding your custom logo to all reports? Here it is:<br/>
+      <img class="img-rounded" style="width:250px; border: 1px solid white;" src="../data/report_dog.jpg" title="Report Dog!"></p>
+      <p>For bonus points, try giving reports a pink background and Comic Sans font.</p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_customising_reports">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#report-logo" target="_blank">Documentation</a>
+      </p>
+      <div class="collapse" id="multiqc_customising_reports">
+        <pre class="card card-block card-inverse">wget http://multiqc.info/SBW/data/report_dog.jpg
+pwd <span class="text-muted m-l-1"># Find the full path of your current directory (copy this)</span></pre>
+
+        <p>Now add the following to your MultiQC config file:</p>
+        <pre class="card card-block card-inverse"><span class="text-success">custom_logo:</span> <span class="text-info">"[copied path]/report_dog.jpg"</span>
+<span class="text-success">custom_logo_url:</span> <span class="text-info">https://youtu.be/5dbG4wqN0rQ</span>
+<span class="text-success">custom_logo_title:</span> <span class="text-info">"Such wow! Much awesome. Many cool."</span>
+</pre>
+        <p>To do the pink background and comic sans, have a read through the
+          <a href="http://multiqc.info/docs/#creating-a-template-skeleton">documentation about custom templates</a>.</p>
+        <p>I recommend creating a new child template based on <code>default</code> with a new
+          <a href="https://github.com/ewels/MultiQC/blob/master/multiqc/templates/default/head.html" target="_blank"><code>head.html</code></a>
+          file with the following CSS added at the end:</p>
+        <pre class="card card-block card-inverse">&lt;style type="text/css"&gt;
+body {
+  background-color: fuchsia;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+&lt;/style&gt;</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <footer class="row">
+    <div class="col-sm-6">
+      <p>Phil Ewels: <a href="mailto:phil.ewels@scilifelab.se">phil.ewels@scilifelab.se</a></p>
+    </div>
+    <div class="col-sm-6 text-xs-right">
+      <a href="https://ngisweden.scilifelab.se/" target="_blank"><img src="../images/NGI-final_darkbg.png" title="National Genomics Infrastructure"></a>
+      <a href="https://www.scilifelab.se/platforms/ngi/" target="_blank"><img src="../images/SLL_logo_white_green.png" title="Science for Life Laboratory" class="sll-logo"></a>
+    </div>
+  </footer>
+  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>

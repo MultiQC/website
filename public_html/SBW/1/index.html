@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MultiQC - SBW Workshop</title>
+  <meta name="description" content="">
+  <meta name="author" content="Phil Ewels">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  
+<div class="container">
+  <header>
+    <a href="http://sbw2016.se/" target="_blank"><img src="../images/sbw_logo_small.png" title="Swedish Bioinformatics Workshop 2016"></a>
+    <a href="http://sbw2016.se/" target="_blank"><img src="../../images/MultiQC_logo.png" title="MultiQC"></a>
+  </header>
+  <h1 class="display-4">
+    MultiQC Workshop
+    <small>Phil Ewels, 21<sup>st</sup> October 2016</small>
+  </h1>
+  
+  <h2>Excercises <span class="tag tag-default">Part One</span></h2>
+  
+  <p>See if you can work through the examples below - there's no rush, just do as many as you can in the available time.</p>
+  <p>These excercises assume that you have access to a command line environment with Python installed, such as a terminal
+    in linux or MacOSX. If you're using Windows many of the example commands won't work, but MultiQC should be fine.
+    Try using <a href="https://www.cygwin.com/" target="_blank">Cygwin</a> if you want a more linux-like environment.</p>
+  <p>For more information about MultiQC, see the <a href="http://multiqc.info" target="_blank">MultiQC website</a> and the
+    <a href="https://github.com/ewels/MultiQC" target="_blank">GitHub repository</a>.</p>
+  <hr>
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">1. Install MultiQC</h3>
+      <p>The first task is to get up and running with MultiQC.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#installation_help">Show Help</a></p>
+      <div class="collapse" id="installation_help">
+        <div class="card card-block card-inverse">
+          <p>There are a few ways to do this:</p>
+          <ul>
+            <li>If you want to use MultiQC on <a href="http://www.uppmax.uu.se/" target="_blank">UPPMAX</a> you can use
+              the environment module:
+              <ul>
+                <li><code>module load bioinfo-tools</code></li>
+                <li><code>module load MultiQC</code></li>
+              </ul>
+            </li>
+            
+            <li>Install yourself from the <a href="https://pypi.python.org/pypi/multiqc" target="_blank">Python Package Index</a>:
+              <ul><li><code>pip install multiqc</code></li></ul>
+            </li>
+            
+            <li>If you have conda installed, from <a href="http://bioconda.github.io/recipes/multiqc/README.html" target="_blank">Bioconda</a>:
+              <ul><li><code>conda install -c bioconda multiqc</code></li></ul>
+            </li>
+          </ul>
+          <p>Having difficulties? Take a look at the <a href="http://multiqc.info/docs/#installing-multiqc">MultiQC documentation</a> for more detailed instructions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">2. Check that MultiQC is installed properly</h3>
+      <p>You can test MultiQC is working properly by printing the version or help text.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#version_check_cmds">Example commands</a></p>
+      <div class="collapse" id="version_check_cmds">
+        <pre class="card card-block card-inverse">
+multiqc --version
+multiqc --help</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">3. Try on a basic dataset</h3>
+      <p>Ok, you're ready to run this for real. Grab an
+        <a href="../data/basic_RNAseq.tar.gz">example dataset</a>, unzip it and try running MultiQC.</p>
+      <p>Try running MultiQC a second time. It should warn you that a report already exists and exit. To overwrite
+          existing reports, use the <code>-f</code>&nbsp;/&nbsp;<code>--force</code> command line flag.</p>
+      <p>Note that I have deleted result files that MultiQC would normally ignore to keep the download filesize small.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#basic_dataset_help">Example commands</a></p>
+      <div class="collapse" id="basic_dataset_help">
+        <pre class="card card-block card-inverse">
+wget http://multiqc.info/SBW/data/basic_RNAseq.tar.gz
+tar xzf basic_RNAseq.tar.gz
+multiqc .
+multiqc . <span class="text-muted m-l-1"># Should fail with a warning</span>
+multiqc --force .
+open multiqc_report.html</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">4. Report Tools</h3>
+      <p>Have a look at the report you generated in the previous step. A few of the samples have some adapter
+      contamination. Try highlighting them and see if you can spot any other patterns in other plots.</p>
+      <p>Once you're happy with the highlighting, export the GC content plot as a <code>.png</code> image,
+        then export the data and see if you can plot it in Excel.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_report_tools">See Hints</a></p>
+      <div class="collapse" id="multiqc_report_tools">
+        <figure class="figure pull-xs-left m-r-1">
+          <img class="img-rounded" src="../images/report_01-highlighting.png">
+          <figcaption class="figure-caption">Highlighting sample names</figcaption>
+        </figure>
+        <figure class="figure pull-xs-left m-r-1">
+          <img class="img-rounded" src="../images/report_02-export_button.png">
+          <figcaption class="figure-caption">Plot export button</figcaption>
+        </figure>
+        <figure class="figure pull-xs-left m-r-1">
+          <img class="img-rounded" src="../images/report_03-export_toolbox.png">
+          <figcaption class="figure-caption">Export plots toolbox</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">5. Take a look at the parsed data files.</h3>
+      <p>As well as the HTML output, MultiQC saves data to files in <code>multiqc_data</code>, including
+      some things that don't make it to the report. See if you can find the number of annotated splice sites
+      for these datasets, as reported by the <a href="https://github.com/alexdobin/STAR" target="_blank">STAR</a>
+      RNA-seq aligner.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_data_files">Example commands</a></p>
+      <div class="collapse" id="multiqc_data_files">
+        <pre class="card card-block card-inverse">
+cd multiqc_data
+<span class="text-muted"># These are example commands to view tab delimited data on the command line.</span>
+<span class="text-muted"># If you prefer, just open up this file in Excel or equivalent</span>
+column -t multiqc_star.txt | less -S -#5
+cut -d$'\t' -f 1,13 multiqc_star.txt | column -t</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">6. Prepending directory names.</h3>
+      <p>MultiQC tries its best to guess sample names, but can sometimes struggle. In
+        <a href="../data/fastqc_stdin.tar.gz">this example dataset</a> FastQC has been run with a pipe using
+        <code>stdout</code>. As a result, every sample has the same name and overwrites the last.</p>
+      <p>To get around this, we can prepend the directory path to each sample name. This stops them from
+        overwriting each other so that we can see the report.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_prepend_dirs">Example commands</a></p>
+      <div class="collapse" id="multiqc_prepend_dirs">
+        <pre class="card card-block card-inverse">
+wget http://multiqc.info/SBW/data/fastqc_stdin.tar.gz
+tar xzf fastqc_stdin.tar.gz
+cd fastqc_stdin
+multiqc . <span class="text-muted m-l-1"># Report will have one sample called stdin, instead of 5</span>
+multiqc --dirs -f .</pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card card-inverse">
+    <div class="card-block">
+      <h3 class="card-title">7. Running with loads of samples</h3>
+      <p>MultiQC can handle really huge numbers of samples. This is great if you're working with single-cell data,
+        or other large datasets. The <a href="http://imlspenticton.uzh.ch:3838/conquer/" target="_blank">conquer</a>
+        single-cell datasets all come with MultiQC reports. Try running MultiQC on the logs from their largest dataset, GSE57872
+        (<a href="http://www.ncbi.nlm.nih.gov/pubmed/24925914" target="_blank">Patel <em>et. al.</em></a>) with
+        864 cells. <a href="../data/single_cell_GSE57872.tar.gz">You can get the log files here</a>.
+      </p>
+      <p><em>Note that running on so many samples takes a bit longer.</em>
+        On my laptop, this dataset took about seven minutes. We have reports from Salmon and FastQC - FastQC is
+        the slowest as it generates a lot of plots. To speed things up a bit, you can use <code>--module salmon</code>
+        or <code>--exclude fastqc</code>.</p>
+      <p>Because creating interactive plots with so many samples would crash your browser, MultiQC creates static
+        images instead. You can override this behaviour using the <code>--interactive</code> and <code>--flat</code>
+        command line flags.</p>
+      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_single_cell">Example commands</a></p>
+      <div class="collapse" id="multiqc_single_cell">
+        <pre class="card card-block card-inverse">
+wget http://multiqc.info/SBW/data/single_cell_GSE57872.tar.gz
+tar xzf single_cell_GSE57872.tar.gz
+cd GSE57872
+
+multiqc --module salmon .
+open multiqc_report.html
+
+multiqc --interactive --filename big.html .
+open big.html <span class="text-muted m-l-1"># Opening this report may crash your browser!</span></pre>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <footer class="row">
+    <div class="col-sm-6">
+      <p>Phil Ewels: <a href="mailto:phil.ewels@scilifelab.se">phil.ewels@scilifelab.se</a></p>
+    </div>
+    <div class="col-sm-6 text-xs-right">
+      <a href="https://ngisweden.scilifelab.se/" target="_blank"><img src="../images/NGI-final_darkbg.png" title="National Genomics Infrastructure"></a>
+      <a href="https://www.scilifelab.se/platforms/ngi/" target="_blank"><img src="../images/SLL_logo_white_green.png" title="Science for Life Laboratory" class="sll-logo"></a>
+    </div>
+  </footer>
+  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>
