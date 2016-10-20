@@ -28,7 +28,7 @@
     <a href="../"><img src="../../images/MultiQC_logo.png" title="MultiQC"></a>
   </header>
   <h1 class="display-4">
-    MultiQC Workshop
+    <a href="../">MultiQC Workshop</a>
     <small>Phil Ewels, 21<sup>st</sup> October 2016</small>
   </h1>
   
@@ -79,7 +79,7 @@
       </p>
       <div class="collapse" id="multiqc_search_patterns">
         <pre class="card card-block card-inverse">
-wget http://multiqc.info/SBW/data/star_renamed.tar.gz
+curl -O http://multiqc.info/SBW/data/star_renamed.tar.gz
 tar xzf star_renamed.tar.gz
 cd STAR_renamed
 multiqc . <span class="text-muted m-l-1"># Should say that "No analysis results found."</span>
@@ -106,7 +106,7 @@ multiqc . <span class="text-muted m-l-1"># Should now find 8 STAR reports!</span
       <p>Try experimenting with <code>type: 'replace'</code>, <code>type: 'regex'</code> and <code>extra_fn_clean_trim</code>
       to see how they all behave.</p>
       <p>
-        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_sample_name_cleaning">Example commands</a>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_sample_name_cleaning">Show Help</a>
         <a class="btn" href="http://multiqc.info/docs/#sample-name-cleaning" target="_blank">Documentation</a>
       </p>
       <div class="collapse" id="multiqc_sample_name_cleaning">
@@ -141,7 +141,7 @@ multiqc . <span class="text-muted m-l-1"># Should now find 8 STAR reports!</span
       </p>
       <div class="collapse" id="multiqc_duplicate_names">
         <pre class="card card-block card-inverse">
-wget http://multiqc.info/SBW/data/qualimap_dupnames.tar.gz
+curl -O http://multiqc.info/SBW/data/qualimap_dupnames.tar.gz
 tar xzf qualimap_dupnames.tar.gz
 cd qualimap_dupnames
 multiqc . <span class="text-muted m-l-1"># Will only find 2 Qualimap BamQC reports instead of 4</span>
@@ -209,7 +209,7 @@ multiqc -f --fullnames . <span class="text-muted m-l-1"># Doesn't clean names, n
       </dl>
       <p>Make sure NOT to add this to <em>all</em> reports.</p>
       <p>
-        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_header_info">Example commands</a>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_header_info">Show Help</a>
         <a class="btn" href="http://multiqc.info/docs/#customising-reports" target="_blank">Documentation</a>
       </p>
       <div class="collapse" id="multiqc_header_info">
@@ -240,11 +240,11 @@ multiqc -f --fullnames . <span class="text-muted m-l-1"># Doesn't clean names, n
       <img class="img-rounded" style="width:250px; border: 1px solid white;" src="../data/report_dog.jpg" title="Report Dog!"></p>
       <p>For bonus points, try giving reports a pink background and Comic Sans font.</p>
       <p>
-        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_customising_reports">Example commands</a>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_customising_reports">Show Help</a>
         <a class="btn" href="http://multiqc.info/docs/#report-logo" target="_blank">Documentation</a>
       </p>
       <div class="collapse" id="multiqc_customising_reports">
-        <pre class="card card-block card-inverse">wget http://multiqc.info/SBW/data/report_dog.jpg
+        <pre class="card card-block card-inverse">curl -O http://multiqc.info/SBW/data/report_dog.jpg
 pwd <span class="text-muted m-l-1"># Find the full path of your current directory (copy this)</span></pre>
 
         <p>Now add the following to your MultiQC config file:</p>

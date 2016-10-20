@@ -28,7 +28,7 @@
     <a href="../"><img src="../../images/MultiQC_logo.png" title="MultiQC"></a>
   </header>
   <h1 class="display-4">
-    MultiQC Workshop
+    <a href="../">MultiQC Workshop</a>
     <small>Phil Ewels, 21<sup>st</sup> October 2016</small>
   </h1>
   
@@ -45,20 +45,17 @@
   <div class="card card-inverse">
     <div class="card-block">
       <h3 class="card-title">1. Install MultiQC</h3>
-      <p>The first task is to get up and running with MultiQC.</p>
-      <p><a class="btn btn-sbw" data-toggle="collapse" href="#installation_help">Show Help</a></p>
+      <p>The first task is to get up and running with MultiQC. Try to install it on your machine.</p>
+      <p>You'll need Python installed first. If you don't have it yet, I recommend getting
+        <a href="http://conda.pydata.org/docs/install/quick.html" target="_blank">Miniconda</a>.</p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#installation_help">Show Help</a>
+        <a class="btn" href="http://multiqc.info/docs/#installing-multiqc" target="_blank">Documentation</a>
+      </p>
       <div class="collapse" id="installation_help">
         <div class="card card-block card-inverse">
           <p>There are a few ways to do this:</p>
           <ul>
-            <li>If you want to use MultiQC on <a href="http://www.uppmax.uu.se/" target="_blank">UPPMAX</a> you can use
-              the environment module:
-              <ul>
-                <li><code>module load bioinfo-tools</code></li>
-                <li><code>module load MultiQC</code></li>
-              </ul>
-            </li>
-            
             <li>Install yourself from the <a href="https://pypi.python.org/pypi/multiqc" target="_blank">Python Package Index</a>:
               <ul><li><code>pip install multiqc</code></li></ul>
             </li>
@@ -66,8 +63,26 @@
             <li>If you have conda installed, from <a href="http://bioconda.github.io/recipes/multiqc/README.html" target="_blank">Bioconda</a>:
               <ul><li><code>conda install -c bioconda multiqc</code></li></ul>
             </li>
+            
+            <li>You can  <a href="https://github.com/ewels/MultiQC" target="_blank">download the source code</a> and install it directly:
+              <ul>
+                <li><code>curl -O -L https://github.com/ewels/MultiQC/archive/v0.8.tar.gz</code></li>
+                <li><code>tar xzf v0.8.tar.gz</code></li>
+                <li><code>cd MultiQC-0.8/</code></li>
+                <li><code>python setup.py install</code></li>
+              </ul>
+            </li>
+            
+            <li>If you want to use MultiQC on <a href="http://www.uppmax.uu.se/" target="_blank">UPPMAX</a> you can use
+              the environment module:
+              <ul>
+                <li><code>module load bioinfo-tools</code></li>
+                <li><code>module load MultiQC</code></li>
+                <li class="text-muted">Remember to log in with <code class="text-muted">ssh -X</code> so that you can open reports directly
+                  on UPPMAX (viewing them will be slow though!)</li>
+              </ul>
+            </li>
           </ul>
-          <p>Having difficulties? Take a look at the <a href="http://multiqc.info/docs/#installing-multiqc">MultiQC documentation</a> for more detailed instructions.</p>
         </div>
       </div>
     </div>
@@ -101,12 +116,13 @@ multiqc --help</pre>
       <p><a class="btn btn-sbw" data-toggle="collapse" href="#basic_dataset_help">Example commands</a></p>
       <div class="collapse" id="basic_dataset_help">
         <pre class="card card-block card-inverse">
-wget http://multiqc.info/SBW/data/basic_RNAseq.tar.gz
+curl -O http://multiqc.info/SBW/data/basic_RNAseq.tar.gz
 tar xzf basic_RNAseq.tar.gz
+cd basic_RNAseq
 multiqc .
 multiqc . <span class="text-muted m-l-1"># Should fail with a warning</span>
 multiqc --force .
-open multiqc_report.html</pre>
+open multiqc_report.html <span class="text-muted m-l-1"># Or firefox / your favourite browser</span></pre>
       </div>
     </div>
   </div>
@@ -119,7 +135,10 @@ open multiqc_report.html</pre>
       contamination. Try highlighting them and see if you can spot any other patterns in other plots.</p>
       <p>Once you're happy with the highlighting, export the GC content plot as a <code>.png</code> image,
         then export the data and see if you can plot it in Excel.</p>
-      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_report_tools">See Hints</a></p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_report_tools">Show Help</a>
+        <a class="btn" href="http://multiqc.info/docs/#using-multiqc-reports" target="_blank">Documentation</a>
+      </p>
       <div class="collapse" id="multiqc_report_tools">
         <figure class="figure pull-xs-left m-r-1">
           <img class="img-rounded" src="../images/report_01-highlighting.png">
@@ -145,7 +164,10 @@ open multiqc_report.html</pre>
       some things that don't make it to the report. See if you can find the number of annotated splice sites
       for these datasets, as reported by the <a href="https://github.com/alexdobin/STAR" target="_blank">STAR</a>
       RNA-seq aligner.</p>
-      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_data_files">Example commands</a></p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_data_files">Show Help</a>
+        <a class="btn" href="http://multiqc.info/docs/#parsed-data-directory" target="_blank">Documentation</a>
+      </p>
       <div class="collapse" id="multiqc_data_files">
         <pre class="card card-block card-inverse">
 cd multiqc_data
@@ -166,10 +188,13 @@ cut -d$'\t' -f 1,13 multiqc_star.txt | column -t</pre>
         <code>stdout</code>. As a result, every sample has the same name and overwrites the last.</p>
       <p>To get around this, we can prepend the directory path to each sample name. This stops them from
         overwriting each other so that we can see the report.</p>
-      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_prepend_dirs">Example commands</a></p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_prepend_dirs">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#sample-names-prefixed-with-directories" target="_blank">Documentation</a>
+      </p>
       <div class="collapse" id="multiqc_prepend_dirs">
         <pre class="card card-block card-inverse">
-wget http://multiqc.info/SBW/data/fastqc_stdin.tar.gz
+curl -O http://multiqc.info/SBW/data/fastqc_stdin.tar.gz
 tar xzf fastqc_stdin.tar.gz
 cd fastqc_stdin
 multiqc . <span class="text-muted m-l-1"># Report will have one sample called stdin, instead of 5</span>
@@ -195,10 +220,13 @@ multiqc --dirs -f .</pre>
       <p>Because creating interactive plots with so many samples would crash your browser, MultiQC creates static
         images instead. You can override this behaviour using the <code>--interactive</code> and <code>--flat</code>
         command line flags.</p>
-      <p><a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_single_cell">Example commands</a></p>
+      <p>
+        <a class="btn btn-sbw" data-toggle="collapse" href="#multiqc_single_cell">Example commands</a>
+        <a class="btn" href="http://multiqc.info/docs/#large-sample-numbers" target="_blank">Documentation</a>
+      </p>
       <div class="collapse" id="multiqc_single_cell">
         <pre class="card card-block card-inverse">
-wget http://multiqc.info/SBW/data/single_cell_GSE57872.tar.gz
+curl -O http://multiqc.info/SBW/data/single_cell_GSE57872.tar.gz
 tar xzf single_cell_GSE57872.tar.gz
 cd GSE57872
 
