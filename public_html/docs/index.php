@@ -53,7 +53,7 @@ $content = preg_replace_callback(
   '~<h([123])>([^<]*)</h([123])>~Ui', // Ungreedy by default, case insensitive
   function ($matches) {
     global $hids;
-    $id_match = strtolower( preg_replace('/[^\w-]/', '', str_replace(' ', '-', $matches[2])));
+    $id_match = strtolower( preg_replace('/[^\w-\.]/', '', str_replace(' ', '-', $matches[2])));
     $id_match = str_replace('---', '-', $id_match);
     $hid = $id_match;
     $i = 1;
