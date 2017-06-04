@@ -90,6 +90,7 @@ if(count($md_parts) == 3){
               <p class="navbar-text hidden-xs hidden-sm"><a href="https://github.com/ewels/MultiQC/releases" class="navbar-link">Current version: <?php echo $version; ?></a></p>
               <li class="active"><a href="#">Home</a></li>
               <li><a href="docs/">Docs</a></li>
+              <li><a href="logos.php">Logo</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -102,7 +103,6 @@ if(count($md_parts) == 3){
                   <li><a href="examples/ngi-rna/Test_NGI_Project_multiqc_report.html">MultiQC_NGI Plugin</a></li>
                 </ul>
               </li>
-              <li><a href="https://www.github.com/ewels/MultiQC">GitHub</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

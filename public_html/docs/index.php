@@ -160,6 +160,7 @@ while($curr_level > 0){
             <ul class="nav navbar-nav navbar-right">
               <li><a href="../">Home</a></li>
               <li class="active"><a href="#">Docs</a></li>
+              <li><a href="../logos.php">Logo</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -172,7 +173,6 @@ while($curr_level > 0){
                   <li><a href="#">Directory Names</a></li>
                 </ul>
               </li>
-              <li><a href="https://www.github.com/ewels/MultiQC">GitHub</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

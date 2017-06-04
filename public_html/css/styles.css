@@ -496,6 +496,23 @@ blockquote.twitter-tweet p {
   border-radius: 3px;
 }
 
+/* Logos */
+.logos-container img {
+    max-width: 100%;
+    max-height: 190px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.checkbg {
+  background: url("/images/trans_bg.gif") right bottom #eee;
+  text-align: center;
+}
+.darkbg {
+  background-color: #333;
+  text-align: center;
+}
+
+
 .header-link {
   color: #333;
   font-size: 30px;
