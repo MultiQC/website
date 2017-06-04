@@ -90,7 +90,7 @@ if(count($md_parts) == 3){
               <p class="navbar-text hidden-xs hidden-sm"><a href="https://github.com/ewels/MultiQC/releases" class="navbar-link">Current version: <?php echo $version; ?></a></p>
               <li class="active"><a href="#">Home</a></li>
               <li><a href="docs/">Docs</a></li>
-              <li><a href="logos.php">Logo</a></li>
+              <li><a href="logos/">Logo</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu">
