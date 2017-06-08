@@ -160,6 +160,7 @@ while($curr_level > 0){
             <ul class="nav navbar-nav navbar-right">
               <li><a href="../">Home</a></li>
               <li class="active"><a href="#">Docs</a></li>
+              <li><a href="../plugins.html">Plugins</a></li>
               <li><a href="../logos">Logo</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example Reports <span class="caret"></span></a>

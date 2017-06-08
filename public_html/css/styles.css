@@ -462,6 +462,29 @@ blockquote.twitter-tweet p {
   top: 80px;
 }
 
+
+/* Plugins */
+.plugins-container h2 img {
+    width: 300px;
+}
+
+/* Logos */
+.logos-container img {
+    max-width: 100%;
+    max-height: 190px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.checkbg {
+  background: url("/images/trans_bg.gif") right bottom #eee;
+  text-align: center;
+}
+.darkbg {
+  background-color: #333;
+  text-align: center;
+}
+
+
 /*
     DOCS
             */
@@ -494,22 +517,6 @@ blockquote.twitter-tweet p {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
-}
-
-/* Logos */
-.logos-container img {
-    max-width: 100%;
-    max-height: 190px;
-    margin: 0 auto;
-    padding: 30px;
-}
-.checkbg {
-  background: url("/images/trans_bg.gif") right bottom #eee;
-  text-align: center;
-}
-.darkbg {
-  background-color: #333;
-  text-align: center;
 }
 
 
