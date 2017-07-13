@@ -1,4 +1,4 @@
-<?php      
+<?php
 // Markdown parsing libraries
 require_once('parsedown/Parsedown.php');
 require_once('parsedown-extra/ParsedownExtra.php');
@@ -105,7 +105,7 @@ while($curr_level > 0){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>Documentation: MultiQC</title>
     <meta name="description" content="">
     <meta name="author" content="">
@@ -140,10 +140,10 @@ while($curr_level > 0){
     <![endif]-->
   </head>
 
-  <body id="mqc_docs" data-spy="scroll" data-target="#toc" data-offset="100">
+  <body id="mqc_docs" data-spy="scroll" data-target=".toc" data-offset="100">
 
     <div class="header">
-      
+
       <!-- Static navbar -->
       <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container">
@@ -194,28 +194,29 @@ while($curr_level > 0){
         </div>
       </div>
     </div>
-      
+
     <div class="container docs-container">
       <div class="row">
-        <div class="col-sm-9">
-          <?php echo $content; ?>
-        </div>
-        <div class="col-sm-3" id="toc_column">
-          <div id="toc" data-spy="affix" data-offset-top="254">
+        <div class="col-sm-3 col-md-push-9" id="toc_column">
+          <h3 id="toc_header">Table of Contents</h3>
+          <div class="toc" data-spy="affix" data-offset-top="254">
             <?php echo $toc; ?>
             <p class="backtotop"><a href="http://gitter.im/ewels/MultiQC">Discuss on Gitter</a></p>
             <p class="backtotop"><a href="#">Back to top</a></p>
           </div>
         </div>
+        <div class="col-sm-9 col-md-pull-3">
+          <?php echo $content; ?>
+        </div>
       </div>
     </div> <!-- /container -->
-    
+
     <footer id="footer">
       <div class="container">
         <p>Created by Phil Ewels:
           <a target="_blank" href="https://github.com/ewels"><i class="fa fa-github"></i> ewels</a> |
           <a target="_blank" href="https://twitter.com/tallphil"><i class="fa fa-twitter"></i> tallphil</a> |
-          <a target="_blank" href="https://se.linkedin.com/in/philewels">LinkedIn</a> | 
+          <a target="_blank" href="https://se.linkedin.com/in/philewels">LinkedIn</a> |
           <a target="_blank" href="https://www.researchgate.net/profile/Philip_Ewels">ResearchGate</a>
         </p>
         <a target="_blank" href="http://www.scilifelab.se" class="scilife-footer">
@@ -231,7 +232,7 @@ while($curr_level > 0){
     <script src="../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="../js/docs.js"></script>
-  
+
   <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -243,6 +244,6 @@ while($curr_level > 0){
     ga('send', 'pageview');
 
   </script>
-  
+
   </body>
 </html>
