@@ -25,8 +25,8 @@ if(isset($_GET['v'])){
     if($db->connect_errno == 0){
 
         // Insert new record with querying version
-        $stmt = $db->prepare("INSERT INTO version_check (version) VALUES (?)");
-        $stmt->bind_param('s',$remote_version);
+        $stmt = $db->prepare("INSERT INTO version_check (version, ip, addr) VALUES (?, ?, ?)");
+        $stmt->bind_param('sss',$remote_version, $_SERVER['REMOTE_ADDR'], gethostbyaddr($_SERVER['REMOTE_ADDR']));
         $stmt->execute();
         $db->close();
 
