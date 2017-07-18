@@ -1,76 +1,123 @@
-[2017-05-17 18:25:46,767] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/.miniconda/envs/testing/lib/python2.7/site-packages/multiqc_config.yaml
-[2017-05-17 18:25:46,770] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/.multiqc_config.yaml
-[2017-05-17 18:25:46,770] multiqc                                            [DEBUG  ]  New config 'fn_ignore_files': ['*biotype.featureCounts.txt.summary']
-[2017-05-17 18:25:46,770] multiqc                                            [DEBUG  ]  New config 'force': True
-[2017-05-17 18:25:46,770] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['_trimmed', '_val_1', '_val_2', '.bowtie_log', '.featureCounts']
-[2017-05-17 18:25:46,772] multiqc                                            [DEBUG  ]  Loading config settings from: multiqc_config.yaml
-[2017-05-17 18:25:46,772] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['.C8DRAANXX', '.C8LFMANXX', '.C8H0KANXX']
-[2017-05-17 18:25:46,772] multiqc                                            [DEBUG  ]  Command used: /Users/philewels/.miniconda/envs/testing/bin/multiqc data/
-[2017-05-17 18:25:46,772] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
-[2017-05-17 18:25:46,772] multiqc                                            [INFO   ]  This is MultiQC v1.0
-[2017-05-17 18:25:46,772] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/.miniconda/envs/testing/bin/multiqc data/
-[2017-05-17 18:25:46,772] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c
-[2017-05-17 18:25:46,772] multiqc                                            [INFO   ]  Template    : default
-[2017-05-17 18:25:46,773] multiqc                                            [DEBUG  ]  Running in --force mode, will overwrite any existing reports.
-[2017-05-17 18:25:46,773] multiqc                                            [INFO   ]  Searching 'data/'
-[2017-05-17 18:25:46,773] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rna_seqc, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, adapterRemoval, cutadapt, trimmomatic, skewer, sortmerna, fastq_screen, fastqc, clusterflow
-[2017-05-17 18:25:46,773] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpkn04cj
-[2017-05-17 18:25:53,018] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
-[2017-05-17 18:25:53,024] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,031] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,038] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
-[2017-05-17 18:25:53,039] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,045] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('data/',)
-[2017-05-17 18:25:53,052] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,059] multiqc.modules.rna_seqc.rna_seqc                  [DEBUG  ]  Could not find any RNA-SeQC data in ('data/',)
-[2017-05-17 18:25:53,072] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,080] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,086] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('data/',)
-[2017-05-17 18:25:53,092] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('data/',)
-[2017-05-17 18:25:53,099] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,104] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,112] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,119] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,133] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,139] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('data/',)
-[2017-05-17 18:25:53,146] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('data/',)
-[2017-05-17 18:25:53,156] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,162] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,169] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,185] multiqc.modules.hicup.hicup                        [INFO   ]  Found 13 reports
-[2017-05-17 18:25:53,212] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('data/',)
-[2017-05-17 18:25:53,217] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,221] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
-[2017-05-17 18:25:53,228] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,234] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,239] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,244] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,249] multiqc.modules.adapterRemoval.adapterRemoval      [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,254] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,258] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('data/',)
-[2017-05-17 18:25:53,264] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('data/',)
-[2017-05-17 18:25:53,271] multiqc.modules.sortmerna.sortmerna                [DEBUG  ]  Could not find any SortMeRNA data in ('data/',)
-[2017-05-17 18:25:53,277] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:53,461] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A002
-[2017-05-17 18:25:53,792] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A005
-[2017-05-17 18:25:54,118] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A006
-[2017-05-17 18:25:54,439] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A007
-[2017-05-17 18:25:54,776] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A012
-[2017-05-17 18:25:55,131] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A019
-[2017-05-17 18:25:55,469] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A002
-[2017-05-17 18:25:55,802] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A005
-[2017-05-17 18:25:56,146] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A006
-[2017-05-17 18:25:56,484] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A012
-[2017-05-17 18:25:56,834] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A019
-[2017-05-17 18:25:57,153] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-3.A006
-[2017-05-17 18:25:57,478] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-3.A012
-[2017-05-17 18:25:57,621] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 13 reports
-[2017-05-17 18:25:58,924] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('data/',)
-[2017-05-17 18:25:58,972] multiqc                                            [INFO   ]  Compressing plot data
-[2017-05-17 18:26:00,054] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2017-05-17 18:26:00,054] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2017-05-17 18:26:00,055] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpkn04cj/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
-[2017-05-17 18:26:00,055] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpkn04cj/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
-[2017-05-17 18:26:00,055] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpkn04cj/multiqc_data/multiqc_hicup.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
-[2017-05-17 18:26:00,055] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/12/35tfw0vd41v95nshdtbn10200002xs/T/tmpkn04cj/multiqc_data/multiqc_sources.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
-[2017-05-17 18:26:00,265] multiqc                                            [INFO   ]  MultiQC complete
+[2017-07-18 10:49:00,035] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/.miniconda/envs/testing/lib/python2.7/site-packages/multiqc_config.yaml
+[2017-07-18 10:49:00,036] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/.multiqc_config.yaml
+[2017-07-18 10:49:00,036] multiqc                                            [DEBUG  ]  New config 'disable_ngi': True
+[2017-07-18 10:49:00,036] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['_trimmed', '_val']
+[2017-07-18 10:49:00,037] multiqc                                            [DEBUG  ]  Loading config settings from: multiqc_config.yaml
+[2017-07-18 10:49:00,037] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['.C8DRAANXX', '.C8LFMANXX', '.C8H0KANXX']
+[2017-07-18 10:49:00,037] multiqc                                            [DEBUG  ]  Command used: /Users/philewels/.miniconda/envs/testing/bin/multiqc data/
+[2017-07-18 10:49:00,790] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.1
+[2017-07-18 10:49:00,790] multiqc                                            [INFO   ]  This is MultiQC v1.1
+[2017-07-18 10:49:00,790] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/.miniconda/envs/testing/bin/multiqc data/
+[2017-07-18 10:49:00,791] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c
+[2017-07-18 10:49:00,791] multiqc                                            [INFO   ]  Template    : default
+[2017-07-18 10:49:00,791] multiqc                                            [INFO   ]  Searching 'data/'
+[2017-07-18 10:49:00,791] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, qualimap, preseq, quast, qorts, rna_seqc, rseqc, busco, goleft_indexcov, disambiguate, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, jellyfish, bismark, hicup, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, adapterRemoval, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, fastqc, clusterflow
+[2017-07-18 10:49:00,791] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpUVEJkf
+[2017-07-18 10:49:00,873] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A002.C8DRAANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,882] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A002.C8DRAANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A005.C8DRAANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A005.C8DRAANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,884] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A006.C8DRAANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,884] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A006.C8DRAANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,885] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A007.C8DRAANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,886] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A007.C8DRAANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,886] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A012.C8DRAANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,887] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A012.C8DRAANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,887] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A019.C8DRAANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,888] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A019.C8DRAANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,918] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A002.C8DRAANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,918] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A005.C8DRAANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,918] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A006.C8DRAANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,919] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A007.C8DRAANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,919] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A012.C8DRAANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,919] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-1.A019.C8DRAANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,919] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A002.C8LFMANXX.s_3.r_1_fastqc.html
+[2017-07-18 10:49:00,920] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A002.C8LFMANXX.s_3.r_2_fastqc.html
+[2017-07-18 10:49:00,920] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A005.C8LFMANXX.s_3.r_1_fastqc.html
+[2017-07-18 10:49:00,921] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A005.C8LFMANXX.s_3.r_2_fastqc.html
+[2017-07-18 10:49:00,921] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A006.C8LFMANXX.s_3.r_1_fastqc.html
+[2017-07-18 10:49:00,922] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A006.C8LFMANXX.s_3.r_2_fastqc.html
+[2017-07-18 10:49:00,922] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A012.C8LFMANXX.s_3.r_1_fastqc.html
+[2017-07-18 10:49:00,923] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A012.C8LFMANXX.s_3.r_2_fastqc.html
+[2017-07-18 10:49:00,923] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A019.C8LFMANXX.s_3.r_1_fastqc.html
+[2017-07-18 10:49:00,924] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A019.C8LFMANXX.s_3.r_2_fastqc.html
+[2017-07-18 10:49:00,943] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A002.C8LFMANXX.s_3.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,943] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A005.C8LFMANXX.s_3.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,943] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A006.C8LFMANXX.s_3.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,943] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A012.C8LFMANXX.s_3.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,944] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-2.A019.C8LFMANXX.s_3.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,944] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-3.A006.C8H0KANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,944] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-3.A006.C8H0KANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,945] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-3.A012.C8H0KANXX.s_2.r_1_fastqc.html
+[2017-07-18 10:49:00,945] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-3.A012.C8H0KANXX.s_2.r_2_fastqc.html
+[2017-07-18 10:49:00,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-3.A006.C8H0KANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:00,966] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sample-3.A012.C8H0KANXX.s_2.r_1_2.HiCUP_summary_report.html
+[2017-07-18 10:49:01,300] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2017-07-18 10:49:01,303] multiqc.modules.conpair.conpair                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,305] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,307] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,310] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2017-07-18 10:49:01,310] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,313] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('data/',)
+[2017-07-18 10:49:01,315] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,317] multiqc.modules.qorts.qorts                        [DEBUG  ]  Could not find any QoRTs data in ('data/',)
+[2017-07-18 10:49:01,320] multiqc.modules.rna_seqc.rna_seqc                  [DEBUG  ]  Could not find any RNA-SeQC data in ('data/',)
+[2017-07-18 10:49:01,323] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,325] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,327] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('data/',)
+[2017-07-18 10:49:01,330] multiqc.modules.disambiguate.disambiguate          [DEBUG  ]  Could not find any data in ('data/',)
+[2017-07-18 10:49:01,333] multiqc.modules.homer.homer                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,335] multiqc.modules.macs2.macs2                        [DEBUG  ]  Could not find any MACS2 data in ('data/',)
+[2017-07-18 10:49:01,337] multiqc.modules.theta2.theta2                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,340] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('data/',)
+[2017-07-18 10:49:01,342] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,344] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,347] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,349] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,352] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,355] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('data/',)
+[2017-07-18 10:49:01,357] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('data/',)
+[2017-07-18 10:49:01,360] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,362] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,364] multiqc.modules.jellyfish.jellyfish                [DEBUG  ]  Could not find any data in ('data/',)
+[2017-07-18 10:49:01,367] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,413] multiqc.modules.hicup.hicup                        [INFO   ]  Found 13 reports
+[2017-07-18 10:49:01,429] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('data/',)
+[2017-07-18 10:49:01,431] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,434] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2017-07-18 10:49:01,436] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,438] multiqc.modules.hisat2.hisat2                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,441] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,443] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,445] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,448] multiqc.modules.adapterRemoval.adapterRemoval      [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,451] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,455] multiqc.modules.flexbar.flexbar                    [DEBUG  ]  Could not find any Flexbar data in ('data/',)
+[2017-07-18 10:49:01,457] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('data/',)
+[2017-07-18 10:49:01,461] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('data/',)
+[2017-07-18 10:49:01,467] multiqc.modules.sortmerna.sortmerna                [DEBUG  ]  Could not find any SortMeRNA data in ('data/',)
+[2017-07-18 10:49:01,469] multiqc.modules.biobloomtools.biobloomtools        [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,472] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:01,620] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A002
+[2017-07-18 10:49:01,859] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A005
+[2017-07-18 10:49:02,088] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A006
+[2017-07-18 10:49:02,322] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A007
+[2017-07-18 10:49:02,563] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A012
+[2017-07-18 10:49:02,821] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-1.A019
+[2017-07-18 10:49:03,054] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A002
+[2017-07-18 10:49:03,299] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A005
+[2017-07-18 10:49:03,543] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A006
+[2017-07-18 10:49:03,782] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A012
+[2017-07-18 10:49:04,026] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-2.A019
+[2017-07-18 10:49:04,262] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-3.A006
+[2017-07-18 10:49:04,480] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Sample-3.A012
+[2017-07-18 10:49:04,584] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 13 reports
+[2017-07-18 10:49:05,503] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('data/',)
+[2017-07-18 10:49:05,540] multiqc                                            [INFO   ]  Compressing plot data
+[2017-07-18 10:49:06,340] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2017-07-18 10:49:06,340] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2017-07-18 10:49:06,340] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpUVEJkf/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
+[2017-07-18 10:49:06,341] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpUVEJkf/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
+[2017-07-18 10:49:06,341] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpUVEJkf/multiqc_data/multiqc_hicup.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
+[2017-07-18 10:49:06,341] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/1z/_98jt9hx57qg6m_pry78mdd40000gn/T/tmpUVEJkf/multiqc_data/multiqc_sources.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/hi-c/multiqc_data'
+[2017-07-18 10:49:06,473] multiqc                                            [INFO   ]  MultiQC complete
