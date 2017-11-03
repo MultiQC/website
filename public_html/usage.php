@@ -20,10 +20,22 @@ function _get_week($datestring){
 }
 
 // Usage per week, by version
+$releases = array_map('trim', explode("\n", file_get_contents('/home/multiqc/all_versions.txt')));
+foreach($releases as $k => $v){
+  $releases[$k] = str_replace("v", "", $v);
+}
+$unrecognised_versions = [];
+$releases = array_filter($releases, 'strlen'); // remove empty values
 if ($result = $db->query("SELECT `version`, COUNT(*) as `version_count`, `date` from `version_check` GROUP BY `version`, WEEK(`date`) ORDER BY `date` ASC, `version` ASC")) {
     $versions_by_week = [];
     while ($row = $result->fetch_assoc()) {
       $v = str_replace('.dev', '', $row['version']);
+      $v = trim(str_replace('dev', '', $v));
+      $v = rtrim($v, '.');
+      if(!in_array($v, $releases)){
+        $unrecognised_versions[$v] += $row['version_count'] / 2; // divide by 2 as we count them again below
+        $v = 'unrecognised';
+      }
       if(!array_key_exists($v, $versions_by_week)){
         $versions_by_week[$v] = array(
           'x' => [],
@@ -55,6 +67,12 @@ if ($result = $db->query("SELECT `version`, COUNT(DISTINCT `ip`) as `version_cou
   $versions_by_week_unique = [];
   while ($row = $result->fetch_assoc()) {
     $v = str_replace('.dev', '', $row['version']);
+    $v = trim(str_replace('dev', '', $v));
+    $v = rtrim($v, '.');
+    if(!in_array($v, $releases)){
+      $unrecognised_versions[$v] += $row['version_count'] / 2; // divide by 2 as we count them again above
+      $v = 'unrecognised';
+    }
     if(!array_key_exists($v, $versions_by_week_unique)){
       $versions_by_week_unique[$v] = array(
         'x' => [],
@@ -210,6 +228,11 @@ if ($result = $db->query("SELECT COUNT(*) as `count`, HOUR(`date`) as `h`, DATE(
 
         <h2>Visitor Checks Per Hour</h2>
         <div id="hits_per_hour" style="height:450px;"></div>
+
+        <h2>Unrecognised version numbers</h2>
+        <p>List of MultiQC version numbers that don't match a known release after cleanup. Associated value is the
+          count of how many times that was seen.</p>
+        <pre><?php arsort($unrecognised_versions); print_r($unrecognised_versions); ?></pre>
 
       </div>
     </div>
