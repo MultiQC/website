@@ -50,7 +50,7 @@ foreach (array_keys($pages) as $section) {
 // Add ID attributes to headers
 $hids = Array();
 $content = preg_replace_callback(
-  '~<h([123])>([^<]*)</h([123])>~Ui', // Ungreedy by default, case insensitive
+  '~<h([1234])>([^<]*)</h([1234])>~Ui', // Ungreedy by default, case insensitive
   function ($matches) {
     global $hids;
     $id_match = strtolower( preg_replace('/[^\w-\.]/', '', str_replace(' ', '-', $matches[2])));

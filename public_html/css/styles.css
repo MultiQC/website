@@ -451,7 +451,7 @@ blockquote.twitter-tweet, .reddit-embed {
   max-width: 468px;
   min-height: 200px;
 }
- 
+
 blockquote.twitter-tweet p {
   font-size: 16px;
   font-weight: normal;
@@ -532,7 +532,8 @@ blockquote.twitter-tweet p {
 }
 h1:hover .header-link, h1:active .header-link, h1:focus .header-link,
 h2:hover .header-link, h2:active .header-link, h2:focus .header-link,
-h3:hover .header-link, h3:active .header-link, h3:focus .header-link {
+h3:hover .header-link, h3:active .header-link, h3:focus .header-link,
+h4:hover .header-link, h4:active .header-link, h4:focus .header-link {
   opacity: 1;
 }
 
