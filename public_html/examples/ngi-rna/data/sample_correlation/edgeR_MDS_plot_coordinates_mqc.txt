@@ -1,4 +1,15 @@
-Leading logFC dim 1	Leading logFC dim 2
+#id: 'edgeR-sample-distances'
+#section_name: 'MDS Plot'
+#description: "show relatedness between samples in a project.
+#            These values are calculated using <a href='https://bioconductor.org/packages/release/bioc/html/edgeR.html'>edgeR</a>
+#            in the <a href='https://github.com/SciLifeLab/NGI-RNAseq/blob/master/bin/edgeR_heatmap_MDS.r'><code>edgeR_heatmap_MDS.r</code></a> script."
+#plot_type: 'scatter'
+#anchor: 'ngi_rnaseq-mds_plot'
+#pconfig:
+#    xlab: 'Leading'
+#    title: 'MDS Plot'
+#    ylab: 'logFC'
+	Leading logFC dim 1	Leading logFC dim 2
 P1234_1022	-4.21919963718974	0.670437937570677
 P1234_1008	-0.453491566561855	1.54735850481518
 P1234_1010	-0.753943417736887	0.308480754319913

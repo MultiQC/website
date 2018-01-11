@@ -1,0 +1,17 @@
+id: 'ngi-rnaseq'
+section_name: 'NGI-RNAseq Software Versions'
+section_href: 'https://github.com/SciLifeLab/NGI-RNAseq'
+plot_type: 'html'
+description: 'are collected at run time from the software output.'
+data: |
+    <dl class="dl-horizontal">
+        <dt>FastQC</dt><dd>v0.11.5</dd>
+        <dt>Trim Galore!</dt><dd>v0.4.2</dd>
+        <dt>STAR</dt><dd>v2.5.3a</dd>
+        <dt>StringTie</dt><dd>v1.3.3</dd>
+        <dt>Preseq</dt><dd>v2.0.0</dd>
+        <dt>featureCounts</dt><dd>v1.5.1</dd>
+        <dt>dupRadar</dt><dd>v1.8.0</dd>
+        <dt>Picard MarkDuplicates</dt><dd>v2.0.1</dd>
+        <dt>Nextflow</dt><dd>v0.27.0</dd>
+    </dl>
