@@ -17,7 +17,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_cpg_meth-1", 
+                "rid": "mqc-generalstats-percent_cpg_meth", 
                 "shared_key": null, 
                 "colour": "55,126,184", 
                 "description": "% Cytosines methylated in CpG context"
@@ -38,7 +38,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_chg_meth-1", 
+                "rid": "mqc-generalstats-percent_chg_meth", 
                 "shared_key": null, 
                 "colour": "55,126,184", 
                 "description": "% Cytosines methylated in CHG context"
@@ -59,7 +59,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_chh_meth-1", 
+                "rid": "mqc-generalstats-percent_chh_meth", 
                 "shared_key": null, 
                 "colour": "55,126,184", 
                 "description": "% Cytosines methylated in CHH context"
@@ -80,7 +80,7 @@
                 "dmin": 0.0, 
                 "floor": null, 
                 "max": null, 
-                "rid": "total_c", 
+                "rid": "mqc-generalstats-total_c", 
                 "colour": "55,126,184", 
                 "shared_key": null
             }
@@ -102,7 +102,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "dup_reads_percent", 
+                "rid": "mqc-generalstats-dup_reads_percent", 
                 "shared_key": null, 
                 "colour": "77,175,74", 
                 "description": "Percent Duplicated Alignments"
@@ -125,7 +125,7 @@
                 "max": null, 
                 "hidden": true, 
                 "floor": null, 
-                "rid": "dedup_reads"
+                "rid": "mqc-generalstats-dedup_reads"
             }
         }, 
         {
@@ -147,7 +147,7 @@
                 "max": null, 
                 "hidden": true, 
                 "floor": null, 
-                "rid": "aligned_reads"
+                "rid": "mqc-generalstats-aligned_reads"
             }, 
             "percent_aligned": {
                 "ceiling": null, 
@@ -165,7 +165,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_aligned", 
+                "rid": "mqc-generalstats-percent_aligned", 
                 "shared_key": null, 
                 "colour": "152,78,163", 
                 "description": "Percent Aligned Sequences"
@@ -188,7 +188,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_trimmed", 
+                "rid": "mqc-generalstats-percent_trimmed", 
                 "shared_key": null, 
                 "colour": "255,127,0", 
                 "description": "% Total Base Pairs trimmed"
@@ -211,7 +211,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_duplicates", 
+                "rid": "mqc-generalstats-percent_duplicates", 
                 "shared_key": null, 
                 "colour": "228,26,28", 
                 "description": "% Duplicate Reads"
@@ -232,7 +232,7 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
-                "rid": "percent_gc", 
+                "rid": "mqc-generalstats-percent_gc", 
                 "shared_key": null, 
                 "colour": "228,26,28", 
                 "description": "Average % GC Content"
@@ -255,7 +255,7 @@
                 "title": "Length", 
                 "hidden": false, 
                 "shared_key": null, 
-                "rid": "avg_sequence_length", 
+                "rid": "mqc-generalstats-avg_sequence_length", 
                 "description": "Average Sequence Length (bp)"
             }, 
             "percent_fails": {
@@ -267,7 +267,7 @@
                 "minRange": null, 
                 "dmin": 0.0, 
                 "floor": null, 
-                "rid": "percent_fails", 
+                "rid": "mqc-generalstats-percent_fails", 
                 "dmax": 100.0, 
                 "suffix": "%", 
                 "scale": "Reds", 
@@ -295,13 +295,13 @@
                 "dmin": 0.0, 
                 "shared_key": "read_count", 
                 "max": null, 
-                "rid": "total_sequences", 
+                "rid": "mqc-generalstats-total_sequences", 
                 "floor": null, 
                 "colour": "228,26,28"
             }
         }
     ], 
-    "config_version": "1.3", 
+    "config_version": "1.4", 
     "report_general_stats_data": [
         {
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
@@ -328,17 +328,17 @@
                 "unmeth_chg": 332074146.0, 
                 "percent_chg_meth": 0.5
             }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
-                "percent_chh_meth": 1.1, 
-                "total_c": 1928202931.0, 
-                "unmeth_cpg": 23848801.0, 
-                "percent_cpg_meth": 75.7, 
-                "meth_chg": 4731636.0, 
-                "meth_cpg": 74456543.0, 
-                "unmeth_chh": 1310219075.0, 
-                "meth_chh": 14906573.0, 
-                "unmeth_chg": 500040303.0, 
-                "percent_chg_meth": 0.9
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "percent_chh_meth": 0.5, 
+                "total_c": 1562840273.0, 
+                "unmeth_cpg": 13404041.0, 
+                "percent_cpg_meth": 77.0, 
+                "meth_chg": 1812592.0, 
+                "meth_cpg": 44827612.0, 
+                "unmeth_chh": 1165167201.0, 
+                "meth_chh": 6320794.0, 
+                "unmeth_chg": 331308033.0, 
+                "percent_chg_meth": 0.5
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "percent_chh_meth": 0.5, 
@@ -388,17 +388,17 @@
                 "unmeth_chg": 350489608.0, 
                 "percent_chg_meth": 0.9
             }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
-                "percent_chh_meth": 0.5, 
-                "total_c": 1562840273.0, 
-                "unmeth_cpg": 13404041.0, 
-                "percent_cpg_meth": 77.0, 
-                "meth_chg": 1812592.0, 
-                "meth_cpg": 44827612.0, 
-                "unmeth_chh": 1165167201.0, 
-                "meth_chh": 6320794.0, 
-                "unmeth_chg": 331308033.0, 
-                "percent_chg_meth": 0.5
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "percent_chh_meth": 1.1, 
+                "total_c": 1928202931.0, 
+                "unmeth_cpg": 23848801.0, 
+                "percent_cpg_meth": 75.7, 
+                "meth_chg": 4731636.0, 
+                "meth_cpg": 74456543.0, 
+                "unmeth_chh": 1310219075.0, 
+                "meth_chh": 14906573.0, 
+                "unmeth_chg": 500040303.0, 
+                "percent_chg_meth": 0.9
             }
         }, 
         {
@@ -662,13 +662,13 @@
                 "percent_trimmed": 2.64243157, 
                 "bp_written": 9735756843
             }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
-                "bp_processed": 16413118120, 
-                "r_with_adapters": 61439154, 
-                "quality_trimmed": 1962843445, 
-                "r_processed": 162506120, 
-                "percent_trimmed": 13.465466322982875, 
-                "bp_written": 14203015227
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "bp_processed": 10000000000, 
+                "r_with_adapters": 39570784, 
+                "quality_trimmed": 184018857, 
+                "r_processed": 100000000, 
+                "percent_trimmed": 2.77531391, 
+                "bp_written": 9722468609
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "bp_processed": 10000000000, 
@@ -702,13 +702,13 @@
                 "percent_trimmed": 20.742686548407487, 
                 "bp_written": 10064122698
             }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
-                "bp_processed": 10000000000, 
-                "r_with_adapters": 39570784, 
-                "quality_trimmed": 184018857, 
-                "r_processed": 100000000, 
-                "percent_trimmed": 2.77531391, 
-                "bp_written": 9722468609
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "bp_processed": 16413118120, 
+                "r_with_adapters": 61439154, 
+                "quality_trimmed": 1962843445, 
+                "r_processed": 162506120, 
+                "percent_trimmed": 13.465466322982875, 
+                "bp_written": 14203015227
             }
         }, 
         {
@@ -726,12 +726,12 @@
                 "percent_duplicates": 8.759503962430756, 
                 "percent_gc": 21.0
             }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
-                "percent_fails": 16.666666666666664, 
-                "total_sequences": 153092768.0, 
-                "avg_sequence_length": 91.83178012693584, 
-                "percent_duplicates": 15.492994748674093, 
-                "percent_gc": 26.0
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "percent_fails": 8.333333333333332, 
+                "total_sequences": 99944444.0, 
+                "avg_sequence_length": 96.93486329265086, 
+                "percent_duplicates": 8.744227143773315, 
+                "percent_gc": 21.0
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "percent_fails": 16.666666666666664, 
@@ -761,19 +761,19 @@
                 "percent_duplicates": 11.467569447895997, 
                 "percent_gc": 25.0
             }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
-                "percent_fails": 8.333333333333332, 
-                "total_sequences": 99944444.0, 
-                "avg_sequence_length": 96.93486329265086, 
-                "percent_duplicates": 8.744227143773315, 
-                "percent_gc": 21.0
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "percent_fails": 16.666666666666664, 
+                "total_sequences": 153092768.0, 
+                "avg_sequence_length": 91.83178012693584, 
+                "percent_duplicates": 15.492994748674093, 
+                "percent_gc": 26.0
             }
         }
     ], 
-    "config_creation_date": "2017-11-03, 14:11", 
+    "config_creation_date": "2018-01-11, 15:08", 
     "config_title": null, 
     "config_report_comment": null, 
-    "config_short_version": "1.3", 
+    "config_short_version": "1.4", 
     "config_intro_text": null, 
     "report_saved_raw_data": {
         "multiqc_bismark_methextract": {
@@ -801,17 +801,17 @@
                 "unmeth_chg": 332074146.0, 
                 "percent_chg_meth": 0.5
             }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
-                "percent_chh_meth": 1.1, 
-                "total_c": 1928202931.0, 
-                "unmeth_cpg": 23848801.0, 
-                "percent_cpg_meth": 75.7, 
-                "meth_chg": 4731636.0, 
-                "meth_cpg": 74456543.0, 
-                "unmeth_chh": 1310219075.0, 
-                "meth_chh": 14906573.0, 
-                "unmeth_chg": 500040303.0, 
-                "percent_chg_meth": 0.9
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "percent_chh_meth": 0.5, 
+                "total_c": 1562840273.0, 
+                "unmeth_cpg": 13404041.0, 
+                "percent_cpg_meth": 77.0, 
+                "meth_chg": 1812592.0, 
+                "meth_cpg": 44827612.0, 
+                "unmeth_chh": 1165167201.0, 
+                "meth_chh": 6320794.0, 
+                "unmeth_chg": 331308033.0, 
+                "percent_chg_meth": 0.5
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "percent_chh_meth": 0.5, 
@@ -861,17 +861,17 @@
                 "unmeth_chg": 350489608.0, 
                 "percent_chg_meth": 0.9
             }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
-                "percent_chh_meth": 0.5, 
-                "total_c": 1562840273.0, 
-                "unmeth_cpg": 13404041.0, 
-                "percent_cpg_meth": 77.0, 
-                "meth_chg": 1812592.0, 
-                "meth_cpg": 44827612.0, 
-                "unmeth_chh": 1165167201.0, 
-                "meth_chh": 6320794.0, 
-                "unmeth_chg": 331308033.0, 
-                "percent_chg_meth": 0.5
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "percent_chh_meth": 1.1, 
+                "total_c": 1928202931.0, 
+                "unmeth_cpg": 23848801.0, 
+                "percent_cpg_meth": 75.7, 
+                "meth_chg": 4731636.0, 
+                "meth_cpg": 74456543.0, 
+                "unmeth_chh": 1310219075.0, 
+                "meth_chh": 14906573.0, 
+                "unmeth_chg": 500040303.0, 
+                "percent_chg_meth": 0.9
             }
         }, 
         "multiqc_fastqc": {
@@ -921,26 +921,26 @@
                 "per_tile_sequence_quality": "pass", 
                 "per_sequence_quality_scores": "pass"
             }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
                 "adapter_content": "pass", 
                 "Sequences flagged as poor quality": 0.0, 
                 "sequence_duplication_levels": "pass", 
-                "avg_sequence_length": 91.83178012693584, 
+                "avg_sequence_length": 96.93486329265086, 
                 "Encoding": "Sanger / Illumina 1.9", 
-                "kmer_content": "fail", 
+                "kmer_content": "warn", 
                 "per_base_sequence_quality": "pass", 
                 "sequence_length_distribution": "warn", 
-                "Sequence length": "20-101", 
+                "Sequence length": "20-100", 
                 "File type": "Conventional base calls", 
                 "basic_statistics": "pass", 
-                "per_sequence_gc_content": "warn", 
-                "Total Sequences": 153092768.0, 
+                "per_sequence_gc_content": "pass", 
+                "Total Sequences": 99944444.0, 
                 "per_base_n_content": "pass", 
                 "per_base_sequence_content": "fail", 
                 "overrepresented_sequences": "pass", 
-                "%GC": 26.0, 
-                "total_deduplicated_percentage": 84.50700525132591, 
-                "Filename": "MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz", 
+                "%GC": 21.0, 
+                "total_deduplicated_percentage": 91.25577285622668, 
+                "Filename": "MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz", 
                 "per_tile_sequence_quality": "pass", 
                 "per_sequence_quality_scores": "pass"
             }, 
@@ -1036,26 +1036,26 @@
                 "per_tile_sequence_quality": "pass", 
                 "per_sequence_quality_scores": "pass"
             }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
                 "adapter_content": "pass", 
                 "Sequences flagged as poor quality": 0.0, 
                 "sequence_duplication_levels": "pass", 
-                "avg_sequence_length": 96.93486329265086, 
+                "avg_sequence_length": 91.83178012693584, 
                 "Encoding": "Sanger / Illumina 1.9", 
-                "kmer_content": "warn", 
+                "kmer_content": "fail", 
                 "per_base_sequence_quality": "pass", 
                 "sequence_length_distribution": "warn", 
-                "Sequence length": "20-100", 
+                "Sequence length": "20-101", 
                 "File type": "Conventional base calls", 
                 "basic_statistics": "pass", 
-                "per_sequence_gc_content": "pass", 
-                "Total Sequences": 99944444.0, 
+                "per_sequence_gc_content": "warn", 
+                "Total Sequences": 153092768.0, 
                 "per_base_n_content": "pass", 
                 "per_base_sequence_content": "fail", 
                 "overrepresented_sequences": "pass", 
-                "%GC": 21.0, 
-                "total_deduplicated_percentage": 91.25577285622668, 
-                "Filename": "MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz", 
+                "%GC": 26.0, 
+                "total_deduplicated_percentage": 84.50700525132591, 
+                "Filename": "MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz", 
                 "per_tile_sequence_quality": "pass", 
                 "per_sequence_quality_scores": "pass"
             }
@@ -1077,13 +1077,13 @@
                 "percent_trimmed": 2.64243157, 
                 "bp_written": 9735756843
             }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
-                "bp_processed": 16413118120, 
-                "r_with_adapters": 61439154, 
-                "quality_trimmed": 1962843445, 
-                "r_processed": 162506120, 
-                "percent_trimmed": 13.465466322982875, 
-                "bp_written": 14203015227
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "bp_processed": 10000000000, 
+                "r_with_adapters": 39570784, 
+                "quality_trimmed": 184018857, 
+                "r_processed": 100000000, 
+                "percent_trimmed": 2.77531391, 
+                "bp_written": 9722468609
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "bp_processed": 10000000000, 
@@ -1117,143 +1117,143 @@
                 "percent_trimmed": 20.742686548407487, 
                 "bp_written": 10064122698
             }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
-                "bp_processed": 10000000000, 
-                "r_with_adapters": 39570784, 
-                "quality_trimmed": 184018857, 
-                "r_processed": 100000000, 
-                "percent_trimmed": 2.77531391, 
-                "bp_written": 9722468609
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "bp_processed": 16413118120, 
+                "r_with_adapters": 61439154, 
+                "quality_trimmed": 1962843445, 
+                "r_processed": 162506120, 
+                "percent_trimmed": 13.465466322982875, 
+                "bp_written": 14203015227
             }
         }, 
         "multiqc_general_stats": {
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
-                "FastQC_percent_duplicates-1": 6.001975679768421, 
-                "Cutadapt_percent_trimmed-1": 3.000079262608878, 
-                "Bismark_aligned_reads-1": 17482188.0, 
-                "Bismark_dup_reads_percent-1": 1.65, 
-                "Bismark_percent_aligned-1": 85.69671014348039, 
-                "FastQC_avg_sequence_length-1": 96.71931982190844, 
-                "Bismark_percent_cpg_meth-1-1": 77.0, 
-                "FastQC_total_sequences-1": 20400069.0, 
-                "Bismark_dedup_reads-1": 17194498.0, 
-                "Bismark_percent_chh_meth-1-1": 0.5, 
-                "FastQC_percent_gc-1": 21.0, 
-                "Bismark_percent_chg_meth-1-1": 0.5, 
-                "FastQC_percent_fails-1": 8.333333333333332, 
-                "Bismark_total_c-1": 321444403.0
+                "Cutadapt_mqc-generalstats-percent_trimmed": 3.000079262608878, 
+                "Bismark_mqc-generalstats-dedup_reads": 17194498.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 1.65, 
+                "Bismark_mqc-generalstats-percent_aligned": 85.69671014348039, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 0.5, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 77.0, 
+                "FastQC_mqc-generalstats-total_sequences": 20400069.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 17482188.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 96.71931982190844, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-percent_gc": 21.0, 
+                "FastQC_mqc-generalstats-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-total_c": 321444403.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 6.001975679768421
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921767_1": {
-                "FastQC_percent_duplicates-1": 8.759503962430756, 
-                "Cutadapt_percent_trimmed-1": 2.64243157, 
-                "Bismark_aligned_reads-1": 85970837.0, 
-                "Bismark_dup_reads_percent-1": 2.91, 
-                "Bismark_percent_aligned-1": 86.02041314470769, 
-                "FastQC_avg_sequence_length-1": 97.0732715786089, 
-                "Bismark_percent_cpg_meth-1-1": 77.0, 
-                "FastQC_total_sequences-1": 99942367.0, 
-                "Bismark_dedup_reads-1": 83465166.0, 
-                "Bismark_percent_chh_meth-1-1": 0.5, 
-                "FastQC_percent_gc-1": 21.0, 
-                "Bismark_percent_chg_meth-1-1": 0.5, 
-                "FastQC_percent_fails-1": 8.333333333333332, 
-                "Bismark_total_c-1": 1567978762.0
-            }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
-                "FastQC_percent_duplicates-1": 15.492994748674093, 
-                "Cutadapt_percent_trimmed-1": 13.465466322982875, 
-                "Bismark_aligned_reads-1": 120059544.0, 
-                "Bismark_dup_reads_percent-1": 6.97, 
-                "Bismark_percent_aligned-1": 78.42274038705735, 
-                "FastQC_avg_sequence_length-1": 91.83178012693584, 
-                "Bismark_percent_cpg_meth-1-1": 75.7, 
-                "FastQC_total_sequences-1": 153092768.0, 
-                "Bismark_dedup_reads-1": 111688896.0, 
-                "Bismark_percent_chh_meth-1-1": 1.1, 
-                "FastQC_percent_gc-1": 26.0, 
-                "Bismark_percent_chg_meth-1-1": 0.9, 
-                "FastQC_percent_fails-1": 16.666666666666664, 
-                "Bismark_total_c-1": 1928202931.0
-            }, 
-            "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
-                "FastQC_percent_duplicates-1": 9.282042074894491, 
-                "Cutadapt_percent_trimmed-1": 2.8996505900000002, 
-                "Bismark_aligned_reads-1": 85690327.0, 
-                "Bismark_dup_reads_percent-1": 2.9, 
-                "Bismark_percent_aligned-1": 85.74393067570122, 
-                "FastQC_avg_sequence_length-1": 96.81927725937147, 
-                "Bismark_percent_cpg_meth-1-1": 77.0, 
-                "FastQC_total_sequences-1": 99937484.0, 
-                "Bismark_dedup_reads-1": 83205980.0, 
-                "Bismark_percent_chh_meth-1-1": 0.5, 
-                "FastQC_percent_gc-1": 21.0, 
-                "Bismark_percent_chg_meth-1-1": 0.5, 
-                "FastQC_percent_fails-1": 16.666666666666664, 
-                "Bismark_total_c-1": 1559936769.0
-            }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
-                "FastQC_percent_duplicates-1": 14.592914823439386, 
-                "Cutadapt_percent_trimmed-1": 13.591916874862283, 
-                "Bismark_aligned_reads-1": 120235451.0, 
-                "Bismark_dup_reads_percent-1": 6.97, 
-                "Bismark_percent_aligned-1": 78.39463861054773, 
-                "FastQC_avg_sequence_length-1": 91.78102877465281, 
-                "Bismark_percent_cpg_meth-1-1": 75.8, 
-                "FastQC_total_sequences-1": 153372033.0, 
-                "Bismark_dedup_reads-1": 111849677.0, 
-                "Bismark_percent_chh_meth-1-1": 1.1, 
-                "FastQC_percent_gc-1": 26.0, 
-                "Bismark_percent_chg_meth-1-1": 0.9, 
-                "FastQC_percent_fails-1": 8.333333333333332, 
-                "Bismark_total_c-1": 1930076424.0
-            }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
-                "FastQC_percent_duplicates-1": 10.872928952054096, 
-                "Cutadapt_percent_trimmed-1": 23.6237041702653, 
-                "Bismark_aligned_reads-1": 97745852.0, 
-                "Bismark_dup_reads_percent-1": 6.32, 
-                "Bismark_percent_aligned-1": 76.28892208419504, 
-                "FastQC_avg_sequence_length-1": 84.38323667617531, 
-                "Bismark_percent_cpg_meth-1-1": 75.8, 
-                "FastQC_total_sequences-1": 128125879.0, 
-                "Bismark_dedup_reads-1": 91566412.0, 
-                "Bismark_percent_chh_meth-1-1": 1.1, 
-                "FastQC_percent_gc-1": 25.0, 
-                "Bismark_percent_chg_meth-1-1": 0.9, 
-                "FastQC_percent_fails-1": 8.333333333333332, 
-                "Bismark_total_c-1": 1472451692.0
-            }, 
-            "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
-                "FastQC_percent_duplicates-1": 11.467569447895997, 
-                "Cutadapt_percent_trimmed-1": 20.742686548407487, 
-                "Bismark_aligned_reads-1": 89616441.0, 
-                "Bismark_dup_reads_percent-1": 6.12, 
-                "Bismark_percent_aligned-1": 77.09136127829814, 
-                "FastQC_avg_sequence_length-1": 85.57135929287158, 
-                "Bismark_percent_cpg_meth-1-1": 75.7, 
-                "FastQC_total_sequences-1": 116247060.0, 
-                "Bismark_dedup_reads-1": 84134391.0, 
-                "Bismark_percent_chh_meth-1-1": 1.1, 
-                "FastQC_percent_gc-1": 25.0, 
-                "Bismark_percent_chg_meth-1-1": 0.9, 
-                "FastQC_percent_fails-1": 8.333333333333332, 
-                "Bismark_total_c-1": 1366729142.0
+                "Cutadapt_mqc-generalstats-percent_trimmed": 2.64243157, 
+                "Bismark_mqc-generalstats-dedup_reads": 83465166.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 2.91, 
+                "Bismark_mqc-generalstats-percent_aligned": 86.02041314470769, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 0.5, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 77.0, 
+                "FastQC_mqc-generalstats-total_sequences": 99942367.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 85970837.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 97.0732715786089, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-percent_gc": 21.0, 
+                "FastQC_mqc-generalstats-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-total_c": 1567978762.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 8.759503962430756
             }, 
             "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
-                "FastQC_percent_duplicates-1": 8.744227143773315, 
-                "Cutadapt_percent_trimmed-1": 2.77531391, 
-                "Bismark_aligned_reads-1": 85880328.0, 
-                "Bismark_dup_reads_percent-1": 2.91, 
-                "Bismark_percent_aligned-1": 85.9280661964561, 
-                "FastQC_avg_sequence_length-1": 96.93486329265086, 
-                "Bismark_percent_cpg_meth-1-1": 77.0, 
-                "FastQC_total_sequences-1": 99944444.0, 
-                "Bismark_dedup_reads-1": 83381921.0, 
-                "Bismark_percent_chh_meth-1-1": 0.5, 
-                "FastQC_percent_gc-1": 21.0, 
-                "Bismark_percent_chg_meth-1-1": 0.5, 
-                "FastQC_percent_fails-1": 8.333333333333332, 
-                "Bismark_total_c-1": 1562840273.0
+                "Cutadapt_mqc-generalstats-percent_trimmed": 2.77531391, 
+                "Bismark_mqc-generalstats-dedup_reads": 83381921.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 2.91, 
+                "Bismark_mqc-generalstats-percent_aligned": 85.9280661964561, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 0.5, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 77.0, 
+                "FastQC_mqc-generalstats-total_sequences": 99944444.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 85880328.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 96.93486329265086, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-percent_gc": 21.0, 
+                "FastQC_mqc-generalstats-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-total_c": 1562840273.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 8.744227143773315
+            }, 
+            "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
+                "Cutadapt_mqc-generalstats-percent_trimmed": 2.8996505900000002, 
+                "Bismark_mqc-generalstats-dedup_reads": 83205980.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 2.9, 
+                "Bismark_mqc-generalstats-percent_aligned": 85.74393067570122, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 0.5, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 77.0, 
+                "FastQC_mqc-generalstats-total_sequences": 99937484.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 85690327.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 96.81927725937147, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-percent_gc": 21.0, 
+                "FastQC_mqc-generalstats-percent_fails": 16.666666666666664, 
+                "Bismark_mqc-generalstats-total_c": 1559936769.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 9.282042074894491
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
+                "Cutadapt_mqc-generalstats-percent_trimmed": 13.591916874862283, 
+                "Bismark_mqc-generalstats-dedup_reads": 111849677.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 6.97, 
+                "Bismark_mqc-generalstats-percent_aligned": 78.39463861054773, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 1.1, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 75.8, 
+                "FastQC_mqc-generalstats-total_sequences": 153372033.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 120235451.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 91.78102877465281, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-percent_gc": 26.0, 
+                "FastQC_mqc-generalstats-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-total_c": 1930076424.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 14.592914823439386
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
+                "Cutadapt_mqc-generalstats-percent_trimmed": 23.6237041702653, 
+                "Bismark_mqc-generalstats-dedup_reads": 91566412.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 6.32, 
+                "Bismark_mqc-generalstats-percent_aligned": 76.28892208419504, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 1.1, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 75.8, 
+                "FastQC_mqc-generalstats-total_sequences": 128125879.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 97745852.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 84.38323667617531, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-percent_gc": 25.0, 
+                "FastQC_mqc-generalstats-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-total_c": 1472451692.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 10.872928952054096
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
+                "Cutadapt_mqc-generalstats-percent_trimmed": 20.742686548407487, 
+                "Bismark_mqc-generalstats-dedup_reads": 84134391.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 6.12, 
+                "Bismark_mqc-generalstats-percent_aligned": 77.09136127829814, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 1.1, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 75.7, 
+                "FastQC_mqc-generalstats-total_sequences": 116247060.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 89616441.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 85.57135929287158, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-percent_gc": 25.0, 
+                "FastQC_mqc-generalstats-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-total_c": 1366729142.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 11.467569447895997
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "Cutadapt_mqc-generalstats-percent_trimmed": 13.465466322982875, 
+                "Bismark_mqc-generalstats-dedup_reads": 111688896.0, 
+                "Bismark_mqc-generalstats-dup_reads_percent": 6.97, 
+                "Bismark_mqc-generalstats-percent_aligned": 78.42274038705735, 
+                "Bismark_mqc-generalstats-percent_chh_meth": 1.1, 
+                "Bismark_mqc-generalstats-percent_cpg_meth": 75.7, 
+                "FastQC_mqc-generalstats-total_sequences": 153092768.0, 
+                "Bismark_mqc-generalstats-aligned_reads": 120059544.0, 
+                "FastQC_mqc-generalstats-avg_sequence_length": 91.83178012693584, 
+                "Bismark_mqc-generalstats-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-percent_gc": 26.0, 
+                "FastQC_mqc-generalstats-percent_fails": 16.666666666666664, 
+                "Bismark_mqc-generalstats-total_c": 1928202931.0, 
+                "FastQC_mqc-generalstats-percent_duplicates": 15.492994748674093
             }
         }, 
         "multiqc_bismark_alignment": {
@@ -1504,78 +1504,78 @@
     "report_data_sources": {
         "Cutadapt": {
             "all_sections": {
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt"
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt"
             }
         }, 
         "FastQC": {
             "all_sections": {
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.zip", 
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.zip"
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.zip", 
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.zip"
             }
         }, 
         "Bismark": {
             "m_bias": {
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt"
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt"
             }, 
             "methylation_extraction": {
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt"
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt"
             }, 
             "deduplication": {
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt"
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt"
             }, 
             "alignment": {
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt"
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.txt", 
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt"
             }
         }
     }, 
-    "report_multiqc_command": "/Users/ewels/miniconda2/envs/work/bin/multiqc .", 
+    "report_multiqc_command": "/Users/philewels/miniconda2/envs/work/bin/multiqc .", 
     "config_analysis_dir": [
         "."
     ], 
     "config_report_header_info": null, 
     "config_analysis_dir_abs": [
-        "/Users/ewels/GitHub/MultiQC_website/public_html/examples/bs-seq"
+        "/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq"
     ], 
     "config_subtitle": null, 
     "report_plot_data": {
@@ -9466,12 +9466,12 @@
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1": "#f0ad4e", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#f0ad4e", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#f0ad4e", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#f0ad4e"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#f0ad4e"
                 }, 
                 "tt_label": "<b>{point.x} bp</b>: {point.y}", 
                 "xDecimals": false, 
@@ -11300,12 +11300,12 @@
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c"
                 }, 
                 "xmin": 0, 
                 "ymin": 0, 
@@ -27768,12 +27768,12 @@
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#f0ad4e", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1": "#f0ad4e", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#f0ad4e", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#f0ad4e"
                 }, 
                 "data_labels": [
                     {
@@ -28760,12 +28760,12 @@
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c"
                 }, 
                 "tt_label": "<b>Phred {point.x}</b>: {point.y} reads", 
                 "xDecimals": false, 
@@ -28980,12 +28980,12 @@
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c"
                 }, 
                 "tt_label": "<b>{point.x}</b>: {point.y:.1f}%", 
                 "ymax": 100, 
@@ -29020,32 +29020,32 @@
                 [
                     77.0, 
                     77.0, 
-                    75.7, 
+                    77.0, 
                     77.0, 
                     75.8, 
                     75.8, 
                     75.7, 
-                    77.0
+                    75.7
                 ], 
                 [
                     0.5, 
                     0.5, 
-                    0.9, 
+                    0.5, 
                     0.5, 
                     0.9, 
                     0.9, 
                     0.9, 
-                    0.5
+                    0.9
                 ], 
                 [
                     0.5, 
                     0.5, 
-                    1.1, 
+                    0.5, 
                     0.5, 
                     1.1, 
                     1.1, 
                     1.1, 
-                    0.5
+                    1.1
                 ]
             ], 
             "categories": [
@@ -29084,32 +29084,32 @@
                 [
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1"
                 ], 
                 [
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1"
                 ], 
                 [
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1"
                 ]
             ]
         }, 
@@ -30932,12 +30932,12 @@
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921767_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_1wk_SRR921768_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921773_1": "#5cb85c", 
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#5cb85c", 
-                    "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c"
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1": "#5cb85c"
                 }, 
                 "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}", 
                 "xDecimals": false, 
@@ -30965,6 +30965,6 @@
             }
         }
     }, 
-    "config_script_path": "/Users/ewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.3-py2.7.egg/multiqc/utils", 
+    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.4-py2.7.egg/multiqc/utils", 
     "config_git_hash": null
 }
