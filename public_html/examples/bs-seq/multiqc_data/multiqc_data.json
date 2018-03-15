@@ -301,7 +301,7 @@
             }
         }
     ], 
-    "config_version": "1.4", 
+    "config_version": "1.5", 
     "report_general_stats_data": [
         {
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
@@ -770,10 +770,10 @@
             }
         }
     ], 
-    "config_creation_date": "2018-01-11, 15:08", 
+    "config_creation_date": "2018-03-15, 16:31", 
     "config_title": null, 
     "config_report_comment": null, 
-    "config_short_version": "1.4", 
+    "config_short_version": "1.5", 
     "config_intro_text": null, 
     "report_saved_raw_data": {
         "multiqc_bismark_methextract": {
@@ -1986,7 +1986,7 @@
                                 34
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921767_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921767_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -2391,7 +2391,7 @@
                                 35
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921768_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921768_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -2784,7 +2784,7 @@
                                 16
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921769_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921769_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -3189,7 +3189,7 @@
                                 19
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921770_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921770_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -3598,7 +3598,7 @@
                                 14
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921694_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921694_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -4007,7 +4007,7 @@
                                 19
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921695_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921695_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -4416,7 +4416,7 @@
                                 7
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921696_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921696_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -4825,7 +4825,7 @@
                                 3
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921773_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921773_1 - Adapter 1"
                     }
                 ], 
                 [
@@ -5232,7 +5232,7 @@
                                 22.666666666666668
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921767_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921767_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -5637,7 +5637,7 @@
                                 23.333333333333332
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921768_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921768_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -6030,7 +6030,7 @@
                                 53.333333333333336
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921769_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921769_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -6435,7 +6435,7 @@
                                 12.666666666666666
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_1wk_SRR921770_1"
+                        "name": "MethylC-Seq_mm_fc_1wk_SRR921770_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -6844,7 +6844,7 @@
                                 5.833333333333334
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921694_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921694_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -7253,7 +7253,7 @@
                                 7.916666666666667
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921695_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921695_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -7662,7 +7662,7 @@
                                 3.68421052631579
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921696_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921696_1 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -8071,7 +8071,7 @@
                                 1.4285714285714286
                             ]
                         ], 
-                        "name": "MethylC-Seq_mm_fc_2wk_SRR921773_1"
+                        "name": "MethylC-Seq_mm_fc_2wk_SRR921773_1 - Adapter 1"
                     }
                 ]
             ], 
@@ -27792,7 +27792,7 @@
                 "title": "FastQC: Per Sequence GC Content", 
                 "xmax": 100, 
                 "tt_label": "<b>{point.x}% GC</b>: {point.y}", 
-                "ylab": "Count"
+                "ylab": "Percentage"
             }
         }, 
         "bismark_alignment": {
@@ -30965,6 +30965,6 @@
             }
         }
     }, 
-    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.4-py2.7.egg/multiqc/utils", 
+    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.5-py2.7.egg/multiqc/utils", 
     "config_git_hash": null
 }

@@ -253,7 +253,7 @@
             }
         }
     ], 
-    "config_version": "1.4", 
+    "config_version": "1.5", 
     "report_general_stats_data": [
         {
             "Sample-2.A006": {
@@ -845,10 +845,10 @@
             }
         }
     ], 
-    "config_creation_date": "2018-01-11, 15:07", 
+    "config_creation_date": "2018-03-15, 16:31", 
     "config_title": null, 
     "config_report_comment": null, 
-    "config_short_version": "1.4", 
+    "config_short_version": "1.5", 
     "config_intro_text": null, 
     "report_saved_raw_data": {
         "multiqc_fastqc": {
@@ -21910,7 +21910,7 @@
                 "title": "FastQC: Per Sequence GC Content", 
                 "xmax": 100, 
                 "tt_label": "<b>{point.x}% GC</b>: {point.y}", 
-                "ylab": "Count"
+                "ylab": "Percentage"
             }
         }, 
         "hicup_dedup_plot": {
@@ -25632,6 +25632,6 @@
             }
         }
     }, 
-    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.4-py2.7.egg/multiqc/utils", 
+    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.5-py2.7.egg/multiqc/utils", 
     "config_git_hash": null
 }

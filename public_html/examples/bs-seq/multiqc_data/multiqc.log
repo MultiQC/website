@@ -1,125 +1,132 @@
-[2018-01-11 15:08:18,889] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.4-py2.7.egg/multiqc_config.yaml
-[2018-01-11 15:08:18,890] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/.multiqc_config.yaml
-[2018-01-11 15:08:18,890] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
-[2018-01-11 15:08:18,890] multiqc                                            [DEBUG  ]  Command used: /Users/philewels/miniconda2/envs/work/bin/multiqc .
-[2018-01-11 15:08:19,637] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.3
-[2018-01-11 15:08:19,637] multiqc                                            [INFO   ]  This is MultiQC v1.4
-[2018-01-11 15:08:19,637] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/miniconda2/envs/work/bin/multiqc .
-[2018-01-11 15:08:19,638] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq
-[2018-01-11 15:08:19,638] multiqc                                            [INFO   ]  Template    : default
-[2018-01-11 15:08:19,638] multiqc                                            [INFO   ]  Searching '.'
-[2018-01-11 15:08:19,639] multiqc                                            [DEBUG  ]  Analysing modules: afterqc, custom_content, conpair, peddy, methylQA, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, bbmap, bismark, hicexplorer, hicup, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, leehom, adapterRemoval, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, fastqc, clusterflow, bcl2fastq, interop
-[2018-01-11 15:08:19,640] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ
-[2018-01-11 15:08:19,656] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
-[2018-01-11 15:08:19,656] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,669] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,672] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,672] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
-[2018-01-11 15:08:19,674] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,756] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,759] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,759] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,761] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
-[2018-01-11 15:08:19,805] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,854] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
-[2018-01-11 15:08:19,855] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,855] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,857] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,857] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
-[2018-01-11 15:08:19,862] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,864] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,865] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,892] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
-[2018-01-11 15:08:19,893] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,893] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,903] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,903] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,904] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: sra_bismark_1447079770_bismark_summary.html
-[2018-01-11 15:08:19,904] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
-[2018-01-11 15:08:19,904] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
-[2018-01-11 15:08:19,904] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
-[2018-01-11 15:08:19,905] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
-[2018-01-11 15:08:19,947] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
-[2018-01-11 15:08:19,947] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2018-01-11 15:08:20,165] multiqc                                            [DEBUG  ]  No samples found: afterqc
-[2018-01-11 15:08:20,169] multiqc                                            [DEBUG  ]  No samples found: custom_content
-[2018-01-11 15:08:20,173] multiqc                                            [DEBUG  ]  No samples found: conpair
-[2018-01-11 15:08:20,177] multiqc                                            [DEBUG  ]  No samples found: peddy
-[2018-01-11 15:08:20,182] multiqc                                            [DEBUG  ]  No samples found: methylQA
-[2018-01-11 15:08:20,186] multiqc                                            [DEBUG  ]  No samples found: qualimap
-[2018-01-11 15:08:20,191] multiqc                                            [DEBUG  ]  No samples found: preseq
-[2018-01-11 15:08:20,195] multiqc                                            [DEBUG  ]  No samples found: quast
-[2018-01-11 15:08:20,199] multiqc                                            [DEBUG  ]  No samples found: qorts
-[2018-01-11 15:08:20,203] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
-[2018-01-11 15:08:20,207] multiqc                                            [DEBUG  ]  No samples found: rsem
-[2018-01-11 15:08:20,213] multiqc                                            [DEBUG  ]  No samples found: rseqc
-[2018-01-11 15:08:20,217] multiqc                                            [DEBUG  ]  No samples found: busco
-[2018-01-11 15:08:20,221] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
-[2018-01-11 15:08:20,225] multiqc                                            [DEBUG  ]  No samples found: disambiguate
-[2018-01-11 15:08:20,229] multiqc                                            [DEBUG  ]  No samples found: supernova
-[2018-01-11 15:08:20,235] multiqc                                            [DEBUG  ]  No samples found: deeptools
-[2018-01-11 15:08:20,239] multiqc                                            [DEBUG  ]  No samples found: sargasso
-[2018-01-11 15:08:20,243] multiqc                                            [DEBUG  ]  No samples found: verifybamid
-[2018-01-11 15:08:20,248] multiqc                                            [DEBUG  ]  No samples found: homer
-[2018-01-11 15:08:20,252] multiqc                                            [DEBUG  ]  No samples found: macs2
-[2018-01-11 15:08:20,257] multiqc                                            [DEBUG  ]  No samples found: theta2
-[2018-01-11 15:08:20,260] multiqc                                            [DEBUG  ]  No samples found: snpeff
-[2018-01-11 15:08:20,267] multiqc                                            [DEBUG  ]  No samples found: gatk
-[2018-01-11 15:08:20,272] multiqc                                            [DEBUG  ]  No samples found: htseq
-[2018-01-11 15:08:20,276] multiqc                                            [DEBUG  ]  No samples found: bcftools
-[2018-01-11 15:08:20,280] multiqc                                            [DEBUG  ]  No samples found: featureCounts
-[2018-01-11 15:08:20,288] multiqc                                            [DEBUG  ]  No samples found: picard
-[2018-01-11 15:08:20,292] multiqc                                            [DEBUG  ]  No samples found: prokka
-[2018-01-11 15:08:20,296] multiqc                                            [DEBUG  ]  No samples found: samblaster
-[2018-01-11 15:08:20,301] multiqc                                            [DEBUG  ]  No samples found: samtools
-[2018-01-11 15:08:20,305] multiqc                                            [DEBUG  ]  No samples found: bamtools
-[2018-01-11 15:08:20,309] multiqc                                            [DEBUG  ]  No samples found: jellyfish
-[2018-01-11 15:08:20,313] multiqc                                            [DEBUG  ]  No samples found: vcftools
-[2018-01-11 15:08:20,319] multiqc                                            [DEBUG  ]  No samples found: bbmap
-[2018-01-11 15:08:20,379] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 bismark alignment reports
-[2018-01-11 15:08:20,384] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 bismark dedup reports
-[2018-01-11 15:08:20,401] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 bismark methextract reports
-[2018-01-11 15:08:20,422] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
-[2018-01-11 15:08:20,428] multiqc                                            [DEBUG  ]  No samples found: hicup
-[2018-01-11 15:08:20,435] multiqc                                            [DEBUG  ]  No samples found: salmon
-[2018-01-11 15:08:20,440] multiqc                                            [DEBUG  ]  No samples found: kallisto
-[2018-01-11 15:08:20,445] multiqc                                            [DEBUG  ]  No samples found: slamdunk
-[2018-01-11 15:08:20,449] multiqc                                            [DEBUG  ]  No samples found: star
-[2018-01-11 15:08:20,454] multiqc                                            [DEBUG  ]  No samples found: hisat2
-[2018-01-11 15:08:20,458] multiqc                                            [DEBUG  ]  No samples found: tophat
-[2018-01-11 15:08:20,462] multiqc                                            [DEBUG  ]  No samples found: bowtie2
-[2018-01-11 15:08:20,467] multiqc                                            [DEBUG  ]  No samples found: bowtie1
-[2018-01-11 15:08:20,471] multiqc                                            [DEBUG  ]  No samples found: leehom
-[2018-01-11 15:08:20,475] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
-[2018-01-11 15:08:20,500] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
-[2018-01-11 15:08:20,509] multiqc                                            [DEBUG  ]  No samples found: flexbar
-[2018-01-11 15:08:20,513] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
-[2018-01-11 15:08:20,517] multiqc                                            [DEBUG  ]  No samples found: skewer
-[2018-01-11 15:08:20,521] multiqc                                            [DEBUG  ]  No samples found: sortmerna
-[2018-01-11 15:08:20,525] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
-[2018-01-11 15:08:20,531] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
-[2018-01-11 15:08:20,769] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921768_1
-[2018-01-11 15:08:20,847] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921770_1'
-[2018-01-11 15:08:20,882] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921769_1
-[2018-01-11 15:08:20,898] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921695_1
-[2018-01-11 15:08:20,929] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_2wk_SRR921694_1'
-[2018-01-11 15:08:20,932] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921773_1
-[2018-01-11 15:08:20,999] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921696_1
-[2018-01-11 15:08:21,029] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921767_1'
-[2018-01-11 15:08:21,029] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
-[2018-01-11 15:08:21,331] multiqc                                            [DEBUG  ]  No samples found: clusterflow
-[2018-01-11 15:08:21,335] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
-[2018-01-11 15:08:21,339] multiqc                                            [DEBUG  ]  No samples found: interop
-[2018-01-11 15:08:21,370] multiqc                                            [INFO   ]  Compressing plot data
-[2018-01-11 15:08:22,152] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2018-01-11 15:08:22,153] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2018-01-11 15:08:22,153] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,153] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,153] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_bismark_dedup.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,154] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_sources.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,154] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_bismark_methextract.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,154] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_data.json' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,154] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_cutadapt.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,154] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpYnzKWJ/multiqc_data/multiqc_bismark_alignment.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
-[2018-01-11 15:08:22,296] multiqc                                            [INFO   ]  MultiQC complete
+[2018-03-15 16:31:13,460] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.5-py2.7.egg/multiqc_config.yaml
+[2018-03-15 16:31:13,462] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/.multiqc_config.yaml
+[2018-03-15 16:31:13,462] multiqc                                            [DEBUG  ]  New config 'disable_ngi': True
+[2018-03-15 16:31:13,462] multiqc                                            [DEBUG  ]  New config 'template': default
+[2018-03-15 16:31:13,462] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2018-03-15 16:31:13,462] multiqc                                            [DEBUG  ]  Command used: /Users/philewels/miniconda2/envs/work/bin/multiqc .
+[2018-03-15 16:31:14,083] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.4
+[2018-03-15 16:31:14,083] multiqc                                            [INFO   ]  This is MultiQC v1.5
+[2018-03-15 16:31:14,083] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/miniconda2/envs/work/bin/multiqc .
+[2018-03-15 16:31:14,083] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq
+[2018-03-15 16:31:14,084] multiqc                                            [INFO   ]  Template    : default
+[2018-03-15 16:31:14,084] multiqc                                            [INFO   ]  Searching '.'
+[2018-03-15 16:31:14,085] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, dedup, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, bbmap, bismark, hicexplorer, hicup, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastqc, clusterflow, bcl2fastq, interop
+[2018-03-15 16:31:14,085] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf
+[2018-03-15 16:31:14,112] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
+[2018-03-15 16:31:14,112] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,129] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,131] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,131] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2018-03-15 16:31:14,133] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,183] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,184] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,185] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,185] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2018-03-15 16:31:14,201] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,233] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2018-03-15 16:31:14,234] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,235] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,237] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,237] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,239] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2018-03-15 16:31:14,241] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,243] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,243] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,258] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2018-03-15 16:31:14,258] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,259] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,267] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,268] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,268] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: sra_bismark_1447079770_bismark_summary.html
+[2018-03-15 16:31:14,269] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,269] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2018-03-15 16:31:14,269] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2018-03-15 16:31:14,270] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2018-03-15 16:31:14,300] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2018-03-15 16:31:14,301] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2018-03-15 16:31:14,528] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2018-03-15 16:31:14,533] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2018-03-15 16:31:14,538] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2018-03-15 16:31:14,543] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2018-03-15 16:31:14,550] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2018-03-15 16:31:14,555] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2018-03-15 16:31:14,559] multiqc                                            [DEBUG  ]  No samples found: quast
+[2018-03-15 16:31:14,565] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2018-03-15 16:31:14,570] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2018-03-15 16:31:14,575] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2018-03-15 16:31:14,581] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2018-03-15 16:31:14,586] multiqc                                            [DEBUG  ]  No samples found: busco
+[2018-03-15 16:31:14,591] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2018-03-15 16:31:14,596] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2018-03-15 16:31:14,601] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2018-03-15 16:31:14,607] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2018-03-15 16:31:14,613] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2018-03-15 16:31:14,619] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2018-03-15 16:31:14,625] multiqc                                            [DEBUG  ]  No samples found: homer
+[2018-03-15 16:31:14,631] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2018-03-15 16:31:14,636] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2018-03-15 16:31:14,642] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2018-03-15 16:31:14,649] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2018-03-15 16:31:14,654] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2018-03-15 16:31:14,659] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2018-03-15 16:31:14,664] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2018-03-15 16:31:14,668] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2018-03-15 16:31:14,675] multiqc                                            [DEBUG  ]  No samples found: picard
+[2018-03-15 16:31:14,680] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2018-03-15 16:31:14,687] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2018-03-15 16:31:14,693] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2018-03-15 16:31:14,697] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2018-03-15 16:31:14,701] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2018-03-15 16:31:14,706] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2018-03-15 16:31:14,715] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2018-03-15 16:31:14,749] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 bismark alignment reports
+[2018-03-15 16:31:14,754] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 bismark dedup reports
+[2018-03-15 16:31:14,770] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 bismark methextract reports
+[2018-03-15 16:31:14,785] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2018-03-15 16:31:14,792] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2018-03-15 16:31:14,798] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2018-03-15 16:31:14,804] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2018-03-15 16:31:14,811] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2018-03-15 16:31:14,816] multiqc                                            [DEBUG  ]  No samples found: star
+[2018-03-15 16:31:14,822] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2018-03-15 16:31:14,827] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2018-03-15 16:31:14,832] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2018-03-15 16:31:14,838] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2018-03-15 16:31:14,845] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2018-03-15 16:31:14,853] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2018-03-15 16:31:14,859] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2018-03-15 16:31:14,888] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
+[2018-03-15 16:31:14,897] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2018-03-15 16:31:14,902] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2018-03-15 16:31:14,907] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2018-03-15 16:31:14,912] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2018-03-15 16:31:14,916] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2018-03-15 16:31:14,922] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2018-03-15 16:31:14,927] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2018-03-15 16:31:15,168] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921768_1
+[2018-03-15 16:31:15,247] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921770_1'
+[2018-03-15 16:31:15,285] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921769_1
+[2018-03-15 16:31:15,301] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921695_1
+[2018-03-15 16:31:15,336] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_2wk_SRR921694_1'
+[2018-03-15 16:31:15,338] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921773_1
+[2018-03-15 16:31:15,405] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921696_1
+[2018-03-15 16:31:15,440] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921767_1'
+[2018-03-15 16:31:15,440] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
+[2018-03-15 16:31:15,762] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2018-03-15 16:31:15,766] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2018-03-15 16:31:15,771] multiqc                                            [DEBUG  ]  No samples found: interop
+[2018-03-15 16:31:15,799] multiqc                                            [INFO   ]  Compressing plot data
+[2018-03-15 16:31:16,405] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.dev0 (after modules)
+[2018-03-15 16:31:16,405] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI as specified in config file
+[2018-03-15 16:31:16,563] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2018-03-15 16:31:16,563] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2018-03-15 16:31:16,564] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,564] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,564] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_bismark_dedup.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,565] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_sources.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,565] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_bismark_methextract.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,565] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_data.json' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,565] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_cutadapt.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,565] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmpxoJZAf/multiqc_data/multiqc_bismark_alignment.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/bs-seq/multiqc_data'
+[2018-03-15 16:31:16,755] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.dev0 (after execution finish)
+[2018-03-15 16:31:16,756] multiqc                                            [INFO   ]  MultiQC complete

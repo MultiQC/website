@@ -216,7 +216,7 @@
             }
         }
     ], 
-    "config_version": "1.4", 
+    "config_version": "1.5", 
     "report_general_stats_data": [
         {
             "SRR3192398": {
@@ -691,10 +691,10 @@
             }
         }
     ], 
-    "config_creation_date": "2018-01-11, 15:07", 
+    "config_creation_date": "2018-03-15, 16:31", 
     "config_title": null, 
     "config_report_comment": null, 
-    "config_short_version": "1.4", 
+    "config_short_version": "1.5", 
     "config_intro_text": null, 
     "report_saved_raw_data": {
         "multiqc_featureCounts": {
@@ -1936,7 +1936,7 @@
                                 33
                             ]
                         ], 
-                        "name": "SRR3192396"
+                        "name": "SRR3192396 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -2345,7 +2345,7 @@
                                 28
                             ]
                         ], 
-                        "name": "SRR3192397"
+                        "name": "SRR3192397 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -2750,7 +2750,7 @@
                                 71
                             ]
                         ], 
-                        "name": "SRR3192398"
+                        "name": "SRR3192398 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -3155,7 +3155,7 @@
                                 70
                             ]
                         ], 
-                        "name": "SRR3192399"
+                        "name": "SRR3192399 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -3560,7 +3560,7 @@
                                 109
                             ]
                         ], 
-                        "name": "SRR3192400"
+                        "name": "SRR3192400 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -3965,7 +3965,7 @@
                                 97
                             ]
                         ], 
-                        "name": "SRR3192401"
+                        "name": "SRR3192401 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -4370,7 +4370,7 @@
                                 32
                             ]
                         ], 
-                        "name": "SRR3192657"
+                        "name": "SRR3192657 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -4779,7 +4779,7 @@
                                 14
                             ]
                         ], 
-                        "name": "SRR3192658"
+                        "name": "SRR3192658 - Adapter 1"
                     }
                 ], 
                 [
@@ -5190,7 +5190,7 @@
                                 20.625
                             ]
                         ], 
-                        "name": "SRR3192396"
+                        "name": "SRR3192396 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -5599,7 +5599,7 @@
                                 20.0
                             ]
                         ], 
-                        "name": "SRR3192397"
+                        "name": "SRR3192397 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -6004,7 +6004,7 @@
                                 71.0
                             ]
                         ], 
-                        "name": "SRR3192398"
+                        "name": "SRR3192398 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -6409,7 +6409,7 @@
                                 63.63636363636363
                             ]
                         ], 
-                        "name": "SRR3192399"
+                        "name": "SRR3192399 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -6814,7 +6814,7 @@
                                 19.12280701754386
                             ]
                         ], 
-                        "name": "SRR3192400"
+                        "name": "SRR3192400 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -7219,7 +7219,7 @@
                                 17.017543859649123
                             ]
                         ], 
-                        "name": "SRR3192401"
+                        "name": "SRR3192401 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -7624,7 +7624,7 @@
                                 22.857142857142858
                             ]
                         ], 
-                        "name": "SRR3192657"
+                        "name": "SRR3192657 - Adapter 1"
                     }, 
                     {
                         "data": [
@@ -8033,7 +8033,7 @@
                                 9.333333333333334
                             ]
                         ], 
-                        "name": "SRR3192658"
+                        "name": "SRR3192658 - Adapter 1"
                     }
                 ]
             ], 
@@ -20619,7 +20619,7 @@
                 "title": "FastQC: Per Sequence GC Content", 
                 "xmax": 100, 
                 "tt_label": "<b>{point.x}% GC</b>: {point.y}", 
-                "ylab": "Count"
+                "ylab": "Percentage"
             }
         }, 
         "fastqc_sequence_duplication_levels_plot": {
@@ -22790,6 +22790,6 @@
             }
         }
     }, 
-    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.4-py2.7.egg/multiqc/utils", 
+    "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.5-py2.7.egg/multiqc/utils", 
     "config_git_hash": null
 }
