@@ -17,7 +17,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_cpg_meth", 
+=======
+                "rid": "mqc-generalstats-bismark-percent_cpg_meth", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "55,126,184", 
                 "description": "% Cytosines methylated in CpG context"
@@ -38,7 +42,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_chg_meth", 
+=======
+                "rid": "mqc-generalstats-bismark-percent_chg_meth", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "55,126,184", 
                 "description": "% Cytosines methylated in CHG context"
@@ -59,7 +67,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_chh_meth", 
+=======
+                "rid": "mqc-generalstats-bismark-percent_chh_meth", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "55,126,184", 
                 "description": "% Cytosines methylated in CHH context"
@@ -80,7 +92,11 @@
                 "dmin": 0.0, 
                 "floor": null, 
                 "max": null, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-total_c", 
+=======
+                "rid": "mqc-generalstats-bismark-total_c", 
+>>>>>>> Stashed changes
                 "colour": "55,126,184", 
                 "shared_key": null
             }
@@ -102,7 +118,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-dup_reads_percent", 
+=======
+                "rid": "mqc-generalstats-bismark-dup_reads_percent", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "77,175,74", 
                 "description": "Percent Duplicated Alignments"
@@ -125,7 +145,11 @@
                 "max": null, 
                 "hidden": true, 
                 "floor": null, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-dedup_reads"
+=======
+                "rid": "mqc-generalstats-bismark-dedup_reads"
+>>>>>>> Stashed changes
             }
         }, 
         {
@@ -147,7 +171,11 @@
                 "max": null, 
                 "hidden": true, 
                 "floor": null, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-aligned_reads"
+=======
+                "rid": "mqc-generalstats-bismark-aligned_reads"
+>>>>>>> Stashed changes
             }, 
             "percent_aligned": {
                 "ceiling": null, 
@@ -165,7 +193,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_aligned", 
+=======
+                "rid": "mqc-generalstats-bismark-percent_aligned", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "152,78,163", 
                 "description": "Percent Aligned Sequences"
@@ -188,7 +220,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_trimmed", 
+=======
+                "rid": "mqc-generalstats-cutadapt-percent_trimmed", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "255,127,0", 
                 "description": "% Total Base Pairs trimmed"
@@ -211,7 +247,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_duplicates", 
+=======
+                "rid": "mqc-generalstats-fastqc-percent_duplicates", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "228,26,28", 
                 "description": "% Duplicate Reads"
@@ -232,7 +272,11 @@
                 "modify": null, 
                 "floor": null, 
                 "dmin": 0.0, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_gc", 
+=======
+                "rid": "mqc-generalstats-fastqc-percent_gc", 
+>>>>>>> Stashed changes
                 "shared_key": null, 
                 "colour": "228,26,28", 
                 "description": "Average % GC Content"
@@ -255,7 +299,11 @@
                 "title": "Length", 
                 "hidden": false, 
                 "shared_key": null, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-avg_sequence_length", 
+=======
+                "rid": "mqc-generalstats-fastqc-avg_sequence_length", 
+>>>>>>> Stashed changes
                 "description": "Average Sequence Length (bp)"
             }, 
             "percent_fails": {
@@ -267,7 +315,11 @@
                 "minRange": null, 
                 "dmin": 0.0, 
                 "floor": null, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-percent_fails", 
+=======
+                "rid": "mqc-generalstats-fastqc-percent_fails", 
+>>>>>>> Stashed changes
                 "dmax": 100.0, 
                 "suffix": "%", 
                 "scale": "Reds", 
@@ -295,13 +347,21 @@
                 "dmin": 0.0, 
                 "shared_key": "read_count", 
                 "max": null, 
+<<<<<<< Updated upstream
                 "rid": "mqc-generalstats-total_sequences", 
+=======
+                "rid": "mqc-generalstats-fastqc-total_sequences", 
+>>>>>>> Stashed changes
                 "floor": null, 
                 "colour": "228,26,28"
             }
         }
     ], 
+<<<<<<< Updated upstream
     "config_version": "1.5", 
+=======
+    "config_version": "1.6", 
+>>>>>>> Stashed changes
     "report_general_stats_data": [
         {
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
@@ -770,10 +830,17 @@
             }
         }
     ], 
+<<<<<<< Updated upstream
     "config_creation_date": "2018-03-15, 16:31", 
     "config_title": null, 
     "config_report_comment": null, 
     "config_short_version": "1.5", 
+=======
+    "config_creation_date": "2018-08-04, 01:44", 
+    "config_title": null, 
+    "config_report_comment": null, 
+    "config_short_version": "1.6", 
+>>>>>>> Stashed changes
     "config_intro_text": null, 
     "report_saved_raw_data": {
         "multiqc_bismark_methextract": {
@@ -1128,6 +1195,7 @@
         }, 
         "multiqc_general_stats": {
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
+<<<<<<< Updated upstream
                 "Cutadapt_mqc-generalstats-percent_trimmed": 3.000079262608878, 
                 "Bismark_mqc-generalstats-dedup_reads": 17194498.0, 
                 "Bismark_mqc-generalstats-dup_reads_percent": 1.65, 
@@ -1254,6 +1322,134 @@
                 "FastQC_mqc-generalstats-percent_fails": 16.666666666666664, 
                 "Bismark_mqc-generalstats-total_c": 1928202931.0, 
                 "FastQC_mqc-generalstats-percent_duplicates": 15.492994748674093
+=======
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 3.000079262608878, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 85.69671014348039, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 17194498.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 6.001975679768421, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 96.71931982190844, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 20400069.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 1.65, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 77.0, 
+                "Bismark_mqc-generalstats-bismark-total_c": 321444403.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 17482188.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 21.0
+            }, 
+            "MethylC-Seq_mm_fc_1wk_SRR921767_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 2.64243157, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 86.02041314470769, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 83465166.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 8.759503962430756, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 97.0732715786089, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 99942367.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 2.91, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 77.0, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1567978762.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 85970837.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 21.0
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 13.465466322982875, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 78.42274038705735, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 111688896.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 1.1, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 16.666666666666664, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 15.492994748674093, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 91.83178012693584, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 153092768.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 6.97, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 75.7, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1928202931.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 120059544.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 26.0
+            }, 
+            "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 2.8996505900000002, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 85.74393067570122, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 83205980.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 16.666666666666664, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 9.282042074894491, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 96.81927725937147, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 99937484.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 2.9, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 77.0, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1559936769.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 85690327.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 21.0
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 13.591916874862283, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 78.39463861054773, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 111849677.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 1.1, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 14.592914823439386, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 91.78102877465281, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 153372033.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 6.97, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 75.8, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1930076424.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 120235451.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 26.0
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 23.6237041702653, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 76.28892208419504, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 91566412.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 1.1, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 10.872928952054096, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 84.38323667617531, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 128125879.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 6.32, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 75.8, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1472451692.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 97745852.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 25.0
+            }, 
+            "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 20.742686548407487, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 77.09136127829814, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 84134391.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 1.1, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.9, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 11.467569447895997, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 85.57135929287158, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 116247060.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 6.12, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 75.7, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1366729142.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 89616441.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 25.0
+            }, 
+            "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "Cutadapt_mqc-generalstats-cutadapt-percent_trimmed": 2.77531391, 
+                "Bismark_mqc-generalstats-bismark-percent_aligned": 85.9280661964561, 
+                "Bismark_mqc-generalstats-bismark-dedup_reads": 83381921.0, 
+                "Bismark_mqc-generalstats-bismark-percent_chh_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332, 
+                "Bismark_mqc-generalstats-bismark-percent_chg_meth": 0.5, 
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 8.744227143773315, 
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 96.93486329265086, 
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 99944444.0, 
+                "Bismark_mqc-generalstats-bismark-dup_reads_percent": 2.91, 
+                "Bismark_mqc-generalstats-bismark-percent_cpg_meth": 77.0, 
+                "Bismark_mqc-generalstats-bismark-total_c": 1562840273.0, 
+                "Bismark_mqc-generalstats-bismark-aligned_reads": 85880328.0, 
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 21.0
+>>>>>>> Stashed changes
             }
         }, 
         "multiqc_bismark_alignment": {
@@ -29014,6 +29210,58 @@
                 "yMinTickInterval": 0.1
             }
         }, 
+        "fastqc_sequence_counts_plot": {
+            "plot_type": "bar_graph", 
+            "datasets": [
+                [
+                    {
+                        "data": [
+                            91187912.0, 
+                            90661245.0, 
+                            19175662.0, 
+                            91205075.0, 
+                            129374114.0, 
+                            130990583.0, 
+                            102916348.0, 
+                            114194844.0
+                        ], 
+                        "name": "Unique Reads"
+                    }, 
+                    {
+                        "data": [
+                            8754455.0, 
+                            9276239.0, 
+                            1224407.0, 
+                            8739369.0, 
+                            23718654.0, 
+                            22381450.0, 
+                            13330712.0, 
+                            13931035.0
+                        ], 
+                        "name": "Duplicate Reads"
+                    }
+                ]
+            ], 
+            "config": {
+                "ylab": "Number of reads", 
+                "hide_zero_cats": false, 
+                "cpswitch_counts_label": "Number of reads", 
+                "id": "fastqc_sequence_counts_plot", 
+                "title": "FastQC: Sequence Counts"
+            }, 
+            "samples": [
+                [
+                    "MethylC-Seq_mm_fc_1wk_SRR921767_1", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921768_1", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921769_1", 
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1", 
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1", 
+                    "MethylC-Seq_mm_fc_2wk_SRR921695_1", 
+                    "MethylC-Seq_mm_fc_2wk_SRR921696_1", 
+                    "MethylC-Seq_mm_fc_2wk_SRR921773_1"
+                ]
+            ]
+        }, 
         "bismark-methylation-dp": {
             "plot_type": "beeswarm", 
             "datasets": [
@@ -30965,6 +31213,10 @@
             }
         }
     }, 
+<<<<<<< Updated upstream
     "config_script_path": "/Users/philewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.5-py2.7.egg/multiqc/utils", 
+=======
+    "config_script_path": "/Users/ewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.6-py2.7.egg/multiqc/utils", 
+>>>>>>> Stashed changes
     "config_git_hash": null
 }
