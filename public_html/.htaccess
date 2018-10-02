@@ -1,6 +1,10 @@
 Options All -Indexes
 RewriteEngine on
 
+# Redirect https to https
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://multiqc.info/$1 [R,L]
+
 # From massive traffic spike in Sept 2017
 SetEnvIfNoCase User-Agent "Barkrowler" bad_bot
 
