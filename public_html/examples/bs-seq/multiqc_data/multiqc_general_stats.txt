@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-Sample	Cutadapt_mqc-generalstats-percent_trimmed	Bismark_mqc-generalstats-dedup_reads	Bismark_mqc-generalstats-dup_reads_percent	Bismark_mqc-generalstats-percent_aligned	Bismark_mqc-generalstats-percent_chh_meth	Bismark_mqc-generalstats-percent_cpg_meth	FastQC_mqc-generalstats-total_sequences	Bismark_mqc-generalstats-aligned_reads	FastQC_mqc-generalstats-avg_sequence_length	Bismark_mqc-generalstats-percent_chg_meth	FastQC_mqc-generalstats-percent_gc	FastQC_mqc-generalstats-percent_fails	Bismark_mqc-generalstats-total_c	FastQC_mqc-generalstats-percent_duplicates
-MethylC-Seq_mm_fc_1wk_SRR921767_1	2.64243157	83465166.0	2.91	86.0204131447	0.5	77.0	99942367.0	85970837.0	97.0732715786	0.5	21.0	8.33333333333	1567978762.0	8.75950396243
-MethylC-Seq_mm_fc_1wk_SRR921768_1	2.89965059	83205980.0	2.9	85.7439306757	0.5	77.0	99937484.0	85690327.0	96.8192772594	0.5	21.0	16.6666666667	1559936769.0	9.28204207489
-MethylC-Seq_mm_fc_1wk_SRR921769_1	3.00007926261	17194498.0	1.65	85.6967101435	0.5	77.0	20400069.0	17482188.0	96.7193198219	0.5	21.0	8.33333333333	321444403.0	6.00197567977
-MethylC-Seq_mm_fc_1wk_SRR921770_1	2.77531391	83381921.0	2.91	85.9280661965	0.5	77.0	99944444.0	85880328.0	96.9348632927	0.5	21.0	8.33333333333	1562840273.0	8.74422714377
-MethylC-Seq_mm_fc_2wk_SRR921694_1	13.465466323	111688896.0	6.97	78.4227403871	1.1	75.7	153092768.0	120059544.0	91.8317801269	0.9	26.0	16.6666666667	1928202931.0	15.4929947487
-MethylC-Seq_mm_fc_2wk_SRR921695_1	13.5919168749	111849677.0	6.97	78.3946386105	1.1	75.8	153372033.0	120235451.0	91.7810287747	0.9	26.0	8.33333333333	1930076424.0	14.5929148234
-MethylC-Seq_mm_fc_2wk_SRR921696_1	20.7426865484	84134391.0	6.12	77.0913612783	1.1	75.7	116247060.0	89616441.0	85.5713592929	0.9	25.0	8.33333333333	1366729142.0	11.4675694479
-MethylC-Seq_mm_fc_2wk_SRR921773_1	23.6237041703	91566412.0	6.32	76.2889220842	1.1	75.8	128125879.0	97745852.0	84.3832366762	0.9	25.0	8.33333333333	1472451692.0	10.8729289521
-=======
 Sample	Cutadapt_mqc-generalstats-cutadapt-percent_trimmed	Bismark_mqc-generalstats-bismark-percent_aligned	Bismark_mqc-generalstats-bismark-dedup_reads	Bismark_mqc-generalstats-bismark-percent_chh_meth	FastQC_mqc-generalstats-fastqc-percent_fails	Bismark_mqc-generalstats-bismark-percent_chg_meth	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-total_sequences	Bismark_mqc-generalstats-bismark-dup_reads_percent	Bismark_mqc-generalstats-bismark-percent_cpg_meth	Bismark_mqc-generalstats-bismark-total_c	Bismark_mqc-generalstats-bismark-aligned_reads	FastQC_mqc-generalstats-fastqc-percent_gc
 MethylC-Seq_mm_fc_1wk_SRR921767_1	2.64243157	86.0204131447	83465166.0	0.5	8.33333333333	0.5	8.75950396243	97.0732715786	99942367.0	2.91	77.0	1567978762.0	85970837.0	21.0
 MethylC-Seq_mm_fc_1wk_SRR921768_1	2.89965059	85.7439306757	83205980.0	0.5	16.6666666667	0.5	9.28204207489	96.8192772594	99937484.0	2.9	77.0	1559936769.0	85690327.0	21.0
@@ -18,4 +7,3 @@ MethylC-Seq_mm_fc_2wk_SRR921694_1	13.465466323	78.4227403871	111688896.0	1.1	16.
 MethylC-Seq_mm_fc_2wk_SRR921695_1	13.5919168749	78.3946386105	111849677.0	1.1	8.33333333333	0.9	14.5929148234	91.7810287747	153372033.0	6.97	75.8	1930076424.0	120235451.0	26.0
 MethylC-Seq_mm_fc_2wk_SRR921696_1	20.7426865484	77.0913612783	84134391.0	1.1	8.33333333333	0.9	11.4675694479	85.5713592929	116247060.0	6.12	75.7	1366729142.0	89616441.0	25.0
 MethylC-Seq_mm_fc_2wk_SRR921773_1	23.6237041703	76.2889220842	91566412.0	1.1	8.33333333333	0.9	10.8729289521	84.3832366762	128125879.0	6.32	75.8	1472451692.0	97745852.0	25.0
->>>>>>> Stashed changes
