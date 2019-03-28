@@ -43,9 +43,14 @@ foreach (array_keys($pages) as $section) {
           }
         }
         if(count($matched_sp) > 0){
-          $content .= '<h4>Search Patterns</h4>';
-          $content .= '<p>See <a href="#module-search-patterns">Module search patterns</a> for instructions on how to customise these patterns.</p>';
-          $content .= '<pre><code class="language-yaml">' . spyc_dump($matched_sp) . '</code></pre>';
+          $content .= '
+          <div class="panel panel-default search-patterns-panel">
+            <div class="panel-heading">
+                '.$mod_yaml['Name'].' file search patterns
+                <a href="#module-search-patterns">See docs <i class="fa fa-chevron-up"></i></a>
+            </div>
+            <pre class="panel-body"><code class="language-yaml">' . spyc_dump($matched_sp) . '</code></pre>
+          </div>';
         }
       }
       $content .= '</div>';

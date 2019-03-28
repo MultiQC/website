@@ -317,8 +317,8 @@ code .comment {
   background: #ddd;
   position : relative;
   box-shadow: 0 10px 20px rgba(0,0,0,.5);
-  -webkit-transition: background 0.1s;
-  transition: background 0.1s;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 #iframe_browser_tabs li a {
   display: inline-block;
@@ -632,4 +632,27 @@ h1.section-header .header-link { margin-top: 23px; }
   .toc .nav .nav {
     display: none !important;
   }
+}
+
+.search-patterns-panel .panel-heading a {
+  float:right;
+  font-size: 13px;
+  color: #999;
+  text-decoration: none;
+}
+.search-patterns-panel .panel-heading a:hover {
+  color: #666;
+}
+.search-patterns-panel pre.panel-body,
+.search-patterns-panel pre.panel-body code {
+  border: none;
+  background-color: #FFFFFF;
+  margin: 0;
+}
+.search-patterns-panel pre.panel-body code {
+  padding: 0;
+}
+.search-patterns-panel pre.panel-body:before,
+.search-patterns-panel pre.panel-body:after {
+  content: '';
 }
