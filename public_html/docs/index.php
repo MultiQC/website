@@ -13,6 +13,9 @@ if(count($md_parts) == 3){
 }
 if(count($pages) == 0){ die("Error - couldn't find documentation source."); }
 
+// Get the serach patterns
+$search_patterns = spyc_load_file('../../multiqc/multiqc/utils/search_patterns.yaml');
+
 // Loop over the markdown files and build the HTML content
 $content = '';
 foreach (array_keys($pages) as $section) {
@@ -31,6 +34,19 @@ foreach (array_keys($pages) as $section) {
         $markdown = $md_parts[2];
         $pd = new ParsedownExtra();
         $content .= $pd->text($markdown);
+        // Find matching search patterns
+        $matched_sp = array();
+        $modkey = str_replace('.md', '', str_replace('modules/', '', $fn));
+        foreach($search_patterns as $key => $sp){
+          if(preg_match("/^".$modkey."(\/|$)/i", $key)){
+            $matched_sp[$key] = $sp;
+          }
+        }
+        if(count($matched_sp) > 0){
+          $content .= '<h4>Search Patterns</h4>';
+          $content .= '<p>See <a href="#module-search-patterns">Module search patterns</a> for instructions on how to customise these patterns.</p>';
+          $content .= '<pre><code class="language-yaml">' . spyc_dump($matched_sp) . '</code></pre>';
+        }
       }
       $content .= '</div>';
     }
@@ -53,7 +69,7 @@ $content = preg_replace_callback(
   '~<h([1234])>([^<]*)</h([1234])>~Ui', // Ungreedy by default, case insensitive
   function ($matches) {
     global $hids;
-    $id_match = strtolower( preg_replace('/[^\w-\.]/', '', str_replace(' ', '-', $matches[2])));
+    $id_match = strtolower( @preg_replace('/[^\w-\.]/', '', str_replace(' ', '-', $matches[2])));
     $id_match = str_replace('---', '-', $id_match);
     $hid = $id_match;
     $i = 1;
