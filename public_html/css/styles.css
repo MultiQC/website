@@ -651,6 +651,8 @@ h1.section-header .header-link { margin-top: 23px; }
 }
 .search-patterns-panel pre.panel-body code {
   padding: 0;
+  overflow-x: scroll;
+  white-space: pre;
 }
 .search-patterns-panel pre.panel-body:before,
 .search-patterns-panel pre.panel-body:after {
