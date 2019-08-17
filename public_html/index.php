@@ -111,8 +111,9 @@ if(count($md_parts) == 3){
           <div class="col-md-8">
             <h1>
               <object type="image/svg+xml" title="MultiQC" data="images/MultiQC_logo.svg">
-						    <img src="images/MultiQC_logo.png">
-					    </object>
+                <img src="images/MultiQC_logo.png">
+              </object>
+              <span class="__dimensions_badge_embed__ hidden-xs" data-id="pub.1010049881" data-style="large_rectangle" style="float:right; margin-top: 100px;"></span>
             </h1>
             <p class="lead">Aggregate results from bioinformatics analyses across many samples into a single report</p>
             <p>MultiQC searches a given directory for analysis logs and compiles a HTML report.
@@ -226,7 +227,7 @@ multiqc .</code></pre>
             <a href="https://www.scilifelab.se/platforms/ngi/" target="_blank">National Genomics Infrastructre</a>
             (NGI) at SciLifeLab, Sweden. Initial quality control was done using <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a>
             and <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/" target="_blank">FastQ Screen</a>.
-            Reads were processed with <a href="https://www.broadinstitute.org/gatk/" taret="_blank">GATK</a> and the aligned reads analysed using 
+            Reads were processed with <a href="https://www.broadinstitute.org/gatk/" taret="_blank">GATK</a> and the aligned reads analysed using
             <a href="http://broadinstitute.github.io/picard/" target="_blank">Picard</a>. Downstream QC was done using
             <a href="http://qualimap.bioinfo.cipf.es/" target="_blank">Qualimap BamQC</a> and
             <a href="http://snpeff.sourceforge.net/" target="_blank">SnpEff</a>.</p>
@@ -326,11 +327,11 @@ multiqc .</code></pre>
       <p class="content-lead">Ever spent ages collecting reports and wading through log file output?<br>
           Here's the answer to your frustrations...</p>
 
-			<section>
-				<div class="row">
+            <section>
+                <div class="row">
           <div class="col-md-8">
             <h3>Visualise statistics from your pipeline</h3>
-				    <p>MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.</p>
+                    <p>MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.</p>
             <a class="btn btn-lg btn-default" href="examples/rna-seq/multiqc_report.html">View Example Report</a>
           </div>
           <div class="col-md-4 text-center">
@@ -339,11 +340,11 @@ multiqc .</code></pre>
         </div>
       </section>
 
-			<section>
-				<div class="row">
+            <section>
+                <div class="row">
           <div class="col-md-8">
             <h3>Plot all of your samples together</h3>
-				    <p>Visualizing your samples together allows detailed comparison, not possible by scanning one report after another.</p>
+                    <p>Visualizing your samples together allows detailed comparison, not possible by scanning one report after another.</p>
             <div class="btn-group">
               <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Example Reports <span class="caret"></span>
@@ -363,11 +364,11 @@ multiqc .</code></pre>
         </div>
       </section>
 
-			<section>
-				<div class="row">
+            <section>
+                <div class="row">
           <div class="col-md-8">
             <h3>Supports your favourite tools</h3>
-				    <p>MultiQC comes supports many common bioinformatics tools out of the box. If you're missing something,
+                    <p>MultiQC comes supports many common bioinformatics tools out of the box. If you're missing something,
               just create an issue on GitHub to request it - if you have an example log file it's usually pretty fast.</p>
             <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#mqc-supported-tools-modal">
               View available Modules
@@ -388,10 +389,10 @@ multiqc .</code></pre>
       </section>
 
       <section>
-				<div class="row">
+                <div class="row">
           <div class="col-md-8">
             <h3>Extensible and documented</h3>
-				    <p>Want to use this to do something fancy? MultiQC is structured to allow easy extension and customisation
+                    <p>Want to use this to do something fancy? MultiQC is structured to allow easy extension and customisation
                with plugin hooks, a submodule framework and simple templating. Everything is well documented, with step
                by step instructions for writing your new tool.</p>
             <a class="btn btn-default btn-lg" href="docs">Read the docs</a>
@@ -465,28 +466,28 @@ multiqc .</code></pre>
       </section>
 
       <section>
-				<ul class="feature-icons">
-					<li><span class="fa fa-lg fa-terminal"></span>Simple installation</li>
-					<li><span class="fa fa-lg fa-search"></span>Search any directory</li>
-					<li><span class="fa fa-lg fa-bar-chart"></span>View report in a web browser</li>
-					<li><span class="fa fa-lg fa-share-alt"></span>Zip file for easy sharing</li>
-					<li><span class="fa fa-lg fa-code"></span>Extensible &amp; well documented</li>
-				</ul>
+                <ul class="feature-icons">
+                    <li><span class="fa fa-lg fa-terminal"></span>Simple installation</li>
+                    <li><span class="fa fa-lg fa-search"></span>Search any directory</li>
+                    <li><span class="fa fa-lg fa-bar-chart"></span>View report in a web browser</li>
+                    <li><span class="fa fa-lg fa-share-alt"></span>Zip file for easy sharing</li>
+                    <li><span class="fa fa-lg fa-code"></span>Extensible &amp; well documented</li>
+                </ul>
       </section>
 
 
-    	<section class="focus-section">
-  			<h2>Install from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a> or
+        <section class="focus-section">
+              <h2>Install from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a> or
         <a href="https://bioconda.github.io/">Bioconda</a></h2>
-  			<p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line.<br>
+              <p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line.<br>
           If you use conda, you can run <code>conda install -c bioconda multiqc</code> instead.<br>
           See the <a href="docs/#installation">installation instructions</a> for more help.</p>
         <p>
           <a href="docs" class="btn btn-default btn-lg"><i class="fa fa-book fa-lg"></i> Documentation</a>
-    			<a target="_blank" href="https://github.com/ewels/MultiQC/" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
-    			<a target="_blank" href="https://pypi.python.org/pypi/multiqc" class="btn btn-default btn-lg"><i class="icon-python fa-lg"></i> View on PyPI</a>
+                <a target="_blank" href="https://github.com/ewels/MultiQC/" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+                <a target="_blank" href="https://pypi.python.org/pypi/multiqc" class="btn btn-default btn-lg"><i class="icon-python fa-lg"></i> View on PyPI</a>
         </p>
-    	</section>
+        </section>
 
     </div></div> <!-- /content /container -->
 
@@ -579,8 +580,13 @@ multiqc .</code></pre>
               <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License</a>,
               which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original
               work is properly cited.</p>
-            <div style="width: 300px; margin: 20px auto 0;">
-              <div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1093/bioinformatics/btw354" class="altmetric-embed"></div>
+            <div class="row" style="margin-top: 40px;">
+              <div class="col-sm-6">
+                <div data-badge-details="right" data-badge-type="medium-donut" data-doi="10.1093/bioinformatics/btw354" class="altmetric-embed" style="padding-left: 30px;"></div>
+              </div>
+              <div class="col-sm-6">
+                <span class="__dimensions_badge_embed__" data-id="pub.1010049881" data-legend="always"></span>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -596,6 +602,9 @@ multiqc .</code></pre>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/homepage.js"></script>
+
+    <!-- Dimensions.ai -->
+    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 
     <!-- Altmetric -->
     <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
