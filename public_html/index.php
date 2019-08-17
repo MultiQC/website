@@ -113,7 +113,7 @@ if(count($md_parts) == 3){
               <object type="image/svg+xml" title="MultiQC" data="images/MultiQC_logo.svg">
                 <img src="images/MultiQC_logo.png">
               </object>
-              <span class="__dimensions_badge_embed__ hidden-xs" data-id="pub.1010049881" data-style="large_rectangle" style="float:right; margin-top: 100px;"></span>
+              <span class="__dimensions_badge_embed__ hidden-xs" data-id="pub.1010049881" data-style="large_rectangle" data-legend="never" style="float:right; margin-top: 100px;"></span>
             </h1>
             <p class="lead">Aggregate results from bioinformatics analyses across many samples into a single report</p>
             <p>MultiQC searches a given directory for analysis logs and compiles a HTML report.
