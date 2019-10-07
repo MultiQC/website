@@ -165,7 +165,7 @@ if(count($md_parts) == 3){
               <div class="panel-body">
                 <pre id="pip"><code >pip install multiqc    <span class="comment"># Install</span>
 multiqc .              <span class="comment"># Run</span></code></pre>
-<pre id="conda" style="display:none;"><code>conda install -c bioconda -c conda-forge ultiqc
+<pre id="conda" style="display:none;"><code>conda install -c bioconda -c conda-forge multiqc
 multiqc .</code></pre>
 <pre id="manual" style="display:none;"><code>git clone https://github.com/ewels/MultiQC.git
 python setup.py install

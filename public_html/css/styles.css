@@ -159,10 +159,11 @@ code .comment {
   -webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
   box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
 }
-#manual {
+#quick_install pre {
   overflow-x: auto;
+  font-size: 80%;
 }
-#manual code {
+#quick_install pre code {
   white-space: pre;
 }
 
