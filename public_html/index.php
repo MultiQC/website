@@ -454,6 +454,14 @@ multiqc .</code></pre>
             <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Fantastic tool! Combine 100s of FastQC files and alignment scores into a single report within minutes... <a href="https://t.co/2q0aXkwEl3">https://t.co/2q0aXkwEl3</a></p>&mdash; Jana Sperschneider (@JSperschneider) <a href="https://twitter.com/JSperschneider/status/773337624555565056">September 7, 2016</a></blockquote>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Tool/Technique Tuesday. Quality controls, sanity checks are very important to ensure one does not enter a never-ending rabbit hole. A great tool that we use all the time is <a href="https://twitter.com/hashtag/MultiQC?src=hash&amp;ref_src=twsrc%5Etfw">#MultiQC</a> from <a href="https://twitter.com/scilifelab?ref_src=twsrc%5Etfw">@scilifelab</a> a tool that scrapes logs for metrics and visualisation. <a href="https://t.co/0nSqslJz1b">https://t.co/0nSqslJz1b</a> <a href="https://t.co/3p6vqJINAj">pic.twitter.com/3p6vqJINAj</a></p>&mdash; MonashBioinformatics (@MonashBioinfo) <a href="https://twitter.com/MonashBioinfo/status/1176278822997524480?ref_src=twsrc%5Etfw">September 23, 2019</a></blockquote>
+          </div>
+          <div class="col-sm-6">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just combined about 1200 reports and log files from bowtie2, samtools, samblaster, picard, preseq, cutadapt and fastqc into one human-readable summary report with multiqc in less than 2 minutes. Really awesome! <a href="https://twitter.com/tallphil?ref_src=twsrc%5Etfw">@tallphil</a> <a href="https://t.co/8xagkKeETo">https://t.co/8xagkKeETo</a></p>&mdash; Alexander Toenges (@ATpoint90) <a href="https://twitter.com/ATpoint90/status/1103590478530953219?ref_src=twsrc%5Etfw">March 7, 2019</a></blockquote>
+          </div>
+        </div>
         <a href="https://twitter.com/search?f=tweets&vertical=default&q=MultiQC" target="_blank" class="btn btn-default">See more on twitter.com &rarr;</a>
 
         <!-- Twitter & Reddit async scripts -->
