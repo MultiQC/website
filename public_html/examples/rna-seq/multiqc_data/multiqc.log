@@ -1,166 +1,229 @@
-[2018-12-21 19:01:27,445] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/ewels/miniconda2/envs/work/lib/python2.7/site-packages/multiqc-1.7-py2.7.egg/multiqc_config.yaml
-[2018-12-21 19:01:27,445] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/ewels/.multiqc_config.yaml
-[2018-12-21 19:01:27,446] multiqc                                            [DEBUG  ]  Loading config settings from: multiqc_config.yaml
-[2018-12-21 19:01:27,446] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['_1', '_2']
-[2018-12-21 19:01:27,446] multiqc                                            [DEBUG  ]  Command used: /Users/ewels/miniconda2/envs/work/bin/multiqc . --disable-ngi -t default
-[2018-12-21 19:01:27,741] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.6
-[2018-12-21 19:01:27,741] multiqc                                            [INFO   ]  This is MultiQC v1.7
-[2018-12-21 19:01:27,741] multiqc                                            [DEBUG  ]  Command     : /Users/ewels/miniconda2/envs/work/bin/multiqc . --disable-ngi -t default
-[2018-12-21 19:01:27,741] multiqc                                            [DEBUG  ]  Working dir : /Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq
-[2018-12-21 19:01:27,741] multiqc                                            [INFO   ]  Template    : default
-[2018-12-21 19:01:27,741] multiqc                                            [INFO   ]  Searching '.'
-[2018-12-21 19:01:27,742] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, dedup, damageprofiler, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, clusterflow, bcl2fastq, interop, flash
-[2018-12-21 19:01:27,742] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW
-[2018-12-21 19:01:27,756] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
-[2018-12-21 19:01:27,977] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_1_fastqc.html
-[2018-12-21 19:01:28,000] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_2_fastqc.html
-[2018-12-21 19:01:28,054] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_2_fastqc.html
-[2018-12-21 19:01:28,129] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_1_fastqc.html
-[2018-12-21 19:01:28,620] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_2_fastqc.html
-[2018-12-21 19:01:28,623] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_1_fastqc.html
-[2018-12-21 19:01:28,624] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_1_fastqc.html
-[2018-12-21 19:01:28,625] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_2_fastqc.html
-[2018-12-21 19:01:28,741] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_1_val_1_fastqc.html
-[2018-12-21 19:01:28,861] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_2_fastqc.html
-[2018-12-21 19:01:28,897] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_2_fastqc.html
-[2018-12-21 19:01:28,898] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_1_val_1_fastqc.html
-[2018-12-21 19:01:28,996] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_2_val_2_fastqc.html
-[2018-12-21 19:01:29,078] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_2_val_2_fastqc.html
-[2018-12-21 19:01:29,107] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_1_val_1_fastqc.html
-[2018-12-21 19:01:29,181] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_1_fastqc.html
-[2018-12-21 19:01:29,182] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_2_fastqc.html
-[2018-12-21 19:01:29,216] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_2_val_2_fastqc.html
-[2018-12-21 19:01:29,261] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_2_val_2_fastqc.html
-[2018-12-21 19:01:29,295] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_1_fastqc.html
-[2018-12-21 19:01:29,295] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_1_val_1_fastqc.html
-[2018-12-21 19:01:29,295] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_2_fastqc.html
-[2018-12-21 19:01:29,295] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_2_val_2_fastqc.html
-[2018-12-21 19:01:29,343] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_1_val_1_fastqc.html
-[2018-12-21 19:01:29,364] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_2_val_2_fastqc.html
-[2018-12-21 19:01:29,364] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_1_val_1_fastqc.html
-[2018-12-21 19:01:29,399] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_1_val_1_fastqc.html
-[2018-12-21 19:01:29,460] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_1_val_1_fastqc.html
-[2018-12-21 19:01:29,654] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_1_fastqc.html
-[2018-12-21 19:01:29,655] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_2_val_2_fastqc.html
-[2018-12-21 19:01:29,702] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_2_val_2_fastqc.html
-[2018-12-21 19:01:29,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_1_fastqc.html
-[2018-12-21 19:01:29,927] multiqc                                            [DEBUG  ]  No samples found: custom_content
-[2018-12-21 19:01:29,931] multiqc                                            [DEBUG  ]  No samples found: conpair
-[2018-12-21 19:01:29,935] multiqc                                            [DEBUG  ]  No samples found: peddy
-[2018-12-21 19:01:29,939] multiqc                                            [DEBUG  ]  No samples found: methylQA
-[2018-12-21 19:01:29,943] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
-[2018-12-21 19:01:29,947] multiqc                                            [DEBUG  ]  No samples found: qualimap
-[2018-12-21 19:01:29,951] multiqc                                            [DEBUG  ]  No samples found: preseq
-[2018-12-21 19:01:29,955] multiqc                                            [DEBUG  ]  No samples found: quast
-[2018-12-21 19:01:29,959] multiqc                                            [DEBUG  ]  No samples found: qorts
-[2018-12-21 19:01:29,963] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
-[2018-12-21 19:01:29,967] multiqc                                            [DEBUG  ]  No samples found: rsem
-[2018-12-21 19:01:29,973] multiqc                                            [DEBUG  ]  No samples found: rseqc
-[2018-12-21 19:01:29,977] multiqc                                            [DEBUG  ]  No samples found: busco
-[2018-12-21 19:01:29,981] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
-[2018-12-21 19:01:29,984] multiqc                                            [DEBUG  ]  No samples found: disambiguate
-[2018-12-21 19:01:29,989] multiqc                                            [DEBUG  ]  No samples found: supernova
-[2018-12-21 19:01:29,995] multiqc                                            [DEBUG  ]  No samples found: deeptools
-[2018-12-21 19:01:29,998] multiqc                                            [DEBUG  ]  No samples found: sargasso
-[2018-12-21 19:01:30,002] multiqc                                            [DEBUG  ]  No samples found: verifybamid
-[2018-12-21 19:01:30,006] multiqc                                            [DEBUG  ]  No samples found: mirtrace
-[2018-12-21 19:01:30,010] multiqc                                            [DEBUG  ]  No samples found: happy
-[2018-12-21 19:01:30,015] multiqc                                            [DEBUG  ]  No samples found: homer
-[2018-12-21 19:01:30,018] multiqc                                            [DEBUG  ]  No samples found: macs2
-[2018-12-21 19:01:30,023] multiqc                                            [DEBUG  ]  No samples found: theta2
-[2018-12-21 19:01:30,026] multiqc                                            [DEBUG  ]  No samples found: snpeff
-[2018-12-21 19:01:30,031] multiqc                                            [DEBUG  ]  No samples found: gatk
-[2018-12-21 19:01:30,035] multiqc                                            [DEBUG  ]  No samples found: htseq
-[2018-12-21 19:01:30,039] multiqc                                            [DEBUG  ]  No samples found: bcftools
-[2018-12-21 19:01:30,047] multiqc.modules.featureCounts.feature_counts       [INFO   ]  Found 8 reports
-[2018-12-21 19:01:30,055] multiqc                                            [DEBUG  ]  No samples found: dedup
-[2018-12-21 19:01:30,059] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
-[2018-12-21 19:01:30,068] multiqc                                            [DEBUG  ]  No samples found: picard
-[2018-12-21 19:01:30,072] multiqc                                            [DEBUG  ]  No samples found: prokka
-[2018-12-21 19:01:30,077] multiqc                                            [DEBUG  ]  No samples found: samblaster
-[2018-12-21 19:01:30,082] multiqc                                            [DEBUG  ]  No samples found: samtools
-[2018-12-21 19:01:30,086] multiqc                                            [DEBUG  ]  No samples found: bamtools
-[2018-12-21 19:01:30,090] multiqc                                            [DEBUG  ]  No samples found: jellyfish
-[2018-12-21 19:01:30,095] multiqc                                            [DEBUG  ]  No samples found: vcftools
-[2018-12-21 19:01:30,099] multiqc                                            [DEBUG  ]  No samples found: longranger
-[2018-12-21 19:01:30,103] multiqc                                            [DEBUG  ]  No samples found: stacks
-[2018-12-21 19:01:30,109] multiqc                                            [DEBUG  ]  No samples found: bbmap
-[2018-12-21 19:01:30,113] multiqc                                            [DEBUG  ]  No samples found: bismark
-[2018-12-21 19:01:30,118] multiqc                                            [DEBUG  ]  No samples found: biscuit
-[2018-12-21 19:01:30,122] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
-[2018-12-21 19:01:30,126] multiqc                                            [DEBUG  ]  No samples found: hicup
-[2018-12-21 19:01:30,130] multiqc                                            [DEBUG  ]  No samples found: hicpro
-[2018-12-21 19:01:30,134] multiqc                                            [DEBUG  ]  No samples found: salmon
-[2018-12-21 19:01:30,138] multiqc                                            [DEBUG  ]  No samples found: kallisto
-[2018-12-21 19:01:30,142] multiqc                                            [DEBUG  ]  No samples found: slamdunk
-[2018-12-21 19:01:30,157] multiqc.modules.star.star                          [INFO   ]  Found 8 reports
-[2018-12-21 19:01:30,162] multiqc                                            [DEBUG  ]  No samples found: hisat2
-[2018-12-21 19:01:30,166] multiqc                                            [DEBUG  ]  No samples found: tophat
-[2018-12-21 19:01:30,171] multiqc                                            [DEBUG  ]  No samples found: bowtie2
-[2018-12-21 19:01:30,176] multiqc                                            [DEBUG  ]  No samples found: bowtie1
-[2018-12-21 19:01:30,179] multiqc                                            [DEBUG  ]  No samples found: kat
-[2018-12-21 19:01:30,184] multiqc                                            [DEBUG  ]  No samples found: leehom
-[2018-12-21 19:01:30,188] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
-[2018-12-21 19:01:30,192] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
-[2018-12-21 19:01:30,205] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
-[2018-12-21 19:01:30,208] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
-[2018-12-21 19:01:30,211] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
-[2018-12-21 19:01:30,218] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
-[2018-12-21 19:01:30,221] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
-[2018-12-21 19:01:30,226] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
-[2018-12-21 19:01:30,233] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
-[2018-12-21 19:01:30,235] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
-[2018-12-21 19:01:30,237] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
-[2018-12-21 19:01:30,261] multiqc                                            [DEBUG  ]  No samples found: flexbar
-[2018-12-21 19:01:30,265] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
-[2018-12-21 19:01:30,269] multiqc                                            [DEBUG  ]  No samples found: skewer
-[2018-12-21 19:01:30,274] multiqc                                            [DEBUG  ]  No samples found: sortmerna
-[2018-12-21 19:01:30,278] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
-[2018-12-21 19:01:30,282] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
-[2018-12-21 19:01:30,286] multiqc                                            [DEBUG  ]  No samples found: afterqc
-[2018-12-21 19:01:30,290] multiqc                                            [DEBUG  ]  No samples found: fastp
-[2018-12-21 19:01:30,377] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
-[2018-12-21 19:01:30,392] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
-[2018-12-21 19:01:30,417] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
-[2018-12-21 19:01:30,460] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
-[2018-12-21 19:01:30,490] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
-[2018-12-21 19:01:30,498] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
-[2018-12-21 19:01:30,505] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
-[2018-12-21 19:01:30,521] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
-[2018-12-21 19:01:30,545] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
-[2018-12-21 19:01:30,567] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
-[2018-12-21 19:01:30,586] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
-[2018-12-21 19:01:30,601] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
-[2018-12-21 19:01:30,613] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
-[2018-12-21 19:01:30,626] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
-[2018-12-21 19:01:30,633] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
-[2018-12-21 19:01:30,646] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
-[2018-12-21 19:01:30,661] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
-[2018-12-21 19:01:30,669] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
-[2018-12-21 19:01:30,676] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
-[2018-12-21 19:01:30,684] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
-[2018-12-21 19:01:30,692] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
-[2018-12-21 19:01:30,700] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
-[2018-12-21 19:01:30,708] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
-[2018-12-21 19:01:30,721] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
-[2018-12-21 19:01:30,727] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
-[2018-12-21 19:01:31,018] multiqc                                            [DEBUG  ]  No samples found: minionqc
-[2018-12-21 19:01:31,023] multiqc                                            [DEBUG  ]  No samples found: clusterflow
-[2018-12-21 19:01:31,027] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
-[2018-12-21 19:01:31,031] multiqc                                            [DEBUG  ]  No samples found: interop
-[2018-12-21 19:01:31,035] multiqc                                            [DEBUG  ]  No samples found: flash
-[2018-12-21 19:01:31,056] multiqc                                            [INFO   ]  Compressing plot data
-[2018-12-21 19:01:31,583] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.dev0 (after modules)
-[2018-12-21 19:01:31,583] multiqc                                            [INFO   ]  Skipping MultiQC_NGI as specified on command line
-[2018-12-21 19:01:31,688] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2018-12-21 19:01:31,689] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2018-12-21 19:01:31,689] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_fastqc.txt' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,689] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_featureCounts.txt' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,689] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_star.txt' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,689] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_general_stats.txt' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,690] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_sources.txt' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,690] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_data.json' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,690] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmp0jaJcW/multiqc_data/multiqc_cutadapt.txt' to '/Users/ewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
-[2018-12-21 19:01:31,815] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.dev0 (after execution finish)
-[2018-12-21 19:01:31,815] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI (after execution finish) as 'disable_ngi' was specified
-[2018-12-21 19:01:31,815] multiqc                                            [INFO   ]  MultiQC complete
+[2019-11-20 16:41:32,151] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc-1.8-py3.6.egg/multiqc_config.yaml
+[2019-11-20 16:41:32,154] multiqc                                            [DEBUG  ]  Loading config settings from: /Users/philewels/.multiqc_config.yaml
+[2019-11-20 16:41:32,154] multiqc                                            [DEBUG  ]  Config error: 'NoneType' object has no attribute 'items'
+[2019-11-20 16:41:32,155] multiqc                                            [DEBUG  ]  Loading config settings from: multiqc_config.yaml
+[2019-11-20 16:41:32,155] multiqc                                            [DEBUG  ]  Added to filename clean extensions: ['_1', '_2']
+[2019-11-20 16:41:32,155] multiqc                                            [DEBUG  ]  Command used: /Users/philewels/miniconda2/envs/python3/bin/multiqc . --disable-ngi -t default
+[2019-11-20 16:41:32,427] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.7
+[2019-11-20 16:41:32,427] multiqc                                            [INFO   ]  This is MultiQC v1.8
+[2019-11-20 16:41:32,427] multiqc                                            [DEBUG  ]  Command     : /Users/philewels/miniconda2/envs/python3/bin/multiqc . --disable-ngi -t default
+[2019-11-20 16:41:32,428] multiqc                                            [DEBUG  ]  Working dir : /Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq
+[2019-11-20 16:41:32,428] multiqc                                            [INFO   ]  Template    : default
+[2019-11-20 16:41:32,428] multiqc                                            [DEBUG  ]  Running Python 3.6.2 | packaged by conda-forge | (default, Jul 23 2017, 23:01:38)  [GCC 4.2.1 Compatible Apple LLVM 6.1.0 (clang-602.0.53)]
+[2019-11-20 16:41:32,428] multiqc                                            [INFO   ]  Searching   : /Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq
+[2019-11-20 16:41:32,429] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dedup, damageprofiler, biobambam2, mtnucratio, picard, prokka, samblaster, samtools, sexdeterrmine, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, mosdepth, clusterflow, bcl2fastq, interop, flash, seqyclean
+[2019-11-20 16:41:32,429] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3
+[2019-11-20 16:41:32,454] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
+[2019-11-20 16:41:32,504] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192401_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,505] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192401_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,521] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192658_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,535] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192398_1Log.progress.out
+[2019-11-20 16:41:32,537] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192398_1Log.progress.out
+[2019-11-20 16:41:32,548] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192399_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,589] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_1_fastqc.html
+[2019-11-20 16:41:32,602] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_2_fastqc.html
+[2019-11-20 16:41:32,623] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_2_fastqc.html
+[2019-11-20 16:41:32,628] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192657_1Log.out
+[2019-11-20 16:41:32,630] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192657_1Log.out
+[2019-11-20 16:41:32,658] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_1_fastqc.html
+[2019-11-20 16:41:32,662] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192399_1Log.progress.out
+[2019-11-20 16:41:32,663] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192399_1Log.progress.out
+[2019-11-20 16:41:32,680] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192658_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,703] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192401_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,705] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192401_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,737] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192399_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,754] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192657_1Log.progress.out
+[2019-11-20 16:41:32,755] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192657_1Log.progress.out
+[2019-11-20 16:41:32,765] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192396_1Log.out
+[2019-11-20 16:41:32,768] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192396_1Log.out
+[2019-11-20 16:41:32,805] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192397_1Log.out
+[2019-11-20 16:41:32,808] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192397_1Log.out
+[2019-11-20 16:41:32,847] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192398_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,877] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192400_1Log.progress.out
+[2019-11-20 16:41:32,879] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192400_1Log.progress.out
+[2019-11-20 16:41:32,898] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192400_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,901] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192400_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,923] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_2_fastqc.html
+[2019-11-20 16:41:32,924] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_1_fastqc.html
+[2019-11-20 16:41:32,924] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_1_fastqc.html
+[2019-11-20 16:41:32,924] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_2_fastqc.html
+[2019-11-20 16:41:32,930] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192401_1Log.progress.out
+[2019-11-20 16:41:32,931] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192401_1Log.progress.out
+[2019-11-20 16:41:32,947] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192398_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,963] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192400_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,965] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192400_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:32,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_1_val_1_fastqc.html
+[2019-11-20 16:41:32,982] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192398_1Log.out
+[2019-11-20 16:41:32,984] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192398_1Log.out
+[2019-11-20 16:41:33,011] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192399_1Log.out
+[2019-11-20 16:41:33,013] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192399_1Log.out
+[2019-11-20 16:41:33,034] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_2_fastqc.html
+[2019-11-20 16:41:33,043] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_2_fastqc.html
+[2019-11-20 16:41:33,043] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_1_val_1_fastqc.html
+[2019-11-20 16:41:33,047] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192397_1Log.progress.out
+[2019-11-20 16:41:33,048] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192397_1Log.progress.out
+[2019-11-20 16:41:33,062] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192397_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:33,082] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_2_val_2_fastqc.html
+[2019-11-20 16:41:33,115] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192398_2_val_2_fastqc.html
+[2019-11-20 16:41:33,129] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_1_val_1_fastqc.html
+[2019-11-20 16:41:33,160] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192396_1Log.progress.out
+[2019-11-20 16:41:33,161] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192396_1Log.progress.out
+[2019-11-20 16:41:33,175] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_1_fastqc.html
+[2019-11-20 16:41:33,176] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_2_fastqc.html
+[2019-11-20 16:41:33,183] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192397_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:33,196] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_2_val_2_fastqc.html
+[2019-11-20 16:41:33,206] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192396_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:33,228] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_2_val_2_fastqc.html
+[2019-11-20 16:41:33,234] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192658_1Log.progress.out
+[2019-11-20 16:41:33,236] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192658_1Log.progress.out
+[2019-11-20 16:41:33,245] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_1_fastqc.html
+[2019-11-20 16:41:33,245] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_1_val_1_fastqc.html
+[2019-11-20 16:41:33,245] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192399_2_fastqc.html
+[2019-11-20 16:41:33,246] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_2_val_2_fastqc.html
+[2019-11-20 16:41:33,253] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192657_1.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:33,267] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192401_1_val_1_fastqc.html
+[2019-11-20 16:41:33,283] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192657_2_val_2_fastqc.html
+[2019-11-20 16:41:33,284] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_1_val_1_fastqc.html
+[2019-11-20 16:41:33,294] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_1_val_1_fastqc.html
+[2019-11-20 16:41:33,298] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192658_1Log.out
+[2019-11-20 16:41:33,301] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192658_1Log.out
+[2019-11-20 16:41:33,320] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_1_val_1_fastqc.html
+[2019-11-20 16:41:33,324] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192401_1Log.out
+[2019-11-20 16:41:33,325] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192401_1Log.out
+[2019-11-20 16:41:33,353] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SRR3192400_1Log.out
+[2019-11-20 16:41:33,354] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192400_1Log.out
+[2019-11-20 16:41:33,386] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192396_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:33,412] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192400_1_fastqc.html
+[2019-11-20 16:41:33,412] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192397_2_val_2_fastqc.html
+[2019-11-20 16:41:33,422] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SRR3192657_2.fastq.gz_trimming_report.txt
+[2019-11-20 16:41:33,434] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192396_2_val_2_fastqc.html
+[2019-11-20 16:41:33,435] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SRR3192658_1_fastqc.html
+[2019-11-20 16:41:33,823] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 2.2.2
+[2019-11-20 16:41:33,824] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 2.2.2
+[2019-11-20 16:41:33,825] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2019-11-20 16:41:33,831] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2019-11-20 16:41:33,837] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2019-11-20 16:41:33,843] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2019-11-20 16:41:33,848] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2019-11-20 16:41:33,855] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2019-11-20 16:41:33,859] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2019-11-20 16:41:33,866] multiqc                                            [DEBUG  ]  No samples found: quast
+[2019-11-20 16:41:33,872] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2019-11-20 16:41:33,877] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2019-11-20 16:41:33,882] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2019-11-20 16:41:33,889] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2019-11-20 16:41:33,893] multiqc                                            [DEBUG  ]  No samples found: busco
+[2019-11-20 16:41:33,898] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2019-11-20 16:41:33,903] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2019-11-20 16:41:33,907] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2019-11-20 16:41:33,914] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2019-11-20 16:41:33,920] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2019-11-20 16:41:33,924] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2019-11-20 16:41:33,929] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2019-11-20 16:41:33,933] multiqc                                            [DEBUG  ]  No samples found: happy
+[2019-11-20 16:41:33,938] multiqc                                            [DEBUG  ]  No samples found: homer
+[2019-11-20 16:41:33,943] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2019-11-20 16:41:33,947] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2019-11-20 16:41:33,950] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2019-11-20 16:41:33,955] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2019-11-20 16:41:33,958] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2019-11-20 16:41:33,962] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2019-11-20 16:41:33,974] multiqc.modules.featureCounts.feature_counts       [INFO   ]  Found 8 reports
+[2019-11-20 16:41:33,987] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2019-11-20 16:41:33,991] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2019-11-20 16:41:33,995] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2019-11-20 16:41:34,003] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2019-11-20 16:41:34,007] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2019-11-20 16:41:34,009] multiqc                                            [DEBUG  ]  No samples found: picard
+[2019-11-20 16:41:34,013] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2019-11-20 16:41:34,017] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2019-11-20 16:41:34,024] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2019-11-20 16:41:34,028] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2019-11-20 16:41:34,031] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2019-11-20 16:41:34,035] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2019-11-20 16:41:34,040] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2019-11-20 16:41:34,044] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2019-11-20 16:41:34,048] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2019-11-20 16:41:34,056] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2019-11-20 16:41:34,059] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2019-11-20 16:41:34,065] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2019-11-20 16:41:34,070] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2019-11-20 16:41:34,074] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2019-11-20 16:41:34,078] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2019-11-20 16:41:34,081] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2019-11-20 16:41:34,086] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2019-11-20 16:41:34,090] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2019-11-20 16:41:34,107] multiqc.modules.star.star                          [INFO   ]  Found 8 reports
+[2019-11-20 16:41:34,112] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2019-11-20 16:41:34,115] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2019-11-20 16:41:34,120] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2019-11-20 16:41:34,124] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2019-11-20 16:41:34,127] multiqc                                            [DEBUG  ]  No samples found: kat
+[2019-11-20 16:41:34,131] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2019-11-20 16:41:34,136] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2019-11-20 16:41:34,140] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2019-11-20 16:41:34,158] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
+[2019-11-20 16:41:34,161] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
+[2019-11-20 16:41:34,163] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
+[2019-11-20 16:41:34,173] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
+[2019-11-20 16:41:34,177] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
+[2019-11-20 16:41:34,182] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
+[2019-11-20 16:41:34,190] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
+[2019-11-20 16:41:34,192] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
+[2019-11-20 16:41:34,194] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
+[2019-11-20 16:41:34,215] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2019-11-20 16:41:34,220] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2019-11-20 16:41:34,224] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2019-11-20 16:41:34,228] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2019-11-20 16:41:34,232] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2019-11-20 16:41:34,236] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2019-11-20 16:41:34,240] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2019-11-20 16:41:34,244] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2019-11-20 16:41:34,264] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
+[2019-11-20 16:41:34,267] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
+[2019-11-20 16:41:34,275] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
+[2019-11-20 16:41:34,283] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
+[2019-11-20 16:41:34,290] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
+[2019-11-20 16:41:34,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
+[2019-11-20 16:41:34,297] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
+[2019-11-20 16:41:34,300] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
+[2019-11-20 16:41:34,304] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
+[2019-11-20 16:41:34,308] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192397
+[2019-11-20 16:41:34,311] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
+[2019-11-20 16:41:34,316] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
+[2019-11-20 16:41:34,321] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
+[2019-11-20 16:41:34,325] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192657
+[2019-11-20 16:41:34,330] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
+[2019-11-20 16:41:34,336] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
+[2019-11-20 16:41:34,342] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
+[2019-11-20 16:41:34,345] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192400
+[2019-11-20 16:41:34,348] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192399
+[2019-11-20 16:41:34,354] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192658
+[2019-11-20 16:41:34,358] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
+[2019-11-20 16:41:34,365] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192401
+[2019-11-20 16:41:34,371] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192398
+[2019-11-20 16:41:34,375] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR3192396
+[2019-11-20 16:41:34,377] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
+[2019-11-20 16:41:34,497] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2019-11-20 16:41:34,501] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2019-11-20 16:41:34,505] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2019-11-20 16:41:34,508] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2019-11-20 16:41:34,512] multiqc                                            [DEBUG  ]  No samples found: interop
+[2019-11-20 16:41:34,515] multiqc                                            [DEBUG  ]  No samples found: flash
+[2019-11-20 16:41:34,521] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2019-11-20 16:41:34,545] multiqc                                            [INFO   ]  Compressing plot data
+[2019-11-20 16:41:34,805] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after modules)
+[2019-11-20 16:41:34,805] multiqc                                            [INFO   ]  Skipping MultiQC_NGI as specified on command line
+[2019-11-20 16:41:34,853] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2019-11-20 16:41:34,853] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2019-11-20 16:41:34,853] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_fastqc.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,854] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_qualimap_bamqc_genome_results.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,854] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_featureCounts.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,854] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_star.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,854] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_general_stats.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,855] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_sources.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,855] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_data.json' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:34,855] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/tk/k7tjvpqs0tbfd0bzvt4htrzh0000gn/T/tmp_w5idpm3/multiqc_data/multiqc_cutadapt.txt' to '/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/multiqc_data'
+[2019-11-20 16:41:35,060] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after execution finish)
+[2019-11-20 16:41:35,061] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI (after execution finish) as 'disable_ngi' was specified
+[2019-11-20 16:41:35,061] multiqc                                            [INFO   ]  MultiQC complete
