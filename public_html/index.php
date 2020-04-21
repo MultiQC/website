@@ -146,12 +146,12 @@ if(count($md_parts) == 3){
             <a class="btn btn-block btn-lg btn-primary" href="docs">
               <i class="fa fa-book fa-lg"></i> Documentation
             </a>
-            <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#mqc-supported-tools-modal">
+            <a href="#supported-tools" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#supported-tools">
               <i class="fa fa-bar-chart"></i> <?php echo count($modules); ?> supported tools
-            </button>
-            <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#mqc-publication-modal">
+            </a>
+            <a href="#publication" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#publication">
               <i class="fa fa-file-text"></i>  Publication / Citation
-            </button>
+            </a>
             <button type="button" class="btn btn-block btn-lg btn-primary" id="gitter_btn">
               <img height="18" src="images/gitter.svg"> Get help on Gitter
             </button>
@@ -364,15 +364,15 @@ multiqc .</code></pre>
         </div>
       </section>
 
-            <section>
-                <div class="row">
+      <section>
+        <div class="row">
           <div class="col-md-8">
             <h3>Supports your favourite tools</h3>
-                    <p>MultiQC comes supports many common bioinformatics tools out of the box. If you're missing something,
+              <p>MultiQC comes supports many common bioinformatics tools out of the box. If you're missing something,
               just create an issue on GitHub to request it - if you have an example log file it's usually pretty fast.</p>
-            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#mqc-supported-tools-modal">
+            <a href="#supported-tools" class="btn btn-default btn-lg" data-toggle="modal" data-target="#supported-tools">
               View available Modules
-            </button>
+            </a>
           </div>
           <div class="col-md-4 text-center">
             <div class="img-circle img-thumbnail">
@@ -389,12 +389,12 @@ multiqc .</code></pre>
       </section>
 
       <section>
-                <div class="row">
+        <div class="row">
           <div class="col-md-8">
             <h3>Extensible and documented</h3>
-                    <p>Want to use this to do something fancy? MultiQC is structured to allow easy extension and customisation
-               with plugin hooks, a submodule framework and simple templating. Everything is well documented, with step
-               by step instructions for writing your new tool.</p>
+              <p>Want to use this to do something fancy? MultiQC is structured to allow easy extension and customisation
+              with plugin hooks, a submodule framework and simple templating. Everything is well documented, with step
+              by step instructions for writing your new tool.</p>
             <a class="btn btn-default btn-lg" href="docs">Read the docs</a>
           </div>
           <div class="col-md-4 text-center">
@@ -484,18 +484,18 @@ multiqc .</code></pre>
       </section>
 
 
-        <section class="focus-section">
-              <h2>Install from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a> or
+      <section class="focus-section">
+        <h2>Install from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a> or
         <a href="https://bioconda.github.io/">Bioconda</a></h2>
-              <p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line.<br>
-          If you use conda, you can run <code>conda install -c bioconda multiqc</code> instead.<br>
-          See the <a href="docs/#installation">installation instructions</a> for more help.</p>
+        <p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line.<br>
+        If you use conda, you can run <code>conda install -c bioconda multiqc</code> instead.<br>
+        See the <a href="docs/#installation">installation instructions</a> for more help.</p>
         <p>
           <a href="docs" class="btn btn-default btn-lg"><i class="fa fa-book fa-lg"></i> Documentation</a>
-                <a target="_blank" href="https://github.com/ewels/MultiQC/" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
-                <a target="_blank" href="https://pypi.python.org/pypi/multiqc" class="btn btn-default btn-lg"><i class="icon-python fa-lg"></i> View on PyPI</a>
+          <a target="_blank" href="https://github.com/ewels/MultiQC/" class="btn btn-default btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+          <a target="_blank" href="https://pypi.python.org/pypi/multiqc" class="btn btn-default btn-lg"><i class="icon-python fa-lg"></i> View on PyPI</a>
         </p>
-        </section>
+      </section>
 
     </div></div> <!-- /content /container -->
 
@@ -514,7 +514,7 @@ multiqc .</code></pre>
     </footer>
 
     <!-- Supported tools modal -->
-    <div class="modal fade" id="mqc-supported-tools-modal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="supported-tools" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -550,7 +550,7 @@ multiqc .</code></pre>
     </div>
 
     <!-- Publication / Citation modal -->
-    <div class="modal fade" id="mqc-publication-modal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="publication" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">

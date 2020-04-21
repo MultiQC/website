@@ -1,7 +1,7 @@
 /* JavaScript for the Homepage */
 
 $(function () {
-  
+
   // Switch the installation instruction type
   $('.install-switcher .btn').click(function(e){
      e.preventDefault();
@@ -10,7 +10,7 @@ $(function () {
      $('.install-switcher .btn').removeClass('active');
      $(this).addClass('active');
   });
-  
+
   // Video switcher
   $('.video-chooser a').click(function(e){
     if($('#multiqc-video').is(':visible')){
@@ -20,7 +20,7 @@ $(function () {
       $('#multiqc-video').attr('src', $(this).data('src'));
     }
   });
-  
+
   // iFrame demo window buttons
   $('#iframe_browser_buttons span:first-of-type, #iframe_browser_buttons span:nth-of-type(2)').click(function(e){
     $('#iframe_browser').slideUp();
@@ -28,7 +28,7 @@ $(function () {
   $('#iframe_browser_buttons span:last-of-type').click(function(e){
     window.location = $('#iframe_browser iframe').attr('src');
   });
-  
+
   // Switch report links / iFrame tab click
   $('.demo-chooser a, #iframe_browser_tabs li a').click(function(e){
     e.preventDefault();
@@ -41,7 +41,19 @@ $(function () {
     $('.demo-descriptions > div').hide();
     $(descrip_id).show();
   });
-  
+
+  // Load modal on page load if we have a location hash set
+  if(window.location.hash){
+    $(window.location.hash).modal('show');
+  }
+
+  // Modal hash links
+  $('.modal').on('show.bs.modal', function(e){
+    var id = $(this).attr('id');
+    window.location.hash = id;
+  });
+  $('.modal').on('hide.bs.modal', function(e){
+    history.replaceState(null, null, ' ');
+  });
+
 });
-
-
