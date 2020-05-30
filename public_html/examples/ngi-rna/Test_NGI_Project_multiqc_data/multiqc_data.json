@@ -792,6 +792,7 @@
             "P1234_1012": {
                 "r_processed": 26629350,
                 "r_with_adapters": 20240267,
+                "r_written": 26629350,
                 "bp_processed": 3275410050,
                 "quality_trimmed": 90144772,
                 "bp_written": 2388642803,
@@ -800,6 +801,7 @@
             "P1234_1001": {
                 "r_processed": 33741075,
                 "r_with_adapters": 16244915,
+                "r_written": 33741075,
                 "bp_processed": 4150152225,
                 "quality_trimmed": 84648139,
                 "bp_written": 3722354394,
@@ -808,6 +810,7 @@
             "P1234_1007": {
                 "r_processed": 21758318,
                 "r_with_adapters": 17790443,
+                "r_written": 21758318,
                 "bp_processed": 2676273114,
                 "quality_trimmed": 75675593,
                 "bp_written": 1819902302,
@@ -816,6 +819,7 @@
             "P1234_1014": {
                 "r_processed": 46909968,
                 "r_with_adapters": 27009777,
+                "r_written": 46909968,
                 "bp_processed": 5769926064,
                 "quality_trimmed": 95012083,
                 "bp_written": 5065011564,
@@ -824,6 +828,7 @@
             "P1234_1018": {
                 "r_processed": 30833924,
                 "r_with_adapters": 25539362,
+                "r_written": 30833924,
                 "bp_processed": 3792572652,
                 "quality_trimmed": 88067622,
                 "bp_written": 2732952834,
@@ -832,6 +837,7 @@
             "P1234_1015": {
                 "r_processed": 13216614,
                 "r_with_adapters": 9843027,
+                "r_written": 13216614,
                 "bp_processed": 1625643522,
                 "quality_trimmed": 35126508,
                 "bp_written": 1242914746,
@@ -840,6 +846,7 @@
             "P1234_1006": {
                 "r_processed": 30839171,
                 "r_with_adapters": 16979898,
+                "r_written": 30839171,
                 "bp_processed": 3793218033,
                 "quality_trimmed": 67004848,
                 "bp_written": 3259810071,
@@ -848,6 +855,7 @@
             "P1234_1013": {
                 "r_processed": 59012592,
                 "r_with_adapters": 36176284,
+                "r_written": 59012592,
                 "bp_processed": 7258548816,
                 "quality_trimmed": 120422390,
                 "bp_written": 6240207097,
@@ -856,6 +864,7 @@
             "P1234_1022": {
                 "r_processed": 101,
                 "r_with_adapters": 66,
+                "r_written": 101,
                 "bp_processed": 12423,
                 "quality_trimmed": 81,
                 "bp_written": 10518,
@@ -864,6 +873,7 @@
             "P1234_1019": {
                 "r_processed": 16902605,
                 "r_with_adapters": 14151003,
+                "r_written": 16902605,
                 "bp_processed": 2079020415,
                 "quality_trimmed": 64723207,
                 "bp_written": 1396655629,
@@ -872,6 +882,7 @@
             "P1234_1009": {
                 "r_processed": 20462961,
                 "r_with_adapters": 14349377,
+                "r_written": 20462961,
                 "bp_processed": 2516944203,
                 "quality_trimmed": 58058103,
                 "bp_written": 1990818831,
@@ -880,6 +891,7 @@
             "P1234_1021": {
                 "r_processed": 28300555,
                 "r_with_adapters": 22726249,
+                "r_written": 28300555,
                 "bp_processed": 3480968265,
                 "quality_trimmed": 60449260,
                 "bp_written": 2646202294,
@@ -888,6 +900,7 @@
             "P1234_1003": {
                 "r_processed": 33724069,
                 "r_with_adapters": 17014798,
+                "r_written": 33724069,
                 "bp_processed": 4148060487,
                 "quality_trimmed": 67857741,
                 "bp_written": 3693655556,
@@ -896,6 +909,7 @@
             "P1234_1010": {
                 "r_processed": 11357451,
                 "r_with_adapters": 8493873,
+                "r_written": 11357451,
                 "bp_processed": 1396966473,
                 "quality_trimmed": 34805090,
                 "bp_written": 1049655349,
@@ -904,6 +918,7 @@
             "P1234_1016": {
                 "r_processed": 28242306,
                 "r_with_adapters": 21624055,
+                "r_written": 28242306,
                 "bp_processed": 3473803638,
                 "quality_trimmed": 84940374,
                 "bp_written": 2582213609,
@@ -912,6 +927,7 @@
             "P1234_1005": {
                 "r_processed": 33756772,
                 "r_with_adapters": 19793478,
+                "r_written": 33756772,
                 "bp_processed": 4152082956,
                 "quality_trimmed": 71963975,
                 "bp_written": 3492762506,
@@ -920,6 +936,7 @@
             "P1234_1008": {
                 "r_processed": 16710354,
                 "r_with_adapters": 14879022,
+                "r_written": 16710354,
                 "bp_processed": 2055373542,
                 "quality_trimmed": 99141221,
                 "bp_written": 1146285504,
@@ -928,6 +945,7 @@
             "P1234_1020": {
                 "r_processed": 15843059,
                 "r_with_adapters": 13401206,
+                "r_written": 15843059,
                 "bp_processed": 1948696257,
                 "quality_trimmed": 52262102,
                 "bp_written": 1338437363,
@@ -936,6 +954,7 @@
             "P1234_1004": {
                 "r_processed": 31194060,
                 "r_with_adapters": 16606122,
+                "r_written": 31194060,
                 "bp_processed": 3836869380,
                 "quality_trimmed": 69371933,
                 "bp_written": 3329244233,
@@ -944,6 +963,7 @@
             "P1234_1017": {
                 "r_processed": 34064465,
                 "r_with_adapters": 28267690,
+                "r_written": 34064465,
                 "bp_processed": 4189929195,
                 "quality_trimmed": 99671520,
                 "bp_written": 2977821097,
@@ -952,6 +972,7 @@
             "P1234_1011": {
                 "r_processed": 27988897,
                 "r_with_adapters": 21105799,
+                "r_written": 27988897,
                 "bp_processed": 3442634331,
                 "quality_trimmed": 94428784,
                 "bp_written": 2511078679,
@@ -960,6 +981,7 @@
             "P1234_1002": {
                 "r_processed": 31080150,
                 "r_with_adapters": 15671939,
+                "r_written": 31080150,
                 "bp_processed": 3822858450,
                 "quality_trimmed": 67049058,
                 "bp_written": 3414525317,
@@ -1267,7 +1289,7 @@
         },
         {
             "percent_trimmed": {
-                "title": "% Trimmed",
+                "title": "% BP Trimmed",
                 "description": "% Total Base Pairs trimmed",
                 "max": 100,
                 "min": 0,
@@ -1426,7 +1448,7 @@
     ],
     "report_multiqc_command": "/Users/philewels/miniconda2/envs/python3/bin/multiqc . --test-db ngi_db_data.json",
     "report_plot_data": {
-        "mqc_hcplot_qzcpusgwtk": {
+        "mqc_hcplot_fqwshelcan": {
             "plot_type": "heatmap",
             "data": [
                 [
@@ -3902,10 +3924,10 @@
                 "title": "edgeR: Euclidean distances",
                 "xlab": true,
                 "reverseColors": true,
-                "id": "mqc_hcplot_qzcpusgwtk"
+                "id": "mqc_hcplot_fqwshelcan"
             }
         },
-        "mqc_hcplot_jposmzcfhw": {
+        "mqc_hcplot_vkbyurtpgi": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -4025,7 +4047,7 @@
                 "xlab": "Leading",
                 "title": "MDS Plot",
                 "ylab": "logFC",
-                "id": "mqc_hcplot_jposmzcfhw"
+                "id": "mqc_hcplot_vkbyurtpgi"
             }
         },
         "star_alignment_plot": {
@@ -4207,7 +4229,72 @@
                 "cpswitch_counts_label": "Number of Reads"
             }
         },
-        "cutadapt_plot": {
+        "cutadapt_filtered_reads_plot": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "P1234_1001",
+                    "P1234_1002",
+                    "P1234_1003",
+                    "P1234_1004",
+                    "P1234_1005",
+                    "P1234_1006",
+                    "P1234_1007",
+                    "P1234_1008",
+                    "P1234_1009",
+                    "P1234_1010",
+                    "P1234_1011",
+                    "P1234_1012",
+                    "P1234_1013",
+                    "P1234_1014",
+                    "P1234_1015",
+                    "P1234_1016",
+                    "P1234_1017",
+                    "P1234_1018",
+                    "P1234_1019",
+                    "P1234_1020",
+                    "P1234_1021",
+                    "P1234_1022"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Reads passing filters",
+                        "data": [
+                            33741075.0,
+                            31080150.0,
+                            33724069.0,
+                            31194060.0,
+                            33756772.0,
+                            30839171.0,
+                            21758318.0,
+                            16710354.0,
+                            20462961.0,
+                            11357451.0,
+                            27988897.0,
+                            26629350.0,
+                            59012592.0,
+                            46909968.0,
+                            13216614.0,
+                            28242306.0,
+                            34064465.0,
+                            30833924.0,
+                            16902605.0,
+                            15843059.0,
+                            28300555.0,
+                            101.0
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "cutadapt_filtered_reads_plot",
+                "title": "Cutadapt: Filtered Reads",
+                "ylab": "Counts"
+            }
+        },
+        "cutadapt_trimmed_sequences_plot": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -25396,7 +25483,7 @@
                 ]
             ],
             "config": {
-                "id": "cutadapt_plot",
+                "id": "cutadapt_trimmed_sequences_plot",
                 "title": "Cutadapt: Lengths of Trimmed Sequences",
                 "ylab": "Counts",
                 "xlab": "Length Trimmed (bp)",
@@ -53662,6 +53749,7 @@
                 "id": "fastqc_per_sequence_gc_content_plot",
                 "title": "FastQC: Per Sequence GC Content",
                 "xlab": "% GC",
+                "ylab": "Percentage",
                 "ymin": 0,
                 "xmax": 100,
                 "xmin": 0,
@@ -54540,8 +54628,7 @@
                             ]
                         }
                     ]
-                ],
-                "ylab": "Percentage"
+                ]
             }
         },
         "fastqc_per_base_n_content_plot": {
@@ -61060,6 +61147,7 @@
                 "ymax": 100,
                 "ymin": 0,
                 "yMinTickInterval": 0.1,
+                "yLabelFormat": "{value:.0f}%",
                 "colors": {
                     "P1234_1020": "#d9534f",
                     "P1234_1022": "#5cb85c",
@@ -61084,7 +61172,8 @@
                     "P1234_1009": "#d9534f",
                     "P1234_1019": "#d9534f"
                 },
-                "tt_label": "<b>{point.x}</b>: {point.y:.1f}%"
+                "tt_decimals": 2,
+                "tt_suffix": "%"
             }
         },
         "fastqc_overrepresented_sequencesi_plot": {
@@ -68003,12 +68092,12 @@
                 ],
                 "decimalPlaces": 1,
                 "legend": false,
-                "datalabels": false
+                "datalabels": false,
+                "xcats_samples": false
             }
         }
     },
     "report_saved_raw_data": {
-        "multiqc_qualimap_bamqc_genome_results": {},
         "multiqc_star": {
             "P1234_1021": {
                 "total_reads": 27997437.0,
@@ -68631,6 +68720,7 @@
             "P1234_1012": {
                 "r_processed": 26629350,
                 "r_with_adapters": 20240267,
+                "r_written": 26629350,
                 "bp_processed": 3275410050,
                 "quality_trimmed": 90144772,
                 "bp_written": 2388642803,
@@ -68639,6 +68729,7 @@
             "P1234_1001": {
                 "r_processed": 33741075,
                 "r_with_adapters": 16244915,
+                "r_written": 33741075,
                 "bp_processed": 4150152225,
                 "quality_trimmed": 84648139,
                 "bp_written": 3722354394,
@@ -68647,6 +68738,7 @@
             "P1234_1007": {
                 "r_processed": 21758318,
                 "r_with_adapters": 17790443,
+                "r_written": 21758318,
                 "bp_processed": 2676273114,
                 "quality_trimmed": 75675593,
                 "bp_written": 1819902302,
@@ -68655,6 +68747,7 @@
             "P1234_1014": {
                 "r_processed": 46909968,
                 "r_with_adapters": 27009777,
+                "r_written": 46909968,
                 "bp_processed": 5769926064,
                 "quality_trimmed": 95012083,
                 "bp_written": 5065011564,
@@ -68663,6 +68756,7 @@
             "P1234_1018": {
                 "r_processed": 30833924,
                 "r_with_adapters": 25539362,
+                "r_written": 30833924,
                 "bp_processed": 3792572652,
                 "quality_trimmed": 88067622,
                 "bp_written": 2732952834,
@@ -68671,6 +68765,7 @@
             "P1234_1015": {
                 "r_processed": 13216614,
                 "r_with_adapters": 9843027,
+                "r_written": 13216614,
                 "bp_processed": 1625643522,
                 "quality_trimmed": 35126508,
                 "bp_written": 1242914746,
@@ -68679,6 +68774,7 @@
             "P1234_1006": {
                 "r_processed": 30839171,
                 "r_with_adapters": 16979898,
+                "r_written": 30839171,
                 "bp_processed": 3793218033,
                 "quality_trimmed": 67004848,
                 "bp_written": 3259810071,
@@ -68687,6 +68783,7 @@
             "P1234_1013": {
                 "r_processed": 59012592,
                 "r_with_adapters": 36176284,
+                "r_written": 59012592,
                 "bp_processed": 7258548816,
                 "quality_trimmed": 120422390,
                 "bp_written": 6240207097,
@@ -68695,6 +68792,7 @@
             "P1234_1022": {
                 "r_processed": 101,
                 "r_with_adapters": 66,
+                "r_written": 101,
                 "bp_processed": 12423,
                 "quality_trimmed": 81,
                 "bp_written": 10518,
@@ -68703,6 +68801,7 @@
             "P1234_1019": {
                 "r_processed": 16902605,
                 "r_with_adapters": 14151003,
+                "r_written": 16902605,
                 "bp_processed": 2079020415,
                 "quality_trimmed": 64723207,
                 "bp_written": 1396655629,
@@ -68711,6 +68810,7 @@
             "P1234_1009": {
                 "r_processed": 20462961,
                 "r_with_adapters": 14349377,
+                "r_written": 20462961,
                 "bp_processed": 2516944203,
                 "quality_trimmed": 58058103,
                 "bp_written": 1990818831,
@@ -68719,6 +68819,7 @@
             "P1234_1021": {
                 "r_processed": 28300555,
                 "r_with_adapters": 22726249,
+                "r_written": 28300555,
                 "bp_processed": 3480968265,
                 "quality_trimmed": 60449260,
                 "bp_written": 2646202294,
@@ -68727,6 +68828,7 @@
             "P1234_1003": {
                 "r_processed": 33724069,
                 "r_with_adapters": 17014798,
+                "r_written": 33724069,
                 "bp_processed": 4148060487,
                 "quality_trimmed": 67857741,
                 "bp_written": 3693655556,
@@ -68735,6 +68837,7 @@
             "P1234_1010": {
                 "r_processed": 11357451,
                 "r_with_adapters": 8493873,
+                "r_written": 11357451,
                 "bp_processed": 1396966473,
                 "quality_trimmed": 34805090,
                 "bp_written": 1049655349,
@@ -68743,6 +68846,7 @@
             "P1234_1016": {
                 "r_processed": 28242306,
                 "r_with_adapters": 21624055,
+                "r_written": 28242306,
                 "bp_processed": 3473803638,
                 "quality_trimmed": 84940374,
                 "bp_written": 2582213609,
@@ -68751,6 +68855,7 @@
             "P1234_1005": {
                 "r_processed": 33756772,
                 "r_with_adapters": 19793478,
+                "r_written": 33756772,
                 "bp_processed": 4152082956,
                 "quality_trimmed": 71963975,
                 "bp_written": 3492762506,
@@ -68759,6 +68864,7 @@
             "P1234_1008": {
                 "r_processed": 16710354,
                 "r_with_adapters": 14879022,
+                "r_written": 16710354,
                 "bp_processed": 2055373542,
                 "quality_trimmed": 99141221,
                 "bp_written": 1146285504,
@@ -68767,6 +68873,7 @@
             "P1234_1020": {
                 "r_processed": 15843059,
                 "r_with_adapters": 13401206,
+                "r_written": 15843059,
                 "bp_processed": 1948696257,
                 "quality_trimmed": 52262102,
                 "bp_written": 1338437363,
@@ -68775,6 +68882,7 @@
             "P1234_1004": {
                 "r_processed": 31194060,
                 "r_with_adapters": 16606122,
+                "r_written": 31194060,
                 "bp_processed": 3836869380,
                 "quality_trimmed": 69371933,
                 "bp_written": 3329244233,
@@ -68783,6 +68891,7 @@
             "P1234_1017": {
                 "r_processed": 34064465,
                 "r_with_adapters": 28267690,
+                "r_written": 34064465,
                 "bp_processed": 4189929195,
                 "quality_trimmed": 99671520,
                 "bp_written": 2977821097,
@@ -68791,6 +68900,7 @@
             "P1234_1011": {
                 "r_processed": 27988897,
                 "r_with_adapters": 21105799,
+                "r_written": 27988897,
                 "bp_processed": 3442634331,
                 "quality_trimmed": 94428784,
                 "bp_written": 2511078679,
@@ -68799,6 +68909,7 @@
             "P1234_1002": {
                 "r_processed": 31080150,
                 "r_with_adapters": 15671939,
+                "r_written": 31080150,
                 "bp_processed": 3822858450,
                 "quality_trimmed": 67049058,
                 "bp_written": 3414525317,
@@ -69542,14 +69653,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2019-11-20, 16:42",
+    "config_creation_date": "2020-05-30, 11:39",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": "This report has been generated by the <a href=\"https://github.com/SciLifeLab/NGI-RNAseq\" target=\"_blank\">NGI-RNAseq</a> analysis pipeline. Some additional functionality is added to the report using the <a href=\"https://github.com/ewels/MultiQC_NGI\" target=\"_blank\">MultiQC_NGI plugin</a>.\n",
     "config_report_header_info": null,
-    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc-1.8-py3.6.egg/multiqc/utils",
-    "config_short_version": "1.8",
+    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc/utils",
+    "config_short_version": "1.9",
     "config_subtitle": null,
     "config_title": "P1234: Test_NGI_Project",
-    "config_version": "1.8"
+    "config_version": "1.9"
 }

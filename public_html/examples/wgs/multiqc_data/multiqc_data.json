@@ -91,7 +91,6 @@
                 "total_reads": 868204107.0,
                 "mapped_reads": 847562410.0,
                 "percentage_aligned": 97.62248337302556,
-                "mean_coverage": 13.901451337295155,
                 "median_coverage": 40,
                 "median_insert_size": 365,
                 "avg_gc": 41.35698208795284,
@@ -105,7 +104,6 @@
                 "total_reads": 1002828927.0,
                 "mapped_reads": 985115356.0,
                 "percentage_aligned": 98.23363980405004,
-                "mean_coverage": 15.709834651845247,
                 "median_coverage": 46,
                 "median_insert_size": 363,
                 "avg_gc": 40.99306639893834,
@@ -119,7 +117,6 @@
                 "total_reads": 974955793.0,
                 "mapped_reads": 955921317.0,
                 "percentage_aligned": 98.04765753107331,
-                "mean_coverage": 15.602281141527394,
                 "median_coverage": 45,
                 "median_insert_size": 368,
                 "avg_gc": 41.17477503107992,
@@ -133,7 +130,6 @@
                 "total_reads": 865975844.0,
                 "mapped_reads": 847067526.0,
                 "percentage_aligned": 97.81653054978287,
-                "mean_coverage": 13.985710768494638,
                 "median_coverage": 40,
                 "median_insert_size": 367,
                 "avg_gc": 41.29061839482755,
@@ -147,7 +143,6 @@
                 "total_reads": 912383669.0,
                 "mapped_reads": 894970438.0,
                 "percentage_aligned": 98.09145739981456,
-                "mean_coverage": 16.163042714340246,
                 "median_coverage": 43,
                 "median_insert_size": 362,
                 "avg_gc": 41.269984866552605,
@@ -161,7 +156,6 @@
                 "total_reads": 772071557.0,
                 "mapped_reads": 751147332.0,
                 "percentage_aligned": 97.28985936468062,
-                "mean_coverage": 13.484793259579838,
                 "median_coverage": 36,
                 "median_insert_size": 358,
                 "avg_gc": 41.36746349676451,
@@ -1306,27 +1300,6 @@
                 "modify": null,
                 "placement": 1000.0,
                 "dmax": 46.0,
-                "dmin": 0.0
-            },
-            "mean_coverage": {
-                "title": "Mean cov",
-                "description": "Mean coverage",
-                "min": 0,
-                "suffix": "X",
-                "scale": "BuPu",
-                "namespace": "QualiMap",
-                "rid": "mqc-generalstats-qualimap-mean_coverage",
-                "format": "{:,.1f}",
-                "colour": "55,126,184",
-                "hidden": null,
-                "max": null,
-                "ceiling": null,
-                "floor": null,
-                "minRange": null,
-                "shared_key": null,
-                "modify": null,
-                "placement": 1000.0,
-                "dmax": 16.163042714340246,
                 "dmin": 0.0
             },
             "percentage_aligned": {
@@ -34437,18 +34410,18 @@
             "datasets": [
                 [
                     {
-                        "name": "Read Pair Unique",
+                        "name": "Unique Pairs",
                         "data": [
-                            348842866.0,
-                            378736872.0,
-                            376635448.0,
-                            296437472.0,
-                            358211906.0,
-                            388871014.0
+                            697685732.0,
+                            757473744.0,
+                            753270896.0,
+                            592874944.0,
+                            716423812.0,
+                            777742028.0
                         ]
                     },
                     {
-                        "name": "Unpaired Read Unique",
+                        "name": "Unique Unpaired",
                         "data": [
                             901693.0,
                             702038.0,
@@ -34459,29 +34432,29 @@
                         ]
                     },
                     {
-                        "name": "Read Pair Not Optical Duplicates",
+                        "name": "Duplicate Pairs Optical",
                         "data": [
-                            19506173.0,
-                            32839758.0,
-                            34460551.0,
-                            141645469.0,
-                            83372265.0,
-                            41360458.0
+                            8211728.0,
+                            17123632.0,
+                            18809146.0,
+                            101534202.0,
+                            65079450.0,
+                            27290276.0
                         ]
                     },
                     {
-                        "name": "Read Pair Optical Duplicates",
+                        "name": "Duplicate Pairs Nonoptical",
                         "data": [
-                            4105864.0,
-                            8561816.0,
-                            9404573.0,
-                            50767101.0,
-                            32539725.0,
-                            13645138.0
+                            39012346.0,
+                            65679516.0,
+                            68921102.0,
+                            283290938.0,
+                            166744530.0,
+                            82720916.0
                         ]
                     },
                     {
-                        "name": "Unpaired Read Duplicates",
+                        "name": "Duplicate Unpaired",
                         "data": [
                             449788.0,
                             483800.0,
@@ -34492,7 +34465,7 @@
                         ]
                     },
                     {
-                        "name": "Unmapped Reads",
+                        "name": "Unmapped",
                         "data": [
                             20924225.0,
                             18908318.0,
@@ -42256,6 +42229,7 @@
                 "id": "fastqc_per_sequence_gc_content_plot",
                 "title": "FastQC: Per Sequence GC Content",
                 "xlab": "% GC",
+                "ylab": "Percentage",
                 "ymin": 0,
                 "xmax": 100,
                 "xmin": 0,
@@ -43118,8 +43092,7 @@
                             ]
                         }
                     ]
-                ],
-                "ylab": "Percentage"
+                ]
             }
         },
         "fastqc_per_base_n_content_plot": {
@@ -44278,6 +44251,7 @@
                 "ymax": 100,
                 "ymin": 0,
                 "yMinTickInterval": 0.1,
+                "yLabelFormat": "{value:.0f}%",
                 "colors": {
                     "P4107_1003": "#5cb85c",
                     "P4107_1004": "#5cb85c",
@@ -44286,7 +44260,8 @@
                     "P4107_1001": "#5cb85c",
                     "P4107_1006": "#5cb85c"
                 },
-                "tt_label": "<b>{point.x}</b>: {point.y:.1f}%"
+                "tt_decimals": 2,
+                "tt_suffix": "%"
             }
         },
         "fastqc_overrepresented_sequencesi_plot": {
@@ -46586,7 +46561,8 @@
                 ],
                 "decimalPlaces": 1,
                 "legend": false,
-                "datalabels": false
+                "datalabels": false,
+                "xcats_samples": false
             }
         }
     },
@@ -46601,6 +46577,7 @@
                 "mean_insert_size": 28161.14,
                 "median_insert_size": 363.0,
                 "mean_mapping_quality": 50.34,
+                "mean_coverage": 40.46,
                 "percentage_aligned": 97.62248337302556
             },
             "P4107_1004": {
@@ -46612,6 +46589,7 @@
                 "mean_insert_size": 28253.13,
                 "median_insert_size": 361.0,
                 "mean_mapping_quality": 50.37,
+                "mean_coverage": 47.04,
                 "percentage_aligned": 98.23363980405004
             },
             "P4107_1005": {
@@ -46623,6 +46601,7 @@
                 "mean_insert_size": 30723.18,
                 "median_insert_size": 365.0,
                 "mean_mapping_quality": 50.34,
+                "mean_coverage": 45.58,
                 "percentage_aligned": 98.04765753107331
             },
             "P4107_1002": {
@@ -46634,6 +46613,7 @@
                 "mean_insert_size": 29317.24,
                 "median_insert_size": 364.0,
                 "mean_mapping_quality": 50.33,
+                "mean_coverage": 40.38,
                 "percentage_aligned": 97.81653054978287
             },
             "P4107_1006": {
@@ -46645,6 +46625,7 @@
                 "mean_insert_size": 30869.34,
                 "median_insert_size": 360.0,
                 "mean_mapping_quality": 50.33,
+                "mean_coverage": 42.59,
                 "percentage_aligned": 98.09145739981456
             },
             "P4107_1001": {
@@ -46656,6 +46637,7 @@
                 "mean_insert_size": 28931.62,
                 "median_insert_size": 355.0,
                 "mean_mapping_quality": 50.32,
+                "mean_coverage": 35.78,
                 "percentage_aligned": 97.28985936468062
             }
         },
@@ -47524,9 +47506,13 @@
                 "READ_PAIR_OPTICAL_DUPLICATES": 4105864.0,
                 "PERCENT_DUPLICATION": 0.063884,
                 "ESTIMATED_LIBRARY_SIZE": 3354000974.0,
-                "UNPAIRED_READ_UNIQUE": 901693.0,
-                "READ_PAIR_NOT_OPTICAL_DUPLICATES": 19506173.0,
-                "READ_PAIR_UNIQUE": 348842866.0
+                "READS_IN_DUPLICATE_PAIRS": 47224074.0,
+                "READS_IN_UNIQUE_PAIRS": 697685732.0,
+                "READS_IN_UNIQUE_UNPAIRED": 901693.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 8211728.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 39012346.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 449788.0,
+                "READS_UNMAPPED": 20924225.0
             },
             "P4107_1002": {
                 "LIBRARY": "A",
@@ -47538,9 +47524,13 @@
                 "READ_PAIR_OPTICAL_DUPLICATES": 8561816.0,
                 "PERCENT_DUPLICATION": 0.098979,
                 "ESTIMATED_LIBRARY_SIZE": 2440020860.0,
-                "UNPAIRED_READ_UNIQUE": 702038.0,
-                "READ_PAIR_NOT_OPTICAL_DUPLICATES": 32839758.0,
-                "READ_PAIR_UNIQUE": 378736872.0
+                "READS_IN_DUPLICATE_PAIRS": 82803148.0,
+                "READS_IN_UNIQUE_PAIRS": 757473744.0,
+                "READS_IN_UNIQUE_UNPAIRED": 702038.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 17123632.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 65679516.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 483800.0,
+                "READS_UNMAPPED": 18908318.0
             },
             "P4107_1003": {
                 "LIBRARY": "A",
@@ -47552,9 +47542,13 @@
                 "READ_PAIR_OPTICAL_DUPLICATES": 9404573.0,
                 "PERCENT_DUPLICATION": 0.104732,
                 "ESTIMATED_LIBRARY_SIZE": 2313040870.0,
-                "UNPAIRED_READ_UNIQUE": 648876.0,
-                "READ_PAIR_NOT_OPTICAL_DUPLICATES": 34460551.0,
-                "READ_PAIR_UNIQUE": 376635448.0
+                "READS_IN_DUPLICATE_PAIRS": 87730248.0,
+                "READS_IN_UNIQUE_PAIRS": 753270896.0,
+                "READS_IN_UNIQUE_UNPAIRED": 648876.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 18809146.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 68921102.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 466283.0,
+                "READS_UNMAPPED": 20641697.0
             },
             "P4107_1006": {
                 "LIBRARY": "A",
@@ -47566,9 +47560,13 @@
                 "READ_PAIR_OPTICAL_DUPLICATES": 13645138.0,
                 "PERCENT_DUPLICATION": 0.124364,
                 "ESTIMATED_LIBRARY_SIZE": 2091799585.0,
-                "UNPAIRED_READ_UNIQUE": 754325.0,
-                "READ_PAIR_NOT_OPTICAL_DUPLICATES": 41360458.0,
-                "READ_PAIR_UNIQUE": 388871014.0
+                "READS_IN_DUPLICATE_PAIRS": 110011192.0,
+                "READS_IN_UNIQUE_PAIRS": 777742028.0,
+                "READS_IN_UNIQUE_UNPAIRED": 754325.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 27290276.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 82720916.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 556444.0,
+                "READS_UNMAPPED": 17413231.0
             },
             "P4107_1005": {
                 "LIBRARY": "A",
@@ -47580,9 +47578,13 @@
                 "READ_PAIR_OPTICAL_DUPLICATES": 32539725.0,
                 "PERCENT_DUPLICATION": 0.244861,
                 "ESTIMATED_LIBRARY_SIZE": 1017071922.0,
-                "UNPAIRED_READ_UNIQUE": 529253.0,
-                "READ_PAIR_NOT_OPTICAL_DUPLICATES": 83372265.0,
-                "READ_PAIR_UNIQUE": 358211906.0
+                "READS_IN_DUPLICATE_PAIRS": 231823980.0,
+                "READS_IN_UNIQUE_PAIRS": 716423812.0,
+                "READS_IN_UNIQUE_UNPAIRED": 529253.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 65079450.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 166744530.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 655331.0,
+                "READS_UNMAPPED": 19034476.0
             },
             "P4107_1004": {
                 "LIBRARY": "A",
@@ -47594,110 +47596,114 @@
                 "READ_PAIR_OPTICAL_DUPLICATES": 50767101.0,
                 "PERCENT_DUPLICATION": 0.393866,
                 "ESTIMATED_LIBRARY_SIZE": 521814268.0,
-                "UNPAIRED_READ_UNIQUE": 298407.0,
-                "READ_PAIR_NOT_OPTICAL_DUPLICATES": 141645469.0,
-                "READ_PAIR_UNIQUE": 296437472.0
+                "READS_IN_DUPLICATE_PAIRS": 384825140.0,
+                "READS_IN_UNIQUE_PAIRS": 592874944.0,
+                "READS_IN_UNIQUE_UNPAIRED": 298407.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 101534202.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 283290938.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 618736.0,
+                "READS_UNMAPPED": 17713571.0
             }
         },
         "multiqc_fastq_screen": {
             "P4107_1001": {
-                "Cfamiliaris counts": 0,
-                "Cfamiliaris percentage": 0.0,
                 "total_reads": 199997,
-                "Dmelanogaster counts": 6670,
+                "Cfamiliaris counts": 0.0,
+                "Cfamiliaris percentage": 0.0,
+                "Dmelanogaster counts": 6670.0,
                 "Dmelanogaster percentage": 3.34,
-                "Human counts": 193400,
+                "Human counts": 193400.0,
                 "Human percentage": 96.7,
-                "Mouse counts": 19626,
+                "Mouse counts": 19626.0,
                 "Mouse percentage": 9.81,
-                "PhiX counts": 7,
+                "PhiX counts": 7.0,
                 "PhiX percentage": 0.0,
-                "Xtropicalis counts": 18386,
+                "Xtropicalis counts": 18386.0,
                 "Xtropicalis percentage": 9.190000000000001,
                 "No hits counts": 6539,
                 "No hits percentage": 3.27
             },
             "P4107_1002": {
-                "Cfamiliaris counts": 0,
-                "Cfamiliaris percentage": 0.0,
                 "total_reads": 199994,
-                "Dmelanogaster counts": 6746,
+                "Cfamiliaris counts": 0.0,
+                "Cfamiliaris percentage": 0.0,
+                "Dmelanogaster counts": 6746.0,
                 "Dmelanogaster percentage": 3.37,
-                "Human counts": 194410,
+                "Human counts": 194410.0,
                 "Human percentage": 97.21000000000001,
-                "Mouse counts": 19885,
+                "Mouse counts": 19885.0,
                 "Mouse percentage": 9.94,
-                "PhiX counts": 10,
+                "PhiX counts": 10.0,
                 "PhiX percentage": 0.01,
-                "Xtropicalis counts": 18445,
+                "Xtropicalis counts": 18445.0,
                 "Xtropicalis percentage": 9.22,
                 "No hits counts": 5519,
                 "No hits percentage": 2.76
             },
             "P4107_1003": {
-                "Cfamiliaris counts": 0,
-                "Cfamiliaris percentage": 0.0,
                 "total_reads": 199991,
-                "Dmelanogaster counts": 6648,
+                "Cfamiliaris counts": 0.0,
+                "Cfamiliaris percentage": 0.0,
+                "Dmelanogaster counts": 6648.0,
                 "Dmelanogaster percentage": 3.33,
-                "Human counts": 192581,
+                "Human counts": 192581.0,
                 "Human percentage": 96.30000000000001,
-                "Mouse counts": 19335,
+                "Mouse counts": 19335.0,
                 "Mouse percentage": 9.68,
-                "PhiX counts": 4,
+                "PhiX counts": 4.0,
                 "PhiX percentage": 0.0,
-                "Xtropicalis counts": 17998,
+                "Xtropicalis counts": 17998.0,
                 "Xtropicalis percentage": 9.0,
                 "No hits counts": 7319,
                 "No hits percentage": 3.66
             },
             "P4107_1004": {
-                "Cfamiliaris counts": 0,
-                "Cfamiliaris percentage": 0.0,
                 "total_reads": 199987,
-                "Dmelanogaster counts": 6327,
+                "Cfamiliaris counts": 0.0,
+                "Cfamiliaris percentage": 0.0,
+                "Dmelanogaster counts": 6327.0,
                 "Dmelanogaster percentage": 3.16,
-                "Human counts": 194099,
+                "Human counts": 194099.0,
                 "Human percentage": 97.06,
-                "Mouse counts": 19085,
+                "Mouse counts": 19085.0,
                 "Mouse percentage": 9.54,
-                "PhiX counts": 1,
+                "PhiX counts": 1.0,
                 "PhiX percentage": 0.0,
-                "Xtropicalis counts": 17397,
+                "Xtropicalis counts": 17397.0,
                 "Xtropicalis percentage": 8.69,
                 "No hits counts": 5839,
                 "No hits percentage": 2.92
             },
             "P4107_1005": {
-                "Cfamiliaris counts": 0,
-                "Cfamiliaris percentage": 0.0,
                 "total_reads": 200014,
-                "Dmelanogaster counts": 6775,
+                "Cfamiliaris counts": 0.0,
+                "Cfamiliaris percentage": 0.0,
+                "Dmelanogaster counts": 6775.0,
                 "Dmelanogaster percentage": 3.39,
-                "Human counts": 194923,
+                "Human counts": 194923.0,
                 "Human percentage": 97.46000000000001,
-                "Mouse counts": 19897,
+                "Mouse counts": 19897.0,
                 "Mouse percentage": 9.940000000000001,
-                "PhiX counts": 8,
+                "PhiX counts": 8.0,
                 "PhiX percentage": 0.0,
-                "Xtropicalis counts": 18488,
+                "Xtropicalis counts": 18488.0,
                 "Xtropicalis percentage": 9.25,
                 "No hits counts": 5040,
                 "No hits percentage": 2.52
             },
             "P4107_1006": {
-                "Cfamiliaris counts": 0,
-                "Cfamiliaris percentage": 0.0,
                 "total_reads": 200018,
-                "Dmelanogaster counts": 6755,
+                "Cfamiliaris counts": 0.0,
+                "Cfamiliaris percentage": 0.0,
+                "Dmelanogaster counts": 6755.0,
                 "Dmelanogaster percentage": 3.37,
-                "Human counts": 194934,
+                "Human counts": 194934.0,
                 "Human percentage": 97.46000000000001,
-                "Mouse counts": 19868,
+                "Mouse counts": 19868.0,
                 "Mouse percentage": 9.93,
-                "PhiX counts": 5,
+                "PhiX counts": 5.0,
                 "PhiX percentage": 0.0,
-                "Xtropicalis counts": 18447,
+                "Xtropicalis counts": 18447.0,
                 "Xtropicalis percentage": 9.209999999999999,
                 "No hits counts": 5020,
                 "No hits percentage": 2.51
@@ -47853,7 +47859,6 @@
                 "QualiMap_mqc-generalstats-qualimap-30_x_pc": 82.37846792457299,
                 "QualiMap_mqc-generalstats-qualimap-50_x_pc": 16.220900002951474,
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 40,
-                "QualiMap_mqc-generalstats-qualimap-mean_coverage": 13.901451337295155,
                 "QualiMap_mqc-generalstats-qualimap-percentage_aligned": 97.62248337302556,
                 "QualiMap_mqc-generalstats-qualimap-mapped_reads": 847562410.0,
                 "QualiMap_mqc-generalstats-qualimap-total_reads": 868204107.0,
@@ -47878,7 +47883,6 @@
                 "QualiMap_mqc-generalstats-qualimap-30_x_pc": 84.74393690711297,
                 "QualiMap_mqc-generalstats-qualimap-50_x_pc": 40.45506563396865,
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 46,
-                "QualiMap_mqc-generalstats-qualimap-mean_coverage": 15.709834651845247,
                 "QualiMap_mqc-generalstats-qualimap-percentage_aligned": 98.23363980405004,
                 "QualiMap_mqc-generalstats-qualimap-mapped_reads": 985115356.0,
                 "QualiMap_mqc-generalstats-qualimap-total_reads": 1002828927.0,
@@ -47903,7 +47907,6 @@
                 "QualiMap_mqc-generalstats-qualimap-30_x_pc": 85.26307080995146,
                 "QualiMap_mqc-generalstats-qualimap-50_x_pc": 35.61445297024546,
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 45,
-                "QualiMap_mqc-generalstats-qualimap-mean_coverage": 15.602281141527394,
                 "QualiMap_mqc-generalstats-qualimap-percentage_aligned": 98.04765753107331,
                 "QualiMap_mqc-generalstats-qualimap-mapped_reads": 955921317.0,
                 "QualiMap_mqc-generalstats-qualimap-total_reads": 974955793.0,
@@ -47928,7 +47931,6 @@
                 "QualiMap_mqc-generalstats-qualimap-30_x_pc": 82.33885866147037,
                 "QualiMap_mqc-generalstats-qualimap-50_x_pc": 15.934603451516617,
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 40,
-                "QualiMap_mqc-generalstats-qualimap-mean_coverage": 13.985710768494638,
                 "QualiMap_mqc-generalstats-qualimap-percentage_aligned": 97.81653054978287,
                 "QualiMap_mqc-generalstats-qualimap-mapped_reads": 847067526.0,
                 "QualiMap_mqc-generalstats-qualimap-total_reads": 865975844.0,
@@ -47953,7 +47955,6 @@
                 "QualiMap_mqc-generalstats-qualimap-30_x_pc": 84.09635794292338,
                 "QualiMap_mqc-generalstats-qualimap-50_x_pc": 23.664833468422913,
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 43,
-                "QualiMap_mqc-generalstats-qualimap-mean_coverage": 16.163042714340246,
                 "QualiMap_mqc-generalstats-qualimap-percentage_aligned": 98.09145739981456,
                 "QualiMap_mqc-generalstats-qualimap-mapped_reads": 894970438.0,
                 "QualiMap_mqc-generalstats-qualimap-total_reads": 912383669.0,
@@ -47978,7 +47979,6 @@
                 "QualiMap_mqc-generalstats-qualimap-30_x_pc": 74.66018701572433,
                 "QualiMap_mqc-generalstats-qualimap-50_x_pc": 5.240211027996628,
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 36,
-                "QualiMap_mqc-generalstats-qualimap-mean_coverage": 13.484793259579838,
                 "QualiMap_mqc-generalstats-qualimap-percentage_aligned": 97.28985936468062,
                 "QualiMap_mqc-generalstats-qualimap-mapped_reads": 751147332.0,
                 "QualiMap_mqc-generalstats-qualimap-total_reads": 772071557.0,
@@ -48002,14 +48002,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2019-11-20, 16:41",
+    "config_creation_date": "2020-05-30, 11:38",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc-1.8-py3.6.egg/multiqc/utils",
-    "config_short_version": "1.8",
+    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc/utils",
+    "config_short_version": "1.9",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.8"
+    "config_version": "1.9"
 }

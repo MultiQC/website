@@ -402,6 +402,7 @@
             "SRR3192401": {
                 "r_processed": 95735344,
                 "r_with_adapters": 38037448,
+                "r_written": 95735344,
                 "bp_processed": 9573534400,
                 "quality_trimmed": 328931711,
                 "bp_written": 8974093171,
@@ -410,6 +411,7 @@
             "SRR3192658": {
                 "r_processed": 97548052,
                 "r_with_adapters": 30622375,
+                "r_written": 97548052,
                 "bp_processed": 9852353252,
                 "quality_trimmed": 287989645,
                 "bp_written": 9520194936,
@@ -418,6 +420,7 @@
             "SRR3192399": {
                 "r_processed": 76795926,
                 "r_with_adapters": 28921721,
+                "r_written": 76795926,
                 "bp_processed": 7679592600,
                 "quality_trimmed": 314228271,
                 "bp_written": 7294474633,
@@ -426,6 +429,7 @@
             "SRR3192398": {
                 "r_processed": 68765938,
                 "r_with_adapters": 25752326,
+                "r_written": 68765938,
                 "bp_processed": 6876593800,
                 "quality_trimmed": 282522512,
                 "bp_written": 6533246681,
@@ -434,6 +438,7 @@
             "SRR3192400": {
                 "r_processed": 95791942,
                 "r_with_adapters": 36966867,
+                "r_written": 95791942,
                 "bp_processed": 9579194200,
                 "quality_trimmed": 459057679,
                 "bp_written": 8893887057,
@@ -442,6 +447,7 @@
             "SRR3192397": {
                 "r_processed": 92494632,
                 "r_with_adapters": 29937340,
+                "r_written": 92494632,
                 "bp_processed": 9341957832,
                 "quality_trimmed": 283316439,
                 "bp_written": 9015621178,
@@ -450,6 +456,7 @@
             "SRR3192396": {
                 "r_processed": 105089150,
                 "r_with_adapters": 32883672,
+                "r_written": 105089150,
                 "bp_processed": 10614004150,
                 "quality_trimmed": 373151687,
                 "bp_written": 10194057791,
@@ -458,6 +465,7 @@
             "SRR3192657": {
                 "r_processed": 93555584,
                 "r_with_adapters": 30516092,
+                "r_written": 93555584,
                 "bp_processed": 9449113984,
                 "quality_trimmed": 247487419,
                 "bp_written": 9157670096,
@@ -612,7 +620,7 @@
         },
         {
             "percent_trimmed": {
-                "title": "% Trimmed",
+                "title": "% BP Trimmed",
                 "description": "% Total Base Pairs trimmed",
                 "max": 100,
                 "min": 0,
@@ -914,7 +922,44 @@
                 "cpswitch_counts_label": "Number of Reads"
             }
         },
-        "cutadapt_plot": {
+        "cutadapt_filtered_reads_plot": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "SRR3192396",
+                    "SRR3192397",
+                    "SRR3192398",
+                    "SRR3192399",
+                    "SRR3192400",
+                    "SRR3192401",
+                    "SRR3192657",
+                    "SRR3192658"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Reads passing filters",
+                        "data": [
+                            105089150.0,
+                            92494632.0,
+                            68765938.0,
+                            76795926.0,
+                            95791942.0,
+                            95735344.0,
+                            93555584.0,
+                            97548052.0
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "cutadapt_filtered_reads_plot",
+                "title": "Cutadapt: Filtered Reads",
+                "ylab": "Counts"
+            }
+        },
+        "cutadapt_trimmed_sequences_plot": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -7427,7 +7472,7 @@
                 ]
             ],
             "config": {
-                "id": "cutadapt_plot",
+                "id": "cutadapt_trimmed_sequences_plot",
                 "title": "Cutadapt: Lengths of Trimmed Sequences",
                 "ylab": "Counts",
                 "xlab": "Length Trimmed (bp)",
@@ -18027,6 +18072,7 @@
                 "id": "fastqc_per_sequence_gc_content_plot",
                 "title": "FastQC: Per Sequence GC Content",
                 "xlab": "% GC",
+                "ylab": "Percentage",
                 "ymin": 0,
                 "xmax": 100,
                 "xmin": 0,
@@ -18891,8 +18937,7 @@
                             ]
                         }
                     ]
-                ],
-                "ylab": "Percentage"
+                ]
             }
         },
         "fastqc_per_base_n_content_plot": {
@@ -21224,6 +21269,7 @@
                 "ymax": 100,
                 "ymin": 0,
                 "yMinTickInterval": 0.1,
+                "yLabelFormat": "{value:.0f}%",
                 "colors": {
                     "SRR3192399": "#d9534f",
                     "SRR3192398": "#d9534f",
@@ -21234,7 +21280,8 @@
                     "SRR3192657": "#d9534f",
                     "SRR3192396": "#d9534f"
                 },
-                "tt_label": "<b>{point.x}</b>: {point.y:.1f}%"
+                "tt_decimals": 2,
+                "tt_suffix": "%"
             }
         },
         "fastqc_overrepresented_sequencesi_plot": {
@@ -22630,12 +22677,12 @@
                 ],
                 "decimalPlaces": 1,
                 "legend": false,
-                "datalabels": false
+                "datalabels": false,
+                "xcats_samples": false
             }
         }
     },
     "report_saved_raw_data": {
-        "multiqc_qualimap_bamqc_genome_results": {},
         "multiqc_featureCounts": {
             "SRR3192658": {
                 "Total": 94000827,
@@ -22988,6 +23035,7 @@
             "SRR3192401": {
                 "r_processed": 95735344,
                 "r_with_adapters": 38037448,
+                "r_written": 95735344,
                 "bp_processed": 9573534400,
                 "quality_trimmed": 328931711,
                 "bp_written": 8974093171,
@@ -22996,6 +23044,7 @@
             "SRR3192658": {
                 "r_processed": 97548052,
                 "r_with_adapters": 30622375,
+                "r_written": 97548052,
                 "bp_processed": 9852353252,
                 "quality_trimmed": 287989645,
                 "bp_written": 9520194936,
@@ -23004,6 +23053,7 @@
             "SRR3192399": {
                 "r_processed": 76795926,
                 "r_with_adapters": 28921721,
+                "r_written": 76795926,
                 "bp_processed": 7679592600,
                 "quality_trimmed": 314228271,
                 "bp_written": 7294474633,
@@ -23012,6 +23062,7 @@
             "SRR3192398": {
                 "r_processed": 68765938,
                 "r_with_adapters": 25752326,
+                "r_written": 68765938,
                 "bp_processed": 6876593800,
                 "quality_trimmed": 282522512,
                 "bp_written": 6533246681,
@@ -23020,6 +23071,7 @@
             "SRR3192400": {
                 "r_processed": 95791942,
                 "r_with_adapters": 36966867,
+                "r_written": 95791942,
                 "bp_processed": 9579194200,
                 "quality_trimmed": 459057679,
                 "bp_written": 8893887057,
@@ -23028,6 +23080,7 @@
             "SRR3192397": {
                 "r_processed": 92494632,
                 "r_with_adapters": 29937340,
+                "r_written": 92494632,
                 "bp_processed": 9341957832,
                 "quality_trimmed": 283316439,
                 "bp_written": 9015621178,
@@ -23036,6 +23089,7 @@
             "SRR3192396": {
                 "r_processed": 105089150,
                 "r_with_adapters": 32883672,
+                "r_written": 105089150,
                 "bp_processed": 10614004150,
                 "quality_trimmed": 373151687,
                 "bp_written": 10194057791,
@@ -23044,6 +23098,7 @@
             "SRR3192657": {
                 "r_processed": 93555584,
                 "r_with_adapters": 30516092,
+                "r_written": 93555584,
                 "bp_processed": 9449113984,
                 "quality_trimmed": 247487419,
                 "bp_written": 9157670096,
@@ -23333,14 +23388,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2019-11-20, 16:41",
+    "config_creation_date": "2020-05-30, 11:38",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc-1.8-py3.6.egg/multiqc/utils",
-    "config_short_version": "1.8",
+    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc/utils",
+    "config_short_version": "1.9",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.8"
+    "config_version": "1.9"
 }

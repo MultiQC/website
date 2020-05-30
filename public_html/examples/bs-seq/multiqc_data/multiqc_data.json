@@ -414,6 +414,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
                 "r_processed": 162959139,
                 "r_with_adapters": 61500486,
+                "r_written": 162959139,
                 "bp_processed": 16458873039,
                 "quality_trimmed": 1990913461,
                 "bp_written": 14221796697,
@@ -422,6 +423,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "r_processed": 100000000,
                 "r_with_adapters": 39251679,
+                "r_written": 100000000,
                 "bp_processed": 10000000000,
                 "quality_trimmed": 196860141,
                 "bp_written": 9710034941,
@@ -430,6 +432,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
                 "r_processed": 162506120,
                 "r_with_adapters": 61439154,
+                "r_written": 162506120,
                 "bp_processed": 16413118120,
                 "quality_trimmed": 1962843445,
                 "bp_written": 14203015227,
@@ -438,6 +441,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
                 "r_processed": 100000000,
                 "r_with_adapters": 39570784,
+                "r_written": 100000000,
                 "bp_processed": 10000000000,
                 "quality_trimmed": 184018857,
                 "bp_written": 9722468609,
@@ -446,6 +450,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
                 "r_processed": 20413156,
                 "r_with_adapters": 8094974,
+                "r_written": 20413156,
                 "bp_processed": 2041315600,
                 "quality_trimmed": 41865161,
                 "bp_written": 1980074514,
@@ -454,6 +459,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
                 "r_processed": 142023805,
                 "r_with_adapters": 38946659,
+                "r_written": 142023805,
                 "bp_processed": 14344404305,
                 "quality_trimmed": 3253437153,
                 "bp_written": 10955724667,
@@ -462,6 +468,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921767_1": {
                 "r_processed": 100000000,
                 "r_with_adapters": 39621727,
+                "r_written": 100000000,
                 "bp_processed": 10000000000,
                 "quality_trimmed": 170446207,
                 "bp_written": 9735756843,
@@ -470,6 +477,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
                 "r_processed": 125723135,
                 "r_with_adapters": 34543903,
+                "r_written": 125723135,
                 "bp_processed": 12698036635,
                 "quality_trimmed": 2509363531,
                 "bp_written": 10064122698,
@@ -709,7 +717,7 @@
         },
         {
             "percent_trimmed": {
-                "title": "% Trimmed",
+                "title": "% BP Trimmed",
                 "description": "% Total Base Pairs trimmed",
                 "max": 100,
                 "min": 0,
@@ -10931,7 +10939,44 @@
                 ]
             }
         },
-        "cutadapt_plot": {
+        "cutadapt_filtered_reads_plot": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "MethylC-Seq_mm_fc_1wk_SRR921767_1",
+                    "MethylC-Seq_mm_fc_1wk_SRR921768_1",
+                    "MethylC-Seq_mm_fc_1wk_SRR921769_1",
+                    "MethylC-Seq_mm_fc_1wk_SRR921770_1",
+                    "MethylC-Seq_mm_fc_2wk_SRR921694_1",
+                    "MethylC-Seq_mm_fc_2wk_SRR921695_1",
+                    "MethylC-Seq_mm_fc_2wk_SRR921696_1",
+                    "MethylC-Seq_mm_fc_2wk_SRR921773_1"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Reads passing filters",
+                        "data": [
+                            100000000.0,
+                            100000000.0,
+                            20413156.0,
+                            100000000.0,
+                            162506120.0,
+                            162959139.0,
+                            125723135.0,
+                            142023805.0
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "cutadapt_filtered_reads_plot",
+                "title": "Cutadapt: Filtered Reads",
+                "ylab": "Counts"
+            }
+        },
+        "cutadapt_trimmed_sequences_plot": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -17428,7 +17473,7 @@
                 ]
             ],
             "config": {
-                "id": "cutadapt_plot",
+                "id": "cutadapt_trimmed_sequences_plot",
                 "title": "Cutadapt: Lengths of Trimmed Sequences",
                 "ylab": "Counts",
                 "xlab": "Length Trimmed (bp)",
@@ -26786,6 +26831,7 @@
                 "id": "fastqc_per_sequence_gc_content_plot",
                 "title": "FastQC: Per Sequence GC Content",
                 "xlab": "% GC",
+                "ylab": "Percentage",
                 "ymin": 0,
                 "xmax": 100,
                 "xmin": 0,
@@ -26810,8 +26856,7 @@
                         "name": "Counts",
                         "ylab": "Count"
                     }
-                ],
-                "ylab": "Percentage"
+                ]
             }
         },
         "fastqc_per_base_n_content_plot": {
@@ -30263,6 +30308,7 @@
                 "ymax": 100,
                 "ymin": 0,
                 "yMinTickInterval": 0.1,
+                "yLabelFormat": "{value:.0f}%",
                 "colors": {
                     "MethylC-Seq_mm_fc_1wk_SRR921770_1": "#5cb85c",
                     "MethylC-Seq_mm_fc_1wk_SRR921769_1": "#5cb85c",
@@ -30273,7 +30319,8 @@
                     "MethylC-Seq_mm_fc_2wk_SRR921695_1": "#5cb85c",
                     "MethylC-Seq_mm_fc_2wk_SRR921696_1": "#5cb85c"
                 },
-                "tt_label": "<b>{point.x}</b>: {point.y:.1f}%"
+                "tt_decimals": 2,
+                "tt_suffix": "%"
             }
         },
         "fastqc-status-check-heatmap": {
@@ -30812,12 +30859,12 @@
                 ],
                 "decimalPlaces": 1,
                 "legend": false,
-                "datalabels": false
+                "datalabels": false,
+                "xcats_samples": false
             }
         }
     },
     "report_saved_raw_data": {
-        "multiqc_qualimap_bamqc_genome_results": {},
         "multiqc_bismark_alignment": {
             "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
                 "total_reads": 116247060.0,
@@ -31164,6 +31211,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
                 "r_processed": 162959139,
                 "r_with_adapters": 61500486,
+                "r_written": 162959139,
                 "bp_processed": 16458873039,
                 "quality_trimmed": 1990913461,
                 "bp_written": 14221796697,
@@ -31172,6 +31220,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
                 "r_processed": 100000000,
                 "r_with_adapters": 39251679,
+                "r_written": 100000000,
                 "bp_processed": 10000000000,
                 "quality_trimmed": 196860141,
                 "bp_written": 9710034941,
@@ -31180,6 +31229,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
                 "r_processed": 162506120,
                 "r_with_adapters": 61439154,
+                "r_written": 162506120,
                 "bp_processed": 16413118120,
                 "quality_trimmed": 1962843445,
                 "bp_written": 14203015227,
@@ -31188,6 +31238,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
                 "r_processed": 100000000,
                 "r_with_adapters": 39570784,
+                "r_written": 100000000,
                 "bp_processed": 10000000000,
                 "quality_trimmed": 184018857,
                 "bp_written": 9722468609,
@@ -31196,6 +31247,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
                 "r_processed": 20413156,
                 "r_with_adapters": 8094974,
+                "r_written": 20413156,
                 "bp_processed": 2041315600,
                 "quality_trimmed": 41865161,
                 "bp_written": 1980074514,
@@ -31204,6 +31256,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
                 "r_processed": 142023805,
                 "r_with_adapters": 38946659,
+                "r_written": 142023805,
                 "bp_processed": 14344404305,
                 "quality_trimmed": 3253437153,
                 "bp_written": 10955724667,
@@ -31212,6 +31265,7 @@
             "MethylC-Seq_mm_fc_1wk_SRR921767_1": {
                 "r_processed": 100000000,
                 "r_with_adapters": 39621727,
+                "r_written": 100000000,
                 "bp_processed": 10000000000,
                 "quality_trimmed": 170446207,
                 "bp_written": 9735756843,
@@ -31220,6 +31274,7 @@
             "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
                 "r_processed": 125723135,
                 "r_with_adapters": 34543903,
+                "r_written": 125723135,
                 "bp_processed": 12698036635,
                 "quality_trimmed": 2509363531,
                 "bp_written": 10064122698,
@@ -31549,14 +31604,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2019-11-20, 16:41",
+    "config_creation_date": "2020-05-30, 11:38",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc-1.8-py3.6.egg/multiqc/utils",
-    "config_short_version": "1.8",
+    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc/utils",
+    "config_short_version": "1.9",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.8"
+    "config_version": "1.9"
 }

@@ -17373,6 +17373,7 @@
                 "id": "fastqc_per_sequence_gc_content_plot",
                 "title": "FastQC: Per Sequence GC Content",
                 "xlab": "% GC",
+                "ylab": "Percentage",
                 "ymin": 0,
                 "xmax": 100,
                 "xmin": 0,
@@ -17402,8 +17403,7 @@
                         "name": "Counts",
                         "ylab": "Count"
                     }
-                ],
-                "ylab": "Percentage"
+                ]
             }
         },
         "fastqc_per_base_n_content_plot": {
@@ -21337,6 +21337,7 @@
                 "ymax": 100,
                 "ymin": 0,
                 "yMinTickInterval": 0.1,
+                "yLabelFormat": "{value:.0f}%",
                 "colors": {
                     "Sample-3.A006": "#d9534f",
                     "Sample-3.A012": "#d9534f",
@@ -21352,7 +21353,8 @@
                     "Sample-1.A002": "#5cb85c",
                     "Sample-1.A019": "#5cb85c"
                 },
-                "tt_label": "<b>{point.x}</b>: {point.y:.1f}%"
+                "tt_decimals": 2,
+                "tt_suffix": "%"
             }
         },
         "fastqc_overrepresented_sequencesi_plot": {
@@ -25542,12 +25544,12 @@
                 ],
                 "decimalPlaces": 1,
                 "legend": false,
-                "datalabels": false
+                "datalabels": false,
+                "xcats_samples": false
             }
         }
     },
     "report_saved_raw_data": {
-        "multiqc_qualimap_bamqc_genome_results": {},
         "multiqc_hicup": {
             "Sample-3.A006": {
                 "Total_Reads_1": 70954559.0,
@@ -26536,14 +26538,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2019-11-20, 16:41",
+    "config_creation_date": "2020-05-30, 11:38",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc-1.8-py3.6.egg/multiqc/utils",
-    "config_short_version": "1.8",
+    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc/utils",
+    "config_short_version": "1.9",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.8"
+    "config_version": "1.9"
 }
