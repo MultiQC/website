@@ -3,7 +3,6 @@
 **MultiQC is a tool to aggregate bioinformatics results across many
 samples into a single report.**
 
-This repository contains files for the MultiQC website: http://multiqc.info
+This repository contains files for the MultiQC website: [http://multiqc.info](http://multiqc.info)
 
-For information about the package, please see the
-[main repository branch](https://github.com/ewels/MultiQC).
+For more information, please see the [main MultiQC repository](https://github.com/ewels/MultiQC).
