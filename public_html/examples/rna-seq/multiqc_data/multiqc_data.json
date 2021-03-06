@@ -2,50 +2,50 @@
     "report_data_sources": {
         "featureCounts": {
             "all_sections": {
-                "SRR3192658": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192658_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192398": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192398_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192399": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192399_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192657": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192657_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192400": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192400_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192396": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192396_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192401": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192401_1_star_aligned.bam_counts.txt.summary",
-                "SRR3192397": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192397_1_star_aligned.bam_counts.txt.summary"
+                "SRR3192658": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192658_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192398": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192398_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192399": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192399_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192657": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192657_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192400": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192400_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192396": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192396_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192401": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192401_1_star_aligned.bam_counts.txt.summary",
+                "SRR3192397": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192397_1_star_aligned.bam_counts.txt.summary"
             }
         },
         "STAR": {
             "SummaryLog": {
-                "SRR3192398": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192398_1Log.final.out",
-                "SRR3192397": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192397_1Log.final.out",
-                "SRR3192396": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192396_1Log.final.out",
-                "SRR3192399": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192399_1Log.final.out",
-                "SRR3192658": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192658_1Log.final.out",
-                "SRR3192657": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192657_1Log.final.out",
-                "SRR3192401": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192401_1Log.final.out",
-                "SRR3192400": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192400_1Log.final.out"
+                "SRR3192398": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192398_1Log.final.out",
+                "SRR3192397": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192397_1Log.final.out",
+                "SRR3192396": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192396_1Log.final.out",
+                "SRR3192399": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192399_1Log.final.out",
+                "SRR3192658": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192658_1Log.final.out",
+                "SRR3192657": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192657_1Log.final.out",
+                "SRR3192401": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192401_1Log.final.out",
+                "SRR3192400": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192400_1Log.final.out"
             }
         },
         "Cutadapt": {
             "all_sections": {
-                "SRR3192401": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192401_2.fastq.gz_trimming_report.txt",
-                "SRR3192658": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192658_2.fastq.gz_trimming_report.txt",
-                "SRR3192399": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192399_2.fastq.gz_trimming_report.txt",
-                "SRR3192398": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192398_2.fastq.gz_trimming_report.txt",
-                "SRR3192400": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192400_2.fastq.gz_trimming_report.txt",
-                "SRR3192397": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192397_2.fastq.gz_trimming_report.txt",
-                "SRR3192396": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192396_2.fastq.gz_trimming_report.txt",
-                "SRR3192657": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192657_2.fastq.gz_trimming_report.txt"
+                "SRR3192401": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192401_2.fastq.gz_trimming_report.txt",
+                "SRR3192658": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192658_2.fastq.gz_trimming_report.txt",
+                "SRR3192399": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192399_2.fastq.gz_trimming_report.txt",
+                "SRR3192398": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192398_2.fastq.gz_trimming_report.txt",
+                "SRR3192400": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192400_2.fastq.gz_trimming_report.txt",
+                "SRR3192397": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192397_2.fastq.gz_trimming_report.txt",
+                "SRR3192396": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192396_2.fastq.gz_trimming_report.txt",
+                "SRR3192657": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192657_2.fastq.gz_trimming_report.txt"
             }
         },
         "FastQC": {
             "all_sections": {
-                "SRR3192399": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192399_2_fastqc.zip",
-                "SRR3192398": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192398_2_fastqc.zip",
-                "SRR3192401": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192401_1_fastqc.zip",
-                "SRR3192397": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192397_1_fastqc.zip",
-                "SRR3192658": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192658_1_fastqc.zip",
-                "SRR3192400": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192400_1_fastqc.zip",
-                "SRR3192657": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192657_2_fastqc.zip",
-                "SRR3192396": "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq/data/SRR3192396_1_val_1_fastqc.zip"
+                "SRR3192399": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192399_2_fastqc.zip",
+                "SRR3192398": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192398_2_fastqc.zip",
+                "SRR3192401": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192401_1_fastqc.zip",
+                "SRR3192397": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192397_1_fastqc.zip",
+                "SRR3192658": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192658_1_fastqc.zip",
+                "SRR3192400": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192400_1_fastqc.zip",
+                "SRR3192657": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192657_2_fastqc.zip",
+                "SRR3192396": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq/data/SRR3192396_1_val_1_fastqc.zip"
             }
         }
     },
@@ -748,7 +748,7 @@
             }
         }
     ],
-    "report_multiqc_command": "/Users/philewels/miniconda2/envs/python3/bin/multiqc . --disable-ngi -t default",
+    "report_multiqc_command": "/Users/ewels/miniconda3/envs/py3/bin/multiqc . --disable-ngi -t default",
     "report_plot_data": {
         "featureCounts_assignment_plot": {
             "plot_type": "bar_graph",
@@ -780,7 +780,7 @@
                         ]
                     },
                     {
-                        "name": "Unassigned_Ambiguity",
+                        "name": "Unassigned: Ambiguity",
                         "data": [
                             3195747.0,
                             2741920.0,
@@ -793,7 +793,7 @@
                         ]
                     },
                     {
-                        "name": "Unassigned_MultiMapping",
+                        "name": "Unassigned: Multi Mapping",
                         "data": [
                             8363965.0,
                             7199385.0,
@@ -806,7 +806,7 @@
                         ]
                     },
                     {
-                        "name": "Unassigned_NoFeatures",
+                        "name": "Unassigned: No Features",
                         "data": [
                             22980875.0,
                             21598644.0,
@@ -23383,19 +23383,19 @@
         }
     },
     "config_analysis_dir_abs": [
-        "/Users/philewels/GitHub/MultiQC_website/public_html/examples/rna-seq"
+        "/Users/ewels/GitHub/MultiQC/website/public_html/examples/rna-seq"
     ],
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2020-05-30, 11:38",
+    "config_creation_date": "2021-03-06, 22:01",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/Users/philewels/miniconda2/envs/python3/lib/python3.6/site-packages/multiqc/utils",
-    "config_short_version": "1.9",
+    "config_script_path": "/Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc/utils",
+    "config_short_version": "1.10",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.9"
+    "config_version": "1.10"
 }
