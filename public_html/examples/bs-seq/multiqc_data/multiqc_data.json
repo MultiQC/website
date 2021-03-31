@@ -31604,14 +31604,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-03-08, 21:54",
+    "config_creation_date": "2021-04-01, 00:59",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
     "config_script_path": "/Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc/utils",
-    "config_short_version": "1.10",
+    "config_short_version": "1.10.1",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.10"
+    "config_version": "1.10.1"
 }
