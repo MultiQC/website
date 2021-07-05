@@ -1,193 +1,364 @@
-[2021-04-01 00:59:26,965] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc_config.yaml
-[2021-04-01 00:59:26,965] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/ewels/.multiqc_config.yaml
-[2021-04-01 00:59:26,965] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
-[2021-04-01 00:59:26,965] multiqc                                            [DEBUG  ]  Command used: /Users/ewels/miniconda3/envs/py3/bin/multiqc . --disable-ngi -t default
-[2021-04-01 00:59:27,184] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.10
-[2021-04-01 00:59:27,184] multiqc                                            [INFO   ]  This is MultiQC v1.10.1
-[2021-04-01 00:59:27,184] multiqc                                            [DEBUG  ]  Command     : /Users/ewels/miniconda3/envs/py3/bin/multiqc . --disable-ngi -t default
-[2021-04-01 00:59:27,185] multiqc                                            [DEBUG  ]  Working dir : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
-[2021-04-01 00:59:27,185] multiqc                                            [INFO   ]  Template    : default
-[2021-04-01 00:59:27,185] multiqc                                            [DEBUG  ]  Running Python 3.7.10 | packaged by conda-forge | (default, Feb 19 2021, 15:59:12)  [Clang 11.0.1 ]
-[2021-04-01 00:59:27,185] multiqc                                            [INFO   ]  Searching   : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
-[2021-04-01 00:59:27,185] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ngsderive, purple, conpair, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dedup, damageprofiler, biobambam2, jcvi, mtnucratio, picard, sentieon, prokka, qc3C, samblaster, samtools, sexdeterrmine, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, snpsplit, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, pychopper, pycoqc, minionqc, multivcfanalyzer, clusterflow, bcl2fastq, interop, ivar, flash, seqyclean, optitype
-[2021-04-01 00:59:27,186] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmph8p2hbeu
-[2021-04-01 00:59:27,213] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
-[2021-04-01 00:59:27,213] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,314] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,317] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,355] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,416] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
-[2021-04-01 00:59:27,419] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
-[2021-04-01 00:59:27,453] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,475] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:27,498] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:27,505] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,506] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,526] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,528] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,575] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
-[2021-04-01 00:59:27,578] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
-[2021-04-01 00:59:27,632] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:27,639] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,654] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:27,667] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:27,681] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
-[2021-04-01 00:59:27,683] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
-[2021-04-01 00:59:27,725] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,728] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,771] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,773] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,807] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,807] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,815] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
-[2021-04-01 00:59:27,818] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
-[2021-04-01 00:59:27,857] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,866] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,868] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,900] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,918] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:27,932] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
-[2021-04-01 00:59:27,934] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
-[2021-04-01 00:59:27,969] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:27,977] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
-[2021-04-01 00:59:27,979] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
-[2021-04-01 00:59:28,025] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
-[2021-04-01 00:59:28,027] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
-[2021-04-01 00:59:28,053] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:28,061] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
-[2021-04-01 00:59:28,063] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
-[2021-04-01 00:59:28,099] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: sra_bismark_1447079770_bismark_summary.html
-[2021-04-01 00:59:28,099] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
-[2021-04-01 00:59:28,106] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
-[2021-04-01 00:59:28,108] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
-[2021-04-01 00:59:28,187] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
-[2021-04-01 00:59:28,189] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
-[2021-04-01 00:59:28,433] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
-[2021-04-01 00:59:28,451] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
-[2021-04-01 00:59:28,511] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:28,523] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt
-[2021-04-01 00:59:28,536] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
-[2021-04-01 00:59:28,538] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
-[2021-04-01 00:59:28,569] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
-[2021-04-01 00:59:28,952] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.3.4
-[2021-04-01 00:59:28,953] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.3.4
-[2021-04-01 00:59:28,954] multiqc                                            [DEBUG  ]  No samples found: custom_content
-[2021-04-01 00:59:28,959] multiqc                                            [DEBUG  ]  No samples found: ngsderive
-[2021-04-01 00:59:28,964] multiqc                                            [DEBUG  ]  No samples found: purple
-[2021-04-01 00:59:28,969] multiqc                                            [DEBUG  ]  No samples found: conpair
-[2021-04-01 00:59:28,973] multiqc                                            [DEBUG  ]  No samples found: peddy
-[2021-04-01 00:59:28,978] multiqc                                            [DEBUG  ]  No samples found: somalier
-[2021-04-01 00:59:28,983] multiqc                                            [DEBUG  ]  No samples found: methylQA
-[2021-04-01 00:59:28,989] multiqc                                            [DEBUG  ]  No samples found: mosdepth
-[2021-04-01 00:59:28,994] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
-[2021-04-01 00:59:28,998] multiqc                                            [DEBUG  ]  No samples found: qualimap
-[2021-04-01 00:59:29,002] multiqc                                            [DEBUG  ]  No samples found: preseq
-[2021-04-01 00:59:29,007] multiqc                                            [DEBUG  ]  No samples found: quast
-[2021-04-01 00:59:29,012] multiqc                                            [DEBUG  ]  No samples found: qorts
-[2021-04-01 00:59:29,017] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
-[2021-04-01 00:59:29,021] multiqc                                            [DEBUG  ]  No samples found: rockhopper
-[2021-04-01 00:59:29,026] multiqc                                            [DEBUG  ]  No samples found: rsem
-[2021-04-01 00:59:29,035] multiqc                                            [DEBUG  ]  No samples found: rseqc
-[2021-04-01 00:59:29,039] multiqc                                            [DEBUG  ]  No samples found: busco
-[2021-04-01 00:59:29,044] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
-[2021-04-01 00:59:29,049] multiqc                                            [DEBUG  ]  No samples found: disambiguate
-[2021-04-01 00:59:29,053] multiqc                                            [DEBUG  ]  No samples found: supernova
-[2021-04-01 00:59:29,062] multiqc                                            [DEBUG  ]  No samples found: deeptools
-[2021-04-01 00:59:29,067] multiqc                                            [DEBUG  ]  No samples found: sargasso
-[2021-04-01 00:59:29,071] multiqc                                            [DEBUG  ]  No samples found: verifybamid
-[2021-04-01 00:59:29,076] multiqc                                            [DEBUG  ]  No samples found: mirtrace
-[2021-04-01 00:59:29,081] multiqc                                            [DEBUG  ]  No samples found: happy
-[2021-04-01 00:59:29,085] multiqc                                            [DEBUG  ]  No samples found: mirtop
-[2021-04-01 00:59:29,091] multiqc                                            [DEBUG  ]  No samples found: homer
-[2021-04-01 00:59:29,096] multiqc                                            [DEBUG  ]  No samples found: hops
-[2021-04-01 00:59:29,101] multiqc                                            [DEBUG  ]  No samples found: macs2
-[2021-04-01 00:59:29,105] multiqc                                            [DEBUG  ]  No samples found: theta2
-[2021-04-01 00:59:29,110] multiqc                                            [DEBUG  ]  No samples found: snpeff
-[2021-04-01 00:59:29,116] multiqc                                            [DEBUG  ]  No samples found: gatk
-[2021-04-01 00:59:29,120] multiqc                                            [DEBUG  ]  No samples found: htseq
-[2021-04-01 00:59:29,125] multiqc                                            [DEBUG  ]  No samples found: bcftools
-[2021-04-01 00:59:29,130] multiqc                                            [DEBUG  ]  No samples found: featureCounts
-[2021-04-01 00:59:29,138] multiqc                                            [DEBUG  ]  No samples found: fgbio
-[2021-04-01 00:59:29,147] multiqc                                            [DEBUG  ]  No samples found: dragen
-[2021-04-01 00:59:29,152] multiqc                                            [DEBUG  ]  No samples found: dedup
-[2021-04-01 00:59:29,156] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
-[2021-04-01 00:59:29,170] multiqc                                            [DEBUG  ]  No samples found: biobambam2
-[2021-04-01 00:59:29,175] multiqc                                            [DEBUG  ]  No samples found: jcvi
-[2021-04-01 00:59:29,180] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
-[2021-04-01 00:59:29,183] multiqc                                            [DEBUG  ]  No samples found: picard
-[2021-04-01 00:59:29,189] multiqc                                            [DEBUG  ]  No samples found: sentieon
-[2021-04-01 00:59:29,194] multiqc                                            [DEBUG  ]  No samples found: prokka
-[2021-04-01 00:59:29,199] multiqc                                            [DEBUG  ]  No samples found: qc3C
-[2021-04-01 00:59:29,203] multiqc                                            [DEBUG  ]  No samples found: samblaster
-[2021-04-01 00:59:29,210] multiqc                                            [DEBUG  ]  No samples found: samtools
-[2021-04-01 00:59:29,214] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
-[2021-04-01 00:59:29,219] multiqc                                            [DEBUG  ]  No samples found: eigenstratdatabasetools
-[2021-04-01 00:59:29,223] multiqc                                            [DEBUG  ]  No samples found: bamtools
-[2021-04-01 00:59:29,228] multiqc                                            [DEBUG  ]  No samples found: jellyfish
-[2021-04-01 00:59:29,234] multiqc                                            [DEBUG  ]  No samples found: vcftools
-[2021-04-01 00:59:29,239] multiqc                                            [DEBUG  ]  No samples found: longranger
-[2021-04-01 00:59:29,244] multiqc                                            [DEBUG  ]  No samples found: stacks
-[2021-04-01 00:59:29,249] multiqc                                            [DEBUG  ]  No samples found: varscan2
-[2021-04-01 00:59:29,258] multiqc                                            [DEBUG  ]  No samples found: bbmap
-[2021-04-01 00:59:29,925] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 alignment reports
-[2021-04-01 00:59:29,930] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 dedup reports
-[2021-04-01 00:59:29,934] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 methextract reports
-[2021-04-01 00:59:29,949] multiqc                                            [DEBUG  ]  No samples found: biscuit
-[2021-04-01 00:59:29,953] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
-[2021-04-01 00:59:29,958] multiqc                                            [DEBUG  ]  No samples found: hicup
-[2021-04-01 00:59:29,963] multiqc                                            [DEBUG  ]  No samples found: hicpro
-[2021-04-01 00:59:29,967] multiqc                                            [DEBUG  ]  No samples found: salmon
-[2021-04-01 00:59:29,972] multiqc                                            [DEBUG  ]  No samples found: kallisto
-[2021-04-01 00:59:29,977] multiqc                                            [DEBUG  ]  No samples found: slamdunk
-[2021-04-01 00:59:29,981] multiqc                                            [DEBUG  ]  No samples found: star
-[2021-04-01 00:59:29,986] multiqc                                            [DEBUG  ]  No samples found: hisat2
-[2021-04-01 00:59:29,990] multiqc                                            [DEBUG  ]  No samples found: tophat
-[2021-04-01 00:59:29,995] multiqc                                            [DEBUG  ]  No samples found: bowtie2
-[2021-04-01 00:59:30,000] multiqc                                            [DEBUG  ]  No samples found: bowtie1
-[2021-04-01 00:59:30,005] multiqc                                            [DEBUG  ]  No samples found: snpsplit
-[2021-04-01 00:59:30,012] multiqc                                            [DEBUG  ]  No samples found: kat
-[2021-04-01 00:59:30,017] multiqc                                            [DEBUG  ]  No samples found: leehom
-[2021-04-01 00:59:30,021] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
-[2021-04-01 00:59:30,025] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
-[2021-04-01 00:59:30,050] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
-[2021-04-01 00:59:30,058] multiqc                                            [DEBUG  ]  No samples found: flexbar
-[2021-04-01 00:59:30,064] multiqc                                            [DEBUG  ]  No samples found: kaiju
-[2021-04-01 00:59:30,071] multiqc                                            [DEBUG  ]  No samples found: kraken
-[2021-04-01 00:59:30,075] multiqc                                            [DEBUG  ]  No samples found: malt
-[2021-04-01 00:59:30,080] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
-[2021-04-01 00:59:30,085] multiqc                                            [DEBUG  ]  No samples found: sickle
-[2021-04-01 00:59:30,089] multiqc                                            [DEBUG  ]  No samples found: skewer
-[2021-04-01 00:59:30,095] multiqc                                            [DEBUG  ]  No samples found: sortmerna
-[2021-04-01 00:59:30,099] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
-[2021-04-01 00:59:30,103] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
-[2021-04-01 00:59:30,107] multiqc                                            [DEBUG  ]  No samples found: afterqc
-[2021-04-01 00:59:30,113] multiqc                                            [DEBUG  ]  No samples found: fastp
-[2021-04-01 00:59:30,256] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921768_1
-[2021-04-01 00:59:30,377] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921770_1'
-[2021-04-01 00:59:30,411] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921769_1
-[2021-04-01 00:59:30,473] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921695_1
-[2021-04-01 00:59:30,480] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_2wk_SRR921694_1'
-[2021-04-01 00:59:30,559] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921773_1
-[2021-04-01 00:59:30,615] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921696_1
-[2021-04-01 00:59:30,622] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921767_1'
-[2021-04-01 00:59:30,622] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
-[2021-04-01 00:59:30,715] multiqc                                            [DEBUG  ]  No samples found: pychopper
-[2021-04-01 00:59:30,719] multiqc                                            [DEBUG  ]  No samples found: pycoqc
-[2021-04-01 00:59:30,724] multiqc                                            [DEBUG  ]  No samples found: minionqc
-[2021-04-01 00:59:30,729] multiqc                                            [DEBUG  ]  No samples found: multivcfanalyzer
-[2021-04-01 00:59:30,733] multiqc                                            [DEBUG  ]  No samples found: clusterflow
-[2021-04-01 00:59:30,738] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
-[2021-04-01 00:59:30,742] multiqc                                            [DEBUG  ]  No samples found: interop
-[2021-04-01 00:59:30,747] multiqc                                            [DEBUG  ]  No samples found: ivar
-[2021-04-01 00:59:30,751] multiqc                                            [DEBUG  ]  No samples found: flash
-[2021-04-01 00:59:30,755] multiqc                                            [DEBUG  ]  No samples found: seqyclean
-[2021-04-01 00:59:30,760] multiqc                                            [DEBUG  ]  No samples found: optitype
-[2021-04-01 00:59:30,786] multiqc                                            [INFO   ]  Compressing plot data
-[2021-04-01 00:59:30,977] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after modules)
-[2021-04-01 00:59:30,978] multiqc                                            [INFO   ]  Skipping MultiQC_NGI as specified on command line
-[2021-04-01 00:59:31,022] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2021-04-01 00:59:31,022] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2021-04-01 00:59:31,022] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmph8p2hbeu/multiqc_data' to '/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/multiqc_data'
-[2021-04-01 00:59:31,146] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after execution finish)
-[2021-04-01 00:59:31,146] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI (after execution finish) as 'disable_ngi' was specified
-[2021-04-01 00:59:31,146] multiqc                                            [INFO   ]  MultiQC complete
+[2021-07-05 09:03:21,709] multiqc                                            [DEBUG  ]  This is MultiQC v1.11
+[2021-07-05 09:03:21,710] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc_config.yaml
+[2021-07-05 09:03:21,710] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/ewels/.multiqc_config.yaml
+[2021-07-05 09:03:21,710] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2021-07-05 09:03:21,710] multiqc                                            [DEBUG  ]  Command used: /Users/ewels/miniconda3/envs/py3/bin/multiqc . --disable-ngi -t default
+[2021-07-05 09:03:21,956] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.10.1
+[2021-07-05 09:03:21,956] multiqc                                            [DEBUG  ]  Command     : /Users/ewels/miniconda3/envs/py3/bin/multiqc . --disable-ngi -t default
+[2021-07-05 09:03:21,957] multiqc                                            [DEBUG  ]  Working dir : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
+[2021-07-05 09:03:21,957] multiqc                                            [DEBUG  ]  Template    : default
+[2021-07-05 09:03:21,957] multiqc                                            [DEBUG  ]  Running Python 3.7.10 | packaged by conda-forge | (default, Feb 19 2021, 15:59:12)  [Clang 11.0.1 ]
+[2021-07-05 09:03:21,957] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dedup, damageprofiler, biobambam2, jcvi, mtnucratio, picard, vep, sentieon, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, snpsplit, odgi, pangolin, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, pychopper, pycoqc, minionqc, multivcfanalyzer, clusterflow, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype
+[2021-07-05 09:03:21,957] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmpy9bo56w8
+[2021-07-05 09:03:21,967] multiqc                                            [INFO   ]  Search path : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
+[2021-07-05 09:03:21,980] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: .DS_Store
+[2021-07-05 09:03:22,020] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,022] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,022] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,022] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,026] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,026] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,067] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,069] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,069] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,069] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,071] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,071] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,117] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,118] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,119] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,119] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,121] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,121] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,173] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2021-07-05 09:03:22,174] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2021-07-05 09:03:22,175] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2021-07-05 09:03:22,175] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2021-07-05 09:03:22,177] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2021-07-05 09:03:22,177] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.html
+[2021-07-05 09:03:22,238] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,239] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,239] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,239] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,241] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,241] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,273] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,275] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,277] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,295] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,296] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,299] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,312] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,313] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,313] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,314] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,316] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,316] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,375] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,376] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,377] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,377] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,379] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,379] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,427] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,429] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,429] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,429] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,431] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,432] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,496] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2021-07-05 09:03:22,497] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2021-07-05 09:03:22,497] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2021-07-05 09:03:22,497] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2021-07-05 09:03:22,502] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2021-07-05 09:03:22,502] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_fastqc.html
+[2021-07-05 09:03:22,548] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,549] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,551] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,563] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,565] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,565] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,565] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,567] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,567] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,599] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,601] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,603] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,616] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,617] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,620] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:22,635] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2021-07-05 09:03:22,637] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2021-07-05 09:03:22,637] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2021-07-05 09:03:22,637] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2021-07-05 09:03:22,639] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2021-07-05 09:03:22,639] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921768_1_fastqc.html
+[2021-07-05 09:03:22,686] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,687] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,687] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,687] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,690] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,690] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,743] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,744] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,745] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,745] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,747] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,747] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,805] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,806] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,806] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,806] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,809] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,809] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,854] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,855] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,856] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,856] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,858] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,858] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.2_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,893] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2021-07-05 09:03:22,895] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2021-07-05 09:03:22,895] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2021-07-05 09:03:22,895] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2021-07-05 09:03:22,897] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2021-07-05 09:03:22,897] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921769_1_fastqc.html
+[2021-07-05 09:03:22,943] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,944] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,945] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,945] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,947] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,947] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz.temp.1_bismark_bt2_SE_report.html
+[2021-07-05 09:03:22,983] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,985] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,985] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,985] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,987] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2021-07-05 09:03:22,988] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,049] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,052] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,052] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,052] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,055] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,055] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,108] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,109] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,111] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,131] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2021-07-05 09:03:23,132] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2021-07-05 09:03:23,133] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2021-07-05 09:03:23,133] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2021-07-05 09:03:23,135] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2021-07-05 09:03:23,135] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_fastqc.html
+[2021-07-05 09:03:23,181] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,183] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,183] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,183] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,185] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,186] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,229] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,230] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,230] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,230] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,232] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,233] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,282] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
+[2021-07-05 09:03:23,283] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
+[2021-07-05 09:03:23,283] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
+[2021-07-05 09:03:23,283] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
+[2021-07-05 09:03:23,285] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.txt
+[2021-07-05 09:03:23,304] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,305] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,305] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,305] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,308] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,308] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,366] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,368] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,368] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,368] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,371] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,371] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,427] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.html
+[2021-07-05 09:03:23,428] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.html
+[2021-07-05 09:03:23,428] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.html
+[2021-07-05 09:03:23,428] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.html
+[2021-07-05 09:03:23,432] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.html
+[2021-07-05 09:03:23,432] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: sra_bismark_1447079770_bismark_summary.html
+[2021-07-05 09:03:23,474] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,475] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,476] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,476] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,479] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,479] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz.temp.3_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,553] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2021-07-05 09:03:23,554] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2021-07-05 09:03:23,555] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2021-07-05 09:03:23,555] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2021-07-05 09:03:23,559] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2021-07-05 09:03:23,559] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.html
+[2021-07-05 09:03:23,648] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2021-07-05 09:03:23,651] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2021-07-05 09:03:23,651] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2021-07-05 09:03:23,651] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2021-07-05 09:03:23,654] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2021-07-05 09:03:23,654] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.html
+[2021-07-05 09:03:23,811] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,812] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,812] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,812] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,815] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,815] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.html
+[2021-07-05 09:03:23,864] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,868] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,871] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,893] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,895] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,897] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt
+[2021-07-05 09:03:23,912] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2021-07-05 09:03:23,913] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2021-07-05 09:03:23,914] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2021-07-05 09:03:23,914] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2021-07-05 09:03:23,916] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2021-07-05 09:03:23,917] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_2wk_SRR921695_1_fastqc.html
+[2021-07-05 09:03:23,975] multiqc                                            [DEBUG  ]  File ignored by ccs/v4 because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,976] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,977] multiqc                                            [DEBUG  ]  File ignored by nanostat because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,977] multiqc                                            [DEBUG  ]  File ignored by lima/summary because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,980] multiqc                                            [DEBUG  ]  File ignored by vep/vep_txt because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:23,980] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.html
+[2021-07-05 09:03:24,327] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.3.4
+[2021-07-05 09:03:24,328] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.3.4
+[2021-07-05 09:03:24,330] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2021-07-05 09:03:24,336] multiqc                                            [DEBUG  ]  No samples found: ccs
+[2021-07-05 09:03:24,342] multiqc                                            [DEBUG  ]  No samples found: ngsderive
+[2021-07-05 09:03:24,348] multiqc                                            [DEBUG  ]  No samples found: purple
+[2021-07-05 09:03:24,355] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2021-07-05 09:03:24,362] multiqc                                            [DEBUG  ]  No samples found: lima
+[2021-07-05 09:03:24,367] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2021-07-05 09:03:24,373] multiqc                                            [DEBUG  ]  No samples found: somalier
+[2021-07-05 09:03:24,379] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2021-07-05 09:03:24,386] multiqc.modules.mosdepth.mosdepth                  [DEBUG  ]  include_contigs: []
+[2021-07-05 09:03:24,386] multiqc.modules.mosdepth.mosdepth                  [DEBUG  ]  exclude_contigs: []
+[2021-07-05 09:03:24,386] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2021-07-05 09:03:24,392] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2021-07-05 09:03:24,397] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2021-07-05 09:03:24,403] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2021-07-05 09:03:24,409] multiqc                                            [DEBUG  ]  No samples found: quast
+[2021-07-05 09:03:24,414] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2021-07-05 09:03:24,420] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2021-07-05 09:03:24,424] multiqc                                            [DEBUG  ]  No samples found: rockhopper
+[2021-07-05 09:03:24,430] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2021-07-05 09:03:24,439] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2021-07-05 09:03:24,444] multiqc                                            [DEBUG  ]  No samples found: busco
+[2021-07-05 09:03:24,450] multiqc                                            [DEBUG  ]  No samples found: bustools
+[2021-07-05 09:03:24,455] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2021-07-05 09:03:24,461] multiqc                                            [DEBUG  ]  No samples found: gffcompare
+[2021-07-05 09:03:24,467] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2021-07-05 09:03:24,473] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2021-07-05 09:03:24,483] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2021-07-05 09:03:24,488] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2021-07-05 09:03:24,494] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2021-07-05 09:03:24,499] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2021-07-05 09:03:24,505] multiqc                                            [DEBUG  ]  No samples found: happy
+[2021-07-05 09:03:24,510] multiqc                                            [DEBUG  ]  No samples found: mirtop
+[2021-07-05 09:03:24,516] multiqc                                            [DEBUG  ]  No samples found: sambamba
+[2021-07-05 09:03:24,523] multiqc                                            [DEBUG  ]  No samples found: homer
+[2021-07-05 09:03:24,528] multiqc                                            [DEBUG  ]  No samples found: hops
+[2021-07-05 09:03:24,534] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2021-07-05 09:03:24,539] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2021-07-05 09:03:24,544] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2021-07-05 09:03:24,551] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2021-07-05 09:03:24,556] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2021-07-05 09:03:24,563] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2021-07-05 09:03:24,569] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2021-07-05 09:03:24,578] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2021-07-05 09:03:24,615] multiqc                                            [DEBUG  ]  No samples found: dragen
+[2021-07-05 09:03:24,621] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2021-07-05 09:03:24,626] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2021-07-05 09:03:24,642] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2021-07-05 09:03:24,648] multiqc                                            [DEBUG  ]  No samples found: jcvi
+[2021-07-05 09:03:24,653] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2021-07-05 09:03:24,657] multiqc                                            [DEBUG  ]  No samples found: picard
+[2021-07-05 09:03:24,663] multiqc                                            [DEBUG  ]  No samples found: vep
+[2021-07-05 09:03:24,669] multiqc                                            [DEBUG  ]  No samples found: sentieon
+[2021-07-05 09:03:24,675] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2021-07-05 09:03:24,680] multiqc                                            [DEBUG  ]  No samples found: qc3C
+[2021-07-05 09:03:24,686] multiqc                                            [DEBUG  ]  No samples found: nanostat
+[2021-07-05 09:03:24,691] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2021-07-05 09:03:24,698] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2021-07-05 09:03:24,703] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2021-07-05 09:03:24,709] multiqc                                            [DEBUG  ]  No samples found: eigenstratdatabasetools
+[2021-07-05 09:03:24,715] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2021-07-05 09:03:24,720] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2021-07-05 09:03:24,728] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2021-07-05 09:03:24,733] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2021-07-05 09:03:24,738] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2021-07-05 09:03:24,744] multiqc                                            [DEBUG  ]  No samples found: varscan2
+[2021-07-05 09:03:24,750] multiqc                                            [DEBUG  ]  No samples found: snippy
+[2021-07-05 09:03:24,763] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2021-07-05 09:03:24,993] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 alignment reports
+[2021-07-05 09:03:24,998] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 dedup reports
+[2021-07-05 09:03:25,002] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 methextract reports
+[2021-07-05 09:03:25,019] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2021-07-05 09:03:25,025] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2021-07-05 09:03:25,030] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2021-07-05 09:03:25,036] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2021-07-05 09:03:25,041] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2021-07-05 09:03:25,047] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2021-07-05 09:03:25,053] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2021-07-05 09:03:25,058] multiqc                                            [DEBUG  ]  No samples found: star
+[2021-07-05 09:03:25,063] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2021-07-05 09:03:25,069] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2021-07-05 09:03:25,074] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2021-07-05 09:03:25,080] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2021-07-05 09:03:25,086] multiqc                                            [DEBUG  ]  No samples found: snpsplit
+[2021-07-05 09:03:25,091] multiqc                                            [DEBUG  ]  No samples found: odgi
+[2021-07-05 09:03:25,097] multiqc                                            [DEBUG  ]  No samples found: pangolin
+[2021-07-05 09:03:25,103] multiqc                                            [DEBUG  ]  No samples found: kat
+[2021-07-05 09:03:25,108] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2021-07-05 09:03:25,114] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2021-07-05 09:03:25,120] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2021-07-05 09:03:25,148] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
+[2021-07-05 09:03:25,159] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2021-07-05 09:03:25,165] multiqc                                            [DEBUG  ]  No samples found: kaiju
+[2021-07-05 09:03:25,171] multiqc                                            [DEBUG  ]  No samples found: kraken
+[2021-07-05 09:03:25,177] multiqc                                            [DEBUG  ]  No samples found: malt
+[2021-07-05 09:03:25,183] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2021-07-05 09:03:25,188] multiqc                                            [DEBUG  ]  No samples found: sickle
+[2021-07-05 09:03:25,194] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2021-07-05 09:03:25,199] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2021-07-05 09:03:25,205] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2021-07-05 09:03:25,211] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2021-07-05 09:03:25,216] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2021-07-05 09:03:25,222] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2021-07-05 09:03:25,338] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921768_1
+[2021-07-05 09:03:25,375] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921770_1'
+[2021-07-05 09:03:25,413] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921769_1
+[2021-07-05 09:03:25,425] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921695_1
+[2021-07-05 09:03:25,433] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_2wk_SRR921694_1'
+[2021-07-05 09:03:25,447] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921773_1
+[2021-07-05 09:03:25,492] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921696_1
+[2021-07-05 09:03:25,499] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921767_1'
+[2021-07-05 09:03:25,499] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
+[2021-07-05 09:03:25,592] multiqc                                            [DEBUG  ]  No samples found: pychopper
+[2021-07-05 09:03:25,598] multiqc                                            [DEBUG  ]  No samples found: pycoqc
+[2021-07-05 09:03:25,603] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2021-07-05 09:03:25,610] multiqc                                            [DEBUG  ]  No samples found: multivcfanalyzer
+[2021-07-05 09:03:25,615] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2021-07-05 09:03:25,622] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2021-07-05 09:03:25,628] multiqc                                            [DEBUG  ]  No samples found: bclconvert
+[2021-07-05 09:03:25,633] multiqc                                            [DEBUG  ]  No samples found: interop
+[2021-07-05 09:03:25,639] multiqc                                            [DEBUG  ]  No samples found: ivar
+[2021-07-05 09:03:25,645] multiqc                                            [DEBUG  ]  No samples found: flash
+[2021-07-05 09:03:25,650] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2021-07-05 09:03:25,656] multiqc                                            [DEBUG  ]  No samples found: optitype
+[2021-07-05 09:03:25,683] multiqc                                            [INFO   ]  Compressing plot data
+[2021-07-05 09:03:25,867] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after modules)
+[2021-07-05 09:03:25,867] multiqc                                            [INFO   ]  Skipping MultiQC_NGI as specified on command line
+[2021-07-05 09:03:25,914] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2021-07-05 09:03:25,915] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2021-07-05 09:03:25,915] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/bq/451scswn2dn4npxhf_28lyt40000gn/T/tmpy9bo56w8/multiqc_data' to '/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/multiqc_data'
+[2021-07-05 09:03:26,062] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after execution finish)
+[2021-07-05 09:03:26,062] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI (after execution finish) as 'disable_ngi' was specified
+[2021-07-05 09:03:26,062] multiqc                                            [INFO   ]  MultiQC complete

@@ -412,6 +412,7 @@
         },
         {
             "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 162959139,
                 "r_with_adapters": 61500486,
                 "r_written": 162959139,
@@ -421,6 +422,7 @@
                 "percent_trimmed": 13.591916874862283
             },
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 100000000,
                 "r_with_adapters": 39251679,
                 "r_written": 100000000,
@@ -430,6 +432,7 @@
                 "percent_trimmed": 2.8996505900000002
             },
             "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 162506120,
                 "r_with_adapters": 61439154,
                 "r_written": 162506120,
@@ -439,6 +442,7 @@
                 "percent_trimmed": 13.465466322982875
             },
             "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 100000000,
                 "r_with_adapters": 39570784,
                 "r_written": 100000000,
@@ -448,6 +452,7 @@
                 "percent_trimmed": 2.77531391
             },
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 20413156,
                 "r_with_adapters": 8094974,
                 "r_written": 20413156,
@@ -457,6 +462,7 @@
                 "percent_trimmed": 3.000079262608878
             },
             "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 142023805,
                 "r_with_adapters": 38946659,
                 "r_written": 142023805,
@@ -466,6 +472,7 @@
                 "percent_trimmed": 23.6237041702653
             },
             "MethylC-Seq_mm_fc_1wk_SRR921767_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 100000000,
                 "r_with_adapters": 39621727,
                 "r_written": 100000000,
@@ -475,6 +482,7 @@
                 "percent_trimmed": 2.64243157
             },
             "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 125723135,
                 "r_with_adapters": 34543903,
                 "r_written": 125723135,
@@ -10976,7 +10984,7 @@
                 "ylab": "Counts"
             }
         },
-        "cutadapt_trimmed_sequences_plot": {
+        "cutadapt_trimmed_sequences_plot_3": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -17473,8 +17481,8 @@
                 ]
             ],
             "config": {
-                "id": "cutadapt_trimmed_sequences_plot",
-                "title": "Cutadapt: Lengths of Trimmed Sequences",
+                "id": "cutadapt_trimmed_sequences_plot_3",
+                "title": "Cutadapt: Lengths of Trimmed Sequences (3' end)",
                 "ylab": "Counts",
                 "xlab": "Length Trimmed (bp)",
                 "xDecimals": false,
@@ -31209,6 +31217,7 @@
         },
         "multiqc_cutadapt": {
             "MethylC-Seq_mm_fc_2wk_SRR921695_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 162959139,
                 "r_with_adapters": 61500486,
                 "r_written": 162959139,
@@ -31218,6 +31227,7 @@
                 "percent_trimmed": 13.591916874862283
             },
             "MethylC-Seq_mm_fc_1wk_SRR921768_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 100000000,
                 "r_with_adapters": 39251679,
                 "r_written": 100000000,
@@ -31227,6 +31237,7 @@
                 "percent_trimmed": 2.8996505900000002
             },
             "MethylC-Seq_mm_fc_2wk_SRR921694_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 162506120,
                 "r_with_adapters": 61439154,
                 "r_written": 162506120,
@@ -31236,6 +31247,7 @@
                 "percent_trimmed": 13.465466322982875
             },
             "MethylC-Seq_mm_fc_1wk_SRR921770_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 100000000,
                 "r_with_adapters": 39570784,
                 "r_written": 100000000,
@@ -31245,6 +31257,7 @@
                 "percent_trimmed": 2.77531391
             },
             "MethylC-Seq_mm_fc_1wk_SRR921769_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 20413156,
                 "r_with_adapters": 8094974,
                 "r_written": 20413156,
@@ -31254,6 +31267,7 @@
                 "percent_trimmed": 3.000079262608878
             },
             "MethylC-Seq_mm_fc_2wk_SRR921773_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 142023805,
                 "r_with_adapters": 38946659,
                 "r_written": 142023805,
@@ -31263,6 +31277,7 @@
                 "percent_trimmed": 23.6237041702653
             },
             "MethylC-Seq_mm_fc_1wk_SRR921767_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 100000000,
                 "r_with_adapters": 39621727,
                 "r_written": 100000000,
@@ -31272,6 +31287,7 @@
                 "percent_trimmed": 2.64243157
             },
             "MethylC-Seq_mm_fc_2wk_SRR921696_1": {
+                "cutadapt_version": "1.8",
                 "r_processed": 125723135,
                 "r_with_adapters": 34543903,
                 "r_written": 125723135,
@@ -31604,14 +31620,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-04-01, 00:59",
+    "config_creation_date": "2021-07-05, 09:03",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
     "config_script_path": "/Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc/utils",
-    "config_short_version": "1.10.1",
+    "config_short_version": "1.11",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.10.1"
+    "config_version": "1.11"
 }

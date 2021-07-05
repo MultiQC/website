@@ -790,6 +790,7 @@
         },
         {
             "P1234_1012": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 26629350,
                 "r_with_adapters": 20240267,
                 "r_written": 26629350,
@@ -799,6 +800,7 @@
                 "percent_trimmed": 27.073472739695596
             },
             "P1234_1001": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 33741075,
                 "r_with_adapters": 16244915,
                 "r_written": 33741075,
@@ -808,6 +810,7 @@
                 "percent_trimmed": 10.308003364864526
             },
             "P1234_1007": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 21758318,
                 "r_with_adapters": 17790443,
                 "r_written": 21758318,
@@ -817,6 +820,7 @@
                 "percent_trimmed": 31.998633006481715
             },
             "P1234_1014": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 46909968,
                 "r_with_adapters": 27009777,
                 "r_written": 46909968,
@@ -826,6 +830,7 @@
                 "percent_trimmed": 12.217045629026972
             },
             "P1234_1018": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 30833924,
                 "r_with_adapters": 25539362,
                 "r_written": 30833924,
@@ -835,6 +840,7 @@
                 "percent_trimmed": 27.93934131864852
             },
             "P1234_1015": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 13216614,
                 "r_with_adapters": 9843027,
                 "r_written": 13216614,
@@ -844,6 +850,7 @@
                 "percent_trimmed": 23.543216629014438
             },
             "P1234_1006": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 30839171,
                 "r_with_adapters": 16979898,
                 "r_written": 30839171,
@@ -853,6 +860,7 @@
                 "percent_trimmed": 14.062148744403588
             },
             "P1234_1013": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 59012592,
                 "r_with_adapters": 36176284,
                 "r_written": 59012592,
@@ -862,6 +870,7 @@
                 "percent_trimmed": 14.029549773851105
             },
             "P1234_1022": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 101,
                 "r_with_adapters": 66,
                 "r_written": 101,
@@ -871,6 +880,7 @@
                 "percent_trimmed": 15.334460275295822
             },
             "P1234_1019": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 16902605,
                 "r_with_adapters": 14151003,
                 "r_written": 16902605,
@@ -880,6 +890,7 @@
                 "percent_trimmed": 32.82145673398787
             },
             "P1234_1009": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 20462961,
                 "r_with_adapters": 14349377,
                 "r_written": 20462961,
@@ -889,6 +900,7 @@
                 "percent_trimmed": 20.90333871417967
             },
             "P1234_1021": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 28300555,
                 "r_with_adapters": 22726249,
                 "r_written": 28300555,
@@ -898,6 +910,7 @@
                 "percent_trimmed": 23.9808555393423
             },
             "P1234_1003": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 33724069,
                 "r_with_adapters": 17014798,
                 "r_written": 33724069,
@@ -907,6 +920,7 @@
                 "percent_trimmed": 10.954636086530144
             },
             "P1234_1010": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 11357451,
                 "r_with_adapters": 8493873,
                 "r_written": 11357451,
@@ -916,6 +930,7 @@
                 "percent_trimmed": 24.861808118712094
             },
             "P1234_1016": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 28242306,
                 "r_with_adapters": 21624055,
                 "r_written": 28242306,
@@ -925,6 +940,7 @@
                 "percent_trimmed": 25.66610326637006
             },
             "P1234_1005": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 33756772,
                 "r_with_adapters": 19793478,
                 "r_written": 33756772,
@@ -934,6 +950,7 @@
                 "percent_trimmed": 15.87926968191336
             },
             "P1234_1008": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 16710354,
                 "r_with_adapters": 14879022,
                 "r_written": 16710354,
@@ -943,6 +960,7 @@
                 "percent_trimmed": 44.22982097528625
             },
             "P1234_1020": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 15843059,
                 "r_with_adapters": 13401206,
                 "r_written": 15843059,
@@ -952,6 +970,7 @@
                 "percent_trimmed": 31.31626551895204
             },
             "P1234_1004": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 31194060,
                 "r_with_adapters": 16606122,
                 "r_written": 31194060,
@@ -961,6 +980,7 @@
                 "percent_trimmed": 13.23019098971777
             },
             "P1234_1017": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 34064465,
                 "r_with_adapters": 28267690,
                 "r_written": 34064465,
@@ -970,6 +990,7 @@
                 "percent_trimmed": 28.929083084421908
             },
             "P1234_1011": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 27988897,
                 "r_with_adapters": 21105799,
                 "r_written": 27988897,
@@ -979,6 +1000,7 @@
                 "percent_trimmed": 27.059384251518985
             },
             "P1234_1002": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 31080150,
                 "r_with_adapters": 15671939,
                 "r_written": 31080150,
@@ -1448,7 +1470,7 @@
     ],
     "report_multiqc_command": "/Users/ewels/miniconda3/envs/py3/bin/multiqc . --test-db ngi_db_data.json",
     "report_plot_data": {
-        "mqc_hcplot_hmawtynpex": {
+        "mqc_hcplot_fthymgleuo": {
             "plot_type": "heatmap",
             "data": [
                 [
@@ -3924,10 +3946,12 @@
                 "title": "edgeR: Euclidean distances",
                 "xlab": true,
                 "reverseColors": true,
-                "id": "mqc_hcplot_hmawtynpex"
+                "min": 0.0,
+                "max": 414.329609555064,
+                "id": "mqc_hcplot_fthymgleuo"
             }
         },
-        "mqc_hcplot_nfxquyszwp": {
+        "mqc_hcplot_uwdzkjtsxq": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -4047,7 +4071,7 @@
                 "xlab": "Leading",
                 "title": "MDS Plot",
                 "ylab": "logFC",
-                "id": "mqc_hcplot_nfxquyszwp"
+                "id": "mqc_hcplot_uwdzkjtsxq"
             }
         },
         "star_alignment_plot": {
@@ -4294,7 +4318,7 @@
                 "ylab": "Counts"
             }
         },
-        "cutadapt_trimmed_sequences_plot": {
+        "cutadapt_trimmed_sequences_plot_3": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -25483,8 +25507,8 @@
                 ]
             ],
             "config": {
-                "id": "cutadapt_trimmed_sequences_plot",
-                "title": "Cutadapt: Lengths of Trimmed Sequences",
+                "id": "cutadapt_trimmed_sequences_plot_3",
+                "title": "Cutadapt: Lengths of Trimmed Sequences (3' end)",
                 "ylab": "Counts",
                 "xlab": "Length Trimmed (bp)",
                 "xDecimals": false,
@@ -61176,7 +61200,7 @@
                 "tt_suffix": "%"
             }
         },
-        "fastqc_overrepresented_sequencesi_plot": {
+        "fastqc_overrepresented_sequences_plot": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -61263,7 +61287,7 @@
                 ]
             ],
             "config": {
-                "id": "fastqc_overrepresented_sequencesi_plot",
+                "id": "fastqc_overrepresented_sequences_plot",
                 "title": "FastQC: Overrepresented sequences",
                 "ymin": 0,
                 "yCeiling": 100,
@@ -68718,6 +68742,7 @@
         },
         "multiqc_cutadapt": {
             "P1234_1012": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 26629350,
                 "r_with_adapters": 20240267,
                 "r_written": 26629350,
@@ -68727,6 +68752,7 @@
                 "percent_trimmed": 27.073472739695596
             },
             "P1234_1001": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 33741075,
                 "r_with_adapters": 16244915,
                 "r_written": 33741075,
@@ -68736,6 +68762,7 @@
                 "percent_trimmed": 10.308003364864526
             },
             "P1234_1007": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 21758318,
                 "r_with_adapters": 17790443,
                 "r_written": 21758318,
@@ -68745,6 +68772,7 @@
                 "percent_trimmed": 31.998633006481715
             },
             "P1234_1014": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 46909968,
                 "r_with_adapters": 27009777,
                 "r_written": 46909968,
@@ -68754,6 +68782,7 @@
                 "percent_trimmed": 12.217045629026972
             },
             "P1234_1018": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 30833924,
                 "r_with_adapters": 25539362,
                 "r_written": 30833924,
@@ -68763,6 +68792,7 @@
                 "percent_trimmed": 27.93934131864852
             },
             "P1234_1015": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 13216614,
                 "r_with_adapters": 9843027,
                 "r_written": 13216614,
@@ -68772,6 +68802,7 @@
                 "percent_trimmed": 23.543216629014438
             },
             "P1234_1006": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 30839171,
                 "r_with_adapters": 16979898,
                 "r_written": 30839171,
@@ -68781,6 +68812,7 @@
                 "percent_trimmed": 14.062148744403588
             },
             "P1234_1013": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 59012592,
                 "r_with_adapters": 36176284,
                 "r_written": 59012592,
@@ -68790,6 +68822,7 @@
                 "percent_trimmed": 14.029549773851105
             },
             "P1234_1022": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 101,
                 "r_with_adapters": 66,
                 "r_written": 101,
@@ -68799,6 +68832,7 @@
                 "percent_trimmed": 15.334460275295822
             },
             "P1234_1019": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 16902605,
                 "r_with_adapters": 14151003,
                 "r_written": 16902605,
@@ -68808,6 +68842,7 @@
                 "percent_trimmed": 32.82145673398787
             },
             "P1234_1009": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 20462961,
                 "r_with_adapters": 14349377,
                 "r_written": 20462961,
@@ -68817,6 +68852,7 @@
                 "percent_trimmed": 20.90333871417967
             },
             "P1234_1021": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 28300555,
                 "r_with_adapters": 22726249,
                 "r_written": 28300555,
@@ -68826,6 +68862,7 @@
                 "percent_trimmed": 23.9808555393423
             },
             "P1234_1003": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 33724069,
                 "r_with_adapters": 17014798,
                 "r_written": 33724069,
@@ -68835,6 +68872,7 @@
                 "percent_trimmed": 10.954636086530144
             },
             "P1234_1010": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 11357451,
                 "r_with_adapters": 8493873,
                 "r_written": 11357451,
@@ -68844,6 +68882,7 @@
                 "percent_trimmed": 24.861808118712094
             },
             "P1234_1016": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 28242306,
                 "r_with_adapters": 21624055,
                 "r_written": 28242306,
@@ -68853,6 +68892,7 @@
                 "percent_trimmed": 25.66610326637006
             },
             "P1234_1005": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 33756772,
                 "r_with_adapters": 19793478,
                 "r_written": 33756772,
@@ -68862,6 +68902,7 @@
                 "percent_trimmed": 15.87926968191336
             },
             "P1234_1008": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 16710354,
                 "r_with_adapters": 14879022,
                 "r_written": 16710354,
@@ -68871,6 +68912,7 @@
                 "percent_trimmed": 44.22982097528625
             },
             "P1234_1020": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 15843059,
                 "r_with_adapters": 13401206,
                 "r_written": 15843059,
@@ -68880,6 +68922,7 @@
                 "percent_trimmed": 31.31626551895204
             },
             "P1234_1004": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 31194060,
                 "r_with_adapters": 16606122,
                 "r_written": 31194060,
@@ -68889,6 +68932,7 @@
                 "percent_trimmed": 13.23019098971777
             },
             "P1234_1017": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 34064465,
                 "r_with_adapters": 28267690,
                 "r_written": 34064465,
@@ -68898,6 +68942,7 @@
                 "percent_trimmed": 28.929083084421908
             },
             "P1234_1011": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 27988897,
                 "r_with_adapters": 21105799,
                 "r_written": 27988897,
@@ -68907,6 +68952,7 @@
                 "percent_trimmed": 27.059384251518985
             },
             "P1234_1002": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 31080150,
                 "r_with_adapters": 15671939,
                 "r_written": 31080150,
@@ -69653,14 +69699,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-04-01, 01:00",
+    "config_creation_date": "2021-07-05, 09:04",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": "This report has been generated by the <a href=\"https://github.com/SciLifeLab/NGI-RNAseq\" target=\"_blank\">NGI-RNAseq</a> analysis pipeline. Some additional functionality is added to the report using the <a href=\"https://github.com/ewels/MultiQC_NGI\" target=\"_blank\">MultiQC_NGI plugin</a>.\n",
     "config_report_header_info": null,
     "config_script_path": "/Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc/utils",
-    "config_short_version": "1.10.1",
+    "config_short_version": "1.11",
     "config_subtitle": null,
     "config_title": "P1234: Test_NGI_Project",
-    "config_version": "1.10.1"
+    "config_version": "1.11"
 }

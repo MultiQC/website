@@ -400,6 +400,7 @@
         },
         {
             "SRR3192401": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 95735344,
                 "r_with_adapters": 38037448,
                 "r_written": 95735344,
@@ -409,6 +410,7 @@
                 "percent_trimmed": 6.261441218616189
             },
             "SRR3192658": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 97548052,
                 "r_with_adapters": 30622375,
                 "r_written": 97548052,
@@ -418,6 +420,7 @@
                 "percent_trimmed": 3.371360196941505
             },
             "SRR3192399": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 76795926,
                 "r_with_adapters": 28921721,
                 "r_written": 76795926,
@@ -427,6 +430,7 @@
                 "percent_trimmed": 5.01482288266177
             },
             "SRR3192398": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 68765938,
                 "r_with_adapters": 25752326,
                 "r_written": 68765938,
@@ -436,6 +440,7 @@
                 "percent_trimmed": 4.992982412310002
             },
             "SRR3192400": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 95791942,
                 "r_with_adapters": 36966867,
                 "r_written": 95791942,
@@ -445,6 +450,7 @@
                 "percent_trimmed": 7.1541209906779
             },
             "SRR3192397": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 92494632,
                 "r_with_adapters": 29937340,
                 "r_written": 92494632,
@@ -454,6 +460,7 @@
                 "percent_trimmed": 3.493236213100474
             },
             "SRR3192396": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 105089150,
                 "r_with_adapters": 32883672,
                 "r_written": 105089150,
@@ -463,6 +470,7 @@
                 "percent_trimmed": 3.956530947842149
             },
             "SRR3192657": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 93555584,
                 "r_with_adapters": 30516092,
                 "r_written": 93555584,
@@ -959,7 +967,7 @@
                 "ylab": "Counts"
             }
         },
-        "cutadapt_trimmed_sequences_plot": {
+        "cutadapt_trimmed_sequences_plot_3": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -7472,8 +7480,8 @@
                 ]
             ],
             "config": {
-                "id": "cutadapt_trimmed_sequences_plot",
-                "title": "Cutadapt: Lengths of Trimmed Sequences",
+                "id": "cutadapt_trimmed_sequences_plot_3",
+                "title": "Cutadapt: Lengths of Trimmed Sequences (3' end)",
                 "ylab": "Counts",
                 "xlab": "Length Trimmed (bp)",
                 "xDecimals": false,
@@ -21284,7 +21292,7 @@
                 "tt_suffix": "%"
             }
         },
-        "fastqc_overrepresented_sequencesi_plot": {
+        "fastqc_overrepresented_sequences_plot": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -21329,7 +21337,7 @@
                 ]
             ],
             "config": {
-                "id": "fastqc_overrepresented_sequencesi_plot",
+                "id": "fastqc_overrepresented_sequences_plot",
                 "title": "FastQC: Overrepresented sequences",
                 "ymin": 0,
                 "yCeiling": 100,
@@ -23033,6 +23041,7 @@
         },
         "multiqc_cutadapt": {
             "SRR3192401": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 95735344,
                 "r_with_adapters": 38037448,
                 "r_written": 95735344,
@@ -23042,6 +23051,7 @@
                 "percent_trimmed": 6.261441218616189
             },
             "SRR3192658": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 97548052,
                 "r_with_adapters": 30622375,
                 "r_written": 97548052,
@@ -23051,6 +23061,7 @@
                 "percent_trimmed": 3.371360196941505
             },
             "SRR3192399": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 76795926,
                 "r_with_adapters": 28921721,
                 "r_written": 76795926,
@@ -23060,6 +23071,7 @@
                 "percent_trimmed": 5.01482288266177
             },
             "SRR3192398": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 68765938,
                 "r_with_adapters": 25752326,
                 "r_written": 68765938,
@@ -23069,6 +23081,7 @@
                 "percent_trimmed": 4.992982412310002
             },
             "SRR3192400": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 95791942,
                 "r_with_adapters": 36966867,
                 "r_written": 95791942,
@@ -23078,6 +23091,7 @@
                 "percent_trimmed": 7.1541209906779
             },
             "SRR3192397": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 92494632,
                 "r_with_adapters": 29937340,
                 "r_written": 92494632,
@@ -23087,6 +23101,7 @@
                 "percent_trimmed": 3.493236213100474
             },
             "SRR3192396": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 105089150,
                 "r_with_adapters": 32883672,
                 "r_written": 105089150,
@@ -23096,6 +23111,7 @@
                 "percent_trimmed": 3.956530947842149
             },
             "SRR3192657": {
+                "cutadapt_version": "1.9.1",
                 "r_processed": 93555584,
                 "r_with_adapters": 30516092,
                 "r_written": 93555584,
@@ -23388,14 +23404,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-04-01, 00:59",
+    "config_creation_date": "2021-07-05, 09:03",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
     "config_script_path": "/Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc/utils",
-    "config_short_version": "1.10.1",
+    "config_short_version": "1.11",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.10.1"
+    "config_version": "1.11"
 }
