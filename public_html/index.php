@@ -193,10 +193,10 @@ multiqc .</code></pre>
         <div class="col-md-4">
           <ul class="list-switch right demo-chooser">
             <li><a href="examples/rna-seq/multiqc_report.html" data-target="#demo-rna-description"  class="active">RNA-Seq</a></li>
-            <li><a href="examples/wgs/multiqc_report.html" data-target="#demo-wgs-description" >Whole-Genome Sequencing</a></li>
-            <li><a href="examples/bs-seq/multiqc_report.html" data-target="#demo-bsseq-description" >Methylation (Bisfulite)</a></li>
-            <li><a href="examples/hi-c/multiqc_report.html" data-target="#demo-hic-description" >Genome Structure (Hi-C)</a></li>
-            <li><a href="examples/ngi-rna/Test_NGI_Project_multiqc_report.html" data-target="#demo-ngi-rna-description" >Customised with MultiQC_NGI Plugin</a></li>
+            <li><a href="examples/wgs/multiqc_report.html" data-target="#demo-wgs-description">Whole-Genome Sequencing</a></li>
+            <li><a href="examples/bs-seq/multiqc_report.html" data-target="#demo-bsseq-description">Methylation (Bisulfite)</a></li>
+            <li><a href="examples/hi-c/multiqc_report.html" data-target="#demo-hic-description">Genome Structure (Hi-C)</a></li>
+            <li><a href="examples/ngi-rna/Test_NGI_Project_multiqc_report.html" data-target="#demo-ngi-rna-description">Customised with MultiQC_NGI Plugin</a></li>
           </ul>
         </div>
         <div class="col-md-8 demo-descriptions">
