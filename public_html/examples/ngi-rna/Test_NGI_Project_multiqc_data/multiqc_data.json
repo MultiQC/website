@@ -2,80 +2,80 @@
     "report_data_sources": {
         "STAR": {
             "SummaryLog": {
-                "P1234_1021": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1021Log.final.out",
-                "P1234_1002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1002Log.final.out",
-                "P1234_1005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1005Log.final.out",
-                "P1234_1010": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1010Log.final.out",
-                "P1234_1017": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1017Log.final.out",
-                "P1234_1020": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1020Log.final.out",
-                "P1234_1016": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1016Log.final.out",
-                "P1234_1011": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1011Log.final.out",
-                "P1234_1004": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1004Log.final.out",
-                "P1234_1003": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1003Log.final.out",
-                "P1234_1009": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1009Log.final.out",
-                "P1234_1008": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1008Log.final.out",
-                "P1234_1018": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1018Log.final.out",
-                "P1234_1019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1019Log.final.out",
-                "P1234_1022": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1022Log.final.out",
-                "P1234_1013": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1013Log.final.out",
-                "P1234_1014": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1014Log.final.out",
-                "P1234_1001": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1001Log.final.out",
-                "P1234_1006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1006Log.final.out",
-                "P1234_1007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1007Log.final.out",
-                "P1234_1015": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1015Log.final.out",
-                "P1234_1012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1012Log.final.out"
+                "P1234_1021": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1021Log.final.out",
+                "P1234_1002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1002Log.final.out",
+                "P1234_1005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1005Log.final.out",
+                "P1234_1010": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1010Log.final.out",
+                "P1234_1017": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1017Log.final.out",
+                "P1234_1020": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1020Log.final.out",
+                "P1234_1016": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1016Log.final.out",
+                "P1234_1011": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1011Log.final.out",
+                "P1234_1004": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1004Log.final.out",
+                "P1234_1003": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1003Log.final.out",
+                "P1234_1009": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1009Log.final.out",
+                "P1234_1008": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1008Log.final.out",
+                "P1234_1018": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1018Log.final.out",
+                "P1234_1019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1019Log.final.out",
+                "P1234_1022": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1022Log.final.out",
+                "P1234_1013": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1013Log.final.out",
+                "P1234_1014": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1014Log.final.out",
+                "P1234_1001": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1001Log.final.out",
+                "P1234_1006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1006Log.final.out",
+                "P1234_1007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1007Log.final.out",
+                "P1234_1015": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1015Log.final.out",
+                "P1234_1012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1012Log.final.out"
             }
         },
         "Cutadapt": {
             "all_sections": {
-                "P1234_1012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1012_2.fastq.gz_trimming_report.txt",
-                "P1234_1001": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1001_2.fastq.gz_trimming_report.txt",
-                "P1234_1007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1007_2.fastq.gz_trimming_report.txt",
-                "P1234_1014": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1014_2.fastq.gz_trimming_report.txt",
-                "P1234_1018": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1018_2.fastq.gz_trimming_report.txt",
-                "P1234_1015": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1015_2.fastq.gz_trimming_report.txt",
-                "P1234_1006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1006_2.fastq.gz_trimming_report.txt",
-                "P1234_1013": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1013_2.fastq.gz_trimming_report.txt",
-                "P1234_1022": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1022_1.fastq.gz_trimming_report.txt",
-                "P1234_1019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1019_2.fastq.gz_trimming_report.txt",
-                "P1234_1009": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1009_2.fastq.gz_trimming_report.txt",
-                "P1234_1021": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1021_1.fastq.gz_trimming_report.txt",
-                "P1234_1003": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1003_2.fastq.gz_trimming_report.txt",
-                "P1234_1010": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1010_2.fastq.gz_trimming_report.txt",
-                "P1234_1016": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1016_2.fastq.gz_trimming_report.txt",
-                "P1234_1005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1005_2.fastq.gz_trimming_report.txt",
-                "P1234_1008": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1008_2.fastq.gz_trimming_report.txt",
-                "P1234_1020": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1020_1.fastq.gz_trimming_report.txt",
-                "P1234_1004": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1004_2.fastq.gz_trimming_report.txt",
-                "P1234_1017": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1017_2.fastq.gz_trimming_report.txt",
-                "P1234_1011": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1011_2.fastq.gz_trimming_report.txt",
-                "P1234_1002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1002_2.fastq.gz_trimming_report.txt"
+                "P1234_1012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1012_2.fastq.gz_trimming_report.txt",
+                "P1234_1001": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1001_2.fastq.gz_trimming_report.txt",
+                "P1234_1007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1007_2.fastq.gz_trimming_report.txt",
+                "P1234_1014": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1014_2.fastq.gz_trimming_report.txt",
+                "P1234_1018": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1018_2.fastq.gz_trimming_report.txt",
+                "P1234_1015": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1015_2.fastq.gz_trimming_report.txt",
+                "P1234_1006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1006_2.fastq.gz_trimming_report.txt",
+                "P1234_1013": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1013_2.fastq.gz_trimming_report.txt",
+                "P1234_1022": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1022_1.fastq.gz_trimming_report.txt",
+                "P1234_1019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1019_2.fastq.gz_trimming_report.txt",
+                "P1234_1009": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1009_2.fastq.gz_trimming_report.txt",
+                "P1234_1021": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1021_1.fastq.gz_trimming_report.txt",
+                "P1234_1003": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1003_2.fastq.gz_trimming_report.txt",
+                "P1234_1010": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1010_2.fastq.gz_trimming_report.txt",
+                "P1234_1016": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1016_2.fastq.gz_trimming_report.txt",
+                "P1234_1005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1005_2.fastq.gz_trimming_report.txt",
+                "P1234_1008": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1008_2.fastq.gz_trimming_report.txt",
+                "P1234_1020": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1020_1.fastq.gz_trimming_report.txt",
+                "P1234_1004": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1004_2.fastq.gz_trimming_report.txt",
+                "P1234_1017": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1017_2.fastq.gz_trimming_report.txt",
+                "P1234_1011": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1011_2.fastq.gz_trimming_report.txt",
+                "P1234_1002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1002_2.fastq.gz_trimming_report.txt"
             }
         },
         "FastQC": {
             "all_sections": {
-                "P1234_1020": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1020_1_fastqc.zip",
-                "P1234_1022": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1022_2_fastqc.zip",
-                "P1234_1004": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1004_1_fastqc.zip",
-                "P1234_1013": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1013_2_fastqc.zip",
-                "P1234_1014": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1014_2_fastqc.zip",
-                "P1234_1003": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1003_1_fastqc.zip",
-                "P1234_1001": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1001_2_fastqc.zip",
-                "P1234_1016": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1016_1_fastqc.zip",
-                "P1234_1011": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1011_1_fastqc.zip",
-                "P1234_1006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1006_2_fastqc.zip",
-                "P1234_1021": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1021_1_fastqc.zip",
-                "P1234_1007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1007_2_fastqc.zip",
-                "P1234_1010": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1010_1_fastqc.zip",
-                "P1234_1017": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1017_1_fastqc.zip",
-                "P1234_1002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1002_1_fastqc.zip",
-                "P1234_1015": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1015_2_fastqc.zip",
-                "P1234_1012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1012_2_fastqc.zip",
-                "P1234_1005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1005_1_fastqc.zip",
-                "P1234_1018": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1018_2_fastqc.zip",
-                "P1234_1008": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1008_1_fastqc.zip",
-                "P1234_1009": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1009_1_fastqc.zip",
-                "P1234_1019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1019_2_fastqc.zip"
+                "P1234_1020": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1020_1_fastqc.zip",
+                "P1234_1022": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1022_2_fastqc.zip",
+                "P1234_1004": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1004_1_fastqc.zip",
+                "P1234_1013": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1013_2_fastqc.zip",
+                "P1234_1014": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1014_2_fastqc.zip",
+                "P1234_1003": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1003_1_fastqc.zip",
+                "P1234_1001": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1001_2_fastqc.zip",
+                "P1234_1016": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1016_1_fastqc.zip",
+                "P1234_1011": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1011_1_fastqc.zip",
+                "P1234_1006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1006_2_fastqc.zip",
+                "P1234_1021": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1021_1_fastqc.zip",
+                "P1234_1007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1007_2_fastqc.zip",
+                "P1234_1010": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1010_1_fastqc.zip",
+                "P1234_1017": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1017_1_fastqc.zip",
+                "P1234_1002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1002_1_fastqc.zip",
+                "P1234_1015": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1015_2_fastqc.zip",
+                "P1234_1012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1012_2_fastqc.zip",
+                "P1234_1005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1005_1_fastqc.zip",
+                "P1234_1018": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1018_2_fastqc.zip",
+                "P1234_1008": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1008_1_fastqc.zip",
+                "P1234_1009": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1009_1_fastqc.zip",
+                "P1234_1019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1019_2_fastqc.zip"
             }
         }
     },
@@ -1376,8 +1376,8 @@
                 "dmin": 0.0
             },
             "avg_sequence_length": {
-                "title": "Length",
-                "description": "Average Sequence Length (bp)",
+                "title": "Read Length",
+                "description": "Average Read Length (bp)",
                 "min": 0,
                 "suffix": " bp",
                 "scale": "RdYlGn",
@@ -1468,9 +1468,9 @@
             }
         }
     ],
-    "report_multiqc_command": "/Users/ewels/miniconda3/envs/py3/bin/multiqc . --test-db ngi_db_data.json",
+    "report_multiqc_command": "/opt/miniconda3/envs/py3.8/bin/multiqc . --test-db ngi_db_data.json",
     "report_plot_data": {
-        "mqc_hcplot_fthymgleuo": {
+        "log2CPM_sample_distances-plot": {
             "plot_type": "heatmap",
             "data": [
                 [
@@ -3946,12 +3946,13 @@
                 "title": "edgeR: Euclidean distances",
                 "xlab": true,
                 "reverseColors": true,
+                "id": "log2CPM_sample_distances-plot",
+                "save_data_file": false,
                 "min": 0.0,
-                "max": 414.329609555064,
-                "id": "mqc_hcplot_fthymgleuo"
+                "max": 414.329609555064
             }
         },
-        "mqc_hcplot_uwdzkjtsxq": {
+        "edgeR_MDS_plot_coordinates-plot": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -4071,7 +4072,8 @@
                 "xlab": "Leading",
                 "title": "MDS Plot",
                 "ylab": "logFC",
-                "id": "mqc_hcplot_uwdzkjtsxq"
+                "id": "edgeR_MDS_plot_coordinates-plot",
+                "save_data_file": false
             }
         },
         "star_alignment_plot": {
@@ -68122,6 +68124,670 @@
         }
     },
     "report_saved_raw_data": {
+        "multiqc_log2CPM_sample_distances-plot": [
+            [
+                0.0,
+                239.940437914469,
+                268.604948960133,
+                267.714602004173,
+                282.89216491166,
+                282.707528159854,
+                341.26853656399,
+                341.150822093225,
+                359.051296108815,
+                372.081129999755,
+                373.807988958169,
+                359.253041736668,
+                367.080509675963,
+                314.381127231521,
+                310.98242743491,
+                312.561134777208,
+                303.381928427726,
+                312.655950122157,
+                302.762573599734,
+                292.167066969818,
+                294.572961344805,
+                293.288272552177
+            ],
+            [
+                239.940437914469,
+                0.0,
+                295.262712560788,
+                279.053357626215,
+                294.972676108508,
+                297.748216346471,
+                379.152825995159,
+                379.867828287574,
+                393.331352100294,
+                412.150147079353,
+                414.329609555064,
+                390.11989230705,
+                398.781818465584,
+                361.543964335263,
+                357.615547155607,
+                359.893078552608,
+                349.408694208961,
+                356.268781918896,
+                340.307834651479,
+                369.186055374197,
+                372.444134406181,
+                371.331116408039
+            ],
+            [
+                268.604948960133,
+                295.262712560788,
+                0.0,
+                264.039350223083,
+                276.20101474261,
+                278.922732217053,
+                311.871265181689,
+                311.760981696486,
+                330.94126237073,
+                337.054881971598,
+                338.487820475545,
+                333.907854851162,
+                341.771899589035,
+                275.046009682132,
+                272.211254425395,
+                273.623060014811,
+                265.93895841821,
+                276.521715330059,
+                272.173094698459,
+                274.673785544438,
+                275.671768678502,
+                275.496829044432
+            ],
+            [
+                267.714602004173,
+                279.053357626215,
+                264.039350223083,
+                0.0,
+                282.267443927778,
+                283.823118799451,
+                323.311490120727,
+                324.438434661072,
+                341.891012959123,
+                350.416769945617,
+                351.803190578178,
+                344.228400888489,
+                352.508246753724,
+                295.723066349599,
+                292.974120604548,
+                294.662960141591,
+                263.737260377932,
+                292.334025858454,
+                284.242648621065,
+                293.253437407993,
+                295.026271625416,
+                294.418059506522
+            ],
+            [
+                282.89216491166,
+                294.972676108508,
+                276.20101474261,
+                282.267443927778,
+                0.0,
+                264.040847182406,
+                311.671036969052,
+                311.953373216992,
+                319.234272320548,
+                337.329013268118,
+                338.242244588782,
+                330.946322287932,
+                338.388466017231,
+                291.918856564267,
+                289.846698072987,
+                291.320203044258,
+                292.700808550857,
+                278.063096520265,
+                272.562821020745,
+                298.022019539675,
+                299.48645217007,
+                299.030143381904
+            ],
+            [
+                282.707528159854,
+                297.748216346471,
+                278.922732217053,
+                283.823118799451,
+                264.040847182406,
+                0.0,
+                312.100279555417,
+                311.440628563113,
+                318.616836690461,
+                336.908212078588,
+                338.110044642502,
+                331.067483194371,
+                338.690497278424,
+                290.243267373969,
+                287.58109359621,
+                289.379867837582,
+                290.955538998349,
+                278.986010339476,
+                273.594254419367,
+                298.422994551749,
+                299.718578742111,
+                298.973324186437
+            ],
+            [
+                341.26853656399,
+                379.152825995159,
+                311.871265181689,
+                323.311490120727,
+                311.671036969052,
+                312.100279555417,
+                0.0,
+                219.923583677615,
+                245.952318035338,
+                224.06991643562,
+                223.023388609776,
+                248.190015896999,
+                252.139440893847,
+                290.270232189914,
+                289.074777726217,
+                289.379897694867,
+                279.132231279957,
+                232.725822508156,
+                239.906293725809,
+                289.876948868303,
+                287.967405127582,
+                288.815990438883
+            ],
+            [
+                341.150822093225,
+                379.867828287574,
+                311.760981696486,
+                324.438434661072,
+                311.953373216992,
+                311.440628563113,
+                219.923583677615,
+                0.0,
+                247.605049574479,
+                224.347317697016,
+                222.89196865938,
+                250.149382176589,
+                253.756053489724,
+                290.327887850794,
+                288.55163020206,
+                289.433709143036,
+                278.752794643121,
+                230.110872589497,
+                238.368223348646,
+                289.152747766466,
+                287.644601731726,
+                288.846910751742
+            ],
+            [
+                359.051296108815,
+                393.331352100294,
+                330.94126237073,
+                341.891012959123,
+                319.234272320548,
+                318.616836690461,
+                245.952318035338,
+                247.605049574479,
+                0.0,
+                199.131840318507,
+                197.414789722058,
+                215.027865333323,
+                216.019551551917,
+                302.046511173301,
+                301.29290161399,
+                301.539492808978,
+                294.866472882346,
+                279.808869896445,
+                286.154413695706,
+                301.946937788322,
+                301.248483657845,
+                301.468339031941
+            ],
+            [
+                372.081129999755,
+                412.150147079353,
+                337.054881971598,
+                350.416769945617,
+                337.329013268118,
+                336.908212078588,
+                224.06991643562,
+                224.347317697016,
+                199.131840318507,
+                0.0,
+                127.534217267026,
+                173.437886869931,
+                171.653557051029,
+                296.31750914934,
+                296.027088916837,
+                296.250782529529,
+                288.252176261682,
+                261.30531126971,
+                271.251302046979,
+                291.724477184619,
+                289.413443822964,
+                290.083032604096
+            ],
+            [
+                373.807988958169,
+                414.329609555064,
+                338.487820475545,
+                351.803190578178,
+                338.242244588782,
+                338.110044642502,
+                223.023388609776,
+                222.89196865938,
+                197.414789722058,
+                127.534217267026,
+                0.0,
+                171.801717186108,
+                169.539821347799,
+                297.723848597034,
+                297.450176474568,
+                297.657158461094,
+                289.059274808271,
+                261.997394178217,
+                271.968045984978,
+                292.632478302495,
+                290.289187446546,
+                290.777311550753
+            ],
+            [
+                359.253041736668,
+                390.11989230705,
+                333.907854851162,
+                344.228400888489,
+                330.946322287932,
+                331.067483194371,
+                248.190015896999,
+                250.149382176589,
+                215.027865333323,
+                173.437886869931,
+                171.801717186108,
+                0.0,
+                167.624804271019,
+                302.823067085907,
+                302.952449170183,
+                303.628977747233,
+                297.698231346576,
+                280.625883521668,
+                286.580762576306,
+                302.833926609664,
+                302.044755124597,
+                301.493773550384
+            ],
+            [
+                367.080509675963,
+                398.781818465584,
+                341.771899589035,
+                352.508246753724,
+                338.388466017231,
+                338.690497278424,
+                252.139440893847,
+                253.756053489724,
+                216.019551551917,
+                171.653557051029,
+                169.539821347799,
+                167.624804271019,
+                0.0,
+                308.296475262108,
+                308.403148909685,
+                309.239647271566,
+                304.485853289156,
+                286.661274417986,
+                294.042474319143,
+                308.644471417713,
+                307.799555162072,
+                307.50798587843
+            ],
+            [
+                314.381127231521,
+                361.543964335263,
+                275.046009682132,
+                295.723066349599,
+                291.918856564267,
+                290.243267373969,
+                290.270232189914,
+                290.327887850794,
+                302.046511173301,
+                296.31750914934,
+                297.723848597034,
+                302.823067085907,
+                308.296475262108,
+                0.0,
+                99.4301333098318,
+                99.1700734959282,
+                262.853434830736,
+                250.957060864021,
+                253.413327802037,
+                241.832427359916,
+                240.407325109535,
+                240.181813096661
+            ],
+            [
+                310.98242743491,
+                357.615547155607,
+                272.211254425395,
+                292.974120604548,
+                289.846698072987,
+                287.58109359621,
+                289.074777726217,
+                288.55163020206,
+                301.29290161399,
+                296.027088916837,
+                297.450176474568,
+                302.952449170183,
+                308.403148909685,
+                99.4301333098318,
+                0.0,
+                98.9999446070175,
+                260.830448816704,
+                249.343913588523,
+                251.650535898544,
+                240.761329550732,
+                239.346100837956,
+                239.450899311183
+            ],
+            [
+                312.561134777208,
+                359.893078552608,
+                273.623060014811,
+                294.662960141591,
+                291.320203044258,
+                289.379867837582,
+                289.379897694867,
+                289.433709143036,
+                301.539492808978,
+                296.250782529529,
+                297.657158461094,
+                303.628977747233,
+                309.239647271566,
+                99.1700734959282,
+                98.9999446070175,
+                0.0,
+                260.777491640212,
+                250.083173413633,
+                252.461407799301,
+                240.938528423228,
+                238.90643235767,
+                238.854664606715
+            ],
+            [
+                303.381928427726,
+                349.408694208961,
+                265.93895841821,
+                263.737260377932,
+                292.700808550857,
+                290.955538998349,
+                279.132231279957,
+                278.752794643121,
+                294.866472882346,
+                288.252176261682,
+                289.059274808271,
+                297.698231346576,
+                304.485853289156,
+                262.853434830736,
+                260.830448816704,
+                260.777491640212,
+                0.0,
+                248.300092633748,
+                250.574494955521,
+                244.926755760456,
+                245.07971045563,
+                244.811785240318
+            ],
+            [
+                312.655950122157,
+                356.268781918896,
+                276.521715330059,
+                292.334025858454,
+                278.063096520265,
+                278.986010339476,
+                232.725822508156,
+                230.110872589497,
+                279.808869896445,
+                261.30531126971,
+                261.997394178217,
+                280.625883521668,
+                286.661274417986,
+                250.957060864021,
+                249.343913588523,
+                250.083173413633,
+                248.300092633748,
+                0.0,
+                185.774676246869,
+                256.000573632367,
+                254.228307983942,
+                254.704098514175
+            ],
+            [
+                302.762573599734,
+                340.307834651479,
+                272.173094698459,
+                284.242648621065,
+                272.562821020745,
+                273.594254419367,
+                239.906293725809,
+                238.368223348646,
+                286.154413695706,
+                271.251302046979,
+                271.968045984978,
+                286.580762576306,
+                294.042474319143,
+                253.413327802037,
+                251.650535898544,
+                252.461407799301,
+                250.574494955521,
+                185.774676246869,
+                0.0,
+                259.392501877951,
+                257.585728909986,
+                258.196625818846
+            ],
+            [
+                292.167066969818,
+                369.186055374197,
+                274.673785544438,
+                293.253437407993,
+                298.022019539675,
+                298.422994551749,
+                289.876948868303,
+                289.152747766466,
+                301.946937788322,
+                291.724477184619,
+                292.632478302495,
+                302.833926609664,
+                308.644471417713,
+                241.832427359916,
+                240.761329550732,
+                240.938528423228,
+                244.926755760456,
+                256.000573632367,
+                259.392501877951,
+                0.0,
+                153.08276588573,
+                154.880495386759
+            ],
+            [
+                294.572961344805,
+                372.444134406181,
+                275.671768678502,
+                295.026271625416,
+                299.48645217007,
+                299.718578742111,
+                287.967405127582,
+                287.644601731726,
+                301.248483657845,
+                289.413443822964,
+                290.289187446546,
+                302.044755124597,
+                307.799555162072,
+                240.407325109535,
+                239.346100837956,
+                238.90643235767,
+                245.07971045563,
+                254.228307983942,
+                257.585728909986,
+                153.08276588573,
+                0.0,
+                150.934771170206
+            ],
+            [
+                293.288272552177,
+                371.331116408039,
+                275.496829044432,
+                294.418059506522,
+                299.030143381904,
+                298.973324186437,
+                288.815990438883,
+                288.846910751742,
+                301.468339031941,
+                290.083032604096,
+                290.777311550753,
+                301.493773550384,
+                307.50798587843,
+                240.181813096661,
+                239.450899311183,
+                238.854664606715,
+                244.811785240318,
+                254.704098514175,
+                258.196625818846,
+                154.880495386759,
+                150.934771170206,
+                0.0
+            ]
+        ],
+        "multiqc_edgeR_MDS_plot_coordinates-plot": {
+            "P1234_1022": [
+                {
+                    "x": -4.21919963718974,
+                    "y": 0.670437937570677
+                }
+            ],
+            "P1234_1008": [
+                {
+                    "x": -0.453491566561855,
+                    "y": 1.54735850481518
+                }
+            ],
+            "P1234_1010": [
+                {
+                    "x": -0.753943417736887,
+                    "y": 0.308480754319913
+                }
+            ],
+            "P1234_1015": [
+                {
+                    "x": -0.324598230521037,
+                    "y": -0.488950622990984
+                }
+            ],
+            "P1234_1019": [
+                {
+                    "x": -0.955471873038356,
+                    "y": -0.345761256298819
+                }
+            ],
+            "P1234_1020": [
+                {
+                    "x": -1.02296055484796,
+                    "y": -0.24666830531767
+                }
+            ],
+            "P1234_1016": [
+                {
+                    "x": -0.19895545172353,
+                    "y": -0.42003836437659
+                }
+            ],
+            "P1234_1012": [
+                {
+                    "x": -0.825341984480684,
+                    "y": -0.211272402970524
+                }
+            ],
+            "P1234_1018": [
+                {
+                    "x": -0.497003982185954,
+                    "y": -0.337919196949836
+                }
+            ],
+            "P1234_1011": [
+                {
+                    "x": -0.767170801775801,
+                    "y": -0.198214108972149
+                }
+            ],
+            "P1234_1009": [
+                {
+                    "x": 0.175735404207547,
+                    "y": 0.647522180029732
+                }
+            ],
+            "P1234_1017": [
+                {
+                    "x": -0.459878794056753,
+                    "y": -0.366197722654261
+                }
+            ],
+            "P1234_1021": [
+                {
+                    "x": -0.677272727171738,
+                    "y": -0.298036432498213
+                }
+            ],
+            "P1234_1004": [
+                {
+                    "x": 2.18645721962275,
+                    "y": 2.4451605903074
+                }
+            ],
+            "P1234_1002": [
+                {
+                    "x": 1.96006144812559,
+                    "y": -2.41662562881144
+                }
+            ],
+            "P1234_1006": [
+                {
+                    "x": 2.19824416726762,
+                    "y": 2.45638115204907
+                }
+            ],
+            "P1234_1005": [
+                {
+                    "x": 2.16284450753463,
+                    "y": 2.41789993272983
+                }
+            ],
+            "P1234_1003": [
+                {
+                    "x": 1.92335812485117,
+                    "y": -2.41834205046298
+                }
+            ],
+            "P1234_1007": [
+                {
+                    "x": -0.471187513143918,
+                    "y": 0.0281360627176628
+                }
+            ],
+            "P1234_1001": [
+                {
+                    "x": 1.97912919061823,
+                    "y": -2.41778422794503
+                }
+            ],
+            "P1234_1014": [
+                {
+                    "x": -0.485887150722173,
+                    "y": -0.174859600697585
+                }
+            ],
+            "P1234_1013": [
+                {
+                    "x": -0.473466377071168,
+                    "y": -0.180707193593391
+                }
+            ]
+        },
         "multiqc_star": {
             "P1234_1021": {
                 "total_reads": 27997437.0,
@@ -69694,19 +70360,19 @@
         }
     },
     "config_analysis_dir_abs": [
-        "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna"
+        "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna"
     ],
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-07-05, 09:04",
+    "config_creation_date": "2022-02-08, 23:03",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": "This report has been generated by the <a href=\"https://github.com/SciLifeLab/NGI-RNAseq\" target=\"_blank\">NGI-RNAseq</a> analysis pipeline. Some additional functionality is added to the report using the <a href=\"https://github.com/ewels/MultiQC_NGI\" target=\"_blank\">MultiQC_NGI plugin</a>.\n",
     "config_report_header_info": null,
-    "config_script_path": "/Users/ewels/miniconda3/envs/py3/lib/python3.7/site-packages/multiqc/utils",
-    "config_short_version": "1.11",
+    "config_script_path": "/opt/miniconda3/envs/py3.8/lib/python3.8/site-packages/multiqc/utils",
+    "config_short_version": "1.12",
     "config_subtitle": null,
     "config_title": "P1234: Test_NGI_Project",
-    "config_version": "1.11"
+    "config_version": "1.12"
 }
