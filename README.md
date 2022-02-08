@@ -1,4 +1,4 @@
-# <img src="MultiQC_logo.png" width="300" title="MultiQC">
+# ![MultiQC](MultiQC_logo.png#gh-light-mode-only) ![MultiQC](public_html/images/MultiQC_logo.png#gh-dark-mode-only)
 
 **MultiQC is a tool to aggregate bioinformatics results across many
 samples into a single report.**
@@ -9,5 +9,5 @@ For more information, please see the [main MultiQC repository](https://github.co
 
 ## Development work
 
-To test locally, please run `docker-compose up` in the root directory.
+To test locally, please run `docker compose up` in the root directory.
 This will run a local web server, the website should then be viewable at <http://localhost:8888>

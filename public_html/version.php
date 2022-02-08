@@ -11,11 +11,19 @@ print($version);
 
 // Log version of tool that's asking
 if(isset($_GET['v'])){
+    // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
     $remote_version_pieces = explode(" ", $_GET['v']);
     $remote_version = $remote_version_pieces[0];
-    $remote_version = str_replace('.dev0', '.dev', $remote_version);
-    $dev = substr($remote_version, -3) == 'dev' ? 'dev' : '';
-    $remote_version = preg_replace('/[^\d\.]/', '', $remote_version).$dev;
+    // Collect the dev if it was in the original so that we can append it later
+    $dev = stripos($remote_version, 'dev') > 0 ? 'dev' : '';
+    // Strip dev0 so that we don't pick up the 0
+    $remote_version = str_replace('dev0', '' , $remote_version);
+    // Remove anything that's not numeric or a decimal
+    $remote_version = preg_replace('/[^\d\.]/', '', $remote_version);
+    // Remove trailing decimal
+    $remote_version = rtrim($remote_version, '.');
+    // Put back the 'dev' if we had it
+    $remote_version .= $dev;
 
     if ($remote_version == '') $remote_version = '< 0.5';
 
@@ -25,8 +33,8 @@ if(isset($_GET['v'])){
     if($db->connect_errno == 0){
 
         // Insert new record with querying version
-        $stmt = $db->prepare("INSERT INTO version_check (version, ip, addr) VALUES (?, ?, ?)");
-        $stmt->bind_param('sss',$remote_version, $_SERVER['REMOTE_ADDR'], gethostbyaddr($_SERVER['REMOTE_ADDR']));
+        $stmt = $db->prepare("INSERT INTO version_check (version) VALUES (?)");
+        $stmt->bind_param('s',$remote_version);
         $stmt->execute();
         $db->close();
 
