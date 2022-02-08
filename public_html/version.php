@@ -36,6 +36,21 @@ if(isset($_GET['v'])){
         $stmt = $db->prepare("INSERT INTO version_check (version) VALUES (?)");
         $stmt->bind_param('s',$remote_version);
         $stmt->execute();
+
+        // Increment week counter
+        $week_date = date('Y-m-d', strtotime('monday this week'));
+        $row_key = $week_date.'_'.$remote_version;
+        $week_stmt = $db->prepare("
+            INSERT INTO version_check_weekly (row_key, num_checks) VALUES (?, 1)
+            ON DUPLICATE KEY UPDATE num_checks = num_checks + 1
+        ");
+        $week_stmt->bind_param('s',$row_key);
+        $sql_exec = $week_stmt->execute();
+        $week_stmt->close();
+        if(!$sql_exec){
+            echo '<pre>'.$db->error.'</pre>';
+        }
+
         $db->close();
 
     }

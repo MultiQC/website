@@ -1,5 +1,4 @@
 <?php
-// Plot PyPI Downloads
 
 // Connect to the database
 $dbconfig = parse_ini_file("../config.ini");
@@ -7,43 +6,29 @@ $db = new mysqli('localhost', $dbconfig['user'], $dbconfig['password'], $dbconfi
 if($db->connect_errno > 0){ die('Unable to connect to database [' . $db->connect_error . ']'); }
 
 // Usage per week, by version
-$releases = array_map('trim', explode("\n", file_get_contents('/home/multiqc/all_versions.txt')));
-foreach($releases as $k => $v){
-  $releases[$k] = str_replace("v", "", $v);
-}
-$unrecognised_versions = [];
-$releases = array_filter($releases, 'strlen'); // remove empty values
-// Subtract one day from the date as MySQL starts weeks on a Sunday
-if ($result = $db->query("
-  SELECT `version`, COUNT(*) as `version_count`, DATE_FORMAT(`date`, \"%Y-%m-%d\") as `date` from `version_check`
-    GROUP BY `version`, WEEK(DATE_SUB(`date`, INTERVAL 1 DAY))
-    ORDER BY `date` ASC, `version` ASC"
-)) {
+if ($result = $db->query("SELECT `row_key`,`num_checks` from `version_check_weekly`")) {
     $versions_by_week = [];
     while ($row = $result->fetch_assoc()) {
-      $v = str_replace('.dev', '', $row['version']);
-      $v = trim(str_replace('dev', '', $v));
-      $v = rtrim($v, '.');
-      if(!in_array($v, $releases)){
-        $unrecognised_versions[$v] += $row['version_count'] / 2; // divide by 2 as we count them again below
-        $v = 'unrecognised';
-      }
-      if(!array_key_exists($v, $versions_by_week)){
-        $versions_by_week[$v] = array(
+      list($week, $version) = explode("_", $row['row_key'], 2);
+      $version = str_replace('.dev', 'dev', $version);
+      $version = rtrim($version, '.');
+      if(!array_key_exists($version, $versions_by_week)){
+        $versions_by_week[$version] = array(
           'x' => [],
           'y' => [],
-          'name' => $v,
+          'name' => $version,
           'type' => 'bar'
         );
       }
-      $versions_by_week[$v]['x'][] = $row['date'];
-      $versions_by_week[$v]['y'][] = $row['version_count'];
+      $versions_by_week[$version]['x'][] = $week;
+      $versions_by_week[$version]['y'][] = $row['num_checks'];
     }
     $result->close();
+
     // Sort the versions
     ksort($versions_by_week);
 } else {
-  echo '<h1>SQL query failed!</h1>';
+  echo '<h1>SQL query for version checks two failed!</h1>';
   echo '<pre>'.$db->error.'</pre>';
 }
 
@@ -59,7 +44,7 @@ if ($result = $db->query("SELECT COUNT(*) as `count`, HOUR(`date`) as `h`, DATE(
     $usage_per_hour['hits']['y'][] = $row['count'];
   }
 } else {
-  echo '<h1>SQL query failed!</h1>';
+  echo '<h1>SQL query for hourly checks failed!</h1>';
   echo '<pre>'.$db->error.'</pre>';
 }
 
@@ -135,16 +120,10 @@ if ($result = $db->query("SELECT COUNT(*) as `count`, HOUR(`date`) as `h`, DATE(
         <p>When MultiQC runs, it checks <code>multiqc.info</code> for the latest released version so that it can issue a warning if the software is out of date.
           The website records the date of each check, along with the version of MultiQC that was running. This allows us to roughly plot usage.</p>
   			<p>Note that numbers should be taken with a large pinch of suspicion. For example, it won't count people running offline of those who have opted-out of the check.</p>
-        <p>Development versions are merged into main release numbers for the plot. <em>eg.</em> <code>v1.1dev</code> shows as <code>1.1</code>.</p>
         <div id="versions_by_week" style="height:450px;"></div>
 
         <h2>Visitor Checks Per Hour</h2>
         <div id="hits_per_hour" style="height:450px;"></div>
-
-        <h2>Unrecognised version numbers</h2>
-        <p>List of MultiQC version numbers that don't match a known release after cleanup. Associated value is the
-          count of how many times that was seen.</p>
-        <pre><?php arsort($unrecognised_versions); print_r($unrecognised_versions); ?></pre>
 
       </div>
     </div>
