@@ -11,3 +11,4 @@ For more information, please see the [main MultiQC repository](https://github.co
 
 To test locally, please run `docker compose up` in the root directory.
 This will run a local web server, the website should then be viewable at <http://localhost:8888>
+Note that no database is included in this development setup currently.
