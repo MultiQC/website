@@ -125,13 +125,26 @@ if(count($md_parts) == 3){
                   <iframe id="multiqc-video" class="embed-responsive-item" src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
                 </div>
               </div>
-              <div class="col-md-6">
-                <ul class="list-switch left video-chooser">
-                  <li><a href="https://youtu.be/BbScv9TcaMg" data-src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" class="active"><span class="hidden-lg hidden-md label label-default">Video</span> Introduction to MultiQC <em>(1:19)</em></a></li>
-                  <li><a href="https://youtu.be/Gg5neIPuiVo" data-src="https://www.youtube.com/embed/Gg5neIPuiVo?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(4:33)</em></a></li>
-                  <li><a href="https://youtu.be/cktKbESOOno" data-src="https://www.youtube.com/embed/cktKbESOOno?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Running MultiQC <em>(5:21)</em></a></li>
-                  <li><a href="https://youtu.be/qPbIlO_KWN0" data-src="https://www.youtube.com/embed/qPbIlO_KWN0?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC Reports <em>(6:06)</em></a></li>
-                </ul>
+              <div class="col-md-6" id="multiqc-videos">
+                <div class="btn-group btn-group-xs video-chooser-lang-btn-group" role="group" aria-label="...">
+                  <a type="button" class="btn btn-dark" href="#videos-english">English 🇬🇧</a>
+                  <a type="button" class="btn btn-dark" href="#videos-spanish">Español 🇪🇸</a>
+                </div>
+                <div class="video-lang-buttons" id="videos-english" aria-expanded="true">
+                  <ul class="list-switch left video-chooser">
+                    <li><a href="https://youtu.be/BbScv9TcaMg" data-src="https://www.youtube.com/embed/BbScv9TcaMg?rel=0&amp;showinfo=0" class="active"><span class="hidden-lg hidden-md label label-default">Video</span> Introduction to MultiQC <em>(1:19)</em></a></li>
+                    <li><a href="https://youtu.be/Gg5neIPuiVo" data-src="https://www.youtube.com/embed/Gg5neIPuiVo?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Installing MultiQC <em>(4:33)</em></a></li>
+                    <li><a href="https://youtu.be/cktKbESOOno" data-src="https://www.youtube.com/embed/cktKbESOOno?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Running MultiQC <em>(5:21)</em></a></li>
+                    <li><a href="https://youtu.be/qPbIlO_KWN0" data-src="https://www.youtube.com/embed/qPbIlO_KWN0?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Using MultiQC Reports <em>(6:06)</em></a></li>
+                  </ul>
+                </div>
+                <div class="video-lang-buttons" id="videos-spanish" aria-expanded="false" style="display:none;">
+                  <ul class="list-switch left video-chooser">
+                    <li><a href="https://youtu.be/BbScv9TcaMg" data-src="https://www.youtube.com/embed/WX_qVhJ32g0?rel=0&amp;showinfo=0" class="active"><span class="hidden-lg hidden-md label label-default">Video</span> Introducción a MultiQC <em>(1:43)</em></a></li>
+                    <li><a href="https://youtu.be/Gg5neIPuiVo" data-src="https://www.youtube.com/embed/E_NJCxwXAGQ?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> Instalación de MultiQC <em>(4:19)</em></a></li>
+                    <li><a href="https://youtu.be/cktKbESOOno" data-src="https://www.youtube.com/embed/0MfW7Y8Ocak?rel=0&amp;showinfo=0"><span class="hidden-lg hidden-md label label-default">Video</span> ¿Cómo ejecutar MultiQC? <em>(5:53)</em></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
 

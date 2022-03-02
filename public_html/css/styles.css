@@ -249,7 +249,18 @@ code .comment {
   }
 }
 
-
+.video-chooser-lang-btn-group {
+  margin-left: 21px;
+}
+.btn-dark {
+  background-color: #444;
+  border-color: #292929;
+  color: #ccc;
+}
+.btn-dark:hover, .btn-dark:active, .btn-dark:focus {
+  background-color: #555;
+  color: #ccc;
+}
 #iframe_browser {
   width: 100%;
   height: 630px;

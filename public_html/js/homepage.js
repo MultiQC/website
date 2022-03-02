@@ -20,6 +20,13 @@ $(function () {
       $('#multiqc-video').attr('src', $(this).data('src'));
     }
   });
+  // Video languages
+  $('.video-chooser-lang-btn-group a').click(function (e) {
+    e.preventDefault();
+    $('.video-lang-buttons').hide();
+    $($(this).attr('href')).show();
+    $($(this).attr('href') + ' ul li:first a').trigger("click");
+  });
 
   // iFrame demo window buttons
   $('#iframe_browser_buttons span:first-of-type, #iframe_browser_buttons span:nth-of-type(2)').click(function(e){
