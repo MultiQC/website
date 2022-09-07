@@ -2,36 +2,36 @@
     "report_data_sources": {
         "HiCUP": {
             "all_sections": {
-                "Sample-3.A006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/HiCUP/HiCUP_summary_report_15-53-36_21-03-2016.txt",
-                "Sample-3.A012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/HiCUP/HiCUP_summary_report_15-53-36_21-03-2016.txt",
-                "Sample-2.A002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
-                "Sample-2.A005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
-                "Sample-2.A006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
-                "Sample-2.A012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
-                "Sample-2.A019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
-                "Sample-1.A002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
-                "Sample-1.A005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
-                "Sample-1.A006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
-                "Sample-1.A007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
-                "Sample-1.A012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
-                "Sample-1.A019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt"
+                "Sample-3.A006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/HiCUP/HiCUP_summary_report_15-53-36_21-03-2016.txt",
+                "Sample-3.A012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/HiCUP/HiCUP_summary_report_15-53-36_21-03-2016.txt",
+                "Sample-2.A002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
+                "Sample-2.A005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
+                "Sample-2.A006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
+                "Sample-2.A012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
+                "Sample-2.A019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/HiCUP/HiCUP_summary_report_18-19-10_14-03-2016.txt",
+                "Sample-1.A002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
+                "Sample-1.A005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
+                "Sample-1.A006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
+                "Sample-1.A007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
+                "Sample-1.A012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt",
+                "Sample-1.A019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/HiCUP/HiCUP_summary_report_17-27-31_15-03-2016.txt"
             }
         },
         "FastQC": {
             "all_sections": {
-                "Sample-3.A006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/FASTQC/Sample-3.A006.C8H0KANXX.s_2.r_1_fastqc.zip",
-                "Sample-3.A012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/FASTQC/Sample-3.A012.C8H0KANXX.s_2.r_2_fastqc.zip",
-                "Sample-2.A002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A002.C8LFMANXX.s_3.r_1_fastqc.zip",
-                "Sample-2.A019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A019.C8LFMANXX.s_3.r_1_fastqc.zip",
-                "Sample-2.A005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A005.C8LFMANXX.s_3.r_2_fastqc.zip",
-                "Sample-2.A006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A006.C8LFMANXX.s_3.r_2_fastqc.zip",
-                "Sample-2.A012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A012.C8LFMANXX.s_3.r_1_fastqc.zip",
-                "Sample-1.A005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A005.C8DRAANXX.s_2.r_1_fastqc.zip",
-                "Sample-1.A006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A006.C8DRAANXX.s_2.r_1_fastqc.zip",
-                "Sample-1.A007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A007.C8DRAANXX.s_2.r_2_fastqc.zip",
-                "Sample-1.A012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A012.C8DRAANXX.s_2.r_2_fastqc.zip",
-                "Sample-1.A002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A002.C8DRAANXX.s_2.r_2_fastqc.zip",
-                "Sample-1.A019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A019.C8DRAANXX.s_2.r_2_fastqc.zip"
+                "Sample-3.A006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/FASTQC/Sample-3.A006.C8H0KANXX.s_2.r_1_fastqc.zip",
+                "Sample-3.A012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-3/FASTQC/Sample-3.A012.C8H0KANXX.s_2.r_2_fastqc.zip",
+                "Sample-2.A002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A002.C8LFMANXX.s_3.r_1_fastqc.zip",
+                "Sample-2.A019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A019.C8LFMANXX.s_3.r_1_fastqc.zip",
+                "Sample-2.A005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A005.C8LFMANXX.s_3.r_2_fastqc.zip",
+                "Sample-2.A006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A006.C8LFMANXX.s_3.r_2_fastqc.zip",
+                "Sample-2.A012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-2/FASTQC/Sample-2.A012.C8LFMANXX.s_3.r_1_fastqc.zip",
+                "Sample-1.A005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A005.C8DRAANXX.s_2.r_1_fastqc.zip",
+                "Sample-1.A006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A006.C8DRAANXX.s_2.r_1_fastqc.zip",
+                "Sample-1.A007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A007.C8DRAANXX.s_2.r_2_fastqc.zip",
+                "Sample-1.A012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A012.C8DRAANXX.s_2.r_2_fastqc.zip",
+                "Sample-1.A002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A002.C8DRAANXX.s_2.r_2_fastqc.zip",
+                "Sample-1.A019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c/data/Sample-1/FASTQC/Sample-1.A019.C8DRAANXX.s_2.r_2_fastqc.zip"
             }
         }
     },
@@ -880,7 +880,7 @@
             }
         }
     ],
-    "report_multiqc_command": "/opt/miniconda3/envs/py3.8/bin/multiqc . --disable-ngi -t default",
+    "report_multiqc_command": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/bin/multiqc . --disable-ngi -t default",
     "report_plot_data": {
         "hicup_truncated_reads_plot": {
             "plot_type": "bar_graph",
@@ -26533,19 +26533,19 @@
         }
     },
     "config_analysis_dir_abs": [
-        "/Users/phil/GitHub/MultiQC/website/public_html/examples/hi-c"
+        "/Users/ewels/GitHub/MultiQC/website/public_html/examples/hi-c"
     ],
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2022-02-08, 23:02",
+    "config_creation_date": "2022-09-07, 17:05 CEST",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/opt/miniconda3/envs/py3.8/lib/python3.8/site-packages/multiqc/utils",
-    "config_short_version": "1.12",
+    "config_script_path": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/lib/python3.10/site-packages/multiqc/utils",
+    "config_short_version": "1.13",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.12"
+    "config_version": "1.13"
 }

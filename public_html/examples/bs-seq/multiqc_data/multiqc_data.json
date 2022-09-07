@@ -2,68 +2,68 @@
     "report_data_sources": {
         "Bismark": {
             "alignment": {
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.txt"
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2_SE_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2_SE_report.txt"
             },
             "deduplication": {
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt"
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplication_report.txt"
             },
             "methylation_extraction": {
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt"
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.bam_splitting_report.txt"
             },
             "m_bias": {
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt"
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed.fq.gz_bismark_bt2.deduplicated.M-bias.txt"
             }
         },
         "Cutadapt": {
             "all_sections": {
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt",
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt"
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1.fastq.gz_trimming_report.txt",
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1.fastq.gz_trimming_report.txt"
             }
         },
         "FastQC": {
             "all_sections": {
-                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.zip",
-                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.zip"
+                "MethylC-Seq_mm_fc_1wk_SRR921770_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921770_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_1wk_SRR921769_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921769_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_1wk_SRR921767_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921767_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_2wk_SRR921694_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921694_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_1wk_SRR921768_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_1wk_SRR921768_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_2wk_SRR921773_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921773_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_2wk_SRR921695_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921695_1_trimmed_fastqc.zip",
+                "MethylC-Seq_mm_fc_2wk_SRR921696_1": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/data/MethylC-Seq_mm_fc_2wk_SRR921696_1_trimmed_fastqc.zip"
             }
         }
     },
@@ -853,7 +853,7 @@
             }
         }
     ],
-    "report_multiqc_command": "/opt/miniconda3/envs/py3.8/bin/multiqc . --disable-ngi -t default",
+    "report_multiqc_command": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/bin/multiqc . --disable-ngi -t default",
     "report_plot_data": {
         "bismark_alignment": {
             "plot_type": "bar_graph",
@@ -31615,19 +31615,19 @@
         }
     },
     "config_analysis_dir_abs": [
-        "/Users/phil/GitHub/MultiQC/website/public_html/examples/bs-seq"
+        "/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq"
     ],
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2022-02-08, 23:02",
+    "config_creation_date": "2022-09-07, 17:05 CEST",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/opt/miniconda3/envs/py3.8/lib/python3.8/site-packages/multiqc/utils",
-    "config_short_version": "1.12",
+    "config_script_path": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/lib/python3.10/site-packages/multiqc/utils",
+    "config_short_version": "1.13",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.12"
+    "config_version": "1.13"
 }

@@ -2,80 +2,80 @@
     "report_data_sources": {
         "STAR": {
             "SummaryLog": {
-                "P1234_1021": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1021Log.final.out",
-                "P1234_1002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1002Log.final.out",
-                "P1234_1005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1005Log.final.out",
-                "P1234_1010": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1010Log.final.out",
-                "P1234_1017": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1017Log.final.out",
-                "P1234_1020": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1020Log.final.out",
-                "P1234_1016": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1016Log.final.out",
-                "P1234_1011": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1011Log.final.out",
-                "P1234_1004": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1004Log.final.out",
-                "P1234_1003": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1003Log.final.out",
-                "P1234_1009": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1009Log.final.out",
-                "P1234_1008": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1008Log.final.out",
-                "P1234_1018": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1018Log.final.out",
-                "P1234_1019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1019Log.final.out",
-                "P1234_1022": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1022Log.final.out",
-                "P1234_1013": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1013Log.final.out",
-                "P1234_1014": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1014Log.final.out",
-                "P1234_1001": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1001Log.final.out",
-                "P1234_1006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1006Log.final.out",
-                "P1234_1007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1007Log.final.out",
-                "P1234_1015": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1015Log.final.out",
-                "P1234_1012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1012Log.final.out"
+                "P1234_1021": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1021Log.final.out",
+                "P1234_1002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1002Log.final.out",
+                "P1234_1005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1005Log.final.out",
+                "P1234_1010": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1010Log.final.out",
+                "P1234_1017": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1017Log.final.out",
+                "P1234_1020": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1020Log.final.out",
+                "P1234_1016": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1016Log.final.out",
+                "P1234_1011": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1011Log.final.out",
+                "P1234_1004": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1004Log.final.out",
+                "P1234_1003": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1003Log.final.out",
+                "P1234_1009": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1009Log.final.out",
+                "P1234_1008": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1008Log.final.out",
+                "P1234_1018": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1018Log.final.out",
+                "P1234_1019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1019Log.final.out",
+                "P1234_1022": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1022Log.final.out",
+                "P1234_1013": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1013Log.final.out",
+                "P1234_1014": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1014Log.final.out",
+                "P1234_1001": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1001Log.final.out",
+                "P1234_1006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1006Log.final.out",
+                "P1234_1007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1007Log.final.out",
+                "P1234_1015": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1015Log.final.out",
+                "P1234_1012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/STAR/P1234_1012Log.final.out"
             }
         },
         "Cutadapt": {
             "all_sections": {
-                "P1234_1012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1012_2.fastq.gz_trimming_report.txt",
-                "P1234_1001": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1001_2.fastq.gz_trimming_report.txt",
-                "P1234_1007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1007_2.fastq.gz_trimming_report.txt",
-                "P1234_1014": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1014_2.fastq.gz_trimming_report.txt",
-                "P1234_1018": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1018_2.fastq.gz_trimming_report.txt",
-                "P1234_1015": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1015_2.fastq.gz_trimming_report.txt",
-                "P1234_1006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1006_2.fastq.gz_trimming_report.txt",
-                "P1234_1013": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1013_2.fastq.gz_trimming_report.txt",
-                "P1234_1022": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1022_1.fastq.gz_trimming_report.txt",
-                "P1234_1019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1019_2.fastq.gz_trimming_report.txt",
-                "P1234_1009": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1009_2.fastq.gz_trimming_report.txt",
-                "P1234_1021": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1021_1.fastq.gz_trimming_report.txt",
-                "P1234_1003": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1003_2.fastq.gz_trimming_report.txt",
-                "P1234_1010": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1010_2.fastq.gz_trimming_report.txt",
-                "P1234_1016": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1016_2.fastq.gz_trimming_report.txt",
-                "P1234_1005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1005_2.fastq.gz_trimming_report.txt",
-                "P1234_1008": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1008_2.fastq.gz_trimming_report.txt",
-                "P1234_1020": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1020_1.fastq.gz_trimming_report.txt",
-                "P1234_1004": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1004_2.fastq.gz_trimming_report.txt",
-                "P1234_1017": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1017_2.fastq.gz_trimming_report.txt",
-                "P1234_1011": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1011_2.fastq.gz_trimming_report.txt",
-                "P1234_1002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1002_2.fastq.gz_trimming_report.txt"
+                "P1234_1012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1012_2.fastq.gz_trimming_report.txt",
+                "P1234_1001": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1001_2.fastq.gz_trimming_report.txt",
+                "P1234_1007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1007_2.fastq.gz_trimming_report.txt",
+                "P1234_1014": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1014_2.fastq.gz_trimming_report.txt",
+                "P1234_1018": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1018_2.fastq.gz_trimming_report.txt",
+                "P1234_1015": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1015_2.fastq.gz_trimming_report.txt",
+                "P1234_1006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1006_2.fastq.gz_trimming_report.txt",
+                "P1234_1013": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1013_2.fastq.gz_trimming_report.txt",
+                "P1234_1022": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1022_1.fastq.gz_trimming_report.txt",
+                "P1234_1019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1019_2.fastq.gz_trimming_report.txt",
+                "P1234_1009": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1009_2.fastq.gz_trimming_report.txt",
+                "P1234_1021": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1021_1.fastq.gz_trimming_report.txt",
+                "P1234_1003": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1003_2.fastq.gz_trimming_report.txt",
+                "P1234_1010": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1010_2.fastq.gz_trimming_report.txt",
+                "P1234_1016": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1016_2.fastq.gz_trimming_report.txt",
+                "P1234_1005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1005_2.fastq.gz_trimming_report.txt",
+                "P1234_1008": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1008_2.fastq.gz_trimming_report.txt",
+                "P1234_1020": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1020_1.fastq.gz_trimming_report.txt",
+                "P1234_1004": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1004_2.fastq.gz_trimming_report.txt",
+                "P1234_1017": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1017_2.fastq.gz_trimming_report.txt",
+                "P1234_1011": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1011_2.fastq.gz_trimming_report.txt",
+                "P1234_1002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/trim_galore/P1234_1002_2.fastq.gz_trimming_report.txt"
             }
         },
         "FastQC": {
             "all_sections": {
-                "P1234_1020": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1020_1_fastqc.zip",
-                "P1234_1022": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1022_2_fastqc.zip",
-                "P1234_1004": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1004_1_fastqc.zip",
-                "P1234_1013": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1013_2_fastqc.zip",
-                "P1234_1014": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1014_2_fastqc.zip",
-                "P1234_1003": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1003_1_fastqc.zip",
-                "P1234_1001": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1001_2_fastqc.zip",
-                "P1234_1016": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1016_1_fastqc.zip",
-                "P1234_1011": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1011_1_fastqc.zip",
-                "P1234_1006": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1006_2_fastqc.zip",
-                "P1234_1021": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1021_1_fastqc.zip",
-                "P1234_1007": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1007_2_fastqc.zip",
-                "P1234_1010": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1010_1_fastqc.zip",
-                "P1234_1017": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1017_1_fastqc.zip",
-                "P1234_1002": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1002_1_fastqc.zip",
-                "P1234_1015": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1015_2_fastqc.zip",
-                "P1234_1012": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1012_2_fastqc.zip",
-                "P1234_1005": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1005_1_fastqc.zip",
-                "P1234_1018": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1018_2_fastqc.zip",
-                "P1234_1008": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1008_1_fastqc.zip",
-                "P1234_1009": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1009_1_fastqc.zip",
-                "P1234_1019": "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1019_2_fastqc.zip"
+                "P1234_1020": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1020_1_fastqc.zip",
+                "P1234_1022": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1022_2_fastqc.zip",
+                "P1234_1004": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1004_1_fastqc.zip",
+                "P1234_1013": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1013_2_fastqc.zip",
+                "P1234_1014": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1014_2_fastqc.zip",
+                "P1234_1003": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1003_1_fastqc.zip",
+                "P1234_1001": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1001_2_fastqc.zip",
+                "P1234_1016": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1016_1_fastqc.zip",
+                "P1234_1011": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1011_1_fastqc.zip",
+                "P1234_1006": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1006_2_fastqc.zip",
+                "P1234_1021": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1021_1_fastqc.zip",
+                "P1234_1007": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1007_2_fastqc.zip",
+                "P1234_1010": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1010_1_fastqc.zip",
+                "P1234_1017": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1017_1_fastqc.zip",
+                "P1234_1002": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1002_1_fastqc.zip",
+                "P1234_1015": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1015_2_fastqc.zip",
+                "P1234_1012": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1012_2_fastqc.zip",
+                "P1234_1005": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1005_1_fastqc.zip",
+                "P1234_1018": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1018_2_fastqc.zip",
+                "P1234_1008": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1008_1_fastqc.zip",
+                "P1234_1009": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1009_1_fastqc.zip",
+                "P1234_1019": "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna/data/fastqc/P1234_1019_2_fastqc.zip"
             }
         }
     },
@@ -1468,9 +1468,9 @@
             }
         }
     ],
-    "report_multiqc_command": "/opt/miniconda3/envs/py3.8/bin/multiqc . --test-db ngi_db_data.json",
+    "report_multiqc_command": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/bin/multiqc . --test-db ngi_db_data.json",
     "report_plot_data": {
-        "log2CPM_sample_distances-plot": {
+        "sample-similarity-plot": {
             "plot_type": "heatmap",
             "data": [
                 [
@@ -3946,13 +3946,13 @@
                 "title": "edgeR: Euclidean distances",
                 "xlab": true,
                 "reverseColors": true,
-                "id": "log2CPM_sample_distances-plot",
+                "id": "sample-similarity-plot",
                 "save_data_file": false,
                 "min": 0.0,
                 "max": 414.329609555064
             }
         },
-        "edgeR_MDS_plot_coordinates-plot": {
+        "edgeR-sample-distances-plot": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -4072,7 +4072,7 @@
                 "xlab": "Leading",
                 "title": "MDS Plot",
                 "ylab": "logFC",
-                "id": "edgeR_MDS_plot_coordinates-plot",
+                "id": "edgeR-sample-distances-plot",
                 "save_data_file": false
             }
         },
@@ -68124,7 +68124,7 @@
         }
     },
     "report_saved_raw_data": {
-        "multiqc_log2CPM_sample_distances-plot": [
+        "multiqc_sample-similarity-plot": [
             [
                 0.0,
                 239.940437914469,
@@ -68654,7 +68654,7 @@
                 0.0
             ]
         ],
-        "multiqc_edgeR_MDS_plot_coordinates-plot": {
+        "multiqc_edgeR-sample-distances-plot": {
             "P1234_1022": [
                 {
                     "x": -4.21919963718974,
@@ -70360,19 +70360,19 @@
         }
     },
     "config_analysis_dir_abs": [
-        "/Users/phil/GitHub/MultiQC/website/public_html/examples/ngi-rna"
+        "/Users/ewels/GitHub/MultiQC/website/public_html/examples/ngi-rna"
     ],
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2022-02-08, 23:03",
+    "config_creation_date": "2022-09-07, 17:06 CEST",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": "This report has been generated by the <a href=\"https://github.com/SciLifeLab/NGI-RNAseq\" target=\"_blank\">NGI-RNAseq</a> analysis pipeline. Some additional functionality is added to the report using the <a href=\"https://github.com/ewels/MultiQC_NGI\" target=\"_blank\">MultiQC_NGI plugin</a>.\n",
     "config_report_header_info": null,
-    "config_script_path": "/opt/miniconda3/envs/py3.8/lib/python3.8/site-packages/multiqc/utils",
-    "config_short_version": "1.12",
+    "config_script_path": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/lib/python3.10/site-packages/multiqc/utils",
+    "config_short_version": "1.13",
     "config_subtitle": null,
     "config_title": "P1234: Test_NGI_Project",
-    "config_version": "1.12"
+    "config_version": "1.13"
 }

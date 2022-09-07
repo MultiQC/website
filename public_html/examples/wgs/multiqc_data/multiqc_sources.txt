@@ -1,55 +1,55 @@
 Module	Section	Sample Name	Source
-QualiMap	genome_results	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/genome_results.txt
-QualiMap	genome_results	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/genome_results.txt
-QualiMap	genome_results	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/genome_results.txt
-QualiMap	genome_results	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/genome_results.txt
-QualiMap	genome_results	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/genome_results.txt
-QualiMap	genome_results	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/genome_results.txt
-QualiMap	coverage_histogram	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
-QualiMap	coverage_histogram	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
-QualiMap	coverage_histogram	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
-QualiMap	coverage_histogram	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
-QualiMap	coverage_histogram	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
-QualiMap	coverage_histogram	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
-QualiMap	insert_size_histogram	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
-QualiMap	insert_size_histogram	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
-QualiMap	insert_size_histogram	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
-QualiMap	insert_size_histogram	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
-QualiMap	insert_size_histogram	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
-QualiMap	insert_size_histogram	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
-QualiMap	mapped_gc_distribution	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
-QualiMap	mapped_gc_distribution	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
-QualiMap	mapped_gc_distribution	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
-QualiMap	mapped_gc_distribution	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
-QualiMap	mapped_gc_distribution	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
-QualiMap	mapped_gc_distribution	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
-SnpEff	all_sections	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
-SnpEff	all_sections	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1003.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
-SnpEff	all_sections	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
-SnpEff	all_sections	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1002.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
-SnpEff	all_sections	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
-SnpEff	all_sections	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
-GATK	varianteval	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.snp.eval
-GATK	varianteval	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1002.clean.dedup.recal.bam.snp.eval
-GATK	varianteval	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1003.clean.dedup.recal.bam.snp.eval
-GATK	varianteval	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.eval
-GATK	varianteval	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.snp.eval
-GATK	varianteval	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.snp.eval
-Picard	DuplicationMetrics	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1001.metrics
-Picard	DuplicationMetrics	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1002.metrics
-Picard	DuplicationMetrics	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1003.metrics
-Picard	DuplicationMetrics	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1006.metrics
-Picard	DuplicationMetrics	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1005.metrics
-Picard	DuplicationMetrics	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1004.metrics
-FastQ Screen	all_sections	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1003/fastq_screen/P4107_1003_S3_L004_R2_001_screen.txt
-FastQ Screen	all_sections	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1004/fastq_screen/P4107_1004_S4_L005_R2_001_screen.txt
-FastQ Screen	all_sections	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1005/fastq_screen/P4107_1005_S5_L006_R1_001_screen.txt
-FastQ Screen	all_sections	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1002/fastq_screen/P4107_1002_S2_L003_R1_001_screen.txt
-FastQ Screen	all_sections	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001_screen.txt
-FastQ Screen	all_sections	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1006/fastq_screen/P4107_1006_S6_L007_R1_001_screen.txt
-FastQC	all_sections	P4107_1003	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1003/fastqc/P4107_1003_S3_L004_R1_001_fastqc.zip
-FastQC	all_sections	P4107_1004	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1004/fastqc/P4107_1004_S4_L005_R1_001_fastqc.zip
-FastQC	all_sections	P4107_1005	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1005/fastqc/P4107_1005_S5_L006_R2_001_fastqc.zip
-FastQC	all_sections	P4107_1002	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1002/fastqc/P4107_1002_S2_L003_R2_001_fastqc.zip
-FastQC	all_sections	P4107_1001	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1001/fastqc/P4107_1001_S1_L002_R2_001_fastqc.zip
-FastQC	all_sections	P4107_1006	/Users/phil/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1006/fastqc/P4107_1006_S6_L007_R2_001_fastqc.zip
+QualiMap	genome_results	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/genome_results.txt
+QualiMap	genome_results	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/genome_results.txt
+QualiMap	genome_results	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/genome_results.txt
+QualiMap	genome_results	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/genome_results.txt
+QualiMap	genome_results	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/genome_results.txt
+QualiMap	genome_results	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/genome_results.txt
+QualiMap	coverage_histogram	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
+QualiMap	coverage_histogram	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
+QualiMap	coverage_histogram	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
+QualiMap	coverage_histogram	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
+QualiMap	coverage_histogram	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
+QualiMap	coverage_histogram	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/raw_data_qualimapReport/coverage_histogram.txt
+QualiMap	insert_size_histogram	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
+QualiMap	insert_size_histogram	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
+QualiMap	insert_size_histogram	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
+QualiMap	insert_size_histogram	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
+QualiMap	insert_size_histogram	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
+QualiMap	insert_size_histogram	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/raw_data_qualimapReport/insert_size_histogram.txt
+QualiMap	mapped_gc_distribution	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1003.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
+QualiMap	mapped_gc_distribution	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1004.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
+QualiMap	mapped_gc_distribution	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1005.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
+QualiMap	mapped_gc_distribution	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1002.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
+QualiMap	mapped_gc_distribution	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1006.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
+QualiMap	mapped_gc_distribution	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/06_final_alignment_qc/P4107_1001.clean.dedup.qc/raw_data_qualimapReport/mapped_reads_gc-content_distribution.txt
+SnpEff	all_sections	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+SnpEff	all_sections	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1003.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+SnpEff	all_sections	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+SnpEff	all_sections	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1002.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+SnpEff	all_sections	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+SnpEff	all_sections	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.recalibrated.snp.annotated.vcf.gz.snpEff.summary.csv
+GATK	varianteval	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1004.clean.dedup.recal.bam.snp.eval
+GATK	varianteval	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1002.clean.dedup.recal.bam.snp.eval
+GATK	varianteval	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1003.clean.dedup.recal.bam.snp.eval
+GATK	varianteval	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1005.clean.dedup.recal.bam.snp.eval
+GATK	varianteval	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1006.clean.dedup.recal.bam.snp.eval
+GATK	varianteval	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/07_variant_calls/P4107_1001.clean.dedup.recal.bam.snp.eval
+Picard	DuplicationMetrics	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1001.metrics
+Picard	DuplicationMetrics	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1002.metrics
+Picard	DuplicationMetrics	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1003.metrics
+Picard	DuplicationMetrics	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1006.metrics
+Picard	DuplicationMetrics	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1005.metrics
+Picard	DuplicationMetrics	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/piper_ngi/05_processed_alignments/P4107_1004.metrics
+FastQ Screen	all_sections	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1003/fastq_screen/P4107_1003_S3_L004_R2_001_screen.txt
+FastQ Screen	all_sections	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1004/fastq_screen/P4107_1004_S4_L005_R2_001_screen.txt
+FastQ Screen	all_sections	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1005/fastq_screen/P4107_1005_S5_L006_R1_001_screen.txt
+FastQ Screen	all_sections	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1002/fastq_screen/P4107_1002_S2_L003_R1_001_screen.txt
+FastQ Screen	all_sections	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1001/fastq_screen/P4107_1001_S1_L002_R1_001_screen.txt
+FastQ Screen	all_sections	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1006/fastq_screen/P4107_1006_S6_L007_R1_001_screen.txt
+FastQC	all_sections	P4107_1003	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1003/fastqc/P4107_1003_S3_L004_R1_001_fastqc.zip
+FastQC	all_sections	P4107_1004	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1004/fastqc/P4107_1004_S4_L005_R1_001_fastqc.zip
+FastQC	all_sections	P4107_1005	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1005/fastqc/P4107_1005_S5_L006_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1002	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1002/fastqc/P4107_1002_S2_L003_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1001	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1001/fastqc/P4107_1001_S1_L002_R2_001_fastqc.zip
+FastQC	all_sections	P4107_1006	/Users/ewels/GitHub/MultiQC/website/public_html/examples/wgs/data/qc_ngi/P4107_1006/fastqc/P4107_1006_S6_L007_R2_001_fastqc.zip
