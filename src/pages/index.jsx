@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 import {
   Accordion,
   Button,
+  CodeDocsIcon,
   DocsIcon,
   GitHubIcon,
   Link,
   PyPIIcon,
+  SearchDirectoryIcon,
+  ShareBoxIcon,
+  ViewReportIcon,
+  TerminalIcon,
 } from 'website-components';
 
 import Seo from '../components/Seo';
@@ -489,8 +494,101 @@ const HomePage = ({ location }) => {
           </div>
         </div>
       </div>
+      <div className="container-sm py-20">
+        <div className="text-center">
+          <h2 className="typo-h3 max-w-2xl mx-auto mb-4">
+            Ever spent ages collecting reports and wading through log file output?
+          </h2>
+          <p className="typo-blockquote">
+            Here's the answer to your frustrations...
+          </p>
+        </div>
+        <div className="row">
+          <div className="col-full md:col-6 mt-8 md:mt-16">
+            <h3 className="typo-h4 mb-4">
+              Visualise statistics from your pipeline
+            </h3>
+            <p className="typo-body">
+              MultiQC collects numerical stats from each module at the top the report, so that you can track how your
+              data behaves as it proceeds through your analysis.
+            </p>
+          </div>
+          <div className="col-full md:col-6 mt-8 md:mt-16">
+            <h3 className="typo-h4 mb-4">
+              Plot all of your samples together
+            </h3>
+            <p className="typo-body">
+              Visualizing your samples together allows detailed comparison, not possible by scanning one report after
+              another.
+            </p>
+          </div>
+          <div className="col-full md:col-6 mt-8 md:mt-16">
+            <h3 className="typo-h4 mb-4">
+              Supports your favourite tools
+            </h3>
+            <p className="typo-body">
+              MultiQC comes supports many common bioinformatics tools out of the box. If you're missing something, just
+              create an issue on GitHub to request it - if you have an example log file it's usually pretty fast.
+            </p>
+          </div>
+          <div className="col-full md:col-6 mt-8 md:mt-16">
+            <h3 className="typo-h4 mb-4">
+              Extensible and documented
+            </h3>
+            <p className="typo-body">
+              Want to use this to do something fancy? MultiQC is structured to allow easy extension and customisation
+              with plugin hooks, a submodule framework and simple templating. Everything is well documented, with step
+              by step instructions for writing your new tool.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="container-md pb-20 md:py-20">
+        <div className="row justify-center text-center">
+          <div className="col-full md:col-4">
+            <h3 className="flex items-center justify-center">
+              <TerminalIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <span className="typo-intro">
+                Simple installation
+              </span>
+            </h3>
+          </div>
+          <div className="col-full md:col-4 mt-8 md:mt-0">
+            <h3 className="flex items-center justify-center">
+              <SearchDirectoryIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <span className="typo-intro">
+                Search any directory
+              </span>
+            </h3>
+          </div>
+          <div className="col-full md:col-4 mt-8 md:mt-0">
+            <h3 className="flex items-center justify-center">
+              <ViewReportIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <span className="typo-intro">
+                View report in a web browser
+              </span>
+            </h3>
+          </div>
+          <div className="col-full md:col-4 mt-8">
+            <h3 className="flex items-center justify-center">
+              <ShareBoxIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <span className="typo-intro">
+                Zip file for easy sharing
+              </span>
+            </h3>
+          </div>
+          <div className="col-full md:col-4 mt-8">
+            <h3 className="flex items-center justify-center">
+              <CodeDocsIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <span className="typo-intro">
+                Extensible & well documented
+              </span>
+            </h3>
+          </div>
+        </div>
+      </div>
       <div className="bg-gray-100">
-        <div className="container-lg py-16 md:py-24 text-center">
+        <div className="container-lg py-20 text-center">
           <h2 className="typo-h3 mb-4 max-w-5xl mx-auto">
             Install from the
             {' '}
