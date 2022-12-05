@@ -20,7 +20,7 @@ const Header = ({ location }) => {
 
   return (
     <>
-      <header className="relative bg-gray-800 z-10 inset-x-0 top-0">
+      <header className="absolute z-10 inset-x-0 top-0">
         <div className="container-lg flex flex-wrap items-center justify-between w-full h-16 md:h-24">
           <Link to="/" noBorder className="block uppercase">
               <img src={Logo} className="h-8 lg:h-10" alt="" />

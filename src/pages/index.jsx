@@ -18,6 +18,10 @@ import Seo from '../components/Seo';
 import Tabs from '../components/Tabs';
 import YoutubeIframe from '../components/YoutubeIframe';
 
+import HeroBackgroundSrc from '../images/background.png';
+
+import Hero from '../layout/Hero';
+
 const HomePage = ({ location }) => {
   const [videoLanguage, setVideoLanguage] = useState('en');
   const [videoEng, setVideoEng] = useState(0);
@@ -28,8 +32,8 @@ const HomePage = ({ location }) => {
       <Seo
         title="MultiQC"
       />
-      <div className="relative bg-gray-800 text-white py-16 md:py-24">
-        <div className="container-lg">
+      <Hero>
+        <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-8">
               <h1 className="typo-h4 mb-4">
@@ -154,7 +158,7 @@ const HomePage = ({ location }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Hero>
       <div className="container-lg py-20">
         <div className="row">
           <div className="col-full">

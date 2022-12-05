@@ -9,10 +9,12 @@ import {
   YoutubeRectangleIcon
 } from 'website-components';
 
+import HeroBackgroundSrc from '../images/background.png';
+
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-800 text-white mt-auto relative">
+      <footer className="text-white mt-auto relative" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
         <div className="container-lg">
           <div className="border-white border-t opacity-40" />
           <div className="flex justify-between items-center h-12">
