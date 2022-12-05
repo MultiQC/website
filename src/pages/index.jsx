@@ -546,7 +546,7 @@ const HomePage = ({ location }) => {
                 View on GitHub
               </Button>
             </div>
-            <div className="mt-4 md:mt-0 md:mr-4">
+            <div className="mt-4 md:mt-0">
               <Button to="/project/multiqc/" variant="secondary" size="md">
                 <PyPIIcon className="w-6 h-6 mr-3" />
                 View on PyPI
