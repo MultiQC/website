@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import {
   Accordion,
   Button,
+  DocsIcon,
   GitHubIcon,
   Link,
+  PyPIIcon,
 } from 'website-components';
 
 import Seo from '../components/Seo';
@@ -109,16 +111,18 @@ const HomePage = ({ location }) => {
             </div>
             <div className="col-full lg:col-4 mt-4 lg:mt-0">
               <Button to="https://www.github.com/ewels/MultiQC" variant="primary" size="md" className="w-full">
-                <GitHubIcon className="h-6 w-6 mr-4" />
+                <GitHubIcon className="h-6 w-6 mr-3" />
                 GitHub
               </Button>
               <div className="mt-4">
                 <Button to="https://pypi.org/project/multiqc/" variant="primary" size="md" className="w-full">
+                <PyPIIcon className="w-6 h-6 mr-3" />
                   Python Package Index
                 </Button>
               </div>
               <div className="mt-4">
                 <Button to="/docs/" variant="primary" size="md" className="w-full">
+                  <DocsIcon className="h-6 w-6 mr-3" />
                   Documentation
                 </Button>
               </div>
@@ -481,6 +485,72 @@ const HomePage = ({ location }) => {
                   </Accordion.Detail>
                 </Accordion.Item>
               </Accordion>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-100">
+        <div className="container-lg py-16 md:py-24 text-center">
+          <h2 className="typo-h3 mb-4 max-w-5xl mx-auto">
+            Install from the
+            {' '}
+            <Link
+              to="https://pypi.python.org/pypi/multiqc"
+              className="text-blue-600"
+              noBorder
+            >
+              Python Package Index
+            </Link>
+            {' '}
+            or
+            {' '}
+            <Link
+              to="https://multiqc.info/#:~:text=Package%20Index%20or-,Bioconda,-To%20install%20MultiQC"
+              className="text-blue-600"
+              noBorder
+            >
+              Bioconda
+            </Link>
+          </h2>
+          <p className="typo-blockquote max-w-3xl mx-auto">
+            To install MultiQC, simply run
+            {' '}
+            <span className="bg-blue-600 text-white font-medium px-2 rounded-sm">
+              pip install multiqc
+            </span>
+            {' '}
+            on the command line. If you use conda, you can run
+            {' '}
+            <span className="bg-blue-600 text-white font-medium px-2 rounded-sm">
+              conda install -c bioconda multiqc
+            </span>
+            {' '}
+            instead. See the
+            {' '}
+            <Link to="https://multiqc.info/docs/#installation" className="text-blue-600">
+              installation instructions
+            </Link>
+            {' '}
+            for more help.
+          </p>
+          <div className="mt-5 lg:mt-10 flex flex-col md:flex-row justify-center">
+            <div className="md:mr-4">
+              <Button to="/docs/" variant="secondary" size="md">
+                <DocsIcon className="w-6 h-6 mr-3" />
+                Documentation
+              </Button>
+            </div>
+            <div className="mt-4 md:mt-0 md:mr-4">
+              <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
+                <GitHubIcon className="w-6 h-6 mr-3" />
+                View on GitHub
+              </Button>
+            </div>
+            <div className="mt-4 md:mt-0 md:mr-4">
+              <Button to="/project/multiqc/" variant="secondary" size="md">
+                <PyPIIcon className="w-6 h-6 mr-3" />
+                View on PyPI
+              </Button>
             </div>
           </div>
         </div>
