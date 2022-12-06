@@ -23,9 +23,12 @@ const Header = ({ location }) => {
       <header className="absolute z-10 inset-x-0 top-0">
         <div className="container-lg flex flex-wrap items-center justify-between w-full h-16 md:h-24">
           <Link to="/" noBorder className="block uppercase">
-              <img src={Logo} className="h-8 lg:h-10" alt="" />
+            <img src={Logo} className="h-8 lg:h-10" alt="MultiQC logo" />
           </Link>
           <div className="lg:flex items-center hidden">
+            <Link to="https://github.com/ewels/MultiQC/releases" className="typo-small text-gray-200 mr-3" noBorder>
+              Current version: v1.13
+            </Link>
             <Link
               to="/"
               noBorder

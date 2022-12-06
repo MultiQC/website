@@ -6,20 +6,25 @@ import {
   CodeDocsIcon,
   DocsIcon,
   GitHubIcon,
+  GitterIcon,
   Link,
-  PyPIIcon,
+  PythonIcon,
+  QuoteIcon,
   SearchDirectoryIcon,
   ShareBoxIcon,
-  ViewReportIcon,
   TerminalIcon,
+  ToolIcon,
+  ViewReportIcon,
 } from 'website-components';
 
 import ExamplesBrowser from '../components/ExamplesBrowser';
 import Seo from '../components/Seo';
+import SnippetBox from '../components/SnippetBox';
 import Tabs from '../components/Tabs';
 import YoutubeIframe from '../components/YoutubeIframe';
 
 import HeroBackgroundSrc from '../images/background.png';
+import Logo from '../images/logo-light.svg';
 
 import Hero from '../layout/Hero';
 
@@ -60,7 +65,10 @@ const HomePage = ({ location }) => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-8">
-              <h1 className="typo-h4 mb-4">
+              <div className="max-w-[400px]">
+                <img src={Logo} alt="MultiQC logo" />
+              </div>
+              <h1 className="typo-h4 mt-8 mb-4">
                 Aggregate results from bioinformatics analyses across many samples into a single report
               </h1>
               <p className="typo-blockquote">
@@ -149,7 +157,7 @@ const HomePage = ({ location }) => {
               </Button>
               <div className="mt-4">
                 <Button to="https://pypi.org/project/multiqc/" variant="primary" size="md" className="w-full">
-                <PyPIIcon className="w-6 h-6 mr-3" />
+                  <PythonIcon className="w-6 h-6 mr-3" />
                   Python Package Index
                 </Button>
               </div>
@@ -160,24 +168,45 @@ const HomePage = ({ location }) => {
                 </Button>
               </div>
               <div className="mt-4">
-                <Button to="/#supported-tools" variant="primary" size="md" className="w-full">
+                <Button to="/modules/" variant="primary" size="md" className="w-full">
+                  <ToolIcon className="h-6 w-6 mr-3" />
                   114 supported tools
                 </Button>
               </div>
               <div className="mt-4">
-                <Button to="/#publication" variant="primary" size="md" className="w-full">
-                  Publication / citation
+                <Button to="/citation/" variant="primary" size="md" className="w-full">
+                  <QuoteIcon className="h-6 w-6 mr-3" />
+                  Citation
                 </Button>
               </div>
               <div className="mt-4">
-                <Button to="/#publication" variant="primary" size="md" className="w-full">
+                <Button to="https://gitter.im/ewels/MultiQC" variant="primary" size="md" className="w-full">
+                  <GitterIcon className="h-6 w-6 mr-3" />
                   Get help on Gitter
                 </Button>
               </div>
               <div className="mt-4">
-                <Button to="/#publication" variant="primary" size="md" className="w-full">
-                  Quick install
-                </Button>
+                <SnippetBox
+                  title="Quick Install"
+                >
+                  <SnippetBox.Item title="pip">
+                    pip install multiqc   <span class="text-gray-300"># Install</span>
+                    <br />
+                    multiqc . <span class="text-gray-300"># Run</span>
+                  </SnippetBox.Item>
+                  <SnippetBox.Item title="conda">
+                    conda install -c bioconda -c conda-forge multiqc
+                    <br />
+                    multiqc .
+                  </SnippetBox.Item>
+                  <SnippetBox.Item title="manual">
+                    git clone https://github.com/ewels/MultiQC.git
+                    <br />
+                    python setup.py install
+                    <br />
+                    multiqc .
+                  </SnippetBox.Item>
+                </SnippetBox>
               </div>
             </div>
           </div>
@@ -186,376 +215,393 @@ const HomePage = ({ location }) => {
       <div className="container-lg py-20">
         <div className="row">
           <div className="col-full">
-            <h2 className="typo-h3">Example reports</h2>
-            <div className="mt-8">
-              <Accordion>
-                <Accordion.Item
-                  className="border border-gray-800"
-                  iconClassName="text-blue-600"
-                >
-                  <Accordion.Summary>
-                    <span className="typo-intro">
-                      RNA-Seq
-                    </span>
-                  </Accordion.Summary>
-                  <Accordion.Detail>
-                    <p className="typo-body mb-4">
-                      This report was generated using logs from an analysis accidentally run on ChIP-Seq data from the BI
-                      Human Reference Epigenome Mapping Project: ChIP-Seq in human subject dataset (
-                      <Link to="http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP001534" className="text-blue-600">
-                        SRP001534
-                      </Link>
-                      ).
-                    </p>
-                    <p className="typo-body mb-4">
-                      Initial QC was done using
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
-                        FastQC
-                      </Link>
-                      , followed by trimming with
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" className="text-blue-600">
-                        TrimGalore!
-                      </Link>
-                      {' '}
-                      (a wrapper around
-                      {' '}
-                      <Link to="https://github.com/marcelm/cutadapt" className="text-blue-600">
-                        cutadapt
-                      </Link>
-                      ). Reads were aligned using
-                      {' '}
-                      <Link to="https://github.com/alexdobin/STAR" className="text-blue-600">
-                        STAR
-                      </Link>
-                      {' '}
-                      and overlaps counted with
-                      {' '}
-                      <Link to="http://bioinf.wehi.edu.au/featureCounts/" className="text-blue-600">
-                        featureCounts
-                      </Link>
-                      .
-                    </p>
-                    <p className="typo-body mb-4">
-                      You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
-                    </p>
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="mr-4">
-                        <Button to="/examples/rna-seq/multiqc_report.zip" variant="secondary" size="sm">
-                          Download report
-                        </Button>
-                      </div>
-                      <div className="mt-4 sm:mt-0">
-                        <Button to="/examples/rna-seq/data.zip" variant="secondary" size="sm">
-                          Download logs
-                        </Button>
-                      </div>
-                    </div>
-                  </Accordion.Detail>
-                </Accordion.Item>
-                <Accordion.Item
-                  className="border border-gray-800"
-                  iconClassName="text-blue-600"
-                >
-                  <Accordion.Summary>
-                    <span className="typo-intro">
-                      Whole-Genome Sequencing
-                    </span>
-                  </Accordion.Summary>
-                  <Accordion.Detail>
-                    <p className="typo-body mb-4">
-                      The data from this report comes from an analysis of HapMap trio samples, run by the
-                      {' '}
-                      <Link to="https://www.scilifelab.se/platforms/ngi/" className="text-blue-600">
-                        National Genomics Infrastructre
-                      </Link>
-                      {' '}
-                      (NGI) at SciLifeLab, Sweden. Initial quality control was done using
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
-                        FastQC
-                      </Link>
-                      {' '}
-                      and
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/" className="text-blue-600">
-                        FastQ Screen
-                      </Link>
-                      . Reads were processed with
-                      {' '}
-                      <Link to="https://www.broadinstitute.org/gatk/" className="text-blue-600">
-                        GATK
-                      </Link>
-                      {' '}
-                      and the aligned reads analysed using
-                      {' '}
-                      <Link to="http://broadinstitute.github.io/picard/" className="text-blue-600">
-                        Picard
-                      </Link>
-                      . Downstream QC was done using
-                      {' '}
-                      <Link to="http://qualimap.bioinfo.cipf.es/" className="text-blue-600">
-                        Qualimap BamQC
-                      </Link>
-                      {' '}
-                      and
-                      {' '}
-                      <Link to="http://snpeff.sourceforge.net/" className="text-blue-600">
-                        SnpEff
-                      </Link>
-                      .
-                    </p>
-                    <p className="typo-body mb-4">
-                      You can download this report and / or the logs used to generate it, to try running MultiQC
-                      yourself. Note that the example report has some user-specific config settings, seen in the
-                      {' '}
-                      <Link to="/examples/wgs/multiqc_config.yaml" className="text-blue-600">
-                        multiqc_config.yaml
-                      </Link>
-                      {' '}
-                      file.
-                    </p>
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="mr-4">
-                        <Button to="/examples/wgs/multiqc_report.zip" variant="secondary" size="sm">
-                          Download report
-                        </Button>
-                      </div>
-                      <div className="mt-4 sm:mt-0">
-                        <Button to="/examples/wgs/data.zip" variant="secondary" size="sm">
-                          Download logs
-                        </Button>
-                      </div>
-                    </div>
-                  </Accordion.Detail>
-                </Accordion.Item>
-                <Accordion.Item
-                  className="border border-gray-800"
-                  iconClassName="text-blue-600"
-                >
-                  <Accordion.Summary>
-                    <span className="typo-intro">
-                      Methylation (Bisulfite)
-                    </span>
-                  </Accordion.Summary>
-                  <Accordion.Detail>
-                    <p className="typo-body mb-4">
-                      The example methylation report is based on analysis of data from the GEO NCBI project
-                      {' '}
-                      <Link to="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47966" className="text-blue-600">
-                        GSE47966
-                      </Link>
-                      , from the 2013 Lister
-                      {' '}
-                      <i>
-                        et. al.
-                      </i>
-                      {' '}
-                      paper
-                      {' '}
-                      <i>
-                        Global epigenomic reconfiguration during mammalian brain development
-                      </i>
-                      .
-                    </p>
-                    <p className="typo-body mb-4">
-                      Raw data was run through
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
-                        FastQC
-                      </Link>
-                      {' '}
-                      and trimmed using
-                      {' '}
-                      <Link
-                        to="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/"
-                        className="text-blue-600"
-                      >
-                        Trim Galore!
-                      </Link>
-                      {' '}
-                      (a wrapper around
-                      {' '}
-                      <Link to="https://github.com/marcelm/cutadapt" className="text-blue-600">
-                        Cutadapt
-                      </Link>
-                      ). Reads were aligned, deduplicated and cytosine methylation statuses called using
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/bismark/" className="text-blue-600">
-                        Bismark
-                      </Link>
-                      .
-                    </p>
-                    <p className="typo-body mb-4">
-                      You can download this report and / or the logs used to generate it, to try running MultiQC
-                      yourself.
-                    </p>
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="mr-4">
-                        <Button to="/examples/bs-seq/multiqc_report.zip" variant="secondary" size="sm">
-                          Download report
-                        </Button>
-                      </div>
-                      <div className="mt-4 sm:mt-0">
-                        <Button to="/examples/bs-seq/data.zip" variant="secondary" size="sm">
-                          Download logs
-                        </Button>
-                      </div>
-                    </div>
-                  </Accordion.Detail>
-                </Accordion.Item>
-                <Accordion.Item
-                  className="border border-gray-800"
-                  iconClassName="text-blue-600"
-                >
-                  <Accordion.Summary>
-                    <span className="typo-intro">
-                      Genome Structure (Hi-C)
-                    </span>
-                  </Accordion.Summary>
-                  <Accordion.Detail>
-                    <p className="typo-body mb-4">
-                      This Hi-C MultiQC report was generated using Hi-C data from
-                      {' '}
-                      <Link to="mailto:louise.harewood@cruk.cam.ac.uk" className="text-blue-600">
-                        Louise Harewood
-                      </Link>
-                      {' '}
-                      at
-                      {' '}
-                      <Link to="http://www.cambridgecancer.org.uk/" className="text-blue-600">
-                        CRUK Cambridge Institute
-                      </Link>
-                      . Reads were run through
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
-                        FastQC
-                      </Link>
-                      {' '}
-                      and then processed using
-                      {' '}
-                      <Link to="http://www.bioinformatics.babraham.ac.uk/projects/hicup/" className="text-blue-600">
-                        HiCUP
-                      </Link>
-                      {' '}
-                      (Hi-C User Pipeline).
-                    </p>
-                    <p className="typo-body mb-4">
-                      You can download this report and / or the logs used to generate it, to try running MultiQC
-                      yourself. Note that the example report has some user-specific config settings, seen in
-                      the
-                      {' '}
-                      <Link to="/examples/hi-c/multiqc_config.yaml" className="text-blue-600">
-                        multiqc_config.yaml
-                      </Link>
-                      {' '}
-                      file.
-                    </p>
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="mr-4">
-                        <Button to="/examples/hi-c/multiqc_report.zip" variant="secondary" size="sm">
-                          Download report
-                        </Button>
-                      </div>
-                      <div className="mt-4 sm:mt-0">
-                        <Button to="/examples/hi-c/data.zip" variant="secondary" size="sm">
-                          Download logs
-                        </Button>
-                      </div>
-                    </div>
-                  </Accordion.Detail>
-                </Accordion.Item>
-                <Accordion.Item
-                  className="border border-gray-800"
-                  iconClassName="text-blue-600"
-                >
-                  <Accordion.Summary>
-                    <span className="typo-intro">
-                      Customised with MultiQC_NGI Plugin
-                    </span>
-                  </Accordion.Summary>
-                  <Accordion.Detail>
-                    <p className="typo-body mb-4">
-                      This MultiQC report was generated in combination with the
-                      {' '}
-                      <Link to="https://github.com/ewels/MultiQC_NGI" className="text-blue-600">
-                        MultiQC_NGI
-                      </Link>
-                      {' '}
-                      plugin. This plugin adds a few new functionalities to MultiQC which are specific to the
-                      {' '}
-                      <Link to="https://www.scilifelab.se/platforms/ngi/" className="text-blue-600">
-                        SciLifeLab National Genomics Infrastruture
-                      </Link>
-                      . A new report template (
-                      <strong>
-                        ngi
-                      </strong>
-                      ) styles reports with our logo. A new module (
-                      <strong>
-                        NGI-RNAseq
-                      </strong>
-                      ) adds sample similarity plots generated from custom code in our
-                      {' '}
-                      <Link to="https://github.com/SciLifeLab/NGI-RNAseq" className="text-blue-600">
-                        RNA pipeline
-                      </Link>
-                      . It also loads intersting data fields from our LIMS (eg. RIN score) and puts these into the
-                      report. Finally, it saves the parsed biofinformatics summary results back in the LIMS for
-                      multi-project meta analyses.
-                    </p>
-                    <p className="typo-body mb-4">
-                      You can download this report and / or the logs used to generate it, to try running MultiQC
-                      yourself. The
-                      {' '}
-                      <Link to="https://github.com/ewels/MultiQC_NGI" className="text-blue-600">
-                        MultiQC_NGI
-                      </Link>
-                      {' '}
-                      package must be installed. Note that the example report has some user-specific config settings,
-                      seen in the
-                      {' '}
-                      <Link to="/examples/ngi-rna/multiqc_config.yaml" className="text-blue-600">
-                        multiqc_config.yaml
-                      </Link>
-                      {' '}
-                      file. It can also be run with the
-                      {' '}
-                      <b>
-                        --test-db
-                      </b>
-                      {' '}
-                      parameter, using
-                      {' '}
-                      <Link to="/examples/ngi-rna/ngi_db_data.json" className="text-blue-600">
-                        the example data provided
-                      </Link>
-                      .
-                    </p>
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="mr-4">
-                        <Button to="/examples/ngi-rna/multiqc_report.zip" variant="secondary" size="sm">
-                          Download report
-                        </Button>
-                      </div>
-                      <div className="mt-4 sm:mt-0">
-                        <Button to="/examples/ngi-rna/data.zip" variant="secondary" size="sm">
-                          Download logs
-                        </Button>
-                      </div>
-                    </div>
-                  </Accordion.Detail>
-                </Accordion.Item>
-              </Accordion>
+            <h2 className="typo-h3 mb-4">
+              Example reports
+            </h2>
+            <p className="typo-blockquote mb-4">
+              MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.
+            </p>
+            <div className="hidden md:block">
+              <ExamplesBrowser
+                items={exampleReports}
+              />
             </div>
           </div>
         </div>
       </div>
-      <div className="container-lg hidden md:block">
-        <ExamplesBrowser
-          items={exampleReports}
-        />
+      <div className="container-lg">
+        <div className="row">
+          <div className="col-full md:col-5">
+            <h2 className="typo-h4 mb-4">
+              Example reports details
+            </h2>
+            <p className="typo-blockquote mb-4">
+              MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.
+            </p>
+          </div>
+          <div className="col-full md:col-6 md:ml-1/12">
+            <Accordion>
+              <Accordion.Item
+                className="border border-gray-800"
+                iconClassName="text-blue-600"
+              >
+                <Accordion.Summary>
+                  <span className="typo-intro">
+                    RNA-Seq
+                  </span>
+                </Accordion.Summary>
+                <Accordion.Detail>
+                  <p className="typo-body mb-4">
+                    This report was generated using logs from an analysis accidentally run on ChIP-Seq data from the BI
+                    Human Reference Epigenome Mapping Project: ChIP-Seq in human subject dataset (
+                    <Link to="http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP001534" className="text-blue-600">
+                      SRP001534
+                    </Link>
+                    ).
+                  </p>
+                  <p className="typo-body mb-4">
+                    Initial QC was done using
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
+                      FastQC
+                    </Link>
+                    , followed by trimming with
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" className="text-blue-600">
+                      TrimGalore!
+                    </Link>
+                    {' '}
+                    (a wrapper around
+                    {' '}
+                    <Link to="https://github.com/marcelm/cutadapt" className="text-blue-600">
+                      cutadapt
+                    </Link>
+                    ). Reads were aligned using
+                    {' '}
+                    <Link to="https://github.com/alexdobin/STAR" className="text-blue-600">
+                      STAR
+                    </Link>
+                    {' '}
+                    and overlaps counted with
+                    {' '}
+                    <Link to="http://bioinf.wehi.edu.au/featureCounts/" className="text-blue-600">
+                      featureCounts
+                    </Link>
+                    .
+                  </p>
+                  <p className="typo-body mb-4">
+                    You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
+                  </p>
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="mr-4">
+                      <Button to="/examples/rna-seq/multiqc_report.zip" variant="secondary" size="sm">
+                        Download report
+                      </Button>
+                    </div>
+                    <div className="mt-4 sm:mt-0">
+                      <Button to="/examples/rna-seq/data.zip" variant="secondary" size="sm">
+                        Download logs
+                      </Button>
+                    </div>
+                  </div>
+                </Accordion.Detail>
+              </Accordion.Item>
+              <Accordion.Item
+                className="border border-gray-800"
+                iconClassName="text-blue-600"
+              >
+                <Accordion.Summary>
+                  <span className="typo-intro">
+                    Whole-Genome Sequencing
+                  </span>
+                </Accordion.Summary>
+                <Accordion.Detail>
+                  <p className="typo-body mb-4">
+                    The data from this report comes from an analysis of HapMap trio samples, run by the
+                    {' '}
+                    <Link to="https://www.scilifelab.se/platforms/ngi/" className="text-blue-600">
+                      National Genomics Infrastructre
+                    </Link>
+                    {' '}
+                    (NGI) at SciLifeLab, Sweden. Initial quality control was done using
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
+                      FastQC
+                    </Link>
+                    {' '}
+                    and
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/" className="text-blue-600">
+                      FastQ Screen
+                    </Link>
+                    . Reads were processed with
+                    {' '}
+                    <Link to="https://www.broadinstitute.org/gatk/" className="text-blue-600">
+                      GATK
+                    </Link>
+                    {' '}
+                    and the aligned reads analysed using
+                    {' '}
+                    <Link to="http://broadinstitute.github.io/picard/" className="text-blue-600">
+                      Picard
+                    </Link>
+                    . Downstream QC was done using
+                    {' '}
+                    <Link to="http://qualimap.bioinfo.cipf.es/" className="text-blue-600">
+                      Qualimap BamQC
+                    </Link>
+                    {' '}
+                    and
+                    {' '}
+                    <Link to="http://snpeff.sourceforge.net/" className="text-blue-600">
+                      SnpEff
+                    </Link>
+                    .
+                  </p>
+                  <p className="typo-body mb-4">
+                    You can download this report and / or the logs used to generate it, to try running MultiQC
+                    yourself. Note that the example report has some user-specific config settings, seen in the
+                    {' '}
+                    <Link to="/examples/wgs/multiqc_config.yaml" className="text-blue-600">
+                      multiqc_config.yaml
+                    </Link>
+                    {' '}
+                    file.
+                  </p>
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="mr-4">
+                      <Button to="/examples/wgs/multiqc_report.zip" variant="secondary" size="sm">
+                        Download report
+                      </Button>
+                    </div>
+                    <div className="mt-4 sm:mt-0">
+                      <Button to="/examples/wgs/data.zip" variant="secondary" size="sm">
+                        Download logs
+                      </Button>
+                    </div>
+                  </div>
+                </Accordion.Detail>
+              </Accordion.Item>
+              <Accordion.Item
+                className="border border-gray-800"
+                iconClassName="text-blue-600"
+              >
+                <Accordion.Summary>
+                  <span className="typo-intro">
+                    Methylation (Bisulfite)
+                  </span>
+                </Accordion.Summary>
+                <Accordion.Detail>
+                  <p className="typo-body mb-4">
+                    The example methylation report is based on analysis of data from the GEO NCBI project
+                    {' '}
+                    <Link to="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47966" className="text-blue-600">
+                      GSE47966
+                    </Link>
+                    , from the 2013 Lister
+                    {' '}
+                    <i>
+                      et. al.
+                    </i>
+                    {' '}
+                    paper
+                    {' '}
+                    <i>
+                      Global epigenomic reconfiguration during mammalian brain development
+                    </i>
+                    .
+                  </p>
+                  <p className="typo-body mb-4">
+                    Raw data was run through
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
+                      FastQC
+                    </Link>
+                    {' '}
+                    and trimmed using
+                    {' '}
+                    <Link
+                      to="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/"
+                      className="text-blue-600"
+                    >
+                      Trim Galore!
+                    </Link>
+                    {' '}
+                    (a wrapper around
+                    {' '}
+                    <Link to="https://github.com/marcelm/cutadapt" className="text-blue-600">
+                      Cutadapt
+                    </Link>
+                    ). Reads were aligned, deduplicated and cytosine methylation statuses called using
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/bismark/" className="text-blue-600">
+                      Bismark
+                    </Link>
+                    .
+                  </p>
+                  <p className="typo-body mb-4">
+                    You can download this report and / or the logs used to generate it, to try running MultiQC
+                    yourself.
+                  </p>
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="mr-4">
+                      <Button to="/examples/bs-seq/multiqc_report.zip" variant="secondary" size="sm">
+                        Download report
+                      </Button>
+                    </div>
+                    <div className="mt-4 sm:mt-0">
+                      <Button to="/examples/bs-seq/data.zip" variant="secondary" size="sm">
+                        Download logs
+                      </Button>
+                    </div>
+                  </div>
+                </Accordion.Detail>
+              </Accordion.Item>
+              <Accordion.Item
+                className="border border-gray-800"
+                iconClassName="text-blue-600"
+              >
+                <Accordion.Summary>
+                  <span className="typo-intro">
+                    Genome Structure (Hi-C)
+                  </span>
+                </Accordion.Summary>
+                <Accordion.Detail>
+                  <p className="typo-body mb-4">
+                    This Hi-C MultiQC report was generated using Hi-C data from
+                    {' '}
+                    <Link to="mailto:louise.harewood@cruk.cam.ac.uk" className="text-blue-600">
+                      Louise Harewood
+                    </Link>
+                    {' '}
+                    at
+                    {' '}
+                    <Link to="http://www.cambridgecancer.org.uk/" className="text-blue-600">
+                      CRUK Cambridge Institute
+                    </Link>
+                    . Reads were run through
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" className="text-blue-600">
+                      FastQC
+                    </Link>
+                    {' '}
+                    and then processed using
+                    {' '}
+                    <Link to="http://www.bioinformatics.babraham.ac.uk/projects/hicup/" className="text-blue-600">
+                      HiCUP
+                    </Link>
+                    {' '}
+                    (Hi-C User Pipeline).
+                  </p>
+                  <p className="typo-body mb-4">
+                    You can download this report and / or the logs used to generate it, to try running MultiQC
+                    yourself. Note that the example report has some user-specific config settings, seen in
+                    the
+                    {' '}
+                    <Link to="/examples/hi-c/multiqc_config.yaml" className="text-blue-600">
+                      multiqc_config.yaml
+                    </Link>
+                    {' '}
+                    file.
+                  </p>
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="mr-4">
+                      <Button to="/examples/hi-c/multiqc_report.zip" variant="secondary" size="sm">
+                        Download report
+                      </Button>
+                    </div>
+                    <div className="mt-4 sm:mt-0">
+                      <Button to="/examples/hi-c/data.zip" variant="secondary" size="sm">
+                        Download logs
+                      </Button>
+                    </div>
+                  </div>
+                </Accordion.Detail>
+              </Accordion.Item>
+              <Accordion.Item
+                className="border border-gray-800"
+                iconClassName="text-blue-600"
+              >
+                <Accordion.Summary>
+                  <span className="typo-intro">
+                    Customised with MultiQC_NGI Plugin
+                  </span>
+                </Accordion.Summary>
+                <Accordion.Detail>
+                  <p className="typo-body mb-4">
+                    This MultiQC report was generated in combination with the
+                    {' '}
+                    <Link to="https://github.com/ewels/MultiQC_NGI" className="text-blue-600">
+                      MultiQC_NGI
+                    </Link>
+                    {' '}
+                    plugin. This plugin adds a few new functionalities to MultiQC which are specific to the
+                    {' '}
+                    <Link to="https://www.scilifelab.se/platforms/ngi/" className="text-blue-600">
+                      SciLifeLab National Genomics Infrastruture
+                    </Link>
+                    . A new report template (
+                    <strong>
+                      ngi
+                    </strong>
+                    ) styles reports with our logo. A new module (
+                    <strong>
+                      NGI-RNAseq
+                    </strong>
+                    ) adds sample similarity plots generated from custom code in our
+                    {' '}
+                    <Link to="https://github.com/SciLifeLab/NGI-RNAseq" className="text-blue-600">
+                      RNA pipeline
+                    </Link>
+                    . It also loads intersting data fields from our LIMS (eg. RIN score) and puts these into the
+                    report. Finally, it saves the parsed biofinformatics summary results back in the LIMS for
+                    multi-project meta analyses.
+                  </p>
+                  <p className="typo-body mb-4">
+                    You can download this report and / or the logs used to generate it, to try running MultiQC
+                    yourself. The
+                    {' '}
+                    <Link to="https://github.com/ewels/MultiQC_NGI" className="text-blue-600">
+                      MultiQC_NGI
+                    </Link>
+                    {' '}
+                    package must be installed. Note that the example report has some user-specific config settings,
+                    seen in the
+                    {' '}
+                    <Link to="/examples/ngi-rna/multiqc_config.yaml" className="text-blue-600">
+                      multiqc_config.yaml
+                    </Link>
+                    {' '}
+                    file. It can also be run with the
+                    {' '}
+                    <b>
+                      --test-db
+                    </b>
+                    {' '}
+                    parameter, using
+                    {' '}
+                    <Link to="/examples/ngi-rna/ngi_db_data.json" className="text-blue-600">
+                      the example data provided
+                    </Link>
+                    .
+                  </p>
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="mr-4">
+                      <Button to="/examples/ngi-rna/multiqc_report.zip" variant="secondary" size="sm">
+                        Download report
+                      </Button>
+                    </div>
+                    <div className="mt-4 sm:mt-0">
+                      <Button to="/examples/ngi-rna/data.zip" variant="secondary" size="sm">
+                        Download logs
+                      </Button>
+                    </div>
+                  </div>
+                </Accordion.Detail>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+        </div>
       </div>
       <div className="container-sm py-20">
         <div className="text-center">
@@ -709,7 +755,7 @@ const HomePage = ({ location }) => {
             </div>
             <div className="mt-4 md:mt-0">
               <Button to="/project/multiqc/" variant="secondary" size="md">
-                <PyPIIcon className="w-6 h-6 mr-3" />
+                <PythonIcon className="w-6 h-6 mr-3" />
                 View on PyPI
               </Button>
             </div>
