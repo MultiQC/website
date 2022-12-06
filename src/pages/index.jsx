@@ -216,12 +216,18 @@ const HomePage = ({ location }) => {
                     <p className="typo-body mb-4">
                       You can download this report and / or the logs used to generate it, to try running MultiQC yourself.
                     </p>
-                    <Button to="/" variant="secondary" size="sm" className="mr-4">
-                      Download report
-                    </Button>
-                    <Button to="/" variant="secondary" size="sm">
-                      Download logs
-                    </Button>
+                    <div className="flex flex-col sm:flex-row">
+                      <div className="mr-4">
+                        <Button to="/examples/rna-seq/multiqc_report.zip" variant="secondary" size="sm">
+                          Download report
+                        </Button>
+                      </div>
+                      <div className="mt-4 sm:mt-0">
+                        <Button to="/examples/rna-seq/data.zip" variant="secondary" size="sm">
+                          Download logs
+                        </Button>
+                      </div>
+                    </div>
                   </Accordion.Detail>
                 </Accordion.Item>
                 <Accordion.Item
@@ -280,18 +286,24 @@ const HomePage = ({ location }) => {
                       You can download this report and / or the logs used to generate it, to try running MultiQC
                       yourself. Note that the example report has some user-specific config settings, seen in the
                       {' '}
-                      <Link to="https://multiqc.info/examples/wgs/multiqc_config.yaml" className="text-blue-600">
+                      <Link to="/examples/wgs/multiqc_config.yaml" className="text-blue-600">
                         multiqc_config.yaml
                       </Link>
                       {' '}
                       file.
                     </p>
-                    <Button to="/" variant="secondary" size="sm" className="mr-4">
-                      Download report
-                    </Button>
-                    <Button to="/" variant="secondary" size="sm">
-                      Download logs
-                    </Button>
+                    <div className="flex flex-col sm:flex-row">
+                      <div className="mr-4">
+                        <Button to="/examples/wgs/multiqc_report.zip" variant="secondary" size="sm">
+                          Download report
+                        </Button>
+                      </div>
+                      <div className="mt-4 sm:mt-0">
+                        <Button to="/examples/wgs/data.zip" variant="secondary" size="sm">
+                          Download logs
+                        </Button>
+                      </div>
+                    </div>
                   </Accordion.Detail>
                 </Accordion.Item>
                 <Accordion.Item
@@ -355,12 +367,18 @@ const HomePage = ({ location }) => {
                       You can download this report and / or the logs used to generate it, to try running MultiQC
                       yourself.
                     </p>
-                    <Button to="/" variant="secondary" size="sm" className="mr-4">
-                      Download report
-                    </Button>
-                    <Button to="/" variant="secondary" size="sm">
-                      Download logs
-                    </Button>
+                    <div className="flex flex-col sm:flex-row">
+                      <div className="mr-4">
+                        <Button to="/examples/bs-seq/multiqc_report.zip" variant="secondary" size="sm">
+                          Download report
+                        </Button>
+                      </div>
+                      <div className="mt-4 sm:mt-0">
+                        <Button to="/examples/bs-seq/data.zip" variant="secondary" size="sm">
+                          Download logs
+                        </Button>
+                      </div>
+                    </div>
                   </Accordion.Detail>
                 </Accordion.Item>
                 <Accordion.Item
@@ -404,18 +422,24 @@ const HomePage = ({ location }) => {
                       yourself. Note that the example report has some user-specific config settings, seen in
                       the
                       {' '}
-                      <Link to="/" className="text-blue-600">
+                      <Link to="/examples/hi-c/multiqc_config.yaml" className="text-blue-600">
                         multiqc_config.yaml
                       </Link>
                       {' '}
                       file.
                     </p>
-                    <Button to="/" variant="secondary" size="sm" className="mr-4">
-                      Download report
-                    </Button>
-                    <Button to="/" variant="secondary" size="sm">
-                      Download logs
-                    </Button>
+                    <div className="flex flex-col sm:flex-row">
+                      <div className="mr-4">
+                        <Button to="/examples/hi-c/multiqc_report.zip" variant="secondary" size="sm">
+                          Download report
+                        </Button>
+                      </div>
+                      <div className="mt-4 sm:mt-0">
+                        <Button to="/examples/hi-c/data.zip" variant="secondary" size="sm">
+                          Download logs
+                        </Button>
+                      </div>
+                    </div>
                   </Accordion.Detail>
                 </Accordion.Item>
                 <Accordion.Item
@@ -468,7 +492,7 @@ const HomePage = ({ location }) => {
                       package must be installed. Note that the example report has some user-specific config settings,
                       seen in the
                       {' '}
-                      <Link to="https://multiqc.info/examples/ngi-rna/multiqc_config.yaml" className="text-blue-600">
+                      <Link to="/examples/ngi-rna/multiqc_config.yaml" className="text-blue-600">
                         multiqc_config.yaml
                       </Link>
                       {' '}
@@ -480,17 +504,23 @@ const HomePage = ({ location }) => {
                       {' '}
                       parameter, using
                       {' '}
-                      <Link to="https://multiqc.info/examples/ngi-rna/ngi_db_data.json" className="text-blue-600">
+                      <Link to="/examples/ngi-rna/ngi_db_data.json" className="text-blue-600">
                         the example data provided
                       </Link>
                       .
                     </p>
-                    <Button to="/" variant="secondary" size="sm" className="mr-4">
-                      Download report
-                    </Button>
-                    <Button to="/" variant="secondary" size="sm">
-                      Download logs
-                    </Button>
+                    <div className="flex flex-col sm:flex-row">
+                      <div className="mr-4">
+                        <Button to="/examples/ngi-rna/multiqc_report.zip" variant="secondary" size="sm">
+                          Download report
+                        </Button>
+                      </div>
+                      <div className="mt-4 sm:mt-0">
+                        <Button to="/examples/ngi-rna/data.zip" variant="secondary" size="sm">
+                          Download logs
+                        </Button>
+                      </div>
+                    </div>
                   </Accordion.Detail>
                 </Accordion.Item>
               </Accordion>
