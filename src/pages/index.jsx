@@ -14,6 +14,7 @@ import {
   TerminalIcon,
 } from 'website-components';
 
+import ExamplesBrowser from '../components/ExamplesBrowser';
 import Seo from '../components/Seo';
 import Tabs from '../components/Tabs';
 import YoutubeIframe from '../components/YoutubeIframe';
@@ -26,6 +27,29 @@ const HomePage = ({ location }) => {
   const [videoLanguage, setVideoLanguage] = useState('en');
   const [videoEng, setVideoEng] = useState(0);
   const [videoEsp, setVideoEsp] = useState(0);
+
+  const exampleReports = [
+    {
+      title: 'RNA-Seq',
+      path: '/examples/rna-seq/multiqc_report.html',
+    },
+    {
+      title: 'Whole-Genome Seq',
+      path: '/examples/wgs/multiqc_report.html',
+    },
+    {
+      title: 'Bisulfite Seq',
+      path: '/examples/bs-seq/multiqc_report.html',
+    },
+    {
+      title: 'Hi-C',
+      path: '/examples/hi-c/multiqc_report.html',
+    },
+    {
+      title: 'MultiQC_NGI',
+      path: '/examples/ngi-rna/Test_NGI_Project_multiqc_report.html',
+    },
+  ];
 
   return (
     <>
@@ -527,6 +551,11 @@ const HomePage = ({ location }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container-lg hidden md:block">
+        <ExamplesBrowser
+          items={exampleReports}
+        />
       </div>
       <div className="container-sm py-20">
         <div className="text-center">
