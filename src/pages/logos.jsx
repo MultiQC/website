@@ -18,11 +18,13 @@ const LogosPage = () => {
       <Hero>
         <div className="container-md relative">
           <div className="row">
-            <div className="col-full lg:col-8">
-              <h1 className="typo-h2 mb-4">
-                Grab some MultiQC logos!
+            <div className="col-full lg:col-6">
+              <h1 className="typo-h2">
+                Grab some
+                <br />
+                MultiQC logos!
               </h1>
-              <p className="typo-blockquote">
+              <p className="typo-blockquote mt-4 lg:mt-8">
                 Perfect for talks, posters, stickers, desktop backgrounds or whatever else you fancy!
               </p>
             </div>

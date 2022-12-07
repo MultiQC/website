@@ -40,6 +40,15 @@ module.exports = {
         },
     },
     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `repoModules`,
+        remote: `https://github.com/ewels/MultiQC.git`,
+        branch: `master`,
+        patterns: `docs/modules/**`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],

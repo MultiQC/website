@@ -68,10 +68,10 @@ const HomePage = ({ location }) => {
               <div className="max-w-[400px]">
                 <img src={Logo} alt="MultiQC logo" />
               </div>
-              <h1 className="typo-h4 mt-8 mb-4">
+              <h1 className="typo-h4 mt-8">
                 Aggregate results from bioinformatics analyses across many samples into a single report
               </h1>
-              <p className="typo-blockquote">
+              <p className="typo-blockquote mt-4 lg:mt-8">
                 MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general use
                 tool, perfect for summarising the output from numerous bioinformatics tools.
               </p>

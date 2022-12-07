@@ -6,6 +6,15 @@
   html, body {
     @apply overflow-x-hidden;
   }
+
+  table td {
+    border: 1px solid theme(colors.gray.200);
+    @apply px-4 py-2 align-top;
+  }
+
+  table thead td {
+    @apply bg-gray-100;
+  }
 }
 
 @layer components {

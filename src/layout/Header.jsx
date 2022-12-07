@@ -69,6 +69,19 @@ const Header = ({ location }) => {
               Plugins
             </Link>
             <Link
+              to="/modules/"
+              noBorder
+              className={classnames(
+                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                {
+                  'text-white': !location.pathname.includes('/modules/'),
+                  'text-blue-600': location.pathname.includes('modules/')
+                }
+              )}
+            >
+              Modules
+            </Link>
+            <Link
               to="/logos/"
               noBorder
               className={classnames(
@@ -152,6 +165,15 @@ const Header = ({ location }) => {
                   className="typo-intro"
               >
                   Plugins
+              </Button>
+            </div>
+            <div className="mt-4">
+              <Button
+                  onClick={() => { handleNav('/modules/') }}
+                  noShadow
+                  className="typo-intro"
+              >
+                  Modules
               </Button>
             </div>
             <div className="mt-4">

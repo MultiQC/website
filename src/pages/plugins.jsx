@@ -6,11 +6,10 @@ import {
   Button,
   GitHubIcon,
   Link,
-} from 'website-components'
-
-import Seo from '../components/Seo';
+} from 'website-components';
 
 import Hero from '../layout/Hero';
+import Seo from '../components/Seo';
 
 const PluginsPage = () => {
   const data = useStaticQuery(graphql`
@@ -54,11 +53,11 @@ const PluginsPage = () => {
       <Hero>
         <div className="container-md relative">
           <div className="row">
-            <div className="col-full lg:col-8">
-              <h1 className="typo-h2 mb-4">
+            <div className="col-full lg:col-6">
+              <h1 className="typo-h2">
                 MultiQC Plugins
               </h1>
-              <p className="typo-blockquote">
+              <p className="typo-blockquote mt-4 lg:mt-8">
                 MultiQC plugins that you can use to extend MultiQC functionality.
               </p>
             </div>
