@@ -23,7 +23,7 @@ const SnippetBox = ({ title, children }) => {
   const snippets = React.Children.toArray(children);
 
   return (
-    <div className="border bg-gray-800 border-blue-600 rounded-md overflow-hidden">
+    <div className="border bg-gray-800 border-blue-600 rounded-md overflow-hidden shadow">
       <div className="flex items-center justify-center bg-blue-600 border-b border-blue-600 py-2">
         <TerminalIcon className="h-6 w-6 mr-3" />
         <span className="typo-intro">

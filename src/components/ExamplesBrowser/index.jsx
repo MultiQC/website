@@ -7,7 +7,7 @@ const ExamplesBrowser = ({ items }) => {
   const [ active, setActive ] = useState(0);
 
   return (
-    <div className="border border-gray-200 rounded-md overflow-hidden">
+    <div className="border border-gray-200 rounded-md overflow-hidden shadow">
       <div className="bg-gray-100 border-b border-gray-200 flex">
         <div className="flex px-4 py-3 lg:w-[250px]">
           <img src={MultiQCIconSrc} className="h-6 w-6 mr-2" />
