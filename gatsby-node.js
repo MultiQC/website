@@ -1,3 +1,4 @@
+const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 const { toKebabCase } = require('./src/utils/toKebabCase');
 
@@ -15,9 +16,21 @@ exports.createSchemaCustomization = ({ actions }) => {
     `
       type Module implements Node {
         slug: String
+        path: String
         title: String
         description: String
         url: String
+        content: Mdx
+      }
+    `,
+    `
+      type Doc implements Node {
+        slug: String
+        path: String
+        title: String
+        description: String
+        isSection: Boolean
+        order: Int
         content: Mdx
       }
     `,
@@ -30,12 +43,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
 
   const moduleTemplate = path.resolve('src/templates/module.jsx');
+  const docTemplate = path.resolve('src/templates/doc.jsx');
 
   const result = await graphql(`
     {
       modules: allModule {
         nodes {
           slug
+          path
+        }
+      }
+      docs: allDoc {
+        nodes {
+          slug
+          path
         }
       }
     }
@@ -50,8 +71,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   modules.forEach(node => {
     createPage({
-      path: node.slug,
+      path: node.path,
       component: moduleTemplate,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
+  const docs = result.data.docs.nodes;
+
+  docs.forEach(node => {
+    createPage({
+      path: node.path,
+      component: docTemplate,
       context: {
         slug: node.slug,
       },
@@ -74,10 +107,12 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     }
 
     if (parent.internal.type === 'File' && parent.sourceInstanceName === 'repoModules') {
-      const slug = `/modules/${toKebabCase(node.frontmatter.Name)}`;
+      const slug = toKebabCase(node.frontmatter.Name);
+      const path = `/modules/${slug}`;
 
       const content = {
         slug: slug,
+        path: path,
         title: node.frontmatter.Name,
         description: node.frontmatter.Description,
         url: node.frontmatter.URL,
@@ -90,6 +125,33 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         children: [],
         internal: {
           type: 'Module',
+          contentDigest: createContentDigest(content),
+        },
+        ...content,
+      });
+    }
+
+    if (parent.internal.type === 'File' && parent.sourceInstanceName === 'repoDocs') {
+      const slug = createFilePath({ node, getNode });
+      const path = createFilePath({ node, getNode }).replace('/core', '').replace('_', '-');
+      const isSection = parent.name === 'index';
+
+      const content = {
+        slug: slug,
+        path: path,
+        title: node.frontmatter.title,
+        description: node.frontmatter.description,
+        order: node.frontmatter.order,
+        isSection: isSection,
+        content: node,
+      }
+
+      createNode({
+        id: createNodeId(`doc-${node.id}`),
+        parent: node.id,
+        children: [],
+        internal: {
+          type: 'Doc',
           contentDigest: createContentDigest(content),
         },
         ...content,

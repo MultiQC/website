@@ -73,7 +73,7 @@ Paragraph.propTypes = basicPropTypes;
 Paragraph.defaultProps = basicDefaultProps;
 
 const CustomList = ({ children }) => (
-  <List className="my-4">
+  <List className="my-4" iconClassName="text-blue-600">
     {children}
   </List>
 );
@@ -81,7 +81,7 @@ CustomList.propTypes = basicPropTypes;
 CustomList.defaultProps = basicDefaultProps;
 
 const CustomOrderedlist = ({ children }) => (
-  <List className="my-4" as="ol" iconClassName="text-indigo-600">
+  <List className="my-4" as="ol" iconClassName="text-blue-600">
     {children}
   </List>
 );

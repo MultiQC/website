@@ -44,8 +44,17 @@ module.exports = {
       options: {
         name: `repoModules`,
         remote: `https://github.com/ewels/MultiQC.git`,
-        branch: `master`,
-        patterns: `docs/modules/**`,
+        branch: `docs-restructure`,
+        patterns: `docs/modules/**/*.md`,
+      },
+    },
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `repoDocs`,
+        remote: `https://github.com/ewels/MultiQC.git`,
+        branch: `docs-restructure`,
+        patterns: [`docs/core/**/*.md`],
       },
     },
     {

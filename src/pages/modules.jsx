@@ -13,7 +13,7 @@ import Seo from '../components/Seo';
 const ModulesPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      modules: allModule {
+      modules: allModule(sort: {fields: title}) {
         nodes {
           slug
           title
