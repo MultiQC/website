@@ -34,6 +34,17 @@ exports.createSchemaCustomization = ({ actions }) => {
         content: Mdx
       }
     `,
+    `
+      type ExampleReport implements Node {
+        slug: String
+        title: String
+        description: String
+        embed: String
+        zip: String
+        data: String
+        content: Mdx
+      }
+    `,
   ];
 
   createTypes(typeDefs);
