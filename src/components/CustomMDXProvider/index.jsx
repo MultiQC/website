@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+import classnames from 'classnames';
 import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 
@@ -108,7 +109,7 @@ CustomTable.propTypes = basicPropTypes;
 CustomTable.defaultProps = basicPropTypes;
 
 const InlineLink = ({ href, children }) => (
-  <Link to={href}>
+  <Link to={href} className="text-blue-600">
     {children}
   </Link>
 );
@@ -124,12 +125,20 @@ const defaultProps = {
 };
 
 const Pre = ({ children }) => (
-  <p className="typo-body block overflow-x-auto">
+  <span className="block whitespace-pre bg-gray-100 p-4 overflow-x-auto my-4">
     {children}
-  </p>
+  </span>
 );
 Pre.propTypes = basicPropTypes;
 Pre.defaultProps = basicDefaultProps;
+
+const InlineCode = ({ children, className }) => (
+  <pre className={classnames('inline bg-gray-100 overflow-x-auto p-1', className)}>
+    {children}
+  </pre>
+);
+InlineCode.propTypes = basicPropTypes;
+InlineCode.defaultProps = basicDefaultProps;
 
 const CustomMDXProvider = ({ children }) => (
   <>
@@ -149,6 +158,7 @@ const CustomMDXProvider = ({ children }) => (
         Button: Button,
         Table: CustomTable,
         code: Pre,
+        inlineCode: InlineCode,
       }}
     >
       <div className={styles.content}>

@@ -94,7 +94,7 @@ export default DocPage;
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    docs: allDoc(sort: {fields: order, order: ASC}) {
+    docs: allDoc(sort: {fields: order}) {
       nodes {
         path
         isSection
