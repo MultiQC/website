@@ -15,13 +15,14 @@ import Seo from '../components/Seo';
 const DocsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      sections: allDoc(filter: {isSection: {eq: true}}) {
+      sections: allDoc(filter: {isSection: {eq: true}}, sort: {fields: order}) {
         nodes {
           path
           title
+          description
         }
       }
-      docs: allDoc(sort: {fields: order, order: ASC}) {
+      docs: allDoc(sort: {fields: order}) {
         nodes {
           path
           title
@@ -64,14 +65,20 @@ const DocsPage = () => {
         </div>
       </Hero>
       <div className="container-lg my-10 md:my-20">
+        <h2 className="typo-h3">
+          Documentation sections
+        </h2>
         <div className="row">
           {sections.map((section) => (
-            <div className="col-full md:col-4 mt-8 md:mt-0">
-              <h2 className="typo-h3 text-blue-600">
+            <div className="col-full md:col-6 mt-10">
+              <h2 className="typo-h4 text-blue-600">
                 <Link to={section.path} noBorder>
                   {section.title}
                 </Link>
               </h2>
+              <p className="typo-body mt-4">
+                {section.description}
+              </p>
               <List className="mt-4" iconClassName="text-blue-600">
                 {docs.map((doc) => (
                   <List.Item className={

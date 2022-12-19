@@ -51,7 +51,7 @@ const PluginsPage = () => {
         title="MultiQC Plugins"
       />
       <Hero>
-        <div className="container-md relative">
+        <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
               <h1 className="typo-h2">
@@ -64,21 +64,25 @@ const PluginsPage = () => {
           </div>
         </div>
       </Hero>
-      <div className="container-md mt-20 md:mt-0 md:py-20">
-        <p className="typo-body mb-4">
-          MultiQC is built in such a way that externally managed Python packages can tie in to its functionality. This
-          allows separate plugin tools to extend its capabilities, adding new modules, report templates and doing useful
-          things with the parsed data.
-        </p>
-        <p className="typo-body">
-          The below list highlights a few such plugins - some may be useful to you if they interact with external tools
-          which you use (eg.
-          {' '}
-          <span className="font-medium">
-            MultiQC_Clarity
-          </span>
-          ), others may be helpful as reference for writing your own plugin.
-        </p>
+      <div className="container-lg mt-20 md:mt-0 md:py-20">
+        <div className="row">
+          <div className="col-full md:col-10">
+            <p className="typo-body mb-4">
+              MultiQC is built in such a way that externally managed Python packages can tie in to its functionality. This
+              allows separate plugin tools to extend its capabilities, adding new modules, report templates and doing useful
+              things with the parsed data.
+            </p>
+            <p className="typo-body">
+              The below list highlights a few such plugins - some may be useful to you if they interact with external tools
+              which you use (eg.
+              {' '}
+              <span className="font-medium">
+                MultiQC_Clarity
+              </span>
+              ), others may be helpful as reference for writing your own plugin.
+            </p>
+          </div>
+        </div>
       </div>
       <div className="container-lg mt-20 md:mt-0 md:py-20">
         <div className="row">

@@ -16,13 +16,11 @@ const LogosPage = () => {
         title="MultiQC Logos"
       />
       <Hero>
-        <div className="container-md relative">
+        <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
               <h1 className="typo-h2">
-                Grab some
-                <br />
-                MultiQC logos!
+                Grab some MultiQC logos!
               </h1>
               <p className="typo-blockquote mt-4 lg:mt-8">
                 Perfect for talks, posters, stickers, desktop backgrounds or whatever else you fancy!
@@ -31,7 +29,7 @@ const LogosPage = () => {
           </div>
         </div>
       </Hero>
-      <div className="container-md py-20">
+      <div className="container-lg py-20">
         <h2 className="typo-h3 mb-4">
           Introduction
         </h2>
