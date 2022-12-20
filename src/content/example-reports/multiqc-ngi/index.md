@@ -1,6 +1,7 @@
 ---
 title: MultiQC_NGI
 description: This MultiQC report was generated in combination with the MultiQC_NGI plugin.
+type: MultiQC Customisation
 embed: /examples/ngi-rna/Test_NGI_Project_multiqc_report.html
 zip: /examples/ngi-rna/multiqc_report.zip
 data: /examples/ngi-rna/data.zip

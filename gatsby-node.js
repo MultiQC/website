@@ -37,11 +37,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     `
       type ExampleReport implements Node {
         slug: String
+        path: String
         title: String
         description: String
-        embed: String
-        zip: String
-        data: String
+        type: String
+        embed: File
+        zip: File
+        data: File
         content: Mdx
       }
     `,
@@ -55,6 +57,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const moduleTemplate = path.resolve('src/templates/module.jsx');
   const docTemplate = path.resolve('src/templates/doc.jsx');
+  const reportTemplate = path.resolve('src/templates/example-report.jsx');
 
   const result = await graphql(`
     {
@@ -65,6 +68,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
       docs: allDoc {
+        nodes {
+          slug
+          path
+        }
+      }
+      reports: allExampleReport {
         nodes {
           slug
           path
@@ -96,6 +105,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.path,
       component: docTemplate,
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
+  const reports = result.data.reports.nodes;
+
+  reports.forEach(node => {
+    createPage({
+      path: node.path,
+      component: reportTemplate,
       context: {
         slug: node.slug,
       },
@@ -163,6 +184,34 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         children: [],
         internal: {
           type: 'Doc',
+          contentDigest: createContentDigest(content),
+        },
+        ...content,
+      });
+    }
+
+    if (parent.internal.type === 'File' && parent.sourceInstanceName === 'exampleReports') {
+      const slug = toKebabCase(node.frontmatter.title);
+      const path = `/example-reports${createFilePath({ node, getNode })}`;
+
+      const content = {
+        slug: slug,
+        path: path,
+        title: node.frontmatter.title,
+        description: node.frontmatter.description,
+        type: node.frontmatter.type,
+        embed: node.frontmatter.embed,
+        zip: node.frontmatter.zip,
+        data: node.frontmatter.data,
+        content: node,
+      };
+
+      createNode({
+        id: createNodeId(`example-report-${node.id}`),
+        parent: node.id,
+        children: [],
+        internal: {
+          type: 'ExampleReport',
           contentDigest: createContentDigest(content),
         },
         ...content,

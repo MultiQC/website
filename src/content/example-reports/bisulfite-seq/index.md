@@ -1,6 +1,7 @@
 ---
 title: Bisulfite Seq
 description: The example methylation report is based on analysis of data from the GEO NCBI project GSE47966, from the 2013 Lister et. al. paper Global epigenomic reconfiguration during mammalian brain development.
+type: Analysis Types
 embed: /examples/bs-seq/multiqc_report.html
 zip: /examples/bs-seq/multiqc_report.zip
 data: /examples/bs-seq/data.zip

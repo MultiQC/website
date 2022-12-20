@@ -1,6 +1,7 @@
 ---
 title: RNA-Seq
 description: This report was generated using logs from an analysis accidentally run on ChIP-Seq data from the BI Human Reference Epigenome Mapping Project.
+type: Analysis Types
 embed: /examples/rna-seq/multiqc_report.html
 zip: /examples/rna-seq/multiqc_report.zip
 data: /examples/rna-seq/data.zip

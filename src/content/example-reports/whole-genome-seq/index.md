@@ -1,6 +1,7 @@
 ---
 title: Whole-Genome Seq
 description: The data from this report comes from an analysis of HapMap trio samples, run by the National Genomics Infrastructre (NGI) at SciLifeLab, Sweden.
+type: Analysis Types
 embed: /examples/wgs/multiqc_report.html
 zip: /examples/wgs/multiqc_report.zip
 data: /examples/wgs/data.zip

@@ -1,6 +1,7 @@
 ---
 title: Hi-C
 description: This Hi-C MultiQC report was generated using Hi-C data from Louise Harewood at CRUK Cambridge Institute.
+type: Analysis Types
 embed: /examples/hi-c/multiqc_report.html
 zip: /examples/hi-c/multiqc_report.zip
 data: /examples/hi-c/data.zip
