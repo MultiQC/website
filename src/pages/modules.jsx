@@ -55,7 +55,7 @@ const ModulesPage = () => {
           </div>
         </div>
       </Hero>
-      <div className="container-lg py-20">
+      <div className="container-md py-20">
         <div className="flex items-center">
           <DocsIcon className="h-6 w-6 mr-3 text-gray-500" />
           <p className="typo-blockquote">
