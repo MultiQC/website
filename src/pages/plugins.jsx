@@ -106,10 +106,12 @@ const PluginsPage = () => {
               This example repository contains the following code to help you get started with writing your own MultiQC
               plugin.
             </p>
-            <Button to="https://github.com/MultiQC/example-plugin" variant="primary" size="sm">
-              <GitHubIcon className="h-6 w-6 mr-3" />
-              View on GitHub
-            </Button>
+            <div className="mt-4 md:mt-8">
+              <Button to="https://github.com/MultiQC/example-plugin" variant="primary" size="md">
+                <GitHubIcon className="h-6 w-6 mr-3" />
+                View on GitHub
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -138,10 +140,12 @@ const PluginsPage = () => {
               MultiQC_Clarity plugin, which searches your Clarity LIMS installation for matching sample names. If exact
               matches are found, then the metadata configured in the config file is retrieved and entered into the report.
             </p>
-            <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="sm">
-              <GitHubIcon className="h-6 w-6 mr-3" />
-              View on GitHub
-            </Button>
+            <div className="mt-4 md:mt-8">
+              <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="md">
+                <GitHubIcon className="h-6 w-6 mr-3" />
+                View on GitHub
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -169,10 +173,12 @@ const PluginsPage = () => {
               {' '}
               pipeline.
             </p>
-            <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="sm">
-              <GitHubIcon className="h-6 w-6 mr-3" />
-              View on GitHub
-            </Button>
+            <div className="mt-4 md:mt-8">
+              <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="md">
+                <GitHubIcon className="h-6 w-6 mr-3" />
+                View on GitHub
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -199,10 +205,12 @@ const PluginsPage = () => {
               Not much use for others outside of our institute directly, but can be helpful as a guide for how such
               plugins can be written.
             </p>
-            <Button to="https://github.com/ewels/MultiQC_NGI" variant="primary" size="sm">
-              <GitHubIcon className="h-6 w-6 mr-3" />
-              View on GitHub
-            </Button>
+            <div className="mt-4 md:mt-8">
+              <Button to="https://github.com/ewels/MultiQC_NGI" variant="primary" size="md">
+                <GitHubIcon className="h-6 w-6 mr-3" />
+                View on GitHub
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -20,6 +20,7 @@ const ExampleReportsPage = () => {
           title
           description
           path
+          type
         }
       }
       customReports: allExampleReport(filter: {type: {eq: "MultiQC Customisation"}}) {
@@ -27,6 +28,7 @@ const ExampleReportsPage = () => {
           title
           description
           path
+          type
         }
       }
     }
@@ -47,6 +49,10 @@ const ExampleReportsPage = () => {
               <h1 className="typo-h2">
                 Example reports
               </h1>
+              <p className="typo-blockquote mt-4 lg:mt-8">
+                MultiQC collects numerical stats from each module at the top the report, so that you can track how your
+                data behaves as it proceeds through your analysis.
+              </p>
             </div>
           </div>
         </div>
@@ -59,6 +65,9 @@ const ExampleReportsPage = () => {
           {analysisReports.map((report) => (
             <div className="col-full md:col-6 mt-8">
               <div className="flex flex-col h-full rounded-md bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-8">
+                <p className="typo-intro uppercase text-blue-600 mb-4">
+                  {report.type}
+                </p>
                 <h3 className="typo-h4 mb-4">
                   <Link to={report.path} noBorder>
                     {report.title}
@@ -83,6 +92,9 @@ const ExampleReportsPage = () => {
           {customReports.map((report) => (
             <div className="col-full md:col-6 mt-8 h-full">
               <div className="flex flex-col h-full rounded-md bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-8">
+                <p className="typo-intro uppercase text-blue-600 mb-4">
+                  {report.type}
+                </p>
                 <h3 className="typo-h4 mb-4">
                   <Link to={report.path} noBorder>
                     {report.title}

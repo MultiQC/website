@@ -28,13 +28,16 @@ const ExampleReport = ({ data, location }) => {
       <Hero>
         <div className="container-lg relative">
           <div className="row">
-            <div className="col-full">
+            <div className="col-full lg:col-6">
               <p className="typo-h5 uppercase text-blue-600 mb-4">
                 Example Report
               </p>
               <h1 className="typo-h2">
                 {report.title}
               </h1>
+              <p className="typo-blockquote mt-4 lg:mt-8">
+                {report.description}
+              </p>
             </div>
           </div>
         </div>
@@ -42,16 +45,11 @@ const ExampleReport = ({ data, location }) => {
       <div className="container-lg py-10 md:py-20">
         <div className="row">
           <div className="col-full lg:col-9 lg:order-2">
-            <h1 className="typo-h2 text-blue-600 mb-4">
-              {report.title}
-            </h1>
-            <div className="mt-5 md:mt-10">
-              <CustomMDXProvider>
-                <MDXRenderer>
-                  {report.content.body}
-                </MDXRenderer>
-              </CustomMDXProvider>
-            </div>
+            <CustomMDXProvider>
+              <MDXRenderer>
+                {report.content.body}
+              </MDXRenderer>
+            </CustomMDXProvider>
           </div>
         </div>
       </div>
