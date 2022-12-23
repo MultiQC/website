@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { useState } from 'react';
 
 import {
@@ -28,32 +29,23 @@ import Logo from '../images/logo-light.svg';
 import Hero from '../layout/Hero';
 
 const HomePage = ({ location }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      exampleReports: allExampleReport(sort: {fields: title}) {
+        nodes {
+          embed
+          title
+          path
+        }
+      }
+    }
+  `);
+
   const [videoLanguage, setVideoLanguage] = useState('en');
   const [videoEng, setVideoEng] = useState(0);
   const [videoEsp, setVideoEsp] = useState(0);
 
-  const exampleReports = [
-    {
-      title: 'RNA-Seq',
-      path: '/examples/rna-seq/multiqc_report.html',
-    },
-    {
-      title: 'Whole-Genome Seq',
-      path: '/examples/wgs/multiqc_report.html',
-    },
-    {
-      title: 'Bisulfite Seq',
-      path: '/examples/bs-seq/multiqc_report.html',
-    },
-    {
-      title: 'Hi-C',
-      path: '/examples/hi-c/multiqc_report.html',
-    },
-    {
-      title: 'MultiQC_NGI',
-      path: '/examples/ngi-rna/Test_NGI_Project_multiqc_report.html',
-    },
-  ];
+  const exampleReports = data.exampleReports.nodes;
 
   return (
     <>
@@ -189,9 +181,9 @@ const HomePage = ({ location }) => {
                   title="Quick Install"
                 >
                   <SnippetBox.Item title="pip">
-                    pip install multiqc   <span class="text-gray-300"># Install</span>
+                    pip install multiqc   <span className="text-gray-300"># Install</span>
                     <br />
-                    multiqc . <span class="text-gray-300"># Run</span>
+                    multiqc . <span className="text-gray-300"># Run</span>
                   </SnippetBox.Item>
                   <SnippetBox.Item title="conda">
                     conda install -c bioconda -c conda-forge multiqc
@@ -220,9 +212,15 @@ const HomePage = ({ location }) => {
             <p className="typo-blockquote mb-4">
               MultiQC collects numerical stats from each module at the top the report, so that you can track how your data behaves as it proceeds through your analysis.
             </p>
-            <div className="hidden md:block">
+            <div className="mt-4 md:mt-8">
+              <Button to="/example-reports/" variant="primary" size="md" arrow>
+                See example reports
+              </Button>
+            </div>
+            <div className="hidden md:block mt-8">
               <ExamplesBrowser
                 items={exampleReports}
+                hasDetails
               />
             </div>
           </div>

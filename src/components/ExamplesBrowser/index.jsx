@@ -1,9 +1,13 @@
 import classnames from 'classnames';
 import React, { useState } from 'react';
 
+import {
+  Button,
+} from 'website-components';
+
 import MultiQCIconSrc from '../../images/icons/multiqc.svg';
 
-const ExamplesBrowser = ({ items }) => {
+const ExamplesBrowser = ({ items, hasDetails }) => {
   const [ active, setActive ] = useState(0);
 
   return (
@@ -31,8 +35,15 @@ const ExamplesBrowser = ({ items }) => {
           ))}
         </div>
       </div>
+      {hasDetails && (
+        <div className="bg-gray-200 border-b border-gray-200 py-2 px-4 text-center">
+          <Button to={items[active].path} variant="primary" size="sm" arrow>
+            See report details
+          </Button>
+        </div>
+      )}
       <div>
-        <iframe src={items[active].path} className="w-full h-[600px]" />
+        <iframe src={items[active].embed} className="w-full h-[600px]" />
       </div>
     </div>
   );

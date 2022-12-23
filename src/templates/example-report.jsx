@@ -4,12 +4,14 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
 import {
+  Button,
   Link,
   List,
 } from 'website-components';
 
 import CustomMDXProvider from '../components/CustomMDXProvider';
 import DocsNavigation from '../components/DocsNavigation';
+import ExamplesBrowser from '../components/ExamplesBrowser';
 import Seo from '../components/Seo';
 
 import Hero from '../layout/Hero';
@@ -30,7 +32,7 @@ const ExampleReport = ({ data, location }) => {
           <div className="row">
             <div className="col-full lg:col-6">
               <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Example Report
+                Example report details
               </p>
               <h1 className="typo-h2">
                 {report.title}
@@ -42,16 +44,24 @@ const ExampleReport = ({ data, location }) => {
           </div>
         </div>
       </Hero>
-      <div className="container-lg py-10 md:py-20">
+      <div className="container-lg mt-10 md:mt-20">
         <div className="row">
-          <div className="col-full lg:col-9 lg:order-2">
+          <div className="col-full">
             <CustomMDXProvider>
               <MDXRenderer>
                 {report.content.body}
               </MDXRenderer>
             </CustomMDXProvider>
+            <div className="mt-8">
+              <ExamplesBrowser items={[report]} />
+            </div>
           </div>
         </div>
+      </div>
+      <div className="container-lg py-10 md:py-20 text-center">
+        <Button to="/example-reports/" variant="secondary" size="md">
+          See example reports
+        </Button>
       </div>
     </>
   );
@@ -73,15 +83,9 @@ export const pageQuery = graphql`
       title
       description
       path
-      zip {
-        publicURL
-      }
-      embed {
-        publicURL
-      }
-      data {
-        publicURL
-      }
+      zip
+      embed
+      data
       content {
         body
       }

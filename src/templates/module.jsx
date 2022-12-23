@@ -23,7 +23,7 @@ const ModulePage = ({ data, pageContext }) => {
           <div className="row">
             <div className="col-full">
               <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Module
+                Module details
               </p>
               <h1 className="typo-h2">
                 {module.title}

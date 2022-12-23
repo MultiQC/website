@@ -24,7 +24,7 @@ const Item = ({ children, index }) => {
   const { current, setCurrent, vertical } = useContext(TabsContext);
 
   return (
-    <button onClick={() => { setCurrent(index) }} noBorder className={classnames(
+    <button onClick={() => { setCurrent(index) }} className={classnames(
       'typo-small bg-gray-800 block border border-blue-600 px-4 py-1',
       {
         'mx-px first:ml-0 last:mr-0 first:rounded-l-sm last:rounded-r-sm': !vertical,

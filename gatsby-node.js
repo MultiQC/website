@@ -41,9 +41,9 @@ exports.createSchemaCustomization = ({ actions }) => {
         title: String
         description: String
         type: String
-        embed: File
-        zip: File
-        data: File
+        embed: String
+        zip: String
+        data: String
         content: Mdx
       }
     `,

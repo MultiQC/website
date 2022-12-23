@@ -19,6 +19,9 @@ const CitationPage = () => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
+              <p className="typo-h5 uppercase text-blue-600 mb-4">
+                Citation
+              </p>
               <h1 className="typo-h2">
                 MultiQC Publication Details
               </h1>

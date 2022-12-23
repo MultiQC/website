@@ -34,6 +34,9 @@ const ModulesPage = () => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
+              <p className="typo-h5 uppercase text-blue-600 mb-4">
+                Modules
+              </p>
               <h1 className="typo-h2">
                 MultiQC Modules
               </h1>
