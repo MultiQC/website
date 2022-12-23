@@ -80,6 +80,7 @@ module.exports = {
                 },
                 blue: {
                   600: '#1d71b8',
+                  800: '#283242',
                 },
                 indigo: {
                   100: '#E8EAFF',

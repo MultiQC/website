@@ -1,7 +1,12 @@
+import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
+
+import {
+  Footer,
+} from 'website-components';
+
 import CookieBanner from './CookieBanner';
 import Header from './Header';
-import Footer from './Footer';
 import PropTypes from '../utils/PropTypes';
 
 const propTypes = {
@@ -13,6 +18,20 @@ const defaultProps = {
 };
 
 const Layout = ({ children, location }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: {eq: "seqera-logo-white.png"}) {
+        childImageSharp {
+          gatsbyImageData(
+            height: 28
+            width: 200
+            placeholder: NONE
+          )
+        }
+      }
+    }
+  `);
+
   return (
     <>
       <Header location={location} />
@@ -20,7 +39,7 @@ const Layout = ({ children, location }) => {
         {children}
       </main>
       <CookieBanner />
-      <Footer />
+      <Footer logoImage={data.logo} jobsCount={10} />
     </>
   );
 };

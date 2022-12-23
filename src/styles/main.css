@@ -55,7 +55,7 @@
   }
 
   .typo-small {
-    @apply font-body text-xs font-light antialiased;
+    @apply font-body text-sm font-light antialiased;
   }
 
   .container-xl {
