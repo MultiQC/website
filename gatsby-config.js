@@ -69,7 +69,12 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
-          'gatsby-remark-relative-images',
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              exclude: ['embed', 'zip', 'data'],
+            },
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {
