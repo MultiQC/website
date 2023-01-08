@@ -1,35 +1,35 @@
-[2022-09-07 17:05:56,853] multiqc                                            [DEBUG  ]  This is MultiQC v1.13
-[2022-09-07 17:05:56,853] multiqc                                            [DEBUG  ]  Command used: /Users/ewels/.miniconda3/miniconda3/envs/py3.10/bin/multiqc . --disable-ngi -t default
-[2022-09-07 17:05:57,072] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.12
-[2022-09-07 17:05:57,072] multiqc                                            [DEBUG  ]  Working dir : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
-[2022-09-07 17:05:57,072] multiqc                                            [DEBUG  ]  Template    : default
-[2022-09-07 17:05:57,072] multiqc                                            [DEBUG  ]  Running Python 3.10.4 (main, Mar 31 2022, 03:37:37) [Clang 12.0.0 ]
-[2022-09-07 17:05:57,072] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dedup, pbmarkdup, damageprofiler, biobambam2, jcvi, mtnucratio, picard, vep, sentieon, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, snpsplit, odgi, pangolin, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, pychopper, pycoqc, minionqc, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap
-[2022-09-07 17:05:57,072] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/px/z57y5_jd2rx3b3js6s9629dh0000gn/T/tmpsxjxs2m3
-[2022-09-07 17:05:57,076] multiqc                                            [INFO   ]  Search path : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
-[2022-09-07 17:05:57,790] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_module_specific_max_filesize: 215] // [skipped_no_match: 32]
-[2022-09-07 17:05:58,093] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.5.2
-[2022-09-07 17:05:58,094] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.5.2
-[2022-09-07 17:05:58,094] multiqc                                            [DEBUG  ]  No samples found: custom_content
-[2022-09-07 17:05:58,115] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 alignment reports
-[2022-09-07 17:05:58,116] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 dedup reports
-[2022-09-07 17:05:58,134] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 methextract reports
-[2022-09-07 17:05:58,148] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
-[2022-09-07 17:05:58,188] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921768_1
-[2022-09-07 17:05:58,194] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921770_1'
-[2022-09-07 17:05:58,198] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921769_1
-[2022-09-07 17:05:58,200] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921695_1
-[2022-09-07 17:05:58,202] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_2wk_SRR921694_1'
-[2022-09-07 17:05:58,203] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921773_1
-[2022-09-07 17:05:58,210] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921696_1
-[2022-09-07 17:05:58,212] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921767_1'
-[2022-09-07 17:05:58,212] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
-[2022-09-07 17:05:58,255] multiqc                                            [INFO   ]  Compressing plot data
-[2022-09-07 17:05:58,337] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after modules)
-[2022-09-07 17:05:58,338] multiqc                                            [INFO   ]  Skipping MultiQC_NGI as specified on command line
-[2022-09-07 17:05:58,357] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2022-09-07 17:05:58,357] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2022-09-07 17:05:58,357] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/px/z57y5_jd2rx3b3js6s9629dh0000gn/T/tmpsxjxs2m3/multiqc_data' to '/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/multiqc_data'
-[2022-09-07 17:05:58,405] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after execution finish)
-[2022-09-07 17:05:58,405] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI (after execution finish) as 'disable_ngi' was specified
-[2022-09-07 17:05:58,405] multiqc                                            [INFO   ]  MultiQC complete
+[2023-01-08 22:44:58,957] multiqc                                            [DEBUG  ]  This is MultiQC v1.14
+[2023-01-08 22:44:58,957] multiqc                                            [DEBUG  ]  Command used: /Users/ewels/.miniconda3/miniconda3/envs/py3.10/bin/multiqc . --disable-ngi -t default
+[2023-01-08 22:44:59,216] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.13
+[2023-01-08 22:44:59,216] multiqc                                            [DEBUG  ]  Working dir : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
+[2023-01-08 22:44:59,216] multiqc                                            [DEBUG  ]  Template    : default
+[2023-01-08 22:44:59,216] multiqc                                            [DEBUG  ]  Running Python 3.10.4 (main, Mar 31 2022, 03:37:37) [Clang 12.0.0 ]
+[2023-01-08 22:44:59,217] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, biobambam2, jcvi, mtnucratio, picard, vep, sentieon, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umitools, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, cellranger, snpsplit, odgi, pangolin, nextclade, humid, kat, leehom, adapterRemoval, bbduk, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap
+[2023-01-08 22:44:59,217] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/px/z57y5_jd2rx3b3js6s9629dh0000gn/T/tmpip9ilzez
+[2023-01-08 22:44:59,222] multiqc                                            [INFO   ]  Search path : /Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq
+[2023-01-08 22:44:59,987] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_module_specific_max_filesize: 215] // [skipped_no_match: 32]
+[2023-01-08 22:45:00,323] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.5.2
+[2023-01-08 22:45:00,324] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.5.2
+[2023-01-08 22:45:00,324] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2023-01-08 22:45:00,336] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 alignment reports
+[2023-01-08 22:45:00,337] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 dedup reports
+[2023-01-08 22:45:00,339] multiqc.modules.bismark.bismark                    [INFO   ]  Found 8 methextract reports
+[2023-01-08 22:45:00,350] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 8 reports
+[2023-01-08 22:45:00,372] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921768_1
+[2023-01-08 22:45:00,379] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921770_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921770_1'
+[2023-01-08 22:45:00,383] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_1wk_SRR921769_1
+[2023-01-08 22:45:00,385] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921695_1
+[2023-01-08 22:45:00,388] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_2wk_SRR921694_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_2wk_SRR921694_1'
+[2023-01-08 22:45:00,389] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921773_1
+[2023-01-08 22:45:00,396] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: MethylC-Seq_mm_fc_2wk_SRR921696_1
+[2023-01-08 22:45:00,399] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'MethylC-Seq_mm_fc_1wk_SRR921767_1_fastqc.zip' as already parsed 'MethylC-Seq_mm_fc_1wk_SRR921767_1'
+[2023-01-08 22:45:00,399] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports
+[2023-01-08 22:45:00,445] multiqc                                            [INFO   ]  Compressing plot data
+[2023-01-08 22:45:00,534] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after modules)
+[2023-01-08 22:45:00,534] multiqc                                            [INFO   ]  Skipping MultiQC_NGI as specified on command line
+[2023-01-08 22:45:00,554] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2023-01-08 22:45:00,554] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2023-01-08 22:45:00,554] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/px/z57y5_jd2rx3b3js6s9629dh0000gn/T/tmpip9ilzez/multiqc_data' to '/Users/ewels/GitHub/MultiQC/website/public_html/examples/bs-seq/multiqc_data'
+[2023-01-08 22:45:00,598] multiqc                                            [DEBUG  ]  Running MultiQC_NGI v0.6.3 (after execution finish)
+[2023-01-08 22:45:00,598] multiqc                                            [DEBUG  ]  Skipping MultiQC_NGI (after execution finish) as 'disable_ngi' was specified
+[2023-01-08 22:45:00,598] multiqc                                            [INFO   ]  MultiQC complete

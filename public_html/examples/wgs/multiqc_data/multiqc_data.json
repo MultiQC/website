@@ -1092,6 +1092,7 @@
             "P4107_1003": {
                 "percent_gc": 41.0,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "total_sequences": 431379000.0,
                 "percent_duplicates": 6.795406093848555,
                 "percent_fails": 8.333333333333332
@@ -1099,6 +1100,7 @@
             "P4107_1004": {
                 "percent_gc": 40.0,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "total_sequences": 498165399.0,
                 "percent_duplicates": 3.940427809644561,
                 "percent_fails": 16.666666666666664
@@ -1106,6 +1108,7 @@
             "P4107_1005": {
                 "percent_gc": 41.0,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "total_sequences": 484233426.0,
                 "percent_duplicates": 6.603658645191075,
                 "percent_fails": 8.333333333333332
@@ -1113,6 +1116,7 @@
             "P4107_1002": {
                 "percent_gc": 41.0,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "total_sequences": 430185524.0,
                 "percent_duplicates": 2.1580757020873165,
                 "percent_fails": 16.666666666666664
@@ -1120,6 +1124,7 @@
             "P4107_1001": {
                 "percent_gc": 41.0,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "total_sequences": 383592756.0,
                 "percent_duplicates": 3.693292003886029,
                 "percent_fails": 16.666666666666664
@@ -1127,6 +1132,7 @@
             "P4107_1006": {
                 "percent_gc": 41.0,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "total_sequences": 453238610.0,
                 "percent_duplicates": 1.7758820535142377,
                 "percent_fails": 8.333333333333332
@@ -1535,7 +1541,7 @@
                 "dmin": 0.0
             },
             "avg_sequence_length": {
-                "title": "Read Length",
+                "title": "Average Read Length",
                 "description": "Average Read Length (bp)",
                 "min": 0,
                 "suffix": " bp",
@@ -1544,6 +1550,27 @@
                 "hidden": true,
                 "namespace": "FastQC",
                 "rid": "mqc-generalstats-fastqc-avg_sequence_length",
+                "colour": "228,26,28",
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 151.0,
+                "dmin": 0.0
+            },
+            "median_sequence_length": {
+                "title": "Median Read Length",
+                "description": "Median Read Length (bp)",
+                "min": 0,
+                "suffix": " bp",
+                "scale": "RdYlGn",
+                "format": "{:,.0f}",
+                "hidden": true,
+                "namespace": "FastQC",
+                "rid": "mqc-generalstats-fastqc-median_sequence_length",
                 "colour": "228,26,28",
                 "max": null,
                 "ceiling": null,
@@ -47723,6 +47750,7 @@
                 "%GC": 41.0,
                 "total_deduplicated_percentage": 93.20459390615144,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -47746,6 +47774,7 @@
                 "%GC": 40.0,
                 "total_deduplicated_percentage": 96.05957219035544,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "fail",
@@ -47769,6 +47798,7 @@
                 "%GC": 41.0,
                 "total_deduplicated_percentage": 93.39634135480892,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -47792,6 +47822,7 @@
                 "%GC": 41.0,
                 "total_deduplicated_percentage": 97.84192429791268,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "fail",
@@ -47815,6 +47846,7 @@
                 "%GC": 41.0,
                 "total_deduplicated_percentage": 96.30670799611397,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -47838,6 +47870,7 @@
                 "%GC": 41.0,
                 "total_deduplicated_percentage": 98.22411794648576,
                 "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "warn",
@@ -47874,6 +47907,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 6.795406093848555,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 41.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 431379000.0
             },
@@ -47898,6 +47932,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 3.940427809644561,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 40.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 16.666666666666664,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 498165399.0
             },
@@ -47922,6 +47957,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 6.603658645191075,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 41.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 484233426.0
             },
@@ -47946,6 +47982,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 2.1580757020873165,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 41.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 16.666666666666664,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 430185524.0
             },
@@ -47970,6 +48007,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 1.7758820535142377,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 41.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 8.333333333333332,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 453238610.0
             },
@@ -47994,6 +48032,7 @@
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 3.693292003886029,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 41.0,
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 16.666666666666664,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 383592756.0
             }
@@ -48005,14 +48044,14 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2022-09-07, 17:06 CEST",
+    "config_creation_date": "2023-01-08, 22:45 CET",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
     "config_script_path": "/Users/ewels/.miniconda3/miniconda3/envs/py3.10/lib/python3.10/site-packages/multiqc/utils",
-    "config_short_version": "1.13",
+    "config_short_version": "1.14",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.13"
+    "config_version": "1.14"
 }
