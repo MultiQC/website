@@ -178,7 +178,7 @@ if(count($md_parts) == 3){
               <div class="panel-body">
                 <pre id="pip"><code >pip install multiqc    <span class="comment"># Install</span>
 multiqc .              <span class="comment"># Run</span></code></pre>
-<pre id="conda" style="display:none;"><code>conda install -c bioconda -c conda-forge multiqc
+<pre id="conda" style="display:none;"><code>conda install multiqc   <span class="comment"># <a class="comment" href="https://bioconda.github.io/#usage" target="_blank"><u>Setup Bioconda</u></a> first</span>
 multiqc .</code></pre>
 <pre id="manual" style="display:none;"><code>git clone https://github.com/ewels/MultiQC.git
 python setup.py install
@@ -501,7 +501,7 @@ multiqc .</code></pre>
         <h2>Install from the <a href="https://pypi.python.org/pypi/multiqc">Python Package Index</a> or
         <a href="https://bioconda.github.io/">Bioconda</a></h2>
         <p>To install MultiQC, simply run <code>pip install multiqc</code> on the command line.<br>
-        If you use conda, you can run <code>conda install -c bioconda multiqc</code> instead.<br>
+        If you use conda / <a href="https://bioconda.github.io/#usage" target="_blank">bioconda</a>, you can run <code>conda install multiqc</code> instead.<br>
         See the <a href="docs/#installation">installation instructions</a> for more help.</p>
         <p>
           <a href="docs" class="btn btn-default btn-lg"><i class="fa fa-book fa-lg"></i> Documentation</a>
