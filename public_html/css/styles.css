@@ -42,17 +42,17 @@ footer a {
 footer, footer a, footer a:hover {
   color: #aaa;
 }
-.scilife-footer {
+.seqera-footer {
   margin-top: -6px;
   float:right;
 }
 @media (max-width: 992px) {
-  .scilife-footer {
+  .seqera-footer {
     float:left;
     clear:left;
   }
 }
-.scilife-footer img {
+.seqera-footer img {
   height: 40px;
 }
 

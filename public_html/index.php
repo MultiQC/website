@@ -520,8 +520,8 @@ multiqc .</code></pre>
           <a target="_blank" href="https://se.linkedin.com/in/philewels">LinkedIn</a> |
           <a target="_blank" href="https://www.researchgate.net/profile/Philip_Ewels">ResearchGate</a>
         </p>
-        <a target="_blank" href="http://www.scilifelab.se" class="scilife-footer">
-          <img src="images/SLL_logo_blue_white.png">
+        <a target="_blank" href="https://seqera.io/" class="seqera-footer">
+          <img src="images/seqera-logo.png">
         </a>
       </div>
     </footer>
