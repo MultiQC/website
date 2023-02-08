@@ -9,6 +9,7 @@ import {
 } from 'website-components';
 
 import Logo from '../images/logo-light.svg';
+import HeroBackgroundSrc from '../images/background.png';
 
 const Header = ({ location }) => {
   const [navOpened, setNavOpened] = useState(false);
@@ -126,6 +127,7 @@ const Header = ({ location }) => {
           'opacity-100 visible': navOpened,
         },
       )}
+      style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}
       >
         <div className="flex flex-col h-full">
           <div className="h-16 flex justify-between items-center">
@@ -139,8 +141,14 @@ const Header = ({ location }) => {
               <CloseIcon />
             </Button>
           </div>
-          <div className="flex-1 py-16 overflow-y-auto text-center">
-            <div>
+          <div className="flex-1 py-8 overflow-y-auto text-center">
+            <div
+              className={classnames(
+                'py-3 rounded-sm bg-black bg-opacity-0',
+                {
+                  'bg-opacity-30 hover:bg-opacity-50': location.pathname === '/'
+                }
+              )}>
               <Button
                   onClick={() => { handleNav('/') }}
                   noShadow
@@ -149,7 +157,13 @@ const Header = ({ location }) => {
                   Home
               </Button>
             </div>
-            <div className="mt-4">
+            <div
+              className={classnames(
+                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
+                {
+                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/docs/')
+                }
+              )}>
               <Button
                   onClick={() => { handleNav('/docs/') }}
                   noShadow
@@ -158,7 +172,13 @@ const Header = ({ location }) => {
                   Docs
               </Button>
             </div>
-            <div className="mt-4">
+            <div
+              className={classnames(
+                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
+                {
+                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/plugins/')
+                }
+              )}>
               <Button
                   onClick={() => { handleNav('/plugins/') }}
                   noShadow
@@ -167,7 +187,13 @@ const Header = ({ location }) => {
                   Plugins
               </Button>
             </div>
-            <div className="mt-4">
+            <div
+              className={classnames(
+                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
+                {
+                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/modules/')
+                }
+              )}>
               <Button
                   onClick={() => { handleNav('/modules/') }}
                   noShadow
@@ -176,16 +202,28 @@ const Header = ({ location }) => {
                   Modules
               </Button>
             </div>
-            <div className="mt-4">
+            <div
+              className={classnames(
+                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
+                {
+                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/logos/')
+                }
+              )}>
               <Button
                   onClick={() => { handleNav('/logos/') }}
                   noShadow
                   className="typo-intro"
               >
-                  Logo
+                  Logos
               </Button>
             </div>
-            <div className="mt-4">
+            <div
+              className={classnames(
+                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
+                {
+                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/example-reports/')
+                }
+              )}>
               <Button
                   onClick={() => { handleNav('/example-reports/') }}
                   noShadow
