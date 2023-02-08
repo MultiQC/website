@@ -107,7 +107,7 @@ const HomePage = ({ location }) => {
                       Español 🇪🇸
                     </Tabs.Item>
                   </Tabs>
-                  <div className="mt-4">
+                  <div className="mt-5">
                     {videoLanguage === 'en' && (
                       <Tabs current={videoEng} setCurrent={setVideoEng} vertical>
                         <Tabs.Item index={0}>
@@ -146,37 +146,37 @@ const HomePage = ({ location }) => {
                 <GitHubIcon className="h-6 w-6 mr-3" />
                 GitHub
               </Button>
-              <div className="mt-4">
+              <div className="mt-5">
                 <Button to="https://pypi.org/project/multiqc/" variant="primary" size="md" className="w-full">
                   <PythonIcon className="w-6 h-6 mr-3" />
                   Python Package Index
                 </Button>
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <Button to="/docs/" variant="primary" size="md" className="w-full">
                   <DocsIcon className="h-6 w-6 mr-3" />
                   Documentation
                 </Button>
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <Button to="/modules/" variant="primary" size="md" className="w-full">
                   <ToolIcon className="h-6 w-6 mr-3" />
                   114 supported tools
                 </Button>
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <Button to="/citation/" variant="primary" size="md" className="w-full">
                   <QuoteIcon className="h-6 w-6 mr-3" />
                   Citation
                 </Button>
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <Button to="https://gitter.im/ewels/MultiQC" variant="primary" size="md" className="w-full">
                   <GitterIcon className="h-6 w-6 mr-3" />
                   Get help on Gitter
                 </Button>
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <SnippetBox
                   title="Quick Install"
                 >
@@ -350,13 +350,17 @@ const HomePage = ({ location }) => {
               pip install multiqc
             </span>
             {' '}
-            on the command line. If you use conda, you can run
+            on the command line.
+            <br />
+            If you use conda, you can run
             {' '}
             <span className="bg-blue-600 text-white font-medium px-2 rounded-sm">
-              conda install -c bioconda multiqc
+              conda install multiqc
             </span>
             {' '}
-            instead. See the
+            instead.
+            <br />
+            See the
             {' '}
             <Link to="https://multiqc.info/docs/#installation" className="text-blue-600">
               installation instructions
