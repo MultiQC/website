@@ -25,12 +25,11 @@ const Item = ({ children, index }) => {
 
   return (
     <button onClick={() => { setCurrent(index) }} className={classnames(
-      'typo-small bg-gray-800 block border border-blue-600 px-4 py-1',
+      'typo-small text-white bg-gray-700 hover:bg-gray-600 block border border-gray-800 px-4 py-2 text-left',
       {
-        'mx-px first:ml-0 last:mr-0 first:rounded-l-sm last:rounded-r-sm': !vertical,
-        'my-px first:mt-0 last:mb-0 first:rounded-t-sm last:rounded-b-sm': vertical,
-        'text-white hover:bg-gray-900': current != index,
-        'bg-blue-600 text-white': current === index,
+        'first:ml-0 border-r-0 last:border-r last:mr-0 first:rounded-l-sm last:rounded-r-sm': !vertical,
+        'first:mt-0 border-b-0 last:border-b last:mb-0 first:rounded-t-sm last:rounded-b-sm': vertical,
+        'bg-neutral-600': current === index,
       }
     )}
     >

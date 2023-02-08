@@ -111,29 +111,29 @@ const HomePage = ({ location }) => {
                     {videoLanguage === 'en' && (
                       <Tabs current={videoEng} setCurrent={setVideoEng} vertical>
                         <Tabs.Item index={0}>
-                          Introduction to MultiQC (1:19)
+                          Introduction to MultiQC
                         </Tabs.Item>
                         <Tabs.Item index={1}>
-                          Installing MultiQC (4:33)
+                          Installing MultiQC
                         </Tabs.Item>
                         <Tabs.Item index={2}>
-                          Running MultiQC (5:21)
+                          Running MultiQC
                         </Tabs.Item>
                         <Tabs.Item index={3}>
-                          Using MultiQC Reports (6:06)
+                          Using MultiQC Reports
                         </Tabs.Item>
                       </Tabs>
                     )}
                     {videoLanguage === 'es' && (
                       <Tabs current={videoEsp} setCurrent={setVideoEsp} vertical>
                         <Tabs.Item index={0}>
-                          Introducción a MultiQC (1:43)
+                          Introducción a MultiQC
                         </Tabs.Item>
                         <Tabs.Item index={1}>
-                          Instalación de MultiQC (4:19)
+                          Instalación de MultiQC
                         </Tabs.Item>
                         <Tabs.Item index={2}>
-                          ¿Cómo ejecutar MultiQC? (5:53)
+                          ¿Cómo ejecutar MultiQC?
                         </Tabs.Item>
                       </Tabs>
                     )}
