@@ -93,8 +93,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `nextflow-summit-2022`,
-        short_name: `summit`,
+        name: `MultiQC`,
+        short_name: `MultiQC`,
         start_url: `/`,
         background_color: `#27ae60`,
         theme_color: `#27ae60`,
