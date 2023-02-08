@@ -56,7 +56,7 @@ const HomePage = ({ location }) => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-8">
-              <div className="max-w-[400px]">
+              <div className="max-w-[430px]">
                 <img src={Logo} alt="MultiQC logo" />
               </div>
               <h1 className="typo-h4 mt-8">
@@ -183,21 +183,22 @@ const HomePage = ({ location }) => {
                   <SnippetBox.Item title="pip">
                     pip install multiqc   <span className="text-gray-300"># Install</span>
                     <br />
-                    multiqc . <span className="text-gray-300"># Run</span>
+                    multiqc .             <span className="text-gray-300"># Run</span>
                   </SnippetBox.Item>
                   <SnippetBox.Item title="conda">
-                    conda install -c bioconda -c conda-forge multiqc
+                    conda install multiqc   <span className="text-gray-300"># <a href="https://bioconda.github.io/#usage" className="underline">Bioconda config</a></span>
                     <br />
                     multiqc .
                   </SnippetBox.Item>
-                  <SnippetBox.Item title="manual">
-                    git clone https://github.com/ewels/MultiQC.git
+                  <SnippetBox.Item title="docker">
+                    docker run -t -v `pwd`:`pwd` -w `pwd` <span className="text-gray-300">\</span>
                     <br />
-                    python setup.py install
-                    <br />
-                    multiqc .
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ewels/multiqc .
                   </SnippetBox.Item>
                 </SnippetBox>
+                <p className="mt-2 text-xs text-gray-500 font-light">
+                  Need a little more help? <a href="/docs/usage/installation/" className='hover:text-gray-400 underline underline-offset-4'>See the full installation instructions</a>.
+                </p>
               </div>
             </div>
           </div>

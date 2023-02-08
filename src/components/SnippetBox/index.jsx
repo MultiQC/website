@@ -50,7 +50,7 @@ const SnippetBox = ({ title, children }) => {
             )}
             onClick={() => { setActive(index) }}
           >
-            {snippet.props.title}
+            <code className='text-xs'>{snippet.props.title}</code>
           </button>
         ))}
       </div>
@@ -60,9 +60,9 @@ const SnippetBox = ({ title, children }) => {
 
 const Item = ({ title, children }) => {
   return (
-    <>
+    <pre className="text-xs font-light">
       {children}
-    </>
+    </pre>
   );
 };
 
