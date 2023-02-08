@@ -26,17 +26,17 @@ const Header = ({ location }) => {
             <img src={Logo} className="h-8 lg:h-10" alt="MultiQC logo" />
           </Link>
           <div className="lg:flex items-center hidden">
-            <Link to="https://github.com/ewels/MultiQC/releases" className="typo-small text-gray-200 mr-3" noBorder>
+            <Link to="https://github.com/ewels/MultiQC/releases" className="typo-small text-xs text-gray-300 mr-5" noBorder>
               Current version: v1.13
             </Link>
             <Link
               to="/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
                 {
-                  'text-white': location.pathname != '/',
-                  'text-blue-600': location.pathname === '/'
+                  'text-gray-300': location.pathname != '/',
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname === '/'
                 }
               )}
             >
@@ -46,10 +46,10 @@ const Header = ({ location }) => {
               to="/docs/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
                 {
-                  'text-white': !location.pathname.includes('/docs/'),
-                  'text-blue-600': location.pathname.includes('/docs/')
+                  'text-gray-300': !location.pathname.includes('/docs/'),
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/docs/')
                 }
               )}
             >
@@ -59,10 +59,10 @@ const Header = ({ location }) => {
               to="/plugins/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
                 {
-                  'text-white': !location.pathname.includes('/plugins/'),
-                  'text-blue-600': location.pathname.includes('/plugins/')
+                  'text-gray-300': !location.pathname.includes('/plugins/'),
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/plugins/')
                 }
               )}
             >
@@ -72,10 +72,10 @@ const Header = ({ location }) => {
               to="/modules/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
                 {
-                  'text-white': !location.pathname.includes('/modules/'),
-                  'text-blue-600': location.pathname.includes('modules/')
+                  'text-gray-300': !location.pathname.includes('/modules/'),
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('modules/')
                 }
               )}
             >
@@ -85,10 +85,10 @@ const Header = ({ location }) => {
               to="/logos/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
                 {
-                  'text-white': !location.pathname.includes('/logos/'),
-                  'text-blue-600': location.pathname.includes('/logos/')
+                  'text-gray-300': !location.pathname.includes('/logos/'),
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/logos/')
                 }
               )}
             >
@@ -98,10 +98,10 @@ const Header = ({ location }) => {
               to="/example-reports/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-10 font-body py-1 px-4 rounded-sm mr-px font-normal tracking-wide',
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
                 {
-                  'text-white': !location.pathname.includes('/example-reports/'),
-                  'text-blue-600': location.pathname.includes('/example-reports/')
+                  'text-gray-300': !location.pathname.includes('/example-reports/'),
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/example-reports/')
                 }
               )}
             >
@@ -130,7 +130,7 @@ const Header = ({ location }) => {
         <div className="flex flex-col h-full">
           <div className="h-16 flex justify-between items-center">
             <Link to="/" noBorder className="block uppercase">
-                <img src={Logo} className="h-8 lg:h-10" alt="Nextflow Summit 2022 logo" />
+                <img src={Logo} className="h-8 lg:h-10" alt="MultiQC Logo" />
             </Link>
             <Button
               onClick={() => { setNavOpened(false); }}
