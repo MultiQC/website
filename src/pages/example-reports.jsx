@@ -46,9 +46,6 @@ const ExampleReportsPage = () => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-7">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Examples
-              </p>
               <h1 className="typo-h2">
                 Example reports
               </h1>
@@ -68,9 +65,6 @@ const ExampleReportsPage = () => {
           {analysisReports.map((report) => (
             <div className="col-full md:col-6 mt-8">
               <div className="flex flex-col h-full rounded-md bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-8">
-                <p className="typo-intro uppercase text-blue-600 mb-4">
-                  {report.type}
-                </p>
                 <h3 className="typo-h4 mb-4">
                   <Link to={report.path} noBorder>
                     {report.title}
@@ -95,9 +89,6 @@ const ExampleReportsPage = () => {
           {customReports.map((report) => (
             <div className="col-full md:col-6 mt-8 h-full">
               <div className="flex flex-col h-full rounded-md bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-8">
-                <p className="typo-intro uppercase text-blue-600 mb-4">
-                  {report.type}
-                </p>
                 <h3 className="typo-h4 mb-4">
                   <Link to={report.path} noBorder>
                     {report.title}

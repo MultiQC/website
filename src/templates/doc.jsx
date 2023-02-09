@@ -29,9 +29,6 @@ const DocPage = ({ data, location }) => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Documentation
-              </p>
               <h1 className="typo-h2">
                 {doc.title}
               </h1>

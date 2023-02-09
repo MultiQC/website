@@ -31,9 +31,6 @@ const ExampleReport = ({ data, location }) => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Example report details
-              </p>
               <h1 className="typo-h2">
                 {report.title}
               </h1>
@@ -52,6 +49,17 @@ const ExampleReport = ({ data, location }) => {
                 {report.content.body}
               </MDXRenderer>
             </CustomMDXProvider>
+            <p className="my-6 text-center">
+              <Button to={report.embed} variant="secondary" size="sm" className="mr-2">
+                Open report in new tab
+              </Button>
+              <Button to={report.zip} variant="secondary" size="sm" className="mr-2">
+                Download full report output
+              </Button>
+              <Button to={report.data} variant="secondary" size="sm" className="mr-2">
+                Download input data
+              </Button>
+            </p>
             <div className="mt-8">
               <ExamplesBrowser items={[report]} />
             </div>
@@ -59,8 +67,8 @@ const ExampleReport = ({ data, location }) => {
         </div>
       </div>
       <div className="container-lg py-10 md:py-20 text-center">
-        <Button to="/example-reports/" variant="secondary" size="md">
-          See example reports
+        <Button to="/example-reports/" variant="secondary" size="md" arrow>
+          See all example reports
         </Button>
       </div>
     </>

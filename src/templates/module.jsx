@@ -15,18 +15,15 @@ const ModulePage = ({ data, pageContext }) => {
   return (
     <>
       <Seo
-        title={module.title}
+        title={'MultiQC Module: ' + module.title}
         description={module.description}
       />
       <Hero>
-        <div className="container-md relative">
+        <div className="container-lg relative">
           <div className="row">
             <div className="col-full">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Module details
-              </p>
               <h1 className="typo-h2">
-                {module.title}
+                Module: {module.title}
               </h1>
               <p className="typo-blockquote mt-4 lg:mt-8">
                 {module.description}
@@ -35,7 +32,7 @@ const ModulePage = ({ data, pageContext }) => {
           </div>
         </div>
       </Hero>
-      <div className="container-md py-10 sm:py-20">
+      <div className="container-lg py-10 sm:py-20">
         <div className="row">
           <div className="col-full">
             <div>

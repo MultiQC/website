@@ -19,9 +19,6 @@ const LogosPage = () => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Logos
-              </p>
               <h1 className="typo-h2">
                 Grab some MultiQC logos!
               </h1>
@@ -32,7 +29,7 @@ const LogosPage = () => {
           </div>
         </div>
       </Hero>
-      <div className="container-md py-20">
+      <div className="container-lg py-20">
         <h2 className="typo-h3 mb-4">
           Introduction
         </h2>

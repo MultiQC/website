@@ -19,9 +19,6 @@ const CitationPage = () => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Citation
-              </p>
               <h1 className="typo-h2">
                 MultiQC Publication Details
               </h1>
@@ -32,36 +29,46 @@ const CitationPage = () => {
           </div>
         </div>
       </Hero>
-      <div className="container-md py-20">
+      <div className="container-lg py-20">
         <div className="row">
           <div className="col-full">
-            <h2 className="typo-h5 text-blue-600 uppercase mb-4">
-              Citation
-            </h2>
             <p className="typo-h4 mb-4">
               Please consider citing MultiQC if you use it in your analysis.
             </p>
-            <p className="typo-intro mb-4">
+            <div className="row">
+              <div className="col-full lg:col-6">
+                <p className="typo-intro">
               MultiQC: Summarize analysis results for multiple tools and samples in a single report
             </p>
-            <p className="typo-body italic mb-4">
+            <p className="typo-body ">
               Philip Ewels, Måns Magnusson, Sverker Lundin and Max Käller
             </p>
             <p className="typo-body">
-              Bioinformatics (2016)
+              <span className="italic">Bioinformatics</span> (2016)
               <br />
-              doi:
-              {' '}
-              <Link to="http://dx.doi.org/10.1093/bioinformatics/btw354" className="text-blue-600">
-                10.1093/bioinformatics/btw354
-              </Link>
-              <br />
-              PMID:
-              {' '}
-              <Link to="http://www.ncbi.nlm.nih.gov/pubmed/27312411" className="text-blue-600">
+
+                </p>
+              </div>
+              <div className="col-full lg:col-6">
+                <p><Button to="http://dx.doi.org/10.1093/bioinformatics/btw354" variant="primary" size="md" arrow>
+                  Go to publication
+                </Button></p>
+                <dl>
+                  <dt>doi:</dt>
+                  <dd>
+                    <Link to="http://dx.doi.org/10.1093/bioinformatics/btw354" className="text-blue-600">
+                      10.1093/bioinformatics/btw354
+                    </Link>
+                  </dd>
+                  <dt>PMID:</dt>
+                  <dd>
+                    <Link to="http://www.ncbi.nlm.nih.gov/pubmed/27312411" className="text-blue-600">
                 27312411
               </Link>
-            </p>
+                  </dd>
+                </dl>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ const Header = ({ location }) => {
       <header className="absolute z-10 inset-x-0 top-0">
         <div className="container-lg flex flex-wrap items-center justify-between w-full h-16 md:h-24">
           <Link to="/" noBorder className="block uppercase">
-            <img src={Logo} className="h-8 lg:h-10" alt="MultiQC logo" />
+            <img src={Logo} className={classnames('h-8 lg:h-10', { 'hidden': location.pathname == '/' },)} alt="MultiQC logo" />
           </Link>
           <div className="lg:flex items-center hidden">
             <Link to="https://github.com/ewels/MultiQC/releases" className="typo-small text-xs text-gray-300 mr-5" noBorder>
@@ -42,6 +42,19 @@ const Header = ({ location }) => {
               )}
             >
               Home
+            </Link>
+            <Link
+              to="/modules/"
+              noBorder
+              className={classnames(
+                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                {
+                  'text-gray-300': !location.pathname.includes('/modules/'),
+                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('modules/')
+                }
+              )}
+            >
+              Tools
             </Link>
             <Link
               to="/docs/"
@@ -69,19 +82,7 @@ const Header = ({ location }) => {
             >
               Plugins
             </Link>
-            <Link
-              to="/modules/"
-              noBorder
-              className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
-                {
-                  'text-gray-300': !location.pathname.includes('/modules/'),
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('modules/')
-                }
-              )}
-            >
-              Modules
-            </Link>
+
             <Link
               to="/logos/"
               noBorder

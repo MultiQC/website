@@ -215,7 +215,7 @@ const HomePage = ({ location }) => {
             </p>
             <div className="mt-4 md:mt-8">
               <Button to="/example-reports/" variant="primary" size="md" arrow>
-                See example reports
+                See all example reports
               </Button>
             </div>
             <div className="hidden md:block mt-8">

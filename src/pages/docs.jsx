@@ -43,26 +43,12 @@ const DocsPage = () => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-7">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Documentation
-              </p>
               <h1 className="typo-h2">
-                Welcome to the MultiQC docs
+                Documentation
               </h1>
               <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
-                These docs are bundled with the MultiQC download for your convenience, so you can also read in your
-                installation or on GitHub.
+                MultiQC documentation covering usage, customisation and development.
               </p>
-              <div className="mt-4 lg:mt-8">
-                <Button
-                  to="https://github.com/ewels/MultiQC/tree/master/docs"
-                  variant="primary"
-                  size="md"
-                  arrow
-                >
-                  View on GitHub
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -73,7 +59,7 @@ const DocsPage = () => {
         </h2>
         <div className="row">
           {sections.map((section) => (
-            <div className="col-full md:col-6 mt-10">
+            <div className="col-full md:col-4 mt-10">
               <h2 className="typo-h4 text-blue-600">
                 <Link to={section.path} noBorder>
                   {section.title}

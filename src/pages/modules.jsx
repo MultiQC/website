@@ -16,6 +16,7 @@ const ModulesPage = () => {
       modules: allModule(sort: {fields: title}) {
         nodes {
           slug
+          path
           title
           description
         }
@@ -28,43 +29,34 @@ const ModulesPage = () => {
   return (
     <>
       <Seo
-        title="MultiQC Modules"
+        title="Supported Tools"
       />
       <Hero>
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
-              <p className="typo-h5 uppercase text-blue-600 mb-4">
-                Modules
-              </p>
               <h1 className="typo-h2">
-                MultiQC Modules
+                Supported Tools
               </h1>
               <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
-                MultiQC currently supports 114 bioinformatics tools, listed below. If you would like another to be
-                added, please open an issue.
+                MultiQC currently has modules to support 114 different bioinformatics tools, listed below.
               </p>
-              <div className="mt-4 lg:mt-8">
-                <Button
-                  to="https://github.com/ewels/MultiQC/issues"
-                  variant="primary"
-                  size="md"
-                  arrow
-                >
-                  Open an issue
-                </Button>
-              </div>
             </div>
           </div>
         </div>
       </Hero>
-      <div className="container-md py-20">
+      <div className="container-lg py-20">
         <div className="flex items-center">
           <DocsIcon className="h-6 w-6 mr-3 text-gray-500" />
           <p className="typo-blockquote">
             Click the tool name to go to the MultiQC documentation for that tool.
           </p>
         </div>
+        <p className='mt-2'>
+          Missing something? If you would like another to be added,
+          please <Link to="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml">
+          open an issue</Link>.
+        </p>
         <table className="mt-8">
           <thead>
             <tr>
@@ -84,7 +76,7 @@ const ModulesPage = () => {
             {modules.map((module) => (
               <tr>
                 <td>
-                  <Link to={module.slug} className="typo-body text-blue-600">
+                  <Link to={module.path} className="typo-body text-blue-600">
                     {module.title}
                   </Link>
                 </td>
