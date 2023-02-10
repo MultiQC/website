@@ -1,28 +1,23 @@
-import classnames from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
+import classnames from "classnames";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 
-import {
-  Button,
-  DocsIcon,
-  Link,
-  List,
-} from 'website-components';
+import { Button, DocsIcon, Link, List } from "website-components";
 
-import Hero from '../layout/Hero';
-import Seo from '../components/Seo';
+import Hero from "../layout/Hero";
+import Seo from "../components/Seo";
 
 const DocsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      sections: allDoc(filter: {isSection: {eq: true}}, sort: {fields: order}) {
+      sections: allDoc(filter: { isSection: { eq: true } }, sort: { fields: order }) {
         nodes {
           path
           title
           description
         }
       }
-      docs: allDoc(sort: {fields: order}) {
+      docs: allDoc(sort: { fields: order }) {
         nodes {
           path
           title
@@ -36,16 +31,12 @@ const DocsPage = () => {
 
   return (
     <>
-      <Seo
-        title="MultiQC Documentation"
-      />
+      <Seo title="MultiQC Documentation" />
       <Hero>
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-7">
-              <h1 className="typo-h2">
-                Documentation
-              </h1>
+              <h1 className="typo-h2">Documentation</h1>
               <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
                 MultiQC documentation covering usage, customisation and development.
               </p>
@@ -54,9 +45,7 @@ const DocsPage = () => {
         </div>
       </Hero>
       <div className="container-lg my-10 md:my-20">
-        <h2 className="typo-h3">
-          Documentation sections
-        </h2>
+        <h2 className="typo-h3">Documentation sections</h2>
         <div className="row">
           {sections.map((section) => (
             <div className="col-full md:col-4 mt-10">
@@ -65,20 +54,15 @@ const DocsPage = () => {
                   {section.title}
                 </Link>
               </h2>
-              <p className="typo-body mt-4">
-                {section.description}
-              </p>
+              <p className="typo-body mt-4">{section.description}</p>
               <List className="mt-4" iconClassName="text-blue-600">
                 {docs.map((doc) => (
-                  <List.Item className={
-                      classnames('typo-body', {
-                        'hidden': !doc.path.includes(section.path) || doc.path === section.path,
-                      })
-                    }
+                  <List.Item
+                    className={classnames("typo-body", {
+                      hidden: !doc.path.includes(section.path) || doc.path === section.path,
+                    })}
                   >
-                    <Link to={doc.path}>
-                      {doc.title}
-                    </Link>
+                    <Link to={doc.path}>{doc.title}</Link>
                   </List.Item>
                 ))}
               </List>

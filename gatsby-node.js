@@ -1,6 +1,6 @@
-const { createFilePath } = require('gatsby-source-filesystem');
-const path = require('path');
-const { toKebabCase } = require('./src/utils/toKebabCase');
+const { createFilePath } = require("gatsby-source-filesystem");
+const path = require("path");
+const { toKebabCase } = require("./src/utils/toKebabCase");
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -55,9 +55,9 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
 
-  const moduleTemplate = path.resolve('src/templates/module.jsx');
-  const docTemplate = path.resolve('src/templates/doc.jsx');
-  const reportTemplate = path.resolve('src/templates/example-report.jsx');
+  const moduleTemplate = path.resolve("src/templates/module.jsx");
+  const docTemplate = path.resolve("src/templates/doc.jsx");
+  const reportTemplate = path.resolve("src/templates/example-report.jsx");
 
   const result = await graphql(`
     {
@@ -83,13 +83,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `);
 
   if (result.errors) {
-    reporter.panicOnBuild('Build failed while running GraphQL query.');
+    reporter.panicOnBuild("Build failed while running GraphQL query.");
     return;
   }
 
   const modules = result.data.modules.nodes;
 
-  modules.forEach(node => {
+  modules.forEach((node) => {
     createPage({
       path: node.path,
       component: moduleTemplate,
@@ -101,7 +101,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const docs = result.data.docs.nodes;
 
-  docs.forEach(node => {
+  docs.forEach((node) => {
     createPage({
       path: node.path,
       component: docTemplate,
@@ -113,7 +113,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const reports = result.data.reports.nodes;
 
-  reports.forEach(node => {
+  reports.forEach((node) => {
     createPage({
       path: node.path,
       component: reportTemplate,
@@ -127,18 +127,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const { createNodeField, createNode } = actions;
 
-  if (node.internal.type === 'Mdx') {
+  if (node.internal.type === "Mdx") {
     const parent = getNode(node.parent);
 
-    if (parent.internal.type === 'File') {
+    if (parent.internal.type === "File") {
       createNodeField({
-        name: 'sourceName',
+        name: "sourceName",
         node,
         value: parent.sourceInstanceName,
       });
     }
 
-    if (parent.internal.type === 'File' && parent.sourceInstanceName === 'repoModules') {
+    if (parent.internal.type === "File" && parent.sourceInstanceName === "repoModules") {
       const slug = toKebabCase(node.frontmatter.Name);
       const path = `/modules/${slug}`;
 
@@ -156,17 +156,17 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         parent: node.id,
         children: [],
         internal: {
-          type: 'Module',
+          type: "Module",
           contentDigest: createContentDigest(content),
         },
         ...content,
       });
     }
 
-    if (parent.internal.type === 'File' && parent.sourceInstanceName === 'repoDocs') {
+    if (parent.internal.type === "File" && parent.sourceInstanceName === "repoDocs") {
       const slug = createFilePath({ node, getNode });
-      const path = createFilePath({ node, getNode }).replace('/core', '').replace('_', '-');
-      const isSection = parent.name === 'index';
+      const path = createFilePath({ node, getNode }).replace("/core", "").replace("_", "-");
+      const isSection = parent.name === "index";
 
       const content = {
         slug: slug,
@@ -176,21 +176,21 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         order: node.frontmatter.order,
         isSection: isSection,
         content: node,
-      }
+      };
 
       createNode({
         id: createNodeId(`doc-${node.id}`),
         parent: node.id,
         children: [],
         internal: {
-          type: 'Doc',
+          type: "Doc",
           contentDigest: createContentDigest(content),
         },
         ...content,
       });
     }
 
-    if (parent.internal.type === 'File' && parent.sourceInstanceName === 'exampleReports') {
+    if (parent.internal.type === "File" && parent.sourceInstanceName === "exampleReports") {
       const slug = toKebabCase(node.frontmatter.title);
       const path = `/example-reports${createFilePath({ node, getNode })}`;
 
@@ -211,7 +211,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         parent: node.id,
         children: [],
         internal: {
-          type: 'ExampleReport',
+          type: "ExampleReport",
           contentDigest: createContentDigest(content),
         },
         ...content,

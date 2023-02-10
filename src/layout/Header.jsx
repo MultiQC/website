@@ -1,15 +1,10 @@
-import classnames from 'classnames';
-import {  navigate } from 'gatsby';
-import React, { useState } from 'react';
-import {
-    Button,
-    CloseIcon,
-    Link,
-    MenuIcon,
-} from 'website-components';
+import classnames from "classnames";
+import { navigate } from "gatsby";
+import React, { useState } from "react";
+import { Button, CloseIcon, Link, MenuIcon } from "website-components";
 
-import Logo from '../images/logo-light.svg';
-import HeroBackgroundSrc from '../images/background.png';
+import Logo from "../images/logo-light.svg";
+import HeroBackgroundSrc from "../images/background.png";
 
 const Header = ({ location }) => {
   const [navOpened, setNavOpened] = useState(false);
@@ -24,20 +19,28 @@ const Header = ({ location }) => {
       <header className="absolute z-10 inset-x-0 top-0">
         <div className="container-lg flex flex-wrap items-center justify-between w-full h-16 md:h-24">
           <Link to="/" noBorder className="block uppercase">
-            <img src={Logo} className={classnames('h-8 lg:h-10', { 'hidden': location.pathname == '/' },)} alt="MultiQC logo" />
+            <img
+              src={Logo}
+              className={classnames("h-8 lg:h-10", { hidden: location.pathname == "/" })}
+              alt="MultiQC logo"
+            />
           </Link>
           <div className="lg:flex items-center hidden">
-            <Link to="https://github.com/ewels/MultiQC/releases" className="typo-small text-xs text-gray-300 mr-5" noBorder>
+            <Link
+              to="https://github.com/ewels/MultiQC/releases"
+              className="typo-small text-xs text-gray-300 mr-5"
+              noBorder
+            >
               Current version: v1.13
             </Link>
             <Link
               to="/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                "bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide",
                 {
-                  'text-gray-300': location.pathname != '/',
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname === '/'
+                  "text-gray-300": location.pathname != "/",
+                  "text-white bg-opacity-30 hover:bg-opacity-50": location.pathname === "/",
                 }
               )}
             >
@@ -47,10 +50,10 @@ const Header = ({ location }) => {
               to="/modules/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                "bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide",
                 {
-                  'text-gray-300': !location.pathname.includes('/modules/'),
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('modules/')
+                  "text-gray-300": !location.pathname.includes("/modules/"),
+                  "text-white bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("modules/"),
                 }
               )}
             >
@@ -60,10 +63,10 @@ const Header = ({ location }) => {
               to="/docs/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                "bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide",
                 {
-                  'text-gray-300': !location.pathname.includes('/docs/'),
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/docs/')
+                  "text-gray-300": !location.pathname.includes("/docs/"),
+                  "text-white bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/docs/"),
                 }
               )}
             >
@@ -73,10 +76,10 @@ const Header = ({ location }) => {
               to="/plugins/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                "bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide",
                 {
-                  'text-gray-300': !location.pathname.includes('/plugins/'),
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/plugins/')
+                  "text-gray-300": !location.pathname.includes("/plugins/"),
+                  "text-white bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/plugins/"),
                 }
               )}
             >
@@ -87,10 +90,10 @@ const Header = ({ location }) => {
               to="/logos/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                "bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide",
                 {
-                  'text-gray-300': !location.pathname.includes('/logos/'),
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/logos/')
+                  "text-gray-300": !location.pathname.includes("/logos/"),
+                  "text-white bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/logos/"),
                 }
               )}
             >
@@ -100,10 +103,10 @@ const Header = ({ location }) => {
               to="/example-reports/"
               noBorder
               className={classnames(
-                'bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide',
+                "bg-black bg-opacity-0 hover:text-white font-body py-1 px-4 mx-2 rounded-sm mr-px font-light tracking-wide",
                 {
-                  'text-gray-300': !location.pathname.includes('/example-reports/'),
-                  'text-white bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/example-reports/')
+                  "text-gray-300": !location.pathname.includes("/example-reports/"),
+                  "text-white bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/example-reports/"),
                 }
               )}
             >
@@ -112,7 +115,9 @@ const Header = ({ location }) => {
           </div>
           <div className="lg:hidden">
             <Button
-              onClick={() => { setNavOpened(true); }}
+              onClick={() => {
+                setNavOpened(true);
+              }}
               noShadow
               className="text-white"
             >
@@ -121,22 +126,22 @@ const Header = ({ location }) => {
           </div>
         </div>
       </header>
-      <div className={classnames(
-        'bg-black text-white fixed inset-0 z-20 px-4 transition-all',
-        {
-          'invisible opacity-0': !navOpened,
-          'opacity-100 visible': navOpened,
-        },
-      )}
-      style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}
+      <div
+        className={classnames("bg-black text-white fixed inset-0 z-20 px-4 transition-all", {
+          "invisible opacity-0": !navOpened,
+          "opacity-100 visible": navOpened,
+        })}
+        style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}
       >
         <div className="flex flex-col h-full">
           <div className="h-16 flex justify-between items-center">
             <Link to="/" noBorder className="block uppercase">
-                <img src={Logo} className="h-8 lg:h-10" alt="MultiQC Logo" />
+              <img src={Logo} className="h-8 lg:h-10" alt="MultiQC Logo" />
             </Link>
             <Button
-              onClick={() => { setNavOpened(false); }}
+              onClick={() => {
+                setNavOpened(false);
+              }}
               noShadow
             >
               <CloseIcon />
@@ -144,93 +149,93 @@ const Header = ({ location }) => {
           </div>
           <div className="flex-1 py-8 overflow-y-auto text-center">
             <div
-              className={classnames(
-                'py-3 rounded-sm bg-black bg-opacity-0',
-                {
-                  'bg-opacity-30 hover:bg-opacity-50': location.pathname === '/'
-                }
-              )}>
+              className={classnames("py-3 rounded-sm bg-black bg-opacity-0", {
+                "bg-opacity-30 hover:bg-opacity-50": location.pathname === "/",
+              })}
+            >
               <Button
-                  onClick={() => { handleNav('/') }}
-                  noShadow
-                  className="typo-intro"
+                onClick={() => {
+                  handleNav("/");
+                }}
+                noShadow
+                className="typo-intro"
               >
-                  Home
+                Home
               </Button>
             </div>
             <div
-              className={classnames(
-                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
-                {
-                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/docs/')
-                }
-              )}>
+              className={classnames("mt-4 py-3 rounded-sm bg-black bg-opacity-0", {
+                "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/docs/"),
+              })}
+            >
               <Button
-                  onClick={() => { handleNav('/docs/') }}
-                  noShadow
-                  className="typo-intro"
+                onClick={() => {
+                  handleNav("/docs/");
+                }}
+                noShadow
+                className="typo-intro"
               >
-                  Docs
+                Docs
               </Button>
             </div>
             <div
-              className={classnames(
-                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
-                {
-                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/plugins/')
-                }
-              )}>
+              className={classnames("mt-4 py-3 rounded-sm bg-black bg-opacity-0", {
+                "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/plugins/"),
+              })}
+            >
               <Button
-                  onClick={() => { handleNav('/plugins/') }}
-                  noShadow
-                  className="typo-intro"
+                onClick={() => {
+                  handleNav("/plugins/");
+                }}
+                noShadow
+                className="typo-intro"
               >
-                  Plugins
+                Plugins
               </Button>
             </div>
             <div
-              className={classnames(
-                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
-                {
-                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/modules/')
-                }
-              )}>
+              className={classnames("mt-4 py-3 rounded-sm bg-black bg-opacity-0", {
+                "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/modules/"),
+              })}
+            >
               <Button
-                  onClick={() => { handleNav('/modules/') }}
-                  noShadow
-                  className="typo-intro"
+                onClick={() => {
+                  handleNav("/modules/");
+                }}
+                noShadow
+                className="typo-intro"
               >
-                  Modules
+                Modules
               </Button>
             </div>
             <div
-              className={classnames(
-                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
-                {
-                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/logos/')
-                }
-              )}>
+              className={classnames("mt-4 py-3 rounded-sm bg-black bg-opacity-0", {
+                "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/logos/"),
+              })}
+            >
               <Button
-                  onClick={() => { handleNav('/logos/') }}
-                  noShadow
-                  className="typo-intro"
+                onClick={() => {
+                  handleNav("/logos/");
+                }}
+                noShadow
+                className="typo-intro"
               >
-                  Logos
+                Logos
               </Button>
             </div>
             <div
-              className={classnames(
-                'mt-4 py-3 rounded-sm bg-black bg-opacity-0',
-                {
-                  'bg-opacity-30 hover:bg-opacity-50': location.pathname.includes('/example-reports/')
-                }
-              )}>
+              className={classnames("mt-4 py-3 rounded-sm bg-black bg-opacity-0", {
+                "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/example-reports/"),
+              })}
+            >
               <Button
-                  onClick={() => { handleNav('/example-reports/') }}
-                  noShadow
-                  className="typo-intro"
+                onClick={() => {
+                  handleNav("/example-reports/");
+                }}
+                noShadow
+                className="typo-intro"
               >
-                  Example reports
+                Example reports
               </Button>
             </div>
           </div>

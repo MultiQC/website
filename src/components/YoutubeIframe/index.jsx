@@ -1,7 +1,7 @@
-import classnames from 'classnames';
+import classnames from "classnames";
 import React from "react";
-import PropTypes from '../../utils/PropTypes';
-import * as styles from './YoutubeIframe.module.css';
+import PropTypes from "../../utils/PropTypes";
+import * as styles from "./YoutubeIframe.module.css";
 
 const YoutubeIframe = ({ id, listId, className }) => {
   let videoSource = `https://www.youtube.com/embed/${id}`;
@@ -11,7 +11,7 @@ const YoutubeIframe = ({ id, listId, className }) => {
   }
 
   return (
-    <div className={classnames(styles.wrapper, className, 'box')}>
+    <div className={classnames(styles.wrapper, className, "box")}>
       <iframe
         src={videoSource}
         frameBorder="0"
@@ -25,12 +25,12 @@ const YoutubeIframe = ({ id, listId, className }) => {
 };
 
 YoutubeIframe.propTypes = {
-    id: PropTypes.string.isRequired,
-    listId: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  listId: PropTypes.string,
 };
 
 YoutubeIframe.defaultProps = {
-    listId: '',
+  listId: "",
 };
 
 export default YoutubeIframe;

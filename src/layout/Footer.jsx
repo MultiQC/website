@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   GitHubIcon,
   Link,
@@ -6,10 +6,10 @@ import {
   SeqeraIcon,
   SlackIcon,
   TwitterIcon,
-  YoutubeRectangleIcon
-} from 'website-components';
+  YoutubeRectangleIcon,
+} from "website-components";
 
-import HeroBackgroundSrc from '../images/background.png';
+import HeroBackgroundSrc from "../images/background.png";
 
 const Footer = () => {
   return (
@@ -19,9 +19,7 @@ const Footer = () => {
           <div className="border-white border-t opacity-40" />
           <div className="flex justify-between items-center h-12">
             <div className="flex items-center">
-              <div className="typo-small text-white mr-4">
-                Created by Phil Ewels:
-              </div>
+              <div className="typo-small text-white mr-4">Created by Phil Ewels:</div>
               <div className="mr-4">
                 <Link to="https://github.com/ewels" className="hover:text-blue-600" noBorder>
                   <GitHubIcon className="w-5 h-5" />

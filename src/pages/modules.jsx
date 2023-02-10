@@ -1,19 +1,15 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 
-import {
-  Button,
-  DocsIcon,
-  Link,
-} from 'website-components';
+import { Button, DocsIcon, Link } from "website-components";
 
-import Hero from '../layout/Hero';
-import Seo from '../components/Seo';
+import Hero from "../layout/Hero";
+import Seo from "../components/Seo";
 
 const ModulesPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      modules: allModule(sort: {fields: title}) {
+      modules: allModule(sort: { fields: title }) {
         nodes {
           slug
           path
@@ -28,16 +24,12 @@ const ModulesPage = () => {
 
   return (
     <>
-      <Seo
-        title="Supported Tools"
-      />
+      <Seo title="Supported Tools" />
       <Hero>
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-6">
-              <h1 className="typo-h2">
-                Supported Tools
-              </h1>
+              <h1 className="typo-h2">Supported Tools</h1>
               <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
                 MultiQC currently has modules to support 114 different bioinformatics tools, listed below.
               </p>
@@ -48,27 +40,23 @@ const ModulesPage = () => {
       <div className="container-lg py-20">
         <div className="flex items-center">
           <DocsIcon className="h-6 w-6 mr-3 text-gray-500" />
-          <p className="typo-blockquote">
-            Click the tool name to go to the MultiQC documentation for that tool.
-          </p>
+          <p className="typo-blockquote">Click the tool name to go to the MultiQC documentation for that tool.</p>
         </div>
-        <p className='mt-2'>
-          Missing something? If you would like another to be added,
-          please <Link to="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml">
-          open an issue</Link>.
+        <p className="mt-2">
+          Missing something? If you would like another to be added, please{" "}
+          <Link to="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml">
+            open an issue
+          </Link>
+          .
         </p>
         <table className="mt-8">
           <thead>
             <tr>
               <td className="w-1/4">
-                <span className="typo-intro">
-                  Tool Name
-                </span>
+                <span className="typo-intro">Tool Name</span>
               </td>
               <td>
-                <span className="typo-intro">
-                  Description
-                </span>
+                <span className="typo-intro">Description</span>
               </td>
             </tr>
           </thead>
@@ -81,9 +69,7 @@ const ModulesPage = () => {
                   </Link>
                 </td>
                 <td>
-                  <p className="typo-body">
-                    {module.description}
-                  </p>
+                  <p className="typo-body">{module.description}</p>
                 </td>
               </tr>
             ))}

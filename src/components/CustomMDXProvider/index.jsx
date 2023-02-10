@@ -1,13 +1,13 @@
 /* eslint-disable react/no-danger */
-import classnames from 'classnames';
-import { MDXProvider } from '@mdx-js/react';
-import React from 'react';
+import classnames from "classnames";
+import { MDXProvider } from "@mdx-js/react";
+import React from "react";
 
-import { Button, Link, List } from 'website-components';
+import { Button, Link, List } from "website-components";
 
-import PropTypes from '../../utils/PropTypes';
+import PropTypes from "../../utils/PropTypes";
 
-import * as styles from './CustomMDXProvider.module.css';
+import * as styles from "./CustomMDXProvider.module.css";
 
 const basicPropTypes = {
   children: PropTypes.node,
@@ -25,51 +25,27 @@ const linkDefaultProps = {
   href: null,
 };
 
-const Heading2 = ({ children }) => (
-  <h2 className="typo-h3">
-    {children}
-  </h2>
-);
+const Heading2 = ({ children }) => <h2 className="typo-h3">{children}</h2>;
 Heading2.propTypes = basicPropTypes;
 Heading2.defaultProps = basicDefaultProps;
 
-const Heading3 = ({ children }) => (
-  <h3 className="typo-h3">
-    {children}
-  </h3>
-);
+const Heading3 = ({ children }) => <h3 className="typo-h3">{children}</h3>;
 Heading3.propTypes = basicPropTypes;
 Heading3.defaultProps = basicDefaultProps;
 
-const Heading4 = ({ children }) => (
-  <h4 className="typo-h4">
-    {children}
-  </h4>
-);
+const Heading4 = ({ children }) => <h4 className="typo-h4">{children}</h4>;
 Heading4.propTypes = basicPropTypes;
 Heading4.defaultProps = basicDefaultProps;
 
-const Heading5 = ({ children }) => (
-  <h5 className="typo-h5">
-    {children}
-  </h5>
-);
+const Heading5 = ({ children }) => <h5 className="typo-h5">{children}</h5>;
 Heading5.propTypes = basicPropTypes;
 Heading5.defaultProps = basicDefaultProps;
 
-const Heading6 = ({ children }) => (
-  <h6 className="typo-h6">
-    {children}
-  </h6>
-);
+const Heading6 = ({ children }) => <h6 className="typo-h6">{children}</h6>;
 Heading6.propTypes = basicPropTypes;
 Heading6.defaultProps = basicDefaultProps;
 
-const Paragraph = ({ children }) => (
-  <p className="typo-body font-light">
-    {children}
-  </p>
-);
+const Paragraph = ({ children }) => <p className="typo-body font-light">{children}</p>;
 Paragraph.propTypes = basicPropTypes;
 Paragraph.defaultProps = basicDefaultProps;
 
@@ -90,21 +66,14 @@ CustomOrderedlist.propTypes = basicPropTypes;
 CustomOrderedlist.defaultProps = basicDefaultProps;
 
 const CustomListItem = ({ children, ...props }) => (
-  <List.Item
-    className="mt-4 typo-body"
-    {...props}
-  >
+  <List.Item className="mt-4 typo-body" {...props}>
     {children}
   </List.Item>
 );
 CustomListItem.propTypes = basicPropTypes;
 CustomListItem.defaultProps = basicDefaultProps;
 
-const CustomTable = ({ children }) => (
-  <table className="my-4">
-    {children}
-  </table>
-);
+const CustomTable = ({ children }) => <table className="my-4">{children}</table>;
 CustomTable.propTypes = basicPropTypes;
 CustomTable.defaultProps = basicPropTypes;
 
@@ -125,17 +94,13 @@ const defaultProps = {
 };
 
 const Pre = ({ children }) => (
-  <span className="block whitespace-pre bg-gray-100 p-4 overflow-x-auto my-4">
-    {children}
-  </span>
+  <span className="block whitespace-pre bg-gray-100 p-4 overflow-x-auto my-4">{children}</span>
 );
 Pre.propTypes = basicPropTypes;
 Pre.defaultProps = basicDefaultProps;
 
 const InlineCode = ({ children, className }) => (
-  <pre className={classnames('inline bg-gray-100 overflow-x-auto p-1', className)}>
-    {children}
-  </pre>
+  <pre className={classnames("inline bg-gray-100 overflow-x-auto p-1", className)}>{children}</pre>
 );
 InlineCode.propTypes = basicPropTypes;
 InlineCode.defaultProps = basicDefaultProps;
@@ -161,9 +126,7 @@ const CustomMDXProvider = ({ children }) => (
         inlineCode: InlineCode,
       }}
     >
-      <div className={styles.content}>
-        {children}
-      </div>
+      <div className={styles.content}>{children}</div>
     </MDXProvider>
   </>
 );

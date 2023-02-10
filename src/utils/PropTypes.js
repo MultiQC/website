@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const propTypes = {
-    ...PropTypes,
+  ...PropTypes,
 };
 
 export default propTypes;

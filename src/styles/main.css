@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
+  html,
+  body {
     @apply overflow-x-hidden;
   }
 
@@ -147,13 +148,12 @@
   }
 
   .btn-accent-alt {
-
   }
 
   .typed {
-    background: linear-gradient(180deg, #EE8899 0%, #AC77E7 100%);
+    background: linear-gradient(180deg, #ee8899 0%, #ac77e7 100%);
     -webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -163,6 +163,6 @@
   }
 
   .bg-gradient-accent {
-    background-image: linear-gradient(237.19deg, #24AA60 30.22%, #4256E7 87.13%);
+    background-image: linear-gradient(237.19deg, #24aa60 30.22%, #4256e7 87.13%);
   }
 }

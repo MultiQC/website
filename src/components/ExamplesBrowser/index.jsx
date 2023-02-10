@@ -1,14 +1,12 @@
-import classnames from 'classnames';
-import React, { useState } from 'react';
+import classnames from "classnames";
+import React, { useState } from "react";
 
-import {
-  Button,
-} from 'website-components';
+import { Button } from "website-components";
 
-import MultiQCIconSrc from '../../images/icons/multiqc.svg';
+import MultiQCIconSrc from "../../images/icons/multiqc.svg";
 
 const ExamplesBrowser = ({ items, hasDetails }) => {
-  const [ active, setActive ] = useState(0);
+  const [active, setActive] = useState(0);
 
   return (
     <div className="border border-gray-200 rounded-md overflow-hidden shadow">
@@ -16,9 +14,7 @@ const ExamplesBrowser = ({ items, hasDetails }) => {
         <div className="bg-gray-100 border-b border-gray-200 flex">
           <div className="flex px-4 pt-4 pb-2">
             <img src={MultiQCIconSrc} className="h-6 w-6 mr-2" />
-            <span className="typo-small -mt-0.5">
-              Example Report: {items[0].title}
-            </span>
+            <span className="typo-small -mt-0.5">Example Report: {items[0].title}</span>
           </div>
         </div>
       )}
@@ -26,19 +22,19 @@ const ExamplesBrowser = ({ items, hasDetails }) => {
         <div className="bg-gray-100 border-b border-gray-200 flex">
           <div className="flex px-4 pt-4 pb-2 lg:w-[250px]">
             <img src={MultiQCIconSrc} className="h-6 w-6 mr-2" />
-            <span className="typo-small -mt-0.5">
-              Example Reports
-            </span>
+            <span className="typo-small -mt-0.5">Example Reports</span>
           </div>
           <div className="flex pt-2">
             {items.map((item, index) => (
               <div>
                 <button
-                  className={classnames('typo-small bg-gray-2 px-4 h-full rounded-t-sm', {
-                    'hover:bg-white': index != active,
-                    'bg-gray-200 hover:bg-gray-200': index === active,
+                  className={classnames("typo-small bg-gray-2 px-4 h-full rounded-t-sm", {
+                    "hover:bg-white": index != active,
+                    "bg-gray-200 hover:bg-gray-200": index === active,
                   })}
-                  onClick={() => { setActive(index) }}
+                  onClick={() => {
+                    setActive(index);
+                  }}
                 >
                   {item.title}
                 </button>

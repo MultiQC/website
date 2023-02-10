@@ -1,13 +1,11 @@
-import { useStaticQuery, graphql } from 'gatsby';
-import React from 'react';
+import { useStaticQuery, graphql } from "gatsby";
+import React from "react";
 
-import {
-  Footer,
-} from 'website-components';
+import { Footer } from "website-components";
 
-import CookieBanner from './CookieBanner';
-import Header from './Header';
-import PropTypes from '../utils/PropTypes';
+import CookieBanner from "./CookieBanner";
+import Header from "./Header";
+import PropTypes from "../utils/PropTypes";
 
 const propTypes = {
   children: PropTypes.node,
@@ -20,13 +18,9 @@ const defaultProps = {
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: {eq: "seqera-logo-white.png"}) {
+      logo: file(relativePath: { eq: "seqera-logo-white.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            height: 28
-            width: 200
-            placeholder: NONE
-          )
+          gatsbyImageData(height: 28, width: 200, placeholder: NONE)
         }
       }
     }
@@ -35,9 +29,7 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Header location={location} />
-      <main className="min-h-screen">
-        {children}
-      </main>
+      <main className="min-h-screen">{children}</main>
       <CookieBanner />
       <Footer logoImage={data.logo} jobsCount={10} />
     </>
