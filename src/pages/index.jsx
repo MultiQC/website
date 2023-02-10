@@ -9,11 +9,9 @@ import {
   GitterIcon,
   Link,
   PythonIcon,
-  QuoteIcon,
   SearchDirectoryIcon,
   ShareBoxIcon,
   TerminalIcon,
-  ToolIcon,
   ViewReportIcon,
 } from "website-components";
 
@@ -25,7 +23,6 @@ import SnippetBox from "../components/SnippetBox";
 import Tabs from "../components/Tabs";
 import YoutubeIframe from "../components/YoutubeIframe";
 
-import HeroBackgroundSrc from "../images/background.png";
 import Logo from "../images/logo-light.svg";
 
 import Hero from "../layout/Hero";
@@ -111,36 +108,36 @@ const HomePage = ({ location }) => {
             </div>
             <div className="col-full lg:col-4 mt-4 lg:mt-0">
               <Button to="https://www.github.com/ewels/MultiQC" variant="primary" size="md" className="w-full">
-                <GitHubIcon className="h-6 w-6 mr-3" />
+                <GitHubIcon className="mr-3 h-6 w-6" />
                 GitHub
               </Button>
               <div className="mt-5">
                 <Button to="https://pypi.org/project/multiqc/" variant="primary" size="md" className="w-full">
-                  <PythonIcon className="w-6 h-6 mr-3" />
+                  <PythonIcon className="mr-3 h-6 w-6" />
                   Python Package Index
                 </Button>
               </div>
               <div className="mt-5">
                 <Button to="/docs/" variant="primary" size="md" className="w-full">
-                  <DocsIcon className="h-6 w-6 mr-3" />
+                  <DocsIcon className="mr-3 h-6 w-6" />
                   Documentation
                 </Button>
               </div>
               <div className="mt-5">
                 <Button to="/modules/" variant="primary" size="md" className="w-full">
-                  <Icon icon="mdi:hammer-wrench" className="h-6 w-6 mr-3" />
+                  <Icon icon="mdi:hammer-wrench" className="mr-3 h-6 w-6" />
                   114 supported tools
                 </Button>
               </div>
               <div className="mt-5">
                 <Button to="/citation/" variant="primary" size="md" className="w-full">
-                  <Icon icon="mdi:paperclip" className="h-6 w-6 mr-3" />
+                  <Icon icon="mdi:paperclip" className="mr-3 h-6 w-6" />
                   Citation
                 </Button>
               </div>
               <div className="mt-5">
                 <Button to="https://gitter.im/ewels/MultiQC" variant="primary" size="md" className="w-full">
-                  <GitterIcon className="h-6 w-6 mr-3" />
+                  <GitterIcon className="mr-3 h-6 w-6" />
                   Get help on Gitter
                 </Button>
               </div>
@@ -168,9 +165,9 @@ const HomePage = ({ location }) => {
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ewels/multiqc .
                   </SnippetBox.Item>
                 </SnippetBox>
-                <p className="mt-2 text-xs text-gray-500 font-light">
+                <p className="mt-2 text-xs font-light text-gray-500">
                   Need a little more help?{" "}
-                  <a href="/docs/usage/installation/" className="hover:text-gray-400 underline underline-offset-4">
+                  <a href="/docs/usage/installation/" className="underline underline-offset-4 hover:text-gray-400">
                     See the full installation instructions
                   </a>
                   .
@@ -193,7 +190,7 @@ const HomePage = ({ location }) => {
                 See all example reports
               </Button>
             </div>
-            <div className="hidden md:block mt-8">
+            <div className="mt-8 hidden md:block">
               <ExamplesBrowser items={exampleReports} hasDetails />
             </div>
           </div>
@@ -201,7 +198,7 @@ const HomePage = ({ location }) => {
       </div>
       <div className="container-sm py-20">
         <div className="text-center">
-          <h2 className="typo-h3 max-w-2xl mx-auto mb-4">
+          <h2 className="typo-h3 mx-auto mb-4 max-w-2xl">
             Ever spent ages collecting reports and wading through log file output?
           </h2>
           <p className="typo-blockquote">Here's the answer to your frustrations...</p>
@@ -242,31 +239,31 @@ const HomePage = ({ location }) => {
         <div className="row justify-center text-center">
           <div className="col-full md:col-4">
             <h3 className="flex items-center justify-center">
-              <TerminalIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <TerminalIcon className="mr-3 h-6 w-6 text-gray-500" />
               <span className="typo-intro">Simple installation</span>
             </h3>
           </div>
           <div className="col-full md:col-4 mt-8 md:mt-0">
             <h3 className="flex items-center justify-center">
-              <SearchDirectoryIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <SearchDirectoryIcon className="mr-3 h-6 w-6 text-gray-500" />
               <span className="typo-intro">Search any directory</span>
             </h3>
           </div>
           <div className="col-full md:col-4 mt-8 md:mt-0">
             <h3 className="flex items-center justify-center">
-              <ViewReportIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <ViewReportIcon className="mr-3 h-6 w-6 text-gray-500" />
               <span className="typo-intro">View report in a web browser</span>
             </h3>
           </div>
           <div className="col-full md:col-4 mt-8">
             <h3 className="flex items-center justify-center">
-              <ShareBoxIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <ShareBoxIcon className="mr-3 h-6 w-6 text-gray-500" />
               <span className="typo-intro">Zip file for easy sharing</span>
             </h3>
           </div>
           <div className="col-full md:col-4 mt-8">
             <h3 className="flex items-center justify-center">
-              <CodeDocsIcon className="text-gray-500 h-6 w-6 mr-3" />
+              <CodeDocsIcon className="mr-3 h-6 w-6 text-gray-500" />
               <span className="typo-intro">Extensible & well documented</span>
             </h3>
           </div>
@@ -274,7 +271,7 @@ const HomePage = ({ location }) => {
       </div>
       <div className="bg-gray-100">
         <div className="container-lg py-20 text-center">
-          <h2 className="typo-h3 mb-4 max-w-5xl mx-auto">
+          <h2 className="typo-h3 mx-auto mb-4 max-w-5xl">
             Install from the{" "}
             <Link to="https://pypi.python.org/pypi/multiqc" className="text-blue-600" noBorder>
               Python Package Index
@@ -288,13 +285,13 @@ const HomePage = ({ location }) => {
               Bioconda
             </Link>
           </h2>
-          <p className="typo-blockquote max-w-3xl mx-auto">
+          <p className="typo-blockquote mx-auto max-w-3xl">
             To install MultiQC, simply run{" "}
-            <span className="bg-blue-600 text-white font-medium px-2 rounded-sm">pip install multiqc</span> on the
+            <span className="rounded-sm bg-blue-600 px-2 font-medium text-white">pip install multiqc</span> on the
             command line.
             <br />
             If you use conda, you can run{" "}
-            <span className="bg-blue-600 text-white font-medium px-2 rounded-sm">conda install multiqc</span> instead.
+            <span className="rounded-sm bg-blue-600 px-2 font-medium text-white">conda install multiqc</span> instead.
             <br />
             See the{" "}
             <Link to="https://multiqc.info/docs/#installation" className="text-blue-600">
@@ -302,22 +299,22 @@ const HomePage = ({ location }) => {
             </Link>{" "}
             for more help.
           </p>
-          <div className="mt-5 lg:mt-10 flex flex-col md:flex-row justify-center">
+          <div className="mt-5 flex flex-col justify-center md:flex-row lg:mt-10">
             <div className="md:mr-4">
               <Button to="/docs/" variant="secondary" size="md">
-                <DocsIcon className="w-6 h-6 mr-3" />
+                <DocsIcon className="mr-3 h-6 w-6" />
                 Documentation
               </Button>
             </div>
             <div className="mt-4 md:mt-0 md:mr-4">
               <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
-                <GitHubIcon className="w-6 h-6 mr-3" />
+                <GitHubIcon className="mr-3 h-6 w-6" />
                 View on GitHub
               </Button>
             </div>
             <div className="mt-4 md:mt-0">
               <Button to="/project/multiqc/" variant="secondary" size="md">
-                <PythonIcon className="w-6 h-6 mr-3" />
+                <PythonIcon className="mr-3 h-6 w-6" />
                 View on PyPI
               </Button>
             </div>

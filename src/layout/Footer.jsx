@@ -1,38 +1,30 @@
 import React from "react";
-import {
-  GitHubIcon,
-  Link,
-  LinkedInIcon,
-  SeqeraIcon,
-  SlackIcon,
-  TwitterIcon,
-  YoutubeRectangleIcon,
-} from "website-components";
+import { GitHubIcon, Link, LinkedInIcon, TwitterIcon } from "website-components";
 
 import HeroBackgroundSrc from "../images/background.png";
 
 const Footer = () => {
   return (
     <>
-      <footer className="text-white mt-auto relative" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
+      <footer className="relative mt-auto text-white" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
         <div className="container-lg">
-          <div className="border-white border-t opacity-40" />
-          <div className="flex justify-between items-center h-12">
+          <div className="border-t border-white opacity-40" />
+          <div className="flex h-12 items-center justify-between">
             <div className="flex items-center">
-              <div className="typo-small text-white mr-4">Created by Phil Ewels:</div>
+              <div className="typo-small mr-4 text-white">Created by Phil Ewels:</div>
               <div className="mr-4">
                 <Link to="https://github.com/ewels" className="hover:text-blue-600" noBorder>
-                  <GitHubIcon className="w-5 h-5" />
+                  <GitHubIcon className="h-5 w-5" />
                 </Link>
               </div>
               <div className="mr-4">
                 <Link to="https://twitter.com/tallphil" className="hover:text-blue-600" noBorder>
-                  <TwitterIcon className="w-5 h-5" />
+                  <TwitterIcon className="h-5 w-5" />
                 </Link>
               </div>
               <div className="mr-4">
                 <Link to="https://se.linkedin.com/in/philewels" className="hover:text-blue-600" noBorder>
-                  <LinkedInIcon className="w-5 h-5" />
+                  <LinkedInIcon className="h-5 w-5" />
                 </Link>
               </div>
               <div className="mr-4">

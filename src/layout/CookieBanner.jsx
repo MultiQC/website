@@ -19,13 +19,13 @@ const CookieBanner = () => {
   return (
     !isSSR && (
       <div
-        className={classnames("bg-gray-50 fixed bottom-0 w-full z-10 py-4 md:py-3", {
+        className={classnames("fixed bottom-0 z-10 w-full bg-gray-50 py-4 md:py-3", {
           hidden: cookies.useracceptedcookies !== undefined,
         })}
       >
         <div className="container-lg">
           <div className="flex items-center justify-between">
-            <div className="hidden md:block mr-4">
+            <div className="mr-4 hidden md:block">
               <img src={iconCookieSource} className="h-8 w-8" alt="Cookie banner" />
             </div>
             <div className="w-5/12 justify-self-start">
@@ -37,7 +37,7 @@ const CookieBanner = () => {
                 .
               </p>
             </div>
-            <div className="flex-1 row justify-center md:justify-end">
+            <div className="row flex-1 justify-center md:justify-end">
               <div className="col mt-4 md:mt-0">
                 <Button
                   variant="secondary"

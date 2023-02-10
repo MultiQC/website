@@ -30,7 +30,7 @@ const DocsNavigation = ({ docs, location }) => {
                           to={childDoc.path}
                           noBorder
                           className={classnames({
-                            "text-blue-600 font-medium": childDoc.path === location.pathname,
+                            "font-medium text-blue-600": childDoc.path === location.pathname,
                             "text-gray-600 hover:text-black": childDoc.path !== location.pathname,
                           })}
                         >

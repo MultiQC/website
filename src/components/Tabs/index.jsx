@@ -1,15 +1,12 @@
 import classnames from "classnames";
 import React, { createContext, useContext } from "react";
-import { Link } from "website-components";
-
-import PropTypes from "../../utils/PropTypes";
 
 const TabsContext = createContext();
 
 const Tabs = ({ children, current, setCurrent, vertical }) => {
   return (
     <div
-      className={classnames("rounded-sm overflow-hidden", {
+      className={classnames("overflow-hidden rounded-sm", {
         "inline-flex": !vertical,
         "flex flex-col": vertical,
       })}
@@ -28,10 +25,10 @@ const Item = ({ children, index }) => {
         setCurrent(index);
       }}
       className={classnames(
-        "typo-small text-white bg-gray-700 hover:bg-gray-600 block border border-gray-800 px-4 py-2 text-left",
+        "typo-small block border border-gray-800 bg-gray-700 px-4 py-2 text-left text-white hover:bg-gray-600",
         {
-          "first:ml-0 border-r-0 last:border-r last:mr-0 first:rounded-l-sm last:rounded-r-sm": !vertical,
-          "first:mt-0 border-b-0 last:border-b last:mb-0 first:rounded-t-sm last:rounded-b-sm": vertical,
+          "border-r-0 first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r": !vertical,
+          "border-b-0 first:mt-0 first:rounded-t-sm last:mb-0 last:rounded-b-sm last:border-b": vertical,
           "bg-neutral-600": current === index,
         }
       )}

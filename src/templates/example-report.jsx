@@ -1,12 +1,10 @@
-import classnames from "classnames";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 
-import { Button, Link, List } from "website-components";
+import { Button } from "website-components";
 
 import CustomMDXProvider from "../components/CustomMDXProvider";
-import DocsNavigation from "../components/DocsNavigation";
 import ExamplesBrowser from "../components/ExamplesBrowser";
 import Seo from "../components/Seo";
 
@@ -53,7 +51,7 @@ const ExampleReport = ({ data, location }) => {
           </div>
         </div>
       </div>
-      <div className="container-lg py-10 md:py-20 text-center">
+      <div className="container-lg py-10 text-center md:py-20">
         <Button to="/example-reports/" variant="secondary" size="md" arrow>
           See all example reports
         </Button>

@@ -1,7 +1,7 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import PropTypes from "../../utils/PropTypes";
 import { Helmet } from "react-helmet";
+import PropTypes from "../../utils/PropTypes";
 
 function Seo({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(

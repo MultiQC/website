@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
-import classnames from "classnames";
 import { MDXProvider } from "@mdx-js/react";
+import classnames from "classnames";
 import React from "react";
 
 import { Button, Link, List } from "website-components";
@@ -66,7 +66,7 @@ CustomOrderedlist.propTypes = basicPropTypes;
 CustomOrderedlist.defaultProps = basicDefaultProps;
 
 const CustomListItem = ({ children, ...props }) => (
-  <List.Item className="mt-4 typo-body" {...props}>
+  <List.Item className="typo-body mt-4" {...props}>
     {children}
   </List.Item>
 );
@@ -94,13 +94,13 @@ const defaultProps = {
 };
 
 const Pre = ({ children }) => (
-  <span className="block whitespace-pre bg-gray-100 p-4 overflow-x-auto my-4">{children}</span>
+  <span className="my-4 block overflow-x-auto whitespace-pre bg-gray-100 p-4">{children}</span>
 );
 Pre.propTypes = basicPropTypes;
 Pre.defaultProps = basicDefaultProps;
 
 const InlineCode = ({ children, className }) => (
-  <pre className={classnames("inline bg-gray-100 overflow-x-auto p-1", className)}>{children}</pre>
+  <pre className={classnames("inline overflow-x-auto bg-gray-100 p-1", className)}>{children}</pre>
 );
 InlineCode.propTypes = basicPropTypes;
 InlineCode.defaultProps = basicDefaultProps;

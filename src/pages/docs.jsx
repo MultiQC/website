@@ -2,10 +2,10 @@ import classnames from "classnames";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-import { Button, DocsIcon, Link, List } from "website-components";
+import { Link, List } from "website-components";
 
-import Hero from "../layout/Hero";
 import Seo from "../components/Seo";
+import Hero from "../layout/Hero";
 
 const DocsPage = () => {
   const data = useStaticQuery(graphql`

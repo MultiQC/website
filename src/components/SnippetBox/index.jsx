@@ -15,9 +15,9 @@ const SnippetBox = ({ title, children }) => {
   const snippets = React.Children.toArray(children);
 
   return (
-    <div className="border bg-gray-800 border-blue-600 rounded-md overflow-hidden shadow">
-      <div className="flex items-center justify-center bg-blue-600 border-b border-blue-600 py-2">
-        <TerminalIcon className="h-6 w-6 mr-3" />
+    <div className="overflow-hidden rounded-md border border-blue-600 bg-gray-800 shadow">
+      <div className="flex items-center justify-center border-b border-blue-600 bg-blue-600 py-2">
+        <TerminalIcon className="mr-3 h-6 w-6" />
         <span className="typo-intro">{title}</span>
       </div>
       <div className="px-4 py-2">
@@ -25,12 +25,12 @@ const SnippetBox = ({ title, children }) => {
           <div className="typo-small">{index === active && snippet}</div>
         ))}
       </div>
-      <div className="bg-gray-800 flex justify-between w-full border-t border-blue-600">
+      <div className="flex w-full justify-between border-t border-blue-600 bg-gray-800">
         {snippets.map((snippet, index) => (
           <button
-            className={classnames(getColumnClassName(snippets.length), "typo-small text-center px-2 py-1", {
-              "text-gray-200 hover:text-gray-100 hover:bg-gray-900": index != active,
-              "text-white bg-blue-600": index === active,
+            className={classnames(getColumnClassName(snippets.length), "typo-small px-2 py-1 text-center", {
+              "text-gray-200 hover:bg-gray-900 hover:text-gray-100": index != active,
+              "bg-blue-600 text-white": index === active,
             })}
             onClick={() => {
               setActive(index);

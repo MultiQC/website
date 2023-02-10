@@ -4,8 +4,8 @@ import React from "react";
 
 import { Button, GitHubIcon, Link } from "website-components";
 
-import Hero from "../layout/Hero";
 import Seo from "../components/Seo";
+import Hero from "../layout/Hero";
 
 const PluginsPage = () => {
   const data = useStaticQuery(graphql`
@@ -66,12 +66,12 @@ const PluginsPage = () => {
       </div>
       <div className="container-lg mt-20 md:mt-0 md:py-20">
         <div className="row">
-          <div className="col-full md:col-5 md:ml-1/12 md:order-2">
-            <div className="py-24 px-4 text-center rounded-md shadow">
+          <div className="col-full md:col-5 md:order-2 md:ml-1/12">
+            <div className="rounded-md py-24 px-4 text-center shadow">
               <Image image={getImage(data.multiqcLogo)} className="h-16" objectFit="contain" />
             </div>
           </div>
-          <div className="col-full md:col-6 md:order-1 mt-10 md:mt-0">
+          <div className="col-full md:col-6 mt-10 md:order-1 md:mt-0">
             <h2 className="typo-h3 mb-4">Example MultiQC Plugin</h2>
             <p className="typo-intro mb-4">A miniature example of a MultiQC plugin.</p>
             <p className="typo-body mb-4">
@@ -80,7 +80,7 @@ const PluginsPage = () => {
             </p>
             <div className="mt-4 md:mt-8">
               <Button to="https://github.com/MultiQC/example-plugin" variant="primary" size="md">
-                <GitHubIcon className="h-6 w-6 mr-3" />
+                <GitHubIcon className="mr-3 h-6 w-6" />
                 View on GitHub
               </Button>
             </div>
@@ -90,7 +90,7 @@ const PluginsPage = () => {
       <div className="container-lg mt-20 md:mt-0 md:py-20">
         <div className="row">
           <div className="col-full md:col-5">
-            <div className="py-20 px-4 text-center rounded-md shadow">
+            <div className="rounded-md py-20 px-4 text-center shadow">
               <Image image={getImage(data.clarifyLogo)} className="h-24" objectFit="contain" />
             </div>
           </div>
@@ -109,7 +109,7 @@ const PluginsPage = () => {
             </p>
             <div className="mt-4 md:mt-8">
               <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="md">
-                <GitHubIcon className="h-6 w-6 mr-3" />
+                <GitHubIcon className="mr-3 h-6 w-6" />
                 View on GitHub
               </Button>
             </div>
@@ -118,12 +118,12 @@ const PluginsPage = () => {
       </div>
       <div className="container-lg mt-20 md:mt-0 md:py-20">
         <div className="row">
-          <div className="col-full md:col-5 md:ml-1/12 md:order-2">
-            <div className="py-20 px-4 text-center rounded-md shadow">
+          <div className="col-full md:col-5 md:order-2 md:ml-1/12">
+            <div className="rounded-md py-20 px-4 text-center shadow">
               <Image image={getImage(data.bcbioLogo)} className="h-24" objectFit="contain" />
             </div>
           </div>
-          <div className="col-full md:col-6 md:order-1 mt-10 md:mt-0">
+          <div className="col-full md:col-6 mt-10 md:order-1 md:mt-0">
             <h2 className="typo-h3 mb-4">MultiQC_bcbio</h2>
             <p className="typo-body mb-4">
               Plugin for multiqc tool to add in-house QC metrics about coverage, variants and general values generated
@@ -135,7 +135,7 @@ const PluginsPage = () => {
             </p>
             <div className="mt-4 md:mt-8">
               <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="md">
-                <GitHubIcon className="h-6 w-6 mr-3" />
+                <GitHubIcon className="mr-3 h-6 w-6" />
                 View on GitHub
               </Button>
             </div>
@@ -145,11 +145,11 @@ const PluginsPage = () => {
       <div className="container-lg py-20">
         <div className="row">
           <div className="col-full md:col-5">
-            <div className="py-20 px-4 text-center rounded-md shadow">
+            <div className="rounded-md py-20 px-4 text-center shadow">
               <Image image={getImage(data.ngiLogo)} className="h-24" objectFit="contain" />
             </div>
           </div>
-          <div className="col-full md:col-6 md:ml-1/12 mt-10 md:mt-0">
+          <div className="col-full md:col-6 mt-10 md:ml-1/12 md:mt-0">
             <h2 className="typo-h3 mb-4">MultiQC_NGI</h2>
             <p className="typo-intro mb-4">
               MultiQC_NGI adds custom functionality for the National Genomics Infrastructure at SciLifeLab in Sweden.
@@ -161,7 +161,7 @@ const PluginsPage = () => {
             </p>
             <div className="mt-4 md:mt-8">
               <Button to="https://github.com/ewels/MultiQC_NGI" variant="primary" size="md">
-                <GitHubIcon className="h-6 w-6 mr-3" />
+                <GitHubIcon className="mr-3 h-6 w-6" />
                 View on GitHub
               </Button>
             </div>

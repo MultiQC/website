@@ -1,11 +1,11 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
 import { Footer } from "website-components";
 
+import PropTypes from "../utils/PropTypes";
 import CookieBanner from "./CookieBanner";
 import Header from "./Header";
-import PropTypes from "../utils/PropTypes";
 
 const propTypes = {
   children: PropTypes.node,

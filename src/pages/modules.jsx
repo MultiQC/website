@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-import { Button, DocsIcon, Link } from "website-components";
+import { DocsIcon, Link } from "website-components";
 
-import Hero from "../layout/Hero";
 import Seo from "../components/Seo";
+import Hero from "../layout/Hero";
 
 const ModulesPage = () => {
   const data = useStaticQuery(graphql`
@@ -39,7 +39,7 @@ const ModulesPage = () => {
       </Hero>
       <div className="container-lg py-20">
         <div className="flex items-center">
-          <DocsIcon className="h-6 w-6 mr-3 text-gray-500" />
+          <DocsIcon className="mr-3 h-6 w-6 text-gray-500" />
           <p className="typo-blockquote">Click the tool name to go to the MultiQC documentation for that tool.</p>
         </div>
         <p className="mt-2">

@@ -2,8 +2,8 @@ import React from "react";
 
 import { Button } from "website-components";
 
-import Hero from "../layout/Hero";
 import Seo from "../components/Seo";
+import Hero from "../layout/Hero";
 
 const Error404Page = () => {
   return (

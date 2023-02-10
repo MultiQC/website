@@ -31,7 +31,7 @@ const DocPage = ({ data, location }) => {
       <div className="container-lg py-10 md:py-20">
         <div className="row">
           <div className="col-full lg:col-9 lg:order-2">
-            <h1 className="typo-h2 text-blue-600 mb-4">{doc.title}</h1>
+            <h1 className="typo-h2 mb-4 text-blue-600">{doc.title}</h1>
             <p className="typo-blockquote">{doc.description}</p>
             <div className="mt-5 md:mt-10">
               <CustomMDXProvider>

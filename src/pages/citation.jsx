@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Accordion, Button, Link } from "website-components";
+import { Button, Link } from "website-components";
 
-import Hero from "../layout/Hero";
 import Seo from "../components/Seo";
+import Hero from "../layout/Hero";
 
 const CitationPage = () => {
   return (
@@ -44,7 +44,7 @@ const CitationPage = () => {
                   </Button>
                 </p>
                 <dl className="row mt-4">
-                  <dt className="font-bold col-2">
+                  <dt className="col-2 font-bold">
                     <abbr title="Digital object identifier">DOI:</abbr>
                   </dt>
                   <dd className="col-10">
@@ -52,7 +52,7 @@ const CitationPage = () => {
                       10.1093/bioinformatics/btw354
                     </Link>
                   </dd>
-                  <dt className="font-bold col-2">
+                  <dt className="col-2 font-bold">
                     <abbr title="PubMed ID">PMID</abbr>:
                   </dt>
                   <dd className="col-10">

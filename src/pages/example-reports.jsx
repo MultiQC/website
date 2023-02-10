@@ -1,11 +1,10 @@
-import classnames from "classnames";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-import { Button, DocsIcon, Link, List } from "website-components";
+import { Button, Link } from "website-components";
 
-import Hero from "../layout/Hero";
 import Seo from "../components/Seo";
+import Hero from "../layout/Hero";
 
 const ExampleReportsPage = () => {
   const data = useStaticQuery(graphql`
@@ -53,7 +52,7 @@ const ExampleReportsPage = () => {
         <div className="row">
           {analysisReports.map((report) => (
             <div className="col-full md:col-6 mt-8">
-              <div className="flex flex-col h-full rounded-md bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-8">
+              <div className="flex h-full flex-col rounded-md bg-white py-6 px-4 shadow-xl sm:py-8 sm:px-8">
                 <h3 className="typo-h4 mb-4">
                   <Link to={report.path} noBorder>
                     {report.title}
@@ -73,7 +72,7 @@ const ExampleReportsPage = () => {
         <div className="row">
           {customReports.map((report) => (
             <div className="col-full md:col-6 mt-8 h-full">
-              <div className="flex flex-col h-full rounded-md bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-8">
+              <div className="flex h-full flex-col rounded-md bg-white py-6 px-4 shadow-xl sm:py-8 sm:px-8">
                 <h3 className="typo-h4 mb-4">
                   <Link to={report.path} noBorder>
                     {report.title}
