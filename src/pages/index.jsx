@@ -17,6 +17,8 @@ import {
   ViewReportIcon,
 } from 'website-components';
 
+import { Icon } from '@iconify/react-with-api'
+
 import ExamplesBrowser from '../components/ExamplesBrowser';
 import Seo from '../components/Seo';
 import SnippetBox from '../components/SnippetBox';
@@ -160,13 +162,13 @@ const HomePage = ({ location }) => {
               </div>
               <div className="mt-5">
                 <Button to="/modules/" variant="primary" size="md" className="w-full">
-                  <ToolIcon className="h-6 w-6 mr-3" />
+                  <Icon icon="mdi:hammer-wrench" className="h-6 w-6 mr-3" />
                   114 supported tools
                 </Button>
               </div>
               <div className="mt-5">
                 <Button to="/citation/" variant="primary" size="md" className="w-full">
-                  <QuoteIcon className="h-6 w-6 mr-3" />
+                  <Icon icon="mdi:paperclip" className="h-6 w-6 mr-3" />
                   Citation
                 </Button>
               </div>
