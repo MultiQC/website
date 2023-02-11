@@ -1,10 +1,11 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-import { Footer } from "website-components";
+// import { Footer } from "website-components";
 
 import PropTypes from "../utils/PropTypes";
 import CookieBanner from "./CookieBanner";
+import Footer from "./Footer";
 import Header from "./Header";
 
 const propTypes = {
@@ -31,7 +32,7 @@ const Layout = ({ children, location }) => {
       <Header location={location} />
       <main className="min-h-screen">{children}</main>
       <CookieBanner />
-      <Footer logoImage={data.logo} jobsCount={10} />
+      <Footer logoImage={data.logo} />
     </>
   );
 };
