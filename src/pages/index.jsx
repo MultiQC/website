@@ -53,8 +53,29 @@ const HomePage = ({ location }) => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-8">
-              <div className="max-w-[430px]">
-                <img src={Logo} alt="MultiQC logo" />
+              <div className="flex flex-row items-end">
+                <div className="w-[430px]">
+                  <img src={Logo} alt="MultiQC logo" />
+                </div>
+                <div className="grow text-right">
+                  <Link
+                    to="https://github.com/ewels/MultiQC/releases"
+                    className="typo-small mr-5 text-xs text-gray-300"
+                    noBorder
+                  >
+                    {/* TODO: Fetch dynamically, don't hard-code version */}
+                    Latest release: v1.13
+                  </Link>
+
+                  {/* TODO: THIS DOESN'T WORK */}
+                  <span
+                    className="__dimensions_badge_embed__"
+                    data-doi="10.1093/bioinformatics/btw354"
+                    data-legend="always"
+                    data-style="large_circle"
+                  ></span>
+                  <script src="https://badge.dimensions.ai/badge.js"></script>
+                </div>
               </div>
               <h1 className="typo-h4 mt-8">
                 Aggregate results from bioinformatics analyses across many samples into a single report
@@ -82,11 +103,11 @@ const HomePage = ({ location }) => {
                   )}
                 </div>
                 <div className="col-full lg:col-6">
-                  <Tabs current={videoLanguage} setCurrent={setVideoLanguage}>
+                  <Tabs current={videoLanguage} setCurrent={setVideoLanguage} small>
                     <Tabs.Item index="en">English 🇬🇧</Tabs.Item>
                     <Tabs.Item index="es">Español 🇪🇸</Tabs.Item>
                   </Tabs>
-                  <div className="mt-5">
+                  <div className="mt-3">
                     {videoLanguage === "en" && (
                       <Tabs current={videoEng} setCurrent={setVideoEng} vertical>
                         <Tabs.Item index={0}>Introduction to MultiQC</Tabs.Item>
@@ -277,24 +298,27 @@ const HomePage = ({ location }) => {
               Python Package Index
             </Link>{" "}
             or{" "}
-            <Link
-              to="https://multiqc.info/#:~:text=Package%20Index%20or-,Bioconda,-To%20install%20MultiQC"
-              className="text-blue-600"
-              noBorder
-            >
+            <Link to="https://bioconda.github.io/recipes/multiqc/README.html" className="text-blue-600" noBorder>
               Bioconda
             </Link>
           </h2>
-          <p className="typo-blockquote mx-auto max-w-3xl">
+          <p className="typo-blockquote mx-auto mb-3 max-w-5xl">
             To install MultiQC, simply run{" "}
-            <span className="rounded-sm bg-blue-600 px-2 font-medium text-white">pip install multiqc</span> on the
-            command line.
-            <br />
+            <code className="text-md rounded-sm bg-gray-200 px-2 tracking-tighter text-zinc-800">
+              pip install multiqc
+            </code>{" "}
+            on the command line.
+          </p>
+          <p className="typo-blockquote mx-auto mb-3 max-w-5xl">
             If you use conda, you can run{" "}
-            <span className="rounded-sm bg-blue-600 px-2 font-medium text-white">conda install multiqc</span> instead.
-            <br />
+            <code className="text-md rounded-sm bg-gray-200 px-2 tracking-tighter text-zinc-800">
+              conda install multiqc
+            </code>{" "}
+            instead.
+          </p>
+          <p className="typo-blockquote mx-auto mb-3 max-w-5xl">
             See the{" "}
-            <Link to="https://multiqc.info/docs/#installation" className="text-blue-600">
+            <Link to="/docs/usage/installation" className="text-blue-600">
               installation instructions
             </Link>{" "}
             for more help.

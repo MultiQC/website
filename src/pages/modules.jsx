@@ -27,14 +27,10 @@ const ModulesPage = () => {
       <Seo title="Supported Tools" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-6">
-              <h1 className="typo-h2">Supported Tools</h1>
-              <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
-                MultiQC currently has modules to support 114 different bioinformatics tools, listed below.
-              </p>
-            </div>
-          </div>
+          <h1 className="typo-h2">Supported Tools</h1>
+          <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
+            MultiQC currently has modules to support 114 different bioinformatics tools, listed below.
+          </p>
         </div>
       </Hero>
       <div className="container-lg py-20">

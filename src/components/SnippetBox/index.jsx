@@ -21,12 +21,15 @@ const SnippetBox = ({ title, children }) => {
       </div>
       <div className="px-4 py-2">
         {snippets.map((snippet, index) => (
-          <div className="typo-small">{index === active && snippet}</div>
+          <div key={`snippet-${snippet.props.title}`} className="typo-small">
+            {index === active && snippet}
+          </div>
         ))}
       </div>
       <div className="flex w-full justify-between border-t border-blue-600 bg-gray-800">
         {snippets.map((snippet, index) => (
           <button
+            key={`snippet-btn-${snippet.props.title}`}
             className={classnames(getColumnClassName(snippets.length), "typo-small px-2 py-1 text-center", {
               "text-gray-200 hover:bg-gray-900 hover:text-gray-100": index !== active,
               "bg-blue-600 text-white": index === active,

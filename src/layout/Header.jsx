@@ -27,13 +27,6 @@ const Header = ({ location }) => {
           </Link>
           <div className="hidden items-center lg:flex">
             <Link
-              to="https://github.com/ewels/MultiQC/releases"
-              className="typo-small mr-5 text-xs text-gray-300"
-              noBorder
-            >
-              Current version: v1.13
-            </Link>
-            <Link
               to="/"
               noBorder
               className={classnames(

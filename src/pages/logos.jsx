@@ -12,14 +12,10 @@ const LogosPage = () => {
       <Seo title="MultiQC Logos" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-6">
-              <h1 className="typo-h2">Grab some MultiQC logos!</h1>
-              <p className="typo-blockquote mt-4 lg:mt-8">
-                Perfect for talks, posters, stickers, desktop backgrounds or whatever else you fancy!
-              </p>
-            </div>
-          </div>
+          <h1 className="typo-h2">Grab some MultiQC logos!</h1>
+          <p className="typo-blockquote mt-4 lg:mt-8">
+            Perfect for talks, posters, stickers, desktop backgrounds or whatever else you fancy!
+          </p>
         </div>
       </Hero>
       <div className="container-lg py-20">

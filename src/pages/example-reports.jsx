@@ -36,15 +36,11 @@ const ExampleReportsPage = () => {
       <Seo title="Example Reports MultiQC" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-7">
-              <h1 className="typo-h2">Example reports</h1>
-              <p className="typo-blockquote mt-4 lg:mt-8">
-                MultiQC collects numerical stats from each module at the top the report, so that you can track how your
-                data behaves as it proceeds through your analysis.
-              </p>
-            </div>
-          </div>
+          <h1 className="typo-h2">Example reports</h1>
+          <p className="typo-blockquote mt-4 lg:mt-8">
+            MultiQC collects numerical stats from each module at the top the report, so that you can track how your data
+            behaves as it proceeds through your analysis.
+          </p>
         </div>
       </Hero>
       <div className="container-lg py-20">

@@ -11,12 +11,8 @@ const CitationPage = () => {
       <Seo title="MultiQC Publication Details" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-6">
-              <h1 className="typo-h2">MultiQC Publication Details</h1>
-              <p className="typo-blockquote mt-4 lg:mt-8">Details about how to cite the MultiQC publication.</p>
-            </div>
-          </div>
+          <h1 className="typo-h2">MultiQC Publication Details</h1>
+          <p className="typo-blockquote mt-4 lg:mt-8">Details about how to cite the MultiQC publication.</p>
         </div>
       </Hero>
       <div className="container-lg mt-20">
@@ -65,6 +61,7 @@ const CitationPage = () => {
             </div>
           </div>
         </div>
+        {/* TODO: THIS DOESN'T WORK */}
         <span
           className="__dimensions_badge_embed__"
           data-doi="10.1093/bioinformatics/btw354"

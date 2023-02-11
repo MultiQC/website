@@ -26,7 +26,7 @@ const ExamplesBrowser = ({ items, hasDetails }) => {
           </div>
           <div className="flex pt-2">
             {items.map((item, index) => (
-              <div>
+              <div key={`example-report-btn-${item.title}`}>
                 <button
                   className={classnames("typo-small bg-gray-2 h-full rounded-t-sm px-4", {
                     "hover:bg-white": index !== active,

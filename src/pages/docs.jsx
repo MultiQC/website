@@ -34,14 +34,10 @@ const DocsPage = () => {
       <Seo title="MultiQC Documentation" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-7">
-              <h1 className="typo-h2">Documentation</h1>
-              <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
-                MultiQC documentation covering usage, customisation and development.
-              </p>
-            </div>
-          </div>
+          <h1 className="typo-h2">Documentation</h1>
+          <p className="typo-blockquote mb-4 mt-4 lg:mt-8">
+            MultiQC documentation covering usage, customisation and development.
+          </p>
         </div>
       </Hero>
       <div className="container-lg my-10 md:my-20">

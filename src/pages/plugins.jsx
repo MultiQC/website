@@ -38,14 +38,10 @@ const PluginsPage = () => {
       <Seo title="MultiQC Plugins" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-6">
-              <h1 className="typo-h2">MultiQC Plugins</h1>
-              <p className="typo-blockquote mt-4 lg:mt-8">
-                MultiQC plugins that you can use to extend MultiQC functionality.
-              </p>
-            </div>
-          </div>
+          <h1 className="typo-h2">MultiQC Plugins</h1>
+          <p className="typo-blockquote mt-4 lg:mt-8">
+            MultiQC plugins that you can use to extend MultiQC functionality.
+          </p>
         </div>
       </Hero>
       <div className="container-lg mt-20 md:mt-0 md:py-20">

@@ -11,12 +11,8 @@ const Error404Page = () => {
       <Seo title="Error 404: Page Not Found" />
       <Hero>
         <div className="container-lg relative">
-          <div className="row">
-            <div className="col-full lg:col-6">
-              <h1 className="typo-h2">Error 404: Page Not Found</h1>
-              <p className="typo-blockquote mt-4 lg:mt-8">The page you were looking for has been moved or removed.</p>
-            </div>
-          </div>
+          <h1 className="typo-h2">Error 404: Page Not Found</h1>
+          <p className="typo-blockquote mt-4 lg:mt-8">The page you were looking for has been moved or removed.</p>
         </div>
       </Hero>
       <div className="container-lg py-20">
