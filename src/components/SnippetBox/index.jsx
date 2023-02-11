@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { TerminalIcon } from "website-components";
 
@@ -11,7 +11,6 @@ const getColumnClassName = (length) => {
 
 const SnippetBox = ({ title, children }) => {
   const [active, setActive] = useState(0);
-  const snippet = useRef();
   const snippets = React.Children.toArray(children);
 
   return (
@@ -29,7 +28,7 @@ const SnippetBox = ({ title, children }) => {
         {snippets.map((snippet, index) => (
           <button
             className={classnames(getColumnClassName(snippets.length), "typo-small px-2 py-1 text-center", {
-              "text-gray-200 hover:bg-gray-900 hover:text-gray-100": index != active,
+              "text-gray-200 hover:bg-gray-900 hover:text-gray-100": index !== active,
               "bg-blue-600 text-white": index === active,
             })}
             onClick={() => {

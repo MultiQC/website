@@ -24,7 +24,7 @@ const DocsNavigation = ({ docs, location }) => {
               <div className="border-l-2 border-gray-200 pl-2">
                 {docs.map((childDoc) => (
                   <>
-                    {childDoc.path.includes(doc.path) && childDoc.path != doc.path && (
+                    {childDoc.path.includes(doc.path) && childDoc.path !== doc.path && (
                       <div className="typo-body ml-4 mt-4">
                         <Link
                           to={childDoc.path}

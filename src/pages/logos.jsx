@@ -75,7 +75,7 @@ const LogosPage = () => {
         <div className="row mb-4">
           <div className="col-full sm:col-6">
             <div className="bg-gray-200 p-10">
-              <img src="/logos/multiqc_logo.png" />
+              <img src="/logos/multiqc_logo.png" alt="MultiQC Logo" />
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const LogosPage = () => {
         <div className="row mb-4">
           <div className="col-full sm:col-6">
             <div className="bg-gray-800 p-10">
-              <img src="/logos/multiqc_logo_darkbg.png" />
+              <img src="/logos/multiqc_logo_darkbg.png" alt="MultiQC Logo, dark backgrounds" />
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ const LogosPage = () => {
         <div className="row mb-4">
           <div className="col-6 sm:col-3">
             <div className="bg-gray-200 p-10">
-              <img src="/logos/multiqc_logo_square.png" />
+              <img src="/logos/multiqc_logo_square.png" alt="MultiQC Square Thumbnail" />
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ const LogosPage = () => {
         <div className="row mb-4">
           <div className="col-6 sm:col-3">
             <div className="bg-gray-200 p-10">
-              <img src="/logos/multiqc_logo_circle.png" />
+              <img src="/logos/multiqc_logo_circle.png" alt="MultiQC Circle Thumbnail" />
             </div>
           </div>
         </div>

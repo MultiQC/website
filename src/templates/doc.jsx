@@ -43,7 +43,7 @@ const DocPage = ({ data, location }) => {
                 {docs.nodes.map((d) => (
                   <List.Item
                     className={classnames("typo-body", {
-                      hidden: !d.path.includes(doc.path) || d.path == doc.path,
+                      hidden: !d.path.includes(doc.path) || d.path === doc.path,
                     })}
                   >
                     <Link to={d.path}>{d.title}</Link>

@@ -21,7 +21,7 @@ const Header = ({ location }) => {
           <Link to="/" noBorder className="block uppercase">
             <img
               src={Logo}
-              className={classnames("h-8 lg:h-10", { hidden: location.pathname == "/" })}
+              className={classnames("h-8 lg:h-10", { hidden: location.pathname === "/" })}
               alt="MultiQC logo"
             />
           </Link>
@@ -39,7 +39,7 @@ const Header = ({ location }) => {
               className={classnames(
                 "mx-2 mr-px rounded-sm bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide hover:text-white",
                 {
-                  "text-gray-300": location.pathname != "/",
+                  "text-gray-300": location.pathname !== "/",
                   "bg-opacity-30 text-white hover:bg-opacity-50": location.pathname === "/",
                 }
               )}
