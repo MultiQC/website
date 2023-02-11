@@ -61,14 +61,13 @@ const CitationPage = () => {
             </div>
           </div>
         </div>
-        {/* TODO: THIS DOESN'T WORK */}
         <span
-          className="__dimensions_badge_embed__"
+          class="__dimensions_badge_embed__"
           data-doi="10.1093/bioinformatics/btw354"
           data-legend="always"
           data-style="large_circle"
         ></span>
-        <script src="https://badge.dimensions.ai/badge.js"></script>
+        <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
       </div>
       <div className="container-lg my-8">
         <h2 className="typo-h3 my-4">Abstract</h2>

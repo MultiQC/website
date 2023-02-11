@@ -67,14 +67,13 @@ const HomePage = ({ location }) => {
                     Latest release: v1.13
                   </Link>
 
-                  {/* TODO: THIS DOESN'T WORK */}
                   <span
-                    className="__dimensions_badge_embed__"
+                    class="__dimensions_badge_embed__"
                     data-doi="10.1093/bioinformatics/btw354"
-                    data-legend="always"
-                    data-style="large_circle"
+                    data-legend="never"
+                    data-style="large_rectangle"
                   ></span>
-                  <script src="https://badge.dimensions.ai/badge.js"></script>
+                  <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
                 </div>
               </div>
               <h1 className="typo-h4 mt-8">
