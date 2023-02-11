@@ -53,7 +53,7 @@ const HomePage = ({ location }) => {
         <div className="container-lg relative">
           <div className="row">
             <div className="col-full lg:col-8">
-              <div className="flex flex-row items-end">
+              <div className="flex flex-row items-end items-stretch">
                 <div className="w-[430px]">
                   <img src={Logo} alt="MultiQC logo" />
                 </div>
