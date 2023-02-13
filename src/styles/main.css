@@ -163,6 +163,10 @@
   }
 
   .bg-gradient-accent {
-    background-image: linear-gradient(237.19deg, #24aa60 30.22%, #4256e7 87.13%);
+    background-image: linear-gradient(
+      237.19deg,
+      #24aa60 30.22%,
+      #4256e7 87.13%
+    );
   }
 }
