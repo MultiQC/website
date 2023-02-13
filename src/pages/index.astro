@@ -6,6 +6,11 @@ import Button from "@components/Button.astro";
 import { Icon } from 'astro-icon';
 import SnippetBox from '@components/SnippetBox.svelte';
 
+const latestRelease = await fetch('https://api.github.com/repos/ewels/MultiQC/releases/latest')
+  .then((response) => response.json())
+  .then((data) => {
+    return data.tag_name;
+  });
 // import ExamplesBrowser from "@components/ExamplesBrowser";
 // import SnippetBox from "@components/SnippetBox";
 // import Tabs from "@components/Tabs";
@@ -28,7 +33,7 @@ import SnippetBox from '@components/SnippetBox.svelte';
                     class="typo-small mr-5 text-xs text-gray-300"
                   >
                     {/* TODO: Fetch dynamically, don't hard-code version */}
-                    Latest release: v1.13
+                    Latest release: {latestRelease}
                 </a>
 
                   <span
