@@ -4,6 +4,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Button from "@components/Button.astro";
 
 import { Icon } from 'astro-icon';
+import SnippetBox from '@components/SnippetBox.svelte';
 
 // import ExamplesBrowser from "@components/ExamplesBrowser";
 // import SnippetBox from "@components/SnippetBox";
@@ -128,31 +129,27 @@ import { Icon } from 'astro-icon';
                 </Button>
               </div>
               <div class="mt-5">
-                {/*
-                <SnippetBox title="Quick Install">
-                  <SnippetBox.Item title="pip">
-                    pip install multiqc <span class="text-gray-300"># Install</span>
-                    <br />
-                    multiqc . <span class="text-gray-300"># Run</span>
-                  </SnippetBox.Item>
-                  <SnippetBox.Item title="conda">
-                    conda install multiqc
-                    <span class="text-gray-300">
-                      #
-                      <a href="https://bioconda.github.io/#usage" class="underline">
-                        Bioconda config
-                      </a>
-                    </span>
-                    <br />
-                    multiqc .
-                  </SnippetBox.Item>
-                  <SnippetBox.Item title="docker">
-                    docker run -t -v `pwd`:`pwd` -w `pwd` <span class="text-gray-300">\</span>
-                    <br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ewels/multiqc .
-                  </SnippetBox.Item>
-                </SnippetBox>
-                */}
+                <div class="overflow-hidden rounded-md border border-blue-600 bg-gray-800 shadow">
+      <div class="flex items-center justify-center border-b border-blue-600 bg-blue-600 py-2">
+        <Icon name="mdi:terminal" class="mr-3 h-6 w-6" />
+        <span class="typo-intro">Quick install</span>
+      </div>
+      
+                <SnippetBox snippets={[
+                  {
+                    title: "pip",
+                    code: `pip install multiqc # Install\nmultiqc . # Run`
+                  },
+                  {
+                    title: "conda",
+                    code: "conda install multiqc\n # Setup Bioconda first https://bioconda.github.io/#usage\nmultiqc ."
+                     
+                  },
+                  {
+                    title: "docker",
+                    code: "docker run -t -v pwd:pwd -w pwd\newels/multiqc ."
+                  }]} client:idle/>
+                </div>
                 <p class="mt-2 text-xs font-light text-gray-500">
                   Need a little more help?
                   <a href="/docs/usage/installation/" class="underline underline-offset-4 hover:text-gray-400">
@@ -161,9 +158,6 @@ import { Icon } from 'astro-icon';
                   .
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
       {/* </Hero> */}
       <div class="container-lg py-20">
         <div class="row">
