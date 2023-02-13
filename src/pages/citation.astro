@@ -14,73 +14,70 @@ import Button from "@components/Button.astro";
     </div>
   </Hero>
   <div class="container-lg mt-20">
-    <div class="row">
-      <div class="col-full">
-        <p class="typo-h4 mb-3">
-          Please consider citing MultiQC if you use it in your analysis.
+    <div class="text-center">
+      <p class="typo-h4 mb-3">
+        Please consider citing MultiQC if you use it in your analysis.
+      </p>
+      <p class="typo-blockquote mb-6">
+        Citing MultiQC supports the project by demonstrating usage within the
+        community.
+      </p>
+      <div class="text-center mb-10 p-6 border border-gray-500 rounded-md">
+        <p class="typo-intro">
+          MultiQC: Summarize analysis results for multiple tools and samples in
+          a single report
         </p>
-        <p class="typo-blockquote mb-6">
-          Citing MultiQC supports the project by demonstrating usage within the
-          community.
+        <p class="typo-body">
+          Philip Ewels, Måns Magnusson, Sverker Lundin and Max Käller.
+          <span class="italic ml-3 mr-1">Bioinformatics</span> (2016)
+          <br />
         </p>
-        <div class="row">
-          <div class="col-full md:col-6 lg:col-8 mb-8">
-            <p class="typo-intro">
-              MultiQC: Summarize analysis results for multiple tools and samples
-              in a single report
-            </p>
-            <p class="typo-body">
-              Philip Ewels, Måns Magnusson, Sverker Lundin and Max Käller.
-            </p>
-            <p class="typo-body">
-              <span class="italic">Bioinformatics</span> (2016)
-              <br />
-            </p>
-          </div>
-          <div class="col-full md:col-6 lg:col-4 mb-8">
-            <p>
-              <Button
-                to="http://dx.doi.org/10.1093/bioinformatics/btw354"
-                variant="primary"
-                size="md"
-                arrow
-              >
-                View the publication
-              </Button>
-            </p>
-            <dl class="row mt-4">
-              <dt class="col-2 font-bold">
-                <abbr title="Digital object identifier">DOI:</abbr>
-              </dt>
-              <dd class="col-10">
-                <a
-                  href="http://dx.doi.org/10.1093/bioinformatics/btw354"
-                  class="text-blue-600"
-                >
-                  10.1093/bioinformatics/btw354
-                </a>
-              </dd>
-              <dt class="col-2 font-bold">
-                <abbr title="PubMed ID">PMID</abbr>:
-              </dt>
-              <dd class="col-10">
-                <a
-                  href="http://www.ncbi.nlm.nih.gov/pubmed/27312411"
-                  class="text-blue-600">27312411</a
-                >
-              </dd>
-            </dl>
-          </div>
-        </div>
       </div>
     </div>
-    <span
-      class="__dimensions_badge_embed__"
-      data-doi="10.1093/bioinformatics/btw354"
-      data-legend="always"
-      data-style="large_circle"></span>
-    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"
-    ></script>
+    <div class="row">
+      <div class="col-full md:col-6 mb-8">
+        <span
+          class="__dimensions_badge_embed__ !text-right"
+          data-doi="10.1093/bioinformatics/btw354"
+          data-legend="always"></span>
+        <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"
+        ></script>
+      </div>
+      <div class="col-full md:col-6 mb-8">
+        <p>
+          <Button
+            to="http://dx.doi.org/10.1093/bioinformatics/btw354"
+            variant="primary"
+            size="md"
+            arrow
+          >
+            View the publication
+          </Button>
+        </p>
+        <dl class="row mt-4">
+          <dt class="col-2 font-bold">
+            <abbr title="Digital object identifier">DOI:</abbr>
+          </dt>
+          <dd class="col-10">
+            <a
+              href="http://dx.doi.org/10.1093/bioinformatics/btw354"
+              class="text-blue-600"
+            >
+              10.1093/bioinformatics/btw354
+            </a>
+          </dd>
+          <dt class="col-2 font-bold">
+            <abbr title="PubMed ID">PMID</abbr>:
+          </dt>
+          <dd class="col-10">
+            <a
+              href="http://www.ncbi.nlm.nih.gov/pubmed/27312411"
+              class="text-blue-600">27312411</a
+            >
+          </dd>
+        </dl>
+      </div>
+    </div>
   </div>
   <div class="container-lg my-8">
     <h2 class="typo-h3 my-4">Abstract</h2>
