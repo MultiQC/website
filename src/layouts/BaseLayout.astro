@@ -2,6 +2,7 @@
 
 import BaseHead from '@components/BaseHead.astro';
 import '../styles/main.css';
+import Header from './Header.astro';
 
 export interface Props {
 	title?: string;
@@ -21,6 +22,7 @@ const { title = SITE_TITLE, subtitle = SITE_DESCRIPTION, image = '', md_github_u
 		<BaseHead title={title} description={subtitle} image={image} />
 	</head>
 	<body>
+		<Header />
 		<main class="min-h-screen">
 			<slot />
 		</main>
