@@ -1,0 +1,26 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+import Button from "@components/Button.astro";
+---
+
+<PageLayout
+  title="Error 404: Page Not Found"
+  subtitle="The page you were looking for has been moved or removed."
+>
+  <p class="typo-intro mb-6">
+    Apologies, the link you followed is broken and the page cannot be found.
+  </p>
+  <p class="typo-body mb-3">
+    If you believe this is an error, please report it on the website repository:
+    <Button
+      to="https://github.com/ewels/MultiQC_website/issues/new"
+      variant="primary"
+      size="sm"
+      classes="ml-3"
+      arrow
+    >
+      Open an issue on GitHub
+    </Button>
+  </p>
+</PageLayout>

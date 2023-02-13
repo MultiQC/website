@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Hero from "@layouts/Hero.astro";
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  image?: string;
+  md_github_url?: string;
+  subfooter?: string;
+}
+
+const { title, subtitle, image, md_github_url, subfooter } = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  subtitle={subtitle}
+  image={image}
+  md_github_url={md_github_url}
+  subfooter={subfooter}
+>
+  <Hero>
+    <div class="container-lg relative">
+      <h1 class="typo-h2">{title}</h1>
+      <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
+    </div>
+  </Hero>
+  <div class="container-lg py-20">
+    <slot />
+  </div>
+</BaseLayout>
