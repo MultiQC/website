@@ -21,148 +21,144 @@ const latestRelease = await fetch('https://api.github.com/repos/ewels/MultiQC/re
 ---
 
 <BaseLayout title="MultiQC" subtitle="Homepage">
-      {/* <Hero> */}
-        <div class="container-lg relative">
-          <div class="row">
-            <div class="col-full lg:col-8">
-              <div class="flex flex-row items-end items-stretch">
-                  <Icon name="multiqc_logo_light" class="w-[430px]"/>
-                <div class="grow text-right">
-                  <a
-                    href="https://github.com/ewels/MultiQC/releases"
-                    class="typo-small mr-5 text-xs text-gray-300"
-                  >
-                    {/* TODO: Fetch dynamically, don't hard-code version */}
-                    Latest release: {latestRelease}
-                </a>
+  {/* <Hero> */}
+  <div class="container-lg relative">
+    <div class="row">
+      <div class="col-full lg:col-8">
+        <div class="flex flex-row items-end items-stretch">
+          <Icon name="multiqc_logo_light" class="w-[430px]" />
+          <div class="grow text-right">
+            <a href="https://github.com/ewels/MultiQC/releases" class="typo-small mr-5 text-xs text-gray-300">
+              Latest release: {latestRelease}
+            </a>
 
-                  <span
-                    class="__dimensions_badge_embed__"
-                    data-doi="10.1093/bioinformatics/btw354"
-                    data-legend="never"
-                    data-style="large_rectangle"
-                  ></span>
-                  <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-                </div>
-              </div>
-              <h1 class="typo-h4 mt-8">
-                Aggregate results from bioinformatics analyses across many samples into a single report
-              </h1>
-              <p class="typo-blockquote mt-4 lg:mt-8">
-                MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general use
-                tool, perfect for summarising the output from numerous bioinformatics tools.
-              </p>
-              <div class="row mt-8">
-                {/*
-                <div class="col-full lg:col-6 hidden lg:block">
-                  {videoLanguage === "en" && (
-                    <>
-                      {videoEng === 0 && <YoutubeIframe id="BbScv9TcaMg" />}
-                      {videoEng === 1 && <YoutubeIframe id="Gg5neIPuiVo" />}
-                      {videoEng === 2 && <YoutubeIframe id="cktKbESOOno" />}
-                      {videoEng === 3 && <YoutubeIframe id="qPbIlO_KWN0" />}
-                    </>
-                  )}
-                  {videoLanguage === "es" && (
-                    <>
-                      {videoEsp === 0 && <YoutubeIframe id="WX_qVhJ32g0" />}
-                      {videoEsp === 1 && <YoutubeIframe id="E_NJCxwXAGQ" />}
-                      {videoEsp === 2 && <YoutubeIframe id="0MfW7Y8Ocak" />}
-                    </>
-                  )}
-                </div>
-
-                <div class="col-full lg:col-6">
-                  <Tabs current={videoLanguage} setCurrent={setVideoLanguage} small>
-                    <Tabs.Item index="en">English 🇬🇧</Tabs.Item>
-                    <Tabs.Item index="es">Español 🇪🇸</Tabs.Item>
-                  </Tabs>
-                  <div class="mt-3">
-                    {videoLanguage === "en" && (
-                      <Tabs current={videoEng} setCurrent={setVideoEng} vertical>
-                        <Tabs.Item index={0}>Introduction to MultiQC</Tabs.Item>
-                        <Tabs.Item index={1}>Installing MultiQC</Tabs.Item>
-                        <Tabs.Item index={2}>Running MultiQC</Tabs.Item>
-                        <Tabs.Item index={3}>Using MultiQC Reports</Tabs.Item>
-                      </Tabs>
-                    )}
-                    {videoLanguage === "es" && (
-                      <Tabs current={videoEsp} setCurrent={setVideoEsp} vertical>
-                        <Tabs.Item index={0}>Introducción a MultiQC</Tabs.Item>
-                        <Tabs.Item index={1}>Instalación de MultiQC</Tabs.Item>
-                        <Tabs.Item index={2}>¿Cómo ejecutar MultiQC?</Tabs.Item>
-                      </Tabs>
-                    )}
-                  </div>
-                </div>
-                */}
-              </div>
-            </div>
-            <div class="col-full lg:col-4 mt-4 lg:mt-0">
-              <Button to="https://www.github.com/ewels/MultiQC" variant="primary" size="md" classes="w-full">
-                <Icon name="mdi:github" class="mr-3 h-6 w-6" />
-                GitHub
-              </Button>
-              <div class="mt-5">
-                <Button to="https://pypi.org/project/multiqc/" variant="primary" size="md" classes="w-full">
-                  <Icon name="mdi:language-python" class="mr-3 h-6 w-6" />
-                  Python Package Index
-                </Button>
-              </div>
-              <div class="mt-5">
-                <Button to="/docs/" variant="primary" size="md" classes="w-full">
-                  <Icon name="mdi:book-outline" class="mr-3 h-6 w-6" />
-                  Documentation
-                </Button>
-              </div>
-              <div class="mt-5">
-                <Button to="/modules/" variant="primary" size="md" classes="w-full">
-                  <Icon name="mdi:hammer-wrench" class="mr-3 h-6 w-6" />
-                  114 supported tools
-                </Button>
-              </div>
-              <div class="mt-5">
-                <Button to="/citation/" variant="primary" size="md" classes="w-full">
-                  <Icon name="mdi:paperclip" class="mr-3 h-6 w-6" />
-                  Citation
-                </Button>
-              </div>
-              <div class="mt-5">
-                <Button to="https://gitter.im/ewels/MultiQC" variant="primary" size="md" classes="w-full">
-                  <Icon name="fa-brands:gitter" class="mr-3 h-6 w-6" />
-                  Get help on Gitter
-                </Button>
-              </div>
-              <div class="mt-5">
-                <div class="overflow-hidden rounded-md border border-blue-600 bg-gray-800 shadow">
-      <div class="flex items-center justify-center border-b border-blue-600 bg-blue-600 py-2">
-        <Icon name="mdi:terminal" class="mr-3 h-6 w-6" />
-        <span class="typo-intro">Quick install</span>
+            <span
+              class="__dimensions_badge_embed__"
+              data-doi="10.1093/bioinformatics/btw354"
+              data-legend="never"
+              data-style="large_rectangle"></span>
+            <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+          </div>
+        </div>
+        <h1 class="typo-h4 mt-8">
+          Aggregate results from bioinformatics analyses across many samples into a single report
+        </h1>
+        <p class="typo-blockquote mt-4 lg:mt-8">
+          MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general use tool,
+          perfect for summarising the output from numerous bioinformatics tools.
+        </p>
+        <div class="">
+          <HomepageVideos
+            videos={[
+              {
+                id: "BbScv9TcaMg",
+                title: "Introduction to MultiQC",
+                language: "en",
+              },
+              {
+                id: "Gg5neIPuiVo",
+                title: "Installing MultiQC",
+                language: "en",
+              },
+              {
+                id: "cktKbESOOno",
+                title: "Running MultiQC",
+                language: "en",
+              },
+              {
+                id: "qPbIlO_KWN0",
+                title: "Using MultiQC Reports",
+                language: "en",
+              },
+              {
+                id: "WX_qVhJ32g0",
+                title: "Introducción a MultiQC",
+                language: "es",
+              },
+              {
+                id: "E_NJCxwXAGQ",
+                title: "Instalación de MultiQC",
+                language: "es",
+              },
+              {
+                id: "0MfW7Y8Ocak",
+                title: "¿Cómo ejecutar MultiQC?",
+                language: "es",
+              },
+            ]}
+            client:idle
+          />
+        </div>
       </div>
-      
-                <SnippetBox snippets={[
-                  {
-                    title: "pip",
-                    code: `pip install multiqc # Install\nmultiqc . # Run`
-                  },
-                  {
-                    title: "conda",
-                    code: "conda install multiqc\n # Setup Bioconda first https://bioconda.github.io/#usage\nmultiqc ."
-                     
-                  },
-                  {
-                    title: "docker",
-                    code: "docker run -t -v pwd:pwd -w pwd\newels/multiqc ."
-                  }]} client:idle/>
-                </div>
-                <p class="mt-2 text-xs font-light text-gray-500">
-                  Need a little more help?
-                  <a href="/docs/usage/installation/" class="underline underline-offset-4 hover:text-gray-400">
-                    See the full installation instructions
-                  </a>
-                  .
-                </p>
-              </div>
+      <div class="col-full lg:col-4 mt-4 lg:mt-0">
+        <Button to="https://www.github.com/ewels/MultiQC" variant="primary" size="md" classes="w-full">
+          <Icon name="mdi:github" class="mr-3 h-6 w-6" />
+          GitHub
+        </Button>
+        <div class="mt-5">
+          <Button to="https://pypi.org/project/multiqc/" variant="primary" size="md" classes="w-full">
+            <Icon name="mdi:language-python" class="mr-3 h-6 w-6" />
+            Python Package Index
+          </Button>
+        </div>
+        <div class="mt-5">
+          <Button to="/docs/" variant="primary" size="md" classes="w-full">
+            <Icon name="mdi:book-outline" class="mr-3 h-6 w-6" />
+            Documentation
+          </Button>
+        </div>
+        <div class="mt-5">
+          <Button to="/modules/" variant="primary" size="md" classes="w-full">
+            <Icon name="mdi:hammer-wrench" class="mr-3 h-6 w-6" />
+            114 supported tools
+          </Button>
+        </div>
+        <div class="mt-5">
+          <Button to="/citation/" variant="primary" size="md" classes="w-full">
+            <Icon name="mdi:paperclip" class="mr-3 h-6 w-6" />
+            Citation
+          </Button>
+        </div>
+        <div class="mt-5">
+          <Button to="https://gitter.im/ewels/MultiQC" variant="primary" size="md" classes="w-full">
+            <Icon name="fa-brands:gitter" class="mr-3 h-6 w-6" />
+            Get help on Gitter
+          </Button>
+        </div>
+        <div class="mt-5">
+          <div class="overflow-hidden rounded-md border border-blue-600 bg-gray-800 shadow">
+            <div class="flex items-center justify-center border-b border-blue-600 bg-blue-600 py-2">
+              <Icon name="mdi:terminal" class="mr-3 h-6 w-6" />
+              <span class="typo-intro">Quick install</span>
+            </div>
+
+            <SnippetBox
+              snippets={[
+                {
+                  title: "pip",
+                  code: `pip install multiqc # Install\nmultiqc . # Run`,
+                },
+                {
+                  title: "conda",
+                  code: "conda install multiqc\n # Setup Bioconda first https://bioconda.github.io/#usage\nmultiqc .",
+                },
+                {
+                  title: "docker",
+                  code: "docker run -t -v pwd:pwd -w pwd\newels/multiqc .",
+                },
+              ]}
+              client:idle
+            />
+          </div>
+          <p class="mt-2 text-xs font-light text-gray-500">
+            Need a little more help?
+            <a href="/docs/usage/installation/" class="underline underline-offset-4 hover:text-gray-400">
+              See the full installation instructions
+            </a>
+            .
+          </p>
+        </div>
+      </div>
       {/* </Hero> */}
       <div class="container-lg py-20">
         <div class="row">
