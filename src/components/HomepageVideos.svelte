@@ -11,9 +11,9 @@
 
   let languages = videos.map((video) => video.language);
   languages = [...new Set(languages)];
-  const languageIcons = {
-    en: "🇬🇧",
-    es: "🇪🇸",
+  const languageBtnTexts = {
+    en: "English 🇬🇧",
+    es: "Espanol 🇪🇸",
   };
   $: filteredVideos = videos.filter((video) => {
     return video.language === lang;
@@ -39,12 +39,10 @@
           on:click={() => {
             lang = language;
           }}
-          class={"block border border-gray-800 bg-gray-700 text-left text-white hover:bg-gray-600 " +
-            (small ? "typo-small text-red px-2 py-0.5 text-xs" : "typo-small px-4 py-2") +
+          class={"block border border-gray-800 bg-gray-700 text-left text-white hover:bg-gray-600 border-r-0 first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r typo-small text-red px-2 py-0.5 text-xs " +
             (lang === language ? " bg-neutral-600" : "")}
         >
-          {languageIcons[language]}
-          {language}
+          {languageBtnTexts[language]}
         </button>
       {/each}
     </div>
@@ -55,8 +53,7 @@
             on:click={() => {
               currentIndex = idx;
             }}
-            class={"block border border-gray-800 bg-gray-700 text-left text-white hover:bg-gray-600 " +
-              (small ? "typo-small text-red px-2 py-0.5 text-xs" : "typo-small px-4 py-2") +
+            class={"block border border-gray-800 bg-gray-700 text-left text-white hover:bg-gray-600 border-b-0 first:mt-0 first:rounded-t-sm last:mb-0 last:rounded-b-sm last:border-b typo-small px-4 py-2 " +
               (currentIndex === idx ? " bg-neutral-600" : "")}
           >
             {video.title}
