@@ -23,7 +23,7 @@
 <div class="row mt-8">
   <div class="wrapper col-full lg:col-6 hidden lg:block">
     <iframe
-      id="nf-core-video"
+      id="multiqc-video"
       src={"https://www.youtube.com/embed/" + filteredVideos[currentIndex].id}
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
