@@ -1,0 +1,21 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../../../../MultiQC/docs/*.md");
+  return posts.map((post) => ({
+    params: {
+      slug: post.getHeadings()[0]["slug"],
+    },
+    props: {
+      post,
+    },
+  }));
+}
+
+const { Content } = Astro.props.post;
+---
+
+<PageLayout>
+  <Content />
+</PageLayout>

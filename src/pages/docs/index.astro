@@ -1,0 +1,18 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+const posts = await Astro.glob("../../../../MultiQC/docs/*.md");
+---
+
+<PageLayout>
+  <p>Docs:</p>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.getHeadings()[0]["slug"]}>{post.file}</a>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
