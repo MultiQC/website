@@ -18,7 +18,7 @@ const { Content, frontmatter } = Astro.props.post;
 ---
 
 <PageLayout title={frontmatter.title} subtitle={frontmatter.description}>
-  <div class="prose">
+  <div class="prose dark:prose-invert">
     <Content />
   </div>
 </PageLayout>
