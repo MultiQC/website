@@ -2,6 +2,7 @@
 /* eslint-disable no-multi-spaces, key-spacing */
 
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
     "node_modules/website-components/**/*.jsx",
@@ -88,6 +89,7 @@ module.exports = {
           500: "#6971FC",
           600: "#4256e7",
         },
+        white: "#F8F9FA", //colors.gray[50],
       },
       margin: {
         "1/12": "8.333333%",
@@ -153,6 +155,16 @@ module.exports = {
         default: "0px 5px 10px rgba(0, 0, 0, 0.1)",
         xl: "0 2px 21px 11px rgba(0,0,0,0.05)",
       },
+      typography: ({ theme }) => ({
+        invert: {
+          css: {
+            // don't make text pure white
+            "--tw-prose-headings": theme("colors.white"),
+            "--tw-prose-color": theme("colors.white"),
+            "--tw-prose-links": theme("colors.white"),
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
