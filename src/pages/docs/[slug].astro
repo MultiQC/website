@@ -1,0 +1,24 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
+  return posts.map((post) => ({
+    params: {
+      slug: post.file.split("/").pop().replace(".md", ""),
+    },
+    props: {
+      post: post,
+      frontmatter: post.frontmatter,
+    },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<PageLayout title={frontmatter.title} subtitle={frontmatter.description}>
+  <div class="prose">
+    <Content />
+  </div>
+</PageLayout>

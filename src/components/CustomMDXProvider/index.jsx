@@ -45,7 +45,9 @@ const Heading6 = ({ children }) => <h6 className="typo-h6">{children}</h6>;
 Heading6.propTypes = basicPropTypes;
 Heading6.defaultProps = basicDefaultProps;
 
-const Paragraph = ({ children }) => <p className="typo-body font-light">{children}</p>;
+const Paragraph = ({ children }) => (
+  <p className="typo-body font-light">{children}</p>
+);
 Paragraph.propTypes = basicPropTypes;
 Paragraph.defaultProps = basicDefaultProps;
 
@@ -73,7 +75,9 @@ const CustomListItem = ({ children, ...props }) => (
 CustomListItem.propTypes = basicPropTypes;
 CustomListItem.defaultProps = basicDefaultProps;
 
-const CustomTable = ({ children }) => <table className="my-4">{children}</table>;
+const CustomTable = ({ children }) => (
+  <table className="my-4">{children}</table>
+);
 CustomTable.propTypes = basicPropTypes;
 CustomTable.defaultProps = basicPropTypes;
 
@@ -94,13 +98,19 @@ const defaultProps = {
 };
 
 const Pre = ({ children }) => (
-  <span className="my-4 block overflow-x-auto whitespace-pre bg-gray-100 p-4">{children}</span>
+  <span className="my-4 block overflow-x-auto whitespace-pre bg-gray-100 p-4">
+    {children}
+  </span>
 );
 Pre.propTypes = basicPropTypes;
 Pre.defaultProps = basicDefaultProps;
 
 const InlineCode = ({ children, className }) => (
-  <pre className={classnames("inline overflow-x-auto bg-gray-100 p-1", className)}>{children}</pre>
+  <pre
+    className={classnames("inline overflow-x-auto bg-gray-100 p-1", className)}
+  >
+    {children}
+  </pre>
 );
 InlineCode.propTypes = basicPropTypes;
 InlineCode.defaultProps = basicDefaultProps;

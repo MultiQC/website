@@ -1,0 +1,22 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
+---
+
+<PageLayout>
+  <div class="prose">
+    <p>Docs:</p>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={post.file.split("/").pop().replace(".md", "")}>
+              {post.frontmatter.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</PageLayout>

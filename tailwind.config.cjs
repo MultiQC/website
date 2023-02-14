@@ -2,7 +2,10 @@
 /* eslint-disable no-multi-spaces, key-spacing */
 
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "node_modules/website-components/**/*.jsx"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "node_modules/website-components/**/*.jsx",
+  ],
   theme: {
     fontFamily: {
       display: ["SF UI Display", "Helvetica", "sans-serif"],
@@ -152,5 +155,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -1,30 +1,36 @@
 ---
-
-import BaseHead from '@components/BaseHead.astro';
-import '../styles/main.css';
-import Header from './Header.astro';
+import "../fonts/sf-ui-display/main.css";
+import BaseHead from "@components/BaseHead.astro";
+import "../styles/main.css";
+import Header from "./Header.astro";
 
 export interface Props {
-	title?: string;
-	subtitle?: string;
-	image?: string;
-	md_github_url?: string;
-	subfooter?: string;
+  title?: string;
+  subtitle?: string;
+  image?: string;
+  md_github_url?: string;
+  subfooter?: string;
 }
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-const { title = SITE_TITLE, subtitle = SITE_DESCRIPTION, image = '', md_github_url, subfooter = false } = Astro.props;
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+const {
+  title = SITE_TITLE,
+  subtitle = SITE_DESCRIPTION,
+  image = "",
+  md_github_url,
+  subfooter = false,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={subtitle} image={image} />
-	</head>
-	<body>
-		<Header />
-		<main class="min-h-screen">
-			<slot />
-		</main>
-	</body>
+  <head>
+    <BaseHead title={title} description={subtitle} image={image} />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+  </body>
 </html>
