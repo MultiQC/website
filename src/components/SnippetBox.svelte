@@ -25,7 +25,7 @@
       id={`snippet-btn-${snippet.title}`}
       class={columnsClass[snippets.length] +
         " typo-small px-2 py-1 text-center " +
-        (index !== active ? "text-gray-200 hover:bg-gray-900 hover:text-gray-100" : "bg-blue-600 text-white")}
+        (index !== active ? "text-gray-200 hover:bg-gray-900 hover:text-gray-100" : "bg-blue-600 text-gray-100")}
       on:click={() => {
         console.log(active)
         active = index;
