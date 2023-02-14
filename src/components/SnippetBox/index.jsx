@@ -3,7 +3,15 @@ import React, { useState } from "react";
 
 import { TerminalIcon } from "website-components";
 
-const columnsClassNames = ["", "w-full", "w-1/2", "w-1/3", "w-1/4", "w-1/5", "w-1/6"];
+const columnsClassNames = [
+  "",
+  "w-full",
+  "w-1/2",
+  "w-1/3",
+  "w-1/4",
+  "w-1/5",
+  "w-1/6",
+];
 
 const getColumnClassName = (length) => {
   return `${columnsClassNames[length]}`;
@@ -30,10 +38,15 @@ const SnippetBox = ({ title, children }) => {
         {snippets.map((snippet, index) => (
           <button
             key={`snippet-btn-${snippet.props.title}`}
-            className={classnames(getColumnClassName(snippets.length), "typo-small px-2 py-1 text-center", {
-              "text-gray-200 hover:bg-gray-900 hover:text-gray-100": index !== active,
-              "bg-blue-600 text-white": index === active,
-            })}
+            className={classnames(
+              getColumnClassName(snippets.length),
+              "typo-small px-2 py-1 text-center",
+              {
+                "text-gray-200 hover:bg-gray-900 hover:text-gray-100":
+                  index !== active,
+                "bg-blue-600 text-white": index === active,
+              }
+            )}
             onClick={() => {
               setActive(index);
             }}
