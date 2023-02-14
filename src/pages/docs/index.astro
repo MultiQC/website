@@ -5,7 +5,7 @@ const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
 ---
 
 <PageLayout>
-  <div class="prose dark:prose-invert">
+  <div class="prose max-w-none dark:prose-invert prose-code:before:hidden prose-code:after:hidden">
     <p>Docs:</p>
     <ul>
       {

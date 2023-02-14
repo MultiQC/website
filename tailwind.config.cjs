@@ -11,6 +11,7 @@ module.exports = {
     fontFamily: {
       display: ["SF UI Display", "Helvetica", "sans-serif"],
       body: ["SF UI Display", "Helvetica", "sans-serif"],
+      sans: ["SF UI Display", "Helvetica", "sans-serif"],
     },
     fontSize: {
       xs: ["0.875rem", "1.5rem"],
