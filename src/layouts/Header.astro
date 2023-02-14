@@ -1,6 +1,7 @@
 ---
 import HeroBackgroundSrc from "../images/background.png";
 import Button from "@components/Button.astro";
+import DarkModeToggle from "@components/DarkModeToggle.svelte";
 
 import Logo from "../logos/multiqc_logo_darkbg.svg";
 import Icon from "astro-icon";
@@ -103,6 +104,7 @@ const navOpened = false;
       >
         Example reports
       </a>
+      <DarkModeToggle client:idle />
     </div>
     <div class="lg:hidden">
       <!-- setNavOpened(true) -->

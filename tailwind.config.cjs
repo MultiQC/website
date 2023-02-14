@@ -2,6 +2,7 @@
 /* eslint-disable no-multi-spaces, key-spacing */
 
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
     "node_modules/website-components/**/*.jsx",
