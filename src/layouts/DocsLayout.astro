@@ -7,10 +7,15 @@ export interface Props {
   image?: string;
   md_github_url?: string;
   subfooter?: string;
-  sidebar?: object;
+  pages: object[];
 }
 
-const { title, subtitle, image, md_github_url, subfooter, sidebar } = Astro.props;
+const { title, subtitle, image, md_github_url, subfooter, pages } = Astro.props;
+
+const docs_pages = pages.map((page: object) => ({
+  slug: page.file.split("/").pop().replace(".md", ""),
+  title: page.frontmatter.title,
+}));
 ---
 
 <PageLayout
@@ -21,14 +26,24 @@ const { title, subtitle, image, md_github_url, subfooter, sidebar } = Astro.prop
   subfooter={subfooter}
 >
   <div class="flex">
-    <aside class="sticky top-0 mr-5 hidden h-screen w-[19.5rem] pb-10 md:block">
-      // Fixed Sidebar
+    <aside
+      class="sticky top-5 mr-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 md:block"
+    >
+      {
+        docs_pages.map((page) => (
+          <a href={page.slug} class="mb-2 block font-medium text-gray-500 hover:text-gray-900">
+            {page.title}
+          </a>
+        ))
+      }
     </aside>
 
     <main>
       <slot />
     </main>
-    <aside class="sticky top-0 ml-5 hidden h-screen w-[19.5rem] py-10 xl:block">
+    <aside
+      class="sticky top-5 ml-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
+    >
       // Fixed Table of contents
     </aside>
   </div>

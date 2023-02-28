@@ -9,6 +9,7 @@ export async function getStaticPaths() {
     },
     props: {
       post: post,
+      posts: posts,
       frontmatter: post.frontmatter,
     },
   }));
@@ -17,8 +18,8 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<DocsLayout title={frontmatter.title} subtitle={frontmatter.description}>
-  <div class="prose max-w-none dark:prose-invert xl:prose-lg">
+<DocsLayout title={frontmatter.title} subtitle={frontmatter.description} pages={Astro.props.posts}>
+  <div class="prose max-w-none dark:prose-invert">
     <Content />
   </div>
 </DocsLayout>
