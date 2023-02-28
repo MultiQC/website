@@ -18,7 +18,7 @@ const { Content, frontmatter } = Astro.props.post;
 ---
 
 <DocsLayout title={frontmatter.title} subtitle={frontmatter.description}>
-  <div class="prose xl:prose-lg max-w-none dark:prose-invert">
+  <div class="prose max-w-none dark:prose-invert xl:prose-lg">
     <Content />
   </div>
 </DocsLayout>

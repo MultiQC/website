@@ -20,17 +20,16 @@ const { title, subtitle, image, md_github_url, subfooter, sidebar } = Astro.prop
   md_github_url={md_github_url}
   subfooter={subfooter}
 >
-<div class="flex">
-        <aside class="h-screen sticky top-0 hidden md:block  pb-10 mr-5 w-[19.5rem]">
-            // Fixed Sidebar
-        </aside>
+  <div class="flex">
+    <aside class="sticky top-0 mr-5 hidden h-screen w-[19.5rem] pb-10 md:block">
+      // Fixed Sidebar
+    </aside>
 
-            <main>
-                <slot />
-            </main>
-        <aside class="h-screen sticky top-0 hidden xl:block  py-10 ml-5 w-[19.5rem]">
-            // Fixed Table of contents
-        </aside>
-    </div>
-
+    <main>
+      <slot />
+    </main>
+    <aside class="sticky top-0 ml-5 hidden h-screen w-[19.5rem] py-10 xl:block">
+      // Fixed Table of contents
+    </aside>
+  </div>
 </PageLayout>

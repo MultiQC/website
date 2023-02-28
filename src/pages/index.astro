@@ -8,9 +8,7 @@ import { Icon } from "astro-icon";
 import HomepageVideos from "@components/HomepageVideos.svelte";
 import SnippetBox from "@components/SnippetBox.svelte";
 
-const latestRelease = await fetch(
-  "https://api.github.com/repos/ewels/MultiQC/releases/latest"
-)
+const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/releases/latest")
   .then((response) => response.json())
   .then((data) => {
     if (!data.tag_name) {
@@ -26,7 +24,7 @@ const latestRelease = await fetch(
     <div class="container-lg relative">
       <div class="row">
         <div class="col-full lg:col-8">
-          <div class="lg:flex flex-row items-end items-stretch">
+          <div class="flex-row items-end items-stretch lg:flex">
             <Icon name="multiqc_logo_light" class="w-full lg:w-[430px] mb-5" />
             <div class="grow text-right">
               {
@@ -46,22 +44,16 @@ const latestRelease = await fetch(
                   data-doi="10.1093/bioinformatics/btw354"
                   data-legend="never"
                   data-style="large_rectangle"></span>
-                <script
-                  async
-                  src="https://badge.dimensions.ai/badge.js"
-                  charset="utf-8"
-                ></script>
+                <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
               </div>
             </div>
           </div>
           <h1 class="typo-h4 mt-8">
-            Aggregate results from bioinformatics analyses across many samples
-            into a single report
+            Aggregate results from bioinformatics analyses across many samples into a single report
           </h1>
           <p class="typo-blockquote mt-4 lg:mt-8">
-            MultiQC searches a given directory for analysis logs and compiles a
-            HTML report. It's a general use tool, perfect for summarising the
-            output from numerous bioinformatics tools.
+            MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a
+            general use tool, perfect for summarising the output from numerous bioinformatics tools.
           </p>
           <div class="">
             <HomepageVideos
@@ -140,12 +132,7 @@ const latestRelease = await fetch(
             </Button>
           </div>
           <div class="mt-5">
-            <Button
-              to="/citation/"
-              variant="primary"
-              size="md"
-              classes="w-full"
-            >
+            <Button to="/citation/" variant="primary" size="md" classes="w-full">
               <Icon name="mdi:paperclip" class="mr-3 h-6 w-6" />
               Citation
             </Button>
@@ -162,9 +149,7 @@ const latestRelease = await fetch(
             </Button>
           </div>
           <div class="mt-5">
-            <div
-              class="overflow-hidden rounded-md border border-blue-600 bg-gray-800 shadow"
-            >
+            <div class="overflow-hidden rounded-md border border-blue-600 bg-gray-800 shadow">
               <div
                 class="flex items-center justify-center border-b border-blue-600 bg-blue-600 py-2"
               >
@@ -210,9 +195,8 @@ const latestRelease = await fetch(
       <div class="col-full">
         <h2 class="typo-h3 mb-4">Example reports</h2>
         <p class="typo-blockquote mb-4">
-          MultiQC collects numerical stats from each module at the top the
-          report, so that you can track how your data behaves as it proceeds
-          through your analysis.
+          MultiQC collects numerical stats from each module at the top the report, so that you can
+          track how your data behaves as it proceeds through your analysis.
         </p>
         <div class="mt-4 md:mt-8">
           <Button to="/example-reports/" variant="primary" size="md" arrow>
@@ -236,33 +220,31 @@ const latestRelease = await fetch(
       <div class="col-full md:col-6 mt-8 md:mt-16">
         <h3 class="typo-h4 mb-4">Visualise statistics from your pipeline</h3>
         <p class="typo-body">
-          MultiQC collects numerical stats from each module at the top the
-          report, so that you can track how your data behaves as it proceeds
-          through your analysis.
+          MultiQC collects numerical stats from each module at the top the report, so that you can
+          track how your data behaves as it proceeds through your analysis.
         </p>
       </div>
       <div class="col-full md:col-6 mt-8 md:mt-16">
         <h3 class="typo-h4 mb-4">Plot all of your samples together</h3>
         <p class="typo-body">
-          Visualizing your samples together allows detailed comparison, not
-          possible by scanning one report after another.
+          Visualizing your samples together allows detailed comparison, not possible by scanning one
+          report after another.
         </p>
       </div>
       <div class="col-full md:col-6 mt-8 md:mt-16">
         <h3 class="typo-h4 mb-4">Supports your favourite tools</h3>
         <p class="typo-body">
-          MultiQC comes supports many common bioinformatics tools out of the
-          box. If you're missing something, just create an issue on GitHub to
-          request it - if you have an example log file it's usually pretty fast.
+          MultiQC comes supports many common bioinformatics tools out of the box. If you're missing
+          something, just create an issue on GitHub to request it - if you have an example log file
+          it's usually pretty fast.
         </p>
       </div>
       <div class="col-full md:col-6 mt-8 md:mt-16">
         <h3 class="typo-h4 mb-4">Extensible and documented</h3>
         <p class="typo-body">
-          Want to use this to do something fancy? MultiQC is structured to allow
-          easy extension and customisation with plugin hooks, a submodule
-          framework and simple templating. Everything is well documented, with
-          step by step instructions for writing your new tool.
+          Want to use this to do something fancy? MultiQC is structured to allow easy extension and
+          customisation with plugin hooks, a submodule framework and simple templating. Everything
+          is well documented, with step by step instructions for writing your new tool.
         </p>
       </div>
     </div>
@@ -277,10 +259,7 @@ const latestRelease = await fetch(
       </div>
       <div class="col-full md:col-4 mt-8 md:mt-0">
         <h3 class="flex items-center justify-center">
-          <Icon
-            name="mdi:folder-search-outline"
-            class="mr-3 h-6 w-6 text-gray-500"
-          />
+          <Icon name="mdi:folder-search-outline" class="mr-3 h-6 w-6 text-gray-500" />
           <span class="typo-intro">Search any directory</span>
         </h3>
       </div>
@@ -298,10 +277,7 @@ const latestRelease = await fetch(
       </div>
       <div class="col-full md:col-4 mt-8">
         <h3 class="flex items-center justify-center">
-          <Icon
-            name="mdi:script-text-outline"
-            class="mr-3 h-6 w-6 text-gray-500"
-          />
+          <Icon name="mdi:script-text-outline" class="mr-3 h-6 w-6 text-gray-500" />
           <span class="typo-intro">Extensible & well documented</span>
         </h3>
       </div>
@@ -315,36 +291,27 @@ const latestRelease = await fetch(
           Python Package Index</a
         >
         or
-        <a
-          href="https://bioconda.github.io/recipes/multiqc/README.html"
-          class="text-blue-600"
-        >
+        <a href="https://bioconda.github.io/recipes/multiqc/README.html" class="text-blue-600">
           Bioconda</a
         >
       </h2>
       <p class="typo-blockquote mx-auto mb-3 max-w-5xl">
         To install MultiQC, simply run
-        <code
-          class="text-md rounded-sm bg-gray-200 px-2 tracking-tighter text-zinc-800"
-        >
+        <code class="text-md rounded-sm bg-gray-200 px-2 tracking-tighter text-zinc-800">
           pip install multiqc</code
         >
         on the command line.
       </p>
       <p class="typo-blockquote mx-auto mb-3 max-w-5xl">
         If you use conda, you can run
-        <code
-          class="text-md rounded-sm bg-gray-200 px-2 tracking-tighter text-zinc-800"
-        >
+        <code class="text-md rounded-sm bg-gray-200 px-2 tracking-tighter text-zinc-800">
           conda install multiqc</code
         >
         instead.
       </p>
       <p class="typo-blockquote mx-auto mb-3 max-w-5xl">
         See the
-        <a href="/docs/usage/installation" class="text-blue-600">
-          installation instructions</a
-        >
+        <a href="/docs/usage/installation" class="text-blue-600"> installation instructions</a>
         for more help.
       </p>
       <div class="mt-5 flex flex-col justify-center md:flex-row lg:mt-10">
@@ -355,11 +322,7 @@ const latestRelease = await fetch(
           </Button>
         </div>
         <div class="mt-4 md:mt-0 md:mr-4">
-          <Button
-            to="https://github.com/ewels/MultiQC/"
-            variant="secondary"
-            size="md"
-          >
+          <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
             <Icon name="mdi:github" class="mr-3 h-6 w-6" />
             View on GitHub
           </Button>

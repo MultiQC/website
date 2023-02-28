@@ -14,9 +14,7 @@ const navOpened = false;
 ---
 
 <header class="absolute inset-x-0 top-0 z-10">
-  <div
-    class="container-lg flex h-16 w-full flex-wrap items-center justify-between md:h-24"
-  >
+  <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between md:h-24">
     <a href="/" class="block uppercase">
       <img
         src={Logo}
@@ -31,8 +29,7 @@ const navOpened = false;
           "mx-2 mr-px rounded-sm bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide hover:text-white",
           {
             "text-gray-300": location.pathname !== "/",
-            "bg-opacity-30 text-white hover:bg-opacity-50":
-              location.pathname === "/",
+            "bg-opacity-30 text-white hover:bg-opacity-50": location.pathname === "/",
           },
         ]}
       >
@@ -44,8 +41,7 @@ const navOpened = false;
           "mx-2 mr-px rounded-sm bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide hover:text-white",
           {
             "text-gray-300": !location.pathname.includes("/modules/"),
-            "bg-opacity-30 text-white hover:bg-opacity-50":
-              location.pathname.includes("modules/"),
+            "bg-opacity-30 text-white hover:bg-opacity-50": location.pathname.includes("modules/"),
           },
         ]}
       >
@@ -57,8 +53,7 @@ const navOpened = false;
           "mx-2 mr-px rounded-sm bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide hover:text-white",
           {
             "text-gray-300": !location.pathname.includes("/docs/"),
-            "bg-opacity-30 text-white hover:bg-opacity-50":
-              location.pathname.includes("/docs/"),
+            "bg-opacity-30 text-white hover:bg-opacity-50": location.pathname.includes("/docs/"),
           },
         ]}
       >
@@ -70,8 +65,7 @@ const navOpened = false;
           "mx-2 mr-px rounded-sm bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide hover:text-white",
           {
             "text-gray-300": !location.pathname.includes("/plugins/"),
-            "bg-opacity-30 text-white hover:bg-opacity-50":
-              location.pathname.includes("/plugins/"),
+            "bg-opacity-30 text-white hover:bg-opacity-50": location.pathname.includes("/plugins/"),
           },
         ]}
       >
@@ -84,8 +78,7 @@ const navOpened = false;
           "mx-2 mr-px rounded-sm bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide hover:text-white",
           {
             "text-gray-300": !location.pathname.includes("/logos/"),
-            "bg-opacity-30 text-white hover:bg-opacity-50":
-              location.pathname.includes("/logos/"),
+            "bg-opacity-30 text-white hover:bg-opacity-50": location.pathname.includes("/logos/"),
           },
         ]}
       >
@@ -148,8 +141,7 @@ const navOpened = false;
         class:list={[
           "mt-4 rounded-sm bg-black bg-opacity-0 py-3",
           {
-            "bg-opacity-30 hover:bg-opacity-50":
-              location.pathname.includes("/docs/"),
+            "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/docs/"),
           },
         ]}
       >
@@ -159,34 +151,27 @@ const navOpened = false;
         class:list={[
           "mt-4 rounded-sm bg-black bg-opacity-0 py-3",
           {
-            "bg-opacity-30 hover:bg-opacity-50":
-              location.pathname.includes("/plugins/"),
+            "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/plugins/"),
           },
         ]}
       >
-        <Button to={"/plugins/"} noShadow={true} class="typo-intro">
-          Plugins
-        </Button>
+        <Button to={"/plugins/"} noShadow={true} class="typo-intro">Plugins</Button>
       </div>
       <div
         class:list={[
           "mt-4 rounded-sm bg-black bg-opacity-0 py-3",
           {
-            "bg-opacity-30 hover:bg-opacity-50":
-              location.pathname.includes("/modules/"),
+            "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/modules/"),
           },
         ]}
       >
-        <Button to={"/modules/"} noShadow={true} class="typo-intro">
-          Modules
-        </Button>
+        <Button to={"/modules/"} noShadow={true} class="typo-intro">Modules</Button>
       </div>
       <div
         class:list={[
           "mt-4 rounded-sm bg-black bg-opacity-0 py-3",
           {
-            "bg-opacity-30 hover:bg-opacity-50":
-              location.pathname.includes("/logos/"),
+            "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/logos/"),
           },
         ]}
       >
@@ -196,14 +181,11 @@ const navOpened = false;
         class:list={[
           "mt-4 rounded-sm bg-black bg-opacity-0 py-3",
           {
-            "bg-opacity-30 hover:bg-opacity-50":
-              location.pathname.includes("/example-reports/"),
+            "bg-opacity-30 hover:bg-opacity-50": location.pathname.includes("/example-reports/"),
           },
         ]}
       >
-        <Button to={"/example-reports/"} noShadow={true} class="typo-intro">
-          Example reports
-        </Button>
+        <Button to={"/example-reports/"} noShadow={true} class="typo-intro">Example reports</Button>
       </div>
     </div>
   </div>
