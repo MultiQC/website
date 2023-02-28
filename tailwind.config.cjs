@@ -3,10 +3,7 @@
 
 module.exports = {
   darkMode: "class",
-  content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
-    "node_modules/website-components/**/*.jsx",
-  ],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "node_modules/website-components/**/*.jsx"],
   theme: {
     fontFamily: {
       display: ["SF UI Display", "Helvetica", "sans-serif"],
@@ -157,12 +154,40 @@ module.exports = {
         xl: "0 2px 21px 11px rgba(0,0,0,0.05)",
       },
       typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            // Some colour to inline code
+            code: {
+              color: theme("colors.sky.900"),
+              backgroundColor: theme("colors.sky.100"),
+              borderRadius: theme("borderRadius.sm"),
+              padding: "0.15rem 0.3rem",
+              margin: "0 0.1rem",
+            },
+
+            // No backticks for inline code
+            "code::before": {
+              content: '""',
+            },
+            "code::after": {
+              content: '""',
+            },
+          },
+        },
         invert: {
           css: {
             // don't make text pure white
             "--tw-prose-headings": theme("colors.white"),
             "--tw-prose-color": theme("colors.white"),
             "--tw-prose-links": theme("colors.white"),
+
+            // No backticks for inline code
+            "code::before": {
+              content: '""',
+            },
+            "code::after": {
+              content: '""',
+            },
           },
         },
       }),
