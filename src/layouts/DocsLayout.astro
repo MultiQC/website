@@ -1,5 +1,6 @@
 ---
-import PageLayout from "@layouts/PageLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Hero from "@layouts/Hero.astro";
 
 export interface Props {
   title?: string;
@@ -18,33 +19,42 @@ const docs_pages = pages.map((page: object) => ({
 }));
 ---
 
-<PageLayout
+<BaseLayout
   title={title}
   subtitle={subtitle}
   image={image}
   md_github_url={md_github_url}
   subfooter={subfooter}
 >
-  <div class="flex">
-    <aside
-      class="sticky top-5 mr-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 md:block"
-    >
-      {
-        docs_pages.map((page) => (
-          <a href={page.slug} class="mb-2 block font-medium text-gray-500 hover:text-gray-900">
-            {page.title}
-          </a>
-        ))
-      }
-    </aside>
+  <Hero>
+    <div class="container-lg relative">
+      <h1 class="typo-h2">{title}</h1>
+      <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
+    </div>
+  </Hero>
+  <div class="px-10 py-20">
+    <div class="flex">
+      <aside
+        class="sticky top-28 mr-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
+      >
+        {
+          docs_pages.map((page) => (
+            <a href={page.slug} class="mb-2 block font-medium text-gray-500 hover:text-gray-900">
+              {page.title}
+            </a>
+          ))
+        }
+      </aside>
 
-    <main>
-      <slot />
-    </main>
-    <aside
-      class="sticky top-5 ml-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
-    >
-      // Fixed Table of contents
-    </aside>
+      <!-- TODO: HACK! w-11/12 because otherwise the code blocks make it go super wide -->
+      <main class="w-11/12 lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-39rem)]">
+        <slot />
+      </main>
+      <aside
+        class="sticky top-28 ml-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
+      >
+        // Fixed Table of contents
+      </aside>
+    </div>
   </div>
-</PageLayout>
+</BaseLayout>
