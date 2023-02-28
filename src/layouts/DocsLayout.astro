@@ -1,0 +1,36 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  image?: string;
+  md_github_url?: string;
+  subfooter?: string;
+  sidebar?: object;
+}
+
+const { title, subtitle, image, md_github_url, subfooter, sidebar } = Astro.props;
+---
+
+<PageLayout
+  title={title}
+  subtitle={subtitle}
+  image={image}
+  md_github_url={md_github_url}
+  subfooter={subfooter}
+>
+<div class="flex">
+        <aside class="h-screen sticky top-0 hidden md:block  pb-10 mr-5 w-[19.5rem]">
+            // Fixed Sidebar
+        </aside>
+
+            <main>
+                <slot />
+            </main>
+        <aside class="h-screen sticky top-0 hidden xl:block  py-10 ml-5 w-[19.5rem]">
+            // Fixed Table of contents
+        </aside>
+    </div>
+
+</PageLayout>

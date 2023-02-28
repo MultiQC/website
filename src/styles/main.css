@@ -5,7 +5,10 @@
 @layer base {
   html,
   body {
+    /*
+    // Breaks tailwind .sticky elements
     @apply overflow-x-hidden;
+    */
   }
 
   table td {

@@ -1,5 +1,5 @@
 ---
-import PageLayout from "@layouts/PageLayout.astro";
+import DocsLayout from "@layouts/DocsLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
@@ -17,8 +17,8 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<PageLayout title={frontmatter.title} subtitle={frontmatter.description}>
+<DocsLayout title={frontmatter.title} subtitle={frontmatter.description}>
   <div class="prose xl:prose-lg max-w-none dark:prose-invert">
     <Content />
   </div>
-</PageLayout>
+</DocsLayout>
