@@ -156,8 +156,21 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
+            // Match style to main site
+            "h1, h2, h3, h4, h5, h6, p, code, pre, ul": {
+              "-webkit-font-smoothing": "antialiased",
+              "-moz-osx-font-smoothing": "grayscale",
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              fontWeight: "600",
+            },
+            "p, ul": {
+              // fontSize: "1.125rem",
+              // lineHeight: "2rem",
+              color: theme("colors.gray.700"),
+            },
             // Some colour to inline code
-            code: {
+            ":not(pre) > code": {
               color: theme("colors.sky.900"),
               backgroundColor: theme("colors.sky.100"),
               borderRadius: theme("borderRadius.sm"),
@@ -176,10 +189,14 @@ module.exports = {
         },
         invert: {
           css: {
-            // don't make text pure white
-            "--tw-prose-headings": theme("colors.white"),
-            "--tw-prose-color": theme("colors.white"),
-            "--tw-prose-links": theme("colors.white"),
+            // Custom colours as above, but for dark mode
+            "p, ul": {
+              color: theme("colors.gray.300"),
+            },
+            ":not(pre) > code": {
+              color: theme("colors.sky.200"),
+              backgroundColor: theme("colors.sky.900 / 25%"),
+            },
 
             // No backticks for inline code
             "code::before": {
