@@ -1,6 +1,7 @@
 <script lang="ts">
     import { currentHeading } from '@components/store.js';
     import Icon from '@iconify/svelte';
+    import Button from "@components/Button.svelte";
 
     export let headings: {
         text: string;
@@ -17,36 +18,28 @@
     }
 </script>
 
-<div class="">
-    <div class="">
-        <strong class="">On this page</strong>
-        <nav class="">
-            <ul class="">
+    <nav class=" text-gray-600">
+            <h5 class="font-semibold mb-2">On this page</h5>
+            <ul>
                 {#each headings as heading (heading)}
                     <li
-                        class={' ' + headingMargin[heading.depth]}
+                        class={'toc ' + headingMargin[heading.depth]}
                         class:active={heading.slug === $currentHeading}
                     >
-                        <a class="" href={'#' + heading.slug}>
+                        <a class="text-xs block py-1 px-2 border-gray-200 hover:!bg-blue-200 hover:!border-blue-600 border-l-4" href={'#' + heading.slug}>
                             {@html heading.text}
                         </a>
                     </li>
                 {/each}
             </ul>
-            <div class="">
-                <a
-                    href="#/"
-                    class=""
-                    on:click={() => window.scrollTo(0, 0)}
-                >
-                    <Icon icon="mdi:arrow-collapse-up" /> Back to top
-                </a>
+            <Button to={"#"} variant="accent" size="xs" classes="my-3">
 
-                <slot />
-            </div>
+                    <Icon icon="mdi:arrow-collapse-up" class="inline-block mr-2" /> Back to top
+
+            </Button>
+            <slot />
         </nav>
-    </div>
-</div>
 
 <style lang="scss">
+
 </style>

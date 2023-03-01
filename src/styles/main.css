@@ -153,6 +153,11 @@
   .btn-accent-alt {
   }
 
+  .toc.active a,
+  .toc.active a:hover {
+    @apply border-blue-600 bg-blue-100;
+  }
+
   .typed {
     background: linear-gradient(180deg, #ee8899 0%, #ac77e7 100%);
     -webkit-background-clip: text;

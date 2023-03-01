@@ -38,7 +38,7 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
   <div class="px-10 py-20">
     <div class="flex">
       <nav
-        class="sticky top-28 mr-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
+        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
       >
         {
           docs_pages.map((page) => (
@@ -57,7 +57,7 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
         <slot />
       </main>
       <nav
-        class="sticky top-28 ml-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
+        class="sticky top-28 ml-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
       >
         <SidebarToc headings={headings} client:visible />
       </nav>
