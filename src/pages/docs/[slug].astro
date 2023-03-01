@@ -9,7 +9,10 @@ export async function getStaticPaths() {
     },
     props: {
       post: post,
-      posts: posts,
+      docs_pages: posts.map((page: object) => ({
+        slug: page.file.split("/").pop().replace(".md", ""),
+        title: page.frontmatter.title,
+      })),
       frontmatter: post.frontmatter,
     },
   }));
@@ -18,7 +21,11 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<DocsLayout title={frontmatter.title} subtitle={frontmatter.description} pages={Astro.props.posts}>
+<DocsLayout
+  title={frontmatter.title}
+  subtitle={frontmatter.description}
+  docs_pages={Astro.props.docs_pages}
+>
   <div class="prose max-w-none dark:prose-invert">
     <Content />
   </div>
