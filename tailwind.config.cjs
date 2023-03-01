@@ -172,6 +172,12 @@ module.exports = {
               // lineHeight: "2rem",
               color: theme("colors.gray.700"),
             },
+            a: {
+              wordWrap: "break-word", // long links break layout on small screens
+            },
+            "a.btn-primary, a.btn-secondary": {
+              textDecoration: "none",
+            },
             // Some colour to inline code
             ":not(pre) > code": {
               color: theme("colors.sky.900"),

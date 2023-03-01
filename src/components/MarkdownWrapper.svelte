@@ -28,9 +28,3 @@
 <div class="markdown-content">
     <slot />
 </div>
-
-<style lang="scss">
-    .markdown-content :global(a) {
-        word-wrap: break-word; // long links break layout on small screens
-    }
-</style>
