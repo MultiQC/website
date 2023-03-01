@@ -1,7 +1,7 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 
-import Button from "@components/Button.astro";
+import Button from "@components/Button.svelte";
 ---
 
 <PageLayout
@@ -18,7 +18,8 @@ import Button from "@components/Button.astro";
       variant="primary"
       size="sm"
       classes="ml-3"
-      arrow
+      arrow={true}
+      client:visible
     >
       Open an issue on GitHub
     </Button>

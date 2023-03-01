@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import Button from "@components/Button.astro";
+import Button from "@components/Button.svelte";
 ---
 
 <PageLayout
@@ -37,7 +37,8 @@ import Button from "@components/Button.astro";
           to="http://dx.doi.org/10.1093/bioinformatics/btw354"
           variant="primary"
           size="md"
-          arrow
+          arrow={true}
+          client:visible
         >
           View the publication
         </Button>

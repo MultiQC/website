@@ -7,7 +7,6 @@
   }
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    console.log(newTheme);
     if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {

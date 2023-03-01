@@ -28,7 +28,6 @@
           ? "text-gray-200 hover:bg-gray-900 hover:text-gray-100"
           : "bg-blue-600 text-gray-100")}
       on:click={() => {
-        console.log(active);
         active = index;
       }}
     >
