@@ -1,17 +1,25 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
-
+import MarkdownWrapper from "@components/MarkdownWrapper.svelte";
+import SidebarToc from "@components/SidebarToc.svelte";
 export interface Props {
   title?: string;
   subtitle?: string;
   image?: string;
   md_github_url?: string;
   subfooter?: string;
-  docs_pages: object[];
+  docs_pages: {
+    title: string;
+    slug: string;
+  }[];
+  headings?: {
+    depth: number;
+    text: string;
+    slug: string;
+  }[];
 }
-
-const { title, subtitle, image, md_github_url, subfooter, docs_pages } = Astro.props;
+const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings } = Astro.props;
 ---
 
 <BaseLayout
@@ -43,12 +51,15 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages } = Astro.p
 
       <!-- TODO: HACK! w-11/12 because otherwise the code blocks make it go super wide -->
       <main class="w-11/12 lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-39rem)]">
+        <MarkdownWrapper headings={headings} client:load>
+          <slot />
+        </MarkdownWrapper>
         <slot />
       </main>
       <nav
         class="sticky top-28 ml-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
       >
-        // Fixed Table of contents
+        <SidebarToc headings={headings} client:visible />
       </nav>
     </div>
   </div>

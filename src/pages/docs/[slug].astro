@@ -19,12 +19,14 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post;
+const headings = Astro.props.post.getHeadings();
 ---
 
 <DocsLayout
   title={frontmatter.title}
   subtitle={frontmatter.description}
   docs_pages={Astro.props.docs_pages}
+  headings={headings}
 >
   <div class="prose max-w-none dark:prose-invert">
     <Content />
