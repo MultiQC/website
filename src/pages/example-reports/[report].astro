@@ -1,0 +1,42 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import Button from "@components/Button.svelte";
+import ExamplesBrowser from "@components/ExamplesBrowser.svelte";
+
+// 1. Generate a new path for every collection report
+export async function getStaticPaths() {
+  const reports = await getCollection("example-reports");
+  return reports.map((report) => ({
+    params: { report: report.slug },
+    props: { report },
+  }));
+}
+const { report } = Astro.props;
+const { Content } = await report.render();
+---
+
+<PageLayout title={report.data.title} subtitle={report.data.description}>
+  <div class="prose max-w-none dark:prose-invert">
+    <Content />
+    <p class="my-6 text-center">
+      <Button to={report.data.embed} variant="secondary" size="sm" classes="mr-2">
+        Open report in new tab
+      </Button>
+      <Button to={report.data.zip} variant="secondary" size="sm" classes="mr-2">
+        Download full report output
+      </Button>
+      <Button to={report.data.data} variant="secondary" size="sm" classes="mr-2">
+        Download input data
+      </Button>
+    </p>
+    <div class="mt-8">
+      <ExamplesBrowser items={[report]} />
+    </div>
+    <div class="container-lg py-10 text-center md:py-20">
+      <Button to="/example-reports/" variant="secondary" size="md" arrow={true} client:visible>
+        See all example reports
+      </Button>
+    </div>
+  </div>
+</PageLayout>

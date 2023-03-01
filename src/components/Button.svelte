@@ -36,7 +36,7 @@ const buttonClassName =
     arrow && size === "sm" ? "hover:pr-10": "",
     arrow && size === "md" ? "hover:pr-14": "",
     !noShadow ? "shadow":"",
-    relative ? arrow : "",
+    arrow ? "relative" : "",
 ].join(" ");
 
 const iconClassNames = 
@@ -44,17 +44,14 @@ const iconClassNames =
   [
     size === "sm" ? "h-4 w-4 -mt-2":"",
     size === "md" ? "h-6 w-6 -mt-3":"",
-].join(" ")
-;
-
-console.log(iconClassNames)
+].join(" ");
 </script>
 
 {#if submit}
     <button type="submit" class={buttonClassName} >
       <slot />
       {#if arrow}
-        <Icon name="mdi:arrow-right" class={iconClassNames} />
+        <Icon icon="mdi:arrow-right" class={iconClassNames} />
       {/if}
     </button>
  {:else if to}
@@ -62,14 +59,14 @@ console.log(iconClassNames)
     <a href={to} class={buttonClassName}>
       <slot />
             {#if arrow}
-        <Icon name="mdi:arrow-right" class={iconClassNames} />
+        <Icon icon="mdi:arrow-right" class={iconClassNames}/>
       {/if}
     </a>
 {:else}
     <button type="button" on:click={()=>{onClick}} class={buttonClassName}>
       <slot />
        {#if arrow}
-        <Icon name="mdi:arrow-right" class={iconClassNames} />
+        <Icon icon="mdi:arrow-right" class={iconClassNames} />
       {/if}
     </button>
 {/if}

@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
-
+import ExamplesBrowser from "@components/ExamplesBrowser.svelte";
+import { getCollection } from "astro:content";
 import Button from "@components/Button.svelte";
 
 import { Icon } from "astro-icon";
@@ -17,6 +18,8 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
     }
     return data.tag_name;
   });
+
+const exampleReports = await getCollection("example-reports");
 ---
 
 <BaseLayout title="MultiQC" subtitle="Homepage">
@@ -199,11 +202,12 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
           track how your data behaves as it proceeds through your analysis.
         </p>
         <div class="mt-4 md:mt-8">
-          <Button to="/example-reports/" variant="primary" size="md" arrow>
+          <Button to="/example-reports/" variant="primary" size="md" arrow={true} client:visible>
             See all example reports
           </Button>
         </div>
         <div class="mt-8 hidden md:block">
+          <ExamplesBrowser items={exampleReports} hasDetails client:visible />
           {/* <ExamplesBrowser items={exampleReports} hasDetails /> */}
         </div>
       </div>
