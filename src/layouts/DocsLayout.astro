@@ -35,7 +35,7 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
       <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
     </div>
   </Hero>
-  <div class="px-10 py-20">
+  <div class="container-xl px-10 py-20">
     <div class="flex">
       <nav
         class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
@@ -50,14 +50,14 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
       </nav>
 
       <!-- TODO: HACK! w-11/12 because otherwise the code blocks make it go super wide -->
-      <main class="w-11/12 lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-39rem)]">
+      <main class="w-11/12 lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-36.5rem)]">
         <MarkdownWrapper headings={headings} client:load>
           <slot />
         </MarkdownWrapper>
         <slot />
       </main>
       <nav
-        class="sticky top-28 ml-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
+        class="sticky top-28 ml-5 hidden h-[calc(100vh-7rem)] w-[17rem] flex-none overflow-y-auto pb-10 xl:block"
       >
         <SidebarToc headings={headings} client:visible />
       </nav>
