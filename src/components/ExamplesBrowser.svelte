@@ -23,7 +23,7 @@
             <img
               src={MultiQCIconSrc}
               alt="MultiQC Logo"
-              class="mr-2 h-6 w-6"
+              class="mr-2 h-6 w-6 my-0"
             />
             <span class="typo-small -mt-0.5">
               Example Report: {items[0].data.title}
