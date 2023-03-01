@@ -9,7 +9,7 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"prettier": "prettier .",
-		"format": "prettier --write ."
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^0.16.0",
