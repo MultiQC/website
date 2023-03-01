@@ -29,7 +29,7 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages } = Astro.p
   </Hero>
   <div class="px-10 py-20">
     <div class="flex">
-      <aside
+      <nav
         class="sticky top-28 mr-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
       >
         {
@@ -39,17 +39,17 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages } = Astro.p
             </a>
           ))
         }
-      </aside>
+      </nav>
 
       <!-- TODO: HACK! w-11/12 because otherwise the code blocks make it go super wide -->
       <main class="w-11/12 lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-39rem)]">
         <slot />
       </main>
-      <aside
+      <nav
         class="sticky top-28 ml-5 hidden h-screen w-[19.5rem] flex-none overflow-y-auto pb-10 xl:block"
       >
         // Fixed Table of contents
-      </aside>
+      </nav>
     </div>
   </div>
 </BaseLayout>
