@@ -19,6 +19,9 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post;
+const gh_url =
+  "https://github.com/ewels/MultiQC/blob/master/docs/core/" +
+  Astro.props.post.file.split("/").pop();
 const headings = Astro.props.post.getHeadings();
 ---
 
@@ -27,6 +30,8 @@ const headings = Astro.props.post.getHeadings();
   subtitle={frontmatter.description}
   docs_pages={Astro.props.docs_pages}
   headings={headings}
+  md_github_url={gh_url}
+  subfooter={true}
 >
   <div class="prose max-w-none dark:prose-invert">
     <Content />
