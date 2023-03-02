@@ -1,0 +1,36 @@
+---
+import NavbarMenu from "@components/NavbarMenu.astro";
+import NavbarMenuMobile from "@components/NavbarMenuMobile.svelte";
+
+import HeroBackgroundSrc from "../images/background.png";
+
+const location = Astro.url;
+
+export interface Props {
+  headings?: {
+    text: string;
+    slug: string;
+    depth: number;
+  }[];
+  navbarItems: {
+    text: string;
+    slug: string;
+  }[];
+}
+
+const navPages = [
+  { slug: "/", text: "Home" },
+  { slug: "/modules/", text: "Tools" },
+  { slug: "/docs/", text: "Docs" },
+  { slug: "/plugins/", text: "Plugins" },
+  { slug: "/logos/", text: "Logo" },
+  { slug: "/example-reports/", text: "Example reports" },
+];
+
+const { headings = [], navbarItems = navPages } = Astro.props;
+---
+
+<header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
+  <NavbarMenu navbarItems={navbarItems} />
+  <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load />
+</header>
