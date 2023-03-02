@@ -1,0 +1,58 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
+console.log(modules);
+---
+
+<PageLayout
+  title={"Supported Tools"}
+  subtitle={`MultiQC currently has modules to support ${modules.length} different bioinformatics tools, listed below.`}
+>
+  <div class="container-lg py-20">
+    <div class="flex items-center">
+      <!-- <DocsIcon class="mr-3 h-6 w-6 text-gray-500" /> -->
+      <p class="typo-blockquote">
+        Click the tool name to go to the MultiQC documentation for that tool.
+      </p>
+    </div>
+    <p class="mt-2">
+      Missing something? If you would like another to be added, please{" "}
+      <a
+        href="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml"
+      >
+        open an issue
+      </a>
+      .
+    </p>
+    <table class="mt-8">
+      <thead>
+        <tr>
+          <td class="w-1/4">
+            <span class="typo-intro">Tool Name</span>
+          </td>
+          <td>
+            <span class="typo-intro">Description</span>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          modules &&
+            modules.map((module) => (
+              <tr>
+                <td>
+                  <a href={module.path} class="typo-body text-blue-600">
+                    {module.title}
+                  </a>
+                </td>
+                <td>
+                  <p class="typo-body">{module.description}</p>
+                </td>
+              </tr>
+            ))
+        }
+      </tbody>
+    </table>
+  </div>
+</PageLayout>

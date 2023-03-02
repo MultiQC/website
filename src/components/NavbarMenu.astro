@@ -14,11 +14,22 @@ export interface Props {
 const { navbarItems } = Astro.props;
 ---
 
+<script>
+  const logos = document.getElementsByClassName("logo");
+  if (matchMedia("(pointer:fine)").matches) {
+    for (const logo of logos) {
+      logo.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        window.location.href = "/logos";
+      });
+    }
+  }
+</script>
 <div class="container-lg hidden h-24 w-full flex-wrap items-center justify-between lg:flex">
   <a href="/" class="block">
     <img
       src={Logo}
-      class:list={["h-8 lg:h-10", { hidden: location.pathname === "/" }]}
+      class:list={["logo h-8 lg:h-10", { hidden: location.pathname === "/" }]}
       alt="MultiQC logo"
     />
   </a>
