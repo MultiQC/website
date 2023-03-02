@@ -3,52 +3,26 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
 import { getCollection } from "astro:content";
 const reports = await getCollection("example-reports");
-
-const analysisReports = reports.filter((report) => report.data.type === "Analysis Types");
-const customReports = reports.filter((report) => report.data.type === "MultiQC Customisation");
 ---
 
 <PageLayout title="Example reports" subtitle="See examples of typical MultiQC outputs.">
-  <div class="container-lg py-20">
-    <h2 class="typo-h3">Analysis Types</h2>
-    <div class="row">
-      {
-        analysisReports.map((report) => (
-          <div class="col-full md:col-6 mt-8">
-            <div class="flex h-full flex-col rounded-md border border-zinc-200 bg-zinc-100 py-6 px-4 text-zinc-800 shadow-xl dark:border-zinc-600 dark:bg-zinc-700 dark:text-zinc-100 sm:py-8 sm:px-8">
-              <h3 class="typo-h4 mb-4">
-                <a href={report.slug}>{report.data.title}</a>
-              </h3>
-              <p class="typo-body mb-4 flex-1">{report.data.description}</p>
-              <div>
-                <Button to={report.slug} variant="primary" size="sm" arrow={true} client:visible>
-                  See report details
-                </Button>
-              </div>
+  <div class="row">
+    {
+      reports.map((report) => (
+        <div class="col-full md:col-6 mt-8">
+          <div class="flex h-full flex-col rounded-md border border-zinc-200 bg-zinc-100 py-6 px-4 text-zinc-800 shadow-xl dark:border-zinc-600 dark:bg-zinc-700 dark:text-zinc-100 sm:py-8 sm:px-8">
+            <h3 class="typo-h4 mb-4">
+              <a href={report.slug}>{report.data.title}</a>
+            </h3>
+            <p class="typo-body mb-4 flex-1">{report.data.description}</p>
+            <div>
+              <Button to={report.slug} variant="primary" size="sm" arrow={true} client:visible>
+                See report details
+              </Button>
             </div>
           </div>
-        ))
-      }
-    </div>
-    <h2 class="typo-h3 mt-20">MultiQC Customisation</h2>
-    <div class="row">
-      {
-        customReports.map((report) => (
-          <div class="col-full md:col-6 mt-8 h-full">
-            <div class="flex h-full flex-col rounded-md border border-zinc-200 bg-zinc-100 py-6 px-4 text-zinc-800 shadow-xl dark:border-zinc-600 dark:bg-zinc-700 dark:text-zinc-100 sm:py-8 sm:px-8">
-              <h3 class="typo-h4 mb-4">
-                <a href={report.slug}>{report.data.title}</a>
-              </h3>
-              <p class="typo-body mb-4 flex-1">{report.data.description}</p>
-              <div>
-                <Button to={report.slug} variant="primary" size="sm" arrow={true} client:visible>
-                  See report details
-                </Button>
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </div>
+        </div>
+      ))
+    }
   </div>
 </PageLayout>
