@@ -33,13 +33,13 @@
     />
   </div>
   <div class="col-full lg:col-6">
-    <div class="overflow-hidden rounded-sm flex inline-flex">
+    <div class="flex inline-flex overflow-hidden rounded-sm">
       {#each languages as language}
         <button
           on:click={() => {
             lang = language;
           }}
-          class={"block border border-gray-800 bg-gray-700 text-left text-white hover:bg-gray-600 border-r-0 first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r typo-small text-red px-2 py-0.5 text-xs " +
+          class={"typo-small text-red block border border-r-0 border-gray-800 bg-gray-700 px-2 py-0.5 text-left text-xs text-white first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r hover:bg-gray-600 " +
             (lang === language ? " bg-neutral-600" : "")}
         >
           {languageBtnTexts[language]}
@@ -47,13 +47,13 @@
       {/each}
     </div>
     <div class="mt-3">
-      <div class="overflow-hidden rounded-sm flex flex-col">
+      <div class="flex flex-col overflow-hidden rounded-sm">
         {#each filteredVideos as video, idx (idx)}
           <button
             on:click={() => {
               currentIndex = idx;
             }}
-            class={"block border border-gray-800 bg-gray-700 text-left text-white hover:bg-gray-600 border-b-0 first:mt-0 first:rounded-t-sm last:mb-0 last:rounded-b-sm last:border-b typo-small px-4 py-2 " +
+            class={"typo-small block border border-b-0 border-gray-800 bg-gray-700 px-4 py-2 text-left text-white first:mt-0 first:rounded-t-sm last:mb-0 last:rounded-b-sm last:border-b hover:bg-gray-600 " +
               (currentIndex === idx ? " bg-neutral-600" : "")}
           >
             {video.title}

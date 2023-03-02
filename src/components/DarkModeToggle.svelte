@@ -19,8 +19,8 @@
 
 <button on:click={() => toggleTheme()}>
   {#if theme === "light"}
-    <Icon icon="ph:moon-bold" class="w-6 h-6 text-gray-300" />
+    <Icon icon="ph:moon-bold" class="h-6 w-6 text-gray-300" />
   {:else}
-    <Icon icon="ph:sun-bold" class="w-6 h-6 text-gray-300" />
+    <Icon icon="ph:sun-bold" class="h-6 w-6 text-gray-300" />
   {/if}
 </button>
