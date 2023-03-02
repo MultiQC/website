@@ -2,11 +2,22 @@
 import HeroBackgroundSrc from "../images/background.png";
 import Button from "@components/Button.svelte";
 import DarkModeToggle from "@components/DarkModeToggle.svelte";
-
-import Logo from "../logos/multiqc_logo_darkbg.svg";
+import NavbarToc from "@components/NavbarToc.svelte";
+import Logo from "/logos/multiqc_logo_darkbg.svg";
+import SmallLogo from "/logos/multiqc_logo_circle.svg";
 import Icon from "astro-icon";
 
 const location = Astro.url;
+
+export interface Props {
+  headings?: {
+    text: string;
+    slug: string;
+    depth: number;
+  }[];
+}
+
+const { headings = [] } = Astro.props;
 
 const navOpened = false;
 
@@ -18,10 +29,18 @@ const navOpened = false;
     <a href="/" class="block uppercase">
       <img
         src={Logo}
-        class:list={["h-8 lg:h-10", { hidden: location.pathname === "/" }]}
+        class:list={["h-8 lg:h-10 hidden lg:inline", { hidden: location.pathname === "/" }]}
+        alt="MultiQC logo"
+      />
+      <img
+        src={SmallLogo}
+        class:list={["h-8 lg:h-10 lg:hidden", { hidden: location.pathname === "/" }]}
         alt="MultiQC logo"
       />
     </a>
+    <div class="lg:hidden">
+      <NavbarToc headings={headings} />
+    </div>
     <div class="hidden items-center lg:flex">
       <a
         href="/"

@@ -10,6 +10,7 @@ export interface Props {
   image?: string;
   md_github_url?: string;
   subfooter?: string;
+  headings?: string[];
 }
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
@@ -19,6 +20,7 @@ const {
   image = "",
   md_github_url,
   subfooter = false,
+  headings = [],
 } = Astro.props;
 ---
 
@@ -28,7 +30,7 @@ const {
     <BaseHead title={title} description={subtitle} image={image} />
   </head>
   <body class="bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
-    <Header />
+    <Header headings={headings} />
     <main class="min-h-screen">
       <slot />
     </main>
