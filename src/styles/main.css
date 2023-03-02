@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  /*
+  // Removed, as it breaks tailwind .sticky elements
+  // Consider adding back to main content container
   html,
   body {
-    /*
-    // Breaks tailwind .sticky elements
     @apply overflow-x-hidden;
-    */
   }
+  */
 
   table td {
     border: 1px solid theme(colors.gray.200);
@@ -18,6 +19,15 @@
 
   table thead td {
     @apply bg-gray-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: theme(spacing.28);
   }
 }
 
