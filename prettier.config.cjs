@@ -3,6 +3,7 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   printWidth: 100,
+  organizeImportsSkipDestructiveCodeActions: true,
 
   // pnpm support, for VSCode?
   plugins: [

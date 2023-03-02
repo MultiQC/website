@@ -1,7 +1,7 @@
 <script lang="ts">
+  import Button from "@components/Button.svelte";
   import { currentHeading } from "@components/store";
   import Icon from "@iconify/svelte";
-  import Button from "@components/Button.svelte";
 
   export let headings: {
     text: string;
@@ -18,7 +18,7 @@
   }
 </script>
 
-<nav class=" text-gray-600 dark:text-gray-500">
+<nav class="text-gray-600 dark:text-gray-500">
   <h5 class="mb-2 font-semibold">On this page</h5>
   <ul>
     {#each headings as heading (heading)}

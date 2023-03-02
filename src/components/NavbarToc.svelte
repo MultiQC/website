@@ -1,34 +1,46 @@
 <script lang="ts">
   import { currentHeading } from "@components/store";
+  import Icon from "@iconify/svelte";
+
   export let headings: {
     text: string;
     slug: string;
     depth: number;
   }[];
+
+  let visible = false;
+  function toggleVisible() {
+    visible = !visible;
+  }
 </script>
 
-<div class="">
-  <div class="dropdown">
-    <button
-      class="mx-2 mr-px rounded-sm border bg-black bg-opacity-0 py-1 px-4 font-body font-light tracking-wide text-gray-300 hover:text-white"
-      type="button"
-      id="dropdownMenuButton"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      <i class="fa-solid fa-list" aria-hidden="true" /> On this page
-    </button>
-    <ul class="hidden" aria-labelledby="dropdownMenuButton">
-      {#each headings as heading (heading)}
-        <li class:active={heading.slug === $currentHeading}>
-          <a class="dropdown-item" href={"#" + heading.slug}>
-            {@html heading.text}
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </div>
-</div>
-
-<style lang="scss">
-</style>
+<nav class="mobile-toc text-gray-600 dark:text-gray-500">
+  <button
+    class="mx-2 mr-px rounded-sm border border-gray-500 bg-black bg-opacity-20 py-1 px-4 font-body font-light tracking-wide text-gray-300 hover:bg-opacity-50 hover:text-white"
+    type="button"
+    on:click={toggleVisible}
+  >
+    On this page
+    {#if visible}
+      <Icon icon="mdi:chevron-down" class="inline-block" />
+    {:else}
+      <Icon icon="mdi:chevron-right" class="inline-block" />
+    {/if}
+  </button>
+  {#if visible}
+    <div class="absolute top-16 left-0 h-[calc(100vh-4rem)] w-full overflow-y-auto">
+      <ul class="rounded-sm bg-gray-800 py-1">
+        {#each headings as heading (heading)}
+          <li class:active={heading.slug === $currentHeading}>
+            <a
+              class=" block border-l-4 border-gray-200 py-1 px-2 text-xs hover:!border-blue-600 hover:bg-blue-100 dark:border-gray-700 dark:hover:!border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-400"
+              href={"#" + heading.slug}
+            >
+              {@html heading.text}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </div>
+  {/if}
+</nav>

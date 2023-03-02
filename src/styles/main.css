@@ -156,13 +156,17 @@
   .toc.active a,
   .toc.active a:hover,
   .side-nav a.active,
-  .side-nav a.active:hover {
+  .side-nav a.active:hover,
+  .mobile-toc li..active a,
+  .mobile-toc li..active a:hover {
     @apply border-blue-600 !bg-blue-200 !text-gray-900;
   }
   .dark .toc.active a,
   .dark .toc.active a:hover,
   .dark .side-nav a.active,
-  .dark .side-nav a.active:hover {
+  .dark .side-nav a.active:hover,
+  .dark .mobile-toc li.active a,
+  .dark .mobile-toc li.active a:hover {
     @apply border-blue-600 !bg-blue-600/[0.4] !text-gray-200;
   }
 

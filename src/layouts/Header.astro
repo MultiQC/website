@@ -25,8 +25,8 @@ const navOpened = false;
 ---
 
 <header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
-  <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between md:h-24">
-    <a href="/" class="block uppercase">
+  <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between lg:h-24">
+    <a href="/" class="block">
       <img
         src={Logo}
         class:list={["h-8 lg:h-10 hidden lg:inline", { hidden: location.pathname === "/" }]}
@@ -34,12 +34,18 @@ const navOpened = false;
       />
       <img
         src={SmallLogo}
-        class:list={["h-8 lg:h-10 lg:hidden", { hidden: location.pathname === "/" }]}
+        class:list={["inline-block h-8 lg:h-10 lg:hidden", { hidden: location.pathname === "/" }]}
         alt="MultiQC logo"
       />
+      <span
+        class:list={[
+          "antialiased font-semibold text-lg align-middle ml-3 lg:hidden",
+          { hidden: location.pathname === "/" },
+        ]}>MultiQC</span
+      >
     </a>
     <div class="lg:hidden">
-      <NavbarToc headings={headings} />
+      <NavbarToc headings={headings} client:load />
     </div>
     <div class="hidden items-center lg:flex">
       <a
