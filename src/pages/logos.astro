@@ -13,7 +13,7 @@ import { Icon } from "astro-icon";
       </p>
     </div>
   </Hero>
-  <div class="container-lg py-20">
+  <div class="container-lg py-20 antialiased">
     <div class="grid-cols-2 gap-8 lg:grid">
       <div>
         <h2 class="typo-h3 mb-4">Introduction</h2>
@@ -37,39 +37,47 @@ import { Icon } from "astro-icon";
       </div>
       <div>
         <h3 class="typo-h4 mb-4">Design Details</h3>
-        <p class="typo-body mb-4">
-          <strong>Font:</strong>
-          <span>
+        <dl class="typo-body row mb-4">
+          <dt class="col-3 text-right font-semibold">Font:</dt>
+          <dd class="col-9">
             Roboto Medium 500 (available from
             <a href="https://fonts.google.com/specimen/Roboto" class="text-blue-400">Google Fonts</a
             >
             )
-          </span>
-        </p>
-        <div class="row">
-          <p class="col-4 typo-body mb-4">
-            <strong>Text Colour:</strong>
-            <span style="background-color:#000000;">#000000</span>
-          </p>
-          <p class="col-4 typo-body mb-4">
-            <strong>Colour 1:</strong>
-            <span style="background-color:#BE1622;">#BE1622</span>
-          </p>
-        </div>
-        <div class="row">
-          <p class="col-4 typo-body mb-4">
-            <strong>Colour 2:</strong>
-            <span style="background-color:#009640;">#009640</span>
-          </p>
-          <p class="col-4 typo-body mb-4">
-            <strong>Colour 3:</strong>
-            <span style="background-color:#1D71B8;">#1D71B8</span>
-          </p>
-        </div>
+          </dd>
+          <dt class="col-3 text-right font-semibold">Text Colour:</dt>
+          <dd class="col-9">
+            <span
+              class="rounded-sm px-2 py-1 font-mono text-sm text-white"
+              style="background-color:#000000;">#000000</span
+            >
+          </dd>
+          <dt class="col-3 text-right font-semibold">Colour 1:</dt>
+          <dd class="col-9">
+            <span
+              class="rounded-sm px-2 py-1 font-mono text-sm text-white"
+              style="background-color:#BE1622;">#BE1622</span
+            >
+          </dd>
+          <dt class="col-3 text-right font-semibold">Colour 2:</dt>
+          <dd class="col-9">
+            <span
+              class="rounded-sm px-2 py-1 font-mono text-sm text-white"
+              style="background-color:#009640;">#009640</span
+            >
+          </dd>
+          <dt class="col-3 text-right font-semibold">Colour 3:</dt>
+          <dd class="col-9">
+            <span
+              class="rounded-sm px-2 py-1 font-mono text-sm text-white"
+              style="background-color:#1D71B8;">#1D71B8</span
+            >
+          </dd>
+        </dl>
       </div>
     </div>
 
-    <div class="my-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <div class="my-8 grid grid-cols-1 gap-12 lg:grid-cols-2">
       <div class="grid place-items-center bg-gray-200 p-1">
         <img class="max-h-44 w-10/12 p-4" src="../logos/multiqc_logo.svg" alt="MultiQC Logo" />
       </div>

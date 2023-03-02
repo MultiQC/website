@@ -12,6 +12,16 @@ module.exports = {
       display: ["SF UI Display", "Helvetica", "sans-serif"],
       body: ["SF UI Display", "Helvetica", "sans-serif"],
       sans: ["SF UI Display", "Helvetica", "sans-serif"],
+      mono: [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace",
+      ],
     },
     fontSize: {
       xs: ["0.875rem", "1.5rem"],
