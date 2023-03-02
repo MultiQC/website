@@ -172,7 +172,7 @@ module.exports = {
               // lineHeight: "2rem",
               color: theme("colors.gray.700"),
             },
-            a: {
+            "a, code": {
               wordWrap: "break-word", // long links break layout on small screens
             },
             "a.btn-primary, a.btn-secondary": {

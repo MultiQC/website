@@ -17,10 +17,13 @@
   };
 </script>
 
-<button on:click={() => toggleTheme()}>
-  {#if theme === "light"}
-    <Icon icon="ph:moon-bold" class="h-6 w-6 text-gray-300" />
-  {:else}
-    <Icon icon="ph:sun-bold" class="h-6 w-6 text-gray-300" />
-  {/if}
+<button class="rounded-full bg-gray-800 px-2 py-1" on:click={() => toggleTheme()}>
+  <Icon
+    icon="ph:moon-bold"
+    class={"mr-1 inline h-4 w-4 " + (theme === "light" ? "text-gray-600" : "text-gray-300")}
+  />
+  <Icon
+    icon="ph:sun-bold"
+    class={"inline h-4 w-4  " + (theme !== "light" ? "text-gray-600" : "text-gray-300")}
+  />
 </button>
