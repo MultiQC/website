@@ -1,0 +1,24 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
+  return modules.map((module) => ({
+    params: {
+      module: module.file.split("/").pop().replace(".md", ""),
+    },
+    props: {
+      module: module,
+      frontmatter: module.frontmatter,
+    },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.module;
+---
+
+<PageLayout title={"Module: " + frontmatter.Name} subtitle={frontmatter.Description}>
+  <div class="prose max-w-none dark:prose-invert">
+    <Content />
+  </div>
+</PageLayout>
