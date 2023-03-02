@@ -29,11 +29,11 @@
   </button>
   {#if visible}
     <div class="absolute top-16 left-0 h-[calc(100vh-4rem)] w-full overflow-y-auto">
-      <ul class="rounded-sm bg-gray-800 py-1">
+      <ul class="bg-gray-800 py-1">
         {#each headings as heading (heading)}
           <li class:active={heading.slug === $currentHeading}>
             <a
-              class=" block border-l-4 border-gray-200 py-1 px-2 antialiased hover:!border-blue-600 hover:bg-blue-100 dark:border-gray-700 dark:hover:!border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-400"
+              class=" block py-1 px-2 antialiased  hover:bg-blue-100 dark:hover:!border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-400"
               href={"#" + heading.slug}
               on:click={toggleVisible}
             >
