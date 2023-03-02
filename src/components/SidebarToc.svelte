@@ -1,8 +1,4 @@
 <script lang="ts">
-  import { currentHeading } from "@components/store.js";
-  import Icon from "@iconify/svelte";
-  import Button from "@components/Button.svelte";
-
   export let headings: {
     text: string;
     slug: string;
