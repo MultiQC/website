@@ -8,7 +8,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"prettier": "prettier .",
+		"prettier": "prettier --check --plugin-search-dir=. .",
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
@@ -32,8 +32,8 @@
 		"@iconify/svelte": "^3.1.0",
 		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
-		"prettier-plugin-svelte": "^2.9.0",
 		"prettier-plugin-organize-imports": "^3.2.2",
+		"prettier-plugin-svelte": "^2.9.0",
 		"prettier-plugin-tailwindcss": "^0.2.3"
 	}
 }
