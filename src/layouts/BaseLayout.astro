@@ -3,6 +3,7 @@ import "../fonts/sf-ui-display/main.css";
 import BaseHead from "@components/BaseHead.astro";
 import "../styles/main.css";
 import Navbar from "./Navbar.astro";
+import Subfooter from "./Subfooter.astro";
 import Footer from "./Footer.astro";
 
 export interface Props {
@@ -10,7 +11,7 @@ export interface Props {
   subtitle?: string;
   image?: string;
   md_github_url?: string;
-  subfooter?: boolean;
+  subfooter?: string;
   headings?: string[];
 }
 
@@ -20,7 +21,7 @@ const {
   subtitle = SITE_DESCRIPTION,
   image = "",
   md_github_url,
-  subfooter = false,
+  subfooter = "",
   headings = [],
 } = Astro.props;
 ---
@@ -35,6 +36,11 @@ const {
     <main class="min-h-screen">
       <slot />
     </main>
+    {
+      (md_github_url || subfooter) && (
+        <Subfooter md_github_url={md_github_url}>{subfooter}</Subfooter>
+      )
+    }
     <Footer />
     <script is:inline>
       const theme = (() => {
