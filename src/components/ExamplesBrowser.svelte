@@ -11,8 +11,8 @@
   let setActive = (index: number) => {
     active = index;
   };
-  import MultiQCIconSrc from "/logos/multiqc_logo_square.svg";
   import Button from "@components/Button.svelte";
+  import MultiQCIconSrc from "/logos/multiqc_logo_square.svg";
 </script>
 
 <div class="overflow-hidden rounded-md border border-gray-200 text-gray-800 shadow">
@@ -49,7 +49,12 @@
         </div>
         {#if hasDetails}
           <div class="grow py-2 px-4 text-right">
-            <Button to={"/example-reports/" + items[active].slug} variant="secondary" size="sm">
+            <Button
+              to={"/example-reports/" + items[active].slug}
+              variant="secondary"
+              size="sm"
+              forceLight
+            >
               See report details
             </Button>
           </div>

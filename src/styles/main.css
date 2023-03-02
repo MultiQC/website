@@ -159,6 +159,9 @@
   .btn-secondary {
     @apply border border-blue-600 bg-transparent text-blue-600 hover:bg-blue-600 hover:text-white;
   }
+  .btn-secondary:not(.btn-force-light) {
+    @apply dark:border-blue-300 dark:border-blue-300 dark:text-blue-300 dark:hover:border-blue-600 dark:hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:text-white;
+  }
 
   .btn-accent-alt {
   }

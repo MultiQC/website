@@ -3,6 +3,7 @@
 
   export let classes: string = "";
   export let theme: string = "default";
+  export let forceLight: boolean = false;
   export let variant: string = "reset";
   export let size: string = "reset";
   export let noShadow: boolean = false;
@@ -29,6 +30,7 @@
       theme === "alternative" && variant === "primary" ? "btn-primary-alt" : "",
       theme === "alternative" && variant === "secondary" ? "btn-secondary-alt" : "",
       theme === "alternative" && variant === "accent" ? "btn-accent-alt" : "",
+      forceLight ? "btn-force-light" : "",
       size === "reset" ? "px-0 py-0" : "",
       size === "xs" ? "px-4 py-2 rounded-full text-xs font-normal" : "",
       size === "sm" ? "px-4 py-2 rounded-full text-sm font-normal" : "",
