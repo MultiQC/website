@@ -12,9 +12,9 @@
     const min_heading_depth = Math.min(...headings.map((h) => h.depth));
     // make margin classes from min to max heading depth
     // TODO: rewrite for tailwind
-    let headingMargin = {};
+    let headingPadding = {};
     for (let i = min_heading_depth; i <= 4; i++) {
-        headingMargin[i] = 'pl-' + (i - min_heading_depth) * 2;
+        headingPadding[i] = 'pl-' + (i - min_heading_depth) * 2;
     }
 </script>
 
@@ -26,7 +26,7 @@
                         class={'toc'}
                         class:active={heading.slug === $currentHeading}
                     >
-                        <a class= {headingMargin[heading.depth]+" text-xs block py-1 px-2 border-gray-200 dark:border-gray-700 hover:bg-blue-100 hover:!border-blue-600 dark:hover:text-gray-400 dark:hover:bg-blue-600/[0.2] dark:hover:!border-blue-600 border-l-4"} href={'#' + heading.slug}>
+                        <a class= {headingPadding[heading.depth]+" text-xs block py-1 px-2 border-gray-200 dark:border-gray-700 hover:bg-blue-100 hover:!border-blue-600 dark:hover:text-gray-400 dark:hover:bg-blue-600/[0.2] dark:hover:!border-blue-600 border-l-4"} href={'#' + heading.slug}>
                             {@html heading.text}
                         </a>
                     </li>
