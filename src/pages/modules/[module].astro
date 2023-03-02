@@ -1,6 +1,8 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import search_patterns from "./search_patterns.yaml";
+import { Code } from "astro/components";
+import { stringify } from "yaml";
 
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
@@ -19,15 +21,25 @@ const { Content, frontmatter } = Astro.props.module;
 const gh_url =
   "https://github.com/ewels/MultiQC/blob/master/docs/modules/" +
   Astro.props.module.file.split("/").pop();
+
+// Filter search_patterns to only include keys containing key string
+const module_search_patterns = Object.keys(search_patterns)
+  .filter((key) => key.includes(frontmatter.search_pattern_key))
+  .reduce((obj, key) => {
+    obj[key] = search_patterns[key];
+    return obj;
+  }, {});
 ---
 
 <PageLayout
-  title={"Module: " + frontmatter.Name}
-  subtitle={frontmatter.Description}
+  title={"Module: " + frontmatter.name}
+  subtitle={frontmatter.description}
   md_github_url={gh_url}
 >
   <div class="prose max-w-none dark:prose-invert">
+    <h2>Description</h2>
     <Content />
-    <pre>Search patterns: {search_patterns}</pre>
+    <h2>File search patterns</h2>
+    <Code code={stringify(module_search_patterns, null, 2)} lang="yaml" />
   </div>
 </PageLayout>
