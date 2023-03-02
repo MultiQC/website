@@ -30,6 +30,7 @@
 	},
 	"devDependencies": {
 		"@iconify/svelte": "^3.1.0",
+		"@rollup/plugin-yaml": "^4.0.1",
 		"prettier": "^2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
 		"prettier-plugin-organize-imports": "^3.2.2",

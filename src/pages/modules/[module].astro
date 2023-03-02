@@ -1,5 +1,6 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
+import search_patterns from "./search_patterns.yaml";
 
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
@@ -27,5 +28,6 @@ const gh_url =
 >
   <div class="prose max-w-none dark:prose-invert">
     <Content />
+    <pre>Search patterns: {search_patterns}</pre>
   </div>
 </PageLayout>
