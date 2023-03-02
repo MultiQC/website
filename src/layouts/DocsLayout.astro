@@ -38,11 +38,17 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
   <div class="container-xl px-10 py-20">
     <div class="flex">
       <nav
-        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
+        class="side-nav sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
       >
         {
           docs_pages.map((page) => (
-            <a href={page.slug} class="mb-2 block font-medium text-gray-500 hover:text-gray-900">
+            <a
+              href={page.slug}
+              class:list={[
+                "pl-2 pt-1 pb-1 block font-medium text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 hover:!bg-blue-100 dark:hover:!bg-blue-600/[0.2]",
+                { active: page.slug === Astro.url.pathname.replace("/docs/", "") },
+              ]}
+            >
               {page.title}
             </a>
           ))

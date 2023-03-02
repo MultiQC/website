@@ -23,10 +23,10 @@
             <ul>
                 {#each headings as heading (heading)}
                     <li
-                        class={'toc ' + headingMargin[heading.depth]}
+                        class={'toc'}
                         class:active={heading.slug === $currentHeading}
                     >
-                        <a class="text-xs block py-1 px-2 border-gray-200 dark:border-gray-700 hover:!bg-blue-200 hover:!border-blue-600 dark:hover:text-gray-400 dark:hover:!bg-blue-600/[0.2] dark:hover:!border-blue-600 border-l-4" href={'#' + heading.slug}>
+                        <a class= {headingMargin[heading.depth]+" text-xs block py-1 px-2 border-gray-200 dark:border-gray-700 hover:bg-blue-100 hover:!border-blue-600 dark:hover:text-gray-400 dark:hover:bg-blue-600/[0.2] dark:hover:!border-blue-600 border-l-4"} href={'#' + heading.slug}>
                             {@html heading.text}
                         </a>
                     </li>
