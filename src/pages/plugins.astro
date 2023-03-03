@@ -1,6 +1,7 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
+import Card from "@components/Card.astro";
 import { Icon } from "astro-icon";
 import MultiQCLogo from "/logos/multiqc_logo.svg";
 import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
@@ -25,12 +26,10 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
   </p>
 
   <div class="mt-24 grid grid-cols-1 gap-24 lg:grid-cols-2">
-    <div
-      class="flex items-center justify-center rounded-md border border-zinc-200 py-20 px-4 shadow dark:border-zinc-700 dark:shadow-zinc-900 lg:order-2"
-    >
+    <Card classes="lg:order-2 py-20" centered>
       <img src={MultiQCLogo} class="h-24 dark:hidden" />
       <img src={MultiQCLogoDark} class="hidden h-24 dark:block" />
-    </div>
+    </Card>
     <div class="lg:order-1">
       <h2 class="typo-h3 mb-4">Example MultiQC Plugin</h2>
       <p class="typo-intro mb-4">A miniature example of a MultiQC plugin.</p>
@@ -46,11 +45,9 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
       </div>
     </div>
 
-    <div
-      class="flex items-center justify-center rounded-md border border-zinc-200 py-20 px-4 shadow dark:border-zinc-700 dark:shadow-zinc-900 lg:order-3"
-    >
+    <Card classes="lg:order-3" centered>
       <img src="/images/plugins/clarity.svg" class="h-24" />
-    </div>
+    </Card>
     <div class="lg:order-4">
       <h2 class="typo-h3 mb-4 mt-10 md:mt-0">MultiQC_Clarity</h2>
       <p class="typo-intro mb-4">
@@ -69,11 +66,9 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
       </div>
     </div>
 
-    <div
-      class="flex items-center justify-center rounded-md border border-zinc-200 py-20 px-4 shadow dark:border-zinc-700 dark:shadow-zinc-900 lg:order-6"
-    >
+    <Card classes="lg:order-6" centered>
       <img src="/images/plugins/bcbio.png" class="h-24 object-contain" />
-    </div>
+    </Card>
     <div class="lg:order-5">
       <h2 class="typo-h3 mb-4">MultiQC_bcbio</h2>
       <p class="typo-body mb-4">
@@ -90,11 +85,9 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
       </div>
     </div>
 
-    <div
-      class="flex items-center justify-center rounded-md border border-zinc-200 py-20 px-4 shadow dark:border-zinc-700 dark:shadow-zinc-900 lg:order-7"
-    >
+    <Card classes="lg:order-7" centered>
       <img src="/images/plugins/ngi.svg" class="h-24 object-contain" />
-    </div>
+    </Card>
     <div class="lg:order-8">
       <h2 class="typo-h3 mb-4">MultiQC_NGI</h2>
       <p class="typo-intro mb-4">
