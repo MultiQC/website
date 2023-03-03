@@ -9,19 +9,19 @@ const { md_github_url } = Astro.props;
 ---
 
 <footer class="bg-slate-700 text-gray-400">
-  <div class="container-lg py-6 text-center font-light">
+  <div class="container-lg overflow-hidden text-clip py-6 text-center">
     {
       md_github_url && (
-        <>
+        <div class="ml-1 inline-block max-w-xs overflow-hidden text-ellipsis sm:max-w-lg md:max-w-none">
           <Icon name="mdi:github" class="mr-3 -mt-1 inline h-6 w-6" />
           Source:
           <a
             href={md_github_url}
-            class=" ml-1 underline decoration-1 underline-offset-[5px] hover:no-underline"
+            class="underline decoration-1 underline-offset-[5px] hover:no-underline"
           >
             {md_github_url}
           </a>
-        </>
+        </div>
       )
     }
     <slot />

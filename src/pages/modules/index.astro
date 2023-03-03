@@ -9,53 +9,51 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
   title={"Supported Tools"}
   subtitle={`MultiQC currently has modules to support ${modules.length} different bioinformatics tools, listed below.`}
 >
-  <div class="container-lg">
-    <div class="flex items-center">
-      <Icon name="mdi:book-outline" class="mr-2 h-7 w-7 text-gray-500" />
-      <p class="typo-blockquote">
-        Click the tool name to go to the MultiQC documentation for that tool.
-      </p>
-    </div>
-    <p class="mt-2">
-      Missing something? If you would like another tool to to be support, please
-      <a
-        class="underline underline-offset-4 hover:no-underline"
-        href="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml"
-      >
-        open an issue
-      </a>.
+  <div class="flex items-center">
+    <Icon name="mdi:book-outline" class="mr-2 h-7 w-7 text-gray-500" />
+    <p class="typo-blockquote">
+      Click the tool name to go to the MultiQC documentation for that tool.
     </p>
-    <table class="mt-8">
-      <thead>
-        <tr>
-          <td class="w-1/4">
-            <span class="typo-intro">Tool Name</span>
-          </td>
-          <td>
-            <span class="typo-intro">Description</span>
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          modules &&
-            modules.map((module) => (
-              <tr>
-                <td>
-                  <a
-                    href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
-                    class="typo-body text-blue-600 dark:text-blue-400"
-                  >
-                    {module.frontmatter.name}
-                  </a>
-                </td>
-                <td>
-                  <p class="typo-body">{module.frontmatter.description}</p>
-                </td>
-              </tr>
-            ))
-        }
-      </tbody>
-    </table>
   </div>
+  <p class="mt-2">
+    Missing something? If you would like another tool to to be support, please
+    <a
+      class="underline underline-offset-4 hover:no-underline"
+      href="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml"
+    >
+      open an issue
+    </a>.
+  </p>
+  <table class="mt-8">
+    <thead>
+      <tr>
+        <td class="w-1/4">
+          <span class="typo-intro">Tool Name</span>
+        </td>
+        <td>
+          <span class="typo-intro">Description</span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        modules &&
+          modules.map((module) => (
+            <tr>
+              <td>
+                <a
+                  href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
+                  class="typo-body text-blue-600 dark:text-blue-400"
+                >
+                  {module.frontmatter.name}
+                </a>
+              </td>
+              <td>
+                <p class="typo-body">{module.frontmatter.description}</p>
+              </td>
+            </tr>
+          ))
+      }
+    </tbody>
+  </table>
 </PageLayout>

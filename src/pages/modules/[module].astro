@@ -3,6 +3,8 @@ import PageLayout from "@layouts/PageLayout.astro";
 import search_patterns from "./search_patterns.yaml";
 import { Code } from "astro/components";
 import { stringify } from "yaml";
+import { Icon } from "astro-icon";
+import Button from "@components/Button.svelte";
 
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
@@ -47,5 +49,11 @@ const module_search_patterns = Object.keys(search_patterns)
         </>
       )
     }
+  </div>
+  <div class="text-center">
+    <Button to="/docs/modules" variant="secondary" size="sm" classes="my-12">
+      <Icon name="mdi:arrow-left" class="h-4 w-4 mr-2 -ml-1" />
+      Back to all modules
+    </Button>
   </div>
 </PageLayout>
