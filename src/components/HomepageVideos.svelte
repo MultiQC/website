@@ -5,7 +5,6 @@
     language: string;
   }[];
 
-  export let small = false;
   $: lang = "en";
   $: currentIndex = 0;
 
