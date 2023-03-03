@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Icon from "@iconify/svelte";
-
   $: theme = localStorage.getItem("theme");
   if (theme === undefined) {
     theme = "dark";
@@ -15,15 +13,11 @@
     localStorage.setItem("theme", newTheme);
     theme = newTheme;
   };
+
+  // NB: Pass in SVG icons from Astro in the <slot /> so that they're fetched at build time, rather than page load
+  // This fixes the flicker at page load.
 </script>
 
 <button class="rounded-full bg-gray-800 px-2 py-1" on:click={() => toggleTheme()}>
-  <Icon
-    icon="ph:moon-bold"
-    class={"mr-1 inline h-4 w-4 " + (theme === "light" ? "text-gray-600" : "text-gray-300")}
-  />
-  <Icon
-    icon="ph:sun-bold"
-    class={"inline h-4 w-4  " + (theme !== "light" ? "text-gray-600" : "text-gray-300")}
-  />
+  <slot />
 </button>

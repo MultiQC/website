@@ -1,5 +1,6 @@
 ---
 import DarkModeToggle from "@components/DarkModeToggle.svelte";
+import { Icon } from "astro-icon";
 import Logo from "/logos/multiqc_logo_darkbg.svg";
 
 const location = Astro.url;
@@ -54,6 +55,9 @@ const { navbarItems } = Astro.props;
         </a>
       ))
     }
-    <DarkModeToggle client:idle />
+    <DarkModeToggle client:idle>
+      <Icon name="ph:moon-bold" class="mr-1 inline h-4 w-4 text-gray-600 dark:text-gray-300" />
+      <Icon name="ph:sun-bold" class="inline h-4 w-4 dark:text-gray-600 text-gray-300" />
+    </DarkModeToggle>
   </div>
 </div>
