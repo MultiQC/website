@@ -1,2 +1,6 @@
+[build]
+  publish = "dist/"
+  command = "git clone --depth 1 https://github.com/ewels/MultiQC.git ../MultiQC && npm run build"
+
 [build.environment]
     NODE_VERSION = "18.14.0"
