@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
+import Card from "@components/Card.astro";
 import { Icon } from "astro-icon";
 ---
 
@@ -78,9 +79,9 @@ import { Icon } from "astro-icon";
 
     <h3 class="typo-h3 mb-4 mt-16">Logos</h3>
     <div class="my-8 grid grid-cols-1 gap-12 lg:grid-cols-2">
-      <div class="grid place-items-center bg-gray-200 p-1">
+      <Card classes="grid place-items-center bg-gray-200">
         <img class="max-h-44 w-10/12 p-4" src="../logos/multiqc_logo.svg" alt="MultiQC Logo" />
-      </div>
+      </Card>
       <div>
         <h3 class="typo-h4 mb-4">MultiQC Logo</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
@@ -104,13 +105,13 @@ import { Icon } from "astro-icon";
           </li>
         </ul>
       </div>
-      <div class="grid place-items-center bg-gray-800 p-1">
+      <Card classes="grid place-items-center bg-gray-800">
         <img
           class="max-h-44 w-10/12 p-4"
           src="../logos/multiqc_logo_darkbg.svg"
           alt="MultiQC Logo, dark backgrounds"
         />
-      </div>
+      </Card>
       <div>
         <h3 class="typo-h4 mb-4 mr-10">MultiQC Logo (dark background)</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
@@ -136,13 +137,13 @@ import { Icon } from "astro-icon";
       </div>
     </div>
     <div class="my-8 grid grid-cols-1 gap-8 lg:grid-cols-4">
-      <div class="grid place-items-center bg-gray-200 p-1">
+      <Card classes="grid place-items-center bg-gray-200">
         <img
           class="max-h-44 w-10/12 p-4"
           src="../logos/multiqc_logo_square.svg"
           alt="MultiQC Square Thumbnail"
         />
-      </div>
+      </Card>
       <div>
         <h3 class="typo-h4 mb-4 mr-10">MultiQC Square Thumb</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
@@ -166,13 +167,13 @@ import { Icon } from "astro-icon";
           </li>
         </ul>
       </div>
-      <div class="grid place-items-center bg-gray-200 p-1">
+      <Card classes="grid place-items-center bg-gray-200">
         <img
           class="max-h-44 w-10/12 p-4"
           src="../logos/multiqc_logo_circle.svg"
           alt="MultiQC Circle Thumbnail"
         />
-      </div>
+      </Card>
       <div>
         <h3 class="typo-h4 mb-4 mr-10">MultiQC Circle Thumb</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
