@@ -79,6 +79,13 @@
     @apply font-body text-sm font-light antialiased;
   }
 
+  .typo-link {
+    @apply text-blue-600 underline underline-offset-4 antialiased hover:no-underline dark:text-blue-400;
+  }
+  .typo-link-no-underline {
+    @apply text-blue-600 antialiased hover:text-blue-500  dark:text-blue-400 dark:hover:text-blue-300;
+  }
+
   .container-xl {
     @apply mx-auto px-4;
     max-width: 1440px;

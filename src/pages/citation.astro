@@ -48,7 +48,7 @@ import Button from "@components/Button.svelte";
           <abbr title="Digital object identifier">DOI:</abbr>
         </dt>
         <dd class="col-10">
-          <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" class="text-blue-600">
+          <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" class="typo-link">
             10.1093/bioinformatics/btw354
           </a>
         </dd>
@@ -56,41 +56,41 @@ import Button from "@components/Button.svelte";
           <abbr title="PubMed ID">PMID</abbr>:
         </dt>
         <dd class="col-10">
-          <a href="http://www.ncbi.nlm.nih.gov/pubmed/27312411" class="text-blue-600">27312411</a>
+          <a href="http://www.ncbi.nlm.nih.gov/pubmed/27312411" class="typo-link">27312411</a>
         </dd>
       </dl>
     </div>
   </div>
-</PageLayout>
-<div class="container-lg my-8">
-  <h2 class="typo-h3 my-4">Abstract</h2>
 
-  <p class="typo-body my-4">
-    <span class="font-semibold">Motivation:</span> Fast and accurate quality control is essential for
-    studies involving next-generation sequencing data. Whilst numerous tools exist to quantify QC metrics,
-    there is no common approach to flexibly integrate these across tools and large sample sets. Assessing
-    analysis results across an entire project can be time consuming and error prone; batch effects and
-    outlier samples can easily be missed in the early stages of analysis.
-  </p>
-  <p class="typo-body my-4">
-    <span class="font-semibold">Results:</span> We present MultiQC, a tool to create a single report
-    visualising output from multiple tools across many samples, enabling global trends and biases to
-    be quickly identified. MultiQC can plot data from many common bioinformatics tools and is built to
-    allow easy extension and customization.
-  </p>
-  <p class="typo-body my-4">
-    <span class="font-semibold">Availability:</span> MultiQC is available with an GNU GPLv3 license on
-    GitHub, the Python Package Index and Bioconda. Documentation and example reports available at{
-      " "
-    }
-    <a href="https://multiqc.info/" class="text-blue-600">https://multiqc.info/</a>
-  </p>
-  <p class="typo-small my-12 text-gray-600">
-    This is an Open Access article distributed under the terms of the
-    <a href="http://creativecommons.org/licenses/by/4.0/" class="text-blue-600">
-      Creative Commons Attribution License
-    </a>
-    , which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original
-    work is properly cited.
-  </p>
-</div>
+  <div class="my-8">
+    <h2 class="typo-h3 my-4">Abstract</h2>
+
+    <p class="typo-body my-4">
+      <span class="mr-1 font-semibold underline">Motivation:</span> Fast and accurate quality control
+      is essential for studies involving next-generation sequencing data. Whilst numerous tools exist
+      to quantify QC metrics, there is no common approach to flexibly integrate these across tools and
+      large sample sets. Assessing analysis results across an entire project can be time consuming and
+      error prone; batch effects and outlier samples can easily be missed in the early stages of analysis.
+    </p>
+    <p class="typo-body my-4">
+      <span class="mr-1 font-semibold underline">Results:</span> We present MultiQC, a tool to create
+      a single report visualising output from multiple tools across many samples, enabling global trends
+      and biases to be quickly identified. MultiQC can plot data from many common bioinformatics tools
+      and is built to allow easy extension and customization.
+    </p>
+    <p class="typo-body my-4">
+      <span class="mr-1 font-semibold underline">Availability:</span> MultiQC is available with an GNU
+      GPLv3 license on GitHub, the Python Package Index and Bioconda. Documentation and example reports
+      available at{" "}
+      <a href="https://multiqc.info/" class="typo-link">https://multiqc.info/</a>
+    </p>
+    <p class="typo-small my-12 text-gray-600">
+      This is an Open Access article distributed under the terms of the
+      <a href="http://creativecommons.org/licenses/by/4.0/" class="typo-link">
+        Creative Commons Attribution License
+      </a>
+      , which permits unrestricted reuse, distribution, and reproduction in any medium, provided the
+      original work is properly cited.
+    </p>
+  </div>
+</PageLayout>
