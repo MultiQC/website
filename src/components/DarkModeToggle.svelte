@@ -17,7 +17,7 @@
   };
 </script>
 
-<button class="rounded-full bg-gray-200 px-2 py-1 dark:bg-gray-800" on:click={() => toggleTheme()}>
+<button class="" on:click={() => toggleTheme()}>
   <Icon icon="ph:moon-bold" width="14" height="14" class={"mr-1 inline h-4 w-4 text-gray-300"} />
   <Icon icon="ph:sun-bold" class={"inline h-4 w-4 text-gray-600"} />
 </button>

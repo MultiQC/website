@@ -54,6 +54,8 @@ const { navbarItems } = Astro.props;
         </a>
       ))
     }
-    <DarkModeToggle client:idle />
+    <span class="h-8 w-14 rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800">
+      <DarkModeToggle client:load />
+    </span>
   </div>
 </div>
