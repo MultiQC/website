@@ -46,11 +46,11 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
                     href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
                     class="typo-body text-blue-600 dark:text-blue-400"
                   >
-                    {module.frontmatter.Name}
+                    {module.frontmatter.name}
                   </a>
                 </td>
                 <td>
-                  <p class="typo-body">{module.frontmatter.Description}</p>
+                  <p class="typo-body">{module.frontmatter.description}</p>
                 </td>
               </tr>
             ))
