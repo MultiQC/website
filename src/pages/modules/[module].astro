@@ -26,7 +26,7 @@ const gh_url =
 
 // Filter search_patterns to only include keys containing key string
 const module_search_patterns = Object.keys(search_patterns)
-  .filter((key) => key.includes(frontmatter.search_pattern_key))
+  .filter((key) => key.includes(Astro.props.module.file.split("/").pop().replace(".md", "")))
   .reduce((obj, key) => {
     obj[key] = search_patterns[key];
     return obj;
