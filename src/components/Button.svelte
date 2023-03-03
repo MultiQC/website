@@ -11,7 +11,6 @@
   export let onClick: string = "";
   export let to: string = "";
   export let arrow: boolean = false;
-  export let relative: boolean = false;
 
   if (submit && onClick) {
     console.warn(
