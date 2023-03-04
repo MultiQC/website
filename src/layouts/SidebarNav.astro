@@ -1,32 +1,17 @@
 ---
 import SidebarNavSection from "@layouts/SidebarNavSection.astro";
-import fs from "node:fs/promises";
-import { parse } from "yaml";
 
 // Fetch the config.yml that has section titles and order of pages
 import docs_nav from "../../../MultiQC/docs/core/config.yaml";
-
-export interface Props {
-  docs_pages: {
-    slug: string;
-    frontmatter: {
-      title: string;
-      order: number;
-    }[];
-  }[];
-}
-const { docs_pages } = Astro.props;
 ---
 
 <nav class="side-nav text-gray-600 dark:text-gray-500">
-  <ul>
-    {
-      docs_nav["nav"].map((section) => (
-        <li class="typo-intro mb-4">
-          {Object.keys(section)[0]}
-          <SidebarNavSection section={section} docs_pages={docs_pages} />
-        </li>
-      ))
-    }
-  </ul>
+  {
+    docs_nav["nav"].map((section) => (
+      <section class="mb-6">
+        <h5 class="mb-2 font-semibold">{Object.keys(section)[0]}</h5>
+        <SidebarNavSection section={section} current_page={Astro.url.pathname} />
+      </section>
+    ))
+  }
 </nav>

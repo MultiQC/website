@@ -7,15 +7,9 @@ export interface Props {
       order: number;
     };
   };
-  docs_pages: {
-    slug: string;
-    frontmatter: {
-      title: string;
-      order: number;
-    }[];
-  }[];
+  current_page: string;
 }
-const { section, docs_pages } = Astro.props;
+const { section, current_page } = Astro.props;
 
 const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
 const pages = [];
@@ -28,11 +22,20 @@ Object.values(section)[0].forEach((filename) => {
 });
 ---
 
-<ul class="typo-small border-l-2 border-gray-200 pl-2">
+<ul class="">
   {
     pages.map((page) => (
-      <li class="ml-1">
-        <a href={page[0]} class="text-gray-600 hover:text-black">
+      <li class="ml-1 text-gray-600 ">
+        <a
+          href={page[0]}
+          class:list={[
+            "block hover:text-black border-l-2 hover:border-gray-300 dark:hover:text-gray-400 dark:hover:border-white border-gray-200 pl-2 py-0.5 text-xs antialiased",
+            {
+              "font-semibold border-l-blue-600 hover:border-l-blue-600 text-blue-600 hover:text-blue-600 dark:border-l-blue-400 dark:hover:border-l-blue-400 dark:text-blue-400/80 dark:hover:text-blue-400/80":
+                current_page == page[0],
+            },
+          ]}
+        >
           {page[1].frontmatter.title}
         </a>
       </li>

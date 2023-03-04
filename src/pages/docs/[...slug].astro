@@ -20,10 +20,6 @@ export async function getStaticPaths() {
     },
     props: {
       post: post,
-      docs_pages: posts.map((page: object) => ({
-        slug: get_slug(page.file),
-        frontmatter: page.frontmatter,
-      })),
       frontmatter: post.frontmatter,
     },
   }));
@@ -39,7 +35,6 @@ const headings = Astro.props.post.getHeadings();
 <DocsLayout
   title={frontmatter.title}
   subtitle={frontmatter.description}
-  docs_pages={Astro.props.docs_pages}
   headings={headings}
   md_github_url={gh_url}
 >

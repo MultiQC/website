@@ -10,17 +10,13 @@ export interface Props {
   image?: string;
   md_github_url?: string;
   subfooter?: string;
-  docs_pages: {
-    title: string;
-    slug: string;
-  }[];
   headings?: {
     depth: number;
     text: string;
     slug: string;
   }[];
 }
-const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings } = Astro.props;
+const { title, subtitle, image, md_github_url, subfooter, headings } = Astro.props;
 ---
 
 <BaseLayout
@@ -40,12 +36,12 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
   <div class="py-10 px-4 lg:py-20 lg:px-10">
     <div class="lg:flex">
       <div
-        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
+        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[12rem] flex-none overflow-y-auto pb-10 lg:block"
       >
-        <SidebarNav docs_pages={docs_pages} />
+        <SidebarNav />
       </div>
 
-      <main class="lg:container-lg lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-36.5rem)]">
+      <main class="lg:container-lg lg:w-[calc(100%-12rem)] xl:w-[calc(100%-29rem)]">
         <MarkdownWrapper headings={headings} client:load>
           <slot />
         </MarkdownWrapper>
