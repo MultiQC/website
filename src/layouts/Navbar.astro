@@ -22,11 +22,12 @@ export interface Props {
 
 const navPages = [
   { slug: "/", text: "Home" },
-  { slug: "/modules/", text: "Tools" },
+  { slug: "/modules/", text: "Supported Tools" },
+  { slug: "/example-reports/", text: "Examples" },
+  { slug: "/community/", text: "Community" },
   { slug: "/docs/", text: "Docs" },
   { slug: "/plugins/", text: "Plugins" },
   { slug: "/logos/", text: "Logo" },
-  { slug: "/example-reports/", text: "Example reports" },
 ];
 
 const { headings = [], navbarItems = navPages } = Astro.props;
@@ -34,11 +35,11 @@ const { headings = [], navbarItems = navPages } = Astro.props;
 
 <header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
   <NavbarMenu navbarItems={navbarItems}>
-    <Icon name="ph:sun-bold" class="mr-1 inline h-4 w-4 dark:text-gray-600 text-gray-300" />
+    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 dark:text-gray-600 text-gray-300" />
     <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
   </NavbarMenu>
   <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load>
-    <Icon name="ph:sun-bold" class="mr-1 inline h-4 w-4 dark:text-gray-600 text-gray-300" />
+    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 dark:text-gray-600 text-gray-300" />
     <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
   </NavbarMenuMobile>
 </header>

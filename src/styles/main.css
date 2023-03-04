@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  /*
-  // Removed, as it breaks tailwind .sticky elements
-  // Consider adding back to main content container
   html,
   body {
+    @apply antialiased;
+    /*
+    // Removed, as it breaks tailwind .sticky elements
+    // Consider adding back to main content container
     @apply overflow-x-hidden;
+    */
   }
-  */
 
   table td {
     border-bottom: 1px solid theme(colors.gray.200);

@@ -1,0 +1,75 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Card from "@components/Card.astro";
+import { Icon } from "astro-icon";
+---
+
+<PageLayout title="Community" subtitle="Find where the MultiQC community gets together.">
+  <p class="typo-body mb-16">
+    MultiQC is a community project, and we welcome contributions from everyone. The people who make
+    up the community are enthusiastic and you'll find plenty of people willing to help out with any
+    difficulties. If you have questions, ideas, or want to get involved, then please get in touch!
+  </p>
+  <div class="grid grid-cols-3 gap-4">
+    <Card>
+      <a href="https://github.com/ewels/MultiQC" class="group -m-8 block h-max">
+        <div
+          class="flex h-44 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50"
+        >
+          <Icon
+            name="mdi:github"
+            class="w-20 h-20 group-hover:w-24 group-hover:h-24 transition-all dark:fill-white"
+          />
+        </div>
+        <div class="p-8">
+          <h3 class="typo-h2 mb-4 group-hover:text-blue-500">GitHub</h3>
+          <p>
+            Star the MultiQC repository and keep track of development. Submit an issue if you find a
+            bug or have a feature request, and come here to contribute code.
+          </p>
+        </div>
+      </a>
+    </Card>
+    <Card>
+      <a
+        href="https://join.slack.com/t/multiqc/shared_invite/zt-1ps4q1u5x-2WtAJlZKMzMewURyxAChGA"
+        class="group -m-8 block h-max"
+      >
+        <div
+          class="flex h-44 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50"
+        >
+          <Icon
+            name="logos:slack-icon"
+            class="w-18 h-18 group-hover:w-20 group-hover:h-20 transition-all"
+          />
+        </div>
+        <div class="p-8">
+          <h3 class="typo-h2 mb-4 group-hover:text-blue-500">Slack</h3>
+          <p>
+            Join the community on Slack. Come here to ask questions, get help, share ideas and
+            discuss features.
+          </p>
+        </div>
+      </a>
+    </Card>
+    <Card>
+      <a href="https://twitter.com/MultiQC" class="group -m-8 block h-max">
+        <div
+          class="flex h-44 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50"
+        >
+          <Icon
+            name="logos:twitter"
+            class="w-18 h-18 group-hover:w-20 group-hover:h-20 transition-all"
+          />
+        </div>
+        <div class="p-8">
+          <h3 class="typo-h2 mb-4 group-hover:text-blue-500">Twitter</h3>
+          <p>
+            Follow MultiQC on twitter for news, tips and tricks. The best way to stay up to date
+            with updates.
+          </p>
+        </div>
+      </a>
+    </Card>
+  </div>
+</PageLayout>

@@ -55,6 +55,8 @@ const { navbarItems } = Astro.props;
         </a>
       ))
     }
-    <DarkModeToggle client:load><slot /></DarkModeToggle>
+    <div class="ml-5">
+      <DarkModeToggle client:load><slot /></DarkModeToggle>
+    </div>
   </div>
 </div>
