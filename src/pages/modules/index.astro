@@ -9,13 +9,13 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
   title={"Supported Tools"}
   subtitle={`MultiQC currently has modules to support ${modules.length} different bioinformatics tools, listed below.`}
 >
-  <div class="flex items-center">
-    <Icon name="mdi:book-outline" class="mr-2 h-7 w-7 text-gray-500" />
+  <div class="mb-4 flex items-center">
+    <Icon name="mdi:cursor-default-click" class="mr-2 h-7 w-7 text-gray-500" />
     <p class="typo-blockquote">
       Click the tool name to go to the MultiQC documentation for that tool.
     </p>
   </div>
-  <p class="mt-2">
+  <p class="mb-8">
     Missing something? If you would like another tool to to be support, please
     <a
       class="underline underline-offset-4 hover:no-underline"
@@ -39,7 +39,7 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
       {
         modules &&
           modules.map((module) => (
-            <tr>
+            <tr class="hover:bg-gray-200/40 dark:hover:bg-gray-900/20">
               <td>
                 <a
                   href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
@@ -48,9 +48,7 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
                   {module.frontmatter.name}
                 </a>
               </td>
-              <td>
-                <p class="typo-body">{module.frontmatter.description}</p>
-              </td>
+              <td>{module.frontmatter.description}</td>
             </tr>
           ))
       }
