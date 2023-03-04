@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
 import MarkdownWrapper from "@components/MarkdownWrapper.svelte";
+import SidebarNav from "@layouts/SidebarNav.astro";
 import SidebarToc from "@components/SidebarToc.svelte";
 export interface Props {
   title?: string;
@@ -38,23 +39,11 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
   </Hero>
   <div class="py-10 px-4 lg:py-20 lg:px-10">
     <div class="lg:flex">
-      <nav
-        class="side-nav sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
+      <div
+        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[19.5rem] flex-none overflow-y-auto pb-10 lg:block"
       >
-        {
-          docs_pages.map((page) => (
-            <a
-              href={page.slug}
-              class:list={[
-                "pl-2 py-1 block font-medium text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 hover:!bg-blue-100 dark:hover:!bg-blue-600/[0.2]",
-                { active: page.slug === Astro.url.pathname.replace("/docs/", "") },
-              ]}
-            >
-              {page.title}
-            </a>
-          ))
-        }
-      </nav>
+        <SidebarNav docs_pages={docs_pages} />
+      </div>
 
       <main class="lg:container-lg lg:w-[calc(100%-19.5rem)] xl:w-[calc(100%-36.5rem)]">
         <MarkdownWrapper headings={headings} client:load>
@@ -62,11 +51,12 @@ const { title, subtitle, image, md_github_url, subfooter, docs_pages, headings }
         </MarkdownWrapper>
         <slot />
       </main>
-      <nav
+
+      <div
         class="sticky top-28 ml-5 hidden h-[calc(100vh-7rem)] w-[17rem] flex-none overflow-y-auto pb-10 xl:block"
       >
         <SidebarToc headings={headings} client:visible />
-      </nav>
+      </div>
     </div>
   </div>
 </BaseLayout>

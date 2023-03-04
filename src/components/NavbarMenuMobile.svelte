@@ -62,7 +62,7 @@
           >
         {/each}
         <div class="mt-4">
-          <DarkModeToggle />
+          <DarkModeToggle><slot /></DarkModeToggle>
         </div>
       </div>
     </div>

@@ -11,7 +11,9 @@ const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
       {
         posts.map((post) => (
           <li>
-            <a href={post.file.split("/").pop().replace(".md", "")}>{post.frontmatter.title}</a>
+            <a href={post.file.split("/docs/core/").pop().replace(".md", "")}>
+              {post.frontmatter.title}
+            </a>
           </li>
         ))
       }

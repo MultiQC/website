@@ -1,0 +1,41 @@
+---
+export interface Props {
+  section: {
+    slug: string;
+    frontmatter: {
+      title: string;
+      order: number;
+    };
+  };
+  docs_pages: {
+    slug: string;
+    frontmatter: {
+      title: string;
+      order: number;
+    }[];
+  }[];
+}
+const { section, docs_pages } = Astro.props;
+
+const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
+const pages = [];
+Object.values(section)[0].forEach((filename) => {
+  var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
+  var filtered = all_docs.filter(function (el) {
+    return el.file.endsWith("docs/core/" + filename);
+  });
+  pages.push([url, filtered[0]]);
+});
+---
+
+<ul class="typo-small border-l-2 border-gray-200 pl-2">
+  {
+    pages.map((page) => (
+      <li class="ml-1">
+        <a href={page[0]} class="text-gray-600 hover:text-black">
+          {page[1].frontmatter.title}
+        </a>
+      </li>
+    ))
+  }
+</ul>

@@ -3,15 +3,26 @@ import DocsLayout from "@layouts/DocsLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
+  function get_slug(filename: string) {
+    let slug = filename
+      .split("/docs/core/")
+      .pop()
+      .replace(/.md$/, "")
+      .replace(/\/index$/, "");
+    if (slug == "index") {
+      return; // root /docs index - return null for no slug
+    }
+    return slug;
+  }
   return posts.map((post) => ({
     params: {
-      slug: post.file.split("/").pop().replace(".md", ""),
+      slug: get_slug(post.file),
     },
     props: {
       post: post,
       docs_pages: posts.map((page: object) => ({
-        slug: page.file.split("/").pop().replace(".md", ""),
-        title: page.frontmatter.title,
+        slug: get_slug(page.file),
+        frontmatter: page.frontmatter,
       })),
       frontmatter: post.frontmatter,
     },

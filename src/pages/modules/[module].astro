@@ -1,13 +1,17 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import search_patterns from "./search_patterns.yaml";
+import fs from "node:fs/promises";
 import { Code } from "astro/components";
-import { stringify } from "yaml";
+import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon";
 import Button from "@components/Button.svelte";
 
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
+  const sp_url = new URL("../../../../MultiQC/multiqc/utils/search_patterns.yaml", import.meta.url);
+  const sp_yaml = await fs.readFile(sp_url, "utf-8");
+  const search_patterns = parse(sp_yaml);
+
   return modules.map((module) => ({
     params: {
       module: module.file.split("/").pop().replace(".md", ""),
@@ -15,6 +19,7 @@ export async function getStaticPaths() {
     props: {
       module: module,
       frontmatter: module.frontmatter,
+      search_patterns: search_patterns,
     },
   }));
 }
@@ -25,10 +30,10 @@ const gh_url =
   Astro.props.module.file.split("/").pop();
 
 // Filter search_patterns to only include keys containing key string
-const module_search_patterns = Object.keys(search_patterns)
+const module_search_patterns = Object.keys(Astro.props.search_patterns)
   .filter((key) => key.includes(Astro.props.module.file.split("/").pop().replace(".md", "")))
   .reduce((obj, key) => {
-    obj[key] = search_patterns[key];
+    obj[key] = Astro.props.search_patterns[key];
     return obj;
   }, {});
 ---
