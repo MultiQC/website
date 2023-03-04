@@ -6,11 +6,10 @@ import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon";
 import Button from "@components/Button.svelte";
 
+import search_patterns from "../../../../MultiQC/multiqc/utils/search_patterns.yaml";
+
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
-  const sp_url = new URL("../../../../MultiQC/multiqc/utils/search_patterns.yaml", import.meta.url);
-  const sp_yaml = await fs.readFile(sp_url, "utf-8");
-  const search_patterns = parse(sp_yaml);
 
   return modules.map((module) => ({
     params: {

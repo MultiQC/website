@@ -4,9 +4,7 @@ import fs from "node:fs/promises";
 import { parse } from "yaml";
 
 // Fetch the config.yml that has section titles and order of pages
-const docs_nav_url = new URL("../../../MultiQC/docs/core/config.yaml", import.meta.url);
-const docs_nav_url_yaml = await fs.readFile(docs_nav_url, "utf-8");
-const docs_nav = parse(docs_nav_url_yaml);
+import docs_nav from "../../../MultiQC/docs/core/config.yaml";
 
 export interface Props {
   docs_pages: {
