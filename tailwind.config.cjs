@@ -171,7 +171,6 @@ module.exports = {
           css: {
             // Match style to main site
             "h1, h2, h3, h4, h5, h6, p, code, pre, ul": {
-              "-webkit-font-smoothing": "antialiased",
               "-moz-osx-font-smoothing": "grayscale",
             },
             "h1, h2, h3, h4, h5, h6": {

@@ -20,7 +20,7 @@
 
   const buttonClassName =
     classes +
-    " group font-body font-medium leading-none inline-flex items-center justify-center antialiased select-none transition-all duration-200" +
+    " group font-body font-medium leading-none inline-flex items-center justify-center select-none transition-all duration-200" +
     [
       variant === "reset" ? "bg-transparent" : "",
       theme === "default" && variant === "primary" ? "btn-primary" : "",

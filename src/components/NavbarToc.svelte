@@ -33,7 +33,7 @@
         {#each headings as heading (heading)}
           <li class:active={heading.slug === $currentHeading}>
             <a
-              class="block py-1 px-2 antialiased hover:bg-blue-600/[0.2] hover:text-gray-400"
+              class="block py-1 px-2 hover:bg-blue-600/[0.2] hover:text-gray-400"
               href={"#" + heading.slug}
               on:click={toggleVisible}
             >

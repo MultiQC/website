@@ -25,7 +25,7 @@
       <li class:active={heading.slug === $currentHeading}>
         <a
           class={headingPadding[heading.depth] +
-            " block border-l-2 border-gray-200 py-1 px-2 text-xs antialiased hover:!border-blue-600 hover:bg-blue-100 hover:text-gray-900 dark:border-gray-700 dark:hover:!border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"}
+            " block border-l-2 border-gray-200 py-1 px-2 text-xs hover:!border-blue-600 hover:bg-blue-100 hover:text-gray-900 dark:border-gray-700 dark:hover:!border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"}
           href={"#" + heading.slug}
         >
           {@html heading.text}
