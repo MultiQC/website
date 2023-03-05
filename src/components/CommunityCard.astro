@@ -1,0 +1,29 @@
+---
+import Card from "@components/Card.astro";
+import { Icon } from "astro-icon";
+
+export interface Props {
+  title: string;
+  url: string;
+  icon: string;
+  icon_classes?: string;
+}
+
+const { title, url, icon, icon_classes = "" } = Astro.props;
+---
+
+<Card>
+  <a href={url} class="group -m-8 block h-max">
+    <div class="flex h-44 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50">
+      <Icon
+        name={icon}
+        class={"w-20 h-20 group-hover:w-24 group-hover:h-24 transition-all dark:fill-white " +
+          icon_classes}
+      />
+    </div>
+    <div class="p-8">
+      <h3 class="typo-h4 mb-4 group-hover:text-blue-500">{title}</h3>
+      <p><slot /></p>
+    </div>
+  </a>
+</Card>
