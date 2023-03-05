@@ -7,7 +7,6 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import yaml from "@rollup/plugin-yaml";
-import purgecss from "astro-purgecss";
 
 // https://astro.build/config
 export default defineConfig({
