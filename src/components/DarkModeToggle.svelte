@@ -18,6 +18,10 @@
   // This fixes the flicker at page load.
 </script>
 
-<button class="rounded-full bg-gray-800 px-2 py-1" on:click={() => toggleTheme()}>
+<button
+  class="rounded-full bg-gray-800 px-2 py-1"
+  on:click={() => toggleTheme()}
+  title="Toggle between light and dark theme"
+>
   <slot />
 </button>

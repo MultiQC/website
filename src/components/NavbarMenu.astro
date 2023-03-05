@@ -19,10 +19,14 @@ const { navbarItems } = Astro.props;
   const logos = document.getElementsByClassName("logo");
   if (matchMedia("(pointer:fine)").matches) {
     for (const logo of logos) {
-      logo.addEventListener("contextmenu", (event) => {
-        event.preventDefault();
-        window.location.href = "/logos";
-      });
+      logo.addEventListener(
+        "contextmenu",
+        (event) => {
+          event.preventDefault();
+          window.location.href = "/logos";
+        },
+        { passive: true }
+      );
     }
   }
 </script>

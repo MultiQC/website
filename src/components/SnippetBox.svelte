@@ -17,7 +17,7 @@
   {#each snippets as snippet, idx (idx)}
     <div id={`snippet-${snippet.title}`} class="typo-small">
       <pre
-        class="px-3 text-xs font-light"
+        class="px-3 py-2 text-xs font-light"
         class:hidden={idx !== active}
         class:d-inline-block={idx === active}>{@html Prism.highlight(
           snippet.code,

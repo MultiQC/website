@@ -38,7 +38,7 @@
           on:click={() => {
             lang = language;
           }}
-          class={"typo-small text-red block border border-r-0 border-gray-800 bg-gray-700 px-2 py-0.5 text-left text-xs text-white first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r hover:bg-gray-600 " +
+          class={"typo-small text-red block border border-r-0 border-gray-800 bg-gray-700 px-2 py-0.5 text-left text-xs text-gray-100 first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r hover:bg-gray-600 " +
             (lang === language ? " bg-neutral-600" : "")}
         >
           {languageBtnTexts[language]}
@@ -52,7 +52,7 @@
             on:click={() => {
               currentIndex = idx;
             }}
-            class={"typo-small block border border-b-0 border-gray-800 bg-gray-700 px-4 py-2 text-left text-white first:mt-0 first:rounded-t-sm last:mb-0 last:rounded-b-sm last:border-b hover:bg-gray-600 " +
+            class={"typo-small block border border-b-0 border-gray-800 bg-gray-700 px-4 py-2 text-left text-gray-100 first:mt-0 first:rounded-t-sm last:mb-0 last:rounded-b-sm last:border-b hover:bg-gray-600 " +
               (currentIndex === idx ? " bg-neutral-600" : "")}
           >
             {video.title}
