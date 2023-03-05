@@ -19,13 +19,9 @@
   });
 </script>
 
-<div class="row mt-8">
+<div class="row mt-8 items-center">
   <div class="wrapper col-full lg:col-6 hidden lg:block">
-    <lite-youtube videoid="filteredVideos[currentIndex].id">
-      <button type="button" class="lty-playbtn">
-        <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
-      </button>
-    </lite-youtube>
+    <lite-youtube videoid="filteredVideos[currentIndex].id" />
     <iframe
       id="multiqc-video"
       src={"https://www.youtube.com/embed/" + filteredVideos[currentIndex].id}
@@ -33,24 +29,11 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
       title="multiqc video"
-      class="video"
+      class="video aspect-video h-full w-full"
     />
   </div>
-  <div class="col-full lg:col-6">
-    <div class="flex inline-flex overflow-hidden rounded-sm">
-      {#each languages as language}
-        <button
-          on:click={() => {
-            lang = language;
-          }}
-          class={"typo-small text-red block border border-r-0 border-gray-800 bg-gray-700 px-2 py-0.5 text-left text-xs text-gray-100 first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r hover:bg-gray-600 " +
-            (lang === language ? " bg-neutral-600" : "")}
-        >
-          {languageBtnTexts[language]}
-        </button>
-      {/each}
-    </div>
-    <div class="mt-3">
+  <div class="col-full lg:col-6 !pl-0">
+    <div class="">
       <div class="flex flex-col overflow-hidden rounded-sm">
         {#each filteredVideos as video, idx (idx)}
           <button
@@ -65,23 +48,21 @@
         {/each}
       </div>
     </div>
+    <div class="mt-3 flex inline-flex overflow-hidden rounded-sm">
+      {#each languages as language}
+        <button
+          on:click={() => {
+            lang = language;
+          }}
+          class={"typo-small text-red block border border-r-0 border-gray-800 bg-gray-700 px-2 py-0.5 text-left text-xs text-gray-100 first:ml-0 first:rounded-l-sm last:mr-0 last:rounded-r-sm last:border-r hover:bg-gray-600 " +
+            (lang === language ? " bg-neutral-600" : "")}
+        >
+          {languageBtnTexts[language]}
+        </button>
+      {/each}
+    </div>
   </div>
 </div>
 
 <style lang="scss">
-  .wrapper {
-    position: relative;
-    padding-bottom: 25%;
-    width: 100%;
-  }
-
-  .video {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-  }
 </style>
