@@ -1,7 +1,7 @@
 <script lang="ts">
   import DarkModeToggle from "@components/DarkModeToggle.svelte";
-  import NavbarToc from "@components/NavbarToc.svelte";
   import Icon from "@iconify/svelte";
+  import NavbarToc from "@layouts/NavbarToc.svelte";
   import HeroBackgroundSrc from "/images/background.png";
   import LogoCircle from "/logos/multiqc_logo_circle.svg";
   import Logo from "/logos/multiqc_logo_darkbg.svg";

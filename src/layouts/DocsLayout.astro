@@ -3,7 +3,8 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
 import MarkdownWrapper from "@components/MarkdownWrapper.svelte";
 import SidebarNav from "@layouts/SidebarNav.astro";
-import SidebarToc from "@components/SidebarToc.svelte";
+import SidebarSecondary from "@layouts/SidebarSecondary.astro";
+import CommunityLinks from "@layouts/CommunityLinks.astro";
 export interface Props {
   title?: string;
   subtitle?: string;
@@ -17,6 +18,33 @@ export interface Props {
   }[];
 }
 const { title, subtitle, image, md_github_url, subfooter, headings } = Astro.props;
+const community_links = [
+  {
+    url: md_github_url,
+    icon: "mdi:lead-pencil",
+    text: "Edit this page",
+  },
+  {
+    url: "https://join.slack.com/t/multiqc/shared_invite/zt-1ps4q1u5x-2WtAJlZKMzMewURyxAChGA",
+    icon: "mdi:slack",
+    text: "Slack",
+  },
+  {
+    url: "https://github.com/ewels/MultiQC",
+    icon: "mdi:github",
+    text: "GitHub",
+  },
+  {
+    url: "https://twitter.com/MultiQC",
+    icon: "mdi:twitter",
+    text: "Twitter",
+  },
+  {
+    url: "https://mstdn.science/@multiqc",
+    icon: "mdi:mastodon",
+    text: "Mastodon",
+  },
+];
 ---
 
 <BaseLayout
@@ -46,12 +74,15 @@ const { title, subtitle, image, md_github_url, subfooter, headings } = Astro.pro
           <slot />
         </MarkdownWrapper>
         <slot />
+        <nav class="mt-12 text-gray-600 dark:text-gray-500 lg:hidden">
+          <CommunityLinks links={community_links} />
+        </nav>
       </main>
 
       <div
         class="sticky top-28 ml-5 hidden h-[calc(100vh-7rem)] w-[17rem] flex-none overflow-y-auto pb-10 xl:block"
       >
-        <SidebarToc headings={headings} client:visible />
+        <SidebarSecondary headings={headings} community_links={community_links} />
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 ---
-import NavbarMenu from "@components/NavbarMenu.astro";
-import NavbarMenuMobile from "@components/NavbarMenuMobile.svelte";
+import NavbarMenu from "@layouts/NavbarMenu.astro";
+import NavbarMenuMobile from "@layouts/NavbarMenuMobile.svelte";
 
 import { Icon } from "astro-icon";
 
@@ -35,11 +35,11 @@ const { headings = [], navbarItems = navPages } = Astro.props;
 
 <header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
   <NavbarMenu navbarItems={navbarItems}>
-    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 dark:text-gray-600 text-gray-300" />
+    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 text-gray-300 dark:text-gray-600" />
     <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
   </NavbarMenu>
   <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load>
-    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 dark:text-gray-600 text-gray-300" />
+    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 text-gray-300 dark:text-gray-600" />
     <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
   </NavbarMenuMobile>
 </header>
