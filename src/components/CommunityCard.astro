@@ -13,8 +13,10 @@ const { title, url, icon, icon_classes = "" } = Astro.props;
 ---
 
 <Card>
-  <a href={url} class="group -m-8 block h-max">
-    <div class="flex h-44 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50">
+  <a href={url} class="group -my-6 -mx-4 block h-max sm:-m-8">
+    <div
+      class="flex h-32 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50 sm:h-44"
+    >
       <Icon
         name={icon}
         class={"w-20 h-20 group-hover:w-24 group-hover:h-24 transition-all dark:fill-white " +
