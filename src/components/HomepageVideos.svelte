@@ -21,6 +21,11 @@
 
 <div class="row mt-8">
   <div class="wrapper col-full lg:col-6 hidden lg:block">
+    <lite-youtube videoid="filteredVideos[currentIndex].id">
+      <button type="button" class="lty-playbtn">
+        <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+      </button>
+    </lite-youtube>
     <iframe
       id="multiqc-video"
       src={"https://www.youtube.com/embed/" + filteredVideos[currentIndex].id}
