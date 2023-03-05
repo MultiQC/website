@@ -13,7 +13,7 @@ const { title, url, icon, icon_classes = "" } = Astro.props;
 ---
 
 <Card>
-  <a href={url} class="group -my-6 -mx-4 block h-max sm:-m-8">
+  <a href={url} class="group -my-6 -mx-4 block h-max after:absolute after:inset-0 sm:-m-8">
     <div
       class="flex h-32 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50 sm:h-44"
     >
@@ -24,7 +24,11 @@ const { title, url, icon, icon_classes = "" } = Astro.props;
       />
     </div>
     <div class="p-8">
-      <h3 class="typo-h4 mb-4 group-hover:text-blue-500">{title}</h3>
+      <h3
+        class="typo-h4 dark:group-hover:text-blue-3000 mb-4 text-blue-600 group-hover:text-blue-500 dark:text-blue-400"
+      >
+        {title}
+      </h3>
       <p><slot /></p>
     </div>
   </a>
