@@ -1,8 +1,4 @@
 <script lang="ts">
-  import Prism from "prismjs";
-  import "prismjs/components/prism-bash";
-  import "prism-theme-github/themes/prism-theme-github-dark.css";
-
   export let snippets: {
     title: string;
     code: string;
@@ -19,10 +15,7 @@
       <pre
         class="px-3 py-2 text-xs font-light"
         class:hidden={idx !== active}
-        class:d-inline-block={idx === active}>{@html Prism.highlight(
-          snippet.code,
-          Prism.languages["bash"]
-        )}</pre>
+        class:d-inline-block={idx === active}>{@html snippet.code}</pre>
     </div>
   {/each}
 </div>
