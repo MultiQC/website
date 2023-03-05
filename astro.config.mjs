@@ -22,7 +22,6 @@ export default defineConfig({
     prefetch(),
     sitemap(),
     svelte(),
-    purgecss(),
   ],
   vite: {
     plugins: [yaml()],
