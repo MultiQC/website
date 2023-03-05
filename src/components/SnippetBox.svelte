@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Highlight from "svelte-highlight";
-  import bash from "svelte-highlight/languages/bash";
-  import "svelte-highlight/styles/github-dark.css";
+  import Prism from "prismjs";
+  import "prismjs/components/prism-bash";
+  import "prism-theme-github/themes/prism-theme-github-dark.css";
 
   export let snippets: {
     title: string;
@@ -14,9 +14,17 @@
 </script>
 
 <div class="">
-  <div id={`snippet-${snippets[active].title}`} class="typo-small">
-    <pre class="text-xs font-light"><Highlight language={bash} code={snippets[active].code} /></pre>
-  </div>
+  {#each snippets as snippet, idx (idx)}
+    <div id={`snippet-${snippet.title}`} class="typo-small">
+      <pre
+        class="px-3 text-xs font-light"
+        class:hidden={idx !== active}
+        class:d-inline-block={idx === active}>{@html Prism.highlight(
+          snippet.code,
+          Prism.languages["bash"]
+        )}</pre>
+    </div>
+  {/each}
 </div>
 <div class="flex w-full justify-between border-t border-blue-600 bg-gray-800">
   {#each snippets as snippet, index (snippet.title)}
@@ -25,7 +33,7 @@
       class={columnsClass[snippets.length] +
         " typo-small px-2 py-1 text-center " +
         (index !== active
-          ? "text-gray-200 hover:bg-gray-900 hover:text-gray-100"
+          ? "bg-gray-700 text-gray-200 hover:bg-blue-600/75 "
           : "bg-blue-600 text-gray-100")}
       on:click={() => {
         active = index;
