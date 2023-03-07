@@ -1,8 +1,11 @@
 ---
 import DocsLayout from "@layouts/DocsLayout.astro";
+import fs from "node:fs/promises";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
+
+  // Get slugs used to build the side docs navigation
   function get_slug(filename: string) {
     let slug = filename
       .split("/docs/core/")
@@ -14,6 +17,23 @@ export async function getStaticPaths() {
     }
     return slug;
   }
+
+  // Copy over any markdown images used to /public
+  // destination will be created or overwritten by default.
+  posts.forEach((post) => {
+    const matches = post.compiledContent().matchAll(/src="..\/..\/docs-images\/([^"]+)"/g);
+    for (const match of matches) {
+      const [fullMatch, filename, content] = match;
+      // NB: Paths relative to website root
+      const src = "../MultiQC/docs/docs-images/" + filename;
+      const dest = "public/docs-images/" + filename;
+      fs.copyFile(src, dest, fs.constants.COPYFILE_FICLONE, (err) => {
+        if (err) throw err;
+      });
+    }
+  });
+
+  // Return the posts map
   return posts.map((post) => ({
     params: {
       slug: get_slug(post.file),
