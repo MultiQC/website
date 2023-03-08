@@ -1,6 +1,6 @@
 ---
 import DocsLayout from "@layouts/DocsLayout.astro";
-import fs from "node:fs/promises";
+import fs from "node:fs";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
@@ -43,10 +43,20 @@ for (const match of matches) {
   const [fullMatch, filename, content] = match;
   // NB: Paths relative to website root
   const src = "../MultiQC/docs/docs-images/" + filename;
-  const dest = "public/docs-images/" + filename;
-  fs.copyFile(src, dest, fs.constants.COPYFILE_FICLONE, (err) => {
+  const public_dest = "public/docs-images/" + filename;
+  const dist_dest = "dist/docs-images/" + filename;
+  console.log("Copying " + public_dest);
+  fs.copyFile(src, public_dest, fs.constants.COPYFILE_FICLONE, (err) => {
     if (err) throw err;
   });
+  // Dist should exist if we're building for production
+  // Check if dist/ directory exists
+  if (fs.existsSync("dist")) {
+    console.log("Copying " + dist_dest);
+    fs.copyFile(src, dist_dest, fs.constants.COPYFILE_FICLONE, (err) => {
+      if (err) throw err;
+    });
+  }
 }
 ---
 
