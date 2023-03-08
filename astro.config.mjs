@@ -32,10 +32,7 @@ export default defineConfig({
         urls,
         (url) => {
           if (url.href.startsWith("../../images/")) {
-            return url.href.replace(
-              "../../",
-              "https://raw.githubusercontent.com/ewels/MultiQC/docs-restructure/docs/"
-            );
+            return url.href.replace("../../", "/docs/images/");
           }
         },
       ],
