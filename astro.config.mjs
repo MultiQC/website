@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import urls from "rehype-urls";
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
@@ -24,5 +25,17 @@ export default defineConfig({
   ],
   vite: {
     plugins: [yaml()],
+  },
+  markdown: {
+    rehypePlugins: [
+      [
+        urls,
+        (url) => {
+          if (url.href.startsWith("../../images/")) {
+            return url.href.replace("../../images/", "/docs/images/");
+          }
+        },
+      ],
+    ],
   },
 });

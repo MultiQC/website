@@ -1,8 +1,11 @@
 ---
 import DocsLayout from "@layouts/DocsLayout.astro";
+import fs from "node:fs";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
+
+  // Get slugs used to build the side docs navigation
   function get_slug(filename: string) {
     let slug = filename
       .split("/docs/core/")
@@ -14,6 +17,8 @@ export async function getStaticPaths() {
     }
     return slug;
   }
+
+  // Return the posts map
   return posts.map((post) => ({
     params: {
       slug: get_slug(post.file),
@@ -30,6 +35,29 @@ const gh_url =
   "https://github.com/ewels/MultiQC/blob/master/docs/core/" +
   Astro.props.post.file.split("/").pop();
 const headings = Astro.props.post.getHeadings();
+
+// Copy over any markdown images used to /public
+// destination will be created or overwritten by default.
+// NB: Regex matches markdown after rehypePlugins modifications in astro.config.mjs
+const matches = Astro.props.post.compiledContent().matchAll(/src="\/docs\/images\/([^"]+)"/g);
+for (const match of matches) {
+  const [fullMatch, filename, content] = match;
+  // NB: Paths relative to website root
+  console.log("Copying " + filename);
+  const src = "../MultiQC/docs/images/" + filename;
+  const public_dest = "public/docs/images/" + filename;
+  const dist_dest = "dist/docs/images/" + filename;
+  fs.copyFile(src, public_dest, fs.constants.COPYFILE_FICLONE, (err) => {
+    if (err) throw err;
+  });
+  // Dist should exist if we're building for production
+  // Check if dist/ directory exists
+  if (fs.existsSync("dist")) {
+    fs.copyFile(src, dist_dest, fs.constants.COPYFILE_FICLONE, (err) => {
+      if (err) throw err;
+    });
+  }
+}
 ---
 
 <DocsLayout
