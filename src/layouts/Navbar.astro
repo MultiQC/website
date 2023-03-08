@@ -33,6 +33,13 @@ const navPages = [
 const { headings = [], navbarItems = navPages } = Astro.props;
 ---
 
+<header class="bg-blue-800 shadow-[inset_0_-5px_4px_0_rgba(0,0,0,0.1)]">
+  <div class="container-lg py-3">
+    <a href="https://seqera.io/" target="_blank">
+      <Icon name="seqera-logo-mono" alt="Seqera Labs logo" class="h-4 fill-white" />
+    </a>
+  </div>
+</header>
 <header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
   <NavbarMenu navbarItems={navbarItems}>
     <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 text-gray-300 dark:text-gray-600" />
