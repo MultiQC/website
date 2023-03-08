@@ -49,17 +49,34 @@
     <div class="flex h-full flex-col">
       <div class="flex-1 overflow-y-auto text-center">
         {#each navbarItems as page (page)}
-          <a
-            href={page.slug}
-            class="typo-intro  mt-4 block rounded-sm bg-black bg-opacity-0 py-3 text-gray-100"
-            class:bg-opacity-30={(location.pathname.includes(page.slug) && page.slug !== "/") ||
-              (page.slug === "/" && location.pathname === "/")}
-            class:hover:bg-opacity-50={(!location.pathname.includes(page.slug) &&
-              page.slug !== "/") ||
-              (page.slug === "/" && location.pathname !== "/")}
-          >
-            {page.text}</a
-          >
+          {#if page.items?.length > 0}
+            {#each page.items as subpage (subpage)}
+              <a
+                href={subpage.slug}
+                class="typo-intro mt-4 block rounded-sm bg-black bg-opacity-0 py-3 text-gray-100"
+                class:bg-opacity-30={(location.pathname.includes(subpage.slug) &&
+                  subpage.slug !== "/") ||
+                  (subpage.slug === "/" && location.pathname === "/")}
+                class:hover:bg-opacity-50={(!location.pathname.includes(subpage.slug) &&
+                  subpage.slug !== "/") ||
+                  (subpage.slug === "/" && location.pathname !== "/")}
+              >
+                {subpage.text}</a
+              >
+            {/each}
+          {:else}
+            <a
+              href={page.slug}
+              class="typo-intro  mt-4 block rounded-sm bg-black bg-opacity-0 py-3 text-gray-100"
+              class:bg-opacity-30={(location.pathname.includes(page.slug) && page.slug !== "/") ||
+                (page.slug === "/" && location.pathname === "/")}
+              class:hover:bg-opacity-50={(!location.pathname.includes(page.slug) &&
+                page.slug !== "/") ||
+                (page.slug === "/" && location.pathname !== "/")}
+            >
+              {page.text}</a
+            >
+          {/if}
         {/each}
         <div class="mt-4">
           <DarkModeToggle><slot /></DarkModeToggle>
