@@ -1,18 +1,19 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
+import Card from "@components/Card.astro";
 ---
 
 <PageLayout
   title="MultiQC Publication Details"
   subtitle="Details about how to cite the MultiQC publication."
 >
-  <div class="text-center">
+  <div class="mb-8 text-center">
     <p class="typo-h4 mb-3">Please consider citing MultiQC if you use it in your analysis.</p>
     <p class="typo-blockquote mb-6">
       Citing MultiQC supports the project by demonstrating usage within the community.
     </p>
-    <div class="mb-10 rounded-md border border-gray-500 p-6 text-center">
+    <Card>
       <p class="typo-intro">
         MultiQC: Summarize analysis results for multiple tools and samples in a single report
       </p>
@@ -21,18 +22,18 @@ import Button from "@components/Button.svelte";
         <span class="ml-3 mr-1 italic">Bioinformatics</span> (2016)
         <br />
       </p>
-    </div>
+    </Card>
   </div>
   <div class="row">
     <div class="col-full md:col-6 mb-8">
       <span
-        class="__dimensions_badge_embed__ !text-right"
+        class="__dimensions_badge_embed__ !text-center md:!text-right"
         data-doi="10.1093/bioinformatics/btw354"
         data-legend="always"></span>
       <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
     </div>
     <div class="col-full md:col-6 mb-8">
-      <p>
+      <p class="text-center md:text-left">
         <Button
           to="http://dx.doi.org/10.1093/bioinformatics/btw354"
           variant="primary"
@@ -65,7 +66,7 @@ import Button from "@components/Button.svelte";
   <div class="my-8">
     <h2 class="typo-h3 my-4">Abstract</h2>
 
-    <p class="typo-body my-4">
+    <p class="typo-body custom my-4">
       <span class="mr-1 font-semibold underline">Motivation:</span> Fast and accurate quality control
       is essential for studies involving next-generation sequencing data. Whilst numerous tools exist
       to quantify QC metrics, there is no common approach to flexibly integrate these across tools and
@@ -94,3 +95,15 @@ import Button from "@components/Button.svelte";
     </p>
   </div>
 </PageLayout>
+
+<style type="text/css" is:global>
+  .__dimensions_badge_embed__ .__dimensions_Badge_Legend_padding.__dimensions_Badge_Legend_always {
+    background-color: transparent !important;
+  }
+  .dark .__dimensions_badge_embed__ .__dimensions_Badge_Legend div {
+    color: #fff !important;
+  }
+  .__dimensions_badge_embed__ .__dimensions_Badge_Legend {
+    margin-top: 1rem;
+  }
+</style>
