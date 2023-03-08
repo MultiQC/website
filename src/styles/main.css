@@ -195,6 +195,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .admonition {
+    @apply my-4 rounded-md p-4;
+  }
+  .admonition-note {
+    @apply bg-red-100 dark:bg-red-600/[0.2];
+  }
 }
 
 @layer utilities {

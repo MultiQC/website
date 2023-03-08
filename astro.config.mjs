@@ -9,6 +9,9 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import yaml from "@rollup/plugin-yaml";
 
+import remarkDirective from "remark-directive";
+import calloutsPlugin from "./plugins/remark-callouts.js";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://multiqc.info",
@@ -27,6 +30,7 @@ export default defineConfig({
     plugins: [yaml()],
   },
   markdown: {
+    remarkPlugins: [remarkDirective, calloutsPlugin],
     rehypePlugins: [
       [
         urls,
