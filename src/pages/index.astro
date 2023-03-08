@@ -28,23 +28,37 @@ const exampleReports = await getCollection("example-reports");
     <div class="container-lg relative">
       <div class="row">
         <div class="col-full lg:col-8">
-          <div class="flex-row items-end items-stretch lg:flex">
-            <Icon name="multiqc_logo_light" class="logo mb-5 w-full cursor-pointer lg:w-[430px]" />
-            <div class="grow text-right">
+          <div class="mb-10 flex-row items-end items-stretch text-right lg:flex">
+            <div>
+              <Icon name="multiqc_logo_light" class="logo w-full cursor-pointer lg:w-[430px]" />
+              <a
+                href="https://seqera.io"
+                target="_blank"
+                class="typo-small mt-4 inline-block text-gray-400 transition-colors hover:text-gray-100"
+              >
+                Supported by <Icon
+                  name="seqera-logo-mono"
+                  alt="Seqera Labs logo"
+                  class="ml-2 inline h-6 fill-current"
+                />
+              </a>
+            </div>
+            <div class="grow pt-6">
               {
                 latestRelease && (
                   <a
                     href="https://github.com/ewels/MultiQC/releases"
-                    class="typo-small mr-5 text-xs text-gray-300"
+                    class="typo-small mb-6 block text-xs text-gray-300 transition-colors hover:text-gray-100"
                   >
-                    Latest release: {latestRelease}
+                    Latest release: <strong class="ml-2">{latestRelease}</strong>
                   </a>
                 )
               }
-
-              <div class="mt-4 mr-5 hidden lg:block">
+              <div
+                class="hidden w-28 opacity-80 transition-opacity hover:opacity-100 lg:inline-block"
+              >
                 <span
-                  class="__dimensions_badge_embed__ !text-right"
+                  class="__dimensions_badge_embed__ inline-block"
                   data-doi="10.1093/bioinformatics/btw354"
                   data-legend="never"
                   data-style="large_rectangle"></span>
