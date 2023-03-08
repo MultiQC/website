@@ -14,7 +14,7 @@
   }
 </script>
 
-<nav class="mobile-toc text-gray-600 dark:text-gray-500" class:hidden={headings.length == 0}>
+<nav class="mobile-toc text-gray-600 dark:text-gray-400" class:hidden={headings.length == 0}>
   <button
     class="mx-2 mr-px rounded-sm border border-gray-500 bg-black bg-opacity-20 py-1 px-4 font-body font-light tracking-wide text-gray-300 hover:bg-opacity-50 hover:text-white"
     type="button"
