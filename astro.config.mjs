@@ -32,7 +32,7 @@ export default defineConfig({
         urls,
         (url) => {
           if (url.href.startsWith("../../images/")) {
-            return url.href.replace("../../", "/docs/images/");
+            return url.href.replace("../../images/", "/docs/images/");
           }
         },
       ],
