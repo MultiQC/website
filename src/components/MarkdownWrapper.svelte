@@ -30,16 +30,5 @@
 </div>
 
 <style lang="scss">
-  .markdown-content {
-    :global(.admonition) {
-      @apply rounded-sm border p-4;
-      :global(p) {
-        margin: 0;
-      }
-    }
-
-    :global(.admonition-info) {
-      @apply border-blue-500  bg-blue-400 dark:bg-blue-600;
-    }
-  }
+ 
 </style>

@@ -203,6 +203,51 @@ module.exports = {
             "code::after": {
               content: '""',
             },
+            //admonitions
+            ".admonition": {
+              border: "1px solid",
+              padding: "1rem",
+              borderRadius: theme("borderRadius.md"),
+              marginBottom: "1rem",
+              p: {
+                margin: 0,
+              },
+
+              "&.admonition-info": {
+                borderColor: theme("colors.blue.600"),
+                backgroundColor: theme("colors.blue.50"),
+                color: theme("colors.blue.900"),
+              },
+              "&.admonition-warning": {
+                borderColor: theme("colors.yellow.600"),
+                backgroundColor: theme("colors.yellow.200"),
+
+                color: theme("colors.yellow.300"),
+                p: {},
+                ".title": {
+                  color: theme("colors.yellow.900"),
+                },
+              },
+              "&.admonition-danger": {
+                borderColor: theme("colors.red.600"),
+                backgroundColor: theme("colors.red.50"),
+                color: theme("colors.red.900"),
+              },
+              "&.admonition-success": {
+                borderColor: theme("colors.green.600"),
+                backgroundColor: theme("colors.green.50"),
+                color: theme("colors.green.900"),
+              },
+              "&.admonition-note": {
+                borderColor: theme("colors.gray.600"),
+                backgroundColor: theme("colors.gray.50"),
+                color: theme("colors.gray.900"),
+              },
+              ".icon": {
+                fill: "currentColor",
+                width: "1.5rem",
+              },
+            },
           },
         },
         invert: {
