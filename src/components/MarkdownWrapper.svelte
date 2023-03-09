@@ -28,7 +28,3 @@
 <div class="markdown-content">
   <slot />
 </div>
-
-<style lang="scss">
- 
-</style>
