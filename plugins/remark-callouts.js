@@ -4,11 +4,27 @@ import { h } from "hastscript";
 import { visit } from "unist-util-visit";
 
 const acceptableCalloutTypes = {
-  note: { cssClass: "note", icon: "📝" },
-  tip: { cssClass: "success", icon: "💡" },
-  info: { cssClass: "info", icon: "ℹ️" },
-  warning: { cssClass: "warning", icon: "⚠️" },
-  danger: { cssClass: "danger", icon: "🚨" },
+  note: {
+    title: "Note",
+    cssClass: "note",
+    svg: "M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z",
+  },
+
+  info: {
+    title: "Info",
+    cssClass: "info",
+    svg: "M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12Z",
+  },
+  warning: {
+    title: "Warning",
+    cssClass: "warning",
+    svg: "M9 22a1 1 0 0 1-1-1v-3H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6.1l-3.7 3.71c-.2.19-.45.29-.7.29H9m1-6v3.08L13.08 16H20V4H4v12h6m3-6h-2V6h2v4m0 4h-2v-2h2v2Z",
+  },
+  danger: {
+    title: "Danger",
+    cssClass: "danger",
+    svg: "M8.27 3L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3M8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41",
+  },
 };
 
 /**
@@ -36,18 +52,29 @@ export default function calloutsPlugin() {
           class: `admonition admonition-${boxInfo.cssClass}`,
         }).properties;
 
-        // Creating the icon.
-        const icon = h("i", boxInfo.icon);
-        const iconData = icon.data || (icon.data = {});
-        iconData.hName = "i";
-        iconData.hProperties = h("i", boxInfo.icon).properties;
+        // Add svg icon
+        const svg = h("svg", { class: "icon", viewBox: "0 0 24 24" });
+        const svgData = svg.data || (svg.data = {});
+        svgData.hName = "svg";
+        svgData.hProperties = h("svg", { class: "icon", viewBox: "0 0 24 24" }).properties;
+        const svgPath = h("path", { d: boxInfo.svg });
+        const svgPathData = svgPath.data || (svgPath.data = {});
+        svgPathData.hName = "path";
+        svgPathData.hProperties = h("path", { d: boxInfo.svg }).properties;
+        svg.children = [svgPath];
+
+        // Creating title
+        const title = h("p", { class: "admonition-title" }, boxInfo.title);
+        const titleData = title.data || (title.data = {});
+        titleData.hName = "p";
+        titleData.hProperties = h("p", { class: "admonition-title" }, boxInfo.title).properties;
 
         // Creating the icon's column.
         const iconWrapper = h("div");
         const iconWrapperData = iconWrapper.data || (iconWrapper.data = {});
         iconWrapperData.hName = "div";
-        iconWrapperData.hProperties = h("div", { class: "column is-narrow" }).properties;
-        iconWrapper.children = [icon];
+        iconWrapperData.hProperties = h("div", { class: "column title flex" }).properties;
+        iconWrapper.children = [svg, title];
 
         // Creating the content's column.
         const contentColWrapper = h("div");
