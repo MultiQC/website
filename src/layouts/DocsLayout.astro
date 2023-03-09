@@ -64,12 +64,14 @@ const community_links = [
   <div class="py-10 px-4 lg:py-20 lg:px-10">
     <div class="lg:flex">
       <div
-        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[12rem] flex-none overflow-y-auto pb-10 lg:block"
+        class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[8rem] flex-none overflow-y-auto pb-10 lg:block 2xl:w-[17rem]"
       >
         <SidebarNav />
       </div>
 
-      <main class="lg:container-lg lg:w-[calc(100%-12rem)] xl:w-[calc(100%-29rem)]">
+      <main
+        class="lg:container-lg lg:w-[calc(100%-8rem)] xl:w-[calc(100%-25rem)] 2xl:w-[calc(100%-34rem)]"
+      >
         <MarkdownWrapper headings={headings} client:load>
           <slot />
         </MarkdownWrapper>
