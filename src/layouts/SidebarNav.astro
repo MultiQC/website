@@ -10,7 +10,7 @@ import docs_nav from "../../../MultiQC/docs/core/config.yaml";
     docs_nav["nav"].map((section) => (
       <section class="mb-6">
         <h5 class="mb-2 font-semibold">{Object.keys(section)[0]}</h5>
-        <SidebarNavSection section={section} current_page={Astro.url.pathname} />
+        <SidebarNavSection section={section} />
       </section>
     ))
   }
