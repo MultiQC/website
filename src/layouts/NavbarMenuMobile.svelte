@@ -53,7 +53,7 @@
             {#each page.items as subpage (subpage)}
               <a
                 href={subpage.slug}
-                class="typo-intro mt-4 block rounded-sm bg-black bg-opacity-0 py-3 text-gray-100"
+                class="typo-intro mt-1 block rounded-sm bg-black bg-opacity-0 py-2 text-gray-100"
                 class:bg-opacity-30={(location.pathname.includes(subpage.slug) &&
                   subpage.slug !== "/") ||
                   (subpage.slug === "/" && location.pathname === "/")}
@@ -67,7 +67,7 @@
           {:else}
             <a
               href={page.slug}
-              class="typo-intro  mt-4 block rounded-sm bg-black bg-opacity-0 py-3 text-gray-100"
+              class="typo-intro  mt-1 block rounded-sm bg-black bg-opacity-0 py-2 text-gray-100"
               class:bg-opacity-30={(location.pathname.includes(page.slug) && page.slug !== "/") ||
                 (page.slug === "/" && location.pathname === "/")}
               class:hover:bg-opacity-50={(!location.pathname.includes(page.slug) &&
