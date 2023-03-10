@@ -203,6 +203,17 @@ module.exports = {
             "code::after": {
               content: '""',
             },
+
+            ".prose *:is(h1, h2, h3, h4, h5, h6)": {
+              "@apply flex items-center": {},
+              "&:has(.anchor-icon):hover .anchor-icon": {
+                "@apply inline-block": {},
+              },
+            },
+
+            "a:has(.anchor-icon)": {
+              "@apply flex": {}, // center anchor icon
+            },
             //admonitions
             ".admonition": {
               p: {
