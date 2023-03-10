@@ -187,6 +187,7 @@ module.exports = {
             "a.btn-primary, a.btn-secondary": {
               textDecoration: "none",
             },
+
             // Some colour to inline code
             ":not(pre) > code": {
               color: theme("colors.sky.900"),
@@ -204,17 +205,19 @@ module.exports = {
               content: '""',
             },
 
+            // Anchor icons for headings
             ".prose *:is(h1, h2, h3, h4, h5, h6)": {
               "@apply flex items-center": {},
               "&:has(.anchor-icon):hover .anchor-icon": {
-                "@apply inline-block": {},
+                "@apply opacity-100": {},
               },
             },
 
             "a:has(.anchor-icon)": {
               "@apply flex": {}, // center anchor icon
             },
-            //admonitions
+
+            // Admonitions
             ".admonition": {
               p: {
                 margin: "0",

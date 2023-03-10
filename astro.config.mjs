@@ -55,7 +55,7 @@ export default defineConfig({
         {
           behavior: "append",
           content: h(
-            `span.anchor-icon.hidden.text-gray-500.self-center.ml-2.hover:text-blue-600.dark:hover:text-blue-300`,
+            `span.anchor-icon.opacity-0.text-gray-500.self-center.ml-2.hover:text-blue-600.dark:hover:text-blue-300`,
             {
               ariaHidden: "true",
             },
