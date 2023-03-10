@@ -21,7 +21,7 @@ const { headings, community_links } = Astro.props;
 ---
 
 <nav class="text-gray-600 dark:text-gray-400">
-  <h5 class="mb-2 text-xs font-semibold">On this page</h5>
+  <h5 class="m-2 text-xs font-semibold">On this page</h5>
   <SidebarToc headings={headings} client:visible />
 
   <CommunityLinks links={community_links} />
