@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import { currentHeading } from "@components/store.js";
+  import { onMount } from "svelte";
 
   export let headings: { text: string; slug: string; depth: number }[] = [];
 
