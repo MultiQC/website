@@ -12,6 +12,11 @@
   function toggleVisible() {
     visible = !visible;
   }
+  function setCurrentHeading(heading: string) {
+    currentHeading.set(heading);
+    console.log(currentHeading);
+    return null;
+  }
 </script>
 
 <nav class="mobile-toc text-gray-600 dark:text-gray-400" class:hidden={headings.length <= 1}>
@@ -34,6 +39,7 @@
             <a
               class="block py-1 px-2 text-gray-400 hover:bg-blue-600/[0.2] hover:text-gray-200"
               href={"#" + heading.slug}
+              on:click={setCurrentHeading(heading.slug)}
               on:click={toggleVisible}
             >
               {@html heading.text}
