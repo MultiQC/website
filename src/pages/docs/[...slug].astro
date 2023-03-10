@@ -34,7 +34,7 @@ const { Content, frontmatter } = Astro.props.post;
 const gh_url =
   "https://github.com/ewels/MultiQC/blob/master/docs/core/" +
   Astro.props.post.file.split("/").pop();
-const headings = Astro.props.post.getHeadings();
+const headings = Astro.props.post.getHeadings().filter((h) => h.depth >= 2);
 
 // Copy over any markdown images used to /public
 // destination will be created or overwritten by default.
