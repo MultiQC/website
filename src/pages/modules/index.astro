@@ -24,34 +24,29 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
       open an issue
     </a>.
   </p>
-  <table class="mt-8">
-    <thead>
-      <tr>
-        <td class="w-1/4">
-          <span class="typo-intro">Tool Name</span>
-        </td>
-        <td>
-          <span class="typo-intro">Description</span>
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        modules &&
-          modules.map((module) => (
-            <tr class="hover:bg-gray-200/40 dark:hover:bg-gray-900/20">
-              <td>
-                <a
-                  href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
-                  class="typo-body text-blue-600 dark:text-blue-400"
-                >
-                  {module.frontmatter.name}
-                </a>
-              </td>
-              <td>{module.frontmatter.description}</td>
-            </tr>
-          ))
-      }
-    </tbody>
-  </table>
+  <div class="grid-cols-4 lg:grid">
+    <div class="typo-intro bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:hidden">Tool</div>
+    <div class="typo-intro hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">Tool Name</div>
+    <div class="typo-intro col-span-3 hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">
+      Description
+    </div>
+    {
+      modules &&
+        modules.map((module) => (
+          <>
+            <div class="flex items-center border-gray-200 px-4 py-2 dark:border-gray-700 lg:border-b">
+              <a
+                href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
+                class="typo-body text-blue-600 dark:text-blue-400"
+              >
+                {module.frontmatter.name}
+              </a>
+            </div>
+            <div class="col-span-3 flex items-center border-b border-gray-200 px-4 py-2 pb-6 dark:border-gray-700 lg:pb-2">
+              {module.frontmatter.description}
+            </div>
+          </>
+        ))
+    }
+  </div>
 </PageLayout>
