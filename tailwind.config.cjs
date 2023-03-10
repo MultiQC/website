@@ -190,8 +190,8 @@ module.exports = {
 
             // Some colour to inline code
             ":not(pre) > code": {
-              color: theme("colors.sky.900"),
-              backgroundColor: theme("colors.sky.100"),
+              color: theme("colors.blue.900"),
+              backgroundColor: theme("colors.blue.700 / 10%"),
               borderRadius: theme("borderRadius.sm"),
               padding: "0.15rem 0.3rem",
               margin: "0 0.1rem",
@@ -301,8 +301,8 @@ module.exports = {
               color: theme("colors.gray.300"),
             },
             ":not(pre) > code": {
-              color: theme("colors.sky.200"),
-              backgroundColor: theme("colors.sky.900 / 25%"),
+              color: theme("colors.blue.300"),
+              backgroundColor: theme("colors.blue.900 / 25%"),
             },
 
             // No backticks for inline code
