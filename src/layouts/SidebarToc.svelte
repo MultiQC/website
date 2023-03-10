@@ -8,11 +8,6 @@
   }[];
 
   const min_heading_depth = Math.min(...headings.map((h) => h.depth));
-
-  function setCurrentHeading(heading: string) {
-    currentHeading.set(heading);
-    return null;
-  }
 </script>
 
 <ul class="toc">
@@ -27,7 +22,9 @@
         href={"#" + heading.slug}
         style="margin-left: {(heading.depth - min_heading_depth) * 0.5}rem; font-size: {90 -
           (heading.depth - min_heading_depth) * 10}%;"
-        on:click={setCurrentHeading(heading.slug)}
+        on:click={() => {
+          currentHeading.set(heading.slug);
+        }}
       >
         {@html heading.text}
       </a>
