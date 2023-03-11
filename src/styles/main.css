@@ -183,8 +183,13 @@
 
   .toc .active a,
   .toc .active a:hover {
-    @apply border-blue-600 bg-blue-100  dark:border-blue-600 dark:bg-blue-600/[0.2] dark:text-gray-400;
+    @apply bg-blue-100   dark:bg-blue-600/[0.2] dark:text-gray-400;
   }
+  .toc .active a.heading-level-2,
+  .toc .active a.heading-level-2:hover {
+    @apply border-blue-600  dark:border-blue-600;
+  }
+
   .mobile-toc .toc .active a,
   .mobile-toc .toc .active a:hover {
     @apply border-blue-600 bg-blue-600/[0.4] text-gray-200;
@@ -195,8 +200,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  
 }
 
 @layer utilities {
@@ -207,4 +210,22 @@
   .bg-gradient-accent {
     background-image: linear-gradient(237.19deg, #24aa60 30.22%, #4256e7 87.13%);
   }
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
+  @apply flex items-center;
+}
+.prose .anchor-icon {
+  @apply ml-3 flex self-center text-gray-500 opacity-30 transition-opacity hover:text-blue-400 dark:hover:text-blue-600;
+}
+.prose h1:hover .anchor-icon,
+.prose h2:hover .anchor-icon,
+.prose h3:hover .anchor-icon,
+.prose h4:hover .anchor-icon,
+.prose h5:hover .anchor-icon {
+  @apply opacity-100;
 }

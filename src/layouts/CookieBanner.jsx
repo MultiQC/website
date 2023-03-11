@@ -1,3 +1,9 @@
+//
+//
+// TODO - OLD GATSBY COMPONENT - NEEDS TO BE REFACTORED
+//
+//
+
 import classnames from "classnames";
 import React from "react";
 import { useCookies } from "react-cookie";
@@ -30,7 +36,8 @@ const CookieBanner = () => {
             </div>
             <div className="w-5/12 justify-self-start">
               <p className="typo-small">
-                This website uses cookies to offer you a better browsing experience. Find out more on{" "}
+                This website uses cookies to offer you a better browsing experience. Find out more
+                on{" "}
                 <Link to="/privacy-policy/" className="text-green-600">
                   how we use cookies
                 </Link>

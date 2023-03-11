@@ -19,7 +19,11 @@ const { links } = Astro.props;
       <li>
         <a
           href={link.url}
-          class="block border-l-2 border-gray-200 py-1 px-2 text-xs hover:!border-blue-600 hover:bg-blue-100 hover:text-gray-900 dark:border-gray-700 dark:hover:!border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"
+          class={
+            "block border-l-2 border-gray-200 py-1 px-2 text-xs " +
+            "hover:border-blue-600 hover:bg-blue-100 hover:text-gray-900 " +
+            "dark:border-gray-700 dark:hover:border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"
+          }
         >
           <Icon name={link.icon} class="mr-2 inline-block h-3 w-3" /> {link.text}
         </a>

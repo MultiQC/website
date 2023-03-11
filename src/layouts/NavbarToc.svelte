@@ -34,6 +34,9 @@
             <a
               class="block py-1 px-2 text-gray-400 hover:bg-blue-600/[0.2] hover:text-gray-200"
               href={"#" + heading.slug}
+              on:click={() => {
+                currentHeading.set(heading.slug);
+              }}
               on:click={toggleVisible}
             >
               {@html heading.text}
