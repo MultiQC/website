@@ -1,0 +1,26 @@
+---
+import NavbarDocsNavSection from "@layouts/NavbarDocsNavSection.astro";
+
+// Fetch the config.yml that has section titles and order of pages
+import docs_nav from "../../../MultiQC/docs/core/config.yaml";
+
+// Figure out the current section
+var current_section = "";
+docs_nav["nav"].forEach((section) => {
+  Object.values(section)[0].forEach((filename) => {
+    var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
+    if (Astro.url.pathname == url) {
+      current_section = Object.keys(section)[0];
+    }
+  });
+});
+---
+
+{
+  docs_nav["nav"].map((section) => (
+    <section class="mb-6">
+      <h5 class="mb-2 font-semibold">{Object.keys(section)[0]}</h5>
+      <NavbarDocsNavSection section={section} />
+    </section>
+  ))
+}

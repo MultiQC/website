@@ -1,7 +1,9 @@
 ---
 import NavbarMenu from "@layouts/NavbarMenu.astro";
 import NavbarMenuMobile from "@layouts/NavbarMenuMobile.svelte";
-import NavbarDocsNav from "@layouts/NavbarDocsNav.astro";
+import NavbarDocsNav from "@layouts/NavbarDocsNav.svelte";
+import NavbarDocsNavTitle from "@layouts/NavbarDocsNavTitle.astro";
+import NavbarDocsNavMenu from "@layouts/NavbarDocsNavMenu.astro";
 
 import { Icon } from "astro-icon";
 
@@ -54,5 +56,12 @@ const { title, headings = [], navbarItems = navPages } = Astro.props;
     <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 text-gray-300 dark:text-gray-600" />
     <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
   </NavbarMenuMobile>
-  {Astro.url.pathname.includes("/docs/") && <NavbarDocsNav title={title} />}
+  {
+    Astro.url.pathname.includes("/docs/") && (
+      <NavbarDocsNav client:load>
+        <NavbarDocsNavTitle slot="title" title={title} />
+        <NavbarDocsNavMenu slot="menu" />
+      </NavbarDocsNav>
+    )
+  }
 </header>
