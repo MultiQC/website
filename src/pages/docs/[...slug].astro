@@ -31,9 +31,13 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post;
+
+// GitHub URL for the footer
 const gh_url =
   "https://github.com/ewels/MultiQC/blob/master/docs/core/" +
   Astro.props.post.file.split("/").pop();
+
+// Get the markdown headings for the table of contents
 const headings = Astro.props.post.getHeadings().filter((h) => h.depth >= 2 && h.depth <= 3);
 
 // Copy over any markdown images used to /public

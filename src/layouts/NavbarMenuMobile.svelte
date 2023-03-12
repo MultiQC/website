@@ -1,10 +1,12 @@
 <script lang="ts">
   import DarkModeToggle from "@components/DarkModeToggle.svelte";
-  import Icon from "@iconify/svelte";
   import NavbarToc from "@layouts/NavbarToc.svelte";
   import HeroBackgroundSrc from "/images/background.png";
   import LogoCircle from "/logos/multiqc_logo_circle.svg";
   import Logo from "/logos/multiqc_logo_darkbg.svg";
+
+  // <Icon icon="mdi:menu" class="h-8 w-8" />
+  const icon_mdi_menu = `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="h-8 w-8 iconify iconify--mdi" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>`;
 
   export let headings: {
     text: string;
@@ -35,15 +37,13 @@
   </a>
   <NavbarToc {headings} />
   <button class="text-white" on:click={toggleNavOpened}>
-    <Icon icon="mdi:menu" class="h-8 w-8" />
+    {@html icon_mdi_menu}
   </button>
 </div>
 
 {#if navOpened}
   <div
     class="absolute top-16 left-0 h-[calc(100vh-4rem)] w-full overflow-y-auto pb-6 transition-all"
-    class:invisible:opacity-0={!navOpened}
-    class:visible:opacity-100={navOpened}
     style="background-image: url({HeroBackgroundSrc})"
   >
     <div class="flex h-full flex-col">
@@ -79,7 +79,7 @@
           {/if}
         {/each}
         <div class="mt-4">
-          <DarkModeToggle><slot /></DarkModeToggle>
+          <DarkModeToggle />
         </div>
       </div>
     </div>
