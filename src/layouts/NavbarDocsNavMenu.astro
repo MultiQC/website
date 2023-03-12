@@ -27,7 +27,14 @@ docs_nav["nav"].forEach((section) => {
             <a
               href={page[0]}
               class:list={[
-                "block border-l-2 hover:border-blue-600 hover:text-blue-600 border-gray-700 pl-2 py-0.5 text-xs",
+                "block",
+                "border-l-2",
+                "border-gray-700",
+                "hover:text-blue-600",
+                "hover:border-blue-600",
+                "pl-2",
+                "py-0.5",
+                "text-xs",
                 {
                   "font-semibold border-l-blue-600 hover:border-l-blue-600 text-blue-600 hover:text-blue-600":
                     Astro.url.pathname == page[0],
