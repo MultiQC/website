@@ -5,8 +5,6 @@ import NavbarDocsNav from "@layouts/NavbarDocsNav.svelte";
 import NavbarDocsNavTitle from "@layouts/NavbarDocsNavTitle.astro";
 import NavbarDocsNavMenu from "@layouts/NavbarDocsNavMenu.astro";
 
-import { Icon } from "astro-icon";
-
 import HeroBackgroundSrc from "/images/background.png";
 
 const location = Astro.url;
@@ -48,14 +46,8 @@ const { title, headings = [], navbarItems = navPages } = Astro.props;
 ---
 
 <header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
-  <NavbarMenu navbarItems={navbarItems}>
-    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 text-gray-300 dark:text-gray-600" />
-    <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
-  </NavbarMenu>
-  <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load>
-    <Icon name="ph:sun-bold" class="mr-2 inline h-4 w-4 text-gray-300 dark:text-gray-600" />
-    <Icon name="ph:moon-bold" class="inline h-4 w-4 text-gray-600 dark:text-gray-300" />
-  </NavbarMenuMobile>
+  <NavbarMenu navbarItems={navbarItems} />
+  <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load />
   {
     Astro.url.pathname.includes("/docs/") && (
       <NavbarDocsNav client:load>
