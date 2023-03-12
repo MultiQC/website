@@ -42,8 +42,6 @@
 {#if navOpened}
   <div
     class="absolute top-16 left-0 h-[calc(100vh-4rem)] w-full overflow-y-auto pb-6 transition-all"
-    class:invisible:opacity-0={!navOpened}
-    class:visible:opacity-100={navOpened}
     style="background-image: url({HeroBackgroundSrc})"
   >
     <div class="flex h-full flex-col">

@@ -12,21 +12,24 @@
 <header
   class="typo-small mt-2 border-t border-b border-gray-700 bg-gray-800/40 py-2 text-gray-300 lg:hidden"
 >
-  <button class="transition-colors hover:text-gray-100" on:click={toggleVisible}>
-    {@html icon_mdi_dots_vertical}
-  </button>
-  <slot name="title" />
+  <div class="mr-2 max-w-full overflow-x-hidden overflow-ellipsis whitespace-nowrap">
+    <button class="transition-colors hover:text-gray-100" on:click={toggleVisible}>
+      {@html icon_mdi_dots_vertical}
+    </button>
+    <slot name="title" />
+  </div>
 </header>
 
 {#if visible}
   <div class="fixed inset-0 z-50">
     <div class="fixed inset-0 backdrop-blur-sm" />
     <nav
-      class="side-nav relative h-screen w-80 max-w-[calc(100%-3rem)] overflow-y-auto bg-gray-800 p-5 text-gray-600 dark:text-gray-400"
+      class="side-nav relative h-screen w-80 max-w-full overflow-y-auto bg-gray-800 p-5 text-gray-400"
     >
-      <button class="float-right" on:click={toggleVisible}>
+      <button class="float-right mt-1" on:click={toggleVisible}>
         {@html icon_mdi_close}
       </button>
+      <h4 class="mb-4 text-base font-semibold">MultiQC Documentation</h4>
       <slot name="menu" />
     </nav>
   </div>

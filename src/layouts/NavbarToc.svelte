@@ -16,7 +16,7 @@
 
 <nav class="mobile-toc text-gray-600 dark:text-gray-400" class:hidden={headings.length <= 1}>
   <button
-    class="mx-2 mr-px rounded-sm border border-gray-500 bg-black bg-opacity-20 py-1 px-4 font-body font-light tracking-wide text-gray-300 hover:bg-opacity-50 hover:text-white"
+    class="mx-2 mr-px rounded-sm border border-gray-500 bg-black bg-opacity-20 py-0.5 px-3 font-body text-xs font-light tracking-wide text-gray-300 hover:bg-opacity-50 hover:text-white"
     type="button"
     on:click={toggleVisible}
   >
