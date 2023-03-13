@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import urls from "rehype-urls";
 
-// https://astro.build/config
 import mdx from "@astrojs/mdx";
+import netlify from "@astrojs/netlify/functions";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
@@ -13,7 +13,6 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import calloutsPlugin from "./plugins/remark-callouts.js";
-
 const AnchorLinkIcon = h(
   "svg",
   {
@@ -32,6 +31,7 @@ const AnchorLinkIcon = h(
 // https://astro.build/config
 export default defineConfig({
   site: "https://multiqc.info",
+  output: "server",
   integrations: [
     tailwind({
       config: {
@@ -74,4 +74,5 @@ export default defineConfig({
       ],
     ],
   },
+  adapter: netlify(),
 });
