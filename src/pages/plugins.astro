@@ -26,7 +26,7 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
     we can add it to this page!
   </p>
 
-  <div class="mt-24 grid grid-cols-1 gap-24 lg:grid-cols-2">
+  <div class="mt-8 grid grid-cols-1 gap-16 lg:mt-24 lg:grid-cols-2 lg:gap-24">
     <Card classes="lg:order-2 py-20" centered>
       <img src={MultiQCLogo} class="h-24 dark:hidden" />
       <img src={MultiQCLogoDark} class="hidden h-24 dark:block" />
@@ -38,7 +38,7 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
         This example repository contains the following code to help you get started with writing
         your own MultiQC plugin.
       </p>
-      <div class="mt-4 md:mt-8">
+      <div class="mt-6 flex justify-center md:mt-8 lg:justify-start">
         <Button to="https://github.com/MultiQC/example-plugin" variant="primary" size="md">
           <Icon name="mdi:github" class="mr-3 h-6 w-6" />
           View on GitHub
@@ -50,7 +50,7 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
       <img src="/images/plugins/clarity.svg" class="h-24" />
     </Card>
     <div class="lg:order-4">
-      <h2 class="typo-h3 mb-4 mt-10 md:mt-0">MultiQC_Clarity</h2>
+      <h2 class="typo-h3 mb-4">MultiQC_Clarity</h2>
       <p class="typo-intro mb-4">
         MultiQC_Clarity inserts project-level and sample-level metadata from the BaseSpace Clarity
         LIMS into MultiQC Reports.
@@ -59,7 +59,7 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
         The plugin searches Clarity via the API for sample names found in log files. If exact
         matches are found, additional metadata is fetched and entered into the report.
       </p>
-      <div class="mt-4 md:mt-8">
+      <div class="mt-6 flex justify-center md:mt-8 lg:justify-start">
         <Button to="https://github.com/MultiQC/MultiQC_Clarity" variant="primary" size="md">
           <Icon name="mdi:github" class="mr-3 h-6 w-6" />
           View on GitHub
@@ -78,7 +78,7 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
         <a href="https://github.com/chapmanb/bcbio-nextgen" class="typo-link"> bcbio-nextgen</a>
         pipeline.
       </p>
-      <div class="mt-4 md:mt-8">
+      <div class="mt-6 flex justify-center md:mt-8 lg:justify-start">
         <Button to="https://github.com/MultiQC/MultiQC_bcbio" variant="primary" size="md">
           <Icon name="mdi:github" class="mr-3 h-6 w-6" />
           View on GitHub
@@ -100,7 +100,7 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
         in-house database. Not much use for others outside of NGI, but can be helpful as a guide for
         how such plugins can be written.
       </p>
-      <div class="mt-4 md:mt-8">
+      <div class="mt-6 flex justify-center md:mt-8 lg:justify-start">
         <Button to="https://github.com/ewels/MultiQC_NGI" variant="primary" size="md">
           <Icon name="mdi:github" class="mr-3 h-6 w-6" />
           View on GitHub
