@@ -1,11 +1,14 @@
 ---
+export const prerender = true;
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
 import ExamplesBrowser from "@components/ExamplesBrowser.svelte";
 import { getCollection } from "astro:content";
 import Button from "@components/Button.svelte";
 import Card from "@components/Card.astro";
+import mqc_releases from "../multiqc_releases.json";
 
+import fs from "node:fs";
 import { Icon } from "astro-icon";
 import HomepageVideos from "@components/HomepageVideos.svelte";
 import SnippetBox from "@components/SnippetBox.svelte";
@@ -15,9 +18,18 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
   .then((data) => {
     if (!data.tag_name) {
       console.error("Error: Could not fetch latest release from GitHub API.");
-      console.log(data);
+      console.warn(data);
+      return "";
+    } else {
+      mqc_releases.latest = data.tag_name;
+      fs.writeFile("src/multiqc_releases.json", JSON.stringify(mqc_releases), (err) => {
+        if (err) {
+          console.error("Error writing multiqc_releases file!");
+          console.warn(err);
+        }
+      });
+      return data.tag_name;
     }
-    return data.tag_name;
   });
 
 const exampleReports = await getCollection("example-reports");
