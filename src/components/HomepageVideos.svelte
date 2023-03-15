@@ -32,7 +32,7 @@
       class="video aspect-video h-full w-full"
     />
   </div>
-  <div class="col-full lg:col-6 !pl-0">
+  <div class="col-full lg:col-6 hidden  !pl-0 lg:block">
     <div class="">
       <div class="flex flex-col overflow-hidden rounded-sm">
         {#each filteredVideos as video, idx (idx)}

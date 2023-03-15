@@ -11,10 +11,12 @@
 
 <header>
   <button
-    class="typo-small mt-2 block w-full border-t border-b border-gray-700 bg-gray-800/40 py-2 text-left text-gray-300 transition-colors hover:text-gray-100 lg:hidden"
+    class="typo-small block w-full border-t border-b border-gray-700 bg-gray-800/40 py-2 text-left text-gray-300 transition-colors hover:text-gray-100 lg:hidden"
     on:click={toggleVisible}
   >
-    <div class="mr-2 max-w-full overflow-x-hidden overflow-ellipsis whitespace-nowrap">
+    <div
+      class="mr-2 flex max-w-full items-center overflow-x-hidden overflow-ellipsis whitespace-nowrap"
+    >
       {@html icon_mdi_dots_vertical}
       <slot name="title" />
     </div>

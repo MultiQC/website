@@ -6,18 +6,13 @@
 
   const columnsClass = ["", "w-full", "w-1/2", "w-1/3", "w-1/4", "w-1/5", "w-1/6"];
 
-  $: active = 0;
+  let active = 0;
 </script>
 
 <div class="">
-  {#each snippets as snippet, idx (idx)}
-    <div id={`snippet-${snippet.title}`} class="typo-small">
-      <pre
-        class="px-3 py-2 text-xs font-light"
-        class:hidden={idx !== active}
-        class:d-inline-block={idx === active}>{@html snippet.code}</pre>
-    </div>
-  {/each}
+  <div id={`snippet-${snippets[active].title}`} class="typo-small">
+    <pre class="px-3 py-2 text-xs font-light">{@html snippets[active].code}</pre>
+  </div>
 </div>
 <div class="flex w-full justify-between border-t border-blue-600 bg-gray-800">
   {#each snippets as snippet, index (snippet.title)}

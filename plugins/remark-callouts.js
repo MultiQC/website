@@ -82,7 +82,7 @@ export default function calloutsPlugin() {
         const iconWrapperData = iconWrapper.data || (iconWrapper.data = {});
         iconWrapperData.hName = "div";
         iconWrapperData.hProperties = h("div", {
-          class: "title px-4 pt-2 pb-2 flex items-baseline",
+          class: "title px-4 pt-2 pb-2 flex items-center",
         }).properties;
         iconWrapper.children = [svg, title];
 
