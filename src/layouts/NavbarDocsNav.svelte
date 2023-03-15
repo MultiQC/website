@@ -10,9 +10,11 @@
 </script>
 
 <header
-  class="typo-small mt-2 border-t border-b border-gray-700 bg-gray-800/40 py-2 text-gray-300 lg:hidden"
+  class="typo-small border-t border-b border-gray-700 bg-gray-800/40 py-2 text-gray-300 lg:hidden"
 >
-  <div class="mr-2 max-w-full overflow-x-hidden overflow-ellipsis whitespace-nowrap">
+  <div
+    class="mr-2 flex max-w-full items-center overflow-x-hidden overflow-ellipsis whitespace-nowrap"
+  >
     <button class="transition-colors hover:text-gray-100" on:click={toggleVisible}>
       {@html icon_mdi_dots_vertical}
     </button>
