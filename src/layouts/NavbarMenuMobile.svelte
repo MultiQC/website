@@ -23,11 +23,18 @@
   function toggleNavOpened() {
     navOpened = !navOpened;
   }
+  let y: number;
 </script>
 
 <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between lg:hidden">
   <a href="/" class="block">
-    <img src={Logo} class="h-8 lg:h-10" class:hidden={headings.length > 0} alt="MultiQC logo" />
+    <img
+      src={Logo}
+      class="h-8 opacity-0 transition-opacity ease-in lg:h-10"
+      class:opacity-100={location.pathname === "/" && y > 108}
+      class:hidden={headings.length > 0}
+      alt="MultiQC logo"
+    />
     <img
       src={LogoCircle}
       class="h-8 lg:h-10"
@@ -40,7 +47,7 @@
     {@html icon_mdi_menu}
   </button>
 </div>
-
+<svelte:window bind:scrollY={y} />
 {#if navOpened}
   <div
     class="absolute top-16 left-0 h-[calc(100vh-4rem)] w-full overflow-y-auto pb-6 transition-all"
