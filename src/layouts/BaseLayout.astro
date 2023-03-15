@@ -19,7 +19,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 const {
   title = SITE_TITLE,
   subtitle = SITE_DESCRIPTION,
-  image = `/og.png?title=${encodeURIComponent(SITE_TITLE)}`,
+  image = `/og.png?title=${encodeURIComponent(title ? title : SITE_TITLE)}`,
   md_github_url,
   subfooter = "",
   headings = [],
