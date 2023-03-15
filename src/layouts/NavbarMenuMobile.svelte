@@ -30,7 +30,8 @@
   <a href="/" class="block">
     <img
       src={Logo}
-      class="h-8 opacity-0 transition-opacity ease-in lg:h-10"
+      class="h-8 transition-opacity ease-in lg:h-10"
+      class:opacity-0={location.pathname === "/" && y <= 85}
       class:opacity-100={location.pathname === "/" && y > 85}
       class:hidden={headings.length > 0}
       alt="MultiQC logo"
