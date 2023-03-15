@@ -35,7 +35,7 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
       modules &&
         modules.map((module) => (
           <>
-            <div class="flex items-center border-gray-200 px-4 py-2 dark:border-gray-700 lg:border-b">
+            <div class="flex items-center border-gray-200 px-4 pt-2 pb-0 dark:border-gray-700 lg:border-b lg:pb-2">
               <a
                 href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
                 class="typo-body text-blue-600 dark:text-blue-400"
@@ -43,7 +43,7 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
                 {module.frontmatter.name}
               </a>
             </div>
-            <div class="col-span-3 flex items-center border-b border-gray-200 px-4 py-2 pb-6 text-gray-600 dark:border-gray-700 dark:text-gray-300 lg:pb-2">
+            <div class="col-span-3 flex items-center border-b border-gray-200 px-4 py-0 pb-3 text-gray-600 dark:border-gray-700 dark:text-gray-300 lg:py-2 lg:pb-6 lg:pb-2">
               {module.frontmatter.description}
             </div>
           </>
