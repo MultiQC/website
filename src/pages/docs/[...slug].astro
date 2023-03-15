@@ -70,7 +70,9 @@ for (const match of matches) {
   subtitle={frontmatter.description}
   headings={headings}
   md_github_url={gh_url}
-  image={frontmatter.social_image ? frontmatter.social_image : `default-og.png`}
+  image={frontmatter.social_image
+    ? frontmatter.social_image
+    : `/og.png?title=${encodeURIComponent(frontmatter.title)}`}
 >
   <div class="prose max-w-none dark:prose-invert">
     <Content />

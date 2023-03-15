@@ -24,7 +24,7 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
 const exampleReports = await getCollection("example-reports");
 ---
 
-<BaseLayout title="MultiQC" subtitle="Homepage">
+<BaseLayout title="MultiQC" subtitle="Homepage" image={"/images/default-og.png"}>
   <Hero>
     <div class="container-lg relative">
       <div class="row">
