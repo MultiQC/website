@@ -3,6 +3,7 @@ import "../fonts/sf-ui-display/main.css";
 import BaseHead from "@components/BaseHead.astro";
 import "../styles/main.css";
 import Navbar from "./Navbar.astro";
+import CookieBanner from "./CookieBanner.svelte";
 import Subfooter from "./Subfooter.astro";
 import Footer from "./Footer.astro";
 
@@ -42,6 +43,7 @@ const {
       )
     }
     <Footer />
+    <CookieBanner client:load />
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {

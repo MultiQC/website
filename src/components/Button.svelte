@@ -8,15 +8,8 @@
   export let size: string = "reset";
   export let noShadow: boolean = false;
   export let submit: boolean = false;
-  export let onClick: string = "";
   export let to: string = "";
   export let arrow: boolean = false;
-
-  if (submit && onClick) {
-    console.warn(
-      "You provide onClick to a submit button. Please remove onClick handler or submit attribute"
-    );
-  }
 
   const buttonClassName =
     classes +
@@ -47,27 +40,21 @@
 </script>
 
 {#if submit}
-  <button type="submit" class={buttonClassName}>
+  <button type="submit" class={buttonClassName} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </button>
 {:else if to}
-  <a href={to} class={buttonClassName}>
+  <a href={to} class={buttonClassName} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </a>
 {:else}
-  <button
-    type="button"
-    on:click={() => {
-      onClick;
-    }}
-    class={buttonClassName}
-  >
+  <button type="button" class={buttonClassName} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
