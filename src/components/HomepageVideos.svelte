@@ -21,7 +21,6 @@
 
 <div class="row mt-8 items-center">
   <div class="wrapper col-full lg:col-6 hidden lg:block">
-    <lite-youtube videoid="filteredVideos[currentIndex].id" />
     <iframe
       id="multiqc-video"
       src={"https://www.youtube.com/embed/" + filteredVideos[currentIndex].id}
