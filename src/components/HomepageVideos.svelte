@@ -5,8 +5,8 @@
     language: string;
   }[];
 
-  $: lang = "en";
-  $: currentIndex = 0;
+  let lang = "en";
+  let currentIndex = 0;
 
   let languages = videos.map((video) => video.language);
   languages = [...new Set(languages)];
