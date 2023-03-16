@@ -23,7 +23,7 @@
   function toggleNavOpened() {
     navOpened = !navOpened;
   }
-  let y: number;
+  let y: number = 0;
 </script>
 
 <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between lg:hidden">
