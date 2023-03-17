@@ -11,7 +11,7 @@ datasource db {
 
 model version_check {
   id      Int      @id
-  version String   @db.VarChar(10)
+  version String   @db.VarChar(20)
   date    DateTime @default(now()) @db.Timestamp(0)
 }
 
