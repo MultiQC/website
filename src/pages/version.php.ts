@@ -4,7 +4,7 @@ import mqc_releases from "../multiqc_releases.json";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function log_call(version: string) {
+async function log_call(version: string) {
   async function main() {
     // get last id from db
     const last_id = await prisma.version_check.findFirst({
@@ -87,7 +87,7 @@ export const get: APIRoute = ({ params, request }) => {
   // Put back the 'dev' if we had it
   remote_version += dev;
   if (remote_version == "") {
-    remote_version = "< 0.5";
+    remote_version = "other";
   }
   log_call(remote_version);
   return new Response(mqc_releases.latest, {
