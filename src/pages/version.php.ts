@@ -66,13 +66,13 @@ async function log_call(version: string) {
 }
 
 export const get: APIRoute = ({ params, request }) => {
+  let remote_version = "";
   const version = new URL(request.url).searchParams.get("v");
   if (!version) {
-    const remote_version = "no_v_param";
+    remote_version = "not_specified";
   } else {
     // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
-    const remote_version_pieces = version.split(" ");
-    let remote_version = remote_version_pieces[0];
+    remote_version = version.split(" ")[0];
     // Collect the dev if it was in the original so that we can append it later
     const dev = version.indexOf("dev") > 0 ? "dev" : "";
     // Strip dev0 so that we don't pick up the 0
