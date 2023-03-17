@@ -68,24 +68,22 @@ async function log_call(version: string) {
 export const get: APIRoute = ({ params, request }) => {
   const version = new URL(request.url).searchParams.get("v");
   if (!version) {
-    return new Response("No version provided", {
-      headers: { "content-type": "text/plain" },
-      status: 400,
-    });
+    const remote_version = "no_v_param";
+  } else {
+    // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
+    const remote_version_pieces = version.split(" ");
+    let remote_version = remote_version_pieces[0];
+    // Collect the dev if it was in the original so that we can append it later
+    const dev = version.indexOf("dev") > 0 ? "dev" : "";
+    // Strip dev0 so that we don't pick up the 0
+    remote_version = remote_version.replace("dev0", "");
+    // Remove anything that's not numeric or a decimal
+    remote_version = remote_version.replace(/[^\d\.]/g, "");
+    // Remove trailing decimal
+    remote_version = remote_version.replace(/\\.$/, "");
+    // Put back the 'dev' if we had it
+    remote_version += dev;
   }
-  // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
-  const remote_version_pieces = version.split(" ");
-  let remote_version = remote_version_pieces[0];
-  // Collect the dev if it was in the original so that we can append it later
-  const dev = version.indexOf("dev") > 0 ? "dev" : "";
-  // Strip dev0 so that we don't pick up the 0
-  remote_version = remote_version.replace("dev0", "");
-  // Remove anything that's not numeric or a decimal
-  remote_version = remote_version.replace(/[^\d\.]/g, "");
-  // Remove trailing decimal
-  remote_version = remote_version.replace(/\\.$/, "");
-  // Put back the 'dev' if we had it
-  remote_version += dev;
   if (remote_version == "") {
     remote_version = "other";
   }
