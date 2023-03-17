@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model version_check {
+  id      Int      @id
+  version String   @db.VarChar(20)
+  date    DateTime @default(now()) @db.Timestamp(0)
+}
+
+model version_check_weekly {
+  row_key    String @id @db.VarChar(20)
+  num_checks Int
+}
