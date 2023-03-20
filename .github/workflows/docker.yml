@@ -1,0 +1,31 @@
+# Build and push the Docker image for building the site (mkdocs material)
+
+name: Build Astro dev docker image
+
+on:
+  pull_request:
+  push:
+    # TODO: Update when merged to master
+    branches: [docker]
+
+jobs:
+  mkdocs_docker:
+    if: github.repository == 'ewels/MultiQC_website'
+    name: Build + push mkdocs docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build / push latest image
+        uses: docker/build-push-action@v3
+        with:
+          push: ${{ github.event_name == 'push' }}
+          tags: ghcr.io/ewels/MultiQC_website:latest
