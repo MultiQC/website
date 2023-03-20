@@ -3,15 +3,14 @@
 name: Build Astro dev docker image
 
 on:
-  pull_request:
   push:
     # TODO: Update when merged to master
     branches: [docker]
 
 jobs:
-  mkdocs_docker:
+  astro_docker:
     if: github.repository == 'ewels/MultiQC_website'
-    name: Build + push mkdocs docker image
+    name: Build + push Astro docker image
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -28,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: ${{ github.event_name == 'push' }}
-          tags: ghcr.io/ewels/MultiQC_website:latest
+          tags: ghcr.io/ewels/multiqc_website:latest
