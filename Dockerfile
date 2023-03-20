@@ -7,7 +7,8 @@
 #
 #######################################################################
 
-FROM node:lts AS runtime
+FROM node:lts-alpine AS runtime
+RUN apk add --no-cache git
 WORKDIR /app
 
 # Copy the website files into the current directory
