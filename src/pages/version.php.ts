@@ -15,13 +15,16 @@ const version_checks = prisma.version_check
   });
 
 async function log_call(version: string) {
+  console.log("Called - 1");
   async function main() {
+    console.log("Called - 2");
     await prisma.version_check.create({
       data: {
         version: version as string,
         date: new Date() as Date,
       },
     });
+    console.log("Called - 3");
 
     // get monday of the current week
     const today = new Date();
@@ -57,11 +60,14 @@ async function log_call(version: string) {
     }
   }
 
+  console.log("Called - 4");
   main()
     .then(async () => {
+      console.log("Called - 5");
       await prisma.$disconnect();
     })
     .catch(async (e) => {
+      console.log("Called - 6");
       console.error(e);
       await prisma.$disconnect();
       process.exit(1);
@@ -69,6 +75,7 @@ async function log_call(version: string) {
 }
 
 export const get: APIRoute = ({ params, request }) => {
+  console.log("Called - 7");
   let remote_version = "";
   const version = new URL(request.url).searchParams.get("v");
   if (!version) {
@@ -90,7 +97,9 @@ export const get: APIRoute = ({ params, request }) => {
   if (remote_version == "") {
     remote_version = "other";
   }
+  console.log("Called - 8");
   log_call(remote_version);
+  console.log("Called - 9");
   return new Response(mqc_releases.latest, {
     headers: { "content-type": "text/plain" },
     status: 200,
