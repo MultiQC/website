@@ -7,6 +7,7 @@ module.exports = {
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
     "node_modules/website-components/**/*.jsx",
   ],
+  safelist: ["shadow-md"],
   theme: {
     fontFamily: {
       display: ["SF UI Display", "Helvetica", "sans-serif"],

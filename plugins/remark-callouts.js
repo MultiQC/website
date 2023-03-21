@@ -58,7 +58,7 @@ export default function calloutsPlugin() {
         const tagName = node.type === "textDirective" ? "span" : "div";
         data.hName = tagName;
         data.hProperties = h(tagName, {
-          class: `admonition admonition-${boxInfo.id} rounded-sm border mb-4 shadow`,
+          class: `admonition admonition-${boxInfo.id} rounded-sm border mb-4 shadow-md`,
         }).properties;
 
         // Add svg icon
@@ -90,7 +90,7 @@ export default function calloutsPlugin() {
         const iconWrapperData = iconWrapper.data || (iconWrapper.data = {});
         iconWrapperData.hName = "div";
         iconWrapperData.hProperties = h("div", {
-          class: "title px-4 pt-2 pb-2 flex items-center",
+          class: "title px-3 pt-2 pb-2 flex items-center",
         }).properties;
         iconWrapper.children = [svg, title];
 
