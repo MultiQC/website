@@ -43,7 +43,7 @@ export const get: APIRoute = async ({ params, request }) => {
       align-items: center;
       height:40%;
       margin-top: 50px;
-      margin-bottom:10px;
+      margin-bottom:30px;
     }
     .text_container {
       display: flex;
@@ -72,10 +72,9 @@ export const get: APIRoute = async ({ params, request }) => {
       display: flex;
       flex-direction:column;
       align-items: center;
-      background-color: rgba(0,0,0,0.1);
-      border-bottom: 2px solid #67A3DE66;
       width: 100%;
-      padding: 30px 100px;
+      padding: 30px 100px 0;
+      margin-bottom: -10px;
     }
     .section h2 {
       font-size: 40px;
