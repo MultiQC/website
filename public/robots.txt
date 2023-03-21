@@ -1,0 +1,7 @@
+# I, for one, welcome our new robotic overlords
+
+User-agent: *
+Allow: /
+
+# TODO: Update with new URL when live
+Sitemap: https://astro--multiqc.netlify.app/sitemap-index.xml

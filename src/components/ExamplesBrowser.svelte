@@ -62,7 +62,12 @@
       </div>
     {/if}
     <div>
-      <iframe src={items[active].data.embed} title="Example Report" class="h-[600px] w-full" />
+      <iframe
+        loading="lazy"
+        src={items[active].data.embed}
+        title="Example Report"
+        class="h-[600px] w-full"
+      />
     </div>
   </div>
 </div>

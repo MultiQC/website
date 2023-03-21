@@ -44,7 +44,7 @@
     />
   </a>
   <NavbarToc {headings} />
-  <button class="text-white" on:click={toggleNavOpened}>
+  <button class="text-white" on:click={toggleNavOpened} title="Open navigation">
     {@html icon_mdi_menu}
   </button>
 </div>
