@@ -25,6 +25,7 @@
       id="multiqc-video"
       src={"https://www.youtube.com/embed/" + filteredVideos[currentIndex].id}
       frameborder="0"
+      loading="lazy"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
       title="multiqc video"
