@@ -2,7 +2,17 @@ import type { APIRoute } from "astro";
 import mqc_releases from "../multiqc_releases.json";
 
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({ log: ["query", "info", "warn", "error"] });
+// get all version checks
+const version_checks = prisma.version_check
+  .findMany()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
 
 async function log_call(version: string) {
   async function main() {
