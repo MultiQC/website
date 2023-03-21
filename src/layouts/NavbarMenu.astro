@@ -34,7 +34,7 @@ const { navbarItems } = Astro.props;
   <a href="/" class="block">
     <img
       src={Logo}
-      class:list={["logo h-8 lg:h-10", { hidden: location.pathname === "/" }]}
+      class:list={["logo h-8 lg:h-10", { "opacity-0": location.pathname === "/" }]}
       alt="MultiQC logo"
     />
   </a>
