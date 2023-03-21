@@ -79,7 +79,7 @@ const section = Astro.props.post.file
   md_github_url={gh_url}
   image={frontmatter.social_image
     ? frontmatter.social_image
-    : `/og.png?section=${encodeURIComponent(section)}&title=${encodeURIComponent(
+    : `/og.png?section=${encodeURIComponent("Docs / " + section)}&title=${encodeURIComponent(
         frontmatter.title
       )}`}
 >

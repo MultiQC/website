@@ -21,7 +21,7 @@ export const get: APIRoute = async ({ params, request }) => {
       <img src="${url_base}/logos/multiqc_logo_darkbg.png" style="width: 800px;" />
     </div>
     <div class="text_container">
-      ${args.section ? `<h2>Docs / ${args.section}</h2>` : ""}
+      ${args.section ? `<h2>${args.section}</h2>` : ""}
       <h1>${title}</h1>
     </div>
   </div>

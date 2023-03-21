@@ -41,6 +41,11 @@ const module_search_patterns = Object.keys(Astro.props.search_patterns)
   title={"Module: " + frontmatter.name}
   subtitle={frontmatter.description}
   md_github_url={gh_url}
+  image={frontmatter.social_image
+    ? frontmatter.social_image
+    : `/og.png?section=${encodeURIComponent("Module")}&title=${encodeURIComponent(
+        frontmatter.name
+      )}`}
 >
   <div class="prose max-w-none dark:prose-invert">
     <h2>Description</h2>
