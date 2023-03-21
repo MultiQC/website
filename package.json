@@ -26,6 +26,7 @@
 		"classnames": "^2.3.2",
 		"nanostores": "^0.7.4",
 		"prism-theme-github": "^1.0.1",
+		"prisma": "^4.11.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.1.0",
 		"rehype-urls": "^1.1.1",
@@ -46,7 +47,6 @@
 		"prettier-plugin-astro": "^0.8.0",
 		"prettier-plugin-organize-imports": "^3.2.2",
 		"prettier-plugin-svelte": "^2.9.0",
-		"prettier-plugin-tailwindcss": "^0.2.5",
-		"prisma": "^4.11.0"
+		"prettier-plugin-tailwindcss": "^0.2.5"
 	}
 }
