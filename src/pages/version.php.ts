@@ -6,17 +6,10 @@ const prisma = new PrismaClient();
 
 async function log_call(version: string) {
   async function main() {
-    // get last id from db
-    const last_id = await prisma.version_check.findFirst({
-      orderBy: {
-        id: "desc",
-      },
-    });
     await prisma.version_check.create({
       data: {
         version: version as string,
         date: new Date() as Date,
-        id: last_id ? last_id.id + 1 : 1,
       },
     });
 
