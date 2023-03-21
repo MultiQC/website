@@ -14,7 +14,7 @@ const version_checks = prisma.version_check
     process.exit(1);
   });
 
-function log_call(version: string) {
+async function log_call(version: string) {
   console.log("Called - 1");
   async function main() {
     console.log("Called - 2");
@@ -28,6 +28,18 @@ function log_call(version: string) {
     //     process.exit(1);
     //   });
     console.log("Called - 2.5");
+    console.log({
+      data: {
+        version: version,
+        date: new Date(),
+      },
+    });
+    console.log(
+      prisma
+        .$connect()
+        .then(() => console.log("connected"))
+        .catch((e) => console.log(e))
+    );
     await prisma.version_check.create({
       data: {
         version: version as string,
@@ -108,7 +120,10 @@ export const get: APIRoute = async ({ params, request }) => {
     remote_version = "other";
   }
   console.log("Called - 8");
-  log_call(remote_version);
+
+  // await version_checks;
+
+  await log_call(remote_version);
   console.log("Called - 9");
   return new Response(mqc_releases.latest, {
     headers: { "content-type": "text/plain" },
