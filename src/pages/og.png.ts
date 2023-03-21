@@ -77,7 +77,7 @@ type ImageOptions = {
 
 async function generateImage(jsx: any, { width, height, debug }: ImageOptions) {
   const roboto500 = await fetch(
-    "https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hjp-Ek-_EeA.woff"
+    "https://cdn.jsdelivr.net/npm/@fontsource/roboto/files/roboto-latin-500-normal.woff"
   ).then((res) => res.arrayBuffer());
   const svg = await satori(jsx, {
     debug: debug,
