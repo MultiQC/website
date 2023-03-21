@@ -16,43 +16,66 @@ export const get: APIRoute = async ({ params, request }) => {
   // TODO: Switch to production URL when ready
   const url_base = "https://astro--multiqc.netlify.app";
   const html_string = `
-  <div class="container" style="
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
-        font-weight: 600;
-        color: #F8F9FA;
-        background-image: url("${url_base}/images/background.png");
-   ">
-    <div style="display: flex; justify-content: center; align-items: center; height:40%; margin-top: 50px; margin-bottom:10px;">
+  <div class="container wrapper">
+    <div class="logo_container">
       <img src="${url_base}/logos/multiqc_logo_darkbg.png" style="width: 800px;" />
     </div>
-    <div style="display: flex; flex-direction:column; justify-content: center; width: 100%; align-items: center; padding: 40px 0; margin-top:10px; margin-bottom: 50px; background-color: rgba(0,0,0,0.2);">
-      ${args.section ? `<h2>Documentation: ${args.section}</h2>` : ""}
+    <div class="text_container">
+      ${args.section ? `<h2>Docs / ${args.section}</h2>` : ""}
       <h1>${title}</h1>
     </div>
   </div>
   <style>
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 600;
+      color: #F8F9FA;
+      background-image: url("${url_base}/images/background.png");
+    }
+    .logo_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:40%;
+      margin-top: 50px;
+      margin-bottom:10px;
+    }
+    .text_container {
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      margin-top:10px;
+      margin-bottom: 50px;
+      background-color: rgba(0,0,0,0.2);
+      border-top: 2px solid #67A3DE66;
+      border-bottom: 2px solid #67A3DE66;
+    }
     h1 {
       font-size: 80px;
       font-weight: 500;
       text-align: left;
       width: 100%;
-      padding-left: 100px;
+      padding: 30px 100px;
       margin: 0;
     }
     h2 {
+      background-color: rgba(0,0,0,0.1);
+      border-bottom: 2px solid #67A3DE66;
       font-size: 40px;
       text-transform: uppercase;
       color: #67A3DE;
       text-align: left;
       width: 100%;
-      padding-left: 100px;
-      margin: 0 0 30px 0;
+      padding: 30px 100px;
+      margin: 0;
     }
   </style>`;
   const imageOptions = { site: request.url, width: 1200, height: 630, debug: false };
