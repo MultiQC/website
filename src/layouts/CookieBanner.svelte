@@ -18,7 +18,11 @@
       <div class="justify-self-start">
         <p class="typo-small mb-2 text-xs sm:text-sm">
           This website uses cookies to offer you a better browsing experience. Find out more on
-          <a href="/privacy-policy/" class="typo-link">how we use cookies</a>.
+          <a
+            href="https://seqera.io/privacy-policy/"
+            class="typo-link"
+            title="Seqera Labs Privacy Policy">how we use cookies</a
+          >.
         </p>
       </div>
       <div class="sm:whitespace-nowrap">
@@ -53,7 +57,11 @@
   <div class="flex items-center justify-between px-3 sm:hidden">
     <div class="justify-self-start">
       <p class="typo-small text-xs">
-        <a href="/privacy-policy/" class="typo-link">We use cookies</a>.
+        <a
+          href="https://seqera.io/privacy-policy/"
+          class="typo-link"
+          title="Seqera Labs Privacy Policy">We use cookies</a
+        >.
       </p>
     </div>
     <div>

@@ -27,7 +27,7 @@
 </script>
 
 <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between lg:hidden">
-  <a href="/" class="block">
+  <a href="/" class="block" title="Go to the MultiQC homepage">
     <img
       src={Logo}
       class="h-8 transition-opacity ease-in lg:h-10"
