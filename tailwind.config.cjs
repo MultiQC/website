@@ -212,83 +212,57 @@ module.exports = {
                 color: "inherit !important",
               },
               "&.admonition-note": {
-                borderColor: theme("colors.zinc.500"),
-                backgroundColor: theme("colors.zinc.400 / 10%"),
-                color: theme("colors.zinc.700"),
+                borderColor: theme("colors.blue.500"),
                 ".title": {
-                  color: theme("colors.zinc.600"),
-                  backgroundColor: theme("colors.zinc.400 / 50%"),
+                  backgroundColor: theme("colors.blue.500 / 20%"),
+                },
+                ".icon": {
+                  color: theme("colors.blue.500"),
                 },
               },
               "&.admonition-info": {
-                borderColor: theme("colors.blue.500"),
-                backgroundColor: theme("colors.blue.400 / 10%"),
-                color: theme("colors.blue.600"),
+                borderColor: theme("colors.cyan.500"),
                 ".title": {
-                  color: theme("colors.blue.600"),
-                  backgroundColor: theme("colors.blue.400 / 50%"),
+                  backgroundColor: theme("colors.cyan.500 / 20%"),
                 },
-                code: {
-                  "background-color": theme("colors.blue.400 / 20%"),
+                ".icon": {
+                  color: theme("colors.cyan.500"),
+                },
+              },
+              "&.admonition-tip": {
+                borderColor: theme("colors.teal.500"),
+                ".title": {
+                  backgroundColor: theme("colors.cyan.500 / 20%"),
+                },
+                ".icon": {
+                  color: theme("colors.teal.500"),
+                },
+              },
+              "&.admonition-success": {
+                borderColor: theme("colors.green.500"),
+                ".title": {
+                  backgroundColor: theme("colors.green.500 / 20%"),
+                },
+                ".icon": {
+                  color: theme("colors.green.500"),
                 },
               },
               "&.admonition-warning": {
-                borderColor: theme("colors.yellow.500"),
-                backgroundColor: theme("colors.yellow.400 / 10%"),
-                color: theme("colors.yellow.700"),
+                borderColor: theme("colors.amber.500"),
                 ".title": {
-                  color: theme("colors.yellow.600"),
-                  backgroundColor: theme("colors.yellow.400 / 50%"),
+                  backgroundColor: theme("colors.amber.500 / 20%"),
+                },
+                ".icon": {
+                  color: theme("colors.amber.500"),
                 },
               },
               "&.admonition-danger": {
-                borderColor: theme("colors.red.500"),
-                backgroundColor: theme("colors.red.400 / 10%"),
-                color: theme("colors.red.700"),
+                borderColor: theme("colors.rose.500"),
                 ".title": {
-                  color: theme("colors.red.600"),
-                  backgroundColor: theme("colors.red.400 / 50%"),
+                  backgroundColor: theme("colors.rose.500 / 20%"),
                 },
-              },
-              ".dark &": {
-                "&.admonition-note": {
-                  borderColor: theme("colors.zinc.500"),
-                  backgroundColor: theme("colors.zinc.400 / 10%"),
-                  color: theme("colors.zinc.300"),
-                  ".title": {
-                    color: theme("colors.zinc.300"),
-                    backgroundColor: theme("colors.zinc.400 / 50%"),
-                  },
-                },
-                "&.admonition-info": {
-                  borderColor: theme("colors.blue.500"),
-                  backgroundColor: theme("colors.blue.400 / 10%"),
-                  color: theme("colors.blue.500"),
-                  ".title": {
-                    color: theme("colors.blue.300"),
-                    backgroundColor: theme("colors.blue.500 / 50%"),
-                  },
-                  code: {
-                    "background-color": theme("colors.blue.300 / 20%"),
-                  },
-                },
-                "&.admonition-warning": {
-                  borderColor: theme("colors.yellow.500"),
-                  backgroundColor: theme("colors.yellow.400 / 10%"),
-                  color: theme("colors.yellow.500"),
-                  ".title": {
-                    color: theme("colors.yellow.400"),
-                    backgroundColor: theme("colors.yellow.400 / 50%"),
-                  },
-                },
-                "&.admonition-danger": {
-                  borderColor: theme("colors.red.500"),
-                  backgroundColor: theme("colors.red.400 / 10%"),
-                  color: theme("colors.red.500"),
-                  ".title": {
-                    color: theme("colors.red.500"),
-                    backgroundColor: theme("colors.red.500 / 50%"),
-                  },
+                ".icon": {
+                  color: theme("colors.rose.500"),
                 },
               },
             },
