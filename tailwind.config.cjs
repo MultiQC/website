@@ -233,7 +233,7 @@ module.exports = {
               "&.admonition-tip": {
                 borderColor: theme("colors.teal.500"),
                 ".title": {
-                  backgroundColor: theme("colors.cyan.500 / 20%"),
+                  backgroundColor: theme("colors.teal.500 / 20%"),
                 },
                 ".icon": {
                   color: theme("colors.teal.500"),
