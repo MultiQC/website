@@ -13,7 +13,7 @@ export const get: APIRoute = async ({ params, request }) => {
   const searchParams = new URL(request.url).searchParams;
   const args = Object.fromEntries(searchParams);
   const title = args.title ? args.title : "";
-  const heading = args.section ? `${args.section} » ${title}` : title;
+  const heading = args.section ? `${args.section}: ${title}` : title;
   // TODO: Switch to production URL when ready
   const url_base = "https://astro--multiqc.netlify.app";
   const html_string = `
@@ -32,7 +32,7 @@ export const get: APIRoute = async ({ params, request }) => {
     <div style="display: flex; justify-content: center; align-items: center; height:40%; margin-top: 50px; margin-bottom:10px;">
       <img src="${url_base}/logos/multiqc_logo_darkbg.png" style="width: 800px;" />
     </div>
-    <div style="display: flex; justify-content: center; width: 100%; align-items: center; height:40%; margin-top:10px; margin-bottom: 50px; background-color: rgba(0,0,0,0.4);">
+    <div style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 30px 0; margin-top:10px; margin-bottom: 50px; background-color: rgba(0,0,0,0.2);">
       <h1>${heading}</h1>
     </div>
   </div>
