@@ -21,8 +21,8 @@ export const get: APIRoute = async ({ params, request }) => {
       <img src="${url_base}/logos/multiqc_logo_darkbg.png" style="width: 800px;" />
     </div>
     <div class="text_container">
-      ${args.section ? `<h2>${args.section}</h2>` : ""}
-      <h1>${title}</h1>
+      ${args.section ? `<div class="section"><h2>${args.section}</h2></div>` : ""}
+      <div class="title"><h1>${title}</h1></div>
     </div>
   </div>
   <style>
@@ -40,7 +40,6 @@ export const get: APIRoute = async ({ params, request }) => {
     }
     .logo_container {
       display: flex;
-      justify-content: center;
       align-items: center;
       height:40%;
       margin-top: 50px;
@@ -49,7 +48,6 @@ export const get: APIRoute = async ({ params, request }) => {
     .text_container {
       display: flex;
       flex-direction:column;
-      justify-content: center;
       width: 100%;
       align-items: center;
       margin-top:10px;
@@ -58,23 +56,31 @@ export const get: APIRoute = async ({ params, request }) => {
       border-top: 2px solid #67A3DE66;
       border-bottom: 2px solid #67A3DE66;
     }
-    h1 {
-      font-size: 80px;
-      font-weight: 500;
-      text-align: left;
+    .title {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
       width: 100%;
       padding: 30px 100px;
+    }
+    .title h1 {
+      font-size: 80px;
+      font-weight: 500;
       margin: 0;
     }
-    h2 {
+    .section {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
       background-color: rgba(0,0,0,0.1);
       border-bottom: 2px solid #67A3DE66;
+      width: 100%;
+      padding: 30px 100px;
+    }
+    .section h2 {
       font-size: 40px;
       text-transform: uppercase;
       color: #67A3DE;
-      text-align: left;
-      width: 100%;
-      padding: 30px 100px;
       margin: 0;
     }
   </style>`;
