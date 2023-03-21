@@ -28,7 +28,7 @@ function log_call(version: string) {
         process.exit(1);
       });
     console.log("Called - 2.5");
-    prisma.version_check.create({
+    await prisma.version_check.create({
       data: {
         version: version as string,
         date: new Date() as Date,
@@ -43,31 +43,31 @@ function log_call(version: string) {
     const monday = new Date(today.setDate(diff)).toISOString().split("T")[0];
     const row_key = monday + "_" + version;
     // check if row_key is already in db
-    const version_check = await prisma.version_check_weekly.findFirst({
-      where: {
-        row_key: row_key,
-      },
-    });
-    if (version_check) {
-      // update
-      await prisma.version_check_weekly.update({
-        where: {
-          row_key: row_key,
-        },
-        data: {
-          num_checks: version_check.num_checks + 1,
-        },
-      });
-    }
-    // create
-    else {
-      await prisma.version_check_weekly.create({
-        data: {
-          row_key: row_key,
-          num_checks: 1,
-        },
-      });
-    }
+    // const version_check = await prisma.version_check_weekly.findFirst({
+    //   where: {
+    //     row_key: row_key,
+    //   },
+    // });
+    // if (version_check) {
+    //   // update
+    //   await prisma.version_check_weekly.update({
+    //     where: {
+    //       row_key: row_key,
+    //     },
+    //     data: {
+    //       num_checks: version_check.num_checks + 1,
+    //     },
+    //   });
+    // }
+    // // create
+    // else {
+    //   await prisma.version_check_weekly.create({
+    //     data: {
+    //       row_key: row_key,
+    //       num_checks: 1,
+    //     },
+    //   });
+    // }
   }
 
   console.log("Called - 4");
