@@ -63,6 +63,13 @@ for (const match of matches) {
     });
   }
 }
+
+// get section as second to last element of URL and convert to title case
+const section = Astro.props.post.file
+  .split("/")
+  .slice(-2, -1)[0]
+  .replace(/_/g, " ")
+  .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 ---
 
 <DocsLayout
@@ -72,7 +79,9 @@ for (const match of matches) {
   md_github_url={gh_url}
   image={frontmatter.social_image
     ? frontmatter.social_image
-    : `/og.png?title=${encodeURIComponent(frontmatter.title)}`}
+    : `/og.png?section=${encodeURIComponent(section)}&title=${encodeURIComponent(
+        frontmatter.title
+      )}`}
 >
   <div class="prose max-w-none dark:prose-invert">
     <Content />

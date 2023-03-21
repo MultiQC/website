@@ -13,28 +13,30 @@ initSatori(YOGA);
 export const get: APIRoute = async ({ params, request }) => {
   const searchParams = new URL(request.url).searchParams;
   const args = Object.fromEntries(searchParams);
+  const title = args.section ? `${args.section} / ${args.title}` : args.title;
   const html_string = `<div class="container"
     style="height: 100%; 
         width: 100%; 
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        justify-content: center; 
+        justify-content: center;
         font-size: 32px; 
         font-weight: 600;
         color: #F8F9FA;
         background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/congruent_outline.png");
    "
    >
+   <div style="display: flex; justify-content: flex-end; align-items: center; height:75%; padding-top:10rem;">
   <img src="https://raw.githubusercontent.com/ewels/MultiQC/9b953261d3d684c24eef1827a5ce6718c847a5af/docs/images/MultiQC_logo_darkbg.png" width="489" height="130"/>
-
-  <h1>${args.title}</h1>
+  </div>
+  <div style="display: flex; justify-content: flex-end; align-items: center; height:25%;">
+  <h1>${title}</h1>
+  </div>
 </div>
 <style>
 
   h1 {
-    margin-top:3rem;
-    margin-bottom: 0;
     font-size: 64px;
     font-weight: 500;
   }
