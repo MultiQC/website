@@ -5,7 +5,6 @@ import initYoga from "yoga-wasm-web/asm";
 // @ts-ignore: no types
 import { html } from "satori-html";
 import satori, { init as initSatori } from "satori/wasm";
-import HeroBackgroundSrc from "/images/background.png";
 
 const YOGA = initYoga();
 initSatori(YOGA);
@@ -13,34 +12,38 @@ initSatori(YOGA);
 export const get: APIRoute = async ({ params, request }) => {
   const searchParams = new URL(request.url).searchParams;
   const args = Object.fromEntries(searchParams);
-  const title = args.section ? `${args.section} / ${args.title}` : args.title;
-  const html_string = `<div class="container"
-    style="height: 100%; 
-        width: 100%; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
+  const title = args.title ? args.title : "";
+  const heading = args.section ? `${args.section} » ${title}` : title;
+  // TODO: Switch to production URL when ready
+  const url_base = "https://astro--multiqc.netlify.app";
+  const html_string = `
+  <div class="container" style="
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        font-size: 32px; 
+        font-size: 32px;
         font-weight: 600;
         color: #F8F9FA;
-        background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/congruent_outline.png");
-   "
-   >
-   <div style="display: flex; justify-content: flex-end; align-items: center; height:75%; padding-top:10rem;">
-  <img src="https://raw.githubusercontent.com/ewels/MultiQC/9b953261d3d684c24eef1827a5ce6718c847a5af/docs/images/MultiQC_logo_darkbg.png" width="489" height="130"/>
+        background-image: url("${url_base}/images/background.png");
+   ">
+    <div style="display: flex; justify-content: center; align-items: center; height:40%; margin-top: 50px; margin-bottom:10px;">
+      <img src="${url_base}/logos/multiqc_logo_darkbg.png" style="width: 800px;" />
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%; align-items: center; height:40%; margin-top:10px; margin-bottom: 50px; background-color: rgba(0,0,0,0.4);">
+      <h1>${heading}</h1>
+    </div>
   </div>
-  <div style="display: flex; justify-content: flex-end; align-items: center; height:25%;">
-  <h1>${title}</h1>
-  </div>
-</div>
-<style>
-
-  h1 {
-    font-size: 64px;
-    font-weight: 500;
-  }
-</style>`;
+  <style>
+    h1 {
+      font-size: 80px;
+      font-weight: 500;
+      text-align: center;
+      margin: 0;
+    }
+  </style>`;
   const imageOptions = { site: request.url, width: 1200, height: 630, debug: false };
   const jsx = html(html_string);
   const buffer = await generateImage(jsx, imageOptions);
