@@ -14,7 +14,7 @@ const version_checks = prisma.version_check
     process.exit(1);
   });
 
-async function log_call(version: string) {
+function log_call(version: string) {
   console.log("Called - 1");
   async function main() {
     console.log("Called - 2");
