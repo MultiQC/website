@@ -18,7 +18,7 @@ function log_call(version: string) {
   console.log("Called - 1");
   async function main() {
     console.log("Called - 2");
-    prisma.version_check
+    await prisma.version_check
       .findMany()
       .then((data) => {
         console.log(data);
@@ -28,7 +28,7 @@ function log_call(version: string) {
         process.exit(1);
       });
     console.log("Called - 2.5");
-    await prisma.version_check.create({
+    prisma.version_check.create({
       data: {
         version: version as string,
         date: new Date() as Date,
