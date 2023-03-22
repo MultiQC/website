@@ -382,3 +382,19 @@ const exampleReports = await getCollection("example-reports");
     </div>
   </div>
 </BaseLayout>
+
+<script client:load>
+  // Redirect anchor links from old website
+  const urlHashRedirects = {
+    "#supported-tools": "/modules",
+    "#publication": "/citation",
+  };
+  if (window.location.hash.length) {
+    for (const [anchor, newURL] of Object.entries(urlHashRedirects)) {
+      console.log(window.location.hash, anchor);
+      if (window.location.hash === anchor) {
+        window.location.replace(newURL);
+      }
+    }
+  }
+</script>
