@@ -5,17 +5,19 @@ import Hero from "@layouts/Hero.astro";
 export interface Props {
   title?: string;
   subtitle?: string;
+  section?: string;
   image?: string;
   md_github_url?: string;
   subfooter?: string;
 }
 
-const { title, subtitle, image, md_github_url, subfooter } = Astro.props;
+const { title, subtitle, section, image, md_github_url, subfooter } = Astro.props;
 ---
 
 <BaseLayout
   title={title}
   subtitle={subtitle}
+  section={section}
   image={image}
   md_github_url={md_github_url}
   subfooter={subfooter}
@@ -23,6 +25,7 @@ const { title, subtitle, image, md_github_url, subfooter } = Astro.props;
   <Hero>
     <div class="container-lg relative">
       <h1 class="typo-h2">{title}</h1>
+      {section && <h5 class="typo-h5 mb-4 uppercase text-blue-400/80">{section}</h5>}
       <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
     </div>
   </Hero>

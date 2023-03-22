@@ -69,12 +69,14 @@ const section = Astro.props.post.file
   .split("/")
   .slice(-2, -1)[0]
   .replace(/_/g, " ")
-  .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+  .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
+  .replace("Core", "Getting Started");
 ---
 
 <DocsLayout
   title={frontmatter.title}
   subtitle={frontmatter.description}
+  section={section ? "Docs / " + section : ""}
   headings={headings}
   md_github_url={gh_url}
   image={frontmatter.social_image

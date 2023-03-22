@@ -8,6 +8,7 @@ import CommunityLinks from "@layouts/CommunityLinks.astro";
 export interface Props {
   title?: string;
   subtitle?: string;
+  section?: string;
   image?: string;
   md_github_url?: string;
   subfooter?: string;
@@ -17,7 +18,7 @@ export interface Props {
     slug: string;
   }[];
 }
-const { title, subtitle, image, md_github_url, subfooter, headings } = Astro.props;
+const { title, subtitle, section, image, md_github_url, subfooter, headings } = Astro.props;
 const community_links = [
   {
     url: md_github_url,
@@ -58,6 +59,7 @@ const community_links = [
   <Hero>
     <div class="container-lg relative">
       <h1 class="typo-h2">{title}</h1>
+      {section && <h5 class="typo-h5 mb-4 uppercase text-blue-400/80">{section}</h5>}
       <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
     </div>
   </Hero>
