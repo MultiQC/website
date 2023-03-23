@@ -47,6 +47,9 @@ export default defineConfig({
     plugins: [yaml()],
   },
   markdown: {
+    shikiConfig: {
+      theme: "one-dark-pro",
+    },
     remarkPlugins: [remarkDirective, calloutsPlugin],
     rehypePlugins: [
       rehypeSlug,
