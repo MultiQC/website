@@ -9,9 +9,9 @@ const { md_github_url, prev_page, next_page } = Astro.props;
 ---
 
 <footer class="flex flex-row bg-slate-700 text-gray-400">
-  {
-    prev_page && (
-      <div class="flex-1">
+  <div class="flex-1">
+    {
+      prev_page && (
         <a
           class="flex flex-row  p-4  text-white  transition-colors hover:bg-slate-600"
           href={prev_page[0]}
@@ -24,9 +24,9 @@ const { md_github_url, prev_page, next_page } = Astro.props;
             <div class="md:text-lg">{prev_page[1].frontmatter.title}</div>
           </div>
         </a>
-      </div>
-    )
-  }
+      )
+    }
+  </div>
   {
     md_github_url && (
       <div class="hidden lg:block">
@@ -42,12 +42,12 @@ const { md_github_url, prev_page, next_page } = Astro.props;
       </div>
     )
   }
-  {
-    next_page && (
-      <div class="flex-1">
+  <div class="flex-1">
+    {
+      next_page && (
         <a
           class="flex flex-row justify-end p-4 text-right text-white transition-colors hover:bg-slate-600"
-          href={prev_page[0]}
+          href={next_page[0]}
         >
           <div class="flex flex-col">
             <div class="text-gray-300">Next</div>
@@ -57,7 +57,7 @@ const { md_github_url, prev_page, next_page } = Astro.props;
             <Icon name="mdi:arrow-right-thin" class="h-6 w-6" />
           </div>
         </a>
-      </div>
-    )
-  }
+      )
+    }
+  </div>
 </footer>
