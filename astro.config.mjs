@@ -74,10 +74,7 @@ export default defineConfig({
         urls,
         (url) => {
           if (url.href.startsWith("../../images/")) {
-            return url.href.replace(
-              "../../images/",
-              "/Users/ewels/GitHub/MultiQC/MultiQC/docs/images/"
-            );
+            return url.href.replace("../../images/", "../MultiQC/docs/images/");
           }
         },
       ],
