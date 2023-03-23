@@ -229,3 +229,17 @@
 .prose h5:hover .anchor-icon {
   @apply opacity-100;
 }
+
+/* "Copy Code" Button */
+pre.astro-code {
+  position: relative;
+}
+pre.astro-code .copy-code-button {
+  @apply absolute top-0 right-0 p-3 font-body text-white opacity-30 transition hover:text-blue-400;
+}
+pre.astro-code:hover .copy-code-button {
+  @apply opacity-80;
+}
+pre.astro-code .copy-code-button svg {
+  @apply inline h-4 w-4;
+}

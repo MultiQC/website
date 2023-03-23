@@ -45,6 +45,7 @@ const {
     <Footer />
     <CookieBanner client:load />
     <script is:inline>
+      // Light / dark mode switch
       const theme = (() => {
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
           return localStorage.getItem("theme");
@@ -61,6 +62,41 @@ const {
         document.documentElement.classList.add("dark");
       }
       window.localStorage.setItem("theme", theme);
+    </script>
+    <script client:idle>
+      // Code copy button. Based on https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html
+      window.onload = function () {
+        // wait another 100ms - WHY?
+        // TODO: Figure out how to make this work without this hack
+        setTimeout(() => {
+          // "Copy code" button in code blocks
+          const copyButtonLabel = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"/></svg>`;
+          const copiedButtonLabel = `Copied <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7Z"/></svg>`;
+          document.querySelectorAll("pre.astro-code").forEach((block) => {
+            // only add button if browser supports Clipboard API
+            if (navigator.clipboard) {
+              let button = document.createElement("button");
+              button.classList.add("copy-code-button");
+              button.innerHTML = copyButtonLabel;
+              button.title = "Copy code";
+              block.appendChild(button);
+              button.addEventListener("click", async (e) => {
+                await copyCode(block, e.currentTarget);
+              });
+            }
+          });
+          async function copyCode(block, button) {
+            let code = block.querySelector("code").innerText;
+            await navigator.clipboard.writeText(code);
+            // visual feedback that task is completed
+            console.log(button);
+            button.innerHTML = copiedButtonLabel;
+            setTimeout(() => {
+              button.innerHTML = copyButtonLabel;
+            }, 2500);
+          }
+        }, 100);
+      };
     </script>
   </body>
 </html>
