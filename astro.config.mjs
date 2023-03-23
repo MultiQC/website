@@ -10,6 +10,7 @@ import tailwind from "@astrojs/tailwind";
 import yaml from "@rollup/plugin-yaml";
 import { h } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeInline from "rehype-inline";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import calloutsPlugin from "./plugins/remark-callouts.js";
@@ -53,6 +54,7 @@ export default defineConfig({
     remarkPlugins: [remarkDirective, calloutsPlugin],
     rehypePlugins: [
       rehypeSlug,
+      // Add anchor links to headings
       [
         rehypeAutolinkHeadings,
         {
@@ -67,14 +69,20 @@ export default defineConfig({
           ),
         },
       ],
+      // Rewrite the image paths to be absolute for rehypeInline plugin
       [
         urls,
         (url) => {
           if (url.href.startsWith("../../images/")) {
-            return url.href.replace("../../images/", "/docs/images/");
+            return url.href.replace(
+              "../../images/",
+              "/Users/ewels/GitHub/MultiQC/MultiQC/docs/images/"
+            );
           }
         },
       ],
+      // Make images inline, use <svg> elements for SVGs
+      [rehypeInline, { js: false, css: false, images: true, imports: false, svgElements: true }],
     ],
   },
   adapter: netlify(),

@@ -230,6 +230,13 @@
   @apply opacity-100;
 }
 
+.markdown-content svg {
+  @apply h-full max-w-full dark:hue-rotate-180 dark:invert;
+}
+.markdown-content svg rect {
+  @apply fill-transparent;
+}
+
 /* "Copy Code" Button */
 pre.astro-code {
   position: relative;
