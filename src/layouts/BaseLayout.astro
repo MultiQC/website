@@ -89,7 +89,6 @@ const {
             let code = block.querySelector("code").innerText;
             await navigator.clipboard.writeText(code);
             // visual feedback that task is completed
-            console.log(button);
             button.innerHTML = copiedButtonLabel;
             setTimeout(() => {
               button.innerHTML = copyButtonLabel;

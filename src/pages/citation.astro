@@ -3,6 +3,7 @@ export const prerender = true;
 import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
 import Card from "@components/Card.astro";
+import { Icon } from "astro-icon";
 ---
 
 <PageLayout
@@ -53,12 +54,32 @@ import Card from "@components/Card.astro";
           <a href="http://dx.doi.org/10.1093/bioinformatics/btw354" class="typo-link">
             10.1093/bioinformatics/btw354
           </a>
+          <button class="copy-btn ml-5 text-xs" data-copytext="10.1093/bioinformatics/btw354">
+            <div class="copy-text">
+              <Icon name="mdi:content-copy" class="inline h-4 w-4" />
+              Copy
+            </div>
+            <div class="copied-text hidden">
+              <Icon name="mdi:tick" class="inline h-4 w-4" />
+              Copied - thanks!
+            </div>
+          </button>
         </dd>
         <dt class="col-2 font-bold">
           <abbr title="PubMed ID">PMID</abbr>:
         </dt>
         <dd class="col-10">
           <a href="http://www.ncbi.nlm.nih.gov/pubmed/27312411" class="typo-link">27312411</a>
+          <button class="copy-btn ml-5 text-xs" data-copytext="27312411">
+            <div class="copy-text">
+              <Icon name="mdi:content-copy" class="inline h-4 w-4" />
+              Copy
+            </div>
+            <div class="copie-text hidden">
+              <Icon name="mdi:tick" class="inline h-4 w-4" />
+              Copied - thanks!
+            </div>
+          </button>
         </dd>
       </dl>
     </div>
@@ -108,3 +129,37 @@ import Card from "@components/Card.astro";
     margin-top: 1rem;
   }
 </style>
+
+<script>
+  import confetti from "canvas-confetti";
+
+  // Code copy button. Based on https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html
+  window.onload = function () {
+    // wait another 100ms - WHY?
+    // TODO: Figure out how to make this work without this hack
+    setTimeout(() => {
+      // "Copy code" button in code blocks
+      document.querySelectorAll(".copy-btn").forEach((button) => {
+        // only add button if browser supports Clipboard API
+        if (!navigator.clipboard) {
+          button.remove();
+        } else {
+          button.addEventListener("click", async (e) => {
+            await copyCode(e.currentTarget);
+          });
+        }
+      });
+      async function copyCode(btn) {
+        // visual feedback that task is completed
+        btn.children[0].classList.add("hidden");
+        btn.children[1].classList.remove("hidden");
+        setTimeout(() => {
+          btn.children[0].classList.remove("hidden");
+          btn.children[1].classList.add("hidden");
+        }, 3000);
+        confetti({ origin: { y: 1 } });
+        await navigator.clipboard.writeText(btn.getAttribute("data-copytext"));
+      }
+    }, 100);
+  };
+</script>
