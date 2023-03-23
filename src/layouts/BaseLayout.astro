@@ -4,15 +4,12 @@ import BaseHead from "@components/BaseHead.astro";
 import "../styles/main.css";
 import Navbar from "./Navbar.astro";
 import CookieBanner from "./CookieBanner.svelte";
-import Subfooter from "./Subfooter.astro";
 import Footer from "./Footer.astro";
 
 export interface Props {
   title?: string;
   subtitle?: string;
   image?: string;
-  md_github_url?: string;
-  subfooter?: string;
   headings?: string[];
 }
 
@@ -21,8 +18,6 @@ const {
   title = SITE_TITLE,
   subtitle = SITE_DESCRIPTION,
   image = `/og.png?title=${encodeURIComponent(title ? title : SITE_TITLE)}`,
-  md_github_url,
-  subfooter = "",
   headings = [],
 } = Astro.props;
 ---
@@ -37,11 +32,6 @@ const {
     <main class="min-h-[calc(100vh-4rem-24rem)]">
       <slot />
     </main>
-    {
-      (md_github_url || subfooter) && (
-        <Subfooter md_github_url={md_github_url}>{subfooter}</Subfooter>
-      )
-    }
     <Footer />
     <CookieBanner client:load />
     <script is:inline>

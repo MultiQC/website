@@ -7,21 +7,12 @@ export interface Props {
   subtitle?: string;
   section?: string;
   image?: string;
-  md_github_url?: string;
-  subfooter?: string;
 }
 
-const { title, subtitle, section, image, md_github_url, subfooter } = Astro.props;
+const { title, subtitle, section, image } = Astro.props;
 ---
 
-<BaseLayout
-  title={title}
-  subtitle={subtitle}
-  section={section}
-  image={image}
-  md_github_url={md_github_url}
-  subfooter={subfooter}
->
+<BaseLayout title={title} subtitle={subtitle} section={section} image={image}>
   <Hero>
     <div class="container-lg relative">
       <h1 class="typo-h2">{title}</h1>

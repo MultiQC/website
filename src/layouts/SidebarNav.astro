@@ -1,20 +1,8 @@
 ---
-// Fetch the config.yml that has section titles and order of pages
-import docs_nav from "../../../MultiQC/docs/core/config.yaml";
-
-const sections = [];
-const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
-docs_nav["nav"].forEach((section) => {
-  let pages = [];
-  Object.values(section)[0].forEach((filename) => {
-    var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
-    var filtered = all_docs.filter(function (el) {
-      return el.file.endsWith("docs/core/" + filename);
-    });
-    pages.push([url, filtered[0]]);
-  });
-  sections.push({ section: section, pages: pages });
-});
+export interface Props {
+  sections: [];
+}
+const { sections } = Astro.props;
 ---
 
 <nav class="side-nav text-gray-600 dark:text-gray-400">

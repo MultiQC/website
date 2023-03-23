@@ -2,23 +2,26 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@layouts/Hero.astro";
 import MarkdownWrapper from "@components/MarkdownWrapper.svelte";
+import FooterPrevNext from "@components/FooterPrevNext.astro";
 import SidebarNav from "@layouts/SidebarNav.astro";
 import SidebarSecondary from "@layouts/SidebarSecondary.astro";
 import CommunityLinks from "@layouts/CommunityLinks.astro";
+// Fetch the config.yml that has section titles and order of pages
+import docs_nav from "../../../MultiQC/docs/core/config.yaml";
+
 export interface Props {
   title?: string;
   subtitle?: string;
   section?: string;
   image?: string;
   md_github_url?: string;
-  subfooter?: string;
   headings?: {
     depth: number;
     text: string;
     slug: string;
   }[];
 }
-const { title, subtitle, section, image, md_github_url, subfooter, headings } = Astro.props;
+const { title, subtitle, section, image, md_github_url, headings } = Astro.props;
 const community_links = [
   {
     url: md_github_url,
@@ -46,16 +49,39 @@ const community_links = [
     text: "Mastodon",
   },
 ];
+
+const sections = [];
+let prev_page;
+let next_page;
+let last_page;
+let last_matched = false;
+const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
+docs_nav["nav"].forEach((section) => {
+  let pages = [];
+  Object.values(section)[0].forEach((filename) => {
+    var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
+    var filtered = all_docs.filter(function (el) {
+      return el.file.endsWith("docs/core/" + filename);
+    });
+    const page = [url, filtered[0]];
+    pages.push(page);
+    // Collect prev- and next-pages
+    if (Astro.url.pathname == url) {
+      last_matched = true;
+      if (last_page) {
+        prev_page = last_page;
+      }
+    } else if (last_matched) {
+      next_page = page;
+      last_matched = false;
+    }
+    last_page = page;
+  });
+  sections.push({ section: section, pages: pages });
+});
 ---
 
-<BaseLayout
-  title={title}
-  subtitle={subtitle}
-  image={image}
-  md_github_url={md_github_url}
-  subfooter={subfooter}
-  headings={headings}
->
+<BaseLayout title={title} subtitle={subtitle} image={image} headings={headings}>
   <Hero>
     <div class="container-lg relative">
       <h1 class="typo-h2">{title}</h1>
@@ -68,7 +94,7 @@ const community_links = [
       <div
         class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[12rem] flex-none overflow-y-auto pb-10 lg:block 2xl:w-[17rem]"
       >
-        <SidebarNav />
+        <SidebarNav sections={sections} />
       </div>
 
       <main
@@ -89,4 +115,5 @@ const community_links = [
       </div>
     </div>
   </div>
+  <FooterPrevNext md_github_url={md_github_url} prev_page={prev_page} next_page={next_page} />
 </BaseLayout>

@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon";
+export interface Props {
+  md_github_url?: string;
+  prev_page: [];
+  next_page: [];
+}
+const { md_github_url, prev_page, next_page } = Astro.props;
+---
+
+<footer class="flex flex-row bg-slate-700 text-gray-400">
+  {
+    prev_page && (
+      <div class="flex-1">
+        <a
+          class="flex flex-row  p-4  text-white  transition-colors hover:bg-slate-600"
+          href={prev_page[0]}
+        >
+          <div class="hidden self-center px-5 md:block">
+            <Icon name="mdi:arrow-left-thin" class="h-6 w-6" />
+          </div>
+          <div class="flex flex-col">
+            <div class="text-gray-300">Prev</div>
+            <div class="md:text-lg">{prev_page[1].frontmatter.title}</div>
+          </div>
+        </a>
+      </div>
+    )
+  }
+  {
+    md_github_url && (
+      <div class="hidden lg:block">
+        <a
+          href={md_github_url}
+          class="flex h-full justify-center p-4 px-5 text-gray-300 transition-colors hover:bg-slate-600 hover:text-white"
+        >
+          <div class="self-center">
+            <Icon name="mdi:github" class="-mt-1 inline h-6 w-6 lg:mr-3" />
+            Markdown source
+          </div>
+        </a>
+      </div>
+    )
+  }
+  {
+    next_page && (
+      <div class="flex-1">
+        <a
+          class="flex flex-row justify-end p-4 text-right text-white transition-colors hover:bg-slate-600"
+          href={prev_page[0]}
+        >
+          <div class="flex flex-col">
+            <div class="text-gray-300">Next</div>
+            <div class="md:text-lg">{next_page[1].frontmatter.title}</div>
+          </div>
+          <div class="hidden self-center px-5 md:block">
+            <Icon name="mdi:arrow-right-thin" class="h-6 w-6" />
+          </div>
+        </a>
+      </div>
+    )
+  }
+</footer>
