@@ -40,29 +40,6 @@ const gh_url = "https://github.com/ewels/MultiQC/blob/master/docs/core/" + md_fi
 // Get the markdown headings for the table of contents
 const headings = Astro.props.post.getHeadings().filter((h) => h.depth >= 2 && h.depth <= 3);
 
-// Copy over any markdown images used to /public
-// destination will be created or overwritten by default.
-// NB: Regex matches markdown after rehypePlugins modifications in astro.config.mjs
-const matches = Astro.props.post.compiledContent().matchAll(/src="\/docs\/images\/([^"]+)"/g);
-for (const match of matches) {
-  const [fullMatch, filename, content] = match;
-  // NB: Paths relative to website root
-  console.log("Copying " + filename);
-  const src = "../MultiQC/docs/images/" + filename;
-  const public_dest = "public/docs/images/" + filename;
-  const dist_dest = "dist/docs/images/" + filename;
-  fs.copyFile(src, public_dest, fs.constants.COPYFILE_FICLONE, (err) => {
-    if (err) throw err;
-  });
-  // Dist should exist if we're building for production
-  // Check if dist/ directory exists
-  if (fs.existsSync("dist")) {
-    fs.copyFile(src, dist_dest, fs.constants.COPYFILE_FICLONE, (err) => {
-      if (err) throw err;
-    });
-  }
-}
-
 // get section as second to last element of URL and convert to title case
 const section = Astro.props.post.file
   .split("/")
