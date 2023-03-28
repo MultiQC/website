@@ -9,7 +9,7 @@ on:
 
 jobs:
   astro_docker:
-    if: github.repository == 'ewels/MultiQC_website'
+    if: github.repository == 'MultiQC/website'
     name: Build + push Astro docker image
     runs-on: ubuntu-latest
     steps:
@@ -40,4 +40,4 @@ jobs:
           # But 32-bit binaries likely require compilation from source so stick with linux/amd64 and linux/arm64 for now
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/ewels/multiqc_website:latest
+          tags: ghcr.io/multiqc/website:latest
