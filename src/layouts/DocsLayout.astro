@@ -60,6 +60,10 @@ docs_nav["nav"].forEach((section) => {
   let pages = [];
   Object.values(section)[0].forEach((filename) => {
     var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
+    // add trailing slash if Astro.url.pathname has one (true for production, not for dev)
+    if (Astro.url.pathname.slice(-1) === "/") {
+      url += "/";
+    }
     var filtered = all_docs.filter(function (el) {
       return el.file.endsWith("docs/core/" + filename);
     });
@@ -89,7 +93,7 @@ docs_nav["nav"].forEach((section) => {
       <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
     </div>
   </Hero>
-  <div class="py-10 px-4 lg:py-20 lg:px-10">
+  <div class="px-4 py-10 lg:px-10 lg:py-20">
     <div class="lg:flex">
       <div
         class="sticky top-28 mr-5 hidden h-[calc(100vh-7rem)] w-[12rem] flex-none overflow-y-auto pb-10 lg:block 2xl:w-[17rem]"
