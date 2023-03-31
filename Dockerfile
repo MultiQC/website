@@ -15,7 +15,7 @@ WORKDIR /app
 COPY . .
 
 # Clone the MultiQC repo (with docs) alongisde the website repo
-RUN git clone --depth 1 https://github.com/ewels/MultiQC.git -b docs-restructure ../MultiQC
+RUN git clone --depth 1 https://github.com/ewels/MultiQC.git ../MultiQC
 
 # Install dependencies
 RUN npm install
