@@ -9,6 +9,11 @@ export const get: APIRoute = async ({ request }) => {
   const version = new URL(request.url).searchParams.get("v");
   if (!version) {
     remote_version = "no_version";
+    // return 400 error if no version is given
+    return new Response("No version given", {
+      headers: { "content-type": "text/plain" },
+      status: 400,
+    });
   } else {
     // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
     remote_version = version.split(" ")[0];
