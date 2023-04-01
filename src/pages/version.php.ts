@@ -9,7 +9,9 @@ export const get: APIRoute = async ({ request }) => {
 
   // Clean up the supplied version number
   const version = new URL(request.url).searchParams.get("v");
-  if (version) {
+  if (!version) {
+    remote_version = "unknown";
+  } else {
     // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
     remote_version = version.split(" ")[0];
     // Collect the dev if it was in the original so that we can append it later
