@@ -253,6 +253,7 @@
 /* "Copy Code" Button */
 pre.astro-code {
   position: relative;
+  @apply border border-gray-800 bg-gray-900 hue-rotate-180 invert dark:border-gray-700 dark:hue-rotate-0 dark:invert-0 !important;
 }
 pre.astro-code .copy-code-button {
   @apply absolute top-0 right-0 p-3 font-body text-white opacity-30 transition hover:text-blue-400;
