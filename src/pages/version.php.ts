@@ -6,15 +6,10 @@ const prisma = new PrismaClient();
 
 export const get: APIRoute = async ({ request }) => {
   let remote_version = "";
+
+  // Clean up the supplied version number
   const version = new URL(request.url).searchParams.get("v");
-  if (!version) {
-    remote_version = "no_version";
-    // return 400 error if no version is given
-    return new Response("No version given", {
-      headers: { "content-type": "text/plain" },
-      status: 400,
-    });
-  } else {
+  if (version) {
     // If there are any spaces, take the first part (old versions of MultiQC could give the commit hash)
     remote_version = version.split(" ")[0];
     // Collect the dev if it was in the original so that we can append it later
@@ -28,22 +23,29 @@ export const get: APIRoute = async ({ request }) => {
     // Put back the 'dev' if we had it
     remote_version += dev;
   }
+
+  // Nothing left / nothing given - set to 'other'
   if (remote_version == "") {
     remote_version = "other";
   }
+
+  // Add exact DB record for this check
+  // TODO: Ditch this?
   await prisma.version_check.create({
     data: {
-      version: version as string,
+      version: remote_version as string,
       date: new Date() as Date,
     },
   });
 
+  // Add weekly count
+  // TODO: Refactor?
   // get monday of the current week
   const today = new Date();
   const day = today.getDay();
   const diff = today.getDate() - day + (day == 0 ? -6 : 1);
   const monday = new Date(today.setDate(diff)).toISOString().split("T")[0];
-  const row_key = monday + "_" + version;
+  const row_key = monday + "_" + remote_version;
   // check if row_key is already in db
   const version_check = await prisma.version_check_weekly.findFirst({
     where: {
@@ -70,6 +72,8 @@ export const get: APIRoute = async ({ request }) => {
       },
     });
   }
+
+  // Return the latest available version
   return new Response(mqc_releases.latest, {
     headers: { "content-type": "text/plain" },
     status: 200,
