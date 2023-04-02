@@ -1,0 +1,11 @@
+# Commands to start on workspace startup
+tasks:
+  - name: Setup & Build
+    before: git clone --depth 1 https://github.com/ewels/MultiQC.git ../MultiQC
+    init: npm install
+    command: npm run dev
+
+# Ports to expose on workspace startup
+ports:
+  - port: 3000
+    onOpen: open-preview
