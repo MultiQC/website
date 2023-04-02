@@ -25,17 +25,30 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
       open an issue
     </a>.
   </p>
-  <div class="grid-cols-4 lg:grid">
-    <div class="typo-intro bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:hidden">Tool</div>
-    <div class="typo-intro hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">Tool Name</div>
-    <div class="typo-intro col-span-3 hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">
-      Description
+  <form>
+    <label for="filter_input" class="text-gray-500 dark:text-gray-300 md:ml-2"
+      >Search for a tool:</label
+    >
+    <input
+      id="filter_input"
+      type="text"
+      class="my-3 inline-block w-full rounded-sm border-gray-300 bg-black/5 p-3 shadow-sm outline-0 focus:border-blue-500/20 focus:ring focus:ring-blue-500/20 focus:ring-opacity-50 dark:bg-black/20 sm:mx-3 sm:w-96"
+      placeholder="Tool name, description or keyword"
+    />
+  </form>
+  <div class="flex flex-col">
+    <div class="grid-cols-4 lg:grid">
+      <div class="typo-intro bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:hidden">Tool</div>
+      <div class="typo-intro hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">Tool Name</div>
+      <div class="typo-intro col-span-3 hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">
+        Description
+      </div>
     </div>
     {
       modules &&
         modules.map((module) => (
-          <>
-            <div class="flex items-center border-gray-200 px-4 pt-2 pb-0 dark:border-gray-700 lg:border-b lg:pb-2">
+          <div class="module-row grid-cols-4 lg:grid">
+            <div class="flex items-center border-gray-200 px-4 pb-0 pt-2 dark:border-gray-700 lg:border-b lg:pb-2">
               <a
                 href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
                 class="typo-body text-blue-600 dark:text-blue-400"
@@ -43,11 +56,35 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
                 {module.frontmatter.name}
               </a>
             </div>
-            <div class="col-span-3 flex items-center border-b border-gray-200 px-4 py-0 pb-3 text-gray-600 dark:border-gray-700 dark:text-gray-300 lg:py-2 lg:pb-6 lg:pb-2">
+            <div class="col-span-3 flex items-center border-b border-gray-200 px-4 pb-3 text-gray-600 dark:border-gray-700 dark:text-gray-300 lg:py-2">
               {module.frontmatter.description}
             </div>
-          </>
+          </div>
         ))
     }
   </div>
 </PageLayout>
+
+<script client:load>
+  // Filter the table based on the search input
+  // Modified from https://stackoverflow.com/a/51187875/713980
+  const filterModules = (val) => {
+    const rows = document.querySelectorAll(".module-row");
+    const regex = new RegExp(val, "i");
+    const isFoundInRow = (row) => regex.test(row.innerHTML);
+    const isFound = (childrenArr) => childrenArr.some(isFoundInRow);
+    const setRowStyleDisplay = ({ style, children }) => {
+      style.display = isFound([
+        ...children, // <-- All children
+      ])
+        ? ""
+        : "none";
+    };
+
+    rows.forEach(setRowStyleDisplay);
+  };
+  const filter = document.querySelector("#filter_input");
+  filter.addEventListener("keyup", function () {
+    filterModules(filter.value);
+  });
+</script>
