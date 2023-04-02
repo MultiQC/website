@@ -19,9 +19,3 @@ RUN git clone --depth 1 https://github.com/ewels/MultiQC.git ../MultiQC
 
 # Install dependencies
 RUN npm install
-
-# Run the website DEV SERVER
-ENV HOST=0.0.0.0
-ENV PORT=3000
-EXPOSE 3000
-CMD npm run dev

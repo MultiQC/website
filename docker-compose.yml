@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  web:
+    container_name: astro
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app/
+    ports:
+      - "3000:3000"
+    command: "npm run dev"
+    working_dir: /app
