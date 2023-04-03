@@ -78,6 +78,28 @@ const exampleReports = await getCollection("example-reports");
               </div>
             </div>
           </div>
+          <div class="rounded-sm bg-gradient-to-r from-pink-300 to-blue-300 text-gray-800">
+            <div class="container-lg py-4">
+              <div class="flex flex-row">
+                <p class="typo-intro grow">
+                  We're hiring!
+                  <span class="ml-3 hidden font-normal lg:inline">
+                    Let's build something amazing ✨
+                  </span>
+                </p>
+                <Button
+                  to="https://seqera.io/careers/multiqc-software-engineer"
+                  variant="primary"
+                  size="sm"
+                  classes="ml-2"
+                  arrow={true}
+                  client:visible
+                >
+                  MultiQC developer
+                </Button>
+              </div>
+            </div>
+          </div>
           <h1 class="typo-h4 mt-8">
             Aggregate results from bioinformatics analyses across many samples into a single report
           </h1>
@@ -366,7 +388,7 @@ const exampleReports = await getCollection("example-reports");
             Documentation
           </Button>
         </div>
-        <div class="mt-4 md:mt-0 md:mr-4">
+        <div class="mt-4 md:mr-4 md:mt-0">
           <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
             <Icon name="mdi:github" class="mr-3 h-6 w-6" />
             View on GitHub
