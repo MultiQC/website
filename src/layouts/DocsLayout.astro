@@ -90,7 +90,11 @@ docs_nav["nav"].forEach((section) => {
   <Hero>
     <div class="container-lg relative">
       <h1 class="typo-h2">{title}</h1>
-      {section && <h5 class="typo-h5 mb-4 uppercase text-blue-400/80">{section}</h5>}
+      {
+        section && (
+          <h5 class="typo-h5 mb-4 text-xs uppercase text-blue-400/80 lg:text-base">{section}</h5>
+        )
+      }
       <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
     </div>
   </Hero>
