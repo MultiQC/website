@@ -64,6 +64,7 @@ docs_nav["nav"].forEach((section) => {
     if (Astro.url.pathname.slice(-1) === "/") {
       url += "/";
     }
+    url = url.replace(/\/\/$/, "/");
     var filtered = all_docs.filter(function (el) {
       return el.file.endsWith("docs/core/" + filename);
     });
