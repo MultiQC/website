@@ -1,6 +1,4 @@
 ---
-import { SITE_AUTHOR } from "../config";
-
 export interface Props {
   title: string;
   description: string;
@@ -34,7 +32,8 @@ const title_long = title == "MultiQC" ? title : title + " - MultiQC";
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:creator" content={SITE_AUTHOR} />
+<meta name="twitter:site" content="@MultiQC" />
+<meta name="twitter:creator" content="@SeqeraLabs" />
 <meta name="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title_long} />
 <meta name="twitter:description" content={description} />
