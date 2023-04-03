@@ -35,7 +35,11 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
 const exampleReports = await getCollection("example-reports");
 ---
 
-<BaseLayout title="MultiQC" subtitle="Homepage" image={"/images/default-og.png"}>
+<BaseLayout
+  title="MultiQC"
+  subtitle="Aggregate results from bioinformatics analyses across many samples into a single report."
+  image={"/images/default-og.png"}
+>
   <Hero>
     <div class="container-lg relative">
       <div class="row">

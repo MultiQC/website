@@ -21,7 +21,7 @@ const { title, description, image = "/social_img.png" } = Astro.props;
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
+<meta name="title" content={title == "MultiQC" ? title : title + " - MultiQC"} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
