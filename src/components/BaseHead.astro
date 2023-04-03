@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { title, description, image = "/social_img.png" } = Astro.props;
+const title_long = title == "MultiQC" ? title : title + " - MultiQC";
 ---
 
 <!-- Global Metadata -->
@@ -20,24 +21,24 @@ const { title, description, image = "/social_img.png" } = Astro.props;
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title == "MultiQC" ? title : title + " - MultiQC"} />
+<title>{title_long}</title>
+<meta name="title" content={title_long} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={title_long} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content={SITE_AUTHOR} />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title_long} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXZXZ5N1VR"></script>
