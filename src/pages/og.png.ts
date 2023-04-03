@@ -13,8 +13,7 @@ export const get: APIRoute = async ({ params, request }) => {
   const searchParams = new URL(request.url).searchParams;
   const args = Object.fromEntries(searchParams);
   const title = args.title ? args.title : "";
-  // TODO: Switch to production URL when ready
-  const url_base = "https://astro--multiqc.netlify.app";
+  const url_base = "https://multiqc.info";
   const html_string = `
   <div class="container wrapper">
     <div class="logo_container">

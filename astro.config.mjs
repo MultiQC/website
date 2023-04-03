@@ -31,7 +31,7 @@ const AnchorLinkIcon = h(
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro--multiqc.netlify.app", // TODO: switch back to "https://multiqc.info"
+  site: "https://multiqc.info",
   output: "server",
   integrations: [
     tailwind({

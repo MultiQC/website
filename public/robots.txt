@@ -3,5 +3,4 @@
 User-agent: *
 Allow: /
 
-# TODO: Update with new URL when live
-Sitemap: https://astro--multiqc.netlify.app/sitemap-index.xml
+Sitemap: https://multiqc.info/sitemap-index.xml
