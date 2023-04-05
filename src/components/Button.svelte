@@ -10,6 +10,7 @@
   export let submit: boolean = false;
   export let to: string = "";
   export let arrow: boolean = false;
+  export let newTab: boolean = false;
 
   const buttonClassName =
     classes +
@@ -40,21 +41,21 @@
 </script>
 
 {#if submit}
-  <button type="submit" class={buttonClassName} on:click>
+  <button type="submit" class={buttonClassName}>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </button>
 {:else if to}
-  <a href={to} class={buttonClassName} on:click>
+  <a href={to} class={buttonClassName} target={newTab ? "_blank" : null}>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </a>
 {:else}
-  <button type="button" class={buttonClassName} on:click>
+  <button type="button" class={buttonClassName}>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />

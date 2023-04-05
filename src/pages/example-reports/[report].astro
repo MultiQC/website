@@ -21,7 +21,7 @@ const { Content } = await report.render();
   <div class="prose max-w-none dark:prose-invert">
     <Content />
     <p class="my-6 text-center">
-      <Button to={report.data.embed} variant="secondary" size="sm" classes="mr-2">
+      <Button to={report.data.embed} variant="secondary" size="sm" classes="mr-2" newTab={true}>
         Open report in new tab
       </Button>
       <Button to={report.data.zip} variant="secondary" size="sm" classes="mr-2">
