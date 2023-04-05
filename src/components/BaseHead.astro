@@ -40,7 +40,7 @@ const title_long = title == "MultiQC" ? title : title + " - MultiQC";
 <meta name="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Google Tag Manager -->
-<script>
+<script client:load>
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
