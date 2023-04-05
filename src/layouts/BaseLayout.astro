@@ -28,6 +28,15 @@ const {
     <BaseHead title={title} description={subtitle} image={image} />
   </head>
   <body class="bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WN9CCC8"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <Navbar headings={headings} title={title} />
     <main class="min-h-[calc(100vh-4rem-24rem)]">
       <slot />
