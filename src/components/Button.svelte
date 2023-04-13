@@ -41,21 +41,21 @@
 </script>
 
 {#if submit}
-  <button type="submit" class={buttonClassName}>
+  <button type="submit" class={buttonClassName} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </button>
 {:else if to}
-  <a href={to} class={buttonClassName} target={newTab ? "_blank" : null}>
+  <a href={to} class={buttonClassName} target={newTab ? "_blank" : null} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </a>
 {:else}
-  <button type="button" class={buttonClassName}>
+  <button type="button" class={buttonClassName} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
