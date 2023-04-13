@@ -4,8 +4,7 @@ name: Build Astro dev docker image
 
 on:
   push:
-    # TODO: Update when merged to master
-    branches: [astro]
+    branches: [main]
 
 jobs:
   astro_docker:
