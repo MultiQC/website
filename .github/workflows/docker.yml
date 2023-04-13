@@ -1,6 +1,4 @@
-# Build and push the Docker image for building the site (mkdocs material)
-
-name: Build Astro dev docker image
+name: Build website docker image
 
 on:
   push:
