@@ -4,3 +4,9 @@
 
 [build.environment]
     NODE_VERSION = "18.14.0"
+
+[[redirects]]
+  from = "/version.php"
+  to = "https://api.multiqc.info/version.php"
+  status = 301
+  force = true
