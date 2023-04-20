@@ -4,3 +4,15 @@
 
 [build.environment]
     NODE_VERSION = "18.14.0"
+
+[[redirects]]
+  from = "https://multiqc.netlify.app/*"
+  to = "https://multiqc.info/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.io/*"
+  to = "https://multiqc.info/:splat"
+  status = 301
+  force = true
