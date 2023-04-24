@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Hero from "@layouts/Hero.astro";
+import Hero from "@components/Hero.astro";
 import MarkdownWrapper from "@components/MarkdownWrapper.svelte";
 import FooterPrevNext from "@components/FooterPrevNext.astro";
-import SidebarNav from "@layouts/SidebarNav.astro";
-import SidebarSecondary from "@layouts/SidebarSecondary.astro";
-import CommunityLinks from "@layouts/CommunityLinks.astro";
+import SidebarNav from "@components/sidebars/SidebarNav.astro";
+import SidebarSecondary from "@components/sidebars/SidebarSecondary.astro";
+import CommunityLinks from "@components/CommunityLinks.astro";
 // Fetch the config.yml that has section titles and order of pages
-import docs_nav from "../../../MultiQC/docs/core/config.yaml";
+import docs_nav from "@multiqc_repo/docs/core/config.yaml";
 
 export interface Props {
   title?: string;

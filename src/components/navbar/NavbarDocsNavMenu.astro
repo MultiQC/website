@@ -1,9 +1,9 @@
 ---
 // Fetch the config.yml that has section titles and order of pages
-import docs_nav from "../../../MultiQC/docs/core/config.yaml";
+import docs_nav from "@multiqc_repo/docs/core/config.yaml";
 
 const sections = [];
-const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
+const all_docs = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
 docs_nav["nav"].forEach((section) => {
   let pages = [];
   Object.values(section)[0].forEach((filename) => {

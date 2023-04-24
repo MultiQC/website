@@ -11,7 +11,7 @@
 
 <header>
   <button
-    class="typo-small block w-full border-t border-b border-gray-700 bg-gray-800/40 py-2 text-left text-gray-300 transition-colors hover:text-gray-100 lg:hidden"
+    class="typo-small block w-full border-b border-t border-gray-700 bg-gray-800/40 py-2 text-left text-gray-300 transition-colors hover:text-gray-100 lg:hidden"
     on:click={toggleVisible}
   >
     <div

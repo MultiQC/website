@@ -6,7 +6,7 @@ import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon";
 import Button from "@components/Button.svelte";
 
-import search_patterns from "../../../../MultiQC/multiqc/utils/search_patterns.yaml";
+import search_patterns from "@multiqc_repo/multiqc/utils/search_patterns.yaml";
 
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
@@ -62,7 +62,7 @@ const module_search_patterns = Object.keys(Astro.props.search_patterns)
   </div>
   <div class="text-center">
     <Button to="/modules" variant="secondary" size="sm" classes="mt-12">
-      <Icon name="mdi:arrow-left" class="mr-2 -ml-1 h-4 w-4" />
+      <Icon name="mdi:arrow-left" class="-ml-1 mr-2 h-4 w-4" />
       Back to all modules
     </Button>
   </div>

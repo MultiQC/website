@@ -1,6 +1,6 @@
 <script lang="ts">
   import DarkModeToggle from "@components/DarkModeToggle.svelte";
-  import NavbarToc from "@layouts/NavbarToc.svelte";
+  import NavbarToc from "@components/navbar/NavbarToc.svelte";
   import HeroBackgroundSrc from "/images/background.png";
   import LogoCircle from "/logos/multiqc_logo_circle.svg";
   import Logo from "/logos/multiqc_logo_darkbg.svg";
@@ -51,7 +51,7 @@
 <svelte:window bind:scrollY={y} />
 {#if navOpened}
   <div
-    class="absolute top-16 left-0 h-[calc(100vh-4rem)] w-full overflow-y-auto pb-6 transition-all"
+    class="absolute left-0 top-16 h-[calc(100vh-4rem)] w-full overflow-y-auto pb-6 transition-all"
     style="background-image: url({HeroBackgroundSrc})"
   >
     <div class="flex h-full flex-col">
