@@ -12,7 +12,7 @@ export interface Props {
 const { links } = Astro.props;
 ---
 
-<h5 class="mt-6 mb-2 text-xs font-semibold">Community</h5>
+<h5 class="mb-2 mt-6 text-xs font-semibold">Community</h5>
 <ul class="toc">
   {
     links.map((link) => (
@@ -20,7 +20,7 @@ const { links } = Astro.props;
         <a
           href={link.url}
           class={
-            "block border-l-2 border-gray-200 py-1 px-2 text-xs " +
+            "block border-l-2 border-gray-200 px-2 py-1 text-xs " +
             "hover:border-blue-600 hover:bg-blue-100 hover:text-gray-900 " +
             "dark:border-gray-700 dark:hover:border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"
           }

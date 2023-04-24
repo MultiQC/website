@@ -16,7 +16,7 @@
       <a
         class={"heading-level-" +
           heading.depth +
-          " block border-l-2 border-transparent py-1 px-2 text-xs " +
+          " block border-l-2 border-transparent px-2 py-1 text-xs " +
           " hover:bg-blue-100 hover:text-gray-900" +
           " dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"}
         href={"#" + heading.slug}
