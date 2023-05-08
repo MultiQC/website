@@ -5,6 +5,11 @@
 [build.environment]
     NODE_VERSION = "18.14.0"
 
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
 [[redirects]]
   from = "https://multiqc.netlify.app/*"
   to = "https://multiqc.info/:splat"
