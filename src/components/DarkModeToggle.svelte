@@ -8,27 +8,73 @@
   if (theme === undefined) {
     theme = "dark";
   }
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
+  let num_clicks = 0;
+  const switchLight = () => {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("verydark");
+    localStorage.setItem("theme", "light");
+    theme = "light";
+  };
+  const switchDark = (e: MouseEvent) => {
+    // Triple click
+    if (num_clicks >= 2) {
+      document.documentElement.classList.add("verydark");
       document.documentElement.classList.remove("dark");
+      document.addEventListener("mousemove", updateCursor);
+      document.addEventListener("touchmove", updateCursor);
+      updateCursor(e);
+    } else {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("verydark");
+      document.removeEventListener("mousemove", updateCursor);
+      document.removeEventListener("touchmove", updateCursor);
+      num_clicks += 1;
+      if (num_clicks == 1) {
+        setTimeout(() => {
+          num_clicks = 0;
+        }, 1000);
+      } else {
+        console.log("🌚 Keep clicking..");
+      }
     }
-    localStorage.setItem("theme", newTheme);
-    theme = newTheme;
+    localStorage.setItem("theme", "dark");
+    theme = "dark";
   };
 
-  // NB: Pass in SVG icons from Astro in the <slot /> so that they're fetched at build time, rather than page load
-  // This fixes the flicker at page load.
+  function updateCursor(e: MouseEvent | TouchEvent) {
+    var x = e.clientX || e.touches[0].clientX;
+    var y = e.clientY || e.touches[0].clientY;
+    document.documentElement.style.setProperty("--cursorX", x + "px");
+    document.documentElement.style.setProperty("--cursorY", y + "px");
+  }
 </script>
 
-<button
-  class="rounded-full bg-gray-800 px-2 py-1"
-  on:click={() => toggleTheme()}
-  title="Toggle between light and dark theme"
->
-  <slot />
-  {@html icon_ph_sun_bold}
-  {@html icon_ph_moon_bold}
+<button class="rounded-full bg-gray-800 px-2 py-1" title="Toggle between light and dark theme">
+  <button on:click={() => switchLight()}>{@html icon_ph_sun_bold}</button>
+  <button on:click={(e) => switchDark(e)}>{@html icon_ph_moon_bold}</button>
 </button>
+
+<style type="text/css">
+  /* Flashlight Overlay */
+  /* Modified from https://codepen.io/tomhodgins/pen/egWjBb */
+  :root.verydark {
+    --cursorX: 50vw;
+    --cursorY: 50vh;
+    cursor: none !important;
+  }
+  :root.verydark:before {
+    z-index: 99999998;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    background: radial-gradient(
+      circle 5vmax at var(--cursorX) var(--cursorY),
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+  }
+</style>
