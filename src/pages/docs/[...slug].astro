@@ -1,7 +1,5 @@
 ---
-export const prerender = true;
 import DocsLayout from "@layouts/DocsLayout.astro";
-import fs from "node:fs";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
