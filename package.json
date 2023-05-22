@@ -12,7 +12,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^0.18.2",
+		"@astrojs/mdx": "^0.19.2",
 		"@astrojs/netlify": "^2.2.0",
 		"@astrojs/prefetch": "^0.2.1",
 		"@astrojs/sitemap": "^1.2.1",
@@ -24,7 +24,7 @@
 		"astro-icon": "^0.8.0",
 		"canvas-confetti": "^1.6.0",
 		"classnames": "^2.3.2",
-		"nanostores": "^0.7.4",
+		"nanostores": "^0.8.1",
 		"prism-theme-github": "^1.0.1",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-inline": "^2.0.0",
@@ -32,9 +32,9 @@
 		"rehype-urls": "^1.1.1",
 		"remark-directive": "^2.0.1",
 		"sass": "^1.60.0",
-		"satori": "^0.4.4",
+		"satori": "^0.8.1",
 		"satori-html": "^0.3.2",
-		"sharp": "^0.31.3",
+		"sharp": "^0.32.1",
 		"svelte": "^3.58.0",
 		"tailwindcss": "^3.3.1",
 		"yaml": "^2.2.1",
@@ -44,10 +44,10 @@
 		"@iconify/svelte": "^3.1.0",
 		"@rollup/plugin-yaml": "^4.0.1",
 		"prettier": "^2.8.4",
-		"prettier-plugin-astro": "^0.8.0",
+		"prettier-plugin-astro": "^0.9.0",
 		"prettier-plugin-organize-imports": "^3.2.2",
 		"prettier-plugin-svelte": "^2.9.0",
-		"prettier-plugin-tailwindcss": "^0.2.4",
+		"prettier-plugin-tailwindcss": "^0.3.0",
 		"prisma": "^4.12.0"
 	}
 }
