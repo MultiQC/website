@@ -32,7 +32,11 @@ const AnchorLinkIcon = h(
 // https://astro.build/config
 export default defineConfig({
   site: "https://multiqc.info",
-  output: "server",
+  output: "hybrid",
+  experimental: {
+    hybridOutput: true,
+  },
+  adapter: netlify(),
   integrations: [
     tailwind({
       config: {
@@ -82,5 +86,4 @@ export default defineConfig({
       [rehypeInline, { js: false, css: false, images: true, imports: false, svgElements: true }],
     ],
   },
-  adapter: netlify(),
 });
