@@ -23,7 +23,7 @@ rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
 unzip data.zip
 multiqc . --test-db ngi_db_data.json
 zip -r multiqc_report.zip *multiqc_report.html *multiqc_data
-rm -r data/ Test_NGI_Project_multiqc_data/ __MACOSX/
+rm -r data/ test_ngi_project_multiqc_data/ __MACOSX/
 cd ../
 
 echo "--------------------------------------------------"

@@ -1,7 +1,7 @@
 {
     "summary": {
         "In Progress": 22,
-        "project_name": "Test_NGI_Project",
+        "project_name": "test_ngi_project",
         "reference_genome": "hg19",
         "project_summary": {
             "method_document": "1234",
