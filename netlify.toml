@@ -21,3 +21,9 @@
   to = "https://multiqc.info/:splat"
   status = 301
   force = true
+
+
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  template = "hierarchical"
