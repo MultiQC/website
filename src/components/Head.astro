@@ -1,4 +1,6 @@
 ---
+import docsearch from "@docsearch/js";
+import "@docsearch/css";
 export interface Props {
   title: string;
   description: string;
@@ -55,27 +57,16 @@ const title_long = title == "MultiQC" ? title : title + " - MultiQC";
 <!-- End Google Tag Manager -->
 
 <!-- Algolia -->
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"
-></script>
-<script type="text/javascript">
-  algoliasearchNetlify({
-    appId: "HUXPHAQBTD",
-    apiKey: "48c4b44eb233d559da3b9915203971cc",
-    siteId: "5963e089-9fba-4711-863a-7d17330e26d5",
-    branch: "main",
-    selector: "div#search",
-    placeholder: "",
-    detached: true,
-    hitsPerPage: 10,
-    theme: {
-      mark: "#FFFFFF", // "#4779C8", // Color of the matching content
-      background: "#262626", // Background Color of the input and the panel
-      selected: "#2D2D2D", // Background Color of the selected item
-      text: "#ffffff", // Color of the title of the items
-      colorSourceIcon: "#d6d6e7", // Color of the icon on the left of results
-    },
+<script>
+  import docsearch from "@docsearch/js";
+  import "@docsearch/css";
+
+  docsearch({
+    container: "#search",
+    appId: "V0JDBH4NO9",
+    apiKey: "7dbf54c298bba90faba20e714a99550a",
+    indexName: "multiqc",
   });
 </script>
+
 <!-- End Algolia -->
