@@ -91,7 +91,6 @@ const { navbarItems } = Astro.props;
         )
       )
     }
-    {!location.pathname.startsWith("/docs/") && <div id="search" />}
     <a href="https://github.com/ewels/MultiQC" class="ml-5" title="MultiQC on GitHub">
       <Icon name="mdi:github" class="h-6 w-6 text-gray-300 duration-200 hover:text-white" />
     </a>
@@ -100,10 +99,3 @@ const { navbarItems } = Astro.props;
     </div>
   </div>
 </div>
-
-<style lang="scss">
-  .container-lg :global(.DocSearch-Button-Placeholder),
-  .container-lg :global(.DocSearch-Button-Keys) {
-    display: none;
-  }
-</style>
