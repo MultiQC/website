@@ -29,7 +29,7 @@ html.dark {
 }
 
 button.DocSearch-Button {
-  @apply mx-0 mb-5;
+  @apply mx-0 mb-5 w-full;
   background: var(--docsearch-searchbox-background);
   border: 1px solid theme(colors.gray.400);
   border-radius: theme(borderRadius.sm);
@@ -37,4 +37,30 @@ button.DocSearch-Button {
 }
 html.dark button.DocSearch-Button {
   border: 1px solid theme(colors.gray.700);
+}
+
+button.DocSearch-Button .DocSearch-Button-Keys {
+  background: theme(colors.gray.300/0.5);
+  border-radius: theme(borderRadius.sm);
+  padding: 0.1rem;
+  margin: 0 0.2rem;
+  min-width: auto;
+}
+html.dark button.DocSearch-Button .DocSearch-Button-Keys {
+  background: theme(colors.gray.700);
+}
+button.DocSearch-Button .DocSearch-Button-Key {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  margin: 0 0.2rem;
+  height: auto;
+  width: auto;
+  line-height: initial;
+  top: inherit;
+  font-size: theme(fontSize.xs);
+  color: theme(colors.gray.500/0.8);
+}
+html.dark button.DocSearch-Button .DocSearch-Button-Key {
+  color: theme(colors.gray.400);
 }
