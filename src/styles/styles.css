@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased;
+    /*
+    // Removed, as it breaks tailwind .sticky elements
+    // Consider adding back to main content container
+    @apply overflow-x-hidden;
+    */
+  }
+
+  table td {
+    border-bottom: 1px solid theme(colors.gray.200);
+    @apply px-4 py-2 align-top;
+  }
+  .dark table td {
+    border-bottom: 1px solid theme(colors.gray.700);
+  }
+
+  table thead td {
+    @apply bg-gray-200;
+  }
+
+  .dark table thead td {
+    @apply bg-zinc-700;
+  }
+
+  table code {
+    white-space: nowrap;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: theme(spacing.28);
+  }
+}
+
+@layer components {
+  .typo-h1 {
+    @apply font-display text-2xl font-semibold md:text-4xl lg:text-5xl;
+  }
+
+  .typo-h2 {
+    @apply font-display text-2xl font-semibold md:text-3xl lg:text-4xl;
+  }
+
+  .typo-h3 {
+    @apply font-display text-2xl font-semibold md:text-3xl;
+  }
+
+  .typo-h4 {
+    @apply font-display text-xl font-semibold md:text-2xl;
+  }
+
+  .typo-h5 {
+    @apply font-display text-base font-semibold tracking-wider;
+  }
+
+  .typo-h6 {
+    @apply font-display text-base font-semibold;
+  }
+
+  .typo-blockquote {
+    @apply font-body text-lg font-light lg:text-xl;
+  }
+
+  .typo-intro {
+    @apply font-body text-base font-semibold;
+  }
+
+  .typo-body {
+    @apply font-body text-base;
+  }
+
+  .typo-small {
+    @apply font-body text-sm font-light;
+  }
+
+  .typo-link {
+    @apply text-blue-600 underline underline-offset-4 hover:no-underline dark:text-blue-400;
+  }
+  .typo-link-no-underline {
+    @apply text-blue-600 hover:text-blue-500  dark:text-blue-400 dark:hover:text-blue-300;
+  }
+
+  .container-xl {
+    @apply mx-auto px-4;
+    max-width: 1440px;
+  }
+
+  .container-lg {
+    @apply mx-auto px-8;
+    max-width: 1300px;
+  }
+
+  .container-md {
+    @apply mx-auto px-4;
+    max-width: 1100px;
+  }
+
+  .container-sm {
+    @apply mx-auto px-4;
+    max-width: 900px;
+  }
+
+  .row {
+    @apply -mx-4 flex flex-row flex-wrap;
+  }
+
+  .col {
+    @apply px-4;
+  }
+
+  .col-shrink {
+    @apply col flex-none;
+  }
+
+  .col-full {
+    @apply col min-w-full flex-1/1;
+  }
+
+  .col-1 {
+    @apply col min-w-1/12 flex-1/12;
+  }
+
+  .col-2 {
+    @apply col min-w-2/12 flex-2/12;
+  }
+
+  .col-3 {
+    @apply col min-w-3/12 flex-3/12;
+  }
+
+  .col-4 {
+    @apply col min-w-4/12 flex-4/12;
+  }
+
+  .col-5 {
+    @apply col min-w-5/12 flex-5/12;
+  }
+
+  .col-6 {
+    @apply col min-w-6/12 flex-6/12;
+  }
+
+  .col-7 {
+    @apply col min-w-7/12 flex-7/12;
+  }
+
+  .col-8 {
+    @apply col min-w-8/12 flex-8/12;
+  }
+
+  .col-9 {
+    @apply col min-w-9/12 flex-9/12;
+  }
+
+  .col-10 {
+    @apply col min-w-10/12 flex-10/12;
+  }
+
+  .col-11 {
+    @apply col min-w-11/12 flex-11/12;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white;
+  }
+
+  .btn-secondary {
+    @apply border border-blue-600 bg-transparent text-blue-600 hover:bg-blue-600 hover:text-white;
+  }
+  .btn-secondary:not(.btn-force-light) {
+    @apply dark:border-blue-300 dark:border-blue-300 dark:text-blue-300 dark:hover:border-blue-600 dark:hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:text-white;
+  }
+
+  .btn-accent-alt {
+  }
+
+  .toc .active a,
+  .toc .active a:hover {
+    @apply bg-blue-100   dark:bg-blue-600/[0.2] dark:text-gray-400;
+  }
+  .toc .active a.heading-level-2,
+  .toc .active a.heading-level-2:hover {
+    @apply border-blue-600  dark:border-blue-600;
+  }
+
+  .mobile-toc .toc .active a,
+  .mobile-toc .toc .active a:hover {
+    @apply border-blue-600 bg-blue-600/[0.4] text-gray-200;
+  }
+
+  .typed {
+    background: linear-gradient(180deg, #ee8899 0%, #ac77e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@layer utilities {
+  .shadow {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-gradient-accent {
+    background-image: linear-gradient(237.19deg, #24aa60 30.22%, #4256e7 87.13%);
+  }
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
+  @apply flex items-center;
+}
+.prose .anchor-icon {
+  @apply ml-3 flex self-center text-gray-500 opacity-30 transition-opacity hover:text-blue-400 dark:hover:text-blue-600;
+}
+.prose h1:hover .anchor-icon,
+.prose h2:hover .anchor-icon,
+.prose h3:hover .anchor-icon,
+.prose h4:hover .anchor-icon,
+.prose h5:hover .anchor-icon {
+  @apply opacity-100;
+}
+
+/* Wide tables on mobile */
+.markdown-content table {
+  @apply block w-full overflow-auto lg:table;
+}
+.markdown-content thead th {
+  @apply bg-gray-500/10;
+}
+.markdown-content td,
+.markdown-content th {
+  @apply p-2;
+}
+
+/* Excalidraw SVGs */
+.markdown-content svg {
+  @apply h-full max-w-full dark:hue-rotate-180 dark:invert;
+}
+.markdown-content svg rect {
+  @apply fill-transparent;
+}
+
+/* Light-mode code blocks */
+pre.astro-code {
+  position: relative;
+  @apply border border-gray-800 bg-black/50 hue-rotate-180 invert saturate-[1.2] !important;
+  @apply dark:border-gray-700/50 dark:bg-[#282c34] dark:hue-rotate-0 dark:invert-0 dark:saturate-100 !important;
+}
+/* "Copy Code" Button */
+pre.astro-code .copy-code-button {
+  @apply absolute right-0 top-0 p-3 font-body text-white opacity-30 transition hover:text-blue-400 dark:text-black dark:hover:text-blue-700;
+}
+pre.astro-code:hover .copy-code-button {
+  @apply opacity-80;
+}
+pre.astro-code .copy-code-button svg {
+  @apply inline h-4 w-4;
+}
