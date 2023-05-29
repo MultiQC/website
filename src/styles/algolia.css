@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --docsearch-text-color: rgb(169, 173, 180);
+  --docsearch-searchbox-focus-background: rgb(44, 43, 43);
+  --docsearch-searchbox-shadow: rgb(0, 0, 0);
+  --docsearch-modal-background: rgb(44, 43, 43);
+  --docsearch-modal-shadow: rgba(0, 0, 0, 0.16);
+  --docsearch-footer-background: rgb(44, 43, 43);
+  --docsearch-footer-shadow: rgba(0, 0, 0, 0.16);
+  --docsearch-hit-color: rgb(198, 199, 201);
+  --docsearch-hit-shadow: rgba(0, 0, 0, 0.16);
+  --docsearch-hit-background: rgb(111, 109, 109);
+}
 /*! @algolia/autocomplete-theme-classic 1.5.6 | MIT License | © Algolia, Inc. and contributors | https://github.com/algolia/autocomplete */
 :root {
   --aa-search-input-height: 44px;
