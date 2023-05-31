@@ -4,8 +4,19 @@
   import HeroBackgroundSrc from "/images/background.png";
   import LogoCircle from "/logos/multiqc_logo_circle.svg";
   import Logo from "/logos/multiqc_logo_darkbg.svg";
+  import docsearch from "@docsearch/js";
+  import "@docsearch/css";
+  import { onMount } from "svelte";
 
-  // <Icon icon="mdi:menu" class="h-8 w-8" />
+  onMount(() => {
+    docsearch({
+      container: "#mobileSearch",
+      appId: "V0JDBH4NO9",
+      apiKey: "7dbf54c298bba90faba20e714a99550a",
+      indexName: "multiqc",
+    });
+  });
+
   const icon_mdi_menu = `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="h-8 w-8 iconify iconify--mdi" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>`;
 
   export let headings: {
@@ -44,6 +55,8 @@
     />
   </a>
   <NavbarToc {headings} />
+
+  <div id="mobileSearch" class="h-8" />
   <button class="text-white" on:click={toggleNavOpened} title="Open navigation">
     {@html icon_mdi_menu}
   </button>
