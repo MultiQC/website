@@ -4,8 +4,8 @@ import { Code } from "astro/components";
 import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon";
 import Button from "@components/Button.svelte";
-
-import search_patterns from "@multiqc_repo/multiqc/utils/search_patterns.yaml";
+import { getCollection } from "astro:content";
+import search_patterns from "@public/search_patterns.yaml";
 
 export async function getStaticPaths() {
   const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
