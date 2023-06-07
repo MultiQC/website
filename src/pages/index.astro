@@ -32,6 +32,7 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
   });
 
 const exampleReports = await getCollection("example-reports");
+const modules = await getCollection("modules");
 ---
 
 <BaseLayout
@@ -161,7 +162,7 @@ const exampleReports = await getCollection("example-reports");
           <div class="mt-5">
             <Button to="/modules/" variant="primary" size="md" classes="w-full">
               <Icon name="mdi:hammer-wrench" class="mr-3 h-6 w-6" />
-              114 supported tools
+              {modules.length} supported tools
             </Button>
           </div>
           <div class="mt-5">
