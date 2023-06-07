@@ -1,8 +1,9 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import { Icon } from "astro-icon";
+import { getCollection } from "astro:content";
 
-const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
+const modules = await getCollection("modules");
 ---
 
 <PageLayout
@@ -57,14 +58,14 @@ const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
             <div class="module-row grid-cols-4 lg:grid">
               <div class="flex items-center border-gray-200 px-4 pb-0 pt-2 dark:border-gray-700 lg:border-b lg:pb-2">
                 <a
-                  href={"/modules/" + module.file.split("/").pop().replace(".md", "")}
+                  href={"/modules/" + module.id.split("/").pop().replace(".md", "")}
                   class="typo-body text-blue-600 dark:text-blue-400"
                 >
-                  {module.frontmatter.name}
+                  {module.data.name}
                 </a>
               </div>
               <div class="col-span-3 flex items-center border-b border-gray-200 px-4 pb-3 text-gray-600 dark:border-gray-700 dark:text-gray-300 lg:py-2">
-                {module.frontmatter.description}
+                {module.data.description}
               </div>
             </div>
           ))

@@ -22,7 +22,17 @@ const docsCollection = defineCollection({
   }),
 });
 
+const modulesCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    name: z.string(),
+    url: z.string().url(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   "example-reports": reportCollection,
   docs: docsCollection,
+  modules: modulesCollection,
 };
