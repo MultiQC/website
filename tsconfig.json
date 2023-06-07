@@ -6,7 +6,7 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@content/*": ["src/content/*"],
-      "@multiqc_repo/*": ["../MultiQC/*"]
+      "@src/*": ["src/*"]
     },
     "strictNullChecks": true
   }

@@ -33,9 +33,6 @@ const AnchorLinkIcon = h(
 export default defineConfig({
   site: "https://multiqc.info",
   output: "hybrid",
-  experimental: {
-    hybridOutput: true,
-  },
   adapter: netlify(),
   integrations: [
     tailwind({
@@ -50,6 +47,9 @@ export default defineConfig({
   ],
   vite: {
     plugins: [yaml()],
+    resolve: {
+      preserveSymlinks: true,
+    },
   },
   markdown: {
     shikiConfig: {

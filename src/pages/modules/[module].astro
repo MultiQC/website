@@ -4,34 +4,35 @@ import { Code } from "astro/components";
 import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon";
 import Button from "@components/Button.svelte";
-
-import search_patterns from "@multiqc_repo/multiqc/utils/search_patterns.yaml";
+import { getCollection } from "astro:content";
+import search_patterns from "@src/search_patterns.yaml";
 
 export async function getStaticPaths() {
-  const modules = await Astro.glob("../../../../MultiQC/docs/modules/**/*.md");
+  const modules = await getCollection("modules");
 
   return modules.map((module) => ({
     params: {
-      module: module.file.split("/").pop().replace(".md", ""),
+      module: module.slug,
     },
     props: {
       module: module,
-      frontmatter: module.frontmatter,
+      frontmatter: module.data,
       search_patterns: search_patterns,
     },
   }));
 }
 
-const { Content, frontmatter } = Astro.props.module;
+const { module, frontmatter, search_patterns } = Astro.props;
+
+const { headings, Content, remarkPluginFrontmatter } = await module.render();
 const gh_url =
-  "https://github.com/ewels/MultiQC/blob/master/docs/modules/" +
-  Astro.props.module.file.split("/").pop();
+  "https://github.com/ewels/MultiQC/blob/master/docs/modules/" + module.id.split("/").pop();
 
 // Filter search_patterns to only include keys containing key string
-const module_search_patterns = Object.keys(Astro.props.search_patterns)
-  .filter((key) => key.includes(Astro.props.module.file.split("/").pop().replace(".md", "")))
+const module_search_patterns = Object.keys(search_patterns)
+  .filter((key) => key.includes(module.id.split("/").pop().replace(".md", "")))
   .reduce((obj, key) => {
-    obj[key] = Astro.props.search_patterns[key];
+    obj[key] = search_patterns[key];
     return obj;
   }, {});
 ---
