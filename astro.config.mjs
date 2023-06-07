@@ -33,9 +33,6 @@ const AnchorLinkIcon = h(
 export default defineConfig({
   site: "https://multiqc.info",
   output: "hybrid",
-  experimental: {
-    hybridOutput: true,
-  },
   adapter: netlify(),
   integrations: [
     tailwind({
