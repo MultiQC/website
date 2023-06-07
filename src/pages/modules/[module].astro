@@ -5,7 +5,7 @@ import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon";
 import Button from "@components/Button.svelte";
 import { getCollection } from "astro:content";
-import search_patterns from "@public/search_patterns.yaml";
+import search_patterns from "@src/search_patterns.yaml";
 
 export async function getStaticPaths() {
   const modules = await getCollection("modules");

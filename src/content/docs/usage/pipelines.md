@@ -1,1 +1,0 @@
-../../../../../MultiQC/docs/core/usage/pipelines.md
