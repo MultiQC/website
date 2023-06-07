@@ -1,57 +1,44 @@
 ---
 import DocsLayout from "@layouts/DocsLayout.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob("../../../../MultiQC/docs/core/**/*.md");
-
-  // Get slugs used to build the side docs navigation
-  function get_slug(filename: string) {
-    let slug = filename
-      .split("/docs/core/")
-      .pop()
-      .replace(/.md$/, "")
-      .replace(/\/index$/, "");
-    if (slug == "index") {
-      return; // root /docs index - return null for no slug
-    }
-    return slug;
-  }
-
-  // Return the posts map
-  return posts.map((post) => ({
+  const docs = await getCollection("docs");
+  return docs.map((doc) => ({
     params: {
-      slug: get_slug(post.file),
+      slug: doc.slug !== "index" ? doc.slug : undefined,
     },
     props: {
-      post: post,
-      frontmatter: post.frontmatter,
+      doc: doc,
+      frontmatter: doc.data,
     },
   }));
 }
 
-const { Content, frontmatter } = Astro.props.post;
+const { doc, frontmatter } = Astro.props;
+const { headings, Content, remarkPluginFrontmatter } = await doc.render();
+
+const headings_filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 
 // GitHub URL for the footer
-const md_filename = Astro.props.post.file.split("/").pop();
+const md_filename = doc.id.split("/").pop();
 const gh_url = "https://github.com/ewels/MultiQC/blob/master/docs/core/" + md_filename;
 
-// Get the markdown headings for the table of contents
-const headings = Astro.props.post.getHeadings().filter((h) => h.depth >= 2 && h.depth <= 3);
-
-// get section as second to last element of URL and convert to title case
-const section = Astro.props.post.file
-  .split("/")
-  .slice(-2, -1)[0]
-  .replace(/_/g, " ")
-  .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
-  .replace("Core", "Getting Started");
+let section = doc.slug ? doc.slug.split("/")[0] : undefined;
+// get section as first element of the slug convert to title case
+section =
+  section &&
+  section
+    .replace(/_/g, " ")
+    .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
+    .replace("Core", "Getting Started");
 ---
 
 <DocsLayout
   title={frontmatter.title}
   subtitle={frontmatter.description}
   section={section ? "Docs / " + section : ""}
-  headings={headings}
+  headings={headings_filtered}
   md_github_url={gh_url}
   image={frontmatter.social_image
     ? frontmatter.social_image

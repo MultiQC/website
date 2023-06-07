@@ -47,6 +47,9 @@ export default defineConfig({
   ],
   vite: {
     plugins: [yaml()],
+    resolve: {
+      preserveSymlinks: true,
+    },
   },
   markdown: {
     shikiConfig: {

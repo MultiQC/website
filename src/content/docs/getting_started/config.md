@@ -1,0 +1,1 @@
+../../../../../MultiQC/docs/core/getting_started/config.md

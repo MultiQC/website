@@ -1,0 +1,1 @@
+../../../../../MultiQC/docs/core/getting_started/running_multiqc.md

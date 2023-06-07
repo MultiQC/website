@@ -1,0 +1,1 @@
+../../../../../MultiQC/docs/core/development/plugins.md

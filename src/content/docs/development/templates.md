@@ -1,0 +1,1 @@
+../../../../../MultiQC/docs/core/development/templates.md
