@@ -90,7 +90,7 @@ export default defineConfig({
           keepBackground: true,
           theme: {
             dark: "one-dark-pro",
-            light: "github-light",
+            light: "min-light",
           },
         },
       ],
