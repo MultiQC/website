@@ -247,26 +247,32 @@
 }
 
 /* Excalidraw SVGs */
-.markdown-content svg {
+.markdown-content p svg {
   @apply h-full max-w-full dark:hue-rotate-180 dark:invert;
 }
-.markdown-content svg rect {
+.markdown-content p svg rect {
   @apply fill-transparent;
 }
 
-/* Light-mode code blocks */
-pre.astro-code {
+/* Code blocks */
+div[data-rehype-pretty-code-fragment] pre {
   position: relative;
-  @apply border border-gray-800 bg-black/50 hue-rotate-180 invert saturate-[1.2] !important;
-  @apply dark:border-gray-700/50 dark:bg-[#282c34] dark:hue-rotate-0 dark:invert-0 dark:saturate-100 !important;
+}
+/* hide Light-mode code blocks in dark mode */
+div[data-rehype-pretty-code-fragment] pre[data-theme="light"] {
+  @apply dark:hidden;
+}
+/* hide Dark-mode code blocks in light mode */
+div[data-rehype-pretty-code-fragment] pre[data-theme="dark"] {
+  @apply hidden dark:block;
 }
 /* "Copy Code" Button */
-pre.astro-code .copy-code-button {
-  @apply absolute right-0 top-0 p-3 font-body text-white opacity-30 transition hover:text-blue-400 dark:text-black dark:hover:text-blue-700;
+div[data-rehype-pretty-code-fragment] pre .copy-code-button {
+  @apply absolute right-0 top-0 p-3 font-body text-black opacity-30 transition hover:text-blue-400 dark:text-white dark:hover:text-blue-400;
 }
-pre.astro-code:hover .copy-code-button {
-  @apply opacity-80;
-}
-pre.astro-code .copy-code-button svg {
+div[data-rehype-pretty-code-fragment] pre svg {
   @apply inline h-4 w-4;
+}
+div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
+  @apply opacity-80;
 }
