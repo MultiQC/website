@@ -11,6 +11,7 @@ import yaml from "@rollup/plugin-yaml";
 import { h } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeInline from "rehype-inline";
+import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import calloutsPlugin from "./plugins/remark-callouts.js";
@@ -52,9 +53,7 @@ export default defineConfig({
     },
   },
   markdown: {
-    shikiConfig: {
-      theme: "one-dark-pro",
-    },
+    syntaxHighlight: false,
     remarkPlugins: [remarkDirective, calloutsPlugin],
     rehypePlugins: [
       rehypeSlug,
@@ -84,6 +83,17 @@ export default defineConfig({
       ],
       // Make images inline, use <svg> elements for SVGs
       [rehypeInline, { js: false, css: false, images: true, imports: false, svgElements: true }],
+      [
+        rehypePrettyCode,
+        {
+          langPrefix: "language-",
+          keepBackground: true,
+          theme: {
+            dark: "one-dark-pro",
+            light: "github-light",
+          },
+        },
+      ],
     ],
   },
 });
