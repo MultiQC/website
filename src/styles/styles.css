@@ -257,23 +257,22 @@
 /* Code blocks */
 div[data-rehype-pretty-code-fragment] pre {
   position: relative;
-
-  /* hide Light-mode code blocks in dark mode */
-  &[data-theme="light"] {
-    @apply dark:hidden;
+}
+/* hide Light-mode code blocks in dark mode */
+div[data-rehype-pretty-code-fragment] pre[data-theme="light"] {
+  @apply dark:hidden;
+}
+/* hide Dark-mode code blocks in light mode */
+div[data-rehype-pretty-code-fragment] pre[data-theme="dark"] {
+  @apply hidden dark:block;
+}
+/* "Copy Code" Button */
+div[data-rehype-pretty-code-fragment] pre .copy-code-button {
+  @apply absolute right-0 top-0 p-3 font-body text-black opacity-30 transition hover:text-blue-400 dark:text-white dark:hover:text-blue-400;
+  div[data-rehype-pretty-code-fragment] pre svg {
+    @apply inline h-4 w-4;
   }
-  /* hide Dark-mode code blocks in light mode */
-  &[data-theme="dark"] {
-    @apply hidden dark:block;
-  }
-  /* "Copy Code" Button */
-  & .copy-code-button {
-    @apply absolute right-0 top-0 p-3 font-body text-black opacity-30 transition hover:text-blue-400 dark:text-white dark:hover:text-blue-400;
-    & svg {
-      @apply inline h-4 w-4;
-    }
-  }
-  &:hover .copy-code-button {
-    @apply opacity-80;
-  }
+}
+div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
+  @apply opacity-80;
 }
