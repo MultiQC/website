@@ -54,7 +54,7 @@ const module_search_patterns = Object.keys(search_patterns)
     {
       Object.keys(module_search_patterns).length > 0 && (
         <>
-          <h2>File search patterns</h2>
+          <h2 id="module-search-patterns">File search patterns</h2>
           <Code code={stringify(module_search_patterns, null, 2)} lang="yaml" />
         </>
       )
