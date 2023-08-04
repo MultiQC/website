@@ -22,6 +22,8 @@ cd ngi-rna
 rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
 unzip data.zip
 multiqc . --test-db ngi_db_data.json
+# plugin changed the name of the report, don't want to break links
+mv test_ngi_project_pipeline_multiqc_report.html test_ngi_project_multiqc_report.html
 zip -r multiqc_report.zip *multiqc_report.html *multiqc_data
 rm -r data/ test_ngi_project_multiqc_data/ __MACOSX/
 cd ../
