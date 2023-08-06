@@ -82,6 +82,27 @@ const modules = await getCollection("modules");
               </div>
             </div>
           </div>
+          <div class="rounded-sm bg-gradient-to-r from-pink-300 to-blue-300 text-gray-800">
+            <div class="container-lg py-4">
+              <div class="flex flex-row">
+                <p class="typo-intro grow">
+                  MultiQC just turned
+                  <span class="sm:hidden">8!</span>
+                  <span class="hidden sm:inline">eight years old! 🎂</span>
+                </p>
+                <Button
+                  to="https://seqera.io/blog/multiqc-turns-8-years-old/"
+                  variant="primary"
+                  size="sm"
+                  classes="ml-2"
+                  arrow={true}
+                  client:visible
+                >
+                  Read the blog <span class="hidden md:inline">&nbsp;post</span>
+                </Button>
+              </div>
+            </div>
+          </div>
           <h1 class="typo-h4 mt-8">
             Aggregate results from bioinformatics analyses across many samples into a single report
           </h1>
@@ -360,7 +381,9 @@ const modules = await getCollection("modules");
       </p>
       <p class="typo-blockquote mx-auto mb-3 max-w-5xl">
         See the
-        <a href="/docs/getting_started/installation/" class="typo-link"> installation instructions</a>
+        <a href="/docs/getting_started/installation/" class="typo-link">
+          installation instructions
+        </a>
         for more help.
       </p>
       <div class="mt-5 flex flex-col justify-center md:flex-row lg:mt-10">
