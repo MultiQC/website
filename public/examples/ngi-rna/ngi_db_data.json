@@ -29,7 +29,7 @@
         "open_date": "2016-04-04",
         "final_number_of_samples": 22,
         "details": {
-            "library_construction_method": "foo",
+            "library_construction_method": "TruSeq Stranded mRNA",
             "customer_project_reference": "This is an example project. All identifying data has been removed.",
             "disposal_of_any_remaining_samples": "Return to customer after project completion",
             "custom_capture_design_id": "N/A",
@@ -62,7 +62,7 @@
     "samples": {
         "P1234_1020": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 15.843059,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -85,7 +85,7 @@
         },
         "P1234_1022": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 14.601827,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -109,7 +109,7 @@
         },
         "P1234_1019": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 16.902605,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -132,7 +132,7 @@
         },
         "P1234_1018": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 30.833924,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -156,7 +156,7 @@
         },
         "P1234_1013": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 59.012592,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -179,7 +179,7 @@
         },
         "P1234_1012": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 26.62935,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -202,7 +202,7 @@
         },
         "P1234_1011": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 27.988897,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -225,7 +225,7 @@
         },
         "P1234_1010": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 11.357451,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -248,7 +248,7 @@
         },
         "P1234_1017": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 34.064465,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -271,7 +271,7 @@
         },
         "P1234_1016": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 28.242306,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -294,7 +294,7 @@
         },
         "P1234_1015": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 13.216614,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -317,7 +317,7 @@
         },
         "P1234_1014": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 46.909968,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -340,7 +340,7 @@
         },
         "P1234_1021": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 28.300555,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -363,7 +363,7 @@
         },
         "P1234_1004": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 31.19406,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -386,7 +386,7 @@
         },
         "P1234_1005": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 33.756772,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -409,7 +409,7 @@
         },
         "P1234_1006": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 30.839171,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -432,7 +432,7 @@
         },
         "P1234_1007": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 21.758318,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -455,7 +455,7 @@
         },
         "P1234_1001": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 33.741075,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -478,7 +478,7 @@
         },
         "P1234_1002": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 31.08015,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -501,7 +501,7 @@
         },
         "P1234_1003": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 33.724069,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -524,7 +524,7 @@
         },
         "P1234_1008": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 16.710354,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
@@ -547,7 +547,7 @@
         },
         "P1234_1009": {
             "details": {
-                "library_construction_method": "foo",
+                "library_construction_method": "TruSeq Stranded mRNA",
                 "total_reads_(m)": 20.462961,
                 "customer_average_fragment_length": 279,
                 "reference_genome": "hg19",
