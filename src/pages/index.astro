@@ -9,6 +9,7 @@ import mqc_releases from "../multiqc_releases.json";
 
 import fs from "node:fs";
 import { Icon } from "astro-icon";
+import ReleasedAgo from "@components/ReleasedAgo.svelte";
 import HomepageVideos from "@components/HomepageVideos.svelte";
 import SnippetBox from "@components/SnippetBox.svelte";
 
@@ -18,16 +19,17 @@ const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/re
     if (!data.tag_name) {
       console.error("Error: Could not fetch latest release from GitHub API.");
       console.warn(data);
-      return "";
+      return mqc_releases;
     } else {
       mqc_releases.latest = data.tag_name;
+      mqc_releases.latest_published_at = data.published_at;
       fs.writeFile("src/multiqc_releases.json", JSON.stringify(mqc_releases), (err) => {
         if (err) {
           console.error("Error writing multiqc_releases file!");
           console.warn(err);
         }
       });
-      return data.tag_name;
+      return mqc_releases;
     }
   });
 
@@ -62,12 +64,15 @@ const modules = await getCollection("modules");
             <div class="grow pt-6">
               {
                 latestRelease && (
-                  <a
-                    href="https://github.com/ewels/MultiQC/releases"
-                    class="typo-small mb-6 block text-xs text-gray-300 transition-colors hover:text-gray-100"
-                  >
-                    Latest release: <strong class="ml-2">{latestRelease}</strong>
-                  </a>
+                  <>
+                    <a
+                      href="https://github.com/ewels/MultiQC/releases"
+                      class="typo-small block text-xs text-gray-300 transition-colors hover:text-gray-100"
+                    >
+                      Latest release: <strong class="ml-2">{latestRelease.latest}</strong>
+                    </a>
+                    <ReleasedAgo released_time={latestRelease.latest_published_at} client:load />
+                  </>
                 )
               }
               <div
