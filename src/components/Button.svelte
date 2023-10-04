@@ -1,6 +1,7 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
 
+  export let btnId: string = "";
   export let classes: string = "";
   export let theme: string = "default";
   export let forceLight: boolean = false;
@@ -11,10 +12,11 @@
   export let to: string = "";
   export let arrow: boolean = false;
   export let newTab: boolean = false;
+  export let disabled: boolean = false;
 
   const buttonClassName =
     classes +
-    " group font-body font-medium leading-none inline-flex items-center justify-center select-none transition-all duration-200" +
+    " group font-body font-medium leading-none inline-flex items-center justify-center select-none transition-all duration-200 disabled:opacity-50" +
     [
       variant === "reset" ? "bg-transparent" : "",
       theme === "default" && variant === "primary" ? "btn-primary" : "",
@@ -41,21 +43,28 @@
 </script>
 
 {#if submit}
-  <button type="submit" class={buttonClassName} on:click>
+  <button type="submit" id={btnId} class={buttonClassName} {disabled} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </button>
 {:else if to}
-  <a href={to} class={buttonClassName} target={newTab ? "_blank" : null} on:click>
+  <a
+    href={to}
+    id={btnId}
+    class={buttonClassName}
+    target={newTab ? "_blank" : null}
+    {disabled}
+    on:click
+  >
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />
     {/if}
   </a>
 {:else}
-  <button type="button" class={buttonClassName} on:click>
+  <button type="button" id={btnId} class={buttonClassName} {disabled} on:click>
     <slot />
     {#if arrow}
       <Icon icon="mdi:arrow-right" class={iconClassNames} />

@@ -1,0 +1,175 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Button from "@components/Button.svelte";
+import { Icon } from "astro-icon";
+---
+
+<PageLayout
+  title="Run MultiQC in your browser"
+  subtitle="✨ Run MultiQC in your browser on local files, with Web Assembly."
+>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div>
+      <p>
+        <Button btnId="butDirectory" variant="primary" size="md" classes="mb-4 mr-2">
+          <Icon name="mdi:folder-search" class="mr-3 h-6 w-6" />
+          Step 1 - Choose Directory
+        </Button>
+      </p>
+      <p>
+        <Button btnId="runMultiQC" variant="primary" size="md" classes="mb-4 mr-2" disabled="true">
+          <Icon name="mdi:motion-play-outline" class="mr-3 h-6 w-6" />
+          Step 2 - Run MultiQC
+        </Button>
+      </p>
+      <p>
+        <Button btnId="openReport" variant="primary" size="md" classes="mb-4 mr-2" disabled="true">
+          <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
+          Step 3 - Open report
+        </Button>
+      </p>
+
+      <pre id="stdout"></pre>
+    </div>
+    <div>
+      <h2 class="typo-h4 mb-6">Frequently Asked Questions</h2>
+
+      <h3 class="typo-h6 mt-6">What is this?</h3>
+      <p>
+        This is the real MultiQC tool, running in your browser. No installation required, no data
+        uploaded to the internet. Welcome to the future.
+      </p>
+
+      <h3 class="typo-h6 mt-6">Who is it for?</h3>
+      <p>
+        This is great for anyone who gets emailed a zip file full of FastQC reports, who wants to
+        quickly summarise them. It's good for running demos and training, and good for anyone who
+        feels a cold sweat when they hear the words <em>"now open the terminal"</em>.
+      </p>
+
+      <h3 class="typo-h6 mt-6">What files am I meant to give it?</h3>
+      <p>
+        Feed it analysis outputs from bioinformatics tools <a href="/modules/" class="typo-link"
+          >supported by MultiQC</a
+        >. Don't worry about being selective, MultiQC will ignore any files it doesn't recognise
+        (eg. those big BAM files). No data is transferred over the internet, only mounted from your
+        local filesystem. So number and filesize of files shouldn't matter.
+      </p>
+
+      <h3 class="typo-h6 mt-6">Do you have any I can try with?</h3>
+      <p>
+        Sure! All of the <a href="/example-reports/" class="typo-link">example reports</a> have associated
+        raw data for you to play with. In fact, there's some <a
+          href="/examples/rna-seq/data.zip"
+          class="typo-link">right here</a
+        >! Just remember to unzip the file before running with MultiQC.
+
+        <h3 class="typo-h6 mt-6">How does it work?</h3>
+        <p>
+          This web page uses a relatively new technology called <a
+            href="https://webassembly.org/"
+            class="typo-link">WebAssembly</a
+          >.
+        </p>
+
+        <h3 class="typo-h6 mt-6">Tell me again, but with more detail..</h3>
+
+        <h3 class="typo-h6 mt-6">So is my data being uploaded?</h3>
+
+        <h3 class="typo-h6 mt-6">Seriously, it's working offline?</h3>
+
+        <h3 class="typo-h6 mt-6">How come I don't have to install anything?</h3>
+
+        <h3 class="typo-h6 mt-6">Will this replace the command-line version of MultiQC?</h3>
+
+        <h3 class="typo-h6 mt-6">
+          I gave it a <code>.fastq</code> file, but it said no files found
+        </h3>
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js" is:inline></script>
+    <script type="text/javascript" is:inline>
+      let is_initialized = false;
+      let files_selected = false;
+
+      // Initialize Pyodide + install packages
+      async function initialize() {
+        let pyodide = await loadPyodide();
+        await pyodide.loadPackage("micropip");
+        const micropip = pyodide.pyimport("micropip");
+        await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
+        await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
+        await micropip.install("multiqc");
+        console.log(" ----> Pyodide initialized, packages installed. <---- ");
+        is_initialized = true;
+        if (files_selected) {
+          const runMultiQC = document.getElementById("runMultiQC");
+          runMultiQC.disabled = false;
+        }
+        return pyodide;
+      }
+      let pyodideReadyPromise = initialize();
+
+      // User adds files
+      const butDir = document.getElementById("butDirectory");
+      butDir.addEventListener("click", async () => {
+        const dirHandle = await window.showDirectoryPicker();
+        let pyodide = await pyodideReadyPromise;
+        const nativefs = await pyodide.mountNativeFS("/data", dirHandle);
+        files_selected = false;
+        if (is_initialized) {
+          const runMultiQC = document.getElementById("runMultiQC");
+          runMultiQC.disabled = false;
+        }
+      });
+
+      // User runs MultiQC
+      const runMultiQC = document.getElementById("runMultiQC");
+      runMultiQC.addEventListener("click", async () => {
+        run_multiqc();
+      });
+
+      async function run_multiqc() {
+        console.log(" ----> Running MultiQC <---- ");
+        let pyodide = await pyodideReadyPromise;
+        const stdout = document.getElementById("stdout");
+        const hideMe = document.getElementById("hideMe");
+        pyodide.setStdout({
+          batched: (str) => {
+            console.log(str);
+            stdout.textContent += str + "\n";
+          },
+        });
+        pyodide.setStderr({
+          batched: (str) => {
+            console.log(str);
+            stdout.textContent += str + "\n";
+          },
+        });
+        // Run Python
+        pyodide.runPython(`
+            import multiqc
+            multiqc.run('/data', no_ansi=True, force=True)
+        `);
+        const openReport = document.getElementById("openReport");
+        openReport.disabled = false;
+      }
+
+      // User runs MultiQC
+      const openReport = document.getElementById("openReport");
+      openReport.addEventListener("click", async () => {
+        open_report();
+      });
+
+      // Show generated report
+      async function open_report() {
+        let pyodide = await pyodideReadyPromise;
+        let report = pyodide.FS.readFile("multiqc_report.html", { encoding: "utf8" });
+        var win = window.open("", "");
+        win.document.write(report);
+        win.document.close();
+      }
+    </script>
+  </div>
+</PageLayout>
