@@ -2,7 +2,7 @@
   import DarkModeToggle from "@components/DarkModeToggle.svelte";
   import NavbarToc from "@components/navbar/NavbarToc.svelte";
   import HeroBackgroundSrc from "/images/background.png";
-  import LogoCircle from "/logos/multiqc_logo_circle.svg";
+  import LogoCircle from "/logos/multiqc_icon_color.svg";
   import Logo from "/logos/multiqc_logo_darkbg.svg";
   import docsearch from "@docsearch/js";
   import "@docsearch/css";
