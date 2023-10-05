@@ -10,6 +10,8 @@ async function initialize() {
   await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
   await micropip.install("multiqc");
   console.log(" ----> Pyodide initialized, packages installed. <---- ");
+  document.getElementById("loading_spinner").style.display = "none";
+  document.getElementById("drop_files_helptext").style.display = "block";
   is_initialized = true;
   if (files_selected) {
     const runMultiQC = document.getElementById("runMultiQC");
@@ -19,7 +21,9 @@ async function initialize() {
 }
 let pyodideReadyPromise = initialize();
 
-// User adds files
+////////////////////////
+// Add files via button
+////////////////////////
 const butDir = document.getElementById("butDirectory");
 butDir.addEventListener("click", async () => {
   const dirHandle = await window.showDirectoryPicker();
@@ -27,12 +31,46 @@ butDir.addEventListener("click", async () => {
   const nativefs = await pyodide.mountNativeFS("/data", dirHandle);
   files_selected = false;
   if (is_initialized) {
-    const runMultiQC = document.getElementById("runMultiQC");
-    runMultiQC.disabled = false;
+    document.getElementById("runMultiQC").disabled = false;
   }
 });
 
-// User runs MultiQC
+//////////////////////////////
+// Add files via drag + drop
+//////////////////////////////
+const dropDiv = document.getElementById("drop_files");
+dropDiv.addEventListener("dragover", (e) => {
+  e.preventDefault();
+});
+dropDiv.addEventListener("dragenter", (e) => {
+  e.preventDefault();
+  dropDiv.style.opacity = 100;
+});
+dropDiv.addEventListener("dragleave", (e) => {
+  e.preventDefault();
+  dropDiv.style.opacity = 70;
+});
+
+dropDiv.addEventListener("drop", async (e) => {
+  e.preventDefault();
+  dropDiv.style.opacity = 70;
+  let pyodide = await pyodideReadyPromise;
+  // Process all of the items.
+  for (const item of e.dataTransfer.items) {
+    if (item.kind === "file") {
+      const entry = await item.getAsFileSystemHandle();
+      const nativefs = await pyodide.mountNativeFS("/data", entry);
+      files_selected = false;
+      if (is_initialized) {
+        document.getElementById("runMultiQC").disabled = false;
+      }
+    }
+  }
+});
+
+////////////////////////
+// Run MultiQC
+////////////////////////
 const runMultiQC = document.getElementById("runMultiQC");
 runMultiQC.addEventListener("click", async () => {
   run_multiqc();
@@ -42,7 +80,6 @@ async function run_multiqc() {
   console.log(" ----> Running MultiQC <---- ");
   let pyodide = await pyodideReadyPromise;
   const stdout = document.getElementById("stdout");
-  const hideMe = document.getElementById("hideMe");
   pyodide.setStdout({
     batched: (str) => {
       console.log(str);
@@ -57,20 +94,21 @@ async function run_multiqc() {
   });
   // Run Python
   pyodide.runPython(`
-            import multiqc
-            multiqc.run('/data', no_ansi=True, force=True)
-        `);
+    import multiqc
+    multiqc.run('/data', no_ansi=True, force=True)
+  `);
   const openReport = document.getElementById("openReport");
   openReport.disabled = false;
 }
 
-// User runs MultiQC
+////////////////////////
+// Open report
+////////////////////////
 const openReport = document.getElementById("openReport");
 openReport.addEventListener("click", async () => {
   open_report();
 });
 
-// Show generated report
 async function open_report() {
   let pyodide = await pyodideReadyPromise;
   let report = pyodide.FS.readFile("multiqc_report.html", { encoding: "utf8" });
