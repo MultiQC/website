@@ -3,6 +3,12 @@ let files_selected = false;
 
 // Initialize Pyodide + install packages
 async function initialize() {
+  if (!window.showDirectoryPicker) {
+    document.getElementById("unsupported_browser").style.display = "block";
+    document.getElementById("loading_spinner").style.display = "none";
+    document.getElementById("butDirectory").disabled = true;
+    return;
+  }
   let pyodide = await loadPyodide();
   await pyodide.loadPackage("micropip");
   const micropip = pyodide.pyimport("micropip");
@@ -13,10 +19,6 @@ async function initialize() {
   document.getElementById("loading_spinner").style.display = "none";
   document.getElementById("drop_files_helptext").style.display = "block";
   is_initialized = true;
-  if (files_selected) {
-    const runMultiQC = document.getElementById("runMultiQC");
-    runMultiQC.disabled = false;
-  }
   return pyodide;
 }
 let pyodideReadyPromise = initialize();
@@ -26,12 +28,22 @@ let pyodideReadyPromise = initialize();
 ////////////////////////
 const butDir = document.getElementById("butDirectory");
 butDir.addEventListener("click", async () => {
-  const dirHandle = await window.showDirectoryPicker();
-  let pyodide = await pyodideReadyPromise;
-  const nativefs = await pyodide.mountNativeFS("/data", dirHandle);
-  files_selected = false;
-  if (is_initialized) {
-    document.getElementById("runMultiQC").disabled = false;
+  if (!is_initialized) {
+    alert("Please wait for Pyodide to initialize before adding files.");
+    return;
+  } else if (files_selected) {
+    alert("Only one directory can be added currently.");
+    return;
+  } else {
+    const dirHandle = await window.showDirectoryPicker();
+    let pyodide = await pyodideReadyPromise;
+    const nativefs = await pyodide.mountNativeFS("/data", dirHandle);
+    files_selected = true;
+    document.getElementById("butDirectory").disabled = true;
+    if (is_initialized) {
+      document.getElementById("runMultiQC").disabled = false;
+    }
+    list_files();
   }
 });
 
@@ -53,27 +65,78 @@ dropDiv.addEventListener("dragleave", (e) => {
 
 dropDiv.addEventListener("drop", async (e) => {
   e.preventDefault();
-  dropDiv.style.opacity = 70;
-  let pyodide = await pyodideReadyPromise;
-  // Process all of the items.
-  for (const item of e.dataTransfer.items) {
-    if (item.kind === "file") {
-      const entry = await item.getAsFileSystemHandle();
-      const nativefs = await pyodide.mountNativeFS("/data", entry);
-      files_selected = false;
-      if (is_initialized) {
-        document.getElementById("runMultiQC").disabled = false;
+  if (!is_initialized) {
+    alert("Please wait for Pyodide to initialize before adding files.");
+    return;
+  } else if (files_selected) {
+    alert("Only one directory can be added currently.");
+    return;
+  } else {
+    let pyodide = await pyodideReadyPromise;
+    // Process all of the items.
+    for (const item of e.dataTransfer.items) {
+      if (item.kind === "file") {
+        const entry = await item.getAsFileSystemHandle();
+        if (entry.kind === "directory") {
+          const nativefs = await pyodide.mountNativeFS("/data", entry);
+          files_selected = true;
+          document.getElementById("butDirectory").disabled = true;
+          document.getElementById("runMultiQC").disabled = false;
+        } else {
+          alert("Can only mount directories, not files");
+          return false;
+        }
       }
     }
+    await list_files();
   }
 });
+
+async function list_files() {
+  document.getElementById("drop_files_helptext").style.display = "none";
+  let pyodide = await pyodideReadyPromise;
+  const dropDiv = document.getElementById("drop_files_listfiles");
+  dropDiv.style.display = "block";
+  pyodide.setStdout({
+    batched: (str) => {
+      console.log(str);
+      dropDiv.textContent += str + "\n";
+    },
+  });
+  pyodide.setStderr({
+    batched: (str) => {
+      console.log(str);
+      dropDiv.textContent += str + "\n";
+    },
+  });
+  // Run Python
+  pyodide.runPython(`
+import pathlib
+files = []
+for f in pathlib.Path("/data").iterdir():
+    files.append(f.name)
+print("\\n".join(files))
+`);
+}
 
 ////////////////////////
 // Run MultiQC
 ////////////////////////
 const runMultiQC = document.getElementById("runMultiQC");
 runMultiQC.addEventListener("click", async () => {
+  document.getElementById("multiqc_log_waiting").style.display = "none";
+  document.getElementById("multiqc_log_running").style.display = "block";
+  await new Promise((r) => setTimeout(r, 20)); // Wait for spinner in page to update
   run_multiqc();
+  document.getElementById("multiqc_log_running").style.display = "none";
+  document.getElementById("runMultiQC").disabled = true;
+  await new Promise((r) => setTimeout(r, 200)); // Wait for stdout in page to update
+  if (document.getElementById("stdout").textContent.includes("No analysis results found")) {
+    document.getElementById("openReport").disabled = true;
+    document.getElementById("openReportText").innerHTML = "No report generated";
+  } else {
+    document.getElementById("openReport").disabled = false;
+  }
 });
 
 async function run_multiqc() {
@@ -94,11 +157,9 @@ async function run_multiqc() {
   });
   // Run Python
   pyodide.runPython(`
-    import multiqc
-    multiqc.run('/data', no_ansi=True, force=True)
+import multiqc
+multiqc.run('/data', no_ansi=True, force=True)
   `);
-  const openReport = document.getElementById("openReport");
-  openReport.disabled = false;
 }
 
 ////////////////////////
