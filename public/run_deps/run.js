@@ -6,7 +6,7 @@ async function initialize() {
   if (!window.showDirectoryPicker) {
     document.getElementById("unsupported_browser").style.display = "block";
     document.getElementById("loading_spinner").style.display = "none";
-    document.getElementById("butDirectory").disabled = true;
+    document.getElementById("btn_choose_dir").disabled = true;
     return;
   }
   let pyodide = await loadPyodide();
@@ -26,8 +26,7 @@ let pyodideReadyPromise = initialize();
 ////////////////////////
 // Add files via button
 ////////////////////////
-const butDir = document.getElementById("butDirectory");
-butDir.addEventListener("click", async () => {
+document.getElementById("btn_choose_dir").addEventListener("click", async () => {
   if (!is_initialized) {
     alert("Please wait for Pyodide to initialize before adding files.");
     return;
@@ -39,9 +38,9 @@ butDir.addEventListener("click", async () => {
     let pyodide = await pyodideReadyPromise;
     const nativefs = await pyodide.mountNativeFS("/data", dirHandle);
     files_selected = true;
-    document.getElementById("butDirectory").disabled = true;
+    document.getElementById("btn_choose_dir").disabled = true;
     if (is_initialized) {
-      document.getElementById("runMultiQC").disabled = false;
+      document.getElementById("btn_run_multiQC").disabled = false;
     }
     list_files();
   }
@@ -80,8 +79,8 @@ dropDiv.addEventListener("drop", async (e) => {
         if (entry.kind === "directory") {
           const nativefs = await pyodide.mountNativeFS("/data", entry);
           files_selected = true;
-          document.getElementById("butDirectory").disabled = true;
-          document.getElementById("runMultiQC").disabled = false;
+          document.getElementById("btn_choose_dir").disabled = true;
+          document.getElementById("btn_run_multiQC").disabled = false;
         } else {
           alert("Can only mount directories, not files");
           return false;
@@ -122,20 +121,20 @@ print("\\n".join(files))
 ////////////////////////
 // Run MultiQC
 ////////////////////////
-const runMultiQC = document.getElementById("runMultiQC");
-runMultiQC.addEventListener("click", async () => {
+const btn_run_multiQC = document.getElementById("btn_run_multiQC");
+btn_run_multiQC.addEventListener("click", async () => {
   document.getElementById("multiqc_log_waiting").style.display = "none";
   document.getElementById("multiqc_log_running").style.display = "block";
   await new Promise((r) => setTimeout(r, 20)); // Wait for spinner in page to update
   run_multiqc();
   document.getElementById("multiqc_log_running").style.display = "none";
-  document.getElementById("runMultiQC").disabled = true;
+  document.getElementById("btn_run_multiQC").disabled = true;
   await new Promise((r) => setTimeout(r, 200)); // Wait for stdout in page to update
   if (document.getElementById("stdout").textContent.includes("No analysis results found")) {
-    document.getElementById("openReport").disabled = true;
-    document.getElementById("openReportText").innerHTML = "No report generated";
+    document.getElementById("btn_open_report").disabled = true;
+    document.getElementById("btn_open_report_text").innerHTML = "No report generated";
   } else {
-    document.getElementById("openReport").disabled = false;
+    document.getElementById("btn_open_report").disabled = false;
   }
 });
 
@@ -165,8 +164,8 @@ multiqc.run('/data', no_ansi=True, force=True)
 ////////////////////////
 // Open report
 ////////////////////////
-const openReport = document.getElementById("openReport");
-openReport.addEventListener("click", async () => {
+const btn_open_report = document.getElementById("btn_open_report");
+btn_open_report.addEventListener("click", async () => {
   open_report();
 });
 

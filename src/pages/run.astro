@@ -16,21 +16,33 @@ import { Icon } from "astro-icon";
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div>
       <p>
-        <Button btnId="butDirectory" variant="primary" size="md" classes="mb-4 mr-2">
+        <Button btnId="btn_choose_dir" variant="primary" size="md" classes="mb-4 mr-2">
           <Icon name="mdi:folder-search" class="mr-3 h-6 w-6" />
           Step 1 - Choose Directory
         </Button>
       </p>
       <p>
-        <Button btnId="runMultiQC" variant="primary" size="md" classes="mb-4 mr-2" disabled="true">
+        <Button
+          btnId="btn_run_multiQC"
+          variant="primary"
+          size="md"
+          classes="mb-4 mr-2"
+          disabled={true}
+        >
           <Icon name="mdi:motion-play-outline" class="mr-3 h-6 w-6" />
           Step 2 - Run MultiQC
         </Button>
       </p>
       <p>
-        <Button btnId="openReport" variant="primary" size="md" classes="mb-4 mr-2" disabled="true">
+        <Button
+          btnId="btn_open_report"
+          variant="primary"
+          size="md"
+          classes="mb-4 mr-2"
+          disabled={true}
+        >
           <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
-          <span id="openReportText">Step 3 - Open report</span>
+          <span id="btn_open_report_text">Step 3 - Open report</span>
         </Button>
       </p>
     </div>
