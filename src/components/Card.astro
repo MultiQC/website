@@ -2,14 +2,18 @@
 export interface Props {
   classes?: string;
   centered?: boolean;
+  slim?: boolean;
 }
 
-const { classes = "", centered = false } = Astro.props;
-let extra_classes = classes + (centered ? " items-center justify-center" : "");
+const { classes = "", centered = false, slim = false } = Astro.props;
+let extra_classes =
+  classes +
+  (centered ? " items-center justify-center" : "") +
+  (slim ? "py-3 px-4" : "py-6 px-4 sm:py-8 sm:px-8");
 ---
 
 <div
-  class={"flex flex-col h-full rounded-md border border-zinc-200 py-6 px-4 sm:py-8 sm:px-8 shadow-lg dark:border-zinc-700 dark:shadow-zinc-900 " +
+  class={"flex flex-col h-full rounded-md border border-zinc-200 shadow-lg dark:border-zinc-700 dark:shadow-zinc-900 " +
     extra_classes}
 >
   <slot />
