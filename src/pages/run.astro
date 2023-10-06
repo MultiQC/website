@@ -52,8 +52,12 @@ import { Icon } from "astro-icon";
         class="rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 opacity-60 transition-opacity"
       >
         <div id="unsupported_browser" class="hidden text-red-400">
-          Sorry, your browser doesn't support the File System Access API. Please try a different
-          browser (Chrome usually works).
+          Sorry, your browser doesn't support the <code>showDirectoryPicker</code> method. Please try
+          a different browser (<a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showDirectoryPicker#browser_compatibility"
+            target="_blank"
+            class="typo-link">see supported browsers</a
+          >).
         </div>
         <div id="loading_spinner" class="text-center"><Spinner /></div>
         <div id="drop_files_helptext" class="hidden text-center">
