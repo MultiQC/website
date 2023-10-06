@@ -1,7 +1,7 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
-import Card from "@components/Card.astro";
+import CardThin from "@components/CardThin.astro";
 import Spinner from "@components/Spinner.astro";
 import { Icon } from "astro-icon";
 ---
@@ -73,31 +73,28 @@ import { Icon } from "astro-icon";
 
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">What is this?</h3>
+      <CardThin title="What is this?">
         <p>
           This is the real MultiQC tool, running in your browser. No installation required, no data
           uploaded to the internet. Welcome to the future.
         </p>
-      </Card>
+      </CardThin>
     </div>
 
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">Who is it for?</h3>
+      <CardThin title="Who is it for?">
         <p>
           This is great for anyone who gets emailed a zip file full of FastQC reports, who wants to
           quickly summarise them. It's good for running demos and training, and good for anyone who
           feels a cold sweat when they hear the words <em>"now open the terminal"</em>.
         </p>
-      </Card>
+      </CardThin>
     </div>
 
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">What files am I meant to give it?</h3>
+      <CardThin title="What files am I meant to give it?">
         <p class="mb-3">
-          Feed it analysis outputs from bioinformatics tools <a href="/modules/" class="typo-link"
+          Feed it analysis outputs from bioinformatics tools <a href="/modules/"
             >supported by MultiQC</a
           >. Don't worry about being selective, MultiQC will ignore any files it doesn't recognise
           (eg. those big BAM files). No data is transferred over the internet, only mounted from
@@ -107,47 +104,40 @@ import { Icon } from "astro-icon";
           Note that currently it can only accept a single directory, so put everything you want to
           run inside that.
         </p>
-      </Card>
+      </CardThin>
     </div>
 
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">Do you have any I can try with?</h3>
+      <CardThin title="Do you have any I can try with?">
         <p>
-          Sure! All of the <a href="/example-reports/" class="typo-link">example reports</a> have associated
-          raw data for you to play with. In fact, there's some <a
-            href="/examples/rna-seq/data.zip"
-            class="typo-link">right here</a
+          Sure! All of the <a href="/example-reports/">example reports</a> have associated raw data for
+          you to play with. In fact, there's some <a href="/examples/rna-seq/data.zip">right here</a
           >! Just remember to unzip the file before running with MultiQC.
         </p>
-      </Card>
+      </CardThin>
     </div>
 
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">How does it work?</h3>
+      <CardThin title="How does it work?">
         <p class="mb-3">
-          This web page uses a relatively new technology called <a
-            href="https://webassembly.org/"
-            class="typo-link">WebAssembly</a
+          This web page uses a relatively new technology called <a href="https://webassembly.org/"
+            >WebAssembly</a
           > (Wasm). This builds a virtual machine within your browser, which can run compiled code. If
           you're familiar with Docker, it's a similar concept.
         </p>
         <p>
-          Here, we're using <a href="https://pyodide.org/" class="typo-link">Pyodide</a>, a Python
-          distribution built for Wasm. It lets us install packages from the <a
-            href="https://pypi.org/"
-            class="typo-link">Python Package Index</a
+          Here, we're using <a href="https://pyodide.org/">Pyodide</a>, a Python distribution built
+          for Wasm. It lets us install packages from the <a href="https://pypi.org/"
+            >Python Package Index</a
           > (PyPI) and has a robust Javascript interface for interacting with the browser. This lets
           us install and run MultiQC entirely within the browser Wasm virtual machine without needing
           any other installation requirements, and without any data transfer to the web.
         </p>
-      </Card>
+      </CardThin>
     </div>
 
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">Will this replace the command-line version of MultiQC?</h3>
+      <CardThin title="Will this replace the command-line version of MultiQC?">
         <p class="mb-3">
           Not at all. Most people run MultiQC in a non-interactive setting, such as a step in an
           analysis pipeline. That will remain the primary interface to MultiQC.
@@ -155,28 +145,24 @@ import { Icon } from "astro-icon";
           This is just a bit of fun which is hopefully helpful for a group of people not comfortable
           with terminals and CLIs
         </p>
-      </Card>
+      </CardThin>
     </div>
 
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">So is my data being uploaded?</h3>
+      <CardThin title="So is my data being uploaded?">
         <p>
           No, this is entirely local to your browser. Try turning wifi off after the page has loaded
           - it should still all work!
         </p>
-      </Card>
+      </CardThin>
     </div>
     <div class="mb-8">
-      <Card slim="true">
-        <h3 class="typo-h5">
-          I gave it a <code>.fastq</code> file, but it said no files found
-        </h3>
+      <CardThin title="I gave it a <code>.fastq</code> file, but it said no files found">
         <p>
           That's because MultiQC uses outputs from other analysis tools, it doesn't do the analysis
-          itself. Check out the <a href="/docs/" class="typo-link">documentation</a> for more details.
+          itself. Check out the <a href="/docs/">documentation</a> for more details.
         </p>
-      </Card>
+      </CardThin>
     </div>
   </div>
 </PageLayout>
