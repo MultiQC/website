@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
     await micropip.install("multiqc");
     console.log(" ----> Pyodide initialized, packages installed. <---- ");
     document.getElementById("loading_spinner").style.display = "none";
-    document.getElementById("drop_files_helptext").style.display = "block";
+    document.getElementById("drop_files_helptext").style.display = "flex";
     is_initialized = true;
     return pyodide;
   }
@@ -80,6 +80,8 @@ window.addEventListener('DOMContentLoaded', function() {
           if (entry.kind === "directory") {
             const nativefs = await pyodide.mountNativeFS("/data", entry);
             files_selected = true;
+            await list_files();
+            document.getElementById("staged_files_header").style.display = "inline";
             document.getElementById("btn_choose_dir").disabled = true;
             document.getElementById("btn_run_multiQC").disabled = false;
             document.getElementById("terminal_run_multiqc").style.display = "inline";
@@ -94,7 +96,6 @@ window.addEventListener('DOMContentLoaded', function() {
           }
         }
       }
-      await list_files();
     }
   });
 
@@ -139,7 +140,7 @@ print("\\n".join(files))
   async function run_multiqc() {
     document.getElementById("terminal_run_multiqc").style.display = "none";
     for(const char of "multiqc .") {
-      await new Promise((r) => setTimeout(r, 30));
+      await new Promise((r) => setTimeout(r, 60));
       document.getElementById("terminal_command").innerHTML += char;
     }
     await new Promise((r) => setTimeout(r, 20)); // Wait for spinner in page to update

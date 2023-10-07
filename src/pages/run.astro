@@ -43,7 +43,7 @@ import { Icon } from "astro-icon";
     <div>
       <div
         id="drop_files"
-        class="mr-1 flex h-full items-center rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 opacity-60 transition-opacity"
+        class="mr-1 flex h-full flex-col rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 opacity-60 transition-opacity"
       >
         <div id="unsupported_browser" class="hidden text-red-400">
           Sorry, your browser doesn't support the <code>showDirectoryPicker</code> method. Please try
@@ -53,11 +53,21 @@ import { Icon } from "astro-icon";
             class="typo-link">see supported browsers</a
           >).
         </div>
-        <div id="loading_spinner" class="w-full text-center"><Spinner /></div>
-        <div id="drop_files_helptext" class="hidden w-full text-center">
-          <span>Drag and drop a directory here, or click "Choose directory".</span>
+        <div
+          id="staged_files_header"
+          class="-mx-6 -mt-6 mb-3 hidden bg-gray-700 px-2 py-1 font-mono text-xs"
+        >
+          Staged files
         </div>
-        <pre id="drop_files_listfiles" class="hidden"></pre>
+        <div id="loading_spinner" class="flex h-full w-full items-center text-center">
+          <div class="w-full"><Spinner /></div>
+        </div>
+        <div id="drop_files_helptext" class="hidden h-full items-center">
+          <div class="w-full text-center">
+            Drag and drop a directory here, or click "Choose directory".
+          </div>
+        </div>
+        <pre id="drop_files_listfiles" class="hidden h-full w-full"></pre>
       </div>
     </div>
   </div>
