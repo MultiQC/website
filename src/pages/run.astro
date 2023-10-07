@@ -13,7 +13,7 @@ import { Icon } from "astro-icon";
   <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js" is:inline></script>
   <script src="/run_deps/run.js" type="text/javascript" is:inline></script>
 
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+  <div class="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div>
       <p>
         <Button btnId="btn_choose_dir" variant="primary" size="md" classes="mb-4 mr-2">
@@ -34,13 +34,7 @@ import { Icon } from "astro-icon";
         </Button>
       </p>
       <p>
-        <Button
-          btnId="btn_open_report"
-          variant="primary"
-          size="md"
-          classes="mb-4 mr-2"
-          disabled={true}
-        >
+        <Button btnId="btn_open_report" variant="primary" size="md" classes="mr-2" disabled={true}>
           <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
           <span id="btn_open_report_text">Step 3 - Open report</span>
         </Button>
@@ -49,7 +43,7 @@ import { Icon } from "astro-icon";
     <div>
       <div
         id="drop_files"
-        class="rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 opacity-60 transition-opacity"
+        class="mr-1 flex h-full items-center rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 opacity-60 transition-opacity"
       >
         <div id="unsupported_browser" class="hidden text-red-400">
           Sorry, your browser doesn't support the <code>showDirectoryPicker</code> method. Please try
@@ -59,18 +53,37 @@ import { Icon } from "astro-icon";
             class="typo-link">see supported browsers</a
           >).
         </div>
-        <div id="loading_spinner" class="text-center"><Spinner /></div>
-        <div id="drop_files_helptext" class="hidden text-center">
+        <div id="loading_spinner" class="w-full text-center"><Spinner /></div>
+        <div id="drop_files_helptext" class="hidden w-full text-center">
           <span>Drag and drop a directory here, or click "Choose directory".</span>
         </div>
         <pre id="drop_files_listfiles" class="hidden"></pre>
       </div>
     </div>
   </div>
-  <div class="my-8 rounded-sm border border-gray-600 p-6 text-gray-400">
-    <span id="multiqc_log_waiting">MultiQC log: waiting</span>
-    <div id="multiqc_log_running" class="hidden"><Spinner>Running...</Spinner></div>
-    <pre id="stdout"></pre>
+  <!-- MultiQC "terminal" -->
+  <div class="w-full">
+    <div
+      class="coding inverse-toggle rounded-sm border border-gray-700 border-opacity-50 bg-black bg-opacity-20 px-5 pb-6 pt-4 font-mono text-sm text-gray-100 subpixel-antialiased shadow-lg"
+    >
+      <div class="top mb-2 flex opacity-70">
+        <div class="h-3 w-3 rounded-full bg-rose-600"></div>
+        <div class="ml-2 h-3 w-3 rounded-full bg-orange-300"></div>
+        <div class="ml-2 h-3 w-3 rounded-full bg-green-500"></div>
+      </div>
+      <div class="mt-4">
+        <span class="mr-2 text-green-400">$</span>
+        <span id="terminal_run_multiqc" style="display:none;"
+          ><a href="#" class="typo-link"></a></span
+        >
+        <span id="terminal_command"></span>
+        <pre id="stdout" style="display:none;"></pre>
+        <span id="blinking_cursor">&nbsp;</span>
+        <div id="terminal_open_report" class="mt-4" style="display:none;">
+          <a href="#" class="typo-link">Open report</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <h2 class="typo-h4 mb-6 mt-12">Frequently Asked Questions</h2>
