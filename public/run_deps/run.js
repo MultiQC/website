@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
     await micropip.install("multiqc");
     console.log(" ----> Pyodide initialized, packages installed. <---- ");
     document.getElementById("loading_spinner").style.display = "none";
-    document.getElementById("drop_files_helptext").style.display = "block";
+    document.getElementById("drop_files_helptext").style.display = "flex";
     is_initialized = true;
     return pyodide;
   }
@@ -80,15 +80,22 @@ window.addEventListener('DOMContentLoaded', function() {
           if (entry.kind === "directory") {
             const nativefs = await pyodide.mountNativeFS("/data", entry);
             files_selected = true;
+            await list_files();
+            document.getElementById("staged_files_header").style.display = "inline";
             document.getElementById("btn_choose_dir").disabled = true;
             document.getElementById("btn_run_multiQC").disabled = false;
+            document.getElementById("terminal_run_multiqc").style.display = "inline";
+            for(const char of "Run MultiQC") {
+              await new Promise((r) => setTimeout(r, 100));
+              document.querySelector("#terminal_run_multiqc a").innerHTML += char;
+            }
+            document.getElementById("blinking_cursor").classList.add("active");
           } else {
             alert("Can only mount directories, not files");
             return false;
           }
         }
       }
-      await list_files();
     }
   });
 
@@ -122,13 +129,23 @@ print("\\n".join(files))
   ////////////////////////
   // Run MultiQC
   ////////////////////////
-  const btn_run_multiQC = document.getElementById("btn_run_multiQC");
-  btn_run_multiQC.addEventListener("click", async () => {
-    document.getElementById("multiqc_log_waiting").style.display = "none";
-    document.getElementById("multiqc_log_running").style.display = "block";
-    await new Promise((r) => setTimeout(r, 20)); // Wait for spinner in page to update
+  document.getElementById("btn_run_multiQC").addEventListener("click", async () => {
     run_multiqc();
-    document.getElementById("multiqc_log_running").style.display = "none";
+  });
+  document.getElementById("terminal_run_multiqc").addEventListener("click", async (e) => {
+    e.preventDefault();
+    run_multiqc();
+  });
+
+  async function run_multiqc() {
+    document.getElementById("terminal_run_multiqc").style.display = "none";
+    for(const char of "multiqc .") {
+      await new Promise((r) => setTimeout(r, 60));
+      document.getElementById("terminal_command").innerHTML += char;
+    }
+    await new Promise((r) => setTimeout(r, 20)); // Wait for spinner in page to update
+    document.getElementById("stdout").style.display = "block";
+    run_multiqc_python();
     document.getElementById("btn_run_multiQC").disabled = true;
     await new Promise((r) => setTimeout(r, 200)); // Wait for stdout in page to update
     if (document.getElementById("stdout").textContent.includes("No analysis results found")) {
@@ -136,10 +153,12 @@ print("\\n".join(files))
       document.getElementById("btn_open_report_text").innerHTML = "No report generated";
     } else {
       document.getElementById("btn_open_report").disabled = false;
+      document.getElementById("blinking_cursor").style.display = "none";
+      document.getElementById("terminal_open_report").style.display = "block";
     }
-  });
+  };
 
-  async function run_multiqc() {
+  async function run_multiqc_python() {
     console.log(" ----> Running MultiQC <---- ");
     let pyodide = await pyodideReadyPromise;
     const stdout = document.getElementById("stdout");
@@ -165,8 +184,11 @@ multiqc.run('/data', no_ansi=True, force=True)
   ////////////////////////
   // Open report
   ////////////////////////
-  const btn_open_report = document.getElementById("btn_open_report");
-  btn_open_report.addEventListener("click", async () => {
+  document.getElementById("btn_open_report").addEventListener("click", async () => {
+    open_report();
+  });
+  document.getElementById("terminal_open_report").addEventListener("click", async (e) => {
+    e.preventDefault();
     open_report();
   });
 

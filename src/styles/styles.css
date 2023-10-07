@@ -276,3 +276,22 @@ div[data-rehype-pretty-code-fragment] pre svg {
 div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
   @apply opacity-80;
 }
+
+/* Blinking terminal cursor */
+#blinking_cursor {
+  height: 20px;
+  border: 1px solid rgba(255, 165, 0, 0.4);
+  margin-bottom: -4px;
+}
+#blinking_cursor.active {
+  animation: 1.2s blink step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 165, 0, 0.4);
+  }
+}
