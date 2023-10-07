@@ -150,6 +150,7 @@ print("\\n".join(files))
     await new Promise((r) => setTimeout(r, 200)); // Wait for stdout in page to update
     if (document.getElementById("stdout").textContent.includes("No analysis results found")) {
       document.getElementById("btn_open_report").disabled = true;
+      document.getElementById("blinking_cursor").style.display = "none";
       document.getElementById("btn_open_report_text").innerHTML = "No report generated";
     } else {
       document.getElementById("btn_open_report").disabled = false;
@@ -165,13 +166,17 @@ print("\\n".join(files))
     pyodide.setStdout({
       batched: (str) => {
         console.log(str);
-        stdout.textContent += str + "\n";
+        if(str.trim() != ""){
+          stdout.innerHTML += str + "\n";
+        }
       },
     });
     pyodide.setStderr({
       batched: (str) => {
         console.log(str);
-        stdout.textContent += str + "\n";
+        if(str.trim() != ""){
+          stdout.innerHTML += str + "\n";
+        }
       },
     });
     // Run Python
