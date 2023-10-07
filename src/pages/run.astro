@@ -100,7 +100,8 @@ import { Icon } from "astro-icon";
 
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div class="mb-8">
-      <CardThin title="What is this?">
+      <CardThin>
+        <h3>What is this?</h3>
         <p>
           This is the real MultiQC tool, running in your browser. No installation required, no data
           uploaded to the internet. Welcome to the future.
@@ -109,7 +110,8 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="mb-8">
-      <CardThin title="Who is it for?">
+      <CardThin>
+        <h3>Who is it for?</h3>
         <p>
           This is great for anyone who gets emailed a zip file full of FastQC reports, who wants to
           quickly summarise them. It's good for running demos and training, and good for anyone who
@@ -119,7 +121,8 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="mb-8">
-      <CardThin title="What files am I meant to give it?">
+      <CardThin>
+        <h3>What files am I meant to give it?</h3>
         <p class="mb-3">
           Feed it analysis outputs from bioinformatics tools <a href="/modules/"
             >supported by MultiQC</a
@@ -135,7 +138,8 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="mb-8">
-      <CardThin title="Do you have any I can try with?">
+      <CardThin>
+        <h3>Do you have any I can try with?</h3>
         <p>
           Sure! All of the <a href="/example-reports/">example reports</a> have associated raw data for
           you to play with. In fact, there's some <a href="/examples/rna-seq/data.zip">right here</a
@@ -145,7 +149,8 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="mb-8">
-      <CardThin title="How does it work?">
+      <CardThin>
+        <h3>How does it work?</h3>
         <p class="mb-3">
           This web page uses a relatively new technology called <a href="https://webassembly.org/"
             >WebAssembly</a
@@ -164,7 +169,8 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="mb-8">
-      <CardThin title="Will this replace the command-line version of MultiQC?">
+      <CardThin>
+        <h3>Will this replace the command-line version of MultiQC?</h3>
         <p class="mb-3">
           Not at all. Most people run MultiQC in a non-interactive setting, such as a step in an
           analysis pipeline. That will remain the primary interface to MultiQC.
@@ -176,7 +182,8 @@ import { Icon } from "astro-icon";
     </div>
 
     <div class="mb-8">
-      <CardThin title="So is my data being uploaded?">
+      <CardThin>
+        <h3>So is my data being uploaded?</h3>
         <p>
           No, this is entirely local to your browser. Try turning wifi off after the page has loaded
           - it should still all work!
@@ -184,7 +191,8 @@ import { Icon } from "astro-icon";
       </CardThin>
     </div>
     <div class="mb-8">
-      <CardThin title="I gave it a <code>.fastq</code> file, but it said no files found">
+      <CardThin>
+        <h3>I gave it a <code>.fastq</code> file, but it said no files found</h3>
         <p>
           That's because MultiQC uses outputs from other analysis tools, it doesn't do the analysis
           itself. Check out the <a href="/docs/">documentation</a> for more details.

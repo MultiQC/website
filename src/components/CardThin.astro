@@ -1,14 +1,5 @@
----
-export interface Props {
-  title?: string;
-}
-
-const { title = "" } = Astro.props;
----
-
 <div
   class="prose flex h-full flex-col rounded-md border border-zinc-200 px-6 py-5 text-justify shadow-lg dark:prose-invert dark:border-zinc-700 dark:shadow-zinc-900"
 >
-  <h3>{title}</h3>
   <slot />
 </div>
