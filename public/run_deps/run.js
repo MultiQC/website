@@ -84,11 +84,7 @@ window.addEventListener('DOMContentLoaded', function() {
             document.getElementById("staged_files_header").style.display = "inline";
             document.getElementById("btn_choose_dir").disabled = true;
             document.getElementById("btn_run_multiQC").disabled = false;
-            document.getElementById("terminal_run_multiqc").style.display = "inline";
-            for(const char of "Run MultiQC") {
-              await new Promise((r) => setTimeout(r, 100));
-              document.querySelector("#terminal_run_multiqc a").innerHTML += char;
-            }
+            document.getElementById("terminal_run_multiqc").style.display = "inline-block";
             document.getElementById("blinking_cursor").classList.add("active");
           } else {
             alert("Can only mount directories, not files");
@@ -138,6 +134,7 @@ print("\\n".join(files))
   });
 
   async function run_multiqc() {
+    document.getElementById("btn_run_multiQC").disabled = true;
     document.getElementById("terminal_run_multiqc").style.display = "none";
     for(const char of "multiqc .") {
       await new Promise((r) => setTimeout(r, 60));
@@ -146,7 +143,6 @@ print("\\n".join(files))
     await new Promise((r) => setTimeout(r, 20)); // Wait for spinner in page to update
     document.getElementById("stdout").style.display = "block";
     run_multiqc_python();
-    document.getElementById("btn_run_multiQC").disabled = true;
     await new Promise((r) => setTimeout(r, 200)); // Wait for stdout in page to update
     if (document.getElementById("stdout").textContent.includes("No analysis results found")) {
       document.getElementById("btn_open_report").disabled = true;
@@ -159,6 +155,12 @@ print("\\n".join(files))
     }
   };
 
+  function clean_stdout(line) {
+    line = line.replace(/^  \/\/\/ MultiQC 🔍 (.+)/, '\n  <span style="color: #96CBFF">/</span><span style="color: #A8FF61">/</span><span style="color: #FE6B61">/</span> <a href="https://multiqc.info/" target="_blank" style="font-weight: 800; text-decoration:underline; text-decoration-style: dashed;">MultiQC</a> 🔍 <span style="color: #666;">$1</span>\n')
+    line = line.replace(/^(\| +.+ \|)/, '<span style="color: #96CBFF;">$1</span>')
+    return line;
+  }
+
   async function run_multiqc_python() {
     console.log(" ----> Running MultiQC <---- ");
     let pyodide = await pyodideReadyPromise;
@@ -167,7 +169,7 @@ print("\\n".join(files))
       batched: (str) => {
         console.log(str);
         if(str.trim() != ""){
-          stdout.innerHTML += str + "\n";
+          stdout.innerHTML += clean_stdout(str) + "\n";
         }
       },
     });
@@ -175,7 +177,7 @@ print("\\n".join(files))
       batched: (str) => {
         console.log(str);
         if(str.trim() != ""){
-          stdout.innerHTML += str + "\n";
+          stdout.innerHTML += clean_stdout(str) + "\n";
         }
       },
     });

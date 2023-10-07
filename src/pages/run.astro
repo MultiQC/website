@@ -83,14 +83,14 @@ import { Icon } from "astro-icon";
       </div>
       <div class="mt-4">
         <span class="mr-2 text-green-400">$</span>
-        <span id="terminal_run_multiqc" style="display:none;"
-          ><a href="#" class="typo-link"></a></span
-        >
+        <div id="terminal_run_multiqc" style="display:none;">
+          <Button variant="primary" size="sm">Run MultiQC</Button>
+        </div>
         <span id="terminal_command"></span>
         <pre id="stdout" style="display:none;"></pre>
         <span id="blinking_cursor">&nbsp;</span>
-        <div id="terminal_open_report" class="mt-4" style="display:none;">
-          <a href="#" class="typo-link">Open report</a>
+        <div id="terminal_open_report" class="mt-6" style="display:none;">
+          <Button variant="primary" size="sm">Open report</Button>
         </div>
       </div>
     </div>
