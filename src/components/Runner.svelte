@@ -49,8 +49,8 @@
     # coding: utf-8
     import pathlib
 
-    file_icon = "📄"
-    directory_icon = "📁"
+    file_icon = '<svg class="inline max-h-5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6m4 18H6V4h7v5h5v11Z"/></svg>'
+    directory_icon = '<svg class="inline max-h-5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2Z"/></svg>'
 
     files = []
     for f in pathlib.Path("/data").iterdir():
@@ -213,7 +213,7 @@ multiqc.run('/data', no_ansi=True, force=True)
     <div>
       <div
         id="drop_files"
-        class="mr-1 flex h-full flex-col rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 transition-opacity"
+        class="mr-1 flex h-full flex-col rounded-sm border border-dashed border-gray-400 px-4 py-6 text-gray-200 transition-opacity"
         class:opacity-100={drag_hover || files_selected}
         class:opacity-60={!drag_hover && !files_selected}
         on:dragenter={(e) => {
@@ -239,7 +239,7 @@ multiqc.run('/data', no_ansi=True, force=True)
         </div>
         <div
           id="staged_files_header"
-          class="-mx-6 -mt-6 mb-3 bg-gray-700 px-2 py-1 font-mono text-xs"
+          class="-mx-4 -mt-6 mb-3 bg-gray-700 px-2 py-1 font-mono text-xs"
           class:hidden={!files_selected}
         >
           Staged files
@@ -266,7 +266,7 @@ multiqc.run('/data', no_ansi=True, force=True)
         <pre
           id="drop_files_listfiles"
           class=" h-full w-full"
-          class:hidden={files.length === 0}>{files}</pre>
+          class:hidden={files.length === 0}>{@html files}</pre>
       </div>
     </div>
   </div>
