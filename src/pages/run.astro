@@ -1,8 +1,8 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import Button from "@components/Button.svelte";
 import CardThin from "@components/CardThin.astro";
 import Spinner from "@components/Spinner.astro";
+import Runner from "@components/Runner.svelte";
 import { Icon } from "astro-icon";
 ---
 
@@ -11,91 +11,20 @@ import { Icon } from "astro-icon";
   subtitle="✨ Run MultiQC in your browser on local files, with Web Assembly."
 >
   <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js" is:inline></script>
-  <script src="/run_deps/run.js" type="text/javascript" is:inline></script>
+  <!-- <script src="/run_deps/run.js" type="text/javascript" is:inline></script> -->
 
-  <div class="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-    <div>
-      <p>
-        <Button btnId="btn_choose_dir" variant="primary" size="md" classes="mb-4 mr-2">
-          <Icon name="mdi:folder-search" class="mr-3 h-6 w-6" />
-          Step 1 - Choose Directory
-        </Button>
-      </p>
-      <p>
-        <Button
-          btnId="btn_run_multiQC"
-          variant="primary"
-          size="md"
-          classes="mb-4 mr-2"
-          disabled={true}
-        >
-          <Icon name="mdi:motion-play-outline" class="mr-3 h-6 w-6" />
-          Step 2 - Run MultiQC
-        </Button>
-      </p>
-      <p>
-        <Button btnId="btn_open_report" variant="primary" size="md" classes="mr-2" disabled={true}>
-          <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
-          <span id="btn_open_report_text">Step 3 - Open report</span>
-        </Button>
-      </p>
-    </div>
-    <div>
-      <div
-        id="drop_files"
-        class="mr-1 flex h-full flex-col rounded-sm border border-dashed border-gray-400 p-6 text-gray-200 opacity-60 transition-opacity"
-      >
-        <div id="unsupported_browser" class="hidden text-red-400">
-          Sorry, your browser doesn't support the <code>showDirectoryPicker</code> method. Please try
-          a different browser (<a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showDirectoryPicker#browser_compatibility"
-            target="_blank"
-            class="typo-link">see supported browsers</a
-          >).
-        </div>
-        <div
-          id="staged_files_header"
-          class="-mx-6 -mt-6 mb-3 hidden bg-gray-700 px-2 py-1 font-mono text-xs"
-        >
-          Staged files
-        </div>
-        <div id="loading_spinner" class="flex h-full w-full items-center text-center">
-          <div class="w-full"><Spinner /></div>
-        </div>
-        <div id="drop_files_helptext" class="hidden h-full items-center">
-          <div class="w-full text-center">
-            Drag and drop a directory here, or click "Choose directory".
-          </div>
-        </div>
-        <pre id="drop_files_listfiles" class="hidden h-full w-full"></pre>
-      </div>
-    </div>
-  </div>
-  <!-- MultiQC "terminal" -->
-  <div class="w-full">
-    <div
-      class="coding inverse-toggle rounded-sm border border-gray-700 border-opacity-50 bg-black bg-opacity-20 px-5 pb-6 pt-4 font-mono text-sm text-gray-100 subpixel-antialiased shadow-lg"
-    >
-      <div class="top mb-2 flex opacity-70">
-        <div class="h-3 w-3 rounded-full bg-rose-600"></div>
-        <div class="ml-2 h-3 w-3 rounded-full bg-orange-300"></div>
-        <div class="ml-2 h-3 w-3 rounded-full bg-green-500"></div>
-      </div>
-      <div class="mt-4">
-        <span class="mr-2 text-green-400">$</span>
-        <div id="terminal_run_multiqc" style="display:none;">
-          <Button variant="primary" size="sm">Run MultiQC</Button>
-        </div>
-        <span id="terminal_command"></span>
-        <pre id="stdout" style="display:none;"></pre>
-        <span id="blinking_cursor">&nbsp;</span>
-        <div id="terminal_open_report" class="mt-6" style="display:none;">
-          <Button variant="primary" size="sm">Open report</Button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <Runner client:load>
+    <span slot="btn_choose_dir">
+      <Icon name="mdi:folder-search" class="mr-3 h-6 w-6" />
+    </span>
+    <span slot="btn_run_multiQC">
+      <Icon name="mdi:motion-play-outline" class="mr-3 h-6 w-6" />
+    </span>
+    <span slot="btn_open_report">
+      <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
+    </span>
+    <Spinner slot="spinner" />
+  </Runner>
   <h2 class="typo-h4 mb-6 mt-12">Frequently Asked Questions</h2>
 
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
