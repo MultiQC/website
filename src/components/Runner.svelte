@@ -177,7 +177,7 @@ multiqc.run('/data', no_ansi=True, force=True)
           variant="primary"
           size="md"
           classes="mb-4 mr-2"
-          disabled={!browser_supported || !pyodide_ready}
+          disabled={!browser_supported || !pyodide_ready || files_selected}
           on:click={select_directory}
         >
           <slot name="btn_choose_dir" />Step 1 - Choose Directory
@@ -189,7 +189,7 @@ multiqc.run('/data', no_ansi=True, force=True)
           variant="primary"
           size="md"
           classes="mb-4 mr-2"
-          disabled={!files_selected}
+          disabled={!files_selected || multiqc_ran}
           on:click={run_multiqc}
         >
           <slot name="btn_run_multiQC" />Step 2 - Run MultiQC
