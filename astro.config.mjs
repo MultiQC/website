@@ -44,7 +44,11 @@ export default defineConfig({
     }),
     mdx(),
     prefetch(),
-    partytown(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
     sitemap(),
     svelte(),
   ],
