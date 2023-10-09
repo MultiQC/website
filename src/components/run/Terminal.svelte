@@ -1,5 +1,4 @@
 <script>
-  import BrailleLoader from "@components/BrailleLoader.svelte";
   export let files = "";
   export let terminal_command = "";
   export let stdout = "";
@@ -24,15 +23,10 @@
       <slot name="run_multiqc_btn" />
     </div>
     <span id="terminal_command">{terminal_command}</span>
-    <pre id="stdout" class:hidden={!stdout}>{@html stdout}</pre>
-    <span
-      id="blinking_cursor"
-      class:hidden={terminal_command.length > 0 || stdout.length > 0}
-      class:active={files.length > 0}>&nbsp;</span
-    >
-    <span class:hidden={terminal_command.length !== 9 || stdout.length > 0}>
-      <BrailleLoader />
+    <span class="blinking_cursor" class:active={files.length > 0} class:hidden={multiqc_ran}>
+      &nbsp;
     </span>
+    <pre id="stdout" class:hidden={!stdout}>{@html stdout}</pre>
     <div id="terminal_open_report" class="mt-6" class:hidden={multiqc_ran !== "successful"}>
       <slot name="open_report_btn" />
     </div>
