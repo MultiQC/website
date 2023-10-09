@@ -102,7 +102,6 @@ multiqc.run('/data', no_ansi=True, force=True)
           win.document.close();
       }
       if (pythonStdout) {
-        console.log("pythonStdout", pythonStdout);
         if (terminal_command === "") {
           files += pythonStdout + "\n";
         }
