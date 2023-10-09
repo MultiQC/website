@@ -48,13 +48,19 @@
   on:drop={handleDragDrop}
   on:dragover={(e) => e.preventDefault()}
 >
-  <div class="text-red-400" class:hidden={browser_supported}>
-    Sorry, your browser doesn't support the <code>showDirectoryPicker</code> method. Please try a
-    different browser (<a
-      href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showDirectoryPicker#browser_compatibility"
-      target="_blank"
-      class="typo-link">see supported browsers</a
-    >).
+  <div
+    class="flex hidden h-full w-full items-center text-center text-red-400"
+    class:hidden={browser_supported}
+  >
+    <div>
+      Sorry, your browser doesn't support the <code>showDirectoryPicker</code> method. Please try a
+      different browser <br />(currently Chrome, Edge or Opera -
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Window/showDirectoryPicker#browser_compatibility"
+        target="_blank"
+        class="typo-link">see supported browsers</a
+      >).
+    </div>
   </div>
   <div
     id="staged_files_header"
