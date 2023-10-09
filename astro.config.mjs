@@ -3,7 +3,6 @@ import urls from "rehype-urls";
 
 import mdx from "@astrojs/mdx";
 import netlify from "@astrojs/netlify/functions";
-import partytown from "@astrojs/partytown";
 import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
@@ -44,11 +43,6 @@ export default defineConfig({
     }),
     mdx(),
     prefetch(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
     sitemap(),
     svelte(),
   ],

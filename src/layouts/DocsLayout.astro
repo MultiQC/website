@@ -126,18 +126,3 @@ docs_nav["nav"].forEach((section) => {
   </div>
   <FooterPrevNext md_github_url={md_github_url} prev_page={prev_page} next_page={next_page} />
 </BaseLayout>
-
-<!-- Algolia -->
-<script>
-  import docsearch from "@docsearch/js";
-  import "@docsearch/css";
-
-  docsearch({
-    container: "#search",
-    appId: "V0JDBH4NO9",
-    apiKey: "7dbf54c298bba90faba20e714a99550a",
-    indexName: "multiqc",
-  });
-</script>
-
-<!-- End Algolia -->
