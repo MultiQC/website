@@ -277,21 +277,33 @@ div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
   @apply opacity-80;
 }
 
-/* Blinking terminal cursor */
-#blinking_cursor {
-  height: 20px;
-  border: 1px solid rgba(255, 165, 0, 0.4);
-  margin-bottom: -4px;
+/* Terminal text colours */
+#stdout span {
+  @apply text-blue-600 dark:text-blue-300;
 }
-#blinking_cursor.active {
+#stdout .header span:nth-child(2) {
+  @apply text-lime-700 dark:text-lime-300;
+}
+#stdout .header span:nth-child(3) {
+  @apply text-red-600 dark:text-red-400;
+}
+#stdout .header span:nth-child(5) {
+  @apply text-stone-400 dark:text-stone-500;
+}
+
+/* Blinking terminal cursor */
+.blinking_cursor {
+  @apply mb-1 h-5 border border-amber-600 opacity-80 dark:border-amber-500;
+}
+.blinking_cursor.active {
   animation: 1.2s blink step-end infinite;
 }
 @keyframes blink {
   from,
   to {
-    border-color: transparent;
+    opacity: 0;
   }
   50% {
-    border-color: rgba(255, 165, 0, 0.4);
+    opacity: 80%;
   }
 }

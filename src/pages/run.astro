@@ -2,7 +2,7 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import CardThin from "@components/CardThin.astro";
 import Spinner from "@components/Spinner.astro";
-import Runner from "@components/Runner.svelte";
+import Runner from "@components/run/Runner.svelte";
 import { Icon } from "astro-icon";
 ---
 
@@ -23,7 +23,7 @@ import { Icon } from "astro-icon";
     <span slot="btn_open_report">
       <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
     </span>
-    <Spinner slot="spinner" />
+    <Spinner slot="spinner">Loading MultiQC environment...</Spinner>
   </Runner>
   <h2 class="typo-h4 mb-6 mt-12">Frequently Asked Questions</h2>
 
@@ -121,7 +121,7 @@ import { Icon } from "astro-icon";
     </div>
     <div class="mb-8">
       <CardThin>
-        <h3>I gave it a <code>.fastq</code> file, but it said no files found</h3>
+        <h3>I gave it a FastQ file, but it said no files found</h3>
         <p>
           That's because MultiQC uses outputs from other analysis tools, it doesn't do the analysis
           itself. Check out the <a href="/docs/">documentation</a> for more details.
