@@ -137,7 +137,7 @@ multiqc.run('/data', no_ansi=True, force=True)
           variant="primary"
           size="md"
           classes="mb-4 mr-2"
-          disabled={!$currentDirectory || multiqc_ran.length > 0}
+          disabled={!$currentDirectory || terminal_command.length > 0 || multiqc_ran.length > 0}
           on:click={run_multiqc}
         >
           <slot name="btn_run_multiQC" />Step 2 - Run MultiQC
