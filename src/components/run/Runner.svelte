@@ -93,13 +93,11 @@ multiqc.run('/data', no_ansi=True, force=True)
           `,
           });
           break;
-        case "error":
-          console.error(event.data);
-          break;
         case "finished":
           let win = window.open("", "");
           win.document.write(report);
           win.document.close();
+          break;
       }
       if (pythonStdout) {
         if (terminal_command === "") {
