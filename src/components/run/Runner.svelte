@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
   import Button from "@components/Button.svelte";
   import FileDropZone from "@components/run/FileDropZone.svelte";
   import Terminal from "@components/run/Terminal.svelte";
   import { currentDirectory } from "@components/store";
+
   import { onMount } from "svelte";
 
-  let pyodide_ready_promise;
-
+  let pyodideWorker: Worker;
   let browser_supported = false;
   let pyodide_ready = false;
   let files = "";
@@ -24,7 +24,6 @@
     } else {
       const dirHandle = await window.showDirectoryPicker();
       currentDirectory.set(dirHandle);
-      q;
     }
   }
   currentDirectory.subscribe((value) => {
@@ -33,24 +32,24 @@
     }
   });
 
-  async function list_files(dir) {
+  async function list_files(dir: FileSystemDirectoryHandle) {
     if (dir) {
-      let pyodide = await pyodide_ready_promise;
-      const nativefs = await pyodide.mountNativeFS("/data", dir);
-      pyodide.setStdout({
-        batched: (str) => {
-          console.log(str);
-          files += str + "\n";
-        },
-      });
-      pyodide.setStderr({
-        batched: (str) => {
-          console.log(str);
-          files += str + "\n";
-        },
-      });
+      // let pyodide = await pyodide_ready_promise;
+      // const nativefs = await pyodide.mountNativeFS("/data", dir);
+      // pyodide.setStdout({
+      //   batched: (str) => {
+      //     console.log(str);
+      //     files += str + "\n";
+      //   },
+      // });
+      // pyodide.setStderr({
+      //   batched: (str) => {
+      //     console.log(str);
+      //     files += str + "\n";
+      //   },
+      // });
       // Run Python
-      pyodide.runPython(`
+      runPythonCode(`
     # coding: utf-8
     import pathlib
 
@@ -66,36 +65,27 @@
     `);
     }
   }
-  function clean_stdout(line) {
-    line = line.replace(
-      /^  \/\/\/ MultiQC 🔍 (.+)/,
-      '\n<div class="header"><span>/</span><span>/</span><span>/</span> <a href="https://multiqc.info/" target="_blank" >MultiQC</a> 🔍 <span>$1</span></div>\n'
-    );
-    line = line.replace(/^(\| +.+ \|)/, "<span>$1</span>");
-    return line;
-  }
 
   async function run_multiqc_python() {
     console.log(" ----> Running MultiQC <---- ");
-    let pyodide = await pyodide_ready_promise;
-    pyodide.setStdout({
-      batched: (str) => {
-        console.log(str);
-        if (str.trim() != "") {
-          stdout += clean_stdout(str) + "\n";
-        }
-      },
-    });
-    pyodide.setStderr({
-      batched: (str) => {
-        console.log(str);
-        if (str.trim() != "") {
-          stdout += clean_stdout(str) + "\n";
-        }
-      },
-    });
+    // pyodide.setStdout({
+    //   batched: (str) => {
+    //     console.log(str);
+    //     if (str.trim() != "") {
+    //       stdout += clean_stdout(str) + "\n";
+    //     }
+    //   },
+    // });
+    // pyodide.setStderr({
+    //   batched: (str) => {
+    //     console.log(str);
+    //     if (str.trim() != "") {
+    //       stdout += clean_stdout(str) + "\n";
+    //     }
+    //   },
+    // });
     // Run Python
-    pyodide.runPython(`
+    runPythonCode(`
 import multiqc
 multiqc.run('/data', no_ansi=True, force=True)
         `);
@@ -116,33 +106,51 @@ multiqc.run('/data', no_ansi=True, force=True)
   }
 
   async function open_report() {
-    let pyodide = await pyodide_ready_promise;
-    let report = pyodide.FS.readFile("multiqc_report.html", { encoding: "utf8" });
+    // let pyodide = await pyodide_ready_promise;
+    // let report = pyodide.FS.readFile("multiqc_report.html", { encoding: "utf8" });
     var win = window.open("", "");
     win.document.write(report);
     win.document.close();
   }
+  function runPythonCode(code) {
+    pyodideWorker.postMessage({
+      pythonCode: code,
+      callbacks: {
+        success: (output) => {
+          console.log(output);
+        },
+        error: (error) => {
+          console.error(error);
+        },
+      },
+    });
+  }
 
   onMount(async () => {
     browser_supported = window.showDirectoryPicker !== undefined;
-
-    pyodide_ready_promise = await loadPyodide({
-      indexURL: "https://cdn.jsdelivr.net/pyodide/v0.24.1/full/",
-    });
-    await pyodide_ready_promise.loadPackage("micropip");
-    const micropip = pyodide_ready_promise.pyimport("micropip");
-    try {
-      await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
-      console.log("colormath installed successfully");
-      await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
-      console.log("spectra installed successfully");
-      await micropip.install("multiqc");
-      console.log("multiqc installed successfully");
-    } catch (error) {
-      console.error(error);
-    }
-    console.log(" ----> Pyodide initialized, packages installed. <---- ");
-    pyodide_ready = true;
+    pyodideWorker = new Worker("/run_deps/pyodideWorker.js");
+    pyodideWorker.onmessage = (event) => {
+      // Handle data coming back from the worker
+      const { type, status, result, error, pythonStdout, pythonStderr } = event.data;
+      if (error) {
+        console.error(error);
+      }
+      // switch statement to handle different statuses
+      switch (status) {
+        case "ready":
+          pyodide_ready = true;
+          break;
+        case "success":
+          console.log(event.data);
+          break;
+        case "error":
+          console.error(event.data);
+          break;
+        default:
+          console.log(status);
+          console.error("Unknown status received from worker.");
+      }
+    };
   });
 </script>
 
