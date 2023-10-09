@@ -18,13 +18,13 @@ async function loadAndRunPython() {
   }
   self.pyodide.setStdout({
     batched: (str) => {
-      console.log("stdout", str);
+      // console.log("stdout", str);
       postMessage({ pythonStdout: str });
     },
   });
   self.pyodide.setStderr({
     batched: (str) => {
-      console.log("stderr", str);
+      // console.log("stderr", str);
       postMessage({ pythonStderr: str });
     },
   });

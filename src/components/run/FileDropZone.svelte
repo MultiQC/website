@@ -90,6 +90,6 @@
   </div>
   <pre
     id="drop_files_listfiles"
-    class=" h-full w-full"
+    class="h-full max-h-52 w-full overflow-y-auto"
     class:hidden={files.length === 0}>{@html files}</pre>
 </div>
