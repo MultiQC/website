@@ -1,4 +1,5 @@
 <script>
+  import BrailleLoader from "@components/BrailleLoader.svelte";
   export let files = "";
   export let terminal_command = "";
   export let stdout = "";
@@ -24,9 +25,14 @@
     </div>
     <span id="terminal_command">{terminal_command}</span>
     <pre id="stdout" class:hidden={!stdout}>{@html stdout}</pre>
-    <span id="blinking_cursor" class:hidden={multiqc_ran.length > 0} class:active={files.length > 0}
-      >&nbsp;</span
+    <span
+      id="blinking_cursor"
+      class:hidden={terminal_command.length > 0 || stdout.length > 0}
+      class:active={files.length > 0}>&nbsp;</span
     >
+    <span class:hidden={terminal_command.length !== 9 || stdout.length > 0}>
+      <BrailleLoader />
+    </span>
     <div id="terminal_open_report" class="mt-6" class:hidden={multiqc_ran !== "successful"}>
       <slot name="open_report_btn" />
     </div>
@@ -43,6 +49,9 @@
     }
     :global(.header span:nth-child(3)) {
       color: #fe6b61;
+    }
+    :global(.header span:nth-child(5)) {
+      color: #666;
     }
   }
 
