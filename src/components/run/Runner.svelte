@@ -54,8 +54,8 @@
     # coding: utf-8
     import pathlib
 
-    file_icon = "📄"
-    directory_icon = "📁"
+    file_icon = '<svg class="inline max-h-5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6m4 18H6V4h7v5h5v11Z"/></svg>'
+    directory_icon = '<svg class="inline max-h-5 opacity-60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2Z"/></svg>'
 
     files = []
     for f in pathlib.Path("/data").iterdir():
@@ -155,7 +155,7 @@ multiqc.run('/data', no_ansi=True, force=True)
           variant="primary"
           size="md"
           classes="mb-4 mr-2"
-          disabled={!browser_supported || !pyodide_ready}
+          disabled={!browser_supported || !pyodide_ready || $currentDirectory}
           on:click={select_directory}
         >
           <slot name="btn_choose_dir" />Step 1 - Choose Directory
@@ -167,7 +167,7 @@ multiqc.run('/data', no_ansi=True, force=True)
           variant="primary"
           size="md"
           classes="mb-4 mr-2"
-          disabled={!$currentDirectory}
+          disabled={!$currentDirectory || multiqc_ran}
           on:click={run_multiqc}
         >
           <slot name="btn_run_multiQC" />Step 2 - Run MultiQC
