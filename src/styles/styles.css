@@ -293,9 +293,7 @@ div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
 
 /* Blinking terminal cursor */
 #blinking_cursor {
-  height: 20px;
-  border: 1px solid rgba(255, 165, 0, 0.4);
-  margin-bottom: -4px;
+  @apply mb-1 h-5 border border-amber-600 opacity-80 dark:border-amber-500;
 }
 #blinking_cursor.active {
   animation: 1.2s blink step-end infinite;
@@ -303,9 +301,9 @@ div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
 @keyframes blink {
   from,
   to {
-    border-color: transparent;
+    opacity: 0;
   }
   50% {
-    border-color: rgba(255, 165, 0, 0.4);
+    opacity: 80%;
   }
 }
