@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class="coding inverse-toggle rounded-sm border border-gray-700 border-opacity-50 bg-black bg-opacity-20 px-5 pb-6 pt-4 font-mono text-sm text-gray-100 subpixel-antialiased shadow-lg"
+  class="coding inverse-toggle rounded-sm border border-gray-300 border-opacity-50 bg-white px-5 pb-6 pt-4 font-mono text-sm text-gray-900 subpixel-antialiased shadow-lg dark:border-gray-700 dark:bg-black dark:bg-opacity-20 dark:text-gray-100"
 >
   <div class="top mb-2 flex opacity-70">
     <div class="h-3 w-3 rounded-full bg-rose-600" />
@@ -15,7 +15,7 @@
     <div class="ml-2 h-3 w-3 rounded-full bg-green-500" />
   </div>
   <div class="mt-4">
-    <span class="mr-2 text-green-400">$</span>
+    <span class="mr-2 text-green-600 dark:text-green-400">$</span>
     <div
       id="terminal_run_multiqc"
       class="inline-block"
@@ -38,30 +38,3 @@
     </div>
   </div>
 </div>
-
-<style lang="scss">
-  #stdout {
-    :global(span) {
-      color: #96cbff;
-    }
-    :global(.header span:nth-child(2)) {
-      color: #a8ff61;
-    }
-    :global(.header span:nth-child(3)) {
-      color: #fe6b61;
-    }
-    :global(.header span:nth-child(5)) {
-      color: #666;
-    }
-  }
-
-  a {
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-
-    &:hover {
-      // Define hover state if needed
-    }
-  }
-</style>

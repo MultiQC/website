@@ -277,6 +277,20 @@ div[data-rehype-pretty-code-fragment] pre:hover .copy-code-button {
   @apply opacity-80;
 }
 
+/* Terminal text colours */
+#stdout span {
+  @apply text-blue-600 dark:text-blue-300;
+}
+#stdout .header span:nth-child(2) {
+  @apply text-lime-700 dark:text-lime-300;
+}
+#stdout .header span:nth-child(3) {
+  @apply text-red-600 dark:text-red-400;
+}
+#stdout .header span:nth-child(5) {
+  @apply text-stone-400 dark:text-stone-500;
+}
+
 /* Blinking terminal cursor */
 #blinking_cursor {
   height: 20px;

@@ -32,7 +32,7 @@
 
 <div
   id="drop_files"
-  class="mr-1 flex h-full flex-col rounded-sm border border-dashed border-gray-400 px-4 py-6 text-gray-200 transition-opacity"
+  class="mr-1 flex h-full flex-col rounded-sm border border-dashed border-gray-600 px-4 py-6 text-gray-800 transition-opacity dark:border-gray-400 dark:text-gray-200"
   class:opacity-100={drag_hover || files}
   class:opacity-60={!drag_hover && !files}
   on:dragenter={(e) => {
@@ -64,7 +64,7 @@
   </div>
   <div
     id="staged_files_header"
-    class="-mx-4 -mt-6 mb-3 rounded-t-sm bg-gray-700 px-2 py-1 font-mono text-xs"
+    class="-mx-4 -mt-6 mb-3 rounded-t-sm bg-gray-200 px-2 py-1 font-mono text-xs dark:bg-gray-700"
     class:hidden={!$currentDirectory}
   >
     Staged files
