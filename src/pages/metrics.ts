@@ -1,3 +1,6 @@
+// /metrics endpoint that returns the MultiQC package downloads statitstics
+// across different sources and versions.
+
 import type { APIRoute } from "astro";
 import fetch from "node-fetch";
 
