@@ -10,9 +10,9 @@ module.exports = {
   safelist: ["shadow-md"],
   theme: {
     fontFamily: {
-      display: ["SF UI Display", "Helvetica", "sans-serif"],
-      body: ["SF UI Display", "Helvetica", "sans-serif"],
-      sans: ["SF UI Display", "Helvetica", "sans-serif"],
+      display: ["Degular", "Helvetica", "sans-serif"],
+      body: ["Degular", "Helvetica", "sans-serif"],
+      sans: ["Degular", "Helvetica", "sans-serif"],
       mono: [
         "ui-monospace",
         "SFMono-Regular",
