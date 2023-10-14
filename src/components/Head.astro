@@ -43,7 +43,7 @@ const title_long = title == "MultiQC" ? title : title + " - MultiQC";
 <meta name="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Google Tag Manager -->
-<script client:load>
+<script is:inline>
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -56,18 +56,3 @@ const title_long = title == "MultiQC" ? title : title + " - MultiQC";
   })(window, document, "script", "dataLayer", "GTM-WN9CCC8");
 </script>
 <!-- End Google Tag Manager -->
-
-<!-- Algolia -->
-<script>
-  import docsearch from "@docsearch/js";
-  import "@docsearch/css";
-
-  docsearch({
-    container: "#search",
-    appId: "V0JDBH4NO9",
-    apiKey: "7dbf54c298bba90faba20e714a99550a",
-    indexName: "multiqc",
-  });
-</script>
-
-<!-- End Algolia -->
