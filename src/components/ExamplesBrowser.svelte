@@ -12,15 +12,15 @@
     active = index;
   };
   import Button from "@components/Button.svelte";
-  import MultiQCIconSrc from "/logos/multiqc_logo_square.svg";
+  import MultiQCIconSrc from "/logos/multiqc_icon_color.svg";
 </script>
 
 <div class="overflow-hidden rounded-md border border-gray-200 text-gray-800 shadow">
   <div class="overflow-hidden rounded-md border border-gray-200 shadow">
     {#if items.length === 1}
       <div class="flex border-b border-gray-200 bg-gray-100">
-        <div class="flex px-4 pt-4 pb-2">
-          <img src={MultiQCIconSrc} alt="MultiQC Logo" class="my-0 mr-2 h-6 w-6" />
+        <div class="flex px-4 pb-2 pt-4">
+          <img src={MultiQCIconSrc} alt="MultiQC Logo" class="my-0 mr-2 h-5 w-5" />
           <span class="typo-small -mt-0.5">
             Example Report: {items[0].data.title}
           </span>
@@ -28,9 +28,9 @@
       </div>
     {:else}
       <div class="flex border-b border-gray-200 bg-gray-100">
-        <div class="flex px-4 pt-4 pb-2 lg:w-[250px]">
-          <img src={MultiQCIconSrc} alt="MultiQC Logo" class="mr-2 h-6 w-6" />
-          <span class="typo-small -mt-0.5 ">Example Reports</span>
+        <div class="flex px-4 pb-2 pt-4 lg:w-[250px]">
+          <img src={MultiQCIconSrc} alt="MultiQC Logo" class="mr-2 h-5 w-5" />
+          <span class="typo-small -mt-0.5">Example Reports</span>
         </div>
         <div class="flex pt-2">
           {#each items as item, index (index)}
@@ -48,7 +48,7 @@
           {/each}
         </div>
         {#if hasDetails}
-          <div class="grow py-2 px-4 text-right">
+          <div class="grow px-4 py-2 text-right">
             <Button
               to={"/example-reports/" + items[active].slug}
               variant="secondary"

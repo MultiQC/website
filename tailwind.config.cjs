@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 /* eslint-disable no-multi-spaces, key-spacing */
 
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -10,9 +12,9 @@ module.exports = {
   safelist: ["shadow-md"],
   theme: {
     fontFamily: {
-      display: ["SF UI Display", "Helvetica", "sans-serif"],
-      body: ["SF UI Display", "Helvetica", "sans-serif"],
-      sans: ["SF UI Display", "Helvetica", "sans-serif"],
+      display: ["Degular", "Helvetica", "sans-serif"],
+      body: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+      sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
       mono: [
         "ui-monospace",
         "SFMono-Regular",
