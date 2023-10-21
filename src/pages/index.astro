@@ -239,7 +239,7 @@ const modules = await getCollection("modules");
                   },
                   {
                     title: "docker",
-                    code: "docker run -t -v pwd:pwd -w pwd \\\n    ewels/multiqc .",
+                    code: "docker run -t -v `pwd`:`pwd` -w `pwd` \\\n    ewels/multiqc multiqc .",
                   },
                 ]}
                 client:idle
