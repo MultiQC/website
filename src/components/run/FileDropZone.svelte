@@ -85,7 +85,15 @@
     class:flex={pyodide_ready}
   >
     <div class="w-full text-center">
-      Drag and drop a directory here, or click "Choose directory".
+      <p class="mb-2">Drag and drop a directory here, or click "Choose directory".</p>
+      <p>
+        (<a
+          class="typo-link"
+          href="/examples/rna-seq/data.zip"
+          on:click={() => alert("Unzip the file and drag the directory onto the drop zone!")}
+          >Download example data</a
+        >)
+      </p>
     </div>
   </div>
   <pre
