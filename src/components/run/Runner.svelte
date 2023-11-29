@@ -41,8 +41,8 @@
     }
     pyodideWorker.postMessage({
       code: `
-import multiqc
-multiqc.run('/data', no_ansi=True, force=True)
+from multiqc import multiqc  # TODO: revert this back to simple "import multiqc" once https://github.com/ewels/MultiQC/pull/2202 is released
+multiqc.multiqc.run('/data', no_ansi=True, force=True)
         `,
     });
   }
