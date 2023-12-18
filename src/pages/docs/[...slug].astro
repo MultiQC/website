@@ -21,7 +21,7 @@ const { headings, Content, remarkPluginFrontmatter } = await doc.render();
 const headings_filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 
 // GitHub URL for the footer
-const gh_url = "https://github.com/MultiQC/MultiQC/blob/master/docs/core/" + doc.id;
+const gh_url = "https://github.com/MultiQC/MultiQC/blob/main/docs/core/" + doc.id;
 
 let section = doc.slug ? doc.slug.split("/")[0] : undefined;
 // get section as first element of the slug convert to title case
