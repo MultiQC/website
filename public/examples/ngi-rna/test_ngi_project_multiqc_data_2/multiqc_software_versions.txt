@@ -1,0 +1,3 @@
+Sample	Cutadapt	FastQC
+Cutadapt	1.9.1	
+FastQC		0.11.5
