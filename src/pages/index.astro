@@ -13,7 +13,7 @@ import ReleasedAgo from "@components/ReleasedAgo.svelte";
 import HomepageVideos from "@components/HomepageVideos.svelte";
 import SnippetBox from "@components/SnippetBox.svelte";
 
-const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/releases/latest")
+const latestRelease = await fetch("https://api.github.com/repos/MultiQC/MultiQC/releases/latest")
   .then((response) => response.json())
   .then((data) => {
     if (!data.tag_name) {
@@ -66,7 +66,7 @@ const modules = await getCollection("modules");
                 latestRelease && (
                   <>
                     <a
-                      href="https://github.com/ewels/MultiQC/releases"
+                      href="https://github.com/MultiQC/MultiQC/releases"
                       class="typo-small block text-xs text-gray-300 transition-colors hover:text-gray-100"
                     >
                       Latest release: <strong class="ml-2">{latestRelease.latest}</strong>
@@ -164,7 +164,7 @@ const modules = await getCollection("modules");
         </div>
         <div class="col-full lg:col-4 mt-4 lg:mt-0">
           <Button
-            to="https://www.github.com/ewels/MultiQC"
+            to="https://www.github.com/MultiQC/MultiQC"
             variant="primary"
             size="md"
             classes="w-full"
@@ -239,7 +239,7 @@ const modules = await getCollection("modules");
                   },
                   {
                     title: "docker",
-                    code: "docker run -t -v `pwd`:`pwd` -w `pwd` \\\n    ewels/multiqc multiqc .",
+                    code: "docker run -t -v `pwd`:`pwd` -w `pwd` \\\n    multiqc/multiqc multiqc .",
                   },
                 ]}
                 client:idle
@@ -403,7 +403,7 @@ const modules = await getCollection("modules");
           </Button>
         </div>
         <div class="mt-4 md:mr-4 md:mt-0">
-          <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
+          <Button to="https://github.com/MultiQC/MultiQC/" variant="secondary" size="md">
             <Icon name="mdi:github" class="mr-3 h-6 w-6" />
             View on GitHub
           </Button>
