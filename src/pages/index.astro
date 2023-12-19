@@ -87,31 +87,32 @@ const modules = await getCollection("modules");
               </div>
             </div>
           </div>
-          {
-            /*
+
           <div class="rounded-sm bg-gradient-to-r from-pink-300 to-blue-300 text-gray-800">
             <div class="container-lg py-4">
-              <div class="flex flex-row">
-                <p class="typo-intro grow">
-                  MultiQC just turned
-                  <span class="sm:hidden">8!</span>
-                  <span class="hidden sm:inline">eight years old! 🎂</span>
+              <div class="inline flex-row sm:flex">
+                <p class="typo-intro mb-2 mr-2 grow">
+                  <span class="hidden md:inline">Heads up -</span>
+                  The MultiQC repos have moved!
+                  <span class="hidden md:inline">
+                    <Icon name="mdi:github" class="ml-1 inline h-6 w-6" />
+                    <Icon name="mdi:docker" class="mr-1 inline h-6 w-6" />
+                    🚚 🎄
+                  </span>
                 </p>
                 <Button
-                  to="https://seqera.io/blog/multiqc-turns-8-years-old/"
+                  to="/docs/development/compatibility/#github-repo-and-docker-images-moved"
                   variant="primary"
                   size="sm"
-                  classes="ml-2"
                   arrow={true}
                   client:visible
                 >
-                  Read the blog <span class="hidden md:inline">&nbsp;post</span>
+                  Read more
                 </Button>
               </div>
             </div>
           </div>
-          */
-          }
+
           <h1 class="typo-h4 mt-8">
             Aggregate results from bioinformatics analyses across many samples into a single report
           </h1>
