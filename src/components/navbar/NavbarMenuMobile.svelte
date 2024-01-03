@@ -2,7 +2,7 @@
   import DarkModeToggle from "@components/DarkModeToggle.svelte";
   import NavbarToc from "@components/navbar/NavbarToc.svelte";
 
-  import HeroBackgroundSrc from "@assets/images/background.png";
+  import HeroBackgroundSrc from "@assets/images/background.png?url";
   import docsearch from "@docsearch/js";
   import "@docsearch/css";
   import { onMount } from "svelte";

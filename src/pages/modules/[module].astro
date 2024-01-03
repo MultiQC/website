@@ -2,7 +2,7 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import { Code } from "astro/components";
 import { parse, stringify } from "yaml";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import Button from "@components/Button.svelte";
 import { getCollection } from "astro:content";
 import search_patterns from "@src/search_patterns.yaml";
@@ -45,7 +45,7 @@ const module_search_patterns = Object.keys(search_patterns)
   image={frontmatter.social_image
     ? frontmatter.social_image
     : `/og.png?section=${encodeURIComponent("Supported Tool")}&title=${encodeURIComponent(
-        frontmatter.name
+        frontmatter.name,
       )}`}
 >
   <div class="prose max-w-none dark:prose-invert">

@@ -6,6 +6,7 @@ import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
 import yaml from "@rollup/plugin-yaml";
 import { h } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -42,6 +43,14 @@ export default defineConfig({
     mdx(),
     sitemap(),
     svelte(),
+    icon({
+      include: {
+        // Include only subset of icon bundles
+        mdi: ["*"],
+        bi: ["file-earmark-zip"],
+        logos: ["twitter", "mastodon-icon"],
+      },
+    }),
   ],
   vite: {
     plugins: [yaml()],
