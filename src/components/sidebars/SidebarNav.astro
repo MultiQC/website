@@ -1,6 +1,11 @@
 ---
 export interface Props {
-  sections: [];
+  sections: {
+    section: {
+      [key: string]: string;
+    };
+    pages: [string, { frontmatter: { title: string } }][];
+  }[];
 }
 const { sections } = Astro.props;
 ---
@@ -29,7 +34,7 @@ const { sections } = Astro.props;
                   "py-0.5",
                   "text-xs",
                   {
-                    "font-semibold border-l-blue-600 hover:border-l-blue-600 text-blue-600 hover:text-blue-600 dark:border-l-blue-600 dark:text-blue-400":
+                    "border-l-blue-600 font-semibold text-blue-600 hover:border-l-blue-600 hover:text-blue-600 dark:border-l-blue-600 dark:text-blue-400":
                       Astro.url.pathname == page[0],
                   },
                 ]}
