@@ -1,9 +1,8 @@
 <script lang="ts">
   import DarkModeToggle from "@components/DarkModeToggle.svelte";
   import NavbarToc from "@components/navbar/NavbarToc.svelte";
-  import HeroBackgroundSrc from "/images/background.png";
-  import LogoCircle from "/logos/multiqc_icon_color.svg";
-  import Logo from "/logos/multiqc_logo_darkbg.svg";
+
+  import HeroBackgroundSrc from "@src/assets/images/background.png";
   import docsearch from "@docsearch/js";
   import "@docsearch/css";
   import { onMount } from "svelte";
@@ -40,7 +39,7 @@
 <div class="container-lg flex h-16 w-full flex-wrap items-center justify-between lg:hidden">
   <a href="/" class="block" title="Go to the MultiQC homepage">
     <img
-      src={Logo}
+      src="/logos/multiqc_logo_darkbg.svg"
       class="h-8 transition-opacity ease-in lg:h-10"
       class:opacity-0={location.pathname === "/" && y <= 85}
       class:opacity-100={location.pathname === "/" && y > 85}
@@ -48,7 +47,7 @@
       alt="MultiQC logo"
     />
     <img
-      src={LogoCircle}
+      src="/logos/multiqc_icon_color.svg"
       class="h-8 lg:h-10"
       class:hidden={headings.length == 0}
       alt="MultiQC logo"
