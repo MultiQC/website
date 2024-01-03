@@ -1,0 +1,14 @@
+---
+export interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+
+// fetch remote svg file
+const svg = await fetch(src).then((res) => res.text());
+---
+
+<Fragment set:html={svg}>
+  <slot />
+</Fragment>

@@ -259,10 +259,10 @@
 }
 
 /* Excalidraw SVGs */
-.markdown-content p img {
-  @apply h-full max-w-full dark:hue-rotate-180 dark:invert;
+.markdown-content svg {
+  @apply mb-5 h-full max-w-full dark:hue-rotate-180 dark:invert;
 }
-.markdown-content p img rect {
+.markdown-content svg rect {
   @apply fill-transparent;
 }
 
