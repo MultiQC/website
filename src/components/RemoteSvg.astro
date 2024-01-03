@@ -9,6 +9,8 @@ const { src } = Astro.props;
 const svg = await fetch(src).then((res) => res.text());
 ---
 
-<Fragment set:html={svg}>
-  <slot />
-</Fragment>
+<p>
+  <Fragment set:html={svg}>
+    <slot />
+  </Fragment>
+</p>

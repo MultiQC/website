@@ -98,8 +98,8 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
-          langPrefix: "language-",
           keepBackground: true,
+          defaultLang: "plaintext",
           theme: {
             dark: "one-dark-pro",
             light: "min-light",
