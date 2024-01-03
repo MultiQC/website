@@ -7,11 +7,11 @@
   let isAccepted = false;
   onMount(() => {
     isAccepted = localStorage.userAcceptedCookies === "accepted";
-    function acceptCookies() {
-      localStorage.userAcceptedCookies = "accepted";
-      isAccepted = true;
-    }
   });
+  function acceptCookies() {
+    localStorage.userAcceptedCookies = "accepted";
+    isAccepted = true;
+  }
 </script>
 
 <div

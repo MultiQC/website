@@ -1,5 +1,5 @@
 ---
-import HeroBackgroundSrc from "@src/assets/images/background.png";
+import HeroBackgroundSrc from "@assets/images/background.png";
 import { getImage } from "astro:assets";
 const optimizedBackground = await getImage({ src: HeroBackgroundSrc, format: "webp" });
 ---
@@ -7,7 +7,7 @@ const optimizedBackground = await getImage({ src: HeroBackgroundSrc, format: "we
 <div class="relative bg-gray-800 pb-8 pt-6 text-gray-100 md:pb-20 lg:pb-16">
   <div
     class="absolute inset-0"
-    style={{ backgroundImage: `url(${optimizedBackground})`, backgroundPositionY: "-6rem" }}
+    style={{ backgroundImage: `url(${optimizedBackground.src})`, backgroundPositionY: "-6rem" }}
   >
   </div>
   <slot />
