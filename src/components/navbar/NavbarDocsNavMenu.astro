@@ -9,21 +9,15 @@ const sections: {
 const all_docs = await Astro.glob("../../../../MultiQC/docs/core/**/*.{md,mdx}");
 docs_nav["nav"].forEach((section) => {
   let pages = [];
-  console.log("section:", section);
   Object.values(section)[0].forEach((filename) => {
-    console.log(filename);
     var url = "/docs/" + filename.replace(/\.(md|mdx)$/, "").replace(/index$/, "");
     var filtered = all_docs.filter(function (el) {
       return el.file.endsWith("docs/core/" + filename);
     });
-    console.log(filtered);
     pages.push([url, filtered[0]]);
   });
-  // console.log("section:", section[Object.keys(section)])
   sections.push({ section: section, pages: pages });
 });
-console.log(sections);
-console.log(all_docs.map((doc) => doc.file));
 ---
 
 {
