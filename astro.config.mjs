@@ -93,8 +93,6 @@ export default defineConfig({
           }
         },
       ],
-      // Make images inline, use <svg> elements for SVGs
-      // [rehypeInline, { js: false, css: false, images: true, imports: false, svgElements: true }],
       [
         rehypePrettyCode,
         {
