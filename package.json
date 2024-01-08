@@ -32,7 +32,6 @@
 		"nanostores": "^0.9.5",
 		"prism-theme-github": "^1.0.1",
 		"rehype-autolink-headings": "^7.1.0",
-		"rehype-inline": "^2.0.0",
 		"rehype-pretty-code": "^0.12.3",
 		"rehype-slug": "^6.0.0",
 		"rehype-urls": "^1.2.0",
