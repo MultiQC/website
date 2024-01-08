@@ -13,19 +13,19 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^2.0.3",
-		"@astrojs/netlify": "^4.0.2",
+		"@astrojs/netlify": "^4.1.0",
 		"@astrojs/prefetch": "^0.4.1",
 		"@astrojs/sitemap": "^3.0.4",
 		"@astrojs/svelte": "^5.0.3",
 		"@astrojs/tailwind": "^5.1.0",
 		"@docsearch/js": "^3.4.0",
 		"@fontsource-variable/inter": "^5.0.13",
-		"@iconify-json/bi": "^1.1.22",
+		"@iconify-json/bi": "^1.1.23",
 		"@iconify-json/logos": "^1.1.42",
 		"@iconify-json/mdi": "^1.1.64",
 		"@prisma/client": "^5.7.1",
 		"@tailwindcss/typography": "^0.5.10",
-		"astro": "^4.0.9",
+		"astro": "^4.1.1",
 		"astro-icon": "^1.0.2",
 		"canvas-confetti": "^1.9.2",
 		"classnames": "^2.5.1",
@@ -42,7 +42,7 @@
 		"sharp": "^0.33.1",
 		"shikiji": "^0.9.17",
 		"svelte": "^4.2.8",
-		"tailwindcss": "^3.4.0",
+		"tailwindcss": "^3.4.1",
 		"yaml": "^2.3.4",
 		"yoga-wasm-web": "^0.3.3"
 	},
@@ -53,7 +53,7 @@
 		"prettier-plugin-astro": "^0.12.3",
 		"prettier-plugin-organize-imports": "^3.2.2",
 		"prettier-plugin-svelte": "^3.1.2",
-		"prettier-plugin-tailwindcss": "^0.5.10",
+		"prettier-plugin-tailwindcss": "^0.5.11",
 		"prisma": "^5.7.1"
 	}
 }
