@@ -8,12 +8,12 @@ import Card from "@components/Card.astro";
 import mqc_releases from "../multiqc_releases.json";
 
 import fs from "node:fs";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import ReleasedAgo from "@components/ReleasedAgo.svelte";
 import HomepageVideos from "@components/HomepageVideos.svelte";
 import SnippetBox from "@components/SnippetBox.svelte";
 
-const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/releases/latest")
+const latestRelease = await fetch("https://api.github.com/repos/MultiQC/MultiQC/releases/latest")
   .then((response) => response.json())
   .then((data) => {
     if (!data.tag_name) {
@@ -48,7 +48,11 @@ const modules = await getCollection("modules");
         <div class="col-full lg:col-8">
           <div class="mb-10 flex-row items-stretch text-right lg:flex">
             <div>
-              <Icon name="multiqc_logo_darkbg" class="logo w-full cursor-pointer lg:w-[550px]" />
+              <Icon
+                name="multiqc_logo_darkbg"
+                title="MultiQC logo"
+                class="logo h-24 w-[550px] max-w-full cursor-pointer"
+              />
               <a
                 href="https://seqera.io"
                 target="_blank"
@@ -56,8 +60,8 @@ const modules = await getCollection("modules");
               >
                 Supported by <Icon
                   name="seqera-logo-mono"
-                  alt="Seqera Labs logo"
-                  class="ml-2 inline h-5 fill-current opacity-50 transition-opacity group-hover:opacity-100"
+                  title="Seqera logo"
+                  class="ml-2 inline h-12 w-28 fill-current opacity-50 transition-opacity group-hover:opacity-100"
                 />
               </a>
             </div>
@@ -66,7 +70,7 @@ const modules = await getCollection("modules");
                 latestRelease && (
                   <>
                     <a
-                      href="https://github.com/ewels/MultiQC/releases"
+                      href="https://github.com/MultiQC/MultiQC/releases"
                       class="typo-small block text-xs text-gray-300 transition-colors hover:text-gray-100"
                     >
                       Latest release: <strong class="ml-2">{latestRelease.latest}</strong>
@@ -87,31 +91,32 @@ const modules = await getCollection("modules");
               </div>
             </div>
           </div>
-          {
-            /*
+
           <div class="rounded-sm bg-gradient-to-r from-pink-300 to-blue-300 text-gray-800">
             <div class="container-lg py-4">
-              <div class="flex flex-row">
-                <p class="typo-intro grow">
-                  MultiQC just turned
-                  <span class="sm:hidden">8!</span>
-                  <span class="hidden sm:inline">eight years old! 🎂</span>
+              <div class="inline flex-row sm:flex">
+                <p class="typo-intro mr-2 grow">
+                  <span class="hidden md:inline">Heads up -</span>
+                  The MultiQC repos have moved!
+                  <span class="hidden md:inline">
+                    <Icon name="mdi:github" class="ml-1 inline h-6 w-6" />
+                    <Icon name="mdi:docker" class="mr-1 inline h-6 w-6" />
+                    🚚 🎄
+                  </span>
                 </p>
                 <Button
-                  to="https://seqera.io/blog/multiqc-turns-8-years-old/"
+                  to="/docs/development/compatibility/#github-repo-and-docker-images-moved"
                   variant="primary"
                   size="sm"
-                  classes="ml-2"
                   arrow={true}
                   client:visible
                 >
-                  Read the blog <span class="hidden md:inline">&nbsp;post</span>
+                  Read more
                 </Button>
               </div>
             </div>
           </div>
-          */
-          }
+
           <h1 class="typo-h4 mt-8">
             Aggregate results from bioinformatics analyses across many samples into a single report
           </h1>
@@ -164,7 +169,7 @@ const modules = await getCollection("modules");
         </div>
         <div class="col-full lg:col-4 mt-4 lg:mt-0">
           <Button
-            to="https://www.github.com/ewels/MultiQC"
+            to="https://www.github.com/MultiQC/MultiQC"
             variant="primary"
             size="md"
             classes="w-full"
@@ -239,7 +244,7 @@ const modules = await getCollection("modules");
                   },
                   {
                     title: "docker",
-                    code: "docker run -t -v `pwd`:`pwd` -w `pwd` \\\n    ewels/multiqc multiqc .",
+                    code: "docker run -t -v `pwd`:`pwd` -w `pwd` \\\n    multiqc/multiqc multiqc .",
                   },
                 ]}
                 client:idle
@@ -403,7 +408,7 @@ const modules = await getCollection("modules");
           </Button>
         </div>
         <div class="mt-4 md:mr-4 md:mt-0">
-          <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
+          <Button to="https://github.com/MultiQC/MultiQC/" variant="secondary" size="md">
             <Icon name="mdi:github" class="mr-3 h-6 w-6" />
             View on GitHub
           </Button>

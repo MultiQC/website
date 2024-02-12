@@ -34,7 +34,7 @@ const community_links = [
     text: "Community Forum",
   },
   {
-    url: "https://github.com/ewels/MultiQC",
+    url: "https://github.com/MultiQC/MultiQC",
     icon: "mdi:github",
     text: "GitHub",
   },
@@ -50,16 +50,19 @@ const community_links = [
   },
 ];
 
-const sections = [];
-let prev_page;
-let next_page;
-let last_page;
+const sections: {
+  section: string;
+  pages: string[][];
+}[] = [];
+let prev_page: string[];
+let next_page: string[];
+let last_page: string[];
 let last_matched = false;
-const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
+const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.{md,mdx}");
 docs_nav["nav"].forEach((section) => {
-  let pages = [];
+  let pages: string[] = [];
   Object.values(section)[0].forEach((filename) => {
-    var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
+    var url = "/docs/" + filename.replace(/\.(md|mdx)$/, "").replace(/index$/, "");
     // add trailing slash if Astro.url.pathname has one (true for production, not for dev)
     if (Astro.url.pathname.slice(-1) === "/") {
       url += "/";
@@ -112,7 +115,7 @@ docs_nav["nav"].forEach((section) => {
         <MarkdownWrapper headings={headings} client:load>
           <slot />
         </MarkdownWrapper>
-        <nav class="mt-12 text-gray-600 dark:text-gray-400 lg:hidden">
+        <nav class="mt-12 text-gray-600 lg:hidden dark:text-gray-400">
           <CommunityLinks links={community_links} />
         </nav>
       </main>

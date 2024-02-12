@@ -2,7 +2,7 @@
 import PageLayout from "@layouts/PageLayout.astro";
 import { Code } from "astro/components";
 import { parse, stringify } from "yaml";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import Button from "@components/Button.svelte";
 import { getCollection } from "astro:content";
 import search_patterns from "@src/search_patterns.yaml";
@@ -26,7 +26,7 @@ const { module, frontmatter, search_patterns } = Astro.props;
 
 const { headings, Content, remarkPluginFrontmatter } = await module.render();
 const gh_url =
-  "https://github.com/ewels/MultiQC/blob/master/docs/modules/" + module.id.split("/").pop();
+  "https://github.com/MultiQC/MultiQC/blob/main/docs/modules/" + module.id.split("/").pop();
 
 // Filter search_patterns to only include keys containing key string
 const module_search_patterns = Object.keys(search_patterns)
@@ -45,7 +45,7 @@ const module_search_patterns = Object.keys(search_patterns)
   image={frontmatter.social_image
     ? frontmatter.social_image
     : `/og.png?section=${encodeURIComponent("Supported Tool")}&title=${encodeURIComponent(
-        frontmatter.name
+        frontmatter.name,
       )}`}
 >
   <div class="prose max-w-none dark:prose-invert">

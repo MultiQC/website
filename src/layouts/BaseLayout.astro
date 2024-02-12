@@ -23,7 +23,7 @@ const {
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <BaseHead title={title} description={subtitle} image={image} />
@@ -73,7 +73,7 @@ const {
           const copyButtonLabel = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"/></svg>`;
           const copiedButtonLabel = `Copied <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7Z"/></svg>`;
           document
-            .querySelectorAll("div[data-rehype-pretty-code-fragment] pre")
+            .querySelectorAll("figure[data-rehype-pretty-code-figure] pre")
             .forEach((block) => {
               // only add button if browser supports Clipboard API
               if (navigator.clipboard) {

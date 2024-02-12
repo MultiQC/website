@@ -5,7 +5,9 @@ import NavbarDocsNav from "@components/navbar/NavbarDocsNav.svelte";
 import NavbarDocsNavTitle from "@components/navbar/NavbarDocsNavTitle.astro";
 import NavbarDocsNavMenu from "@components/navbar/NavbarDocsNavMenu.astro";
 
-import HeroBackgroundSrc from "/images/background.png";
+import HeroBackgroundSrc from "@assets/images/background.png";
+import { getImage } from "astro:assets";
+const optimizedBackground = await getImage({ src: HeroBackgroundSrc, format: "webp" });
 
 const location = Astro.url;
 
@@ -45,7 +47,7 @@ const { title, headings = [], navbarItems = navPages } = Astro.props;
 // Maybe a nicer way to do this? Not sure..
 ---
 
-<header class="sticky top-0 z-10" style={{ backgroundImage: `url(${HeroBackgroundSrc})` }}>
+<header class="sticky top-0 z-10" style={{ backgroundImage: `url(${optimizedBackground.src})` }}>
   <NavbarMenu navbarItems={navbarItems} />
   <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load />
   {

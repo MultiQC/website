@@ -41,7 +41,7 @@
     }
     pyodideWorker.postMessage({
       code: `
-from multiqc import multiqc  # TODO: revert this back to simple "import multiqc" once https://github.com/ewels/MultiQC/pull/2202 is released
+from multiqc import multiqc  # TODO: revert this back to simple "import multiqc" once https://github.com/MultiQC/MultiQC/pull/2202 is released
 multiqc.run('/data', no_ansi=True, force=True)
         `,
     });

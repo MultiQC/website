@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 
 const modules = await getCollection("modules");
@@ -20,19 +20,19 @@ const modules = await getCollection("modules");
     Missing something? If you would like another tool to to be support, please
     <a
       class="underline underline-offset-4 hover:no-underline"
-      href="https://github.com/ewels/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml"
+      href="https://github.com/MultiQC/MultiQC/issues/new?labels=module%3A+new&template=module-request.yml"
     >
       open an issue
     </a>.
   </p>
   <form method="get">
-    <label for="filter" class="text-gray-500 dark:text-gray-300 md:ml-2">Search for a tool:</label>
+    <label for="filter" class="text-gray-500 md:ml-2 dark:text-gray-300">Search for a tool:</label>
     <div class="relative inline-block w-full whitespace-nowrap sm:w-96">
       <input
         id="filter"
         name="filter"
         type="text"
-        class="peer my-3 inline-block w-full rounded-sm border-gray-300 bg-black/5 p-3 shadow-sm outline-0 focus:border-blue-500/20 focus:ring focus:ring-blue-500/20 focus:ring-opacity-50 dark:bg-black/20 sm:mx-3"
+        class="peer my-3 inline-block w-full rounded-sm border-gray-300 bg-black/5 p-3 shadow-sm outline-0 focus:border-blue-500/20 focus:ring focus:ring-blue-500/20 focus:ring-opacity-50 sm:mx-3 dark:bg-black/20"
         placeholder="Tool name, description or keyword"
       />
       <button
@@ -44,11 +44,11 @@ const modules = await getCollection("modules");
     </div>
     <div class="flex flex-col">
       <div class="grid-cols-4 lg:grid">
-        <div class="typo-intro bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:hidden">Tool</div>
-        <div class="typo-intro hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">
+        <div class="typo-intro bg-gray-200 px-4 py-2 lg:hidden dark:bg-zinc-700">Tool</div>
+        <div class="typo-intro hidden bg-gray-200 px-4 py-2 lg:block dark:bg-zinc-700">
           Tool Name
         </div>
-        <div class="typo-intro col-span-3 hidden bg-gray-200 px-4 py-2 dark:bg-zinc-700 lg:block">
+        <div class="typo-intro col-span-3 hidden bg-gray-200 px-4 py-2 lg:block dark:bg-zinc-700">
           Description
         </div>
       </div>
@@ -56,7 +56,7 @@ const modules = await getCollection("modules");
         modules &&
           modules.map((module) => (
             <div class="module-row grid-cols-4 lg:grid">
-              <div class="flex items-center border-gray-200 px-4 pb-0 pt-2 dark:border-gray-700 lg:border-b lg:pb-2">
+              <div class="flex items-center border-gray-200 px-4 pb-0 pt-2 lg:border-b lg:pb-2 dark:border-gray-700">
                 <a
                   href={"/modules/" + module.id.split("/").pop().replace(".md", "")}
                   class="typo-body text-blue-600 dark:text-blue-400"
@@ -64,7 +64,7 @@ const modules = await getCollection("modules");
                   {module.data.name}
                 </a>
               </div>
-              <div class="col-span-3 flex items-center border-b border-gray-200 px-4 pb-3 text-gray-600 dark:border-gray-700 dark:text-gray-300 lg:py-2">
+              <div class="col-span-3 flex items-center border-b border-gray-200 px-4 pb-3 text-gray-600 lg:py-2 dark:border-gray-700 dark:text-gray-300">
                 {module.data.description}
               </div>
             </div>
