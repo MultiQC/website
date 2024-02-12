@@ -1,6 +1,6 @@
 ---
 import Card from "@components/Card.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   title: string;
@@ -15,7 +15,7 @@ const { title, url, icon, icon_classes = "" } = Astro.props;
 <Card>
   <a href={url} class="group block h-max sm:-m-8" title={title}>
     <div
-      class="flex h-32 items-center justify-center rounded-t-md bg-gray-200 dark:bg-gray-900/50 sm:h-44"
+      class="flex h-32 items-center justify-center rounded-t-md bg-gray-200 sm:h-44 dark:bg-gray-900/50"
     >
       <Icon
         name={icon}

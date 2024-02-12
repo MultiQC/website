@@ -3,7 +3,7 @@
   command = "git clone --depth 1 https://github.com/MultiQC/MultiQC.git ../MultiQC && npm run build"
 
 [build.environment]
-    NODE_VERSION = "18.14.0"
+    NODE_VERSION = "20.11.0"
 
 [[headers]]
   for = "/_astro/*"

@@ -12,7 +12,6 @@
     active = index;
   };
   import Button from "@components/Button.svelte";
-  import MultiQCIconSrc from "/logos/multiqc_icon_color.svg";
 </script>
 
 <div class="overflow-hidden rounded-md border border-gray-200 text-gray-800 shadow">
@@ -20,7 +19,7 @@
     {#if items.length === 1}
       <div class="flex border-b border-gray-200 bg-gray-100">
         <div class="flex px-4 pb-2 pt-4">
-          <img src={MultiQCIconSrc} alt="MultiQC Logo" class="my-0 mr-2 h-5 w-5" />
+          <img src="/logos/multiqc_icon_color.svg" alt="MultiQC Logo" class="my-0 mr-2 h-5 w-5" />
           <span class="typo-small -mt-0.5">
             Example Report: {items[0].data.title}
           </span>
@@ -29,7 +28,7 @@
     {:else}
       <div class="flex border-b border-gray-200 bg-gray-100">
         <div class="flex px-4 pb-2 pt-4 lg:w-[250px]">
-          <img src={MultiQCIconSrc} alt="MultiQC Logo" class="mr-2 h-5 w-5" />
+          <img src="/logos/multiqc_icon_color.svg" alt="MultiQC Logo" class="mr-2 h-5 w-5" />
           <span class="typo-small -mt-0.5">Example Reports</span>
         </div>
         <div class="flex pt-2">
