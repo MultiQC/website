@@ -96,22 +96,20 @@ const modules = await getCollection("modules");
             <div class="container-lg py-4">
               <div class="inline flex-row sm:flex">
                 <p class="typo-intro mr-2 grow">
-                  <span class="hidden md:inline">Heads up -</span>
-                  The MultiQC repos have moved!
+                  <span class="hidden md:inline">Just out -</span>
+                  New report plots using Plotly!
                   <span class="hidden md:inline">
-                    <Icon name="mdi:github" class="ml-1 inline h-6 w-6" />
-                    <Icon name="mdi:docker" class="mr-1 inline h-6 w-6" />
-                    🚚 🎄
+                    <Icon name="mdi:chart-box" class="mr-1 inline h-6 w-6" />
                   </span>
                 </p>
                 <Button
-                  to="/docs/development/compatibility/#github-repo-and-docker-images-moved"
+                  to="https://seqera.io/blog/multiqc-plotly/"
                   variant="primary"
                   size="sm"
                   arrow={true}
                   client:visible
                 >
-                  Read more
+                  Read the blog post
                 </Button>
               </div>
             </div>
