@@ -23,6 +23,7 @@
 		"@iconify-json/bi": "^1.1.23",
 		"@iconify-json/logos": "^1.1.42",
 		"@iconify-json/mdi": "^1.1.64",
+		"@netlify/plugin-lighthouse": "^6.0.0",
 		"@prisma/client": "^5.7.1",
 		"@tailwindcss/typography": "^0.5.10",
 		"astro": "^4.1.1",
