@@ -5,7 +5,7 @@ import mqc_releases from "../multiqc_releases.json";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-export const get: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async ({ request }) => {
   let remote_version = "";
 
   // Clean up the supplied version number
