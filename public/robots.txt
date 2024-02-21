@@ -1,4 +1,6 @@
-# I, for one, welcome our new robotic overlords
+User-agent: Algolia Crawler
+Disallow: /examples/
+Disallow: /example-reports/
 
 User-agent: *
 Allow: /

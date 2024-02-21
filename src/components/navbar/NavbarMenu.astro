@@ -1,0 +1,100 @@
+---
+import DarkModeToggle from "@components/DarkModeToggle.svelte";
+import { Icon } from "astro-icon/components";
+
+const location = Astro.url;
+
+export interface Props {
+  navbarItems: {
+    text: string;
+    slug: string;
+  }[];
+}
+
+const { navbarItems } = Astro.props;
+---
+
+<script>
+  const logos = document.getElementsByClassName("logo");
+  if (matchMedia("(pointer:fine)").matches) {
+    for (const logo of logos) {
+      logo.addEventListener(
+        "contextmenu",
+        (event) => {
+          event.preventDefault();
+          window.location.href = "/logos";
+        },
+        { passive: true },
+      );
+    }
+  }
+</script>
+<div class="container-lg hidden h-24 w-full flex-wrap items-center justify-between lg:flex">
+  <a href="/" class="block">
+    <img
+      src="/logos/multiqc_logo_darkbg.svg"
+      class:list={["logo h-8 lg:h-10", { "opacity-0": location.pathname === "/" }]}
+      alt="MultiQC logo"
+    />
+  </a>
+  <div class="hidden items-center lg:flex">
+    {
+      navbarItems.map((page) =>
+        page.items?.length > 0 ? (
+          <div class="relative inline-block">
+            <button
+              class:list={[
+                "peer mx-2 mr-px rounded-sm bg-black bg-opacity-0 px-4 py-1 tracking-wide text-gray-300 hover:text-white",
+                {
+                  "bg-gray-900/30 text-white": page.items
+                    ?.map((subpage) => subpage.slug)
+                    .includes(location.pathname),
+                },
+              ]}
+            >
+              {page.text}
+            </button>
+            <div class="absolute hidden flex-col rounded-sm border border-gray-900 bg-gray-800 hover:flex peer-hover:flex">
+              {page.items?.map((subpage) => (
+                <a
+                  class:list={[
+                    "px-5 py-3 text-gray-300 first:rounded-t-sm last:rounded-b-sm hover:bg-gray-900/30 hover:text-white",
+                    {
+                      "bg-gray-900/30 text-white": location.pathname == subpage.slug,
+                    },
+                  ]}
+                  href={subpage.slug}
+                >
+                  {subpage.text}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={page.slug}
+            class:list={[
+              "mx-2 mr-px rounded-sm bg-black bg-opacity-0 px-4 py-1 tracking-wide hover:text-white",
+              {
+                "text-gray-300":
+                  (!location.pathname.includes(page.slug) && page.slug !== "/") ||
+                  (page.slug === "/" && location.pathname !== "/"),
+                "bg-opacity-30 text-white hover:bg-opacity-50":
+                  (location.pathname.includes(page.slug) && page.slug !== "/") ||
+                  (page.slug === "/" && location.pathname === "/"),
+              },
+            ]}
+          >
+            {page.text}
+          </a>
+        ),
+      )
+    }
+    <a href="https://github.com/MultiQC/MultiQC" class="ml-5" title="MultiQC on GitHub">
+      <Icon name="mdi:github" class="h-6 w-6 text-gray-300 duration-200 hover:text-white" />
+    </a>
+    <div class="ml-5">
+      <DarkModeToggle client:load />
+    </div>
+  </div>
+</div>

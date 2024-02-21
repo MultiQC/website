@@ -1,0 +1,66 @@
+@tailwind utilities;
+
+:root {
+  --docsearch-text-color: theme(colors.gray.500);
+  --docsearch-searchbox-background: theme(colors.gray.200/0.5);
+  --docsearch-searchbox-shadow: inset 0 0 0 1px theme(colors.gray.600);
+  --docsearch-searchbox-focus-background: theme(colors.gray.100);
+}
+html.dark {
+  --docsearch-primary-color: theme(colors.blue.500);
+  --docsearch-text-color: theme(colors.gray.300);
+  --docsearch-searchbox-background: theme(colors.gray.900/0.2);
+  --docsearch-searchbox-focus-background: theme(colors.gray.900/0.8);
+  --docsearch-searchbox-shadow: rgb(0, 0, 0);
+  --docsearch-modal-background: rgb(44, 43, 43);
+  --docsearch-modal-shadow: rgba(0, 0, 0, 0.16);
+  --docsearch-footer-background: rgb(44, 43, 43);
+  --docsearch-footer-shadow: rgba(0, 0, 0, 0.16);
+  --docsearch-hit-color: rgb(198, 199, 201);
+  --docsearch-hit-shadow: rgba(0, 0, 0, 0.16);
+  --docsearch-hit-background: theme(colors.gray.700/0.5);
+  --docsearch-key-gradient: linear-gradient(
+    -225deg,
+    theme(colors.gray.700),
+    theme(colors.gray.800)
+  );
+  --docsearch-key-shadow: inset 0 -2px 0 0 theme(colors.gray.800),
+    inset 0 0 1px 1px theme(colors.gray.600), 0 1px 2px 1px theme(colors.gray.900);
+}
+
+button.DocSearch-Button {
+  @apply mx-0 mb-5 w-full;
+  background: var(--docsearch-searchbox-background);
+  border: 1px solid theme(colors.gray.400);
+  border-radius: theme(borderRadius.sm);
+  box-shadow: none !important;
+}
+html.dark button.DocSearch-Button {
+  border: 1px solid theme(colors.gray.700);
+}
+
+button.DocSearch-Button .DocSearch-Button-Keys {
+  background: theme(colors.gray.300/0.5);
+  border-radius: theme(borderRadius.sm);
+  padding: 0.1rem;
+  margin: 0 0.2rem;
+  min-width: auto;
+}
+html.dark button.DocSearch-Button .DocSearch-Button-Keys {
+  background: theme(colors.gray.700);
+}
+button.DocSearch-Button .DocSearch-Button-Key {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  margin: 0 0.2rem;
+  height: auto;
+  width: auto;
+  line-height: initial;
+  top: inherit;
+  font-size: theme(fontSize.xs);
+  color: theme(colors.gray.500/0.8);
+}
+html.dark button.DocSearch-Button .DocSearch-Button-Key {
+  color: theme(colors.gray.400);
+}

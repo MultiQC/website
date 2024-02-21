@@ -1,0 +1,132 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import CardThin from "@components/CardThin.astro";
+import Spinner from "@components/Spinner.astro";
+import Runner from "@components/run/Runner.svelte";
+import { Icon } from "astro-icon/components";
+---
+
+<PageLayout
+  title="Run MultiQC in your browser"
+  subtitle="✨ Run MultiQC in your browser on local files, with Web Assembly."
+>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js" is:inline></script>
+  <!-- <script src="/run_deps/run.js" type="text/javascript" is:inline></script> -->
+
+  <Runner client:load>
+    <span slot="btn_choose_dir">
+      <Icon name="mdi:folder-search" class="mr-3 h-6 w-6" />
+    </span>
+    <span slot="btn_run_multiQC">
+      <Icon name="mdi:motion-play-outline" class="mr-3 h-6 w-6" />
+    </span>
+    <span slot="btn_open_report">
+      <Icon name="mdi:eye-outline" class="mr-3 h-6 w-6" />
+    </span>
+    <Spinner slot="spinner">Loading MultiQC environment...</Spinner>
+  </Runner>
+  <h2 class="typo-h4 mb-6 mt-12">Frequently Asked Questions</h2>
+
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="mb-8">
+      <CardThin>
+        <h3>What is this?</h3>
+        <p>
+          This is the real MultiQC tool, running in your browser. No installation required, no data
+          uploaded to the internet. Welcome to the future.
+        </p>
+      </CardThin>
+    </div>
+
+    <div class="mb-8">
+      <CardThin>
+        <h3>Who is it for?</h3>
+        <p>
+          This is great for anyone who gets emailed a zip file full of FastQC reports, who wants to
+          quickly summarise them. It's good for running demos and training, and good for anyone who
+          feels a cold sweat when they hear the words <em>"now open the terminal"</em>.
+        </p>
+      </CardThin>
+    </div>
+
+    <div class="mb-8">
+      <CardThin>
+        <h3>What files am I meant to give it?</h3>
+        <p class="mb-3">
+          Feed it analysis outputs from bioinformatics tools <a href="/modules/"
+            >supported by MultiQC</a
+          >. Don't worry about being selective, MultiQC will ignore any files it doesn't recognise
+          (eg. those big BAM files). No data is transferred over the internet, only mounted from
+          your local filesystem. So number and filesize of files shouldn't matter.
+        </p>
+        <p>
+          Note that currently it can only accept a single directory, so put everything you want to
+          run inside that.
+        </p>
+      </CardThin>
+    </div>
+
+    <div class="mb-8">
+      <CardThin>
+        <h3>Do you have any I can try with?</h3>
+        <p>
+          Sure! All of the <a href="/example-reports/">example reports</a> have associated raw data for
+          you to play with. In fact, there's some <a href="/examples/rna-seq/data.zip">right here</a
+          >! Just remember to unzip the file before running with MultiQC.
+        </p>
+      </CardThin>
+    </div>
+
+    <div class="mb-8">
+      <CardThin>
+        <h3>How does it work?</h3>
+        <p class="mb-3">
+          This web page uses a relatively new technology called <a href="https://webassembly.org/"
+            >WebAssembly</a
+          > (Wasm). This builds a virtual machine within your browser, which can run compiled code. If
+          you're familiar with Docker, it's a similar concept.
+        </p>
+        <p>
+          Here, we're using <a href="https://pyodide.org/">Pyodide</a>, a Python distribution built
+          for Wasm. It lets us install packages from the <a href="https://pypi.org/"
+            >Python Package Index</a
+          > (PyPI) and has a robust Javascript interface for interacting with the browser. This lets
+          us install and run MultiQC entirely within the browser Wasm virtual machine without needing
+          any other installation requirements, and without any data transfer to the web.
+        </p>
+      </CardThin>
+    </div>
+
+    <div class="mb-8">
+      <CardThin>
+        <h3>Will this replace the command-line version of MultiQC?</h3>
+        <p class="mb-3">
+          Not at all. Most people run MultiQC in a non-interactive setting, such as a step in an
+          analysis pipeline. That will remain the primary interface to MultiQC.
+        </p><p>
+          This is just a bit of fun which is hopefully helpful for a group of people not comfortable
+          with terminals and CLIs
+        </p>
+      </CardThin>
+    </div>
+
+    <div class="mb-8">
+      <CardThin>
+        <h3>So is my data being uploaded?</h3>
+        <p>
+          No, this is entirely local to your browser. Try turning wifi off after the page has loaded
+          - it should still all work!
+        </p>
+      </CardThin>
+    </div>
+    <div class="mb-8">
+      <CardThin>
+        <h3>I gave it a FastQ file, but it said no files found</h3>
+        <p>
+          That's because MultiQC uses outputs from other analysis tools, it doesn't do the analysis
+          itself. Check out the <a href="/docs/">documentation</a> for more details.
+        </p>
+      </CardThin>
+    </div>
+  </div>
+</PageLayout>

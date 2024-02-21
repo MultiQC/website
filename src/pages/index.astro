@@ -1,7 +1,6 @@
 ---
-export const prerender = true;
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Hero from "@layouts/Hero.astro";
+import Hero from "@components/Hero.astro";
 import ExamplesBrowser from "@components/ExamplesBrowser.svelte";
 import { getCollection } from "astro:content";
 import Button from "@components/Button.svelte";
@@ -9,30 +8,33 @@ import Card from "@components/Card.astro";
 import mqc_releases from "../multiqc_releases.json";
 
 import fs from "node:fs";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
+import ReleasedAgo from "@components/ReleasedAgo.svelte";
 import HomepageVideos from "@components/HomepageVideos.svelte";
 import SnippetBox from "@components/SnippetBox.svelte";
 
-const latestRelease = await fetch("https://api.github.com/repos/ewels/MultiQC/releases/latest")
+const latestRelease = await fetch("https://api.github.com/repos/MultiQC/MultiQC/releases/latest")
   .then((response) => response.json())
   .then((data) => {
     if (!data.tag_name) {
       console.error("Error: Could not fetch latest release from GitHub API.");
       console.warn(data);
-      return "";
+      return mqc_releases;
     } else {
       mqc_releases.latest = data.tag_name;
+      mqc_releases.latest_published_at = data.published_at;
       fs.writeFile("src/multiqc_releases.json", JSON.stringify(mqc_releases), (err) => {
         if (err) {
           console.error("Error writing multiqc_releases file!");
           console.warn(err);
         }
       });
-      return data.tag_name;
+      return mqc_releases;
     }
   });
 
 const exampleReports = await getCollection("example-reports");
+const modules = await getCollection("modules");
 ---
 
 <BaseLayout
@@ -44,30 +46,37 @@ const exampleReports = await getCollection("example-reports");
     <div class="container-lg relative">
       <div class="row">
         <div class="col-full lg:col-8">
-          <div class="mb-10 flex-row items-end items-stretch text-right lg:flex">
+          <div class="mb-10 flex-row items-stretch text-right lg:flex">
             <div>
-              <Icon name="multiqc_logo_light" class="logo w-full cursor-pointer lg:w-[430px]" />
+              <Icon
+                name="multiqc_logo_darkbg"
+                title="MultiQC logo"
+                class="logo h-24 w-[550px] max-w-full cursor-pointer"
+              />
               <a
                 href="https://seqera.io"
                 target="_blank"
-                class="typo-small mt-4 inline-block text-gray-400 transition-colors hover:text-gray-100"
+                class="typo-small group mt-4 inline-block text-gray-400 transition-colors hover:text-gray-100"
               >
                 Supported by <Icon
                   name="seqera-logo-mono"
-                  alt="Seqera Labs logo"
-                  class="ml-2 inline h-6 fill-current"
+                  title="Seqera logo"
+                  class="ml-2 inline h-12 w-28 fill-current opacity-50 transition-opacity group-hover:opacity-100"
                 />
               </a>
             </div>
             <div class="grow pt-6">
               {
                 latestRelease && (
-                  <a
-                    href="https://github.com/ewels/MultiQC/releases"
-                    class="typo-small mb-6 block text-xs text-gray-300 transition-colors hover:text-gray-100"
-                  >
-                    Latest release: <strong class="ml-2">{latestRelease}</strong>
-                  </a>
+                  <>
+                    <a
+                      href="https://github.com/MultiQC/MultiQC/releases"
+                      class="typo-small block text-xs text-gray-300 transition-colors hover:text-gray-100"
+                    >
+                      Latest release: <strong class="ml-2">{latestRelease.latest}</strong>
+                    </a>
+                    <ReleasedAgo released_time={latestRelease.latest_published_at} client:load />
+                  </>
                 )
               }
               <div
@@ -82,29 +91,30 @@ const exampleReports = await getCollection("example-reports");
               </div>
             </div>
           </div>
+
           <div class="rounded-sm bg-gradient-to-r from-pink-300 to-blue-300 text-gray-800">
             <div class="container-lg py-4">
-              <div class="flex flex-row">
-                <p class="typo-intro grow">
-                  We're hiring!
-                  <span class="ml-3 hidden font-normal lg:inline">
-                    Let's build something amazing ✨
+              <div class="inline flex-row sm:flex">
+                <p class="typo-intro mr-2 grow">
+                  <span class="hidden md:inline">Just out -</span>
+                  New report plots using Plotly!
+                  <span class="hidden md:inline">
+                    <Icon name="mdi:chart-box" class="mr-1 inline h-6 w-6" />
                   </span>
                 </p>
                 <Button
-                  to="https://seqera.io/careers/multiqc-software-engineer"
+                  to="https://seqera.io/blog/multiqc-plotly/"
                   variant="primary"
                   size="sm"
-                  classes="ml-2"
                   arrow={true}
                   client:visible
                 >
-                  <span class="lg:hidden">See position</span>
-                  <span class="hidden lg:inline">MultiQC developer</span>
+                  Read the blog post
                 </Button>
               </div>
             </div>
           </div>
+
           <h1 class="typo-h4 mt-8">
             Aggregate results from bioinformatics analyses across many samples into a single report
           </h1>
@@ -157,7 +167,7 @@ const exampleReports = await getCollection("example-reports");
         </div>
         <div class="col-full lg:col-4 mt-4 lg:mt-0">
           <Button
-            to="https://www.github.com/ewels/MultiQC"
+            to="https://www.github.com/MultiQC/MultiQC"
             variant="primary"
             size="md"
             classes="w-full"
@@ -177,26 +187,26 @@ const exampleReports = await getCollection("example-reports");
             </Button>
           </div>
           <div class="mt-5">
+            <Button to="/modules/" variant="primary" size="md" classes="w-full">
+              <Icon name="mdi:hammer-wrench" class="mr-3 h-6 w-6" />
+              {modules.length} supported tools
+            </Button>
+          </div>
+          <div class="mt-5">
             <Button to="/docs/" variant="primary" size="md" classes="w-full">
               <Icon name="mdi:book-open-variant" class="mr-3 h-6 w-6" />
               Documentation
             </Button>
           </div>
           <div class="mt-5">
-            <Button to="/modules/" variant="primary" size="md" classes="w-full">
-              <Icon name="mdi:hammer-wrench" class="mr-3 h-6 w-6" />
-              114 supported tools
-            </Button>
-          </div>
-          <div class="mt-5">
             <Button
-              to="https://join.slack.com/t/multiqc/shared_invite/zt-1ps4q1u5x-2WtAJlZKMzMewURyxAChGA"
+              to="https://community.seqera.io/c/multiqc/6"
               variant="primary"
               size="md"
               classes="w-full"
             >
-              <Icon name="mdi:slack" class="mr-3 h-6 w-6" />
-              Get help on Slack
+              <Icon name="mdi:forum" class="mr-3 h-6 w-6" />
+              Community forum
             </Button>
           </div>
           <div class="mt-5">
@@ -232,7 +242,7 @@ const exampleReports = await getCollection("example-reports");
                   },
                   {
                     title: "docker",
-                    code: "docker run -t -v pwd:pwd -w pwd \\\n    ewels/multiqc .",
+                    code: "docker run -t -v `pwd`:`pwd` -w `pwd` \\\n    multiqc/multiqc multiqc .",
                   },
                 ]}
                 client:idle
@@ -383,7 +393,9 @@ const exampleReports = await getCollection("example-reports");
       </p>
       <p class="typo-blockquote mx-auto mb-3 max-w-5xl">
         See the
-        <a href="/docs/usage/installation" class="typo-link"> installation instructions</a>
+        <a href="/docs/getting_started/installation/" class="typo-link">
+          installation instructions
+        </a>
         for more help.
       </p>
       <div class="mt-5 flex flex-col justify-center md:flex-row lg:mt-10">
@@ -394,7 +406,7 @@ const exampleReports = await getCollection("example-reports");
           </Button>
         </div>
         <div class="mt-4 md:mr-4 md:mt-0">
-          <Button to="https://github.com/ewels/MultiQC/" variant="secondary" size="md">
+          <Button to="https://github.com/MultiQC/MultiQC/" variant="secondary" size="md">
             <Icon name="mdi:github" class="mr-3 h-6 w-6" />
             View on GitHub
           </Button>

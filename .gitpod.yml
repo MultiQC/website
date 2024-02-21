@@ -1,7 +1,7 @@
 # Commands to start on workspace startup
 tasks:
   - name: Setup & Build
-    before: git clone --depth 1 https://github.com/ewels/MultiQC.git ../MultiQC
+    before: git clone --depth 1 https://github.com/MultiQC/MultiQC.git ../MultiQC
     init: npm install
     command: npm run dev
 

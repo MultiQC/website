@@ -1,5 +1,4 @@
 ---
-export const prerender = true;
 import PageLayout from "@layouts/PageLayout.astro";
 import CommunityCard from "@components/CommunityCard.astro";
 ---
@@ -13,22 +12,21 @@ import CommunityCard from "@components/CommunityCard.astro";
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
     <CommunityCard
       title="GitHub"
-      url="https://github.com/ewels/MultiQC"
+      url="https://github.com/MultiQC/MultiQC"
       icon="mdi:github"
       icon_classes="dark:fill-white"
     >
-      Star the <code class="rounded-sm bg-gray-200 px-2 dark:bg-gray-800/50">ewels/MultiQC</code> repository
+      Star the <code class="rounded-sm bg-gray-200 px-2 dark:bg-gray-800/50">MultiQC/MultiQC</code> repository
       and keep track of development. Submit an issue if you find a bug or have a feature request, and
       come here to contribute code.
     </CommunityCard>
     <CommunityCard
-      title="Slack"
-      url="https://join.slack.com/t/multiqc/shared_invite/zt-1ps4q1u5x-2WtAJlZKMzMewURyxAChGA"
-      icon="logos:slack-icon"
+      title="Discourse"
+      url="https://community.seqera.io/c/multiqc/6"
+      icon="discourse-logo"
     >
-      Join the community on Slack. Come here to ask questions, get help, share ideas and discuss
-      features.
-      <em>NB: In development, may change to another platform in the near future.</em>
+      Join the Seqera community forum, with a dedicated category for MultiQC. Come here to ask
+      questions, get help, share ideas and discuss features.
     </CommunityCard>
     <CommunityCard title="Twitter" url="https://twitter.com/MultiQC" icon="logos:twitter">
       Follow <code class="rounded-sm bg-gray-200 px-2 dark:bg-gray-800/50">@MultiQC</code> on twitter

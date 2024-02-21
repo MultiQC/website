@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  links: {
+    url: string;
+    icon: string;
+    text: string;
+  }[];
+}
+
+const { links } = Astro.props;
+---
+
+<h5 class="mb-2 mt-6 text-xs font-semibold">Community</h5>
+<ul class="toc">
+  {
+    links.map((link) => (
+      <li>
+        <a
+          href={link.url}
+          class={
+            "block border-l-2 border-gray-200 px-2 py-1 text-xs " +
+            "hover:border-blue-600 hover:bg-blue-100 hover:text-gray-900 " +
+            "dark:border-gray-700 dark:hover:border-blue-600 dark:hover:bg-blue-600/[0.2] dark:hover:text-gray-300"
+          }
+          title={link.text}
+        >
+          <Icon name={link.icon} class="mr-2 inline-block h-3 w-3" /> {link.text}
+        </a>
+      </li>
+    ))
+  }
+</ul>

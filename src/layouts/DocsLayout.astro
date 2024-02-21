@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Hero from "@layouts/Hero.astro";
+import Hero from "@components/Hero.astro";
 import MarkdownWrapper from "@components/MarkdownWrapper.svelte";
 import FooterPrevNext from "@components/FooterPrevNext.astro";
-import SidebarNav from "@layouts/SidebarNav.astro";
-import SidebarSecondary from "@layouts/SidebarSecondary.astro";
-import CommunityLinks from "@layouts/CommunityLinks.astro";
+import SidebarNav from "@components/sidebars/SidebarNav.astro";
+import SidebarSecondary from "@components/sidebars/SidebarSecondary.astro";
+import CommunityLinks from "@components/CommunityLinks.astro";
 // Fetch the config.yml that has section titles and order of pages
-import docs_nav from "../../../MultiQC/docs/core/config.yaml";
+import docs_nav from "@src/config.yaml";
 
 export interface Props {
   title?: string;
@@ -28,15 +28,13 @@ const community_links = [
     icon: "mdi:lead-pencil",
     text: "Edit this page",
   },
-  /*
   {
-    url: "https://join.slack.com/t/multiqc/shared_invite/zt-1ps4q1u5x-2WtAJlZKMzMewURyxAChGA",
-    icon: "mdi:slack",
-    text: "Slack",
+    url: "https://community.seqera.io/c/multiqc/6",
+    icon: "mdi:forum",
+    text: "Community Forum",
   },
-  */
   {
-    url: "https://github.com/ewels/MultiQC",
+    url: "https://github.com/MultiQC/MultiQC",
     icon: "mdi:github",
     text: "GitHub",
   },
@@ -52,16 +50,19 @@ const community_links = [
   },
 ];
 
-const sections = [];
-let prev_page;
-let next_page;
-let last_page;
+const sections: {
+  section: string;
+  pages: string[][];
+}[] = [];
+let prev_page: string[];
+let next_page: string[];
+let last_page: string[];
 let last_matched = false;
-const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.md");
+const all_docs = await Astro.glob("../../../MultiQC/docs/core/**/*.{md,mdx}");
 docs_nav["nav"].forEach((section) => {
-  let pages = [];
+  let pages: string[] = [];
   Object.values(section)[0].forEach((filename) => {
-    var url = "/docs/" + filename.replace(/\.md$/, "").replace(/index$/, "");
+    var url = "/docs/" + filename.replace(/\.(md|mdx)$/, "").replace(/index$/, "");
     // add trailing slash if Astro.url.pathname has one (true for production, not for dev)
     if (Astro.url.pathname.slice(-1) === "/") {
       url += "/";
@@ -114,7 +115,7 @@ docs_nav["nav"].forEach((section) => {
         <MarkdownWrapper headings={headings} client:load>
           <slot />
         </MarkdownWrapper>
-        <nav class="mt-12 text-gray-600 dark:text-gray-400 lg:hidden">
+        <nav class="mt-12 text-gray-600 lg:hidden dark:text-gray-400">
           <CommunityLinks links={community_links} />
         </nav>
       </main>
@@ -128,3 +129,18 @@ docs_nav["nav"].forEach((section) => {
   </div>
   <FooterPrevNext md_github_url={md_github_url} prev_page={prev_page} next_page={next_page} />
 </BaseLayout>
+
+<!-- Algolia -->
+<script>
+  import docsearch from "@docsearch/js";
+  import "@docsearch/css";
+
+  docsearch({
+    container: "#search",
+    appId: "V0JDBH4NO9",
+    apiKey: "7dbf54c298bba90faba20e714a99550a",
+    indexName: "multiqc",
+  });
+</script>
+
+<!-- End Algolia -->

@@ -1,11 +1,8 @@
 ---
-export const prerender = true;
 import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
 import Card from "@components/Card.astro";
-import { Icon } from "astro-icon";
-import MultiQCLogo from "/logos/multiqc_logo.svg";
-import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
+import { Icon } from "astro-icon/components";
 ---
 
 <PageLayout
@@ -28,8 +25,8 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
 
   <div class="mt-8 grid grid-cols-1 gap-16 lg:mt-24 lg:grid-cols-2 lg:gap-24">
     <Card classes="lg:order-2 py-20" centered>
-      <img src={MultiQCLogo} class="h-24 dark:hidden" />
-      <img src={MultiQCLogoDark} class="hidden h-24 dark:block" />
+      <Icon name="multiqc_logo_color" class="h-24 w-full dark:hidden" />
+      <Icon name="multiqc_logo_darkbg" class="hidden h-24 w-full dark:block" />
     </Card>
     <div class="lg:order-1">
       <h2 class="typo-h3 mb-4">Example MultiQC Plugin</h2>
@@ -101,7 +98,11 @@ import MultiQCLogoDark from "/logos/multiqc_logo_darkbg.svg";
         how such plugins can be written.
       </p>
       <div class="mt-6 flex justify-center md:mt-8 lg:justify-start">
-        <Button to="https://github.com/ewels/MultiQC_NGI" variant="primary" size="md">
+        <Button
+          to="https://github.com/NationalGenomicsInfrastructure/MultiQC_NGI"
+          variant="primary"
+          size="md"
+        >
           <Icon name="mdi:github" class="mr-3 h-6 w-6" />
           View on GitHub
         </Button>

@@ -1,10 +1,11 @@
 ---
-import "../fonts/sf-ui-display/main.css";
-import BaseHead from "@components/BaseHead.astro";
+import "../fonts/degular/main.css";
+import "@fontsource-variable/inter";
+import BaseHead from "@components/Head.astro";
 import "../styles/main.css";
-import Navbar from "./Navbar.astro";
-import CookieBanner from "./CookieBanner.svelte";
-import Footer from "./Footer.astro";
+import Navbar from "@components/navbar/Navbar.astro";
+import CookieBanner from "@components/CookieBanner.svelte";
+import Footer from "@components/Footer.astro";
 
 export interface Props {
   title?: string;
@@ -22,7 +23,7 @@ const {
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <BaseHead title={title} description={subtitle} image={image} />
@@ -71,19 +72,21 @@ const {
           // "Copy code" button in code blocks
           const copyButtonLabel = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"/></svg>`;
           const copiedButtonLabel = `Copied <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7Z"/></svg>`;
-          document.querySelectorAll("pre.astro-code").forEach((block) => {
-            // only add button if browser supports Clipboard API
-            if (navigator.clipboard) {
-              let button = document.createElement("button");
-              button.classList.add("copy-code-button");
-              button.innerHTML = copyButtonLabel;
-              button.title = "Copy code";
-              block.appendChild(button);
-              button.addEventListener("click", async (e) => {
-                await copyCode(block, e.currentTarget);
-              });
-            }
-          });
+          document
+            .querySelectorAll("figure[data-rehype-pretty-code-figure] pre")
+            .forEach((block) => {
+              // only add button if browser supports Clipboard API
+              if (navigator.clipboard) {
+                let button = document.createElement("button");
+                button.classList.add("copy-code-button");
+                button.innerHTML = copyButtonLabel;
+                button.title = "Copy code";
+                block.appendChild(button);
+                button.addEventListener("click", async (e) => {
+                  await copyCode(block, e.currentTarget);
+                });
+              }
+            });
           async function copyCode(block, button) {
             let code = block.querySelector("code").innerText;
             await navigator.clipboard.writeText(code);

@@ -1,9 +1,8 @@
 ---
-export const prerender = true;
 import PageLayout from "@layouts/PageLayout.astro";
 import Button from "@components/Button.svelte";
 import Card from "@components/Card.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <PageLayout
@@ -130,6 +129,9 @@ import { Icon } from "astro-icon";
   }
   .dark .__dimensions_badge_embed__ .__dimensions_Badge_Legend div {
     color: #fff !important;
+  }
+  .dark .__dimensions_badge_embed__ span {
+    filter: brightness(0) invert(1);
   }
   .__dimensions_badge_embed__ .__dimensions_Badge_Legend {
     margin-top: 1rem;

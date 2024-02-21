@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="bg-blue-800 py-16 text-gray-200">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-full">
+        <Icon name="seqera-logo-mono" title="Seqera logo" class="h-6 w-36 fill-white md:h-7" />
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white opacity-40"></div>
+    <div class="row mt-5">
+      <div class="col-full md:col-5 mt-8">
+        <h2 class="typo-h6 text-white">Seqera Labs, S.L.</h2>
+        <div class="row">
+          <div class="col-full md:col-6 mt-4">
+            <p class="typo-small">
+              Carrer de Marià Aguiló, 28 <br />
+              Barcelona, 08005
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-full md:col-6 ml-auto mt-8 flex flex-col">
+        <div class="mb-4 flex md:justify-end">
+          <div class="mr-3">
+            <a href="https://twitter.com/seqeralabs" title="@SeqeraLabs on Twitter">
+              <Icon
+                name="mdi:twitter"
+                class="h-7 w-7 text-gray-200 duration-200 hover:text-white"
+              />
+            </a>
+          </div>
+          <div class="mr-3">
+            <a href="https://github.com/seqeralabs" title="@SeqeraLabs on GitHub">
+              <Icon name="mdi:github" class="h-7 w-7 text-gray-200 duration-200 hover:text-white" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/14065390/" title="Seqera Labs on Twitter">
+              <Icon
+                name="mdi:linkedin"
+                class="h-7 w-7 text-gray-200 duration-200 hover:text-white"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="typo-small mt-auto md:text-right">
+          <small class="typo-small">&copy; Seqera Labs</small> |
+          <a href="https://seqera.io/privacy-policy/" title="Seqera Labs privacy policy"
+            >Privacy Policy</a
+          > |
+          <a
+            href="mailto:info@seqera.io"
+            class="underline decoration-1 underline-offset-[5px] hover:no-underline"
+            title="Seqera Labs: info@seqera.io"
+          >
+            info@seqera.io
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

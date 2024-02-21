@@ -1,12 +1,35 @@
 [build]
   publish = "dist/"
-  command = "git clone --depth 1 https://github.com/ewels/MultiQC.git ../MultiQC && npm run build"
+  command = "git clone --depth 1 https://github.com/MultiQC/MultiQC.git ../MultiQC && npm run build"
 
 [build.environment]
-    NODE_VERSION = "18.14.0"
+    NODE_VERSION = "20.11.0"
 
 [[redirects]]
   from = "/version.php"
   to = "https://api.multiqc.info/version.php"
   status = 301
   force = true
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+[[redirects]]
+  from = "https://multiqc.netlify.app/*"
+  to = "https://multiqc.info/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.io/*"
+  to = "https://multiqc.info/:splat"
+  status = 301
+  force = true
+
+
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  template = "hierarchical"

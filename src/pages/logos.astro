@@ -1,9 +1,8 @@
 ---
-export const prerender = true;
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Hero from "@layouts/Hero.astro";
+import Hero from "@components/Hero.astro";
 import Card from "@components/Card.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <BaseLayout title="MultiQC Logos">
@@ -21,57 +20,41 @@ import { Icon } from "astro-icon";
         <h2 class="typo-h3 mb-4">Introduction</h2>
         <p class="typo-body mb-4">
           The MultiQC logos are available at
-          <a href="https://github.com/MultiQC/logo" class="typo-link"
-            >https://github.com/MultiQC/logo</a
-          >
-          and are included below for convenience. You are free to use the MultiQC logos in any way you
-          wish. They are available under the
-          <a href="https://choosealicense.com/licenses/mit/" class="typo-link">MIT licence</a>.
+          <!-- TODO: LINK TO NEW SEQERA MEDIA PAGE WHEN READY -->
+          <a href="https://seqera.io" class="typo-link">https://seqera.io</a>
+          and are included below for convenience. You are free to use the MultiQC logos when presenting
+          work that uses the tool.
         </p>
         <p class="typo-body mb-4">
           If possible, please try to link back to the main MultiQC website when you use a logo:
           <a href="https://multiqc.info/" class="typo-link">https://multiqc.info/</a>.
         </p>
         <p class="typo-body">
-          Need another variant? Let me know on the
-          <a href="https://gitter.im/ewels/MultiQC" class="typo-link">MultiQC Gitter chat!</a>
+          Need another variant? Let us know on the
+          <a href="https://community.seqera.io/c/multiqc/6" class="typo-link"
+            >MultiQC community forum!</a
+          >
         </p>
       </div>
       <div class="my-12 lg:my-0">
         <h3 class="typo-h3 mb-4">Design Details</h3>
         <dl class="typo-body lg:row mb-4">
-          <dt class="lg:col-3 font-semibold lg:text-right">Font:</dt>
-          <dd class="lg:col-9 mb-4 lg:mb-0">
-            Roboto Medium 500 (available from
-            <a href="https://fonts.google.com/specimen/Roboto" class="typo-link">Google Fonts</a>
-            )
-          </dd>
-          <dt class="lg:col-3 font-semibold lg:text-right">Text Colour:</dt>
+          <dt class="lg:col-3 font-semibold lg:text-right">Brand colour:</dt>
           <dd class="lg:col-9 mb-4 lg:mb-0">
             <span
               class="rounded-sm px-2 py-1 font-mono text-sm text-white"
-              style="background-color:#000000;">#000000</span
+              style="background-color:#F18046;">#F18046</span
             >
           </dd>
-          <dt class="lg:col-3 font-semibold lg:text-right">Colour 1:</dt>
+          <dt class="lg:col-3 font-semibold lg:text-right">Text colour:</dt>
           <dd class="lg:col-9 mb-4 lg:mb-0">
             <span
               class="rounded-sm px-2 py-1 font-mono text-sm text-white"
-              style="background-color:#BE1622;">#BE1622</span
-            >
-          </dd>
-          <dt class="lg:col-3 font-semibold lg:text-right">Colour 2:</dt>
-          <dd class="lg:col-9 mb-4 lg:mb-0">
+              style="background-color:#160F26;">#160F26</span
+            > /
             <span
-              class="rounded-sm px-2 py-1 font-mono text-sm text-white"
-              style="background-color:#009640;">#009640</span
-            >
-          </dd>
-          <dt class="lg:col-3 font-semibold lg:text-right">Colour 3:</dt>
-          <dd class="lg:col-9 mb-4 lg:mb-0">
-            <span
-              class="rounded-sm px-2 py-1 font-mono text-sm text-white"
-              style="background-color:#1D71B8;">#1D71B8</span
+              class="rounded-sm px-2 py-1 font-mono text-sm text-black"
+              style="background-color:#FFFFFF;">#FFFFFF</span
             >
           </dd>
         </dl>
@@ -79,29 +62,23 @@ import { Icon } from "astro-icon";
     </div>
 
     <h3 class="typo-h3 mb-4 mt-16">Logos</h3>
-    <div class="my-8 grid grid-cols-1 gap-12 lg:grid-cols-2">
+    <div class="my-8 grid grid-cols-2 gap-12">
       <Card classes="grid place-items-center bg-gray-200">
-        <img class="max-h-44 w-10/12 p-4" src="../logos/multiqc_logo.svg" alt="MultiQC Logo" />
+        <img class="max-h-44 w-10/12 p-4" src="/logos/multiqc_logo_color.svg" alt="MultiQC Logo" />
       </Card>
       <div>
-        <h3 class="typo-h4 mb-4">MultiQC Logo</h3>
+        <h3 class="typo-h4 mb-4">Colour</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
           <li>
-            <a href="../logos/multiqc_logo.png" class="typo-link-no-underline">
+            <a href="/logos/multiqc_logo_color.png" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               PNG</a
             >
           </li>
           <li class="mt-4">
-            <a href="../logos/multiqc_logo.svg" class="typo-link-no-underline">
+            <a href="/logos/multiqc_logo_color.svg" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               SVG</a
-            >
-          </li>
-          <li class="mt-4">
-            <a href="../logos/multiqc_logo.ai" class="typo-link-no-underline">
-              <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
-              Illustrator</a
             >
           </li>
         </ul>
@@ -109,91 +86,147 @@ import { Icon } from "astro-icon";
       <Card classes="grid place-items-center bg-gray-800">
         <img
           class="max-h-44 w-10/12 p-4"
-          src="../logos/multiqc_logo_darkbg.svg"
+          src="/logos/multiqc_logo_darkbg.svg"
           alt="MultiQC Logo, dark backgrounds"
         />
       </Card>
       <div>
-        <h3 class="typo-h4 mb-4 mr-10">MultiQC Logo (dark background)</h3>
+        <h3 class="typo-h4 mb-4 mr-10">Dark background</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
           <li>
-            <a href="../logos/multiqc_logo_darkbg.png" class="typo-link-no-underline">
+            <a href="/logos/multiqc_logo_darkbg.png" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               PNG</a
             >
           </li>
           <li class="mt-4">
-            <a href="../logos/multiqc_logo_darkbg.svg" class="typo-link-no-underline">
+            <a href="/logos/multiqc_logo_darkbg.svg" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               SVG</a
             >
           </li>
-          <li class="mt-4">
-            <a href="../logos/multiqc_logo_darkbg.ai" class="typo-link-no-underline">
+        </ul>
+      </div>
+      <Card classes="grid place-items-center bg-gray-200">
+        <img
+          class="max-h-44 w-10/12 p-4"
+          src="/logos/multiqc_logo_dark.svg"
+          alt="MultiQC Logo, dark backgrounds"
+        />
+      </Card>
+      <div>
+        <h3 class="typo-h4 mb-4 mr-10">Dark</h3>
+        <ul class="typo-body text-blue-600 dark:text-blue-400">
+          <li>
+            <a href="/logos/multiqc_logo_dark.png" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
-              Illustrator</a
+              PNG</a
+            >
+          </li>
+          <li class="mt-4">
+            <a href="/logos/multiqc_logo_dark.svg" class="typo-link-no-underline">
+              <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
+              SVG</a
+            >
+          </li>
+        </ul>
+      </div>
+      <Card classes="grid place-items-center bg-gray-800">
+        <img
+          class="max-h-44 w-10/12 p-4"
+          src="/logos/multiqc_logo_white.svg"
+          alt="MultiQC Logo, dark backgrounds"
+        />
+      </Card>
+      <div>
+        <h3 class="typo-h4 mb-4 mr-10">White</h3>
+        <ul class="typo-body text-blue-600 dark:text-blue-400">
+          <li>
+            <a href="/logos/multiqc_logo_white.png" class="typo-link-no-underline">
+              <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
+              PNG</a
+            >
+          </li>
+          <li class="mt-4">
+            <a href="/logos/multiqc_logo_white.svg" class="typo-link-no-underline">
+              <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
+              SVG</a
             >
           </li>
         </ul>
       </div>
     </div>
-    <div class="my-8 grid grid-cols-1 gap-8 lg:grid-cols-4">
+
+    <h3 class="typo-h3 mb-4 mr-16">Icons</h3>
+    <div class="my-8 grid grid-cols-2 gap-8 lg:grid-cols-6">
       <Card classes="grid place-items-center bg-gray-200">
         <img
-          class="max-h-44 w-10/12 p-4"
-          src="../logos/multiqc_logo_square.svg"
-          alt="MultiQC Square Thumbnail"
+          class="max-h-44 w-10/12"
+          src="/logos/multiqc_icon_color.svg"
+          alt="MultiQC Circle Thumbnail"
         />
       </Card>
       <div>
-        <h3 class="typo-h4 mb-4 mr-10">MultiQC Square Thumb</h3>
+        <h3 class="typo-h4 mb-4 mr-10">Colour</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
           <li>
-            <a href="../logos/multiqc_logo_square.png" class="typo-link-no-underline">
+            <a href="/logos/multiqc_icon_color.png" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               PNG</a
             >
           </li>
           <li class="mt-4">
-            <a href="../logos/multiqc_logo_square.svg" class="typo-link-no-underline">
+            <a href="/logos/multiqc_icon_color.svg" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               SVG</a
-            >
-          </li>
-          <li class="mt-4">
-            <a href="../logos/multiqc_logo_square.ai" class="typo-link-no-underline">
-              <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
-              Illustrator</a
             >
           </li>
         </ul>
       </div>
       <Card classes="grid place-items-center bg-gray-200">
         <img
-          class="max-h-44 w-10/12 p-4"
-          src="../logos/multiqc_logo_circle.svg"
+          class="max-h-44 w-10/12"
+          src="/logos/multiqc_icon_dark.svg"
           alt="MultiQC Circle Thumbnail"
         />
       </Card>
       <div>
-        <h3 class="typo-h4 mb-4 mr-10">MultiQC Circle Thumb</h3>
+        <h3 class="typo-h4 mb-4 mr-10">Dark</h3>
         <ul class="typo-body text-blue-600 dark:text-blue-400">
           <li>
-            <a href="../logos/multiqc_logo_circle.png" class="typo-link-no-underline">
+            <a href="/logos/multiqc_icon_dark.png" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               PNG</a
             >
           </li>
           <li class="mt-4">
-            <a href="../logos/multiqc_logo_circle.svg" class="typo-link-no-underline">
+            <a href="/logos/multiqc_icon_dark.svg" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
               SVG</a
             >
           </li>
-          <li class="mt-4">
-            <a href="../logos/multiqc_logo_circle.ai" class="typo-link-no-underline">
+        </ul>
+      </div>
+      <Card classes="grid place-items-center bg-gray-800">
+        <img
+          class="max-h-44 w-10/12"
+          src="/logos/multiqc_icon_white.svg"
+          alt="MultiQC Circle Thumbnail"
+        />
+      </Card>
+      <div>
+        <h3 class="typo-h4 mb-4 mr-10">White</h3>
+        <ul class="typo-body text-blue-600 dark:text-blue-400">
+          <li>
+            <a href="/logos/multiqc_icon_white.png" class="typo-link-no-underline">
               <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
-              Illustrator</a
+              PNG</a
+            >
+          </li>
+          <li class="mt-4">
+            <a href="/logos/multiqc_icon_white.svg" class="typo-link-no-underline">
+              <Icon class="-mt-1 mr-2.5 inline h-6 w-6" name="mdi:arrow-down-bold-circle-outline" />
+              SVG</a
             >
           </li>
         </ul>

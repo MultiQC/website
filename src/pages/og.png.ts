@@ -1,3 +1,4 @@
+export const prerender = false;
 // @ts-ignore: no types
 import sharp from "sharp";
 // @ts-ignore: no types
