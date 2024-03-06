@@ -17,8 +17,8 @@ async function loadAndRunPython() {
     const response = await fetch(`https://pypi.org/pypi/multiqc/json`);
     const packageData = await response.json();
     let dependencies = packageData.info["requires_dist"];
-    // And excluding 'kaleido':
-    dependencies = dependencies.filter(dep => !dep.includes("kaleido"));
+    // And excluding 'kaleido' (and 'Pillow', also needed only for flat plot export)
+    dependencies = dependencies.filter(dep => !dep.includes("kaleido") && !dep.includes("Pillow"));
     // Removing all "extras" dependencies:
     dependencies = dependencies.filter(dep => !dep.includes("; extra =="));
     // Removing any other possible environment markers:
