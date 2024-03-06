@@ -28,12 +28,12 @@ async function loadAndRunPython() {
       console.log("Installing " + dep);
       await micropip.install(dep);
     }
-    // Finally, installing 'multiqc' without automatically pulling its dependencies
-    console.log(pyodide.runPython(`
-import micropip
-micropip.install("multiqc", deps=False)
-    `));
-    console.log("multiqc installed successfully");
+    // Finally, installing 'multiqc' without dependencies
+    self.pyodide.runPython(`
+      import micropip
+      micropip.install('multiqc', deps=False)
+      print('multiqc installed successfully')
+    `)
     postMessage({ type: "status", status: "ready" });
 
   } catch (error) {
