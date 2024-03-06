@@ -41,6 +41,8 @@
     }
     pyodideWorker.postMessage({
       code: `
+import micropip
+await micropip.install('multiqc', deps=False)
 import multiqc
 multiqc.run('/data', no_ansi=True, force=True)
         `,
