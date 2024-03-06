@@ -25,11 +25,14 @@ async function loadAndRunPython() {
     dependencies = dependencies.map(dep => dep.split(";")[0].trim());
     // And installing the remaining dependencies one by one:
     for (const dep of dependencies) {
-        await micropip.install(dep);
-      console.log(dep + " installed successfully");
+      console.log("Installing " + dep);
+      await micropip.install(dep);
     }
     // Finally, installing 'multiqc' without automatically pulling its dependencies
-    await micropip.install("multiqc", deps=false);
+    console.log(pyodide.runPython(`
+import micropip
+micropip.install("multiqc", deps=False)
+    `));
     console.log("multiqc installed successfully");
     postMessage({ type: "status", status: "ready" });
 
