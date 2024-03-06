@@ -20,7 +20,7 @@ async function loadAndRunPython() {
     // Remove any environment markers or version specifiers for simplicity
     dependencies = dependencies.map(dep => dep.split(";")[0].trim().split(" ")[0]);
     // Now, exclude 'kaleido'
-    let dependencies = dependencies.filter(dep => !dep.includes("kaleido"));
+    dependencies = dependencies.filter(dep => !dep.includes("kaleido"));
     // And install the remaining dependencies one by one:
     for (const dep of dependencies) {
         await micropip.install(dep);
