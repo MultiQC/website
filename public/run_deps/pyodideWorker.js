@@ -30,9 +30,12 @@ async function loadAndRunPython() {
     }
     // Finally, installing 'multiqc' without dependencies
     self.pyodide.runPython(`
-      import micropip
-      await micropip.install('multiqc', deps=False)
-      print('multiqc installed successfully')
+import asyncio
+import micropip
+async def main():
+  await micropip.install('multiqc', deps=False)
+asyncio.run(main())
+print('multiqc installed successfully')
     `)
     postMessage({ type: "status", status: "ready" });
 
