@@ -11,22 +11,24 @@ async function loadAndRunPython() {
     console.log("spectra installed successfully");
 
     // Now we want to install multiqc with all other dependencies _except_ kaleido,
-    // which is not needed for the browser-based setup, and it doesn't have platform-
-    // agnostic wheels. So fetching the dependency list from PyPI:
-    const packageName = "multiqc";
-    const response = await fetch(`https://pypi.org/pypi/${packageName}/json`);
+    // which is not needed for the browser-based setup, and it doesn't have 
+    // platform-agnostic wheels. 
+    // As a workaround, manually fetching the dependency list from PyPI:
+    const response = await fetch(`https://pypi.org/pypi/multiqc/json`);
     const packageData = await response.json();
-    let dependencies = packageData.info.requires_dist;
-    // Remove any environment markers or version specifiers for simplicity
-    dependencies = dependencies.map(dep => dep.split(";")[0].trim().split(" ")[0]);
-    // Now, exclude 'kaleido'
+    let dependencies = packageData.info["requires_dist"];
+    // And excluding 'kaleido':
     dependencies = dependencies.filter(dep => !dep.includes("kaleido"));
-    // And install the remaining dependencies one by one:
+    // Removing all "extras" dependencies:
+    dependencies = dependencies.filter(dep => !dep.includes("; extra =="));
+    // Removing any other possible environment markers:
+    dependencies = dependencies.map(dep => dep.split(";")[0].trim());
+    // And installing the remaining dependencies one by one:
     for (const dep of dependencies) {
         await micropip.install(dep);
       console.log(dep + " installed successfully");
     }
-    // Finally, install 'multiqc' without automatically pulling its dependencies
+    // Finally, installing 'multiqc' without automatically pulling its dependencies
     await micropip.install("multiqc", deps=false);
     console.log("multiqc installed successfully");
     postMessage({ type: "status", status: "ready" });
