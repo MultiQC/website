@@ -9,9 +9,34 @@ async function loadAndRunPython() {
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
     console.log("spectra installed successfully");
-    await micropip.install("multiqc");
-    console.log("multiqc installed successfully");
+
+    // Now we want to install multiqc with all other dependencies _except_ kaleido,
+    // which is not needed for the browser-based setup, and it doesn't have 
+    // platform-agnostic wheels. 
+    // As a workaround, manually fetching the dependency list from PyPI:
+    const response = await fetch(`https://pypi.org/pypi/multiqc/json`);
+    const packageData = await response.json();
+    let dependencies = packageData.info["requires_dist"];
+    // And excluding 'kaleido' (and 'Pillow', also needed only for flat plot export)
+    dependencies = dependencies.filter(dep => !dep.includes("kaleido") && !dep.includes("Pillow"));
+    // Removing all "extras" dependencies:
+    dependencies = dependencies.filter(dep => !dep.includes("; extra =="));
+    // Removing any other possible environment markers:
+    dependencies = dependencies.map(dep => dep.split(";")[0].trim());
+    // And installing the remaining dependencies one by one:
+    for (const dep of dependencies) {
+      console.log("Installing " + dep);
+      await micropip.install(dep);
+    }
+    // Finally, installing 'multiqc' without dependencies
+    await self.pyodide.runPythonAsync(`
+import asyncio
+import micropip
+await micropip.install('multiqc', deps=False)
+print('multiqc installed successfully')
+    `)
     postMessage({ type: "status", status: "ready" });
+
   } catch (error) {
     console.error(error);
     postMessage({ type: "status", status: "error", error: error.message });
