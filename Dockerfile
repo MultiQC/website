@@ -9,7 +9,6 @@
 
 FROM node:lts-alpine AS runtime
 RUN apk add --no-cache git chromium
-RUN apt install chromium-browser
 WORKDIR /app
 
 # Copy the website files into the current directory
