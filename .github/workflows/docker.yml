@@ -3,6 +3,7 @@ name: Build website docker image
 on:
   push:
     branches: [main]
+  pull_request:
 
 jobs:
   astro_docker:
@@ -36,5 +37,5 @@ jobs:
           # platforms: linux/amd64, linux/arm/v6, linux/arm/v7, linux/arm64/v8, linux/ppc64le, linux/s390x
           # But 32-bit binaries likely require compilation from source so stick with linux/amd64 and linux/arm64 for now
           platforms: linux/amd64,linux/arm64
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ghcr.io/multiqc/website:latest
