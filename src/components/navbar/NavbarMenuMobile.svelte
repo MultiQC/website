@@ -26,6 +26,7 @@
   }[];
   export let navbarItems: {
     text: string;
+    text_sm?: string;
     slug: string;
   }[];
   export let location: URL;
@@ -97,7 +98,7 @@
                 (page.slug === "/" && location.pathname !== "/")}
             >
               {page.text}
-              {@html page.slug.startsWith("http") && icon_external_link}
+              {@html page.slug.startsWith("http") ? icon_external_link : ""}
             </a>
           {/if}
         {/each}

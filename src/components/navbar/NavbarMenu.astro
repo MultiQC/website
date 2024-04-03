@@ -7,6 +7,7 @@ const location = Astro.url;
 export interface Props {
   navbarItems: {
     text: string;
+    text_sm?: string;
     slug: string;
   }[];
 }
@@ -87,7 +88,13 @@ const { navbarItems } = Astro.props;
               },
             ]}
           >
-            {page.text}
+            {page.text_sm && (
+              <>
+                <span class="lg:hidden xl:inline">{page.text}</span>
+                <span class="hidden lg:inline xl:hidden">{page.text_sm}</span>
+              </>
+            )}
+            {!page.text_sm && page.text}
             {page.slug.startsWith("http") && (
               <Icon name="mdi:external-link" class="ml-1 inline-block h-3 w-3" />
             )}
