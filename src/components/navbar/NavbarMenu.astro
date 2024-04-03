@@ -7,6 +7,7 @@ const location = Astro.url;
 export interface Props {
   navbarItems: {
     text: string;
+    text_sm?: string;
     slug: string;
   }[];
 }
@@ -53,6 +54,7 @@ const { navbarItems } = Astro.props;
               ]}
             >
               {page.text}
+              <Icon name="mdi:caret-down" class="inline-block h-5 w-5" />
             </button>
             <div class="absolute hidden flex-col rounded-sm border border-gray-900 bg-gray-800 hover:flex peer-hover:flex">
               {page.items?.map((subpage) => (
@@ -73,6 +75,7 @@ const { navbarItems } = Astro.props;
         ) : (
           <a
             href={page.slug}
+            target={page.slug.startsWith("http") ? "_blank" : "_self"}
             class:list={[
               "mx-2 mr-px rounded-sm bg-black bg-opacity-0 px-4 py-1 tracking-wide hover:text-white",
               {
@@ -85,7 +88,16 @@ const { navbarItems } = Astro.props;
               },
             ]}
           >
-            {page.text}
+            {page.text_sm && (
+              <>
+                <span class="lg:hidden xl:inline">{page.text}</span>
+                <span class="hidden lg:inline xl:hidden">{page.text_sm}</span>
+              </>
+            )}
+            {!page.text_sm && page.text}
+            {page.slug.startsWith("http") && (
+              <Icon name="mdi:external-link" class="ml-1 inline-block h-3 w-3" />
+            )}
           </a>
         ),
       )

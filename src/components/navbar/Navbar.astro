@@ -25,20 +25,20 @@ export interface Props {
 }
 
 const navPages = [
-  { slug: "/", text: "Home" },
+  { slug: "/docs/", text: "Documentation", text_sm: "Docs" },
   { slug: "/example-reports/", text: "Examples" },
-  { slug: "/run/", text: "Run" },
-  { slug: "/modules/", text: "Supported Tools" },
-  { slug: "/docs/", text: "Docs" },
+  { slug: "/modules/", text: "Supported Tools", text_sm: "Tools" },
   {
-    text: "About",
+    text: "Resources",
     items: [
+      { slug: "/run/", text: "Run" },
       { slug: "/plugins/", text: "Plugins" },
       { slug: "/community/", text: "Community" },
       { slug: "/logos/", text: "Logo" },
       { slug: "/citation/", text: "Citation" },
     ],
   },
+  { slug: "https://community.seqera.io/c/multiqc/6", text: "Forums" },
 ];
 
 const { title, headings = [], navbarItems = navPages } = Astro.props;

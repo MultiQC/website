@@ -17,6 +17,7 @@
   });
 
   const icon_mdi_menu = `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="h-8 w-8 iconify iconify--mdi" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>`;
+  const icon_external_link = `<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1 inline-block" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg>`;
 
   export let headings: {
     text: string;
@@ -25,6 +26,7 @@
   }[];
   export let navbarItems: {
     text: string;
+    text_sm?: string;
     slug: string;
   }[];
   export let location: URL;
@@ -87,6 +89,7 @@
           {:else}
             <a
               href={page.slug}
+              target={page.slug.startsWith("http") ? "_blank" : "_self"}
               class="typo-intro mt-1 block rounded-sm bg-black bg-opacity-0 py-2 text-gray-100"
               class:bg-opacity-30={(location.pathname.includes(page.slug) && page.slug !== "/") ||
                 (page.slug === "/" && location.pathname === "/")}
@@ -94,8 +97,9 @@
                 page.slug !== "/") ||
                 (page.slug === "/" && location.pathname !== "/")}
             >
-              {page.text}</a
-            >
+              {page.text}
+              {@html page.slug.startsWith("http") ? icon_external_link : ""}
+            </a>
           {/if}
         {/each}
         <div class="mt-4">
