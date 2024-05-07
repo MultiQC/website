@@ -1,5 +1,5 @@
 ---
-title: Jupyter
+title: Jupyter Notebook
 description: Example of interactive MultiQC usage in a Jupyter notebook.
 type: Analysis Types
 embed: /examples/jupyter/notebook.html
