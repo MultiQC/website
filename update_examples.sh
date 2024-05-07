@@ -8,10 +8,10 @@ for i in "public/examples/${dirs[@]}"; do
     echo "--------------------------------------------------"
     cd $i
     rm -rf multiqc_report.html multiqc_report.zip multiqc_data
-    unzip data.zip
+    unzip -q data.zip
     multiqc . --disable-ngi -t default
-    zip -r multiqc_report.zip multiqc_report.html multiqc_data
-    rm -r data/ multiqc_data/ __MACOSX/
+    zip -q -r multiqc_report.zip multiqc_report.html multiqc_data
+    rm -r data/ multiqc_data/
     cd ../
 done
 
@@ -20,12 +20,33 @@ echo "Creating report for ngi-rna"
 echo "--------------------------------------------------"
 cd ngi-rna
 rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
-unzip data.zip
+unzip -q data.zip
 multiqc . --test-db ngi_db_data.json
 # plugin changed the name of the report, don't want to break links
 mv test_ngi_project_pipeline_multiqc_report.html test_ngi_project_multiqc_report.html
-zip -r multiqc_report.zip *multiqc_report.html *multiqc_data
-rm -r data/ test_ngi_project_multiqc_data/ __MACOSX/
+zip -q -r multiqc_report.zip *multiqc_report.html *multiqc_data
+rm -r data/ test_ngi_project_multiqc_data/
+cd ../
+
+echo "--------------------------------------------------"
+echo "Creating Jupyter example"
+echo "--------------------------------------------------"
+cd jupyter
+rm -rf multiqc_report.zip multiqc_report.html multiqc_report_data
+# Get the notebook from a separate repo
+wget https://github.com/MultiQC/example-notebook/raw/master/multiqc_example.ipynb -O notebook.ipynb
+# Hack the notebook a bit:
+# 1. We don't need to re-install MultiQC as it's in our environment
+sed -i '' 's/\%pip install/\# \%pip install/g' notebook.ipynb  # remove the pip install command
+sed -i '' 's/\%reset/\# \%reset/g' notebook.ipynb  # remove the kernel restart command
+# 2. GitHub doesn't render interactive plots, but the website does
+sed -i '' 's/, flat=True//g' notebook.ipynb  # remove the flat=True parameter
+sed -i '' '/flat=True/d' notebook.ipynb  # remove the explanation about flat=True
+unzip -q data.zip
+jupyter execute notebook.ipynb --inplace  # Run the notebook
+jupyter nbconvert --to html notebook.ipynb  # Convert it to HTML
+zip -q -r multiqc_report.zip notebook.ipynb multiqc_report.html multiqc_report_data
+rm -r data/ multiqc_report_data/ notebook.ipynb
 cd ../
 
 echo "--------------------------------------------------"
