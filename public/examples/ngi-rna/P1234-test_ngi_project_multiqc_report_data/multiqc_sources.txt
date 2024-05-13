@@ -1,6 +1,4 @@
 Module	Section	Sample Name	Source
-Snippy	snippy	multiqc	/Users/vlad/git/website/public/examples/ngi-rna/test_ngi_project_multiqc_data_2/multiqc.log
-Snippy	snippy	multiqc_sources	/Users/vlad/git/website/public/examples/ngi-rna/test_ngi_project_multiqc_data_3/multiqc_sources.txt
 STAR	SummaryLog	P1234_1021	/Users/vlad/git/website/public/examples/ngi-rna/data/STAR/P1234_1021Log.final.out
 STAR	SummaryLog	P1234_1002	/Users/vlad/git/website/public/examples/ngi-rna/data/STAR/P1234_1002Log.final.out
 STAR	SummaryLog	P1234_1005	/Users/vlad/git/website/public/examples/ngi-rna/data/STAR/P1234_1005Log.final.out
