@@ -23,9 +23,9 @@ rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
 unzip -q data.zip
 multiqc . --test-db ngi_db_data.json
 # plugin changed the name of the report, don't want to break links
-mv test_ngi_project_pipeline_multiqc_report.html test_ngi_project_multiqc_report.html
-zip -q -r multiqc_report.zip *multiqc_report.html *multiqc_data
-rm -r data/ test_ngi_project_multiqc_data/
+mv P1234-test_ngi_project_multiqc_report.html test_ngi_project_multiqc_report.html
+zip -q -r multiqc_report.zip *multiqc_report.html *multiqc_report_data
+rm -r data/ *multiqc_report_data
 cd ../
 
 echo "--------------------------------------------------"
