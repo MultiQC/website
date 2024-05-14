@@ -4,7 +4,7 @@ extra_fn_clean_exts:
     - '_1.'
     - '_2.'
 report_section_order:
-    ngi-rnaseq:
+    ngi-rnaseq-module:
         order: -1000
 swedac_accredited: true
 swedac_location: stockholm
