@@ -20,7 +20,7 @@ echo "--------------------------------------------------"
 echo "Creating report for ngi-rna"
 echo "--------------------------------------------------"
 cd public/examples/ngi-rna
-rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
+rm -rf *multiqc_report.html multiqc_report.zip *multiqc_report_data
 unzip -q data.zip
 multiqc . --test-db ngi_db_data.json
 # plugin changed the name of the report, don't want to break links
