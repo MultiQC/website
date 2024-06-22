@@ -50,7 +50,7 @@ sed -i '' 's/\# \%pip install/\%pip install/g' notebook.ipynb  # remove the pip 
 sed -i '' 's/\# \%reset/\%reset/g' notebook.ipynb  # remove the kernel restart command
 jupyter nbconvert --to html notebook.ipynb  # Convert it to HTML
 zip -q -r multiqc_report.zip notebook.ipynb multiqc_report.html multiqc_report_data
-rm -r data/ multiqc_report_data/ notebook.ipynb gc_content.*
+rm -r data/ multiqc_report_data/ notebook.ipynb
 cd ../
 
 echo "--------------------------------------------------"
