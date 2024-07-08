@@ -22,7 +22,9 @@ echo "--------------------------------------------------"
 cd public/examples/ngi-rna
 rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
 unzip -q data.zip
+pip install git+https://github.com/vladsavelyev/MultiQC_NGI
 multiqc . --test-db ngi_db_data.json
+pip uninstall -y multiqc_ngi
 # plugin changed the name of the report, don't want to break links
 mv P1234-test_ngi_project_multiqc_report.html test_ngi_project_multiqc_report.html
 zip -q -r multiqc_report.zip *multiqc_report.html *multiqc_report_data
