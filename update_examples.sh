@@ -9,7 +9,7 @@ for i in "public/examples/${dirs[@]}"; do
     cd $i
     rm -rf multiqc_report.html multiqc_report.zip multiqc_data
     unzip -q data.zip
-    multiqc . --disable-ngi -t default
+    multiqc .
     zip -q -r multiqc_report.zip multiqc_report.html multiqc_data
     rm -r data/ multiqc_data/
     cd ../
