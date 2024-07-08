@@ -46,8 +46,8 @@ sed -i '' 's/(flat=True)/()/g' notebook.ipynb  # remove the flat=True parameters
 sed -i '' '/The rendered plot is a static image/d' notebook.ipynb  # remove the explanation about flat=True
 unzip -q data.zip
 jupyter execute notebook.ipynb --inplace  # Run the notebook
-sed -i '' 's/\# \%pip install/\%pip install/g' notebook.ipynb  # remove the pip install command
-sed -i '' 's/\# \%reset/\%reset/g' notebook.ipynb  # remove the kernel restart command
+sed -i '' 's/\# \%pip install/\%pip install/g' notebook.ipynb  # re-add the pip install command back
+sed -i '' 's/\# \%reset/\%reset/g' notebook.ipynb  # re-add the kernel restart command back
 jupyter nbconvert --to html notebook.ipynb  # Convert it to HTML
 zip -q -r multiqc_report.zip notebook.ipynb multiqc_report.html multiqc_report_data
 rm -r data/ multiqc_report_data/ notebook.ipynb gc_content.*
