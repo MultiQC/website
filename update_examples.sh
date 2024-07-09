@@ -9,7 +9,7 @@ for i in "public/examples/${dirs[@]}"; do
     cd $i
     rm -rf multiqc_report.html multiqc_report.zip multiqc_data
     unzip -q data.zip
-    multiqc . --disable-ngi -t default
+    multiqc .
     zip -q -r multiqc_report.zip multiqc_report.html multiqc_data
     rm -r data/ multiqc_data/
     cd ../
@@ -20,13 +20,15 @@ echo "--------------------------------------------------"
 echo "Creating report for ngi-rna"
 echo "--------------------------------------------------"
 cd public/examples/ngi-rna
-rm -rf *multiqc_report.html multiqc_report.zip *_multiqc_report_data
+rm -rf *multiqc_report.html multiqc_report.zip *multiqc_data
 unzip -q data.zip
+pip install git+https://github.com/vladsavelyev/MultiQC_NGI
 multiqc . --test-db ngi_db_data.json
+pip uninstall -y multiqc_ngi
 # plugin changed the name of the report, don't want to break links
 mv P1234-test_ngi_project_multiqc_report.html test_ngi_project_multiqc_report.html
-zip -q -r multiqc_report.zip *multiqc_report.html *_multiqc_report_data
-rm -r data/ *_multiqc_report_data
+zip -q -r multiqc_report.zip *multiqc_report.html *multiqc_report_data
+rm -r data/ *multiqc_report_data
 cd ../
 
 echo "--------------------------------------------------"
@@ -46,8 +48,8 @@ sed -i '' 's/(flat=True)/()/g' notebook.ipynb  # remove the flat=True parameters
 sed -i '' '/The rendered plot is a static image/d' notebook.ipynb  # remove the explanation about flat=True
 unzip -q data.zip
 jupyter execute notebook.ipynb --inplace  # Run the notebook
-sed -i '' 's/\# \%pip install/\%pip install/g' notebook.ipynb  # remove the pip install command
-sed -i '' 's/\# \%reset/\%reset/g' notebook.ipynb  # remove the kernel restart command
+sed -i '' 's/\# \%pip install/\%pip install/g' notebook.ipynb  # re-add the pip install command back
+sed -i '' 's/\# \%reset/\%reset/g' notebook.ipynb  # re-add the kernel restart command back
 jupyter nbconvert --to html notebook.ipynb  # Convert it to HTML
 zip -q -r multiqc_report.zip notebook.ipynb multiqc_report.html multiqc_report_data
 rm -r data/ multiqc_report_data/ notebook.ipynb gc_content.*
