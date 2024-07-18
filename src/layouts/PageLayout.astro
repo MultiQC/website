@@ -25,7 +25,11 @@ const { title, subtitle, extra_subtitle, section, image } = Astro.props;
       <h1 class="typo-h2">{title}</h1>
       {section && <h5 class="typo-h5 mb-4 uppercase text-blue-400/80">{section}</h5>}
       <p class="typo-blockquote mt-4 lg:mt-8">{subtitle}</p>
-      {extra_subtitle && <p class="typo-blockquote mt-4 text-sm lg:mt-8">{extra_subtitle}</p>}
+      {
+        extra_subtitle && (
+          <p class="mt-2 text-xs font-light text-gray-200 lg:mt-6">{extra_subtitle}</p>
+        )
+      }
     </div>
   </Hero>
   <div class="container-lg py-10 lg:py-20">
