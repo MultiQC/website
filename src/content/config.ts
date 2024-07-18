@@ -26,8 +26,9 @@ const modulesCollection = defineCollection({
   type: "content",
   schema: z.object({
     name: z.string(),
-    url: z.string().url(),
-    description: z.string(),
+    urls: z.array(z.string().url()),
+    summary: z.string(),
+    extra_description: z.string().optional(),
   }),
 });
 
