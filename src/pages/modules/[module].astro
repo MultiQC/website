@@ -5,7 +5,6 @@ import { parse, stringify } from "yaml";
 import { Icon } from "astro-icon/components";
 import Button from "@components/Button.svelte";
 import { getCollection } from "astro:content";
-import search_patterns from "@src/search_patterns.yaml";
 
 export async function getStaticPaths() {
   const modules = await getCollection("modules");
@@ -17,24 +16,15 @@ export async function getStaticPaths() {
     props: {
       module: module,
       frontmatter: module.data,
-      search_patterns: search_patterns,
     },
   }));
 }
 
-const { module, frontmatter, search_patterns } = Astro.props;
+const { module, frontmatter } = Astro.props;
 
 const { headings, Content, remarkPluginFrontmatter } = await module.render();
 const gh_url =
   "https://github.com/MultiQC/MultiQC/blob/main/docs/modules/" + module.id.split("/").pop();
-
-// Filter search_patterns to only include keys containing key string
-const module_search_patterns = Object.keys(search_patterns)
-  .filter((key) => key.includes(module.id.split("/").pop().replace(".md", "")))
-  .reduce((obj, key) => {
-    obj[key] = search_patterns[key];
-    return obj;
-  }, {});
 ---
 
 <PageLayout
@@ -49,17 +39,6 @@ const module_search_patterns = Object.keys(search_patterns)
         frontmatter.name,
       )}`}
 >
-  <div class="prose max-w-none dark:prose-invert">
-    <Content />
-    {
-      Object.keys(module_search_patterns).length > 0 && (
-        <>
-          <h2 id="module-search-patterns">File search patterns</h2>
-          <Code code={stringify(module_search_patterns, null, 2)} lang="yaml" />
-        </>
-      )
-    }
-  </div>
   <div class="text-center">
     <Button to="/modules" variant="secondary" size="sm" classes="mt-12">
       <Icon name="mdi:arrow-left" class="-ml-1 mr-2 h-4 w-4" />
