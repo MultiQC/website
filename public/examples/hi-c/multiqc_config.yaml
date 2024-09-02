@@ -1,4 +1,19 @@
-extra_fn_clean_exts:
-    - .C8DRAANXX
-    - .C8LFMANXX
-    - .C8H0KANXX
+extra_fn_clean_trim:
+  - ".r_1_2"
+  - ".s_1"
+  - ".s_2"
+  - ".s_3"
+  - ".C8DRAANXX"
+  - ".C8LFMANXX"
+  - ".C8H0KANXX"
+
+# Search patterns for grouping paired samples in general stats (e.g. FastQ R1/R2)
+# Affects the modules that support it (e.g. fastqc, fastp)
+sample_merge_groups:
+  read_pairs:
+    "Read 1":
+      - type: remove
+        pattern: ".r_1"
+    "Read 2":
+      - type: remove
+        pattern: ".r_2"

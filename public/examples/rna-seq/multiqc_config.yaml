@@ -1,3 +1,22 @@
 extra_fn_clean_exts:
-    - _1
-    - _2
+    - "_1"
+    - "_2"
+
+# Search patterns for grouping paired samples in general stats (e.g. FastQ R1/R2)
+# Affects the modules that support it (e.g. fastqc, fastp)
+sample_merge_groups:
+  trimming:
+    trimmed:
+      - type: truncate
+        pattern: "_val_1"
+      - type: truncate
+        pattern: "_val_2"
+    untrimmed:
+
+  read_pairs:
+    "Read 1":
+      - type: remove
+        pattern: "_1"
+    "Read 2":
+      - type: remove
+        pattern: "_2"
