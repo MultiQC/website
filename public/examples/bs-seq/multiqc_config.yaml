@@ -1,0 +1,14 @@
+module_order:
+  - "bismark"
+  - "cutadapt"
+  - "fastqc":
+      name: "FastQC: trimmed"
+      anchor: "fqc_trimmed"
+      path_filters:
+        - "*_trimmed*"
+  - "fastqc":
+      name: "FastQC: raw"
+      anchor: "fqc_raw"
+      path_filters_exclude:
+        - "*_trimmed*"
+      generalstats: false

@@ -1,15 +1,8 @@
-extra_fn_clean_exts:
-    - "_1"
-    - "_2"
-
 # Search patterns for grouping paired samples in general stats (e.g. FastQ R1/R2)
 # Affects the modules that support it (e.g. fastqc, fastp)
 generalstats_sample_merge_groups:
-  read_pairs:
-    "Read 1": 
-      - "_1"
-    "Read 2": 
-      - "_2"
+  "R1": "_1"
+  "R2": "_2"
 
 module_order:
   - "cutadapt"

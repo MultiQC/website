@@ -13,11 +13,8 @@ extra_fn_clean_trim:
 # Search patterns for grouping paired samples in general stats (e.g. FastQ R1/R2)
 # Affects the modules that support it (e.g. fastqc, fastp)
 generalstats_sample_merge_groups:
-  read_pairs:
-    "Read 1":
-      - "_R1"
-    "Read 2":
-      - "_R2"
+  "R1": ["_R1"]
+  "R2": ["_R2"]
 
 table_columns_visible:
     FastQC:
