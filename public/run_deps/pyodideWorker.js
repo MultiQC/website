@@ -1,4 +1,4 @@
-importScripts("https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js");
+importScripts("https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js");
 
 async function loadAndRunPython() {
   self.pyodide = await loadPyodide();
