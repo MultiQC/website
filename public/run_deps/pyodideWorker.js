@@ -9,7 +9,7 @@ async function loadAndRunPython() {
   // await self.pyodide.loadPackage("pydantic");  
   const micropip = self.pyodide.pyimport("micropip");
   try {
-    await micropip.install("pydantic==2.8.2");
+    await micropip.install("pydantic==2.7.*");
     console.log("pydantic installed successfully");
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
     console.log("colormath installed successfully");
@@ -31,8 +31,10 @@ async function loadAndRunPython() {
     dependencies = dependencies.map(dep => dep.split(";")[0].trim());
     // And installing the remaining dependencies one by one:
     for (const dep of dependencies) {
-      console.log("Installing " + dep);
-      await micropip.install(dep);
+      if (!dep.includes("pydantic")) {  // pydantic is already installed above
+        console.log("Installing " + dep);
+        await micropip.install(dep);
+      }
     }
     // Finally, installing 'multiqc' without dependencies
     await self.pyodide.runPythonAsync(`
