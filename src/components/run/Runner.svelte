@@ -42,7 +42,8 @@
     pyodideWorker.postMessage({
       code: `
 import multiqc
-multiqc.run('/data', cfg=multiqc.ClConfig(no_ansi=True, force=True))
+from multiqc.core.update_config import ClConfig
+multiqc.run('/data', cfg=ClConfig(no_ansi=True, force=True))
         `,
     });
   }
