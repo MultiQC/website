@@ -3,19 +3,18 @@ importScripts("https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js");
 async function loadAndRunPython() {
   self.pyodide = await loadPyodide();
   await self.pyodide.loadPackage("micropip");
-  // pydantic and pydantic_core are not pure Python, and need to be installed from 
-  // the Pyodide package manager (https://github.com/pyodide/pyodide/blob/main/packages/pydantic/meta.yaml)
-  // We want to do it early to make sure the pinned version is loaded.
-  // await self.pyodide.loadPackage("pydantic");  
   const micropip = self.pyodide.pyimport("micropip");
   try {
-    await micropip.install("pydantic==2.7.*");  // pyodide only has 2.7.0, not 2.7.1
-    await micropip.install("pygments");  // for some reason it needs to be installed separately
     console.log("pydantic installed successfully");
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
     console.log("spectra installed successfully");
+    await micropip.install("pygments");  // for some reason it needs to be installed separately
+    console.log("pygments installed successfully");
+    // MultiQC pins 2.7.1, and Pyodide only has 2.7.0, so we need to override here:
+    await micropip.install("pydantic==2.7.*");  // pyodide only has 2.7.0, not 2.7.1
+    console.log("pydantic installed successfully");
 
     // Now we want to install multiqc with all other dependencies _except_ kaleido,
     // which is not needed for the browser-based setup, and it doesn't have 
@@ -32,10 +31,9 @@ async function loadAndRunPython() {
     dependencies = dependencies.map(dep => dep.split(";")[0].trim());
     // And installing the remaining dependencies one by one:
     for (const dep of dependencies) {
-      if (!dep.includes("pydantic")) {  // pydantic is already installed above
-        console.log("Installing " + dep);
-        await micropip.install(dep);
-      }
+      if (dep.includes("pydantic")) continue  // pydantic was already installed above
+      console.log("Installing " + dep);
+      await micropip.install(dep);
     }
     // Finally, installing 'multiqc' without dependencies
     await self.pyodide.runPythonAsync(`
