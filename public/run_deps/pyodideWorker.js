@@ -3,14 +3,13 @@ importScripts("https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js");
 async function loadAndRunPython() {
   self.pyodide = await loadPyodide();
   await self.pyodide.loadPackage("micropip");
+  await self.pyodide.loadPackage("pydantic-core");
   const micropip = self.pyodide.pyimport("micropip");
   try {
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
     console.log("spectra installed successfully");
-    await micropip.install("pydantic-core");
-    console.log("pydantic-core installed successfully");
 
     // Now we want to install multiqc with all other dependencies _except_ kaleido,
     // which is not needed for the browser-based setup, and it doesn't have 
