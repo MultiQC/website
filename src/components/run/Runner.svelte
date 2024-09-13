@@ -43,7 +43,7 @@
       code: `
 import multiqc
 from multiqc.core.update_config import ClConfig
-multiqc.run('/data', cfg=ClConfig(no_ansi=True, force=True))
+multiqc.run('/data', cfg=ClConfig(no_ansi=True, no_version_check=True, force=True))
         `,
     });
   }
