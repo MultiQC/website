@@ -6,9 +6,11 @@ async function loadAndRunPython() {
   // pydantic and pydantic_core are not pure Python, and need to be installed from 
   // the Pyodide package manager (https://github.com/pyodide/pyodide/blob/main/packages/pydantic/meta.yaml)
   // We want to do it early to make sure the pinned version is loaded.
-  await self.pyodide.loadPackage("pydantic");  
+  // await self.pyodide.loadPackage("pydantic");  
   const micropip = self.pyodide.pyimport("micropip");
   try {
+    await micropip.install("pydantic==2.8.2");
+    console.log("pydantic installed successfully");
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
