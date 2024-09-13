@@ -43,10 +43,6 @@
       code: `
 import multiqc
 from multiqc.core.update_config import ClConfig
-
-# Suppress annoying pyaml_env warning:
-warnings.filterwarnings("ignore", category=SyntaxWarning, message="invalid escape sequence '\\w'")
-
 multiqc.run('/data', cfg=ClConfig(no_ansi=True, force=True))
         `,
     });
