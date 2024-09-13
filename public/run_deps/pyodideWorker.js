@@ -5,7 +5,6 @@ async function loadAndRunPython() {
   await self.pyodide.loadPackage("micropip");
   const micropip = self.pyodide.pyimport("micropip");
   try {
-    console.log("pydantic installed successfully");
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
@@ -23,8 +22,6 @@ async function loadAndRunPython() {
     const response = await fetch(`https://pypi.org/pypi/multiqc/json`);
     const packageData = await response.json();
     let dependencies = packageData.info["requires_dist"];
-    // And excluding 'kaleido' (and 'Pillow', also needed only for flat plot export)
-    dependencies = dependencies.filter(dep => !dep.includes("kaleido") && !dep.includes("Pillow"));
     // Removing all "extras" dependencies:
     dependencies = dependencies.filter(dep => !dep.includes("; extra =="));
     // Removing any other possible environment markers:
@@ -32,6 +29,7 @@ async function loadAndRunPython() {
     // And installing the remaining dependencies one by one:
     for (const dep of dependencies) {
       if (dep.includes("pydantic")) continue  // pydantic was already installed above
+      if (dep.includes("kaleido") || dep.includes("Pillow")) continue  // only needed only for the flat plot export
       console.log("Installing " + dep);
       await micropip.install(dep);
     }
