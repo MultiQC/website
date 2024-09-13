@@ -42,7 +42,8 @@
     pyodideWorker.postMessage({
       code: `
 import multiqc
-multiqc.run('/data', no_ansi=True, force=True)
+from multiqc.core.update_config import ClConfig
+multiqc.run('/data', cfg=ClConfig(no_ansi=True, no_version_check=True, force=True))
         `,
     });
   }
@@ -55,7 +56,7 @@ multiqc.run('/data', no_ansi=True, force=True)
   function clean_stdout(line: string) {
     line = line.replace(
       /^  \/\/\/ MultiQC 🔍 (.+)/,
-      '\n<span class="slashes">///</span> <a href="https://multiqc.info/" target="_blank" >MultiQC</a> 🔍 <span>$1</span>\n'
+      '\n<span class="slashes">///</span> <a href="https://multiqc.info/" target="_blank" >MultiQC</a> 🔍 <span>$1</span>\n',
     );
     line = line.replace(/^(\| +.+ \|)/, "<span>$1</span>");
     return line;

@@ -1,4 +1,4 @@
-importScripts("https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js");
+importScripts("https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js");
 
 async function loadAndRunPython() {
   self.pyodide = await loadPyodide();
@@ -9,6 +9,11 @@ async function loadAndRunPython() {
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
     console.log("spectra installed successfully");
+    await micropip.install("pygments");  // for some reason it needs to be installed separately
+    console.log("pygments installed successfully");
+    // MultiQC pins 2.7.1, and Pyodide only has 2.7.0, so we need to override here:
+    await micropip.install("pydantic==2.7.*");  // pyodide only has 2.7.0, not 2.7.1
+    console.log("pydantic installed successfully");
 
     // Now we want to install multiqc with all other dependencies _except_ kaleido,
     // which is not needed for the browser-based setup, and it doesn't have 
@@ -17,14 +22,14 @@ async function loadAndRunPython() {
     const response = await fetch(`https://pypi.org/pypi/multiqc/json`);
     const packageData = await response.json();
     let dependencies = packageData.info["requires_dist"];
-    // And excluding 'kaleido' (and 'Pillow', also needed only for flat plot export)
-    dependencies = dependencies.filter(dep => !dep.includes("kaleido") && !dep.includes("Pillow"));
     // Removing all "extras" dependencies:
     dependencies = dependencies.filter(dep => !dep.includes("; extra =="));
     // Removing any other possible environment markers:
     dependencies = dependencies.map(dep => dep.split(";")[0].trim());
     // And installing the remaining dependencies one by one:
     for (const dep of dependencies) {
+      if (dep.includes("pydantic")) continue  // pydantic was already installed above
+      if (dep.includes("kaleido") || dep.includes("Pillow")) continue  // only needed only for the flat plot export
       console.log("Installing " + dep);
       await micropip.install(dep);
     }
