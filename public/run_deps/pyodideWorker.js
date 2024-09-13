@@ -9,7 +9,8 @@ async function loadAndRunPython() {
   // await self.pyodide.loadPackage("pydantic");  
   const micropip = self.pyodide.pyimport("micropip");
   try {
-    await micropip.install("pydantic==2.7.*");
+    await micropip.install("pydantic==2.7.*");  // pyodide only has 2.7.0, not 2.7.1
+    await micropip.install("pygments");  // for some reason it needs to be installed separately
     console.log("pydantic installed successfully");
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
     console.log("colormath installed successfully");
