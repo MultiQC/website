@@ -9,6 +9,8 @@ async function loadAndRunPython() {
     console.log("colormath installed successfully");
     await micropip.install("/run_deps/spectra-0.0.11-py3-none-any.whl");
     console.log("spectra installed successfully");
+    await micropip.install("pydantic-core");
+    console.log("pydantic-core installed successfully");
 
     // Now we want to install multiqc with all other dependencies _except_ kaleido,
     // which is not needed for the browser-based setup, and it doesn't have 
