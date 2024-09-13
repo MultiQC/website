@@ -3,7 +3,7 @@ importScripts("https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js");
 async function loadAndRunPython() {
   self.pyodide = await loadPyodide();
   await self.pyodide.loadPackage("micropip");
-  await self.pyodide.loadPackage("pydantic-core");
+  await self.pyodide.loadPackage("pydantic_core");
   const micropip = self.pyodide.pyimport("micropip");
   try {
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
