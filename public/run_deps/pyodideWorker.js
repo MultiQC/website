@@ -3,8 +3,10 @@ importScripts("https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js");
 async function loadAndRunPython() {
   self.pyodide = await loadPyodide();
   await self.pyodide.loadPackage("micropip");
-  // Depends on pydantic_code which is a pyodide package. We want to make sure the right version is loaded
-  await self.pyodide.loadPackage("pydantic>=2.7.1");  
+  // pydantic and pydantic_core are not pure Python, and need to be installed from 
+  // the Pyodide package manager (https://github.com/pyodide/pyodide/blob/main/packages/pydantic/meta.yaml)
+  // We want to do it early to make sure the pinned version is loaded.
+  await self.pyodide.loadPackage("pydantic");  
   const micropip = self.pyodide.pyimport("micropip");
   try {
     await micropip.install("/run_deps/colormath-3.0.0-py3-none-any.whl");
