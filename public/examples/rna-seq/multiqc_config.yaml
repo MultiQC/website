@@ -1,6 +1,6 @@
 # Search patterns for grouping paired samples in general stats (e.g. FastQ R1/R2)
 # Affects the modules that support it (e.g. fastqc, fastp)
-generalstats_merge:
+table_sample_merge:
   "R1": "_1"
   "R2": "_2"
 
