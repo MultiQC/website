@@ -1,14 +1,20 @@
 fn_ignore_files:
     - '*.indel.annotated.vcf.gz.snpEff.summary.csv'
+
 extra_fn_clean_exts:
-    - .clean
-    - _S1
-    - _S2
-    - _S3
-    - _S4
-    - _S5
-    - _S6
-    - .AHJHNYCCXX
+    - ".clean"
+    - ".AHJHNYCCXX"
+    - pattern: _S\d_L00\d
+      type: regex
+
+extra_fn_clean_trim:
+    - "_001"
+
+# Search patterns for grouping paired samples in general stats (e.g. FastQ R1/R2)
+# Affects the modules that support it (e.g. fastqc, fastp)
+table_sample_merge:
+  "R1": "_R1"
+  "R2": "_R2"
 
 table_columns_visible:
     FastQC:
