@@ -5,6 +5,7 @@ type: Analysis Types
 embed: /examples/hi-c/multiqc_report.html
 zip: /examples/hi-c/multiqc_report.zip
 data: /examples/hi-c/data.zip
+priority: 40
 ---
 
 This Hi-C MultiQC report was generated using Hi-C data from [Louise Harewood](mailto:louise.harewood@cruk.cam.ac.uk) at [CRUK Cambridge Institute](http://www.cambridgecancer.org.uk/). Reads were run through [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and then processed using [HiCUP](http://www.bioinformatics.babraham.ac.uk/projects/hicup/) (Hi-C User Pipeline).

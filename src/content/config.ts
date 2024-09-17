@@ -10,6 +10,7 @@ const reportCollection = defineCollection({
     embed: z.string(),
     zip: z.string(),
     data: z.string(),
+    priority: z.number(),
   }),
 });
 

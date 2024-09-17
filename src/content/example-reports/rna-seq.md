@@ -5,6 +5,7 @@ type: Analysis Types
 embed: /examples/rna-seq/multiqc_report.html
 zip: /examples/rna-seq/multiqc_report.zip
 data: /examples/rna-seq/data.zip
+priority: 10
 ---
 
 This report was generated using logs from an analysis accidentally run on ChIP-Seq data from the BI Human Reference Epigenome Mapping Project: ChIP-Seq in human subject dataset ([SRP001534](http://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP001534)).

@@ -5,6 +5,7 @@ type: Analysis Types
 embed: /examples/bs-seq/multiqc_report.html
 zip: /examples/bs-seq/multiqc_report.zip
 data: /examples/bs-seq/data.zip
+priority: 30
 ---
 
 The example methylation report is based on analysis of data from the GEO NCBI project [GSE47966](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47966), from the 2013 Lister _et. al._ paper _Global epigenomic reconfiguration during mammalian brain development_.

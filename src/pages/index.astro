@@ -33,7 +33,9 @@ const latestRelease = await fetch("https://api.github.com/repos/MultiQC/MultiQC/
     }
   });
 
-const exampleReports = await getCollection("example-reports");
+const exampleReports = (await getCollection("example-reports")).sort(
+  (a, b) => a.data.priority - b.data.priority,
+);
 const modules = await getCollection("modules");
 ---
 

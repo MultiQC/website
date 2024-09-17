@@ -5,6 +5,7 @@ type: MultiQC Customisation
 embed: /examples/ngi-rna/test_ngi_project_multiqc_report.html
 zip: /examples/ngi-rna/multiqc_report.zip
 data: /examples/ngi-rna/data.zip
+priority: 50
 ---
 
 This MultiQC report was generated in combination with the [MultiQC_NGI](https://github.com/NationalGenomicsInfrastructure/MultiQC_NGI) plugin. This plugin adds a few new functionalities to MultiQC which are specific to the [SciLifeLab National Genomics Infrastruture](https://www.scilifelab.se/platforms/ngi/). A new report template (**ngi**) styles reports with our logo. A new module (**NGI-RNAseq**) adds sample similarity plots generated from custom code in our [RNA pipeline](https://github.com/SciLifeLab/NGI-RNAseq). It also loads intersting data fields from our LIMS (eg. RIN score) and puts these into the report. Finally, it saves the parsed biofinformatics summary results back in the LIMS for multi-project meta analyses.

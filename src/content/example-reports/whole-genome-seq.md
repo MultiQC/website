@@ -5,6 +5,7 @@ type: Analysis Types
 embed: /examples/wgs/multiqc_report.html
 zip: /examples/wgs/multiqc_report.zip
 data: /examples/wgs/data.zip
+priority: 20
 ---
 
 The data from this report comes from an analysis of HapMap trio samples, run by the [National Genomics Infrastructre](https://www.scilifelab.se/platforms/ngi/) (NGI) at SciLifeLab, Sweden. Initial quality control was done using [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [FastQ Screen](http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/). Reads were processed with [GATK](https://www.broadinstitute.org/gatk/) and the aligned reads analysed using [Picard](http://broadinstitute.github.io/picard/). Downstream QC was done using [Qualimap BamQC](http://qualimap.bioinfo.cipf.es/) and [SnpEff](http://snpeff.sourceforge.net/).
