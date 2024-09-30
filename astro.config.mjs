@@ -79,20 +79,6 @@ export default defineConfig({
           ),
         },
       ],
-      // Rewrite the image paths to be absolute for rehypeInline plugin
-      [
-        urls,
-        (url) => {
-          if (url.href.startsWith("../../images/")) {
-            return url.href.replace("../../images/", "../MultiQC/docs/images/");
-          } else {
-            var match = url.href.match(/\.\.\/.+\.md/);
-            if (match && match.length > 0) {
-              return url.href.replace(/\.\.\/(.+)\.md/, "/docs/$1");
-            }
-          }
-        },
-      ],
       [
         rehypePrettyCode,
         {

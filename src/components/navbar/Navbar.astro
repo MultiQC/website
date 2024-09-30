@@ -1,9 +1,6 @@
 ---
 import NavbarMenu from "@components/navbar/NavbarMenu.astro";
 import NavbarMenuMobile from "@components/navbar/NavbarMenuMobile.svelte";
-import NavbarDocsNav from "@components/navbar/NavbarDocsNav.svelte";
-import NavbarDocsNavTitle from "@components/navbar/NavbarDocsNavTitle.astro";
-import NavbarDocsNavMenu from "@components/navbar/NavbarDocsNavMenu.astro";
 
 import HeroBackgroundSrc from "@assets/images/background.png";
 import { getImage } from "astro:assets";
@@ -25,9 +22,9 @@ export interface Props {
 }
 
 const navPages = [
-  { slug: "/docs/", text: "Documentation", text_sm: "Docs" },
+  { slug: "https://docs.seqera.io/multiqc", text: "Documentation", text_sm: "Docs" },
   { slug: "/example-reports/", text: "Examples" },
-  { slug: "/modules/", text: "Supported Tools", text_sm: "Tools" },
+  { slug: "https://docs.seqera.io/multiqc/modules/", text: "Supported Tools", text_sm: "Tools" },
   {
     text: "Resources",
     items: [
@@ -38,7 +35,7 @@ const navPages = [
       { slug: "/citation/", text: "Citation" },
     ],
   },
-  { slug: "https://community.seqera.io/c/multiqc/6", text: "Forums" },
+  { slug: "https://community.seqera.io/multiqc", text: "Forums" },
 ];
 
 const { title, headings = [], navbarItems = navPages } = Astro.props;
@@ -51,12 +48,4 @@ const { title, headings = [], navbarItems = navPages } = Astro.props;
 <header class="sticky top-0 z-10" style={{ backgroundImage: `url(${optimizedBackground.src})` }}>
   <NavbarMenu navbarItems={navbarItems} />
   <NavbarMenuMobile headings={headings} navbarItems={navbarItems} location={location} client:load />
-  {
-    Astro.url.pathname.includes("/docs/") && (
-      <NavbarDocsNav client:load>
-        <NavbarDocsNavTitle slot="title" title={title} />
-        <NavbarDocsNavMenu slot="menu" />
-      </NavbarDocsNav>
-    )
-  }
 </header>

@@ -36,7 +36,6 @@ const latestRelease = await fetch("https://api.github.com/repos/MultiQC/MultiQC/
 const exampleReports = (await getCollection("example-reports")).sort(
   (a, b) => a.data.priority - b.data.priority,
 );
-const modules = await getCollection("modules");
 ---
 
 <BaseLayout
@@ -193,13 +192,23 @@ const modules = await getCollection("modules");
             </Button>
           </div>
           <div class="mt-5">
-            <Button to="/modules/" variant="primary" size="md" classes="w-full">
+            <Button
+              to="https://docs.seqera.io/multiqc/modules/"
+              variant="primary"
+              size="md"
+              classes="w-full"
+            >
               <Icon name="mdi:hammer-wrench" class="mr-3 h-6 w-6" />
-              {modules.length} supported tools
+              150+ supported tools
             </Button>
           </div>
           <div class="mt-5">
-            <Button to="/docs/" variant="primary" size="md" classes="w-full">
+            <Button
+              to="https://docs.seqera.io/multiqc/"
+              variant="primary"
+              size="md"
+              classes="w-full"
+            >
               <Icon name="mdi:book-open-variant" class="mr-3 h-6 w-6" />
               Documentation
             </Button>
@@ -257,7 +266,7 @@ const modules = await getCollection("modules");
             <p class="mt-2 text-xs font-light text-gray-300">
               Need a little more help?
               <a
-                href="/docs/getting_started/installation/"
+                href="https://docs.seqera.io/multiqc/getting_started/installation/"
                 class="underline underline-offset-4 hover:text-gray-200"
               >
                 See the full installation instructions
@@ -399,14 +408,14 @@ const modules = await getCollection("modules");
       </p>
       <p class="typo-blockquote mx-auto mb-3 max-w-5xl">
         See the
-        <a href="/docs/getting_started/installation/" class="typo-link">
+        <a href="https://docs.seqera.io/multiqc/getting_started/installation/" class="typo-link">
           installation instructions
         </a>
         for more help.
       </p>
       <div class="mt-5 flex flex-col justify-center md:flex-row lg:mt-10">
         <div class="md:mr-4">
-          <Button to="/docs/" variant="secondary" size="md">
+          <Button to="https://docs.seqera.io/multiqc/" variant="secondary" size="md">
             <Icon name="mdi:book-outline" class="mr-3 h-6 w-6" />
             Documentation
           </Button>
