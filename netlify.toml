@@ -11,6 +11,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/docs/*"
+  to = "https://docs.seqera.io/multiqc/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modules/*"
+  to = "https://docs.seqera.io/multiqc/modules/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/_astro/*"
   [headers.values]
@@ -27,7 +39,6 @@
   to = "https://multiqc.info/:splat"
   status = 301
   force = true
-
 
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
