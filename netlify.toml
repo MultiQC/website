@@ -1,10 +1,6 @@
-[build]
-  publish = "dist/"
-  command = "git clone --depth 1 https://github.com/MultiQC/MultiQC.git ../MultiQC && npm run build"
-
-[build.environment]
-    NODE_VERSION = "20.11.0"
-
+#
+# Redirects
+#
 [[redirects]]
   from = "/version.php"
   to = "https://api.multiqc.info/version.php"
@@ -23,22 +19,75 @@
   status = 301
   force = true
 
-[[headers]]
-  for = "/_astro/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800, immutable"
+[[redirects]]
+  from = "https://multiqc.info/plugins/"
+  to = "https://docs.seqera.io/multiqc/development/plugins"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.info/community/"
+  to = "https://community.seqera.io/tag/multiqc"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.info/logos/"
+  to = "https://github.com/seqeralabs/logos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.info/citation/"
+  to = "http://dx.doi.org/10.1093/bioinformatics/btw354"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.info/example-reports/*"
+  to = "https://seqera.io/multiqc#sample-reports"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://multiqc.info/run/"
+  to = "https://seqera.io/multiqc#run"
+  status = 301
+  force = true
+
+# Put last, more specific redirects above
+[[redirects]]
+  from = "https://multiqc.info/*"
+  to = "https://seqera.io/multiqc/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "https://multiqc.netlify.app/*"
-  to = "https://multiqc.info/:splat"
+  to = "https://seqera.io/multiqc/"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://multiqc.io/*"
-  to = "https://multiqc.info/:splat"
+  to = "https://seqera.io/multiqc/"
   status = 301
   force = true
+
+#
+# Other stuff
+#
+[build]
+  publish = "dist/"
+  command = "git clone --depth 1 https://github.com/MultiQC/MultiQC.git ../MultiQC && npm run build"
+
+[build.environment]
+    NODE_VERSION = "20.11.0"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
 
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
