@@ -55,6 +55,12 @@
   status = 301
   force = true
 
+# Keep this in place, don't redirect
+[[redirects]]
+  from = "https://multiqc.info/.well-known/atproto-did"
+  to = "/.well-known/atproto-did"
+  status = 200
+
 # Put last, more specific redirects above
 [[redirects]]
   from = "https://multiqc.info/*"
